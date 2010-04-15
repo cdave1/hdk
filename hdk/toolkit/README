@@ -1,0 +1,13 @@
+This is an FPS test. The primary goal is to create an fps control
+system using multitouch.
+
+The control system has the following characteristics:
+- A dpad for movement.
+- Screen dragging for looking at things
+- Buttons on the right of the screen for firing.
+
+Version #1:
+- Get a basic scene and camera going. Camera simply rotates.
+
+#2
+- Dpad version 1.

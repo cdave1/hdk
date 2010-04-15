@@ -1,0 +1,148 @@
+;; This buffer is for notes you don't want to save, and for Lisp evaluation.
+;; If you want to create a file, visit that file with C-x C-f,
+;; then enter the text in that file's own buffer.
+
+    I went to http://code.google.com/p/vfpmathlibrary/ and I made a few small changes and got dramatically increased performance.
+
+    The key is minimizing pipeline stalls.
+
+    While NEON is going to be relevant from now on, making things as fast as possible on the old iPhones isn't going to hurt :)
+
+    You're right. Talk is cheap. So I'll show you an example of what can be done:
+
+    Matrix4Mul:
+
+    Originally:
+
+    "fmuls s24, s8, s0 \n\t"
+    "fmacs s24, s12, s1 \n\t"
+
+    etc.
+
+    The problem is.. between the first and second line there is a large number of stall cycles! fmuls has an 8 cycle latency according to the CPU docs. I've tried to keep the pipeline filled the entire time, eliminating RAW dependencies where possible.
+
+    Try the following and measure the performance difference.
+
+    void Matrix4Mul(const float* src_mat_1, const float* src_mat_2, float* dst_mat) {
+    asm volatile (VFP_SWITCH_TO_ARM
+    VFP_VECTOR_LENGTH(3)
+
+    // Let A:=src_ptr_1, B:=src_ptr_2, then
+    // function computes A*B as (B^T * A^T)^T.
+
+    // Load first two columns to scalar bank.
+    "fldmias %1!, {s0-s7} \n\t"
+    // Load the whole matrix into memory.
+    "fldmias %2, {s16-s31} \n\t"
+
+    // First column times matrix.
+    "fmuls s8, s16, s0 \n\t"
+    "fmuls s12, s16, s4 \n\t"
+    "fmacs s8, s20, s1 \n\t"
+    "fmacs s12, s20, s5 \n\t"
+    "fmacs s8, s24, s2 \n\t"
+    "fmacs s12, s24, s6 \n\t"
+    "fmacs s8, s28, s3 \n\t"
+    "fmacs s12, s28, s7 \n\t"
+
+    // Load next two column to scalar bank.
+    "fldmias %1!, {s0-s7} \n\t"
+
+    // Save first column.
+    "fstmias %0!, {s8-s15} \n\t"
+
+    "fmuls s8, s16, s0 \n\t"
+    "fmuls s12, s16, s4 \n\t"
+    "fmacs s8, s20, s1 \n\t"
+    "fmacs s12, s20, s5 \n\t"
+    "fmacs s8, s24, s2 \n\t"
+    "fmacs s12, s24, s6 \n\t"
+    "fmacs s8, s28, s3 \n\t"
+    "fmacs s12, s28, s7 \n\t"
+
+    "fstmias %0!, {s8-s15} \n\t"
+
+    VFP_VECTOR_LENGTH_ZERO
+    VFP_SWITCH_TO_THUMB
+    : "=r" (dst_mat), "=r" (src_mat_2)
+    : "r" (src_mat_1), "0" (dst_mat), "1" (src_mat_2)
+    : "r0", "cc", "memory", VFP_CLOBBER_S0_S31
+    );
+    }
+
+    On my tests, this took ~40% less time, in other words, I could do 60% more matrix*matrix calculations in the same time.
+
+
+    After my original posting on your thread, I've measured a vector * matrix considerably faster than the one in the package...
+
+    Exercise for the reader? :)
+
+    July 6, 2009 10:58 AM
+Blogger Wolfgang Engel said...
+
+    Jeffrey: very cool!! I like that. So now the obvious question: do you want to contribute to the VFP math library :-)
+    If yes send me your gmail address :-)
+
+    July 8, 2009 4:15 PM
+Anonymous Jeffrey Lim said...
+
+    I'll unfortunately pass on contributing to the library for several personal reasons... but I do enjoy discussing code/optimization.
+
+    Some further interesting results:
+
+    C matrix code compiled runs faster on iPhone 3gs than iPhone 2g. (as expected)
+
+    However, VFP asm code runs SLOWER on iPhone 3GS than iPhone 2G. The iPhone 3GS does not seem to have a VFP pipeline at all (!).
+
+    Here's some timings I made (I have some extra overheads, eg. loop control, and I copy the result elsewhere, but take the timings as relative)
+
+    iPhone 2G C: 15401 microseconds
+    iPhone 2G VFP: 4094 microseconds
+
+    iPhone 3GS C: 9444 microseconds
+    iPhone 3GS VFP: 19485 microseconds
+    iPhone 3GS Neon: 2134 microseconds.
+
+    (Note that the C timings with the iPhone 3.1 SDK are FAR FAR better than the previous SDKs!)
+
+    Here's the Neon code:
+
+    r0 = output float*
+    r1 = matrix a*
+    r2 = matrix b*
+
+    vldmia r1, { q4-q7 }
+    vldmia r2, { q8-q11 }
+
+    vmul.f32 q0, q8, d8[0]
+    vmul.f32 q1, q8, d10[0]
+    vmul.f32 q2, q8, d12[0]
+    vmul.f32 q3, q8, d14[0]
+
+    vmla.f32 q0, q9, d8[1]
+    vmla.f32 q1, q9, d10[1]
+    vmla.f32 q2, q9, d12[1]
+    vmla.f32 q3, q9, d14[1]
+
+    vmla.f32 q0, q10, d9[0]
+    vmla.f32 q1, q10, d11[0]
+    vmla.f32 q2, q10, d13[0]
+    vmla.f32 q3, q10, d15[0]
+
+    vmla.f32 q0, q11, d9[1]
+    vmla.f32 q1, q11, d11[1]
+    vmla.f32 q2, q11, d13[1]
+    vmla.f32 q3, q11, d15[1]
+
+    vstmia r0, { q0-q3 }
+
+    July 9, 2009 4:45 AM
+Blogger Wolfgang Engel said...
+
+    Hey Jeffrey,
+    this is very good to know. So the VFP math library looses its importance on the 3GS.
+
+    Thanks for contributing this!
+    - Wolf
+
+    July 9, 2009 8:53 AM

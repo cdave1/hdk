@@ -1,0 +1,21 @@
+Toolkit is the application that provides access to the HDK. It is 
+designed to allow content creation for game engines built on top
+of the HDK. It is a cross-platform, project-based editor
+designed specifically for managing all Hackdirt projects.
+
+Development Plan:
+
+Version 1 will simply replicate the original 2.5d hackdirt level
+editor, using all the original code from the earlier version of the
+editor. Currently there is not time available to "start from scratch"
+with the hdk as it were. JohnC has that luxury; I do not.
+
+Version #1 will have an updated user interface (using QT), with two
+additions:
+- a top level application interface for managing projects (content, etc).
+- a content browser showing textures, sounds, scripts, and interface
+elements. The content browser will simply use a database for data
+storage.
+
+Version 2: extend the level editor to a full 3D editor. Add ragdoll
+maker, mesh loader, pvrtc textures, interface scene editor.

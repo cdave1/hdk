@@ -1,0 +1,70 @@
+//
+//  hdAccelerometer.m
+//  hdk
+//
+//  Created by David Petrie on 11/04/10.
+//  Copyright 2010 Hackdirt Ltd. All rights reserved.
+//
+
+#import "hdAccelerometer.h"
+
+#define FILTERINGFACTOR 0.1
+
+@implementation Accel
+
+- (void) SetupAccelerometer: (float) AcclerometerFrequency
+{
+	//Configure and start accelerometer
+	[[UIAccelerometer sharedAccelerometer] setUpdateInterval:(1.0 / AcclerometerFrequency)];
+	[[UIAccelerometer sharedAccelerometer] setDelegate:self];
+}
+
+
+
+- (void) accelerometer:(UIAccelerometer*)accelerometer didAccelerate:(UIAcceleration*)Acceleration
+{
+	// use a basic low-pass filter to only keep the gravity in the accelerometer values
+	_accelerometer[0] = Acceleration.x * FILTERINGFACTOR + _accelerometer[0] * (1.0 - FILTERINGFACTOR);
+	_accelerometer[1] = Acceleration.y * FILTERINGFACTOR + _accelerometer[1] * (1.0 - FILTERINGFACTOR);
+	_accelerometer[2] = Acceleration.z * FILTERINGFACTOR + _accelerometer[2] * (1.0 - FILTERINGFACTOR);
+}
+
+- (void) GetAccelerometerMatrix:(float *) matrix
+{
+	
+	float length = sqrtf(_accelerometer[0] * _accelerometer[0] + _accelerometer[1] * _accelerometer[1] + _accelerometer[2] * _accelerometer[2]);
+	
+	//Clear matrix to be used to rotate from the current referential to one based on the gravity vector
+	bzero(matrix, sizeof(matrix));
+	matrix[15] = 1.0f;
+	//matrix[3][3] = 1.0;
+	
+	//Setup first matrix column as gravity vector
+	matrix[0] = _accelerometer[0] / length;
+	matrix[1] = _accelerometer[1] / length;
+	matrix[2] = _accelerometer[2] / length;
+	
+	//Setup second matrix column as an arbitrary vector in the plane perpendicular to the gravity vector {Gx, Gy, Gz} defined by by the equation "Gx * x + Gy * y + Gz * z = 0" in which we arbitrarily set x=0 and y=1
+	matrix[4] = 0.0;
+	matrix[5] = 1.0;
+	matrix[6] = -_accelerometer[1] / _accelerometer[2];
+	length = sqrtf(matrix[4] * matrix[4] + matrix[5] * matrix[5] + matrix[6] * matrix[6]);
+	matrix[4] /= length;
+	matrix[5] /= length;
+	matrix[6] /= length;
+	
+	//Setup third matrix column as the cross product of the first two
+	matrix[8] = matrix[1] * matrix[6] - matrix[2] * matrix[5];
+	matrix[9] = matrix[4] * matrix[2] - matrix[6] * matrix[0];
+	matrix[10] = matrix[0] * matrix[5] - matrix[1] * matrix[4];
+}
+
+- (void) GetAccelerometerVector:(double *) AccelValue;
+{
+	// the vector is read-only, so make a copy of it and do not expose a pointer to it
+	AccelValue[0] = (double)_accelerometer[0];
+	AccelValue[1] = (double)_accelerometer[1];
+	AccelValue[2] = (double)_accelerometer[2];
+}
+
+@end

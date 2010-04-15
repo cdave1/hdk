@@ -1,0 +1,21 @@
+
+var button := hdButton("Interface/btnHello.png", "Interface/btnHello.png", "Interface/btnHello.png")
+
+
+
+button.SetDimensions(0, 0, 50, 50)
+
+var count = button.GetVertexCount()
+
+var mouse = button.MouseDown(double(0.5), double(0.5))
+
+if (mouse)
+{
+	print("hooray")
+} 
+else
+{
+	print("no way")
+}
+
+AddInterfaceElement(button)

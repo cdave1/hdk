@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Standard Library (aka The Prelude)</title>
+    <base href="http://www.chaiscript.com" />
+    <link type="text/css" rel="stylesheet" href="misc/print.css" />
+      </head>
+  <body>
+              <div class="section-1">
+                <div class="section-2">
+          
+    <div id="node-3" class="section-3">
+  <h1 class="book-heading">Standard Library (aka The Prelude)</h1>
+  <p>ChaiScript, at its core, has some very functional programming-inspired habits.  Few places show this off as clearly as the prelude, itself a name taken as a nod to the popular functional language Haskell.  This prelude is available to all standard ChaiScript applications, and provides a simple foundation for using numbers, strings, and ranges (the general category of containers and their iteration).</p>
+<h2>Strings</h2>
+<p><strong>to_string(x):</strong> <em>Converts x into a string.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> to_string<span style="color: #009900;">&#40;</span><span style="color: #CC0000;">3</span><span style="color: #009900;">&#41;</span>.<span style="color: #660066;">is_type</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;string&quot;</span><span style="color: #009900;">&#41;</span>
+<span style="color: #003366; font-weight: bold;">true</span></pre></div>
+<p><strong>puts(x):</strong> <em>Prints x to the terminal, without a trailing carriage return.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> puts<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;hi, &quot;</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">;</span> puts<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;there&quot;</span><span style="color: #009900;">&#41;</span>
+hi<span style="color: #339933;">,</span> there</pre></div>
+<p><strong>print(x):</strong> <em>Prints x to the terminal, with a trailing carriage return.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> <span style="color: #000066;">print</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;hello&quot;</span><span style="color: #009900;">&#41;</span>
+hello</pre></div>
+<p><strong>find(str, substr):</strong> <em>Finds the first instance of substr in str.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> find<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;abab&quot;</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">&quot;ab&quot;</span><span style="color: #009900;">&#41;</span>
+<span style="color: #CC0000;">0</span></pre></div>
+<p><strong>rfind(str, substr):</strong> <em>Finds the last instance of substr in str.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> rfind<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;abab&quot;</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">&quot;ab&quot;</span><span style="color: #009900;">&#41;</span>
+<span style="color: #CC0000;">2</span></pre></div>
+<p><strong>find_first_of(str, list):</strong> <em>Finds the first of characters in list in the str string.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> find_first_of<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;abab&quot;</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">&quot;bec&quot;</span><span style="color: #009900;">&#41;</span>
+<span style="color: #CC0000;">1</span></pre></div>
+<p><strong>find_last_of(str, list):</strong> <em>Finds the last of characters in list in the str string.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> find_last_of<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;abab&quot;</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">&quot;bec&quot;</span><span style="color: #009900;">&#41;</span>
+<span style="color: #CC0000;">3</span></pre></div>
+<p><strong>find_first_not_of(str, list):</strong> <em>Finds the first non-matching character to list in the str string.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> find_first_not_of<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;abcd&quot;</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">&quot;fec&quot;</span><span style="color: #009900;">&#41;</span>
+<span style="color: #CC0000;">0</span></pre></div>
+<p><strong>find_last_not_of(str, list):</strong> <em>Finds the last non-matching character to list in the str string.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> find_last_not_of<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;abcd&quot;</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">&quot;fec&quot;</span><span style="color: #009900;">&#41;</span>
+<span style="color: #CC0000;">3</span></pre></div>
+<p><strong>ltrim(str):</strong> <em>Removes whitespace from the front of the string.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> ltrim<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;  bob&quot;</span><span style="color: #009900;">&#41;</span>
+bob</pre></div>
+<p><strong>rtrim(str):</strong> <em>Removes whitespace from the back of the string.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> rtrim<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;bob  &quot;</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">+</span> <span style="color: #3366CC;">&quot;|&quot;</span>
+bob<span style="color: #339933;">|</span></pre></div>
+<p><strong>trim(str):</strong> <em>Removes whitespace from the front and back of the string.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> trim<span style="color: #009900;">&#40;</span><span style="color: #3366CC;">&quot;  bob  &quot;</span><span style="color: #009900;">&#41;</span> <span style="color: #339933;">+</span> <span style="color: #3366CC;">&quot;|&quot;</span>
+bob<span style="color: #339933;">|</span></pre></div>
+<h2>Numbers</h2>
+<p><strong>max(a, b):</strong> <em>Returns the maximum value of a or b.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> max<span style="color: #009900;">&#40;</span><span style="color: #CC0000;">4</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">10</span><span style="color: #009900;">&#41;</span>
+<span style="color: #CC0000;">10</span></pre></div>
+<p><strong>min(a, b):</strong> <em>Returns the minimum value of a or b.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> min<span style="color: #009900;">&#40;</span><span style="color: #CC0000;">4</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">10</span><span style="color: #009900;">&#41;</span>
+<span style="color: #CC0000;">4</span></pre></div>
+<p><strong>even(x):</strong> <em>Returns true if x is even, otherwise returns false.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> even<span style="color: #009900;">&#40;</span>4<span style="color: #009900;">&#41;</span>
+<span style="color: #003366; font-weight: bold;">true</span></pre></div>
+<p><strong>odd(x):</strong> <em>Returns true if x is odd, otherwise returns false.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> odd<span style="color: #009900;">&#40;</span>4<span style="color: #009900;">&#41;</span>
+<span style="color: #003366; font-weight: bold;">false</span></pre></div>
+<h2>Containers</h2>
+<p><strong>for_each(container, f):</strong> <em>Applies the function f over each element in the container.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> for_each<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span>1<span style="color: #339933;">,</span> 2<span style="color: #339933;">,</span> 3<span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span> <span style="color: #000066;">print</span><span style="color: #009900;">&#41;</span>
+<span style="color: #CC0000;">1</span>
+<span style="color: #CC0000;">2</span>
+<span style="color: #CC0000;">3</span></pre></div>
+<p><strong>map(container, f):</strong> <em>Applies f over each element in the container, joining all the results.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> map<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span>1<span style="color: #339933;">,</span> 2<span style="color: #339933;">,</span> 3<span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span> odd<span style="color: #009900;">&#41;</span>
+<span style="color: #009900;">&#91;</span><span style="color: #003366; font-weight: bold;">true</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">false</span><span style="color: #339933;">,</span> <span style="color: #003366; font-weight: bold;">true</span><span style="color: #009900;">&#93;</span></pre></div>
+<p><strong>foldl(container, f, initial):</strong> <em>Starts with the initial value and applies the function f to it and the first element of the container.  The result is then applied to the second element, and so on until the elements are exhausted.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> foldl<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span><span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">2</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">3</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">4</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span> `<span style="color: #339933;">+</span>`<span style="color: #339933;">,</span> <span style="color: #CC0000;">0</span><span style="color: #009900;">&#41;</span>
+<span style="color: #CC0000;">10</span></pre></div>
+<p><strong>sum(container):</strong> <em>Returns the sum total of the values in the container.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> sum<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span><span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">2</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">3</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">4</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+<span style="color: #CC0000;">10</span></pre></div>
+<p><strong>product(container):</strong> <em>Returns the product of the value in the container.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> product<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span><span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">2</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">3</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">4</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+<span style="color: #CC0000;">24</span></pre></div>
+<p><strong>take(container, num):</strong> <em>Takes num elements from the container, returning them.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> take<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span><span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">2</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">3</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">4</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">2</span><span style="color: #009900;">&#41;</span>
+<span style="color: #009900;">&#91;</span><span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">2</span><span style="color: #009900;">&#93;</span></pre></div>
+<p><strong>take_while(container, f):</strong> <em>Takes elements from the container that match function f, stopping at the first non-match, returning them as a new Vector.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> take_while<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span><span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">2</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">3</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span> odd<span style="color: #009900;">&#41;</span>
+<span style="color: #009900;">&#91;</span><span style="color: #CC0000;">1</span><span style="color: #009900;">&#93;</span></pre></div>
+<p><strong>drop(container, num):</strong> <em>Drops num elements from the container, returning the remainder.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> drop<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span><span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">2</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">3</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">4</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">2</span><span style="color: #009900;">&#41;</span>
+<span style="color: #009900;">&#91;</span><span style="color: #CC0000;">3</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">4</span><span style="color: #009900;">&#93;</span></pre></div>
+<p><strong>drop_while(container, f):</strong> <em>Drops elements from the container that match f, stopping at the first non-match, returning the remainder.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> drop_while<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span><span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">2</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">3</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span> odd<span style="color: #009900;">&#41;</span>         
+<span style="color: #009900;">&#91;</span><span style="color: #CC0000;">2</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">3</span><span style="color: #009900;">&#93;</span></pre></div>
+<p><strong>reduce(container, f):</strong> <em>Similar to foldl, this takes the first two elements as its starting values for f.  This assumes container has at least 2 elements.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> reduce<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span><span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">2</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">3</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">4</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span> `<span style="color: #339933;">+</span>`<span style="color: #009900;">&#41;</span>
+<span style="color: #CC0000;">10</span></pre></div>
+<p><strong>filter(container, f):</strong> <em>Takes elements from container that match function f, return them.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> filter<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span><span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">2</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">3</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">4</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span> odd<span style="color: #009900;">&#41;</span>
+<span style="color: #009900;">&#91;</span><span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">3</span><span style="color: #009900;">&#93;</span></pre></div>
+<p><strong>join(container, delim):</strong> <em>Joins the elements of the container into a string, delimiting each with the delim string.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> join<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span><span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">2</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">3</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span> <span style="color: #3366CC;">&quot;*&quot;</span><span style="color: #009900;">&#41;</span> 
+<span style="color: #CC0000;">1</span><span style="color: #339933;">*</span><span style="color: #CC0000;">2</span><span style="color: #339933;">*</span><span style="color: #CC0000;">3</span></pre></div>
+<p><strong>reverse(container):</strong> <em>Returns the contents of the container in reversed order.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> reverse<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span><span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">2</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">3</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">4</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">5</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">6</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">7</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+<span style="color: #009900;">&#91;</span><span style="color: #CC0000;">7</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">6</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">5</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">4</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">3</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">2</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">1</span><span style="color: #009900;">&#93;</span></pre></div>
+<p><strong>generate_range(x, y):</strong> <em>Generates a new Vector filled with values starting at x and ending with y.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> generate_range<span style="color: #009900;">&#40;</span><span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">10</span><span style="color: #009900;">&#41;</span>
+<span style="color: #009900;">&#91;</span><span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">2</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">3</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">4</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">5</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">6</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">7</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">8</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">9</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">10</span><span style="color: #009900;">&#93;</span></pre></div>
+<p><strong>concat(x, y):</strong> <em>Returns a new Vector with x and y concatenated.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> concat<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span><span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">2</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">3</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #CC0000;">4</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">5</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">6</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+<span style="color: #009900;">&#91;</span><span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">2</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">3</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">4</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">5</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">6</span><span style="color: #009900;">&#93;</span></pre></div>
+<p><strong>collate(x, y):</strong> <em>Returns a new Vector with x and y as its values.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> collate<span style="color: #009900;">&#40;</span><span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">2</span><span style="color: #009900;">&#41;</span>
+<span style="color: #009900;">&#91;</span><span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">2</span><span style="color: #009900;">&#93;</span></pre></div>
+<p><strong>zip_with(f, x, y):</strong> <em>Applies f to elements of x and y, returning a new Vector with the result of each application.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> zip_with<span style="color: #009900;">&#40;</span>`<span style="color: #339933;">+</span>`<span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">2</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">3</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #CC0000;">4</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">5</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">6</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+<span style="color: #009900;">&#91;</span><span style="color: #CC0000;">5</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">7</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">9</span><span style="color: #009900;">&#93;</span></pre></div>
+<p><strong>zip(x, y):</strong> <em>Collates elements of x and y, returning a new Vector with the result.</em></p>
+<div class="geshifilter">
+<pre class="chaiscript geshifilter-chaiscript" style="font-family:monospace;">eval<span style="color: #339933;">&gt;</span> zip<span style="color: #009900;">&#40;</span><span style="color: #009900;">&#91;</span><span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">2</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">3</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #CC0000;">4</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">5</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">6</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#41;</span>
+<span style="color: #009900;">&#91;</span><span style="color: #009900;">&#91;</span><span style="color: #CC0000;">1</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">4</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #CC0000;">2</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">5</span><span style="color: #009900;">&#93;</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#91;</span><span style="color: #CC0000;">3</span><span style="color: #339933;">,</span> <span style="color: #CC0000;">6</span><span style="color: #009900;">&#93;</span><span style="color: #009900;">&#93;</span></pre></div>
+  </div>
+    </div></div>
+  </body>
+</html>

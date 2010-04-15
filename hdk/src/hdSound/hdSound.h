@@ -1,0 +1,43 @@
+/*
+ *  hdSound.h
+ *  hdk
+ *
+ *  Created by David Petrie on 10/04/10.
+ *  Copyright 2010 Hackdirt Ltd. All rights reserved.
+ *
+ */
+
+#ifndef _HD_SOUND_H_
+#define _HD_SOUND_H_
+
+#include "hdSound/hdSoundSystemEnums.h"
+
+class hdSound
+{
+public:
+	hdSound() :
+	volume(1.0f),
+	pitchOffset(1.0f),
+	length(0),
+	soundId(0),
+	bytes(0),
+	bitRate(e_bitRateUndefined),
+	type(e_soundTypeNormal),
+	format(e_soundFormatUndefined),
+	isBackgroundPlaying(false)
+	{}
+	
+	float volume;
+	float pitchOffset;
+	float length;
+	unsigned int soundId;
+	unsigned short bytes;
+	e_bitRate bitRate;
+	e_soundType type;
+	e_soundFormat format;
+	char filename[kMaxSoundPathSize];			// game path, including extension
+	char fullFilePath[kMaxSoundPathSize];
+	bool isBackgroundPlaying;
+};
+
+#endif

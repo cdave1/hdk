@@ -1,0 +1,12 @@
+var i = 0
+while (i < 10) {
+	print("i: " + i.to_string())
+	i = i + 1
+}
+
+
+var a = 0.5
+var b = 0.5
+
+print(a)
+print(b)

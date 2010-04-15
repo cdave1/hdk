@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+		E428387C117007BA008E3594 /* MemoryTemplates.h in Headers */ = {isa = PBXBuildFile; fileRef = E428384D117007BA008E3594 /* MemoryTemplates.h */; };
+		E428387D117007BA008E3594 /* mmgr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428384E117007BA008E3594 /* mmgr.cpp */; };
+		E428387E117007BA008E3594 /* mmgr.h in Headers */ = {isa = PBXBuildFile; fileRef = E428384F117007BA008E3594 /* mmgr.h */; };
+		E428387F117007BA008E3594 /* nommgr.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283850117007BA008E3594 /* nommgr.h */; };
+		E4283880117007BA008E3594 /* Timer.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283853117007BA008E3594 /* Timer.h */; };
+		E4283881117007BA008E3594 /* Timer.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4283854117007BA008E3594 /* Timer.mm */; };
+		E4283882117007BA008E3594 /* ResourcePath.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283856117007BA008E3594 /* ResourcePath.h */; };
+		E4283883117007BA008E3594 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4283857117007BA008E3594 /* ResourcePath.mm */; };
+		E4283884117007BA008E3594 /* OpenGLESExt.h in Headers */ = {isa = PBXBuildFile; fileRef = E428385A117007BA008E3594 /* OpenGLESExt.h */; };
+		E4283885117007BA008E3594 /* EAGLView.h in Headers */ = {isa = PBXBuildFile; fileRef = E428385C117007BA008E3594 /* EAGLView.h */; };
+		E4283886117007BA008E3594 /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = E428385D117007BA008E3594 /* EAGLView.m */; };
+		E4283887117007BA008E3594 /* OpenGL_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = E428385E117007BA008E3594 /* OpenGL_Internal.h */; };
+		E4283888117007BA008E3594 /* Application.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283860117007BA008E3594 /* Application.h */; };
+		E4283889117007BA008E3594 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4283861117007BA008E3594 /* main.m */; };
+		E428388A117007BA008E3594 /* neon_matrix_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283864117007BA008E3594 /* neon_matrix_impl.cpp */; };
+		E428388B117007BA008E3594 /* neon_matrix_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283865117007BA008E3594 /* neon_matrix_impl.h */; };
+		E428388C117007BA008E3594 /* common_macros.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283867117007BA008E3594 /* common_macros.h */; };
+		E428388D117007BA008E3594 /* matrix_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283868117007BA008E3594 /* matrix_impl.cpp */; };
+		E428388E117007BA008E3594 /* matrix_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283869117007BA008E3594 /* matrix_impl.h */; };
+		E428388F117007BA008E3594 /* vfp_clobbers.h in Headers */ = {isa = PBXBuildFile; fileRef = E428386A117007BA008E3594 /* vfp_clobbers.h */; };
+		E4283890117007BA008E3594 /* Endian.h in Headers */ = {isa = PBXBuildFile; fileRef = E428386B117007BA008E3594 /* Endian.h */; };
+		E4283891117007BA008E3594 /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428386C117007BA008E3594 /* Matrix.cpp */; };
+		E4283892117007BA008E3594 /* Matrix.h in Headers */ = {isa = PBXBuildFile; fileRef = E428386D117007BA008E3594 /* Matrix.h */; };
+		E4283893117007BA008E3594 /* Quaternion.h in Headers */ = {isa = PBXBuildFile; fileRef = E428386E117007BA008E3594 /* Quaternion.h */; };
+		E4283894117007BA008E3594 /* Random.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428386F117007BA008E3594 /* Random.cpp */; };
+		E4283895117007BA008E3594 /* Random.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283870117007BA008E3594 /* Random.h */; };
+		E4283896117007BA008E3594 /* Transform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283871117007BA008E3594 /* Transform.cpp */; };
+		E4283897117007BA008E3594 /* Transform.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283872117007BA008E3594 /* Transform.h */; };
+		E4283898117007BA008E3594 /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283873117007BA008E3594 /* Vector.cpp */; };
+		E4283899117007BA008E3594 /* Vector.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283874117007BA008E3594 /* Vector.h */; };
+		E428389A117007BA008E3594 /* Accelerometer.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283877117007BA008E3594 /* Accelerometer.h */; };
+		E428389B117007BA008E3594 /* Accelerometer.m in Sources */ = {isa = PBXBuildFile; fileRef = E4283878117007BA008E3594 /* Accelerometer.m */; };
+		E428389C117007BA008E3594 /* TouchScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = E428387A117007BA008E3594 /* TouchScreen.h */; };
+		E428389D117007BA008E3594 /* TouchScreen.mm in Sources */ = {isa = PBXBuildFile; fileRef = E428387B117007BA008E3594 /* TouchScreen.mm */; };
+		E428389F1170083F008E3594 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E428389E1170083F008E3594 /* OpenGLES.framework */; };
+		E42838AE117008DB008E3594 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E42838AD117008DB008E3594 /* CoreFoundation.framework */; };
+		E42838B51170092A008E3594 /* oolong_prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = E42838B41170092A008E3594 /* oolong_prefix.pch */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* liboolong.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = liboolong.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E428384D117007BA008E3594 /* MemoryTemplates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryTemplates.h; sourceTree = "<group>"; };
+		E428384E117007BA008E3594 /* mmgr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = mmgr.cpp; sourceTree = "<group>"; };
+		E428384F117007BA008E3594 /* mmgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mmgr.h; sourceTree = "<group>"; };
+		E4283850117007BA008E3594 /* nommgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nommgr.h; sourceTree = "<group>"; };
+		E4283851117007BA008E3594 /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
+		E4283853117007BA008E3594 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Timer.h; sourceTree = "<group>"; };
+		E4283854117007BA008E3594 /* Timer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Timer.mm; sourceTree = "<group>"; };
+		E4283856117007BA008E3594 /* ResourcePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourcePath.h; sourceTree = "<group>"; };
+		E4283857117007BA008E3594 /* ResourcePath.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
+		E428385A117007BA008E3594 /* OpenGLESExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLESExt.h; sourceTree = "<group>"; };
+		E428385C117007BA008E3594 /* EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAGLView.h; sourceTree = "<group>"; };
+		E428385D117007BA008E3594 /* EAGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAGLView.m; sourceTree = "<group>"; };
+		E428385E117007BA008E3594 /* OpenGL_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGL_Internal.h; sourceTree = "<group>"; };
+		E4283860117007BA008E3594 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
+		E4283861117007BA008E3594 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E4283864117007BA008E3594 /* neon_matrix_impl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = neon_matrix_impl.cpp; sourceTree = "<group>"; };
+		E4283865117007BA008E3594 /* neon_matrix_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = neon_matrix_impl.h; sourceTree = "<group>"; };
+		E4283867117007BA008E3594 /* common_macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_macros.h; sourceTree = "<group>"; };
+		E4283868117007BA008E3594 /* matrix_impl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = matrix_impl.cpp; sourceTree = "<group>"; };
+		E4283869117007BA008E3594 /* matrix_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matrix_impl.h; sourceTree = "<group>"; };
+		E428386A117007BA008E3594 /* vfp_clobbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vfp_clobbers.h; sourceTree = "<group>"; };
+		E428386B117007BA008E3594 /* Endian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Endian.h; path = ../../../../Projects/Libraries/OolongEngine2/Math/Endian.h; sourceTree = SOURCE_ROOT; };
+		E428386C117007BA008E3594 /* Matrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Matrix.cpp; path = ../../../../Projects/Libraries/OolongEngine2/Math/Matrix.cpp; sourceTree = SOURCE_ROOT; };
+		E428386D117007BA008E3594 /* Matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Matrix.h; path = ../../../../Projects/Libraries/OolongEngine2/Math/Matrix.h; sourceTree = SOURCE_ROOT; };
+		E428386E117007BA008E3594 /* Quaternion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Quaternion.h; path = ../../../../Projects/Libraries/OolongEngine2/Math/Quaternion.h; sourceTree = SOURCE_ROOT; };
+		E428386F117007BA008E3594 /* Random.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Random.cpp; path = ../../../../Projects/Libraries/OolongEngine2/Math/Random.cpp; sourceTree = SOURCE_ROOT; };
+		E4283870117007BA008E3594 /* Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Random.h; path = ../../../../Projects/Libraries/OolongEngine2/Math/Random.h; sourceTree = SOURCE_ROOT; };
+		E4283871117007BA008E3594 /* Transform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Transform.cpp; path = ../../../../Projects/Libraries/OolongEngine2/Math/Transform.cpp; sourceTree = SOURCE_ROOT; };
+		E4283872117007BA008E3594 /* Transform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Transform.h; path = ../../../../Projects/Libraries/OolongEngine2/Math/Transform.h; sourceTree = SOURCE_ROOT; };
+		E4283873117007BA008E3594 /* Vector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Vector.cpp; path = ../../../../Projects/Libraries/OolongEngine2/Math/Vector.cpp; sourceTree = SOURCE_ROOT; };
+		E4283874117007BA008E3594 /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Vector.h; path = ../../../../Projects/Libraries/OolongEngine2/Math/Vector.h; sourceTree = SOURCE_ROOT; };
+		E4283877117007BA008E3594 /* Accelerometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Accelerometer.h; sourceTree = "<group>"; };
+		E4283878117007BA008E3594 /* Accelerometer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Accelerometer.m; sourceTree = "<group>"; };
+		E428387A117007BA008E3594 /* TouchScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TouchScreen.h; sourceTree = "<group>"; };
+		E428387B117007BA008E3594 /* TouchScreen.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TouchScreen.mm; sourceTree = "<group>"; };
+		E428389E1170083F008E3594 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		E42838AD117008DB008E3594 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		E42838B41170092A008E3594 /* oolong_prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oolong_prefix.pch; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+				E428389F1170083F008E3594 /* OpenGLES.framework in Frameworks */,
+				E42838AE117008DB008E3594 /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* liboolong.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* oolong */ = {
+			isa = PBXGroup;
+			children = (
+				E42838B3117008F5008E3594 /* prefix */,
+				E428384B117007BA008E3594 /* oolong2 */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = oolong;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+				E428389E1170083F008E3594 /* OpenGLES.framework */,
+				E42838AD117008DB008E3594 /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E428384B117007BA008E3594 /* oolong2 */ = {
+			isa = PBXGroup;
+			children = (
+				E428384C117007BA008E3594 /* MemoryManager */,
+				E4283852117007BA008E3594 /* Timing */,
+				E4283855117007BA008E3594 /* Pathes */,
+				E4283858117007BA008E3594 /* Core */,
+				E428385F117007BA008E3594 /* Application */,
+				E4283862117007BA008E3594 /* Math */,
+				E4283875117007BA008E3594 /* Input */,
+			);
+			name = oolong2;
+			path = ../../oolong2;
+			sourceTree = SOURCE_ROOT;
+		};
+		E428384C117007BA008E3594 /* MemoryManager */ = {
+			isa = PBXGroup;
+			children = (
+				E428384D117007BA008E3594 /* MemoryTemplates.h */,
+				E428384E117007BA008E3594 /* mmgr.cpp */,
+				E428384F117007BA008E3594 /* mmgr.h */,
+				E4283850117007BA008E3594 /* nommgr.h */,
+				E4283851117007BA008E3594 /* readme.txt */,
+			);
+			name = MemoryManager;
+			path = Utility/MemoryManager;
+			sourceTree = "<group>";
+		};
+		E4283852117007BA008E3594 /* Timing */ = {
+			isa = PBXGroup;
+			children = (
+				E4283853117007BA008E3594 /* Timer.h */,
+				E4283854117007BA008E3594 /* Timer.mm */,
+			);
+			name = Timing;
+			path = Utility/Timing;
+			sourceTree = "<group>";
+		};
+		E4283855117007BA008E3594 /* Pathes */ = {
+			isa = PBXGroup;
+			children = (
+				E4283856117007BA008E3594 /* ResourcePath.h */,
+				E4283857117007BA008E3594 /* ResourcePath.mm */,
+			);
+			name = Pathes;
+			path = Utility/Pathes;
+			sourceTree = "<group>";
+		};
+		E4283858117007BA008E3594 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E4283859117007BA008E3594 /* GraphicsDevice */,
+			);
+			name = Core;
+			path = Renderer/Core;
+			sourceTree = "<group>";
+		};
+		E4283859117007BA008E3594 /* GraphicsDevice */ = {
+			isa = PBXGroup;
+			children = (
+				E428385A117007BA008E3594 /* OpenGLESExt.h */,
+				E428385B117007BA008E3594 /* OS2x */,
+			);
+			name = GraphicsDevice;
+			path = ../../../../Projects/Libraries/OolongEngine2/Renderer/Core/GraphicsDevice;
+			sourceTree = SOURCE_ROOT;
+		};
+		E428385B117007BA008E3594 /* OS2x */ = {
+			isa = PBXGroup;
+			children = (
+				E428385C117007BA008E3594 /* EAGLView.h */,
+				E428385D117007BA008E3594 /* EAGLView.m */,
+				E428385E117007BA008E3594 /* OpenGL_Internal.h */,
+			);
+			path = OS2x;
+			sourceTree = "<group>";
+		};
+		E428385F117007BA008E3594 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E4283860117007BA008E3594 /* Application.h */,
+				E4283861117007BA008E3594 /* main.m */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		E4283862117007BA008E3594 /* Math */ = {
+			isa = PBXGroup;
+			children = (
+				E4283863117007BA008E3594 /* neonmath */,
+				E4283866117007BA008E3594 /* vfpmath2 */,
+				E428386B117007BA008E3594 /* Endian.h */,
+				E428386C117007BA008E3594 /* Matrix.cpp */,
+				E428386D117007BA008E3594 /* Matrix.h */,
+				E428386E117007BA008E3594 /* Quaternion.h */,
+				E428386F117007BA008E3594 /* Random.cpp */,
+				E4283870117007BA008E3594 /* Random.h */,
+				E4283871117007BA008E3594 /* Transform.cpp */,
+				E4283872117007BA008E3594 /* Transform.h */,
+				E4283873117007BA008E3594 /* Vector.cpp */,
+				E4283874117007BA008E3594 /* Vector.h */,
+			);
+			path = Math;
+			sourceTree = "<group>";
+		};
+		E4283863117007BA008E3594 /* neonmath */ = {
+			isa = PBXGroup;
+			children = (
+				E4283864117007BA008E3594 /* neon_matrix_impl.cpp */,
+				E4283865117007BA008E3594 /* neon_matrix_impl.h */,
+			);
+			path = neonmath;
+			sourceTree = "<group>";
+		};
+		E4283866117007BA008E3594 /* vfpmath2 */ = {
+			isa = PBXGroup;
+			children = (
+				E4283867117007BA008E3594 /* common_macros.h */,
+				E4283868117007BA008E3594 /* matrix_impl.cpp */,
+				E4283869117007BA008E3594 /* matrix_impl.h */,
+				E428386A117007BA008E3594 /* vfp_clobbers.h */,
+			);
+			name = vfpmath2;
+			path = ../../../../Projects/Libraries/OolongEngine2/Math/vfpmath2;
+			sourceTree = SOURCE_ROOT;
+		};
+		E4283875117007BA008E3594 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				E4283876117007BA008E3594 /* Accelerometer */,
+				E4283879117007BA008E3594 /* TouchScreen */,
+			);
+			name = Input;
+			path = ../../../../Projects/Libraries/OolongEngine2/Input;
+			sourceTree = SOURCE_ROOT;
+		};
+		E4283876117007BA008E3594 /* Accelerometer */ = {
+			isa = PBXGroup;
+			children = (
+				E4283877117007BA008E3594 /* Accelerometer.h */,
+				E4283878117007BA008E3594 /* Accelerometer.m */,
+			);
+			path = Accelerometer;
+			sourceTree = "<group>";
+		};
+		E4283879117007BA008E3594 /* TouchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E428387A117007BA008E3594 /* TouchScreen.h */,
+				E428387B117007BA008E3594 /* TouchScreen.mm */,
+			);
+			path = TouchScreen;
+			sourceTree = "<group>";
+		};
+		E42838B3117008F5008E3594 /* prefix */ = {
+			isa = PBXGroup;
+			children = (
+				E42838B41170092A008E3594 /* oolong_prefix.pch */,
+			);
+			name = prefix;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E428387C117007BA008E3594 /* MemoryTemplates.h in Headers */,
+				E428387E117007BA008E3594 /* mmgr.h in Headers */,
+				E428387F117007BA008E3594 /* nommgr.h in Headers */,
+				E4283880117007BA008E3594 /* Timer.h in Headers */,
+				E4283882117007BA008E3594 /* ResourcePath.h in Headers */,
+				E4283884117007BA008E3594 /* OpenGLESExt.h in Headers */,
+				E4283885117007BA008E3594 /* EAGLView.h in Headers */,
+				E4283887117007BA008E3594 /* OpenGL_Internal.h in Headers */,
+				E4283888117007BA008E3594 /* Application.h in Headers */,
+				E428388B117007BA008E3594 /* neon_matrix_impl.h in Headers */,
+				E428388C117007BA008E3594 /* common_macros.h in Headers */,
+				E428388E117007BA008E3594 /* matrix_impl.h in Headers */,
+				E428388F117007BA008E3594 /* vfp_clobbers.h in Headers */,
+				E4283890117007BA008E3594 /* Endian.h in Headers */,
+				E4283892117007BA008E3594 /* Matrix.h in Headers */,
+				E4283893117007BA008E3594 /* Quaternion.h in Headers */,
+				E4283895117007BA008E3594 /* Random.h in Headers */,
+				E4283897117007BA008E3594 /* Transform.h in Headers */,
+				E4283899117007BA008E3594 /* Vector.h in Headers */,
+				E428389A117007BA008E3594 /* Accelerometer.h in Headers */,
+				E428389C117007BA008E3594 /* TouchScreen.h in Headers */,
+				E42838B51170092A008E3594 /* oolong_prefix.pch in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* oolong */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "oolong" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = oolong;
+			productName = oolong;
+			productReference = D2AAC07E0554694100DB518D /* liboolong.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "oolong" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* oolong */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* oolong */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E428387D117007BA008E3594 /* mmgr.cpp in Sources */,
+				E4283881117007BA008E3594 /* Timer.mm in Sources */,
+				E4283883117007BA008E3594 /* ResourcePath.mm in Sources */,
+				E4283886117007BA008E3594 /* EAGLView.m in Sources */,
+				E4283889117007BA008E3594 /* main.m in Sources */,
+				E428388A117007BA008E3594 /* neon_matrix_impl.cpp in Sources */,
+				E428388D117007BA008E3594 /* matrix_impl.cpp in Sources */,
+				E4283891117007BA008E3594 /* Matrix.cpp in Sources */,
+				E4283894117007BA008E3594 /* Random.cpp in Sources */,
+				E4283896117007BA008E3594 /* Transform.cpp in Sources */,
+				E4283898117007BA008E3594 /* Vector.cpp in Sources */,
+				E428389B117007BA008E3594 /* Accelerometer.m in Sources */,
+				E428389D117007BA008E3594 /* TouchScreen.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/oolong.dst;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = oolong_prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = VFP_NO_THUMB;
+				GCC_THUMB_SUPPORT = NO;
+				HEADER_SEARCH_PATHS = /Users/davidpetrie/Documents/Projects/Libraries/OolongEngine2/Include/;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = oolong;
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DSTROOT = /tmp/oolong.dst;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = oolong_prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"TARGET_IPHONE_SIMULATOR=0",
+					"TARGET_OS_IPHONE=1",
+					"_NOMEMORYMANAGER=1",
+					VFP_NO_THUMB,
+				);
+				GCC_THUMB_SUPPORT = NO;
+				HEADER_SEARCH_PATHS = /Users/davidpetrie/Documents/Projects/Libraries/OolongEngine2/Include/;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = oolong;
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.2;
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "oolong" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "oolong" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
