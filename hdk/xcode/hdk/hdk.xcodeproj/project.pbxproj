@@ -2350,11 +2350,12 @@
 				);
 				GCC_THUMB_SUPPORT = NO;
 				HEADER_SEARCH_PATHS = (
-					/Users/davidpetrie/Documents/hdTech1/hdk/src/,
-					/Users/davidpetrie/Documents/hdTech1/hdk/libs/boost_1_38_0,
+					/Users/david/hdk/hdTech1/hdk/src/,
+					/Users/david/hdk/hdTech1/hdk/libs/boost_1_38_0,
 				);
 				INSTALL_PATH = /usr/local/lib;
 				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
@@ -2363,6 +2364,7 @@
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 				SDKROOT = iphoneos3.1.3;
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = armv7;
 			};
 			name = Debug;
 		};
@@ -2386,11 +2388,12 @@
 				GCC_THUMB_SUPPORT = NO;
 				GCC_UNROLL_LOOPS = YES;
 				HEADER_SEARCH_PATHS = (
-					/Users/davidpetrie/Documents/hdTech1/hdk/src/,
-					/Users/davidpetrie/Documents/hdTech1/hdk/libs/boost_1_38_0,
+					/Users/david/hdk/hdTech1/hdk/src/,
+					/Users/david/hdk/hdTech1/hdk/libs/boost_1_38_0,
 				);
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-fno-regmove",
 					"-ffast-math",
@@ -2401,8 +2404,9 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = hdk;
-				SDKROOT = iphonesimulator3.1.3;
-				TARGETED_DEVICE_FAMILY = 1;
+				SDKROOT = iphoneos3.2;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALID_ARCHS = armv7;
 			};
 			name = Release;
 		};

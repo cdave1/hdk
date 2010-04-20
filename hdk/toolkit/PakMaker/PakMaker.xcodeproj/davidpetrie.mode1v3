@@ -271,14 +271,15 @@
 								<string>63B4BC89107536C600A0A288</string>
 								<string>08FB7795FE84155DC02AAC07</string>
 								<string>1C37FBAC04509CD000000102</string>
-								<string>E4B8D59210C76AB60089EBE2</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>24</integer>
-									<integer>23</integer>
+									<integer>14</integer>
+									<integer>7</integer>
+									<integer>2</integer>
+									<integer>0</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -317,13 +318,26 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>&lt;No Editor&gt;</string>
+								<string>hdPakFileSystem.cpp</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
 									<dict>
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
+										<key>PBXProjectModuleLabel</key>
+										<string>hdPakFileSystem.cpp</string>
+										<key>_historyCapacity</key>
+										<integer>0</integer>
+										<key>bookmark</key>
+										<string>E4FF35D311779444000C9595</string>
+										<key>history</key>
+										<array>
+											<string>E4FF35CF11779444000C9595</string>
+											<string>E4FF35D011779444000C9595</string>
+											<string>E4FF35D111779444000C9595</string>
+											<string>E4FF35D211779444000C9595</string>
+										</array>
 									</dict>
 									<key>SplitCount</key>
 									<string>1</string>
@@ -334,14 +348,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {789, 0}}</string>
+								<string>{{0, 0}, {789, 649}}</string>
 								<key>RubberWindowFrame</key>
 								<string>38 235 1194 800 0 0 1920 1058 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>0pt</string>
+							<string>649pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -354,14 +368,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 5}, {789, 754}}</string>
+								<string>{{0, 654}, {789, 105}}</string>
 								<key>RubberWindowFrame</key>
 								<string>38 235 1194 800 0 0 1920 1058 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>754pt</string>
+							<string>105pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -380,9 +394,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>E4B8D59310C76AB60089EBE2</string>
+				<string>E4FF35D411779444000C9595</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>E4B8D59410C76AB60089EBE2</string>
+				<string>E4FF35D511779444000C9595</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -520,9 +534,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1CD10A99069EF8BA00B06720</string>
 		<string>E4341D8A10C758D700F6FD71</string>
-		<string>/Users/davidpetrie/Documents/Projects/PakMaker/PakMaker.xcodeproj</string>
+		<string>/Users/davidpetrie/Documents/hdTech1/hdk/toolkit/PakMaker/PakMaker.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
 	<string>38 235 1194 800 0 0 1920 1058 </string>
@@ -602,7 +615,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>E4341D8A10C758D700F6FD71</string>
-				<string>E4B8D59510C76AB60089EBE2</string>
+				<string>E4FF35D611779444000C9595</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>
