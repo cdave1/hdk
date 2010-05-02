@@ -14,7 +14,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <UIKit/UIImage.h>
-#include "hdCore/hdFileSystem.h"
+
 
 void LoadPNG( const char *filename, unsigned char **pic, unsigned short *width, unsigned short *height, unsigned short *bytes )
 {
@@ -190,7 +190,7 @@ void info_callback(png_structp png_ptr, png_infop info)
 	// Allocate row pointer space.
 	if (info->height > 0)
 	{
-		if (NULL == (row_pointers = (png_bytep *)calloc(sizeof(png_bytep) * info->height)))
+		if (NULL == (row_pointers = (png_bytep *)calloc(1, sizeof(png_bytep) * info->height)))
 		{
 			hdPrintf("Malloc fail\n");
 			return;
@@ -198,7 +198,7 @@ void info_callback(png_structp png_ptr, png_infop info)
 		
 		for (i = 0; i < info->height; ++i)
 		{
-			if (NULL == (row_pointers[i] = (png_byte *)calloc(sizeof(png_byte) * rowbytes)))
+			if (NULL == (row_pointers[i] = (png_byte *)calloc(1, sizeof(png_byte) * rowbytes)))
 			{
 				hdPrintf("Malloc fail\n");
 				return;				
@@ -295,7 +295,7 @@ void LoadPNG( const char *filename, unsigned char **pic, unsigned short *width, 
 	 */	
 	raw = NULL;
 	len = FileSystem_GetFileSize(pngFile);
-	if (NULL == (raw = (png_byte *)calloc(sizeof(png_byte) * len)))
+	if (NULL == (raw = (png_byte *)calloc(1, sizeof(png_byte) * len)))
 	{
 		png_destroy_read_struct(&png_ptr, &png_info_ptr, NULL);
 		goto PNGLOADFAILED;	
@@ -315,7 +315,7 @@ void LoadPNG( const char *filename, unsigned char **pic, unsigned short *width, 
 	w = png_info_ptr->width;
 	channels = png_info_ptr->channels;
 	
-	if (NULL == (buffer = (unsigned char *)calloc(h * png_info_ptr->rowbytes)))
+	if (NULL == (buffer = (unsigned char *)calloc(1, h * png_info_ptr->rowbytes)))
 	{
 		hdPrintf("[PNGLoader]: MALLOC FAIL loading file %s\n", filename);
 		goto PNGLOADFAILED;

@@ -30,9 +30,15 @@ void hdPrintf(const char *fmt, ...)
 }
 
 
+void hdPrintfv(const char *fmt, va_list argptr)
+{
+	
+}
+
+
 void hdError(int code, const char *fmt, ...)
 {
-	hdPrintf("### ERROR - CODE: %d\n", code);
+	hdPrintf("### ERROR - CODE: %d (%x)\n", code, code);
 	
 	va_list		argptr;
 	static char	msg[kMaxStringSize];

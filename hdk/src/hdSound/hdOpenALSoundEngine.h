@@ -13,7 +13,7 @@
 #import "hdSoundEngineInterface.h"
 #import "hdOpenALPool.h"
 
-#if TARGET_OS_MACOSX == 1
+#if TARGET_OS_MAC == 1
 #warning "Mac OSX sounds"
 	#define USE_CM_OPEN_AL_SOUND 1
 	#define USE_AVPLAYER_FOR_MUSIC 0

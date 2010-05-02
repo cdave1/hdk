@@ -23,17 +23,12 @@
 #define APP_LEVEL_CONTROLLER_H
 
 
-#include "hdCommon.h"
-#include "hdInterface.h"
-#include "hdGameEngine.h"
-
-#include "hdSoundManager.h"
+#include "hdk.h"
 
 #include "AppInterface.h"
 
-#include "hdCamera.h"
-
-#include "hdThumbPad.h"
+#include "hdGraphicsLibrary/hdCamera.h"
+#include "hdInterface/hdThumbPad.h"
 
 
 #define kGravityMultiplier 10.0f

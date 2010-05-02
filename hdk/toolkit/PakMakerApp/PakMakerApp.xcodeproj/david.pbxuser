@@ -16,7 +16,7 @@
 					20,
 					697,
 					20,
-					48.16259765625,
+					48,
 					43,
 					43,
 					20,
@@ -31,12 +31,55 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 276120364;
-			PBXWorkspaceStateSaveDate = 276120364;
+			PBXPerProjectTemplateStateSaveDate = 294179961;
+			PBXWorkspaceStateSaveDate = 294179961;
+		};
+		perUserProjectItems = {
+			6362D6BA1188D48700184AE0 /* PBXTextBookmark */ = 6362D6BA1188D48700184AE0 /* PBXTextBookmark */;
+			6362D6BB1188D48700184AE0 /* PBXBookmark */ = 6362D6BB1188D48700184AE0 /* PBXBookmark */;
+			6362D6BC1188D48700184AE0 /* PBXTextBookmark */ = 6362D6BC1188D48700184AE0 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 63B4BE091075433600A0A288 /* Source Control */;
 		userBuildSettings = {
 		};
+	};
+	29B97316FDCFA39411CA2CEA /* main.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {875, 478}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 236}";
+		};
+	};
+	32CA4F630368D1EE00C91783 /* PakMakerApp_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {875, 478}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 153}";
+		};
+	};
+	6362D6BA1188D48700184AE0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 29B97316FDCFA39411CA2CEA /* main.m */;
+		name = "main.m: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 236;
+		vrLoc = 0;
+	};
+	6362D6BB1188D48700184AE0 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 32CA4F630368D1EE00C91783 /* PakMakerApp_Prefix.pch */;
+	};
+	6362D6BC1188D48700184AE0 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 32CA4F630368D1EE00C91783 /* PakMakerApp_Prefix.pch */;
+		name = "PakMakerApp_Prefix.pch: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 153;
+		vrLoc = 0;
 	};
 	63B4BDFA1075432C00A0A288 /* PakMakerApp */ = {
 		isa = PBXExecutable;
@@ -49,6 +92,9 @@
 		configStateDict = {
 		};
 		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
 		debuggerPlugin = GDBDebugging;
 		disassemblyDisplayState = 0;
 		enableDebugStr = 1;
@@ -58,6 +104,7 @@
 		executableUserSymbolLevel = 0;
 		libgmallocEnabled = 0;
 		name = PakMakerApp;
+		showTypeColumn = 0;
 		sourceDirectories = (
 		);
 	};
@@ -66,6 +113,9 @@
 		fallbackIsa = XCSourceControlManager;
 		isSCMEnabled = 0;
 		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
 		};
 	};
 	63B4BE0A1075433600A0A288 /* Code sense */ = {

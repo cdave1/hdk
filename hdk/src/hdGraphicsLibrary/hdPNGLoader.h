@@ -10,6 +10,8 @@
 #ifndef HD_PNG_LOADER_H
 #define HD_PNG_LOADER_H
 
+#include "hdCore/hdFileSystem.h"
+
 #ifdef __cplusplus
 extern "C" {
 #endif

@@ -25,16 +25,10 @@
 #ifndef HD_THUMB_PAD
 #define HD_THUMB_PAD
 
-#include "hdGameWorld.h"
-#include "hdReceiver.h"
-#include "hdDrawable.h"
-#include "hdMath.h"
-#include "hdGeometry.h"
-#include "hdTypedefList.h"
-#include "hdTextureManager.h"
-#include "hdTexture.h"
-#include "hdDrawingUtilities.h"
-#include "hdUIImage.h"
+#include "hdInterface/hdReceiver.h"
+#include "hdInterface/hdFontManager.h"
+#include "hdInterface/hdUIImage.h"
+
 
 typedef enum
 	{

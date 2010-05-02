@@ -27,6 +27,10 @@ typedef unsigned char uint8;
 typedef unsigned short uint16;
 typedef unsigned int uint32;
 
+#if TARGET_RT_64_BIT == 1
+//typedef long unsigned int uint64;
+#endif
+
 typedef float hdTimeInterval;
 
 

@@ -10,7 +10,11 @@
 #ifndef HD_MULTITOUCH_H
 #define HD_MULTITOUCH_H
 
+#if TARGET_OS_IPHONE == 1 || TARGET_IPHONE_SIMULATOR == 1
 #import "hdInput/hdMultiTouchView.h"
 #import "hdInput/hdAccelerometer.h"
+#else
+#include "hdInput/hdMouseInput.h"
+#endif
 
 #endif

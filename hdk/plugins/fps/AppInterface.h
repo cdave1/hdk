@@ -11,13 +11,7 @@
 #define APP_INTERFACE_H
 
 
-
-#include "hdCommon.h"
-#include "hdInterface.h"
-#include "hdGameEngine.h"
-
-#include "hdSoundManager.h"
-#include "hdScripts.h"
+#include "hdk.h"
 
 #define LEVEL_CONTROLLER_TITLE_FONT "Fonts/bebas18.f"
 #define LEVEL_CONTROLLER_MESSAGE_FONT "Fonts/collegiate16.f"

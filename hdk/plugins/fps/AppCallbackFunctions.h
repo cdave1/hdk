@@ -10,10 +10,9 @@
 #ifndef APP_CALLBACK_FUNCTIONS_H_
 #define APP_CALLBACK_FUNCTIONS_H_
 
-#include <boost/thread.hpp>
+//#include <boost/thread.hpp>
 
-#include "hdInterface.h"
-#include "hdAnimationEngine.h"
+#include "hdk.h"
 #include "AppController.h"
 
 

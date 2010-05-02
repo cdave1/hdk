@@ -16,8 +16,9 @@ using namespace std;
 
 #include <boost/regex.hpp>
 
-#include "hdCommon.h"
-#include "hdMath.h"
+#include "hdCore/hdCommon.h"
+#include "hdCore/hdFileSystem.h"
+#include "hdCore/hdConfig.h"
 #include "hdCollections.h"
 
 #define HD_SCRIPTS_WILDCARD_TAG 9999

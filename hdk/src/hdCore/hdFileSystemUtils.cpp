@@ -8,10 +8,10 @@
  */
 
 #include "hdFileSystemUtils.h"
-/*
-#ifdef LEVEL_EDITOR
+
+//#ifdef LEVEL_EDITOR
 #include <list>
-list<string> hdGetFileNames(const char* subDir)
+list<string> hdGetFileNames(const char *pathBase, const char *subDir)
 {
 	list<string> filenames;
 	//char** filenames = (char **)malloc(sizeof(char *) * 1024);
@@ -19,11 +19,11 @@ list<string> hdGetFileNames(const char* subDir)
 	//memset(filenames, 0, sizeof(filenames));
 	
 	//const char		*pathBase = hdGamedir();
-	string pathBase(FileSystem_BaseDir());
+	string strPathBase(pathBase);
 	string strSubDir(subDir);
 	
 	//RecurseDirectory(pathBase, subDir, filenames, &count, 0);
-	RecurseDirectory(pathBase, strSubDir, &filenames, 0);
+	RecurseDirectory(strPathBase, strSubDir, &filenames, 0);
 	
 	hdPrintf("found %d items in list\n", filenames.size());
 	
@@ -73,6 +73,6 @@ void RecurseDirectory(string pathBase, string subDir, list<string> *fileList, in
 		}
 	}
 }
- #endif
- */
+//#endif
+
 

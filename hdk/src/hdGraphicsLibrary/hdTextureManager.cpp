@@ -94,7 +94,7 @@ hdTexture* hdTextureManager::GetTexture(const int location)
 
 
 hdTexture* hdTextureManager::FindTexture(const char* name, texturetype_t type)
-{
+{	
 	hdTexture	*tex;
 	unsigned char	*data;			/* raw texture data */
 	unsigned short	width, height;	/* width, height of texture */

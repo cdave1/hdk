@@ -11,10 +11,7 @@
 #define APP_CONTROLLER_H_
 
 
-#include "hdCommon.h"
-#include "hdInterface.h"
-#include "hdGameEngine.h" 
-#include "hdPlayerConfig.h"
+#include "hdk.h"
 
 #include "GameController.h"
 

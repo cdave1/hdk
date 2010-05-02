@@ -36,8 +36,11 @@ bool hdGameWorld::AddGameObject(hdGameObject* gameObject)
 	
 	// What if we already have the game object?
 	if (this->ContainsGameObject(gameObject)) return false;
-	
-	hdPrintf("Adding Game Object: %d Type: %d\n", (int)gameObject, gameObject->GetUserType());
+#if TARGET_OS_MAC 
+	hdPrintf("Adding Game Object: %d Type: %d\n", gameObject, gameObject->GetUserType());
+#else
+	hdPrintf("Adding Game Object: %d Type: %d\n", gameObject, gameObject->GetUserType());
+#endif
 	
 	gameObject->m_prev = NULL;
 	gameObject->m_next = m_gameObjectList;
@@ -82,7 +85,7 @@ bool hdGameWorld::RemoveGameObject(hdGameObject* gameObject)
 	
 	hdAssert(m_gameObjectCount > 0);
 	
-	hdPrintf("Removing Game Object: %d\n", (int)gameObject);
+	hdPrintf("Removing Game Object: %d\n", gameObject);
 	
 	if (gameObject->m_prev)
 	{

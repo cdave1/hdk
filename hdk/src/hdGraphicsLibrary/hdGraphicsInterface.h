@@ -15,30 +15,26 @@
 #define HD_GRAPHICS_LIB
 
 
-//#ifdef __APPLE__
-//#include <TargetConditionals.h>
-//#endif
-
-#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
+#if TARGET_OS_IPHONE == 1 || TARGET_IPHONE_SIMULATOR == 1
 #define TARGET_GL_OPENGLES 1
+#elif TARGET_OS_MAC == 1
+#define TARGET_GL_OPENGL 1
 #endif
 
-#if TARGET_GL_OPENGL == 1
-	#ifdef __APPLE__
-//#warning "Including open gl"
-		#include <OpenGL/OpenGL.h>
-		#include <OpenGL/gl.h>
-	#endif
 
-	#define hdglMaxTexSize 2048
-#elif TARGET_GL_OPENGLES == 1
-//#warning "Including open gl es"
+#if TARGET_GL_OPENGLES == 1
+	#warning "Including open gl es"
 	#include <OpenGLES/ES1/gl.h>
 	#include <OpenGLES/ES1/glext.h>
 	#define GL_QUADS 888
 	#define hdglMaxTexSize 1024
 
 	typedef double GLdouble;
+#elif TARGET_GL_OPENGL == 1
+	#warning "Including open gl"
+	#include <OpenGL/OpenGL.h>
+	#include <OpenGL/gl.h>
+	#define hdglMaxTexSize 2048
 #else
 	#warning "no gl directive found - including opengl by default" 
 	#include <OpenGL/OpenGL.h>
@@ -51,6 +47,7 @@
 #include "hdGraphicsLibrary/hdTexture.h"
 
 
+#define hdglError(_hdglUserinfo__) if (hdglErrorCode(_hdglUserinfo__)) hdPrintf("\t at: %s, %d, %s\n", __FILE__,__LINE__,__FUNCTION__)
 
 
 #ifdef __cplusplus
@@ -90,7 +87,9 @@ extern "C" {
 							GLfloat upx, GLfloat upy, GLfloat upz);
 	
 
-	extern void hdglError(const char* source);
+	extern bool hdglErrorCode(const char *userInfo);
+	
+
 	
 	extern int hdglGenTextureFrameBuffer(const hdTexture *texture);
 	

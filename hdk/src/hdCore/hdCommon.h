@@ -60,12 +60,24 @@ extern "C" {
 	
 	void hdFree(void* mem);
 	
+
+	
 extern void hdPrintf( const char *fmt, ... );
+	
+	extern void hdPrintfv(const char *fmt, va_list list);
 
 extern void hdError( int code, const char *fmt, ... );
 	
 #ifdef __cplusplus
 }
+#endif
+
+
+
+#ifdef DEBUG
+#define hdLog(xx, ...) hdPrintf(xx, ##__VA_ARGS__)
+#else
+#define hdLog(xx, ...) ((void)0)
 #endif
 
 #endif

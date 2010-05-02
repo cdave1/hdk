@@ -20,6 +20,7 @@
 #include "hdInterface.h"
 #include "hdEffects.h"
 #include "hdLibs.h"
+#include "hdScripting.h"
 //#include "hdInput.h"
 
 

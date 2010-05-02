@@ -13,7 +13,9 @@
  3. This notice may not be removed or altered from any source distribution.
  */ 
 
-#include "hdApplication.h"
+#include "hdk.h"
+#include "hdInput/hdMultiTouchView.h"
+#include "hdInput/hdAccelerometer.h"
 #include "PlatformIncludes.h"
 
 #include <stdio.h>
@@ -21,7 +23,6 @@
 
 
 
-#include "hdSystemSettings.h"
 #include "AppController.h"
 
 
@@ -41,7 +42,7 @@ typedef struct
 	int totalSecs;
 } timerValues_t;
 
-
+bool synchronizedUpdates;
 float frameDuration;
 bool threadSleepingAllowed;
 short sleepDuration;
@@ -73,7 +74,7 @@ void UpdateTimerValues(timerValues_t& timerValues);
 
 
 
-bool hdApplication::InitApplication()
+bool hdApplication::InitApplication(bool synchronized)
 {
 	char fsRootPath[512];
 	
@@ -89,7 +90,7 @@ bool hdApplication::InitApplication()
 #endif
 	
 	// Root file path.
-	snprintf(fsRootPath, 512, [[[NSBundle mainBundle] resourcePath] cStringUsingEncoding:NSASCIIStringEncoding]);
+	snprintf(fsRootPath, 512, "%s/BaseDir/", [[[NSBundle mainBundle] resourcePath] cStringUsingEncoding:NSASCIIStringEncoding]);
 	
 	FileSystem_Init(fsRootPath);
 	 
@@ -106,7 +107,7 @@ bool hdApplication::InitApplication()
 	
 	
 	printf("Running arch: %s\n", SystemSettings_SystemArchName());
-#if (TARGET_IPHONE_SIMULATOR == 1) || (TARGET_OS_IPHONE == 1)	
+#if TARGET_IPHONE_SIMULATOR || TARGET_OS_IPHONE	
 	/*
 	 * Config file loader 
 	 */
@@ -125,41 +126,53 @@ bool hdApplication::InitApplication()
 	{ 
 		hdConfig::LoadConfigFile("Config/iPhone_3gs.config");
 	}
+	else if (0 == strcmp(SystemSettings_SystemName(), "iPod3,1"))
+	{
+		hdConfig::LoadConfigFile("Config/iPod_31.config");
+	}
 	else if (0 == strcmp(SystemSettings_SystemName(), "i386")) // SIM
 	{
 		hdConfig::LoadConfigFile("Config/iPhone_Sim.config");
 	}  
 	else
 	{
-		hdConfig::LoadConfigFile("Config/iPhone_1g.config");
+		hdConfig::LoadConfigFile("Config/iPhone_3gs.config");
 	} 
 #else
 	hdConfig::LoadConfigFile("Config/osx.config");
 	
 	mousePoint = new hdUIImage("Interface/mousePoint.png", NULL);
 #endif
- 
+	
 	frameDuration = strtof(hdConfig::GetValueForKey(CONFIG_MINFRAMEDURATION_KEY).c_str(), NULL);
 	frameDuration = hdClamp(frameDuration, 0.016f, 0.05f);
 	
-	
-	if (0 == strcmp(SystemSettings_SystemName(), "iPhone1,1") || 
-		0 == strcmp(SystemSettings_SystemName(), "iPod1,1"))
+	if (synchronized)
 	{
-		// Don't sleep too long due to weird timing issues.
-		sleepDuration = 250;
-		threadSleepingAllowed = false; 
-	}
-	else if (0 == strcmp(SystemSettings_SystemName(), "iPhone2,1")) 
-	{
-		sleepDuration = 500;
+		synchronizedUpdates = true;
+		sleepDuration = 0;
 		threadSleepingAllowed = false;
 	}
 	else
 	{
-		sleepDuration = 1000;
-		threadSleepingAllowed = true;
-	}  
+		if (0 == strcmp(SystemSettings_SystemName(), "iPhone1,1") || 
+			0 == strcmp(SystemSettings_SystemName(), "iPod1,1"))
+		{
+			// Don't sleep too long due to weird timing issues.
+			sleepDuration = 250;
+			threadSleepingAllowed = false; 
+		}
+		else if (0 == strcmp(SystemSettings_SystemName(), "iPhone2,1")) 
+		{
+			sleepDuration = 500;
+			threadSleepingAllowed = false;
+		}
+		else
+		{
+			sleepDuration = 1000;
+			threadSleepingAllowed = true;
+		} 
+	}
 	
 	return true;
 } 
