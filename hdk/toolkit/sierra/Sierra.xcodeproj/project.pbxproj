@@ -1,0 +1,776 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DDD58160DA1D0A300B32029 /* Application.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* Application.xib */; };
+		6362D56F11881AE300184AE0 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6362D56E11881AE300184AE0 /* OpenGL.framework */; };
+		6362D7131188E9CC00184AE0 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6362D7121188E9CC00184AE0 /* AppDelegate.mm */; };
+		6362D7221188EA0700184AE0 /* paths_osx.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6362D7211188EA0700184AE0 /* paths_osx.xcconfig */; };
+		6362D7371188EA4C00184AE0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6362D7361188EA4C00184AE0 /* Info.plist */; };
+		6362D7681189930C00184AE0 /* totemWorldManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6362D7491189930C00184AE0 /* totemWorldManager.cpp */; };
+		6362D7691189930C00184AE0 /* totemEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6362D74A1189930C00184AE0 /* totemEvent.cpp */; };
+		6362D76A1189930C00184AE0 /* totemBlock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6362D74C1189930C00184AE0 /* totemBlock.cpp */; };
+		6362D76B1189930C00184AE0 /* totemItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6362D7521189930C00184AE0 /* totemItem.cpp */; };
+		6362D76C1189930C00184AE0 /* totemJack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6362D7541189930C00184AE0 /* totemJack.cpp */; };
+		6362D76D1189930C00184AE0 /* totemJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6362D7561189930C00184AE0 /* totemJoint.cpp */; };
+		6362D76E1189930C00184AE0 /* totemLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6362D7581189930C00184AE0 /* totemLayer.cpp */; };
+		6362D76F1189930C00184AE0 /* totemLevel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6362D75A1189930C00184AE0 /* totemLevel.cpp */; };
+		6362D7701189930C00184AE0 /* totemPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6362D75C1189930C00184AE0 /* totemPolygon.cpp */; };
+		6362D7711189930C00184AE0 /* totemUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6362D75E1189930C00184AE0 /* totemUtils.cpp */; };
+		6362D7721189930C00184AE0 /* totemWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6362D7601189930C00184AE0 /* totemWorld.cpp */; };
+		6362D7731189930C00184AE0 /* totemContactManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6362D7631189930C00184AE0 /* totemContactManager.cpp */; };
+		6362D7741189930C00184AE0 /* totemFloorInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6362D7651189930C00184AE0 /* totemFloorInfo.cpp */; };
+		6362D7D11189953E00184AE0 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6362D7D01189953E00184AE0 /* libz.1.2.3.dylib */; };
+		6362D7F71189955300184AE0 /* libpng12.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6362D7F61189955300184AE0 /* libpng12.0.dylib */; };
+		6362D8771189955D00184AE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97325FDCFA39411CA2CEA /* Foundation.framework */; };
+		6362D87A1189957C00184AE0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6362D8791189957C00184AE0 /* AudioToolbox.framework */; };
+		6362D87C1189957C00184AE0 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6362D87B1189957C00184AE0 /* CoreAudio.framework */; };
+		6362D87E1189957C00184AE0 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6362D87D1189957C00184AE0 /* OpenAL.framework */; };
+		6362D8801189957C00184AE0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6362D87F1189957C00184AE0 /* QuartzCore.framework */; };
+		6362DACC118A1F1100184AE0 /* MainWindowController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6362DACB118A1F1100184AE0 /* MainWindowController.mm */; };
+		6362DACE118A1FC200184AE0 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6362DACD118A1FC200184AE0 /* MainWindow.xib */; };
+		6362DAE7118A223300184AE0 /* EditorViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6362DAE6118A223300184AE0 /* EditorViewController.mm */; };
+		6362DB45118A275300184AE0 /* EditorView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6362DAEC118A228E00184AE0 /* EditorView.mm */; };
+		6362DB4B118A27D600184AE0 /* EditorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6362DB4A118A27D600184AE0 /* EditorViewController.xib */; };
+		6362DB76118A2A6E00184AE0 /* hdLevelEditorController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6362D72E1188EA4100184AE0 /* hdLevelEditorController.cpp */; };
+		6362DB7D118A2A7200184AE0 /* hdLevelEditorUtilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6362D7301188EA4100184AE0 /* hdLevelEditorUtilities.cpp */; };
+		6362DB97118A2B4400184AE0 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6362DB96118A2B4400184AE0 /* GLUT.framework */; };
+		6362DC5E118A3B1B00184AE0 /* LevelEditor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6362DC5D118A3B1B00184AE0 /* LevelEditor.mm */; };
+		63CD3DE1118B77010086D7F5 /* AppDelegateMenu.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63CD3DE0118B77010086D7F5 /* AppDelegateMenu.mm */; };
+		63D60D0B118BED5700436B7D /* LevelPropertyWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63D60D0A118BED5700436B7D /* LevelPropertyWindow.mm */; };
+		63D60D0E118BED6700436B7D /* BlockPropertyWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63D60D0D118BED6700436B7D /* BlockPropertyWindow.mm */; };
+		63D60D11118BED7600436B7D /* PolygonPropertyWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63D60D10118BED7600436B7D /* PolygonPropertyWindow.mm */; };
+		63D60D14118BED8400436B7D /* JointPropertyWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63D60D13118BED8400436B7D /* JointPropertyWindow.mm */; };
+		63D60D17118BED9300436B7D /* EventPropertyWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63D60D16118BED9300436B7D /* EventPropertyWindow.mm */; };
+		63D60D1B118BEDAC00436B7D /* TexturePaletteWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63D60D1A118BEDAC00436B7D /* TexturePaletteWindow.mm */; };
+		63D60D1D118BEDD900436B7D /* LevelPropertyWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D60D1C118BEDD900436B7D /* LevelPropertyWindow.xib */; };
+		63D60D1F118BEDE500436B7D /* BlockPropertyWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D60D1E118BEDE500436B7D /* BlockPropertyWindow.xib */; };
+		63D60D21118BEDF500436B7D /* PolygonPropertyWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D60D20118BEDF500436B7D /* PolygonPropertyWindow.xib */; };
+		63D60D23118BEE0100436B7D /* JointPropertyWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D60D22118BEE0100436B7D /* JointPropertyWindow.xib */; };
+		63D60D25118BEE0D00436B7D /* EventPropertyWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D60D24118BEE0D00436B7D /* EventPropertyWindow.xib */; };
+		63D60D27118BEE1D00436B7D /* TexturePaletteWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D60D26118BEE1D00436B7D /* TexturePaletteWindow.xib */; };
+		63D60DA9118C159800436B7D /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D60DA8118C159800436B7D /* Quartz.framework */; };
+		63D60DB5118C188000436B7D /* TextureImage.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63D60DB4118C188000436B7D /* TextureImage.mm */; };
+		63D60ED8118C310C00436B7D /* TextureImageBrowserView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63D60ED7118C310C00436B7D /* TextureImageBrowserView.mm */; };
+		63D60FE4118D178700436B7D /* NSImageView+Extensions.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63D60FE3118D178700436B7D /* NSImageView+Extensions.mm */; };
+		63D6FC28118BB11A00D76242 /* libhdkOSX_32.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D6FC00118BB0CA00D76242 /* libhdkOSX_32.a */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6362D7281188EA2600184AE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6362D7241188EA2600184AE0 /* hdkOSX.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = hdkOSX;
+		};
+		6362DA77118995A600184AE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6362D7241188EA2600184AE0 /* hdkOSX.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6362DA72118995A600184AE0;
+			remoteInfo = "hdkOSX copy";
+		};
+		63D6FBFF118BB0CA00D76242 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6362D7241188EA2600184AE0 /* hdkOSX.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 63D6FBFD118BB0CA00D76242;
+			remoteInfo = "hdkOSX_64 copy";
+		};
+		63D6FC0E118BB10F00D76242 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6362D7241188EA2600184AE0 /* hdkOSX.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 63D6FA1D118BB0CA00D76242;
+			remoteInfo = hdkOSX_32;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		1DDD58150DA1D0A300B32029 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/Application.xib; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		6362D56E11881AE300184AE0 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		6362D7111188E9CC00184AE0 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6362D7121188E9CC00184AE0 /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		6362D7141188E9D700184AE0 /* prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prefix.pch; sourceTree = "<group>"; };
+		6362D7211188EA0700184AE0 /* paths_osx.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = paths_osx.xcconfig; path = ../../xcode/paths_osx.xcconfig; sourceTree = SOURCE_ROOT; };
+		6362D7241188EA2600184AE0 /* hdkOSX.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = hdkOSX.xcodeproj; path = ../../xcode/hdk/hdkOSX.xcodeproj; sourceTree = SOURCE_ROOT; };
+		6362D72E1188EA4100184AE0 /* hdLevelEditorController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdLevelEditorController.cpp; sourceTree = "<group>"; };
+		6362D72F1188EA4100184AE0 /* hdLevelEditorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdLevelEditorController.h; sourceTree = "<group>"; };
+		6362D7301188EA4100184AE0 /* hdLevelEditorUtilities.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdLevelEditorUtilities.cpp; sourceTree = "<group>"; };
+		6362D7311188EA4100184AE0 /* hdLevelEditorUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdLevelEditorUtilities.h; sourceTree = "<group>"; };
+		6362D7321188EA4100184AE0 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		6362D7361188EA4C00184AE0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6362D7481189930C00184AE0 /* totemWorldManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemWorldManager.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemWorldManager.h; sourceTree = SOURCE_ROOT; };
+		6362D7491189930C00184AE0 /* totemWorldManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemWorldManager.cpp; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemWorldManager.cpp; sourceTree = SOURCE_ROOT; };
+		6362D74A1189930C00184AE0 /* totemEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemEvent.cpp; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemEvent.cpp; sourceTree = SOURCE_ROOT; };
+		6362D74B1189930C00184AE0 /* totemEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemEvent.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemEvent.h; sourceTree = SOURCE_ROOT; };
+		6362D74C1189930C00184AE0 /* totemBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemBlock.cpp; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemBlock.cpp; sourceTree = SOURCE_ROOT; };
+		6362D74D1189930C00184AE0 /* totemBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemBlock.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemBlock.h; sourceTree = SOURCE_ROOT; };
+		6362D74E1189930C00184AE0 /* totemConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemConstants.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemConstants.h; sourceTree = SOURCE_ROOT; };
+		6362D74F1189930C00184AE0 /* totemEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemEnums.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemEnums.h; sourceTree = SOURCE_ROOT; };
+		6362D7501189930C00184AE0 /* totemGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemGame.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemGame.h; sourceTree = SOURCE_ROOT; };
+		6362D7511189930C00184AE0 /* totemGameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemGameObject.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemGameObject.h; sourceTree = SOURCE_ROOT; };
+		6362D7521189930C00184AE0 /* totemItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemItem.cpp; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemItem.cpp; sourceTree = SOURCE_ROOT; };
+		6362D7531189930C00184AE0 /* totemItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemItem.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemItem.h; sourceTree = SOURCE_ROOT; };
+		6362D7541189930C00184AE0 /* totemJack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemJack.cpp; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemJack.cpp; sourceTree = SOURCE_ROOT; };
+		6362D7551189930C00184AE0 /* totemJack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemJack.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemJack.h; sourceTree = SOURCE_ROOT; };
+		6362D7561189930C00184AE0 /* totemJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemJoint.cpp; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemJoint.cpp; sourceTree = SOURCE_ROOT; };
+		6362D7571189930C00184AE0 /* totemJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemJoint.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemJoint.h; sourceTree = SOURCE_ROOT; };
+		6362D7581189930C00184AE0 /* totemLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemLayer.cpp; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemLayer.cpp; sourceTree = SOURCE_ROOT; };
+		6362D7591189930C00184AE0 /* totemLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemLayer.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemLayer.h; sourceTree = SOURCE_ROOT; };
+		6362D75A1189930C00184AE0 /* totemLevel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemLevel.cpp; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemLevel.cpp; sourceTree = SOURCE_ROOT; };
+		6362D75B1189930C00184AE0 /* totemLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemLevel.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemLevel.h; sourceTree = SOURCE_ROOT; };
+		6362D75C1189930C00184AE0 /* totemPolygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemPolygon.cpp; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemPolygon.cpp; sourceTree = SOURCE_ROOT; };
+		6362D75D1189930C00184AE0 /* totemPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemPolygon.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemPolygon.h; sourceTree = SOURCE_ROOT; };
+		6362D75E1189930C00184AE0 /* totemUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemUtils.cpp; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemUtils.cpp; sourceTree = SOURCE_ROOT; };
+		6362D75F1189930C00184AE0 /* totemUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemUtils.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemUtils.h; sourceTree = SOURCE_ROOT; };
+		6362D7601189930C00184AE0 /* totemWorld.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemWorld.cpp; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemWorld.cpp; sourceTree = SOURCE_ROOT; };
+		6362D7611189930C00184AE0 /* totemWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemWorld.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemWorld.h; sourceTree = SOURCE_ROOT; };
+		6362D7621189930C00184AE0 /* totemContactManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemContactManager.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemContactManager.h; sourceTree = SOURCE_ROOT; };
+		6362D7631189930C00184AE0 /* totemContactManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemContactManager.cpp; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemContactManager.cpp; sourceTree = SOURCE_ROOT; };
+		6362D7641189930C00184AE0 /* totemFloorInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemFloorInfo.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemFloorInfo.h; sourceTree = SOURCE_ROOT; };
+		6362D7651189930C00184AE0 /* totemFloorInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemFloorInfo.cpp; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemFloorInfo.cpp; sourceTree = SOURCE_ROOT; };
+		6362D7D01189953E00184AE0 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		6362D7F61189955300184AE0 /* libpng12.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng12.0.dylib; path = /Developer/Apple/SDKs/MacOSX10.5.sdk/usr/X11/lib/libpng12.0.dylib; sourceTree = "<absolute>"; };
+		6362D8791189957C00184AE0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		6362D87B1189957C00184AE0 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		6362D87D1189957C00184AE0 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		6362D87F1189957C00184AE0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6362DACA118A1F1100184AE0 /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
+		6362DACB118A1F1100184AE0 /* MainWindowController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainWindowController.mm; sourceTree = "<group>"; };
+		6362DACD118A1FC200184AE0 /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		6362DAE5118A223300184AE0 /* EditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditorViewController.h; path = Classes/Editor/EditorViewController.h; sourceTree = "<group>"; };
+		6362DAE6118A223300184AE0 /* EditorViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EditorViewController.mm; path = Classes/Editor/EditorViewController.mm; sourceTree = "<group>"; };
+		6362DAEB118A228E00184AE0 /* EditorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditorView.h; path = Classes/Editor/EditorView.h; sourceTree = "<group>"; };
+		6362DAEC118A228E00184AE0 /* EditorView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EditorView.mm; path = Classes/Editor/EditorView.mm; sourceTree = "<group>"; };
+		6362DB4A118A27D600184AE0 /* EditorViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EditorViewController.xib; path = Classes/Editor/EditorViewController.xib; sourceTree = "<group>"; };
+		6362DB96118A2B4400184AE0 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		6362DC5C118A3B1B00184AE0 /* LevelEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelEditor.h; path = Classes/LevelEditor.h; sourceTree = "<group>"; };
+		6362DC5D118A3B1B00184AE0 /* LevelEditor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LevelEditor.mm; path = Classes/LevelEditor.mm; sourceTree = "<group>"; };
+		63CD3DDF118B77010086D7F5 /* AppDelegateMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegateMenu.h; path = Classes/Editor/AppDelegateMenu.h; sourceTree = "<group>"; };
+		63CD3DE0118B77010086D7F5 /* AppDelegateMenu.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegateMenu.mm; path = Classes/Editor/AppDelegateMenu.mm; sourceTree = "<group>"; };
+		63D60D09118BED5700436B7D /* LevelPropertyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelPropertyWindow.h; path = Classes/Editor/LevelPropertyWindow.h; sourceTree = "<group>"; };
+		63D60D0A118BED5700436B7D /* LevelPropertyWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LevelPropertyWindow.mm; path = Classes/Editor/LevelPropertyWindow.mm; sourceTree = "<group>"; };
+		63D60D0C118BED6700436B7D /* BlockPropertyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlockPropertyWindow.h; path = Classes/Editor/BlockPropertyWindow.h; sourceTree = "<group>"; };
+		63D60D0D118BED6700436B7D /* BlockPropertyWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = BlockPropertyWindow.mm; path = Classes/Editor/BlockPropertyWindow.mm; sourceTree = "<group>"; };
+		63D60D0F118BED7600436B7D /* PolygonPropertyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PolygonPropertyWindow.h; path = Classes/Editor/PolygonPropertyWindow.h; sourceTree = "<group>"; };
+		63D60D10118BED7600436B7D /* PolygonPropertyWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PolygonPropertyWindow.mm; path = Classes/Editor/PolygonPropertyWindow.mm; sourceTree = "<group>"; };
+		63D60D12118BED8400436B7D /* JointPropertyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JointPropertyWindow.h; path = Classes/Editor/JointPropertyWindow.h; sourceTree = "<group>"; };
+		63D60D13118BED8400436B7D /* JointPropertyWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = JointPropertyWindow.mm; path = Classes/Editor/JointPropertyWindow.mm; sourceTree = "<group>"; };
+		63D60D15118BED9300436B7D /* EventPropertyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventPropertyWindow.h; path = Classes/Editor/EventPropertyWindow.h; sourceTree = "<group>"; };
+		63D60D16118BED9300436B7D /* EventPropertyWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EventPropertyWindow.mm; path = Classes/Editor/EventPropertyWindow.mm; sourceTree = "<group>"; };
+		63D60D19118BEDAC00436B7D /* TexturePaletteWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TexturePaletteWindow.h; path = Classes/Editor/TexturePaletteWindow.h; sourceTree = "<group>"; };
+		63D60D1A118BEDAC00436B7D /* TexturePaletteWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TexturePaletteWindow.mm; path = Classes/Editor/TexturePaletteWindow.mm; sourceTree = "<group>"; };
+		63D60D1C118BEDD900436B7D /* LevelPropertyWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LevelPropertyWindow.xib; path = Classes/Editor/LevelPropertyWindow.xib; sourceTree = "<group>"; };
+		63D60D1E118BEDE500436B7D /* BlockPropertyWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BlockPropertyWindow.xib; path = Classes/Editor/BlockPropertyWindow.xib; sourceTree = "<group>"; };
+		63D60D20118BEDF500436B7D /* PolygonPropertyWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PolygonPropertyWindow.xib; path = Classes/Editor/PolygonPropertyWindow.xib; sourceTree = "<group>"; };
+		63D60D22118BEE0100436B7D /* JointPropertyWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = JointPropertyWindow.xib; path = Classes/Editor/JointPropertyWindow.xib; sourceTree = "<group>"; };
+		63D60D24118BEE0D00436B7D /* EventPropertyWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EventPropertyWindow.xib; path = Classes/Editor/EventPropertyWindow.xib; sourceTree = "<group>"; };
+		63D60D26118BEE1D00436B7D /* TexturePaletteWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TexturePaletteWindow.xib; path = Classes/Editor/TexturePaletteWindow.xib; sourceTree = "<group>"; };
+		63D60DA8118C159800436B7D /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		63D60DB3118C188000436B7D /* TextureImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextureImage.h; path = Classes/Editor/TextureImage.h; sourceTree = "<group>"; };
+		63D60DB4118C188000436B7D /* TextureImage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TextureImage.mm; path = Classes/Editor/TextureImage.mm; sourceTree = "<group>"; };
+		63D60ED6118C310C00436B7D /* TextureImageBrowserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TextureImageBrowserView.h; path = Classes/Editor/TextureImageBrowserView.h; sourceTree = "<group>"; };
+		63D60ED7118C310C00436B7D /* TextureImageBrowserView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TextureImageBrowserView.mm; path = Classes/Editor/TextureImageBrowserView.mm; sourceTree = "<group>"; };
+		63D60FE2118D178700436B7D /* NSImageView+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSImageView+Extensions.h"; path = "Classes/Extensions/NSImageView+Extensions.h"; sourceTree = "<group>"; };
+		63D60FE3118D178700436B7D /* NSImageView+Extensions.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "NSImageView+Extensions.mm"; path = "Classes/Extensions/NSImageView+Extensions.mm"; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* Sierra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sierra.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63D6FC28118BB11A00D76242 /* libhdkOSX_32.a in Frameworks */,
+				6362D8771189955D00184AE0 /* Foundation.framework in Frameworks */,
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				6362D56F11881AE300184AE0 /* OpenGL.framework in Frameworks */,
+				6362D7D11189953E00184AE0 /* libz.1.2.3.dylib in Frameworks */,
+				6362D7F71189955300184AE0 /* libpng12.0.dylib in Frameworks */,
+				6362D87A1189957C00184AE0 /* AudioToolbox.framework in Frameworks */,
+				6362D87C1189957C00184AE0 /* CoreAudio.framework in Frameworks */,
+				6362D87E1189957C00184AE0 /* OpenAL.framework in Frameworks */,
+				6362D8801189957C00184AE0 /* QuartzCore.framework in Frameworks */,
+				6362DB97118A2B4400184AE0 /* GLUT.framework in Frameworks */,
+				63D60DA9118C159800436B7D /* Quartz.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				63D60D18118BED9600436B7D /* Texture Palette Window */,
+				63D60D08118BE7DE00436B7D /* Event Property Window */,
+				63D60D07118BE7D100436B7D /* Joint Property Window */,
+				63D60D06118BE7C800436B7D /* Polygon Property Window */,
+				63D60D05118BE7C000436B7D /* Block Property Window */,
+				63D60D04118BE7AE00436B7D /* Level Property Window */,
+				63CD3DDE118B76EC0086D7F5 /* Main Menu */,
+				6362DAC9118A1EE100184AE0 /* Main Window Controller */,
+				6362D7381188EA5E00184AE0 /* Totem */,
+				6362D72A1188EA3500184AE0 /* LevelEditor */,
+				6362D7111188E9CC00184AE0 /* AppDelegate.h */,
+				6362D7121188E9CC00184AE0 /* AppDelegate.mm */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				6362D7F61189955300184AE0 /* libpng12.0.dylib */,
+				6362D7D01189953E00184AE0 /* libz.1.2.3.dylib */,
+				6362D56E11881AE300184AE0 /* OpenGL.framework */,
+				6362D8791189957C00184AE0 /* AudioToolbox.framework */,
+				6362D87B1189957C00184AE0 /* CoreAudio.framework */,
+				6362D87D1189957C00184AE0 /* OpenAL.framework */,
+				6362D87F1189957C00184AE0 /* QuartzCore.framework */,
+				6362DB96118A2B4400184AE0 /* GLUT.framework */,
+				63D60DA8118C159800436B7D /* Quartz.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* Sierra.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* OpenGL */ = {
+			isa = PBXGroup;
+			children = (
+				63D60FE0118D176700436B7D /* Extensions */,
+				6362D7201188E9F300184AE0 /* Config */,
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				6362D7231188EA1200184AE0 /* Libraries */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = OpenGL;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				6362D7141188E9D700184AE0 /* prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6362D7361188EA4C00184AE0 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				1DDD58140DA1D0A300B32029 /* Application.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6362D7201188E9F300184AE0 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				6362D7211188EA0700184AE0 /* paths_osx.xcconfig */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		6362D7231188EA1200184AE0 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				6362D7241188EA2600184AE0 /* hdkOSX.xcodeproj */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		6362D7251188EA2600184AE0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6362D7291188EA2600184AE0 /* libhdkOSX.a */,
+				6362DA78118995A600184AE0 /* libhdkOSX_64.a */,
+				63D6FC00118BB0CA00D76242 /* libhdkOSX_32.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6362D72A1188EA3500184AE0 /* LevelEditor */ = {
+			isa = PBXGroup;
+			children = (
+				6362D72E1188EA4100184AE0 /* hdLevelEditorController.cpp */,
+				6362D72F1188EA4100184AE0 /* hdLevelEditorController.h */,
+				6362D7301188EA4100184AE0 /* hdLevelEditorUtilities.cpp */,
+				6362D7311188EA4100184AE0 /* hdLevelEditorUtilities.h */,
+				6362D7321188EA4100184AE0 /* main.cpp */,
+				6362DC5C118A3B1B00184AE0 /* LevelEditor.h */,
+				6362DC5D118A3B1B00184AE0 /* LevelEditor.mm */,
+			);
+			name = LevelEditor;
+			sourceTree = "<group>";
+		};
+		6362D7381188EA5E00184AE0 /* Totem */ = {
+			isa = PBXGroup;
+			children = (
+				6362D7481189930C00184AE0 /* totemWorldManager.h */,
+				6362D7491189930C00184AE0 /* totemWorldManager.cpp */,
+				6362D74A1189930C00184AE0 /* totemEvent.cpp */,
+				6362D74B1189930C00184AE0 /* totemEvent.h */,
+				6362D74C1189930C00184AE0 /* totemBlock.cpp */,
+				6362D74D1189930C00184AE0 /* totemBlock.h */,
+				6362D74E1189930C00184AE0 /* totemConstants.h */,
+				6362D74F1189930C00184AE0 /* totemEnums.h */,
+				6362D7501189930C00184AE0 /* totemGame.h */,
+				6362D7511189930C00184AE0 /* totemGameObject.h */,
+				6362D7521189930C00184AE0 /* totemItem.cpp */,
+				6362D7531189930C00184AE0 /* totemItem.h */,
+				6362D7541189930C00184AE0 /* totemJack.cpp */,
+				6362D7551189930C00184AE0 /* totemJack.h */,
+				6362D7561189930C00184AE0 /* totemJoint.cpp */,
+				6362D7571189930C00184AE0 /* totemJoint.h */,
+				6362D7581189930C00184AE0 /* totemLayer.cpp */,
+				6362D7591189930C00184AE0 /* totemLayer.h */,
+				6362D75A1189930C00184AE0 /* totemLevel.cpp */,
+				6362D75B1189930C00184AE0 /* totemLevel.h */,
+				6362D75C1189930C00184AE0 /* totemPolygon.cpp */,
+				6362D75D1189930C00184AE0 /* totemPolygon.h */,
+				6362D75E1189930C00184AE0 /* totemUtils.cpp */,
+				6362D75F1189930C00184AE0 /* totemUtils.h */,
+				6362D7601189930C00184AE0 /* totemWorld.cpp */,
+				6362D7611189930C00184AE0 /* totemWorld.h */,
+				6362D7621189930C00184AE0 /* totemContactManager.h */,
+				6362D7631189930C00184AE0 /* totemContactManager.cpp */,
+				6362D7641189930C00184AE0 /* totemFloorInfo.h */,
+				6362D7651189930C00184AE0 /* totemFloorInfo.cpp */,
+			);
+			name = Totem;
+			sourceTree = "<group>";
+		};
+		6362DAC9118A1EE100184AE0 /* Main Window Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6362DAE4118A216F00184AE0 /* Editor View Controller */,
+				6362DACA118A1F1100184AE0 /* MainWindowController.h */,
+				6362DACB118A1F1100184AE0 /* MainWindowController.mm */,
+				6362DACD118A1FC200184AE0 /* MainWindow.xib */,
+			);
+			name = "Main Window Controller";
+			sourceTree = "<group>";
+		};
+		6362DAE4118A216F00184AE0 /* Editor View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6362DAE5118A223300184AE0 /* EditorViewController.h */,
+				6362DAE6118A223300184AE0 /* EditorViewController.mm */,
+				6362DB4A118A27D600184AE0 /* EditorViewController.xib */,
+				6362DAEB118A228E00184AE0 /* EditorView.h */,
+				6362DAEC118A228E00184AE0 /* EditorView.mm */,
+			);
+			name = "Editor View Controller";
+			sourceTree = "<group>";
+		};
+		63CD3DDE118B76EC0086D7F5 /* Main Menu */ = {
+			isa = PBXGroup;
+			children = (
+				63CD3DDF118B77010086D7F5 /* AppDelegateMenu.h */,
+				63CD3DE0118B77010086D7F5 /* AppDelegateMenu.mm */,
+			);
+			name = "Main Menu";
+			sourceTree = "<group>";
+		};
+		63D60D04118BE7AE00436B7D /* Level Property Window */ = {
+			isa = PBXGroup;
+			children = (
+				63D60D09118BED5700436B7D /* LevelPropertyWindow.h */,
+				63D60D0A118BED5700436B7D /* LevelPropertyWindow.mm */,
+				63D60D1C118BEDD900436B7D /* LevelPropertyWindow.xib */,
+			);
+			name = "Level Property Window";
+			sourceTree = "<group>";
+		};
+		63D60D05118BE7C000436B7D /* Block Property Window */ = {
+			isa = PBXGroup;
+			children = (
+				63D60D0C118BED6700436B7D /* BlockPropertyWindow.h */,
+				63D60D0D118BED6700436B7D /* BlockPropertyWindow.mm */,
+				63D60D1E118BEDE500436B7D /* BlockPropertyWindow.xib */,
+			);
+			name = "Block Property Window";
+			sourceTree = "<group>";
+		};
+		63D60D06118BE7C800436B7D /* Polygon Property Window */ = {
+			isa = PBXGroup;
+			children = (
+				63D60D0F118BED7600436B7D /* PolygonPropertyWindow.h */,
+				63D60D10118BED7600436B7D /* PolygonPropertyWindow.mm */,
+				63D60D20118BEDF500436B7D /* PolygonPropertyWindow.xib */,
+			);
+			name = "Polygon Property Window";
+			sourceTree = "<group>";
+		};
+		63D60D07118BE7D100436B7D /* Joint Property Window */ = {
+			isa = PBXGroup;
+			children = (
+				63D60D12118BED8400436B7D /* JointPropertyWindow.h */,
+				63D60D13118BED8400436B7D /* JointPropertyWindow.mm */,
+				63D60D22118BEE0100436B7D /* JointPropertyWindow.xib */,
+			);
+			name = "Joint Property Window";
+			sourceTree = "<group>";
+		};
+		63D60D08118BE7DE00436B7D /* Event Property Window */ = {
+			isa = PBXGroup;
+			children = (
+				63D60D15118BED9300436B7D /* EventPropertyWindow.h */,
+				63D60D16118BED9300436B7D /* EventPropertyWindow.mm */,
+				63D60D24118BEE0D00436B7D /* EventPropertyWindow.xib */,
+			);
+			name = "Event Property Window";
+			sourceTree = "<group>";
+		};
+		63D60D18118BED9600436B7D /* Texture Palette Window */ = {
+			isa = PBXGroup;
+			children = (
+				63D60D19118BEDAC00436B7D /* TexturePaletteWindow.h */,
+				63D60D1A118BEDAC00436B7D /* TexturePaletteWindow.mm */,
+				63D60D26118BEE1D00436B7D /* TexturePaletteWindow.xib */,
+				63D60DB3118C188000436B7D /* TextureImage.h */,
+				63D60DB4118C188000436B7D /* TextureImage.mm */,
+				63D60ED6118C310C00436B7D /* TextureImageBrowserView.h */,
+				63D60ED7118C310C00436B7D /* TextureImageBrowserView.mm */,
+			);
+			name = "Texture Palette Window";
+			sourceTree = "<group>";
+		};
+		63D60FE0118D176700436B7D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				63D60FE1118D176C00436B7D /* NSImageVIew */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		63D60FE1118D176C00436B7D /* NSImageVIew */ = {
+			isa = PBXGroup;
+			children = (
+				63D60FE2118D178700436B7D /* NSImageView+Extensions.h */,
+				63D60FE3118D178700436B7D /* NSImageView+Extensions.mm */,
+			);
+			name = NSImageVIew;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* Sierra */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Sierra" */;
+			buildPhases = (
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63D6FC0F118BB10F00D76242 /* PBXTargetDependency */,
+			);
+			name = Sierra;
+			productInstallPath = "$(HOME)/Applications";
+			productName = OpenGL;
+			productReference = 8D1107320486CEB800E47090 /* Sierra.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Sierra" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* OpenGL */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6362D7251188EA2600184AE0 /* Products */;
+					ProjectRef = 6362D7241188EA2600184AE0 /* hdkOSX.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* Sierra */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6362D7291188EA2600184AE0 /* libhdkOSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libhdkOSX.a;
+			remoteRef = 6362D7281188EA2600184AE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6362DA78118995A600184AE0 /* libhdkOSX_64.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libhdkOSX_64.a;
+			remoteRef = 6362DA77118995A600184AE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		63D6FC00118BB0CA00D76242 /* libhdkOSX_32.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libhdkOSX_32.a;
+			remoteRef = 63D6FBFF118BB0CA00D76242 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				1DDD58160DA1D0A300B32029 /* Application.xib in Resources */,
+				6362D7221188EA0700184AE0 /* paths_osx.xcconfig in Resources */,
+				6362D7371188EA4C00184AE0 /* Info.plist in Resources */,
+				6362DACE118A1FC200184AE0 /* MainWindow.xib in Resources */,
+				6362DB4B118A27D600184AE0 /* EditorViewController.xib in Resources */,
+				63D60D1D118BEDD900436B7D /* LevelPropertyWindow.xib in Resources */,
+				63D60D1F118BEDE500436B7D /* BlockPropertyWindow.xib in Resources */,
+				63D60D21118BEDF500436B7D /* PolygonPropertyWindow.xib in Resources */,
+				63D60D23118BEE0100436B7D /* JointPropertyWindow.xib in Resources */,
+				63D60D25118BEE0D00436B7D /* EventPropertyWindow.xib in Resources */,
+				63D60D27118BEE1D00436B7D /* TexturePaletteWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6362DB76118A2A6E00184AE0 /* hdLevelEditorController.cpp in Sources */,
+				6362DB7D118A2A7200184AE0 /* hdLevelEditorUtilities.cpp in Sources */,
+				6362DB45118A275300184AE0 /* EditorView.mm in Sources */,
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				6362D7131188E9CC00184AE0 /* AppDelegate.mm in Sources */,
+				6362D7681189930C00184AE0 /* totemWorldManager.cpp in Sources */,
+				6362D7691189930C00184AE0 /* totemEvent.cpp in Sources */,
+				6362D76A1189930C00184AE0 /* totemBlock.cpp in Sources */,
+				6362D76B1189930C00184AE0 /* totemItem.cpp in Sources */,
+				6362D76C1189930C00184AE0 /* totemJack.cpp in Sources */,
+				6362D76D1189930C00184AE0 /* totemJoint.cpp in Sources */,
+				6362D76E1189930C00184AE0 /* totemLayer.cpp in Sources */,
+				6362D76F1189930C00184AE0 /* totemLevel.cpp in Sources */,
+				6362D7701189930C00184AE0 /* totemPolygon.cpp in Sources */,
+				6362D7711189930C00184AE0 /* totemUtils.cpp in Sources */,
+				6362D7721189930C00184AE0 /* totemWorld.cpp in Sources */,
+				6362D7731189930C00184AE0 /* totemContactManager.cpp in Sources */,
+				6362D7741189930C00184AE0 /* totemFloorInfo.cpp in Sources */,
+				6362DACC118A1F1100184AE0 /* MainWindowController.mm in Sources */,
+				6362DAE7118A223300184AE0 /* EditorViewController.mm in Sources */,
+				6362DC5E118A3B1B00184AE0 /* LevelEditor.mm in Sources */,
+				63CD3DE1118B77010086D7F5 /* AppDelegateMenu.mm in Sources */,
+				63D60D0B118BED5700436B7D /* LevelPropertyWindow.mm in Sources */,
+				63D60D0E118BED6700436B7D /* BlockPropertyWindow.mm in Sources */,
+				63D60D11118BED7600436B7D /* PolygonPropertyWindow.mm in Sources */,
+				63D60D14118BED8400436B7D /* JointPropertyWindow.mm in Sources */,
+				63D60D17118BED9300436B7D /* EventPropertyWindow.mm in Sources */,
+				63D60D1B118BEDAC00436B7D /* TexturePaletteWindow.mm in Sources */,
+				63D60DB5118C188000436B7D /* TextureImage.mm in Sources */,
+				63D60ED8118C310C00436B7D /* TextureImageBrowserView.mm in Sources */,
+				63D60FE4118D178700436B7D /* NSImageView+Extensions.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		63D6FC0F118BB10F00D76242 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = hdkOSX_32;
+			targetProxy = 63D6FC0E118BB10F00D76242 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1DDD58140DA1D0A300B32029 /* Application.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1DDD58150DA1D0A300B32029 /* English */,
+			);
+			name = Application.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C01FCF4B08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6362D7211188EA0700184AE0 /* paths_osx.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"LEVEL_EDITOR=1",
+					"DEBUG=1",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Developer/Apple/SDKs/MacOSX10.5.sdk/usr/X11/lib,
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = Sierra;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		C01FCF4C08A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6362D7211188EA0700184AE0 /* paths_osx.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"LEVEL_EDITOR=1",
+					"DEBUG=1",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Developer/Apple/SDKs/MacOSX10.5.sdk/usr/X11/lib,
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = Sierra;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Sierra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Sierra" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

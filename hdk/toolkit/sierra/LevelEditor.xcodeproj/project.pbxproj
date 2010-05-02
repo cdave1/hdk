@@ -1,0 +1,664 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		63355FCC1186DA38001E7B41 /* libpng12.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 63355F441186D954001E7B41 /* libpng12.0.dylib */; };
+		633845121071499A00E004FE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633845111071499A00E004FE /* Foundation.framework */; };
+		634B81D30FFD287600524315 /* totemJack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 634B81D10FFD287600524315 /* totemJack.cpp */; };
+		634B83800FFD582300524315 /* totemEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 634B837E0FFD582300524315 /* totemEvent.cpp */; };
+		63891C2B1186B838000066F7 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63891C2A1186B838000066F7 /* AudioToolbox.framework */; };
+		63891C3E1186B855000066F7 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63891C3D1186B855000066F7 /* OpenAL.framework */; };
+		63891C401186B862000066F7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63891C3F1186B862000066F7 /* QuartzCore.framework */; };
+		63A1A28F1010EF460090F59F /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A1A28E1010EF460090F59F /* libz.1.2.3.dylib */; };
+		63A70CEB0F8158BC0010727A /* hdLevelEditorUtilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A70CEA0F8158BC0010727A /* hdLevelEditorUtilities.cpp */; };
+		63A775B60FACDFD50080135E /* totemBlock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A7759A0FACDFD50080135E /* totemBlock.cpp */; };
+		63A775B70FACDFD50080135E /* totemItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A775A00FACDFD50080135E /* totemItem.cpp */; };
+		63A775B90FACDFD50080135E /* totemJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A775A40FACDFD50080135E /* totemJoint.cpp */; };
+		63A775BA0FACDFD50080135E /* totemLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A775A60FACDFD50080135E /* totemLayer.cpp */; };
+		63A775BB0FACDFD50080135E /* totemLevel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A775A80FACDFD50080135E /* totemLevel.cpp */; };
+		63A775BD0FACDFD50080135E /* totemPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A775AC0FACDFD50080135E /* totemPolygon.cpp */; };
+		63A775BF0FACDFD50080135E /* totemSpawner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A775B00FACDFD50080135E /* totemSpawner.cpp */; };
+		63A775C00FACDFD50080135E /* totemUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A775B20FACDFD50080135E /* totemUtils.cpp */; };
+		63A775C10FACDFD50080135E /* totemWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A775B40FACDFD50080135E /* totemWorld.cpp */; };
+		63A87CE00FDD6BA0000845C5 /* totemFloorInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A87CDE0FDD6BA0000845C5 /* totemFloorInfo.cpp */; };
+		63A99A4811862C1E0059F4FE /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A99A4711862C1E0059F4FE /* AppKit.framework */; };
+		63A99A4C11862C2C0059F4FE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A99A4B11862C2C0059F4FE /* CoreData.framework */; };
+		63A99B5611862F170059F4FE /* algebra3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B2D11862F170059F4FE /* algebra3.cpp */; };
+		63A99B5711862F170059F4FE /* arcball.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B2F11862F170059F4FE /* arcball.cpp */; };
+		63A99B5811862F170059F4FE /* glui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B3311862F170059F4FE /* glui.cpp */; };
+		63A99B5911862F170059F4FE /* glui_add_controls.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B3411862F170059F4FE /* glui_add_controls.cpp */; };
+		63A99B5A11862F170059F4FE /* glui_bitmap_img_data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B3511862F170059F4FE /* glui_bitmap_img_data.cpp */; };
+		63A99B5B11862F170059F4FE /* glui_bitmaps.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B3611862F170059F4FE /* glui_bitmaps.cpp */; };
+		63A99B5C11862F170059F4FE /* glui_button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B3711862F170059F4FE /* glui_button.cpp */; };
+		63A99B5D11862F170059F4FE /* glui_checkbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B3811862F170059F4FE /* glui_checkbox.cpp */; };
+		63A99B5E11862F170059F4FE /* glui_column.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B3911862F170059F4FE /* glui_column.cpp */; };
+		63A99B5F11862F170059F4FE /* glui_commandline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B3A11862F170059F4FE /* glui_commandline.cpp */; };
+		63A99B6011862F170059F4FE /* glui_control.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B3B11862F170059F4FE /* glui_control.cpp */; };
+		63A99B6111862F170059F4FE /* glui_edittext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B3C11862F170059F4FE /* glui_edittext.cpp */; };
+		63A99B6211862F170059F4FE /* glui_filebrowser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B3D11862F170059F4FE /* glui_filebrowser.cpp */; };
+		63A99B6311862F170059F4FE /* glui_list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B4011862F170059F4FE /* glui_list.cpp */; };
+		63A99B6411862F170059F4FE /* glui_listbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B4111862F170059F4FE /* glui_listbox.cpp */; };
+		63A99B6511862F170059F4FE /* glui_mouse_iaction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B4211862F170059F4FE /* glui_mouse_iaction.cpp */; };
+		63A99B6611862F170059F4FE /* glui_node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B4311862F170059F4FE /* glui_node.cpp */; };
+		63A99B6711862F170059F4FE /* glui_panel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B4411862F170059F4FE /* glui_panel.cpp */; };
+		63A99B6811862F170059F4FE /* glui_radio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B4511862F170059F4FE /* glui_radio.cpp */; };
+		63A99B6911862F170059F4FE /* glui_rollout.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B4611862F170059F4FE /* glui_rollout.cpp */; };
+		63A99B6A11862F170059F4FE /* glui_rotation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B4711862F170059F4FE /* glui_rotation.cpp */; };
+		63A99B6B11862F170059F4FE /* glui_scrollbar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B4811862F170059F4FE /* glui_scrollbar.cpp */; };
+		63A99B6C11862F170059F4FE /* glui_separator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B4911862F170059F4FE /* glui_separator.cpp */; };
+		63A99B6D11862F170059F4FE /* glui_spinner.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B4A11862F170059F4FE /* glui_spinner.cpp */; };
+		63A99B6E11862F170059F4FE /* glui_statictext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B4B11862F170059F4FE /* glui_statictext.cpp */; };
+		63A99B6F11862F170059F4FE /* glui_string.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B4C11862F170059F4FE /* glui_string.cpp */; };
+		63A99B7011862F170059F4FE /* glui_textbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B4D11862F170059F4FE /* glui_textbox.cpp */; };
+		63A99B7111862F170059F4FE /* glui_translation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B4E11862F170059F4FE /* glui_translation.cpp */; };
+		63A99B7211862F170059F4FE /* glui_tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B4F11862F170059F4FE /* glui_tree.cpp */; };
+		63A99B7311862F170059F4FE /* glui_treepanel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B5011862F170059F4FE /* glui_treepanel.cpp */; };
+		63A99B7411862F170059F4FE /* glui_window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B5111862F170059F4FE /* glui_window.cpp */; };
+		63A99B7611862F170059F4FE /* quaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A99B5311862F170059F4FE /* quaternion.cpp */; };
+		63AD3ACB0F6C2FE600AC3142 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AD3ACA0F6C2FE600AC3142 /* GLUT.framework */; };
+		63AD3AD00F6C302200AC3142 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63AD3ACF0F6C302200AC3142 /* OpenGL.framework */; };
+		63AE810D0F6E883B0038CA5A /* hdLevelEditorController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63AE810B0F6E883B0038CA5A /* hdLevelEditorController.cpp */; };
+		63BA595010137F580047C34A /* totemWorldManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63BA594F10137F580047C34A /* totemWorldManager.cpp */; };
+		63C76D5311865C5100C909BE /* libhdkOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63C76D5211865C4800C909BE /* libhdkOSX.a */; };
+		8DD76F650486A84900D96B5E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.cpp */; settings = {ATTRIBUTES = (); }; };
+		8DD76F6A0486A84900D96B5E /* LevelEditor.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859E8B029090EE04C91782 /* LevelEditor.1 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6362DA74118995A600184AE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63C76D4D11865C4800C909BE /* hdkOSX.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6362DA72118995A600184AE0;
+			remoteInfo = "hdkOSX copy";
+		};
+		63C76D5111865C4800C909BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63C76D4D11865C4800C909BE /* hdkOSX.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = hdkOSX;
+		};
+		63C76D6B11865D8600C909BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63C76D4D11865C4800C909BE /* hdkOSX.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = hdkOSX;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76F690486A84900D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				8DD76F6A0486A84900D96B5E /* LevelEditor.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		08FB7796FE84155DC02AAC07 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		63355F441186D954001E7B41 /* libpng12.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng12.0.dylib; path = /Developer/Apple/SDKs/MacOSX10.5.sdk/usr/X11/lib/libpng12.0.dylib; sourceTree = "<absolute>"; };
+		633845111071499A00E004FE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		634B81D10FFD287600524315 /* totemJack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemJack.cpp; path = ../../src/gameClasses/totemJack.cpp; sourceTree = SOURCE_ROOT; };
+		634B81D20FFD287600524315 /* totemJack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemJack.h; path = ../../src/gameClasses/totemJack.h; sourceTree = SOURCE_ROOT; };
+		634B837E0FFD582300524315 /* totemEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemEvent.cpp; path = ../../src/gameClasses/totemEvent.cpp; sourceTree = SOURCE_ROOT; };
+		634B837F0FFD582300524315 /* totemEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemEvent.h; path = ../../src/gameClasses/totemEvent.h; sourceTree = SOURCE_ROOT; };
+		635F30F21186B1B100B2F2D0 /* levelEditor_prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = levelEditor_prefix.pch; sourceTree = "<group>"; };
+		63891C2A1186B838000066F7 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = /System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<absolute>"; };
+		63891C3D1186B855000066F7 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = /System/Library/Frameworks/OpenAL.framework; sourceTree = "<absolute>"; };
+		63891C3F1186B862000066F7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = /System/Library/Frameworks/QuartzCore.framework; sourceTree = "<absolute>"; };
+		63A1A28E1010EF460090F59F /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
+		63A70CE90F8158A10010727A /* hdLevelEditorUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdLevelEditorUtilities.h; sourceTree = "<group>"; };
+		63A70CEA0F8158BC0010727A /* hdLevelEditorUtilities.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdLevelEditorUtilities.cpp; sourceTree = "<group>"; };
+		63A7759A0FACDFD50080135E /* totemBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemBlock.cpp; path = ../../src/gameClasses/totemBlock.cpp; sourceTree = SOURCE_ROOT; };
+		63A7759B0FACDFD50080135E /* totemBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemBlock.h; path = ../../src/gameClasses/totemBlock.h; sourceTree = SOURCE_ROOT; };
+		63A7759C0FACDFD50080135E /* totemConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemConstants.h; path = ../../src/gameClasses/totemConstants.h; sourceTree = SOURCE_ROOT; };
+		63A7759D0FACDFD50080135E /* totemEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemEnums.h; path = ../../src/gameClasses/totemEnums.h; sourceTree = SOURCE_ROOT; };
+		63A7759E0FACDFD50080135E /* totemGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemGame.h; path = ../../src/gameClasses/totemGame.h; sourceTree = SOURCE_ROOT; };
+		63A7759F0FACDFD50080135E /* totemGameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemGameObject.h; path = ../../src/gameClasses/totemGameObject.h; sourceTree = SOURCE_ROOT; };
+		63A775A00FACDFD50080135E /* totemItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemItem.cpp; path = ../../src/gameClasses/totemItem.cpp; sourceTree = SOURCE_ROOT; };
+		63A775A10FACDFD50080135E /* totemItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemItem.h; path = ../../src/gameClasses/totemItem.h; sourceTree = SOURCE_ROOT; };
+		63A775A40FACDFD50080135E /* totemJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemJoint.cpp; path = ../../src/gameClasses/totemJoint.cpp; sourceTree = SOURCE_ROOT; };
+		63A775A50FACDFD50080135E /* totemJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemJoint.h; path = ../../src/gameClasses/totemJoint.h; sourceTree = SOURCE_ROOT; };
+		63A775A60FACDFD50080135E /* totemLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemLayer.cpp; path = ../../src/gameClasses/totemLayer.cpp; sourceTree = SOURCE_ROOT; };
+		63A775A70FACDFD50080135E /* totemLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemLayer.h; path = ../../src/gameClasses/totemLayer.h; sourceTree = SOURCE_ROOT; };
+		63A775A80FACDFD50080135E /* totemLevel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemLevel.cpp; path = ../../src/gameClasses/totemLevel.cpp; sourceTree = SOURCE_ROOT; };
+		63A775A90FACDFD50080135E /* totemLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemLevel.h; path = ../../src/gameClasses/totemLevel.h; sourceTree = SOURCE_ROOT; };
+		63A775AC0FACDFD50080135E /* totemPolygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemPolygon.cpp; path = ../../src/gameClasses/totemPolygon.cpp; sourceTree = SOURCE_ROOT; };
+		63A775AD0FACDFD50080135E /* totemPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemPolygon.h; path = ../../src/gameClasses/totemPolygon.h; sourceTree = SOURCE_ROOT; };
+		63A775B00FACDFD50080135E /* totemSpawner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemSpawner.cpp; path = ../../src/gameClasses/totemSpawner.cpp; sourceTree = SOURCE_ROOT; };
+		63A775B10FACDFD50080135E /* totemSpawner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemSpawner.h; path = ../../src/gameClasses/totemSpawner.h; sourceTree = SOURCE_ROOT; };
+		63A775B20FACDFD50080135E /* totemUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemUtils.cpp; path = ../../src/gameClasses/totemUtils.cpp; sourceTree = SOURCE_ROOT; };
+		63A775B30FACDFD50080135E /* totemUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemUtils.h; path = ../../src/gameClasses/totemUtils.h; sourceTree = SOURCE_ROOT; };
+		63A775B40FACDFD50080135E /* totemWorld.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemWorld.cpp; path = ../../src/gameClasses/totemWorld.cpp; sourceTree = SOURCE_ROOT; };
+		63A775B50FACDFD50080135E /* totemWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemWorld.h; path = ../../src/gameClasses/totemWorld.h; sourceTree = SOURCE_ROOT; };
+		63A87CDE0FDD6BA0000845C5 /* totemFloorInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemFloorInfo.cpp; path = ../../src/gameClasses/totemFloorInfo.cpp; sourceTree = SOURCE_ROOT; };
+		63A87CDF0FDD6BA0000845C5 /* totemFloorInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemFloorInfo.h; path = ../../src/gameClasses/totemFloorInfo.h; sourceTree = SOURCE_ROOT; };
+		63A99A4711862C1E0059F4FE /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		63A99A4B11862C2C0059F4FE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
+		63A99B2B11862E6E0059F4FE /* paths_osx.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = paths_osx.xcconfig; path = ../../../../../hdk/hdTech1/hdk/xcode/paths_osx.xcconfig; sourceTree = SOURCE_ROOT; };
+		63A99B2D11862F170059F4FE /* algebra3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = algebra3.cpp; sourceTree = "<group>"; };
+		63A99B2E11862F170059F4FE /* algebra3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = algebra3.h; sourceTree = "<group>"; };
+		63A99B2F11862F170059F4FE /* arcball.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = arcball.cpp; sourceTree = "<group>"; };
+		63A99B3011862F170059F4FE /* arcball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arcball.h; sourceTree = "<group>"; };
+		63A99B3211862F170059F4FE /* glui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glui.h; sourceTree = "<group>"; };
+		63A99B3311862F170059F4FE /* glui.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glui.cpp; sourceTree = "<group>"; };
+		63A99B3411862F170059F4FE /* glui_add_controls.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glui_add_controls.cpp; sourceTree = "<group>"; };
+		63A99B3511862F170059F4FE /* glui_bitmap_img_data.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glui_bitmap_img_data.cpp; sourceTree = "<group>"; };
+		63A99B3611862F170059F4FE /* glui_bitmaps.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glui_bitmaps.cpp; sourceTree = "<group>"; };
+		63A99B3711862F170059F4FE /* glui_button.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glui_button.cpp; sourceTree = "<group>"; };
+		63A99B3811862F170059F4FE /* glui_checkbox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glui_checkbox.cpp; sourceTree = "<group>"; };
+		63A99B3911862F170059F4FE /* glui_column.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glui_column.cpp; sourceTree = "<group>"; };
+		63A99B3A11862F170059F4FE /* glui_commandline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glui_commandline.cpp; sourceTree = "<group>"; };
+		63A99B3B11862F170059F4FE /* glui_control.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glui_control.cpp; sourceTree = "<group>"; };
+		63A99B3C11862F170059F4FE /* glui_edittext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glui_edittext.cpp; sourceTree = "<group>"; };
+		63A99B3D11862F170059F4FE /* glui_filebrowser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glui_filebrowser.cpp; sourceTree = "<group>"; };
+		63A99B3E11862F170059F4FE /* glui_internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glui_internal.h; sourceTree = "<group>"; };
+		63A99B3F11862F170059F4FE /* glui_internal_control.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glui_internal_control.h; sourceTree = "<group>"; };
+		63A99B4011862F170059F4FE /* glui_list.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glui_list.cpp; sourceTree = "<group>"; };
+		63A99B4111862F170059F4FE /* glui_listbox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glui_listbox.cpp; sourceTree = "<group>"; };
+		63A99B4211862F170059F4FE /* glui_mouse_iaction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glui_mouse_iaction.cpp; sourceTree = "<group>"; };
+		63A99B4311862F170059F4FE /* glui_node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glui_node.cpp; sourceTree = "<group>"; };
+		63A99B4411862F170059F4FE /* glui_panel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glui_panel.cpp; sourceTree = "<group>"; };
+		63A99B4511862F170059F4FE /* glui_radio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glui_radio.cpp; sourceTree = "<group>"; };
+		63A99B4611862F170059F4FE /* glui_rollout.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glui_rollout.cpp; sourceTree = "<group>"; };
+		63A99B4711862F170059F4FE /* glui_rotation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glui_rotation.cpp; sourceTree = "<group>"; };
+		63A99B4811862F170059F4FE /* glui_scrollbar.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glui_scrollbar.cpp; sourceTree = "<group>"; };
+		63A99B4911862F170059F4FE /* glui_separator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glui_separator.cpp; sourceTree = "<group>"; };
+		63A99B4A11862F170059F4FE /* glui_spinner.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glui_spinner.cpp; sourceTree = "<group>"; };
+		63A99B4B11862F170059F4FE /* glui_statictext.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glui_statictext.cpp; sourceTree = "<group>"; };
+		63A99B4C11862F170059F4FE /* glui_string.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glui_string.cpp; sourceTree = "<group>"; };
+		63A99B4D11862F170059F4FE /* glui_textbox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glui_textbox.cpp; sourceTree = "<group>"; };
+		63A99B4E11862F170059F4FE /* glui_translation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glui_translation.cpp; sourceTree = "<group>"; };
+		63A99B4F11862F170059F4FE /* glui_tree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glui_tree.cpp; sourceTree = "<group>"; };
+		63A99B5011862F170059F4FE /* glui_treepanel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glui_treepanel.cpp; sourceTree = "<group>"; };
+		63A99B5111862F170059F4FE /* glui_window.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = glui_window.cpp; sourceTree = "<group>"; };
+		63A99B5311862F170059F4FE /* quaternion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = quaternion.cpp; sourceTree = "<group>"; };
+		63A99B5411862F170059F4FE /* quaternion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = quaternion.h; sourceTree = "<group>"; };
+		63AD3ACA0F6C2FE600AC3142 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = /Developer/Apple/SDKs/MacOSX10.5.sdk/System/Library/Frameworks/GLUT.framework; sourceTree = "<absolute>"; };
+		63AD3ACF0F6C302200AC3142 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		63AE810B0F6E883B0038CA5A /* hdLevelEditorController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdLevelEditorController.cpp; sourceTree = "<group>"; };
+		63AE810C0F6E883B0038CA5A /* hdLevelEditorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdLevelEditorController.h; sourceTree = "<group>"; };
+		63BA594E10137F580047C34A /* totemWorldManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemWorldManager.h; path = ../../src/gameClasses/totemWorldManager.h; sourceTree = SOURCE_ROOT; };
+		63BA594F10137F580047C34A /* totemWorldManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemWorldManager.cpp; path = ../../src/gameClasses/totemWorldManager.cpp; sourceTree = SOURCE_ROOT; };
+		63C76D4D11865C4800C909BE /* hdkOSX.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = hdkOSX.xcodeproj; path = ../../../../../hdk/hdTech1/hdk/xcode/hdk/hdkOSX.xcodeproj; sourceTree = SOURCE_ROOT; };
+		8DD76F6C0486A84900D96B5E /* LevelEditor */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LevelEditor; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6859E8B029090EE04C91782 /* LevelEditor.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = LevelEditor.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76F660486A84900D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63355FCC1186DA38001E7B41 /* libpng12.0.dylib in Frameworks */,
+				63C76D5311865C5100C909BE /* libhdkOSX.a in Frameworks */,
+				63AD3ACB0F6C2FE600AC3142 /* GLUT.framework in Frameworks */,
+				63AD3AD00F6C302200AC3142 /* OpenGL.framework in Frameworks */,
+				63A1A28F1010EF460090F59F /* libz.1.2.3.dylib in Frameworks */,
+				633845121071499A00E004FE /* Foundation.framework in Frameworks */,
+				63A99A4811862C1E0059F4FE /* AppKit.framework in Frameworks */,
+				63A99A4C11862C2C0059F4FE /* CoreData.framework in Frameworks */,
+				63891C2B1186B838000066F7 /* AudioToolbox.framework in Frameworks */,
+				63891C3E1186B855000066F7 /* OpenAL.framework in Frameworks */,
+				63891C401186B862000066F7 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* LevelEditor */ = {
+			isa = PBXGroup;
+			children = (
+				63A99B2911862E640059F4FE /* Config */,
+				08FB7795FE84155DC02AAC07 /* Source */,
+				63AC5FE50F7C37930026AE4D /* GameClasses */,
+				63AD3AC90F6C2FD000AC3142 /* Frameworks */,
+				63AD3A5F0F6C2E1F00AC3142 /* Libraries */,
+				C6859E8C029090F304C91782 /* Documentation */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+			);
+			name = LevelEditor;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				63AE810B0F6E883B0038CA5A /* hdLevelEditorController.cpp */,
+				63AE810C0F6E883B0038CA5A /* hdLevelEditorController.h */,
+				08FB7796FE84155DC02AAC07 /* main.cpp */,
+				63A70CE90F8158A10010727A /* hdLevelEditorUtilities.h */,
+				63A70CEA0F8158BC0010727A /* hdLevelEditorUtilities.cpp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76F6C0486A84900D96B5E /* LevelEditor */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63A99B2911862E640059F4FE /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				63A99B2B11862E6E0059F4FE /* paths_osx.xcconfig */,
+				635F30F21186B1B100B2F2D0 /* levelEditor_prefix.pch */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		63A99B2C11862F170059F4FE /* glui */ = {
+			isa = PBXGroup;
+			children = (
+				63A99B2D11862F170059F4FE /* algebra3.cpp */,
+				63A99B2E11862F170059F4FE /* algebra3.h */,
+				63A99B2F11862F170059F4FE /* arcball.cpp */,
+				63A99B3011862F170059F4FE /* arcball.h */,
+				63A99B3111862F170059F4FE /* GL */,
+				63A99B3311862F170059F4FE /* glui.cpp */,
+				63A99B3411862F170059F4FE /* glui_add_controls.cpp */,
+				63A99B3511862F170059F4FE /* glui_bitmap_img_data.cpp */,
+				63A99B3611862F170059F4FE /* glui_bitmaps.cpp */,
+				63A99B3711862F170059F4FE /* glui_button.cpp */,
+				63A99B3811862F170059F4FE /* glui_checkbox.cpp */,
+				63A99B3911862F170059F4FE /* glui_column.cpp */,
+				63A99B3A11862F170059F4FE /* glui_commandline.cpp */,
+				63A99B3B11862F170059F4FE /* glui_control.cpp */,
+				63A99B3C11862F170059F4FE /* glui_edittext.cpp */,
+				63A99B3D11862F170059F4FE /* glui_filebrowser.cpp */,
+				63A99B3E11862F170059F4FE /* glui_internal.h */,
+				63A99B3F11862F170059F4FE /* glui_internal_control.h */,
+				63A99B4011862F170059F4FE /* glui_list.cpp */,
+				63A99B4111862F170059F4FE /* glui_listbox.cpp */,
+				63A99B4211862F170059F4FE /* glui_mouse_iaction.cpp */,
+				63A99B4311862F170059F4FE /* glui_node.cpp */,
+				63A99B4411862F170059F4FE /* glui_panel.cpp */,
+				63A99B4511862F170059F4FE /* glui_radio.cpp */,
+				63A99B4611862F170059F4FE /* glui_rollout.cpp */,
+				63A99B4711862F170059F4FE /* glui_rotation.cpp */,
+				63A99B4811862F170059F4FE /* glui_scrollbar.cpp */,
+				63A99B4911862F170059F4FE /* glui_separator.cpp */,
+				63A99B4A11862F170059F4FE /* glui_spinner.cpp */,
+				63A99B4B11862F170059F4FE /* glui_statictext.cpp */,
+				63A99B4C11862F170059F4FE /* glui_string.cpp */,
+				63A99B4D11862F170059F4FE /* glui_textbox.cpp */,
+				63A99B4E11862F170059F4FE /* glui_translation.cpp */,
+				63A99B4F11862F170059F4FE /* glui_tree.cpp */,
+				63A99B5011862F170059F4FE /* glui_treepanel.cpp */,
+				63A99B5111862F170059F4FE /* glui_window.cpp */,
+				63A99B5311862F170059F4FE /* quaternion.cpp */,
+				63A99B5411862F170059F4FE /* quaternion.h */,
+			);
+			name = glui;
+			path = ../../../../../hdk/hdTech1/hdk/libs/glui;
+			sourceTree = SOURCE_ROOT;
+		};
+		63A99B3111862F170059F4FE /* GL */ = {
+			isa = PBXGroup;
+			children = (
+				63A99B3211862F170059F4FE /* glui.h */,
+			);
+			path = GL;
+			sourceTree = "<group>";
+		};
+		63AC5FE50F7C37930026AE4D /* GameClasses */ = {
+			isa = PBXGroup;
+			children = (
+				634B837E0FFD582300524315 /* totemEvent.cpp */,
+				634B837F0FFD582300524315 /* totemEvent.h */,
+				634B81D10FFD287600524315 /* totemJack.cpp */,
+				634B81D20FFD287600524315 /* totemJack.h */,
+				63A87CDE0FDD6BA0000845C5 /* totemFloorInfo.cpp */,
+				63A87CDF0FDD6BA0000845C5 /* totemFloorInfo.h */,
+				63A7759A0FACDFD50080135E /* totemBlock.cpp */,
+				63A7759B0FACDFD50080135E /* totemBlock.h */,
+				63A7759C0FACDFD50080135E /* totemConstants.h */,
+				63A7759D0FACDFD50080135E /* totemEnums.h */,
+				63A7759E0FACDFD50080135E /* totemGame.h */,
+				63A7759F0FACDFD50080135E /* totemGameObject.h */,
+				63A775A00FACDFD50080135E /* totemItem.cpp */,
+				63A775A10FACDFD50080135E /* totemItem.h */,
+				63A775A40FACDFD50080135E /* totemJoint.cpp */,
+				63A775A50FACDFD50080135E /* totemJoint.h */,
+				63A775A60FACDFD50080135E /* totemLayer.cpp */,
+				63A775A70FACDFD50080135E /* totemLayer.h */,
+				63A775A80FACDFD50080135E /* totemLevel.cpp */,
+				63A775A90FACDFD50080135E /* totemLevel.h */,
+				63A775AC0FACDFD50080135E /* totemPolygon.cpp */,
+				63A775AD0FACDFD50080135E /* totemPolygon.h */,
+				63A775B00FACDFD50080135E /* totemSpawner.cpp */,
+				63A775B10FACDFD50080135E /* totemSpawner.h */,
+				63A775B20FACDFD50080135E /* totemUtils.cpp */,
+				63A775B30FACDFD50080135E /* totemUtils.h */,
+				63A775B40FACDFD50080135E /* totemWorld.cpp */,
+				63A775B50FACDFD50080135E /* totemWorld.h */,
+				63BA594E10137F580047C34A /* totemWorldManager.h */,
+				63BA594F10137F580047C34A /* totemWorldManager.cpp */,
+			);
+			name = GameClasses;
+			sourceTree = "<group>";
+		};
+		63AD3A5F0F6C2E1F00AC3142 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				63C76D4D11865C4800C909BE /* hdkOSX.xcodeproj */,
+				63A99B2C11862F170059F4FE /* glui */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		63AD3AC90F6C2FD000AC3142 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				633845111071499A00E004FE /* Foundation.framework */,
+				63A1A28E1010EF460090F59F /* libz.1.2.3.dylib */,
+				63AD3ACF0F6C302200AC3142 /* OpenGL.framework */,
+				63AD3ACA0F6C2FE600AC3142 /* GLUT.framework */,
+				63A99A4711862C1E0059F4FE /* AppKit.framework */,
+				63A99A4B11862C2C0059F4FE /* CoreData.framework */,
+				63355F441186D954001E7B41 /* libpng12.0.dylib */,
+				63891C2A1186B838000066F7 /* AudioToolbox.framework */,
+				63891C3D1186B855000066F7 /* OpenAL.framework */,
+				63891C3F1186B862000066F7 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63C76D4E11865C4800C909BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63C76D5211865C4800C909BE /* libhdkOSX.a */,
+				6362DA75118995A600184AE0 /* libhdkOSX_64.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6859E8C029090F304C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				C6859E8B029090EE04C91782 /* LevelEditor.1 */,
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD76F620486A84900D96B5E /* LevelEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "LevelEditor" */;
+			buildPhases = (
+				8DD76F640486A84900D96B5E /* Sources */,
+				8DD76F660486A84900D96B5E /* Frameworks */,
+				8DD76F690486A84900D96B5E /* CopyFiles */,
+				63A9266C0F8E1D3900A44A68 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63C76D6C11865D8600C909BE /* PBXTargetDependency */,
+			);
+			name = LevelEditor;
+			productInstallPath = "$(HOME)/bin";
+			productName = LevelEditor;
+			productReference = 8DD76F6C0486A84900D96B5E /* LevelEditor */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "LevelEditor" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* LevelEditor */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 63C76D4E11865C4800C909BE /* Products */;
+					ProjectRef = 63C76D4D11865C4800C909BE /* hdkOSX.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				8DD76F620486A84900D96B5E /* LevelEditor */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6362DA75118995A600184AE0 /* libhdkOSX_64.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libhdkOSX_64.a;
+			remoteRef = 6362DA74118995A600184AE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		63C76D5211865C4800C909BE /* libhdkOSX.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libhdkOSX.a;
+			remoteRef = 63C76D5111865C4800C909BE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		63A9266C0F8E1D3900A44A68 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/bin/sh -x";
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76F640486A84900D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DD76F650486A84900D96B5E /* main.cpp in Sources */,
+				63AE810D0F6E883B0038CA5A /* hdLevelEditorController.cpp in Sources */,
+				63A70CEB0F8158BC0010727A /* hdLevelEditorUtilities.cpp in Sources */,
+				63A775B60FACDFD50080135E /* totemBlock.cpp in Sources */,
+				63A775B70FACDFD50080135E /* totemItem.cpp in Sources */,
+				63A775B90FACDFD50080135E /* totemJoint.cpp in Sources */,
+				63A775BA0FACDFD50080135E /* totemLayer.cpp in Sources */,
+				63A775BB0FACDFD50080135E /* totemLevel.cpp in Sources */,
+				63A775BD0FACDFD50080135E /* totemPolygon.cpp in Sources */,
+				63A775BF0FACDFD50080135E /* totemSpawner.cpp in Sources */,
+				63A775C00FACDFD50080135E /* totemUtils.cpp in Sources */,
+				63A775C10FACDFD50080135E /* totemWorld.cpp in Sources */,
+				63A87CE00FDD6BA0000845C5 /* totemFloorInfo.cpp in Sources */,
+				634B81D30FFD287600524315 /* totemJack.cpp in Sources */,
+				634B83800FFD582300524315 /* totemEvent.cpp in Sources */,
+				63BA595010137F580047C34A /* totemWorldManager.cpp in Sources */,
+				63A99B5611862F170059F4FE /* algebra3.cpp in Sources */,
+				63A99B5711862F170059F4FE /* arcball.cpp in Sources */,
+				63A99B5811862F170059F4FE /* glui.cpp in Sources */,
+				63A99B5911862F170059F4FE /* glui_add_controls.cpp in Sources */,
+				63A99B5A11862F170059F4FE /* glui_bitmap_img_data.cpp in Sources */,
+				63A99B5B11862F170059F4FE /* glui_bitmaps.cpp in Sources */,
+				63A99B5C11862F170059F4FE /* glui_button.cpp in Sources */,
+				63A99B5D11862F170059F4FE /* glui_checkbox.cpp in Sources */,
+				63A99B5E11862F170059F4FE /* glui_column.cpp in Sources */,
+				63A99B5F11862F170059F4FE /* glui_commandline.cpp in Sources */,
+				63A99B6011862F170059F4FE /* glui_control.cpp in Sources */,
+				63A99B6111862F170059F4FE /* glui_edittext.cpp in Sources */,
+				63A99B6211862F170059F4FE /* glui_filebrowser.cpp in Sources */,
+				63A99B6311862F170059F4FE /* glui_list.cpp in Sources */,
+				63A99B6411862F170059F4FE /* glui_listbox.cpp in Sources */,
+				63A99B6511862F170059F4FE /* glui_mouse_iaction.cpp in Sources */,
+				63A99B6611862F170059F4FE /* glui_node.cpp in Sources */,
+				63A99B6711862F170059F4FE /* glui_panel.cpp in Sources */,
+				63A99B6811862F170059F4FE /* glui_radio.cpp in Sources */,
+				63A99B6911862F170059F4FE /* glui_rollout.cpp in Sources */,
+				63A99B6A11862F170059F4FE /* glui_rotation.cpp in Sources */,
+				63A99B6B11862F170059F4FE /* glui_scrollbar.cpp in Sources */,
+				63A99B6C11862F170059F4FE /* glui_separator.cpp in Sources */,
+				63A99B6D11862F170059F4FE /* glui_spinner.cpp in Sources */,
+				63A99B6E11862F170059F4FE /* glui_statictext.cpp in Sources */,
+				63A99B6F11862F170059F4FE /* glui_string.cpp in Sources */,
+				63A99B7011862F170059F4FE /* glui_textbox.cpp in Sources */,
+				63A99B7111862F170059F4FE /* glui_translation.cpp in Sources */,
+				63A99B7211862F170059F4FE /* glui_tree.cpp in Sources */,
+				63A99B7311862F170059F4FE /* glui_treepanel.cpp in Sources */,
+				63A99B7411862F170059F4FE /* glui_window.cpp in Sources */,
+				63A99B7611862F170059F4FE /* quaternion.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		63C76D6C11865D8600C909BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = hdkOSX;
+			targetProxy = 63C76D6B11865D8600C909BE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB923208733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63A99B2B11862E6E0059F4FE /* paths_osx.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(NATIVE_ARCH)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = levelEditor_prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"LEVEL_EDITOR=1",
+					"DEBUG=1",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Developer/Apple/SDKs/MacOSX10.5.sdk/usr/X11/lib,
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = LevelEditor;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
+				SDKROOT = macosx10.5;
+				USER_HEADER_SEARCH_PATHS = "$(inherited)";
+				WARNING_CFLAGS = "";
+			};
+			name = Debug;
+		};
+		1DEB923308733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63A99B2B11862E6E0059F4FE /* paths_osx.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = "$(NATIVE_ARCH)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/opt/local/lib,
+					/Developer/Apple/SDKs/MacOSX10.5.sdk/usr/X11/lib,
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = LevelEditor;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
+				SDKROOT = macosx10.5;
+				WARNING_CFLAGS = "-Wall";
+			};
+			name = Release;
+		};
+		1DEB923608733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "LEVEL_EDITOR=1";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/Users/david/Documents/Projects/Libraries/Box2D/Box2D_v2.01/Include,
+					/Users/david/Documents/Projects/Libraries/boost_1_38_0,
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+				STRIP_INSTALLED_PRODUCT = NO;
+				USER_HEADER_SEARCH_PATHS = "/Users/david/Documents/Projects/Libraries/boost_1_38_0/libs /Users/david/Documents/Projects/Libraries/boost_1_38_0 /Users/david/Documents/Projects/Research/AnimationEngine/** /Users/david/Documents/Projects/Libraries/Box2D_v2.0.1/Box2D/Contrib/** /Users/david/Documents/Projects/Libraries/Box2D_v2.0.1/Box2D/Include";
+			};
+			name = Debug;
+		};
+		1DEB923708733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "LevelEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923208733DC60010E9CD /* Debug */,
+				1DEB923308733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "LevelEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923608733DC60010E9CD /* Debug */,
+				1DEB923708733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}
