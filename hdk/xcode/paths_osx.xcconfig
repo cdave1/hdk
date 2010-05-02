@@ -1,0 +1,17 @@
+//
+//  paths.xcconfig
+//  Smashed_iPad
+//
+//  Created by David Petrie on 18/04/10.
+//  Copyright 2010 Hackdirt Ltd. All rights reserved.
+//
+
+OTHER_LDFLAGS = -all_load -ObjC
+
+HDKPATH = /Users/david/hdk/hdTech1/hdk/
+HDKPATHS = $(HDKPATH)libs/glui $(HDKPATH)libs/boost_1_38_0 $(HDKPATH)libs/Box2D/2.02/Include $(HDKPATH)libs/Box2D/2.02/Source/Dynamics/Controllers $(HDKPATH)inc/ $(HDKPATH)src/ /Developer/Apple/SDKs/MacOSX10.5.sdk/usr/X11/include
+
+//CCCPATH = /Users/davidpetrie/Documents/Projects/ccc/ccc/
+//CCCPATHS = $(CCCPATH)libs/asi-http-request/Classes/ $(CCCPATH)libs/JSON/ $(CCCPATH)libs/three20/src/ $(CCCPATH)src/
+
+HEADER_SEARCH_PATHS = $(HDKPATHS)
