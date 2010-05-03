@@ -344,7 +344,7 @@ bool hdLevelEditorController::LoadWorld(const char *path)
 const bool hdLevelEditorController::SetLevel(const uint32 levelId)
 {
 	if (m_totemWorld->GetLevelCount() == 0) return false;
-	
+	if (levelId >= m_totemWorld->GetLevelCount()) return false;
 	totemLevel *level = (totemLevel *)m_totemWorld->GetLevels()[levelId];
 	return this->SetCurrentLevel(level);
 }
@@ -989,8 +989,6 @@ void hdLevelEditorController::MouseDown(const int x, const int y)
 
 void hdLevelEditorController::DeleteKey()
 {
-	settings.GLUTmodifiers = glutGetModifiers();
-
 	if (m_selectedGameObjects->GetItemCount() == 0) return;
 	
 	bool res = false;
@@ -1179,6 +1177,12 @@ void hdLevelEditorController::SetOrthoProjection()
 }
 
 
+bool hdLevelEditorController::isPhysicsOn()
+{
+	return settings.testPhysics;
+}
+
+
 void hdLevelEditorController::PhysicsOn()
 {
 	settings.testPhysics = true;
@@ -1211,11 +1215,15 @@ const hdTypedefList<hdGameObject *, 1024> * hdLevelEditorController::GetSelected
 }
 
 
+hdGameObject * hdLevelEditorController::GetSelectedGameObjectAtIndex(unsigned int index) const
+{
+	return m_selectedGameObjects->GetItems()[index];
+}
+
+
 // TODO: Refactor - switch and put into separate functions.
 void hdLevelEditorController::MouseUp()
 {
-	settings.GLUTmodifiers = glutGetModifiers();
-	
 	if (settings.interfacePaletteMode == e_interfacePaletteModeCursor)
 	{
 		if (settings.GLUTmodifiers & (GLUT_ACTIVE_SHIFT | GLUT_ACTIVE_CTRL) > 0)

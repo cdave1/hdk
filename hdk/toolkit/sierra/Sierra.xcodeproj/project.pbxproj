@@ -42,16 +42,19 @@
 		6362DB97118A2B4400184AE0 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6362DB96118A2B4400184AE0 /* GLUT.framework */; };
 		6362DC5E118A3B1B00184AE0 /* LevelEditor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6362DC5D118A3B1B00184AE0 /* LevelEditor.mm */; };
 		63CD3DE1118B77010086D7F5 /* AppDelegateMenu.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63CD3DE0118B77010086D7F5 /* AppDelegateMenu.mm */; };
-		63D60D0B118BED5700436B7D /* LevelPropertyWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63D60D0A118BED5700436B7D /* LevelPropertyWindow.mm */; };
+		63D4E589118EE43F005A7634 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D4E588118EE43F005A7634 /* arrow.png */; };
+		63D4E593118EE642005A7634 /* boxIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D4E591118EE642005A7634 /* boxIcon.png */; };
+		63D4E594118EE642005A7634 /* jointIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D4E592118EE642005A7634 /* jointIcon.png */; };
+		63D60D0B118BED5700436B7D /* WorldPropertyWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63D60D0A118BED5700436B7D /* WorldPropertyWindow.mm */; };
 		63D60D0E118BED6700436B7D /* BlockPropertyWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63D60D0D118BED6700436B7D /* BlockPropertyWindow.mm */; };
 		63D60D11118BED7600436B7D /* PolygonPropertyWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63D60D10118BED7600436B7D /* PolygonPropertyWindow.mm */; };
-		63D60D14118BED8400436B7D /* JointPropertyWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63D60D13118BED8400436B7D /* JointPropertyWindow.mm */; };
+		63D60D14118BED8400436B7D /* RevoluteJointPropertyWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63D60D13118BED8400436B7D /* RevoluteJointPropertyWindow.mm */; };
 		63D60D17118BED9300436B7D /* EventPropertyWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63D60D16118BED9300436B7D /* EventPropertyWindow.mm */; };
 		63D60D1B118BEDAC00436B7D /* TexturePaletteWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63D60D1A118BEDAC00436B7D /* TexturePaletteWindow.mm */; };
-		63D60D1D118BEDD900436B7D /* LevelPropertyWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D60D1C118BEDD900436B7D /* LevelPropertyWindow.xib */; };
+		63D60D1D118BEDD900436B7D /* WorldPropertyWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D60D1C118BEDD900436B7D /* WorldPropertyWindow.xib */; };
 		63D60D1F118BEDE500436B7D /* BlockPropertyWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D60D1E118BEDE500436B7D /* BlockPropertyWindow.xib */; };
 		63D60D21118BEDF500436B7D /* PolygonPropertyWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D60D20118BEDF500436B7D /* PolygonPropertyWindow.xib */; };
-		63D60D23118BEE0100436B7D /* JointPropertyWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D60D22118BEE0100436B7D /* JointPropertyWindow.xib */; };
+		63D60D23118BEE0100436B7D /* RevoluteJointPropertyWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D60D22118BEE0100436B7D /* RevoluteJointPropertyWindow.xib */; };
 		63D60D25118BEE0D00436B7D /* EventPropertyWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D60D24118BEE0D00436B7D /* EventPropertyWindow.xib */; };
 		63D60D27118BEE1D00436B7D /* TexturePaletteWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63D60D26118BEE1D00436B7D /* TexturePaletteWindow.xib */; };
 		63D60DA9118C159800436B7D /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D60DA8118C159800436B7D /* Quartz.framework */; };
@@ -59,6 +62,8 @@
 		63D60ED8118C310C00436B7D /* TextureImageBrowserView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63D60ED7118C310C00436B7D /* TextureImageBrowserView.mm */; };
 		63D60FE4118D178700436B7D /* NSImageView+Extensions.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63D60FE3118D178700436B7D /* NSImageView+Extensions.mm */; };
 		63D6FC28118BB11A00D76242 /* libhdkOSX_32.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D6FC00118BB0CA00D76242 /* libhdkOSX_32.a */; };
+		63E99FC4118E09C900B47D37 /* PrismaticJointPropertyWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63E99FC3118E09C900B47D37 /* PrismaticJointPropertyWindow.mm */; };
+		63E99FC6118E09DE00B47D37 /* PrismaticJointPropertyWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63E99FC5118E09DE00B47D37 /* PrismaticJointPropertyWindow.xib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -164,22 +169,25 @@
 		6362DC5D118A3B1B00184AE0 /* LevelEditor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LevelEditor.mm; path = Classes/LevelEditor.mm; sourceTree = "<group>"; };
 		63CD3DDF118B77010086D7F5 /* AppDelegateMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegateMenu.h; path = Classes/Editor/AppDelegateMenu.h; sourceTree = "<group>"; };
 		63CD3DE0118B77010086D7F5 /* AppDelegateMenu.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegateMenu.mm; path = Classes/Editor/AppDelegateMenu.mm; sourceTree = "<group>"; };
-		63D60D09118BED5700436B7D /* LevelPropertyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelPropertyWindow.h; path = Classes/Editor/LevelPropertyWindow.h; sourceTree = "<group>"; };
-		63D60D0A118BED5700436B7D /* LevelPropertyWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LevelPropertyWindow.mm; path = Classes/Editor/LevelPropertyWindow.mm; sourceTree = "<group>"; };
+		63D4E588118EE43F005A7634 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow.png; path = Resources/arrow.png; sourceTree = "<group>"; };
+		63D4E591118EE642005A7634 /* boxIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boxIcon.png; path = Resources/boxIcon.png; sourceTree = "<group>"; };
+		63D4E592118EE642005A7634 /* jointIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = jointIcon.png; path = Resources/jointIcon.png; sourceTree = "<group>"; };
+		63D60D09118BED5700436B7D /* WorldPropertyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorldPropertyWindow.h; path = Classes/Editor/WorldPropertyWindow.h; sourceTree = "<group>"; };
+		63D60D0A118BED5700436B7D /* WorldPropertyWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = WorldPropertyWindow.mm; path = Classes/Editor/WorldPropertyWindow.mm; sourceTree = "<group>"; };
 		63D60D0C118BED6700436B7D /* BlockPropertyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlockPropertyWindow.h; path = Classes/Editor/BlockPropertyWindow.h; sourceTree = "<group>"; };
 		63D60D0D118BED6700436B7D /* BlockPropertyWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = BlockPropertyWindow.mm; path = Classes/Editor/BlockPropertyWindow.mm; sourceTree = "<group>"; };
 		63D60D0F118BED7600436B7D /* PolygonPropertyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PolygonPropertyWindow.h; path = Classes/Editor/PolygonPropertyWindow.h; sourceTree = "<group>"; };
 		63D60D10118BED7600436B7D /* PolygonPropertyWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PolygonPropertyWindow.mm; path = Classes/Editor/PolygonPropertyWindow.mm; sourceTree = "<group>"; };
-		63D60D12118BED8400436B7D /* JointPropertyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JointPropertyWindow.h; path = Classes/Editor/JointPropertyWindow.h; sourceTree = "<group>"; };
-		63D60D13118BED8400436B7D /* JointPropertyWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = JointPropertyWindow.mm; path = Classes/Editor/JointPropertyWindow.mm; sourceTree = "<group>"; };
+		63D60D12118BED8400436B7D /* RevoluteJointPropertyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RevoluteJointPropertyWindow.h; path = Classes/Editor/RevoluteJointPropertyWindow.h; sourceTree = "<group>"; };
+		63D60D13118BED8400436B7D /* RevoluteJointPropertyWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = RevoluteJointPropertyWindow.mm; path = Classes/Editor/RevoluteJointPropertyWindow.mm; sourceTree = "<group>"; };
 		63D60D15118BED9300436B7D /* EventPropertyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventPropertyWindow.h; path = Classes/Editor/EventPropertyWindow.h; sourceTree = "<group>"; };
 		63D60D16118BED9300436B7D /* EventPropertyWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EventPropertyWindow.mm; path = Classes/Editor/EventPropertyWindow.mm; sourceTree = "<group>"; };
 		63D60D19118BEDAC00436B7D /* TexturePaletteWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TexturePaletteWindow.h; path = Classes/Editor/TexturePaletteWindow.h; sourceTree = "<group>"; };
 		63D60D1A118BEDAC00436B7D /* TexturePaletteWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TexturePaletteWindow.mm; path = Classes/Editor/TexturePaletteWindow.mm; sourceTree = "<group>"; };
-		63D60D1C118BEDD900436B7D /* LevelPropertyWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LevelPropertyWindow.xib; path = Classes/Editor/LevelPropertyWindow.xib; sourceTree = "<group>"; };
+		63D60D1C118BEDD900436B7D /* WorldPropertyWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = WorldPropertyWindow.xib; path = Classes/Editor/WorldPropertyWindow.xib; sourceTree = "<group>"; };
 		63D60D1E118BEDE500436B7D /* BlockPropertyWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = BlockPropertyWindow.xib; path = Classes/Editor/BlockPropertyWindow.xib; sourceTree = "<group>"; };
 		63D60D20118BEDF500436B7D /* PolygonPropertyWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PolygonPropertyWindow.xib; path = Classes/Editor/PolygonPropertyWindow.xib; sourceTree = "<group>"; };
-		63D60D22118BEE0100436B7D /* JointPropertyWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = JointPropertyWindow.xib; path = Classes/Editor/JointPropertyWindow.xib; sourceTree = "<group>"; };
+		63D60D22118BEE0100436B7D /* RevoluteJointPropertyWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RevoluteJointPropertyWindow.xib; path = Classes/Editor/RevoluteJointPropertyWindow.xib; sourceTree = "<group>"; };
 		63D60D24118BEE0D00436B7D /* EventPropertyWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = EventPropertyWindow.xib; path = Classes/Editor/EventPropertyWindow.xib; sourceTree = "<group>"; };
 		63D60D26118BEE1D00436B7D /* TexturePaletteWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = TexturePaletteWindow.xib; path = Classes/Editor/TexturePaletteWindow.xib; sourceTree = "<group>"; };
 		63D60DA8118C159800436B7D /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
@@ -189,6 +197,9 @@
 		63D60ED7118C310C00436B7D /* TextureImageBrowserView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TextureImageBrowserView.mm; path = Classes/Editor/TextureImageBrowserView.mm; sourceTree = "<group>"; };
 		63D60FE2118D178700436B7D /* NSImageView+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSImageView+Extensions.h"; path = "Classes/Extensions/NSImageView+Extensions.h"; sourceTree = "<group>"; };
 		63D60FE3118D178700436B7D /* NSImageView+Extensions.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "NSImageView+Extensions.mm"; path = "Classes/Extensions/NSImageView+Extensions.mm"; sourceTree = "<group>"; };
+		63E99FC2118E09C900B47D37 /* PrismaticJointPropertyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrismaticJointPropertyWindow.h; path = Classes/Editor/PrismaticJointPropertyWindow.h; sourceTree = "<group>"; };
+		63E99FC3118E09C900B47D37 /* PrismaticJointPropertyWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PrismaticJointPropertyWindow.mm; path = Classes/Editor/PrismaticJointPropertyWindow.mm; sourceTree = "<group>"; };
+		63E99FC5118E09DE00B47D37 /* PrismaticJointPropertyWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PrismaticJointPropertyWindow.xib; path = Classes/Editor/PrismaticJointPropertyWindow.xib; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Sierra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sierra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -220,10 +231,10 @@
 			children = (
 				63D60D18118BED9600436B7D /* Texture Palette Window */,
 				63D60D08118BE7DE00436B7D /* Event Property Window */,
-				63D60D07118BE7D100436B7D /* Joint Property Window */,
+				63D60D07118BE7D100436B7D /* Joint Properties */,
 				63D60D06118BE7C800436B7D /* Polygon Property Window */,
 				63D60D05118BE7C000436B7D /* Block Property Window */,
-				63D60D04118BE7AE00436B7D /* Level Property Window */,
+				63D60D04118BE7AE00436B7D /* World Property Window */,
 				63CD3DDE118B76EC0086D7F5 /* Main Menu */,
 				6362DAC9118A1EE100184AE0 /* Main Window Controller */,
 				6362D7381188EA5E00184AE0 /* Totem */,
@@ -296,6 +307,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				63D4E591118EE642005A7634 /* boxIcon.png */,
+				63D4E592118EE642005A7634 /* jointIcon.png */,
+				63D4E588118EE43F005A7634 /* arrow.png */,
 				6362D7361188EA4C00184AE0 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* Application.xib */,
@@ -421,14 +435,14 @@
 			name = "Main Menu";
 			sourceTree = "<group>";
 		};
-		63D60D04118BE7AE00436B7D /* Level Property Window */ = {
+		63D60D04118BE7AE00436B7D /* World Property Window */ = {
 			isa = PBXGroup;
 			children = (
-				63D60D09118BED5700436B7D /* LevelPropertyWindow.h */,
-				63D60D0A118BED5700436B7D /* LevelPropertyWindow.mm */,
-				63D60D1C118BEDD900436B7D /* LevelPropertyWindow.xib */,
+				63D60D09118BED5700436B7D /* WorldPropertyWindow.h */,
+				63D60D0A118BED5700436B7D /* WorldPropertyWindow.mm */,
+				63D60D1C118BEDD900436B7D /* WorldPropertyWindow.xib */,
 			);
-			name = "Level Property Window";
+			name = "World Property Window";
 			sourceTree = "<group>";
 		};
 		63D60D05118BE7C000436B7D /* Block Property Window */ = {
@@ -451,14 +465,17 @@
 			name = "Polygon Property Window";
 			sourceTree = "<group>";
 		};
-		63D60D07118BE7D100436B7D /* Joint Property Window */ = {
+		63D60D07118BE7D100436B7D /* Joint Properties */ = {
 			isa = PBXGroup;
 			children = (
-				63D60D12118BED8400436B7D /* JointPropertyWindow.h */,
-				63D60D13118BED8400436B7D /* JointPropertyWindow.mm */,
-				63D60D22118BEE0100436B7D /* JointPropertyWindow.xib */,
+				63D60D12118BED8400436B7D /* RevoluteJointPropertyWindow.h */,
+				63D60D13118BED8400436B7D /* RevoluteJointPropertyWindow.mm */,
+				63D60D22118BEE0100436B7D /* RevoluteJointPropertyWindow.xib */,
+				63E99FC2118E09C900B47D37 /* PrismaticJointPropertyWindow.h */,
+				63E99FC3118E09C900B47D37 /* PrismaticJointPropertyWindow.mm */,
+				63E99FC5118E09DE00B47D37 /* PrismaticJointPropertyWindow.xib */,
 			);
-			name = "Joint Property Window";
+			name = "Joint Properties";
 			sourceTree = "<group>";
 		};
 		63D60D08118BE7DE00436B7D /* Event Property Window */ = {
@@ -582,12 +599,16 @@
 				6362D7371188EA4C00184AE0 /* Info.plist in Resources */,
 				6362DACE118A1FC200184AE0 /* MainWindow.xib in Resources */,
 				6362DB4B118A27D600184AE0 /* EditorViewController.xib in Resources */,
-				63D60D1D118BEDD900436B7D /* LevelPropertyWindow.xib in Resources */,
+				63D60D1D118BEDD900436B7D /* WorldPropertyWindow.xib in Resources */,
 				63D60D1F118BEDE500436B7D /* BlockPropertyWindow.xib in Resources */,
 				63D60D21118BEDF500436B7D /* PolygonPropertyWindow.xib in Resources */,
-				63D60D23118BEE0100436B7D /* JointPropertyWindow.xib in Resources */,
+				63D60D23118BEE0100436B7D /* RevoluteJointPropertyWindow.xib in Resources */,
 				63D60D25118BEE0D00436B7D /* EventPropertyWindow.xib in Resources */,
 				63D60D27118BEE1D00436B7D /* TexturePaletteWindow.xib in Resources */,
+				63E99FC6118E09DE00B47D37 /* PrismaticJointPropertyWindow.xib in Resources */,
+				63D4E589118EE43F005A7634 /* arrow.png in Resources */,
+				63D4E593118EE642005A7634 /* boxIcon.png in Resources */,
+				63D4E594118EE642005A7634 /* jointIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,15 +641,16 @@
 				6362DAE7118A223300184AE0 /* EditorViewController.mm in Sources */,
 				6362DC5E118A3B1B00184AE0 /* LevelEditor.mm in Sources */,
 				63CD3DE1118B77010086D7F5 /* AppDelegateMenu.mm in Sources */,
-				63D60D0B118BED5700436B7D /* LevelPropertyWindow.mm in Sources */,
+				63D60D0B118BED5700436B7D /* WorldPropertyWindow.mm in Sources */,
 				63D60D0E118BED6700436B7D /* BlockPropertyWindow.mm in Sources */,
 				63D60D11118BED7600436B7D /* PolygonPropertyWindow.mm in Sources */,
-				63D60D14118BED8400436B7D /* JointPropertyWindow.mm in Sources */,
+				63D60D14118BED8400436B7D /* RevoluteJointPropertyWindow.mm in Sources */,
 				63D60D17118BED9300436B7D /* EventPropertyWindow.mm in Sources */,
 				63D60D1B118BEDAC00436B7D /* TexturePaletteWindow.mm in Sources */,
 				63D60DB5118C188000436B7D /* TextureImage.mm in Sources */,
 				63D60ED8118C310C00436B7D /* TextureImageBrowserView.mm in Sources */,
 				63D60FE4118D178700436B7D /* NSImageView+Extensions.mm in Sources */,
+				63E99FC4118E09C900B47D37 /* PrismaticJointPropertyWindow.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

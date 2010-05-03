@@ -68,7 +68,7 @@
 				return;
 			}
 			[[NSNotificationCenter defaultCenter] 
-			 postNotificationName:kLevelWasLoadedNotification
+			 postNotificationName:kWorldWasLoadedNotification
 			 object:nil];
 		}
 	}

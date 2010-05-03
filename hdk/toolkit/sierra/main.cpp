@@ -266,11 +266,11 @@ void TestPhysics(int i)
 	//}
 }
 */
-
+/*
 void UpdateBlockMaterial(int)
 {
 }
-
+*/
 
 
 void Commit(int)
@@ -281,8 +281,8 @@ void Commit(int)
 }
 
 
-void QuitClick(int)
-{
+//void QuitClick(int)
+//{
 	/*
 	for (int i = 0; m_worldFilenames[i] != NULL; i++)
 	{
@@ -298,24 +298,24 @@ void QuitClick(int)
 	free(m_textureFilenames);*/
 	
 	//(GLUI_Update_CB)exit();
-	delete levelEditorController;
+	//delete levelEditorController;
 	
 	//m_dumpMemoryReport(0,0);
 	
 	
 	
-	exit(0);
-}
+	//exit(0);
+//}
 
-
+/*
 
 void SetInterfaceMode_ActiveCursor(int)
 {
 	levelEditorController->settings.interfacePaletteMode = e_interfacePaletteModeCursor;
-}
+}*/
 
 
-
+/*
 void SetInterfaceMode_AddTotemBlock(int)
 {
 	// HACK HACK HACK
@@ -325,10 +325,10 @@ void SetInterfaceMode_AddTotemBlock(int)
 	if (levelEditorController != NULL) levelEditorController->Save();
 	
 	levelEditorController->settings.interfacePaletteMode = e_interfacePaletteModeAddTotemBlock;
-}
+}*/
 
 
-
+/*
 void SetInterfaceMode_AddJoint(int)
 {
 	levelEditorController->settings.interfacePaletteMode = e_interfacePaletteModeTotemJoint;
@@ -388,7 +388,7 @@ void MakeNewWorld(int)
 {
 	if (levelEditorController != NULL) levelEditorController->SaveNewWorld((char *)txtWorldSaveAsName->get_text());
 }
-
+*/
 /*
 void SaveChanges(int)
 {
@@ -397,7 +397,7 @@ void SaveChanges(int)
 }*/
 
 
-
+/*
 void UpdateSelectedBlockMaterial(int)
 {
 	totemBlock* selected = NULL;
@@ -408,7 +408,7 @@ void UpdateSelectedBlockMaterial(int)
 			selected = (totemBlock *)levelEditorController->m_selectedGameObjects->GetItems()[i];
 			selected->SetMaterial((e_totemMaterial)selectedBlockMaterialList->get_int_val());
 		}
-	}
+	}*/
 	
 	/*
 	totemBlock* selected = (totemBlock *)levelEditorController->GetSelectedTotemBlock();
@@ -417,9 +417,9 @@ void UpdateSelectedBlockMaterial(int)
 		selected->SetMaterial((e_totemMaterial)selectedBlockMaterialList->get_int_val());
 	}
 	 */
-}
+//}
 
-
+/*
 void UpdateSelectedBlockType(int)
 {
 	totemBlock* selected = NULL;
@@ -433,7 +433,7 @@ void UpdateSelectedBlockType(int)
 			selected->ResetAABB();
 			selected->ResetOBB();
 		}
-	}
+	}*/
 	
 	/*
 	totemBlock* selected = (totemBlock *)levelEditorController->GetSelectedTotemBlock();
@@ -444,9 +444,9 @@ void UpdateSelectedBlockType(int)
 		selected->ResetAABB();
 		selected->ResetOBB();
 	}*/
-}
+//}
 
-
+/*
 void UpdateSelectedBlockTag(int)
 {
 	totemBlock* selected = NULL;
@@ -458,7 +458,7 @@ void UpdateSelectedBlockTag(int)
 			selected->SetTag((int) atoi(selectedBlockTag->get_text()));
 		}
 	}
-	
+	*/
 	/*
 	totemBlock* selected = (totemBlock *)levelEditorController->GetSelectedTotemBlock();
 	if (selected != NULL)
@@ -466,9 +466,9 @@ void UpdateSelectedBlockTag(int)
 		selected->SetTag((int) atoi(selectedBlockTag->get_text()));
 	} 
 	 */
-}
+//}
 
-
+/*
 void UpdateSelectedBlockDepth(int)
 {
 	totemBlock* selected = NULL;
@@ -486,7 +486,7 @@ void UpdateSelectedBlockDepth(int)
 				selected->SetDepth(-((float)selectedBlockDepth->get_int_val())/10.0f);
 			}
 		}
-	}
+	}*/
 	/*
 	
 	totemBlock* selected = (totemBlock *)levelEditorController->GetSelectedTotemBlock();
@@ -501,9 +501,9 @@ void UpdateSelectedBlockDepth(int)
 			selected->SetDepth(-((float)selectedBlockDepth->get_int_val())/10.0f);
 		}
 	}	*/
-}
+//}
 
-
+/*
 void UpdateSelectedBlockTiling(int)
 {
 	hdVec3 dim;
@@ -531,7 +531,7 @@ void UpdateSelectedBlockTiling(int)
 		}
 	}
 	
-	
+	*/
 	/*
 	totemBlock* selected;
 	hdVec3 dim;
@@ -556,9 +556,9 @@ void UpdateSelectedBlockTiling(int)
 		selected->ResetTextureCoords();
 	}
 	 */
-}
+//}
 
-
+/*
 void UpdateSelectedBlockZOffset(int)
 {
 		float zOffset;
@@ -573,7 +573,7 @@ void UpdateSelectedBlockZOffset(int)
 			selected->SetZOffset(zOffset);
 		}
 	}
-	
+*	
 	
 	/*
 	totemBlock* selected;
@@ -588,9 +588,9 @@ void UpdateSelectedBlockZOffset(int)
 		selected->SetZOffset(zOffset);
 	}
 	 */
-}
+/*}*/
 
-
+/*
 void UpdateSelectedBlockTexture(int)
 {
 	totemBlock* selected = (totemBlock *)levelEditorController->GetSelectedTotemBlock();
@@ -602,9 +602,10 @@ void UpdateSelectedBlockTexture(int)
 		}
 		selected->ResetTextureCoords();
 	}
-}
+}*/
 
 
+/*
 void RefreshLevelList()
 {
 	if (levelList == NULL) return;
@@ -638,12 +639,13 @@ void SelectListItem(GLUI_Listbox *list, const char *text)
 		}
 		item = (GLUI_Listbox_Item *) item->next();
 	}	
-}
+}*/
 
 
 
 void UpdateInterfaceState()
 {
+	/*
 	if (toggleFilterCosmetics == NULL) return;
 	
 	totemLevel *level = (totemLevel *)levelEditorController->GetCurrentLevel();
@@ -658,7 +660,7 @@ void UpdateInterfaceState()
 	toggleFilterCosmetics->set_int_val((int)levelEditorController->settings.showCosmetics);
 	toggleFilterGround->set_int_val((int)levelEditorController->settings.showGround);
 	toggleFilterPhysics->set_int_val((int)levelEditorController->settings.showPhysics);
-	
+	*/
 	/*
 	char tintParam[32];
 	
@@ -679,7 +681,7 @@ void UpdateInterfaceState()
 	
 	snprintf(tintParam, 32, "%d", (int)(255.0f * level->GetBackgroundTopTint()[2]));
 	currentLevelSkyTintTopBlue->set_text(tintParam);*/
-	
+	/*
 	// Textures
 	SelectListItem(currentLevelSkyTexture, level->GetSkyTextureName());
 	SelectListItem(currentLevelFarBGTexture, level->GetFarBackgroundTextureName());
@@ -819,6 +821,7 @@ void UpdateInterfaceState()
 		}
 		else
 		{
+	 */
 			bool allBlocks = levelEditorController->m_selectedGameObjects->GetItemCount() > 1;
 			
 			for (int i = 0; i < levelEditorController->m_selectedGameObjects->GetItemCount(); ++i)
@@ -1096,7 +1099,7 @@ void ApplyBGValuesToAllFollowingLevels()
 }
 
 
-
+/*
 void UpdateLevelFloor(int)
 {
 	totemLevel *level = (totemLevel *)levelEditorController->GetCurrentLevel();
@@ -1139,7 +1142,7 @@ void UpdateLevelFloor(int)
 		level->SetFloorInfo(NULL);
 	}
 }
-
+*/
 
 
 
@@ -1172,7 +1175,7 @@ void EditorFinishCurrentPolygon(int)
 	levelEditorController->FinishCurrentPolygon();
 }
 
-
+/*
 void SetFilters(int)
 {
 	
@@ -1181,7 +1184,7 @@ void SetFilters(int)
 	levelEditorController->settings.showPhysics = (toggleFilterPhysics->get_int_val() != 0);
 	
 	UpdateInterfaceState();
-}
+}*/
 
 
 void SetLayer_Background(int)
@@ -1219,7 +1222,7 @@ void UpdateCurrentLevelName(int)
 	RefreshLevelList();
 }
 
-
+/*
 void UpdateCurrentWorldName(int)
 {	
 	txtWorldSaveAsName->set_text(worldList->curr_text);
@@ -1235,9 +1238,9 @@ void UpdateCurrentWorldName(int)
 void UpdateWorldFileSaveName(int)
 {
 	levelEditorController->settings.currentWorldPath = (char *)txtWorldSaveAsName->get_text();
-}
+}*/
 
-
+/*
 void DeleteCurrentLevel(int)
 {
 	totemLevel *lev;
@@ -1282,7 +1285,7 @@ void DeleteCurrentLevel(int)
 		
 		levelEditorController->settings.deleteButtonTaps = 0;
 	}
-}
+}*/
 
 
 
@@ -1302,7 +1305,7 @@ void PasteCopiedLevel(int)
 	currentLevelPaste->disable();
 }
 
-
+/*
 void UpdateJointProperties(int)
 {
 	if (levelEditorController->settings.DEPRECATEDselectedGameObject != NULL)
@@ -1358,7 +1361,7 @@ void UpdateJointProperties(int)
 			}
 		}
 	}
-}
+}*/
 
 /*
 void Keyboard(unsigned char key, int x, int y)

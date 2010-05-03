@@ -12,7 +12,11 @@
 #define LOCK_GL_CONTEXT [[LevelEditor editorContextLock] lock]
 #define UNLOCK_GL_CONTEXT [[LevelEditor editorContextLock] unlock]
 
-#define kLevelWasLoadedNotification @"kLevelWasLoadedNotification"
+#define kWorldWasLoadedNotification @"kWorldWasLoadedNotification"
+#define kWorldWasUnloadedNotification @"kWorldWasUnloadedNotification"
+
+
+#define kLoadedLevelWasChangedNotification @"kLoadedLevelWasChangedNotification"
 #define kSingleItemSelectedNotification @"kSingleItemSelectedNotification"
 #define kSingleItemUnselectedNotification @"kSingleItemUnselectedNotification"
 #define kMultipleItemsSelectedNotification @"kMultipleItemsSelectedNotification"

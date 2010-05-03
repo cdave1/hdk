@@ -35,8 +35,7 @@
 	
 	_mainWindowController = [[MainWindowController alloc] init];
 	
-	hdLevelEditorController *levelEditorContoller = 
-		[LevelEditor sharedInstance];
+	[LevelEditor sharedInstance];
 	
 	[_mainWindowController.window makeKeyWindow];//= _mainWindowController.window;
 	//[_window makeKeyAndOrderFront:self];

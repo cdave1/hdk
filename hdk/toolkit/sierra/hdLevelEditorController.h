@@ -186,6 +186,7 @@ public:
 	void MouseDrag(const int x, const int y);
 	void MouseUp();
 	
+	bool isPhysicsOn();
 	void PhysicsOn();
 	void PhysicsOff();
 	
@@ -271,6 +272,8 @@ public:
 	const hdGameObject * GetSelectedGameObjectSingle() const;
 	
 	const hdTypedefList<hdGameObject *, 1024> * GetSelectedGameObjects() const;
+	
+	hdGameObject *GetSelectedGameObjectAtIndex(unsigned int index) const;
 	
 	Settings settings;
 	
