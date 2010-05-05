@@ -43,6 +43,9 @@ hdLevelEditorController::hdLevelEditorController()
 	
 	m_selectedGameObjects = new hdTypedefList<hdGameObject*, 1024>();
 	m_copiedGameObjects = new hdTypedefList<hdGameObject*, 1024>();
+	
+	m_drawingStyle	= e_drawingStyleEditorFull; //e_drawingStyleEditorFull;
+	
 	/*
 	m_bomb = NULL;
 	m_textLine = 30;
@@ -58,10 +61,17 @@ hdLevelEditorController::hdLevelEditorController()
 	 */
 	//glEnable(GL_TEXTURE_2D);
 	m_currentLevel = NULL;
-	m_totemWorld = NULL;
 	m_currentJoint = NULL;
 	m_currentBlockShape = NULL;
 	m_currentEvent = NULL;
+	
+	
+	m_totemWorld = new totemWorld("(Unnamed World)");
+	m_currentLevel = new totemLevel();
+	m_currentLevel->Init(m_gameWorld);
+	m_currentLevel->SetLevelName("(Unnamed Level)");
+	
+	m_totemWorld->AddLevel(m_currentLevel);
 }
 
 
@@ -1197,6 +1207,31 @@ void hdLevelEditorController::PhysicsOff()
 }
 
 
+void hdLevelEditorController::SetNewBlockShapeType(e_totemShapeType shapeType)
+{
+	
+	settings.newTotemShapeType = shapeType;
+}
+
+
+void hdLevelEditorController::SetNewBlockMaterialType(e_totemMaterial material)
+{
+	settings.newTotemMaterial = material;
+}
+
+
+void hdLevelEditorController::SetNewBlockType(e_totemBlockType blockType)
+{
+	settings.newTotemBlockType = blockType;
+}
+
+
+void hdLevelEditorController::SetNewJointType(e_totemJointType jointType)
+{
+	settings.newTotemJointType = jointType;
+}
+
+
 const uint32 hdLevelEditorController::GetSelectedGameObjectsCount() const
 {
 	return m_selectedGameObjects->GetItemCount();
@@ -1218,6 +1253,16 @@ const hdTypedefList<hdGameObject *, 1024> * hdLevelEditorController::GetSelected
 hdGameObject * hdLevelEditorController::GetSelectedGameObjectAtIndex(unsigned int index) const
 {
 	return m_selectedGameObjects->GetItems()[index];
+}
+
+
+void hdLevelEditorController::SetPaletteTexture(const char *texturePath)
+{
+}
+
+
+void hdLevelEditorController::SetPaletteTint(const float r, const float g, const float b, const float a)
+{
 }
 
 
@@ -1847,6 +1892,9 @@ void hdLevelEditorController::Draw()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	
 	glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
+	glEnable(GL_BLEND); glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); 
+	glEnable(GL_LINE_SMOOTH);
+	glLineWidth(1.0f);
 	
 	this->SetupProjection();
 	
@@ -1865,7 +1913,7 @@ void hdLevelEditorController::Draw()
 		m_currentLevel->Step();
 	}
 	
-	//this->DrawModeInfo();
+	this->DrawModeInfo();
 	
 	hdglError("sss");
 	
@@ -1886,13 +1934,14 @@ void hdLevelEditorController::Draw()
 	// Draw a grid
 	glBegin(GL_LINES);
 	glColor4f(0.7f, 0.7f, 0.7f, 1.0f);
-	for (float x = settings.screenLower.x; x <= settings.screenUpper.x; x += 0.2f)
+	const float squareBoxSize = 0.25f;
+	for (float x = floor(settings.screenLower.x); x <= ceil(settings.screenUpper.x); x += squareBoxSize)
 	{
 		glVertex2f(x, settings.screenLower.y);
 		glVertex2f(x, settings.screenUpper.y);
 	}
 	
-	for (float y = settings.screenLower.y; y <= settings.screenUpper.y; y += 0.2f)
+	for (float y = floor(settings.screenLower.y); y <= ceil(settings.screenUpper.y); y += squareBoxSize)
 	{
 		glVertex2f(settings.screenLower.x, y);
 		glVertex2f(settings.screenUpper.x, y);
@@ -1932,54 +1981,62 @@ void hdLevelEditorController::Draw()
 	{
 		if (settings.interfaceLayerMode & e_interfaceLayerModeGameLayer)
 		{
-			m_currentLevel->Draw();
-			
-			//showCosmetics;
-			//bool showGround;
-			//bool showPhysics
-			
-			glEnable(GL_DEPTH_TEST);
-			glDisable(GL_BLEND);
-			totemBlock *block;
-			
-			for (int i = 0; i < m_currentLevel->GetBlockCount(); ++i)
+			if (m_drawingStyle == e_drawingStyleEditorFull)
 			{
-				block = m_currentLevel->GetBlocks()[i];
+				//m_currentLevel->DrawEditorView();
+				m_currentLevel->Draw();
 				
-				if (BlockPassesFilter(block) && !block->IsTransparent())
-				{
-					block->Draw();
-				}			
-			}
-			
-			for (int i = 0; i < m_currentLevel->GetBlockCount(); ++i)
-			{
-				block = m_currentLevel->GetBlocks()[i];
+				//showCosmetics;
+				//bool showGround;
+				//bool showPhysics
 				
-				if (BlockPassesFilter(block) && block->IsTransparent())
+				glEnable(GL_DEPTH_TEST);
+				glDisable(GL_BLEND);
+				totemBlock *block;
+				
+				for (int i = 0; i < m_currentLevel->GetBlockCount(); ++i)
 				{
-					block->Draw();
-				}			
-			}
-			
-			
-			glEnable(GL_BLEND);
-			if (settings.showPhysics)
-			{
-				for (int i = 0; i < m_currentLevel->GetJointCount(); ++i)
-				{
-					m_currentLevel->GetJoints()[i]->Draw();
+					block = m_currentLevel->GetBlocks()[i];
+					
+					if (BlockPassesFilter(block) && !block->IsTransparent())
+					{
+						block->Draw();
+					}			
 				}
+				
+				for (int i = 0; i < m_currentLevel->GetBlockCount(); ++i)
+				{
+					block = m_currentLevel->GetBlocks()[i];
+					
+					if (BlockPassesFilter(block) && block->IsTransparent())
+					{
+						block->Draw();
+					}			
+				}
+				
+				
+				glEnable(GL_BLEND);
+				if (settings.showPhysics)
+				{
+					for (int i = 0; i < m_currentLevel->GetJointCount(); ++i)
+					{
+						m_currentLevel->GetJoints()[i]->Draw();
+					}
+				}
+				
+				
+				
+				for (int i = 0; i < m_currentLevel->GetEvents()->GetItemCount(); ++i)
+				{
+					m_currentLevel->GetEvents()->GetItems()[i]->Draw();
+				}
+				glDisable(GL_BLEND);
+				glDisable(GL_DEPTH_TEST);
 			}
-			
-			
-			
-			for (int i = 0; i < m_currentLevel->GetEvents()->GetItemCount(); ++i)
+			else if (m_drawingStyle == e_drawingStylePreview)
 			{
-				m_currentLevel->GetEvents()->GetItems()[i]->Draw();
+				
 			}
-			glDisable(GL_BLEND);
-			glDisable(GL_DEPTH_TEST);
 		}
 	}
 	

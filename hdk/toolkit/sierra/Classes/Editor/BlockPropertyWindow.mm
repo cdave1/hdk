@@ -31,6 +31,14 @@
 		// initially hidden
 		[self.window orderOut:self];
 		
+		if ([self.window respondsToSelector:@selector(setFloatingPanel:)])
+		{
+			[((NSPanel *)self.window) setFloatingPanel:YES];
+		}
+		
+		[_texture registerForDraggedTypes:[NSArray arrayWithObjects:NSCreateFileContentsPboardType(@"tga"),NSCreateFileContentsPboardType(@"png"),nil]];
+		//[self.window setDraggingDestinationDelegate:self];
+		
 	}
 	return self;
 }
@@ -108,6 +116,19 @@
 }
 
 
+- (NSDragOperation)draggingEntered:(id < NSDraggingInfo >)sender
+{
+	return NSDragOperationGeneric;
+}
+
+
+- (BOOL)performDragOperation:(id <NSDraggingInfo>)sender
+{
+	return YES;
+}
+
+
+
 - (IBAction)UpdateSelectedBlockMaterial:(id)sender
 {
 	totemBlock* selected = NULL;
@@ -168,17 +189,18 @@
 }
 
 
+/**
+ * Fired by drag and drop event onto imageview
+ */
 - (IBAction)UpdateSelectedBlockTexture:(id)sender
 {
 	totemBlock* selected = (totemBlock *)[LevelEditor sharedInstance]->GetSelectedTotemBlock();
-	if (selected != NULL && (selected->IsTextureChangeable()))
+	const char *textureName = [_texture getResourcePathOfImage];
+	if (textureName && selected && (selected->IsTextureChangeable()))
 	{
-		/*
-		if (selectedBlockTexture->get_int_val() != -1)
-		{
-			selected->SetTextureName(selectedBlockTexture->curr_text.c_str());
-		}*/
+		selected->SetTextureName(textureName);
 		selected->ResetTextureCoords();
+		[_textureName setStringValue:[NSString stringWithUTF8String:selected->GetTextureName()]];
 	}
 }
 

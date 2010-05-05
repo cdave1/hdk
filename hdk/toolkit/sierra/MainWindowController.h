@@ -16,12 +16,13 @@
 #import "EventPropertyWindow.h"
 #import "TexturePaletteWindow.h"
 
-@interface MainWindowController : NSWindowController
+@interface MainWindowController : NSWindowController <NSComboBoxDelegate, NSComboBoxDataSource>
 {
 @private
 	EditorViewController *_editorViewController;
 	IBOutlet NSView *_contentView;
-	IBOutlet NSWindow *_toolPanel;
+	IBOutlet NSPanel *_mainPanel;
+	IBOutlet NSPanel *_toolPanel;
 	IBOutlet NSButton *_cursorButton;
 	IBOutlet NSButton *_blockButton;
 	IBOutlet NSButton *_jointButton;
@@ -29,10 +30,12 @@
 	IBOutlet NSButton *_groundFilterCheckbox;
 	IBOutlet NSButton *_physicsFilterCheckbox;
 	
+	IBOutlet NSComboBox *_blockMaterialComboBox;
 	IBOutlet NSComboBox *_blockTypeComboBox;
 	IBOutlet NSComboBox *_jointTypeComboBox;
+	IBOutlet NSComboBox *_blockShapeComboBox;
 	IBOutlet NSColorWell *_currentTint;
-	IBOutlet NSImageView *_currentTexture;
+	IBOutlet hdImageView *_currentTexture;
 	
 	IBOutlet NSButton *_togglePhysics;
 	IBOutlet NSProgressIndicator *_progress;
@@ -56,5 +59,23 @@
 
 - (IBAction)setFilter:(id)sender;
 
+- (IBAction)commitBlockStates:(id)sender;
 
+- (IBAction)updatePaletteTexture:(id)sender;
+
+- (IBAction)updatePaletteTint:(id)sender;
+
+
+
+- (IBAction)SetNewJointMode:(id)sender;
+
+- (IBAction)SetNewEventMode:(id)sender;
+
+- (IBAction)UpdateNewBlockType:(id)sender;
+
+- (IBAction)UpdateNewBlockShapeType:(id)sender;
+
+- (IBAction) UpdateNewJointType:(id)sender;
+
+- (IBAction)UpdateNewBlockMaterial:(id)sender;
 @end

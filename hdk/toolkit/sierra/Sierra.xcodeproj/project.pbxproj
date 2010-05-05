@@ -45,6 +45,7 @@
 		63D4E589118EE43F005A7634 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D4E588118EE43F005A7634 /* arrow.png */; };
 		63D4E593118EE642005A7634 /* boxIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D4E591118EE642005A7634 /* boxIcon.png */; };
 		63D4E594118EE642005A7634 /* jointIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D4E592118EE642005A7634 /* jointIcon.png */; };
+		63D4E62A118F6666005A7634 /* hdImageView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63D4E629118F6666005A7634 /* hdImageView.mm */; };
 		63D60D0B118BED5700436B7D /* WorldPropertyWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63D60D0A118BED5700436B7D /* WorldPropertyWindow.mm */; };
 		63D60D0E118BED6700436B7D /* BlockPropertyWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63D60D0D118BED6700436B7D /* BlockPropertyWindow.mm */; };
 		63D60D11118BED7600436B7D /* PolygonPropertyWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63D60D10118BED7600436B7D /* PolygonPropertyWindow.mm */; };
@@ -172,6 +173,8 @@
 		63D4E588118EE43F005A7634 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow.png; path = Resources/arrow.png; sourceTree = "<group>"; };
 		63D4E591118EE642005A7634 /* boxIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boxIcon.png; path = Resources/boxIcon.png; sourceTree = "<group>"; };
 		63D4E592118EE642005A7634 /* jointIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = jointIcon.png; path = Resources/jointIcon.png; sourceTree = "<group>"; };
+		63D4E628118F6666005A7634 /* hdImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hdImageView.h; path = Classes/Extensions/hdImageView.h; sourceTree = "<group>"; };
+		63D4E629118F6666005A7634 /* hdImageView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = hdImageView.mm; path = Classes/Extensions/hdImageView.mm; sourceTree = "<group>"; };
 		63D60D09118BED5700436B7D /* WorldPropertyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorldPropertyWindow.h; path = Classes/Editor/WorldPropertyWindow.h; sourceTree = "<group>"; };
 		63D60D0A118BED5700436B7D /* WorldPropertyWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = WorldPropertyWindow.mm; path = Classes/Editor/WorldPropertyWindow.mm; sourceTree = "<group>"; };
 		63D60D0C118BED6700436B7D /* BlockPropertyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlockPropertyWindow.h; path = Classes/Editor/BlockPropertyWindow.h; sourceTree = "<group>"; };
@@ -515,6 +518,8 @@
 			children = (
 				63D60FE2118D178700436B7D /* NSImageView+Extensions.h */,
 				63D60FE3118D178700436B7D /* NSImageView+Extensions.mm */,
+				63D4E628118F6666005A7634 /* hdImageView.h */,
+				63D4E629118F6666005A7634 /* hdImageView.mm */,
 			);
 			name = NSImageVIew;
 			sourceTree = "<group>";
@@ -651,6 +656,7 @@
 				63D60ED8118C310C00436B7D /* TextureImageBrowserView.mm in Sources */,
 				63D60FE4118D178700436B7D /* NSImageView+Extensions.mm in Sources */,
 				63E99FC4118E09C900B47D37 /* PrismaticJointPropertyWindow.mm in Sources */,
+				63D4E62A118F6666005A7634 /* hdImageView.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

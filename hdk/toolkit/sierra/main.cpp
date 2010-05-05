@@ -271,14 +271,14 @@ void UpdateBlockMaterial(int)
 {
 }
 */
-
+/*
 
 void Commit(int)
 {
 	// Current shapes: make the current positions of the 
 	// blocks into the start positions.
 	levelEditorController->GetCurrentLevel()->CommitBlockStates();
-}
+}*/
 
 
 //void QuitClick(int)
@@ -848,7 +848,7 @@ void UpdateInterfaceState()
 		
 	}
 }
-
+/*
 
 void UpdateSelectedLevel(int)
 {
@@ -860,7 +860,7 @@ void UpdateSelectedLevel(int)
 	
 	txtLevelName->set_text(level->GetLevelName());
 	UpdateInterfaceState();
-}
+}*/
 
 
 void UpdateSelectedWorld(int)
@@ -879,6 +879,7 @@ void UpdateSelectedWorld(int)
 }
 
 
+/*
 void AddLevelToSelectedWorld(int)
 {
 	// create a new level and then add to the list in currnet world.
@@ -887,6 +888,7 @@ void AddLevelToSelectedWorld(int)
 	RefreshLevelList();
 	txtLevelName->set_text(levelEditorController->GetCurrentLevel()->GetLevelName());
 }
+*/
 
 
 void EditorFinishCurrentShape(int)
@@ -895,10 +897,10 @@ void EditorFinishCurrentShape(int)
 }
 
 
-
+/*
 void UpdateSelectedPolygonTexture(int)
 {
-}
+}*/
 
 
 void UpdateNewPolygonTexture(int)
@@ -960,6 +962,7 @@ void UpdateNewPolygonTexture(int)
  
  
  */
+/*
 void UpdateLevelExtendAABB(int)
 {
 	totemLevel *level = (totemLevel *)levelEditorController->GetCurrentLevel();
@@ -973,8 +976,8 @@ void UpdateLevelExtendAABB(int)
 		level->SetExtendAABB(true);
 	}	
 }
-
-
+*/
+/*
 void UpdateLevelBG(int)
 {
 	totemLevel *level = (totemLevel *)levelEditorController->GetCurrentLevel();
@@ -1015,7 +1018,7 @@ void UpdateLevelBG(int)
 	{
 		level->SetDistantBackgroundTextureName("");
 	}
-	
+	*/
 	/*
 	level->SetBackgroundBottomTint((int) atoi(currentLevelSkyTintBottomRed->get_text()),
 								   (int) atoi(currentLevelSkyTintBottomGreen->get_text()),
@@ -1024,7 +1027,7 @@ void UpdateLevelBG(int)
 	level->SetBackgroundTopTint((int) atoi(currentLevelSkyTintTopRed->get_text()),
 								(int) atoi(currentLevelSkyTintTopGreen->get_text()),
 								(int) atoi(currentLevelSkyTintTopBlue->get_text()));*/
-}
+///}
 
 
 /*

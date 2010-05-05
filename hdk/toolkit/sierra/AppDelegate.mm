@@ -37,7 +37,7 @@
 	
 	[LevelEditor sharedInstance];
 	
-	[_mainWindowController.window makeKeyWindow];//= _mainWindowController.window;
+	[_mainWindowController.window makeKeyAndOrderFront:self];//= _mainWindowController.window;
 	//[_window makeKeyAndOrderFront:self];
 }
 

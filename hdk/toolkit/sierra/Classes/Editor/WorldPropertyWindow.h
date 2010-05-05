@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+#import "hdImageView.h"
 
 @interface WorldPropertyWindow : NSWindowController 
 	<NSTableViewDataSource,
@@ -21,10 +21,10 @@
 	IBOutlet NSButton *_extendLevelAABBCheckbox;
 	
 	IBOutlet NSBox *_skyInfoBox;
-	IBOutlet NSImageView *_skyTexture;
-	IBOutlet NSImageView *_horizonTexture;
-	IBOutlet NSImageView *_middleTexture;
-	IBOutlet NSImageView *_nearTexture;
+	IBOutlet hdImageView *_skyTexture;
+	IBOutlet hdImageView *_horizonTexture;
+	IBOutlet hdImageView *_middleTexture;
+	IBOutlet hdImageView *_nearTexture;
 	
 	IBOutlet NSButton *_hasFloor;
 	IBOutlet NSBox *_hasFloorBox;
@@ -34,6 +34,8 @@
 	IBOutlet NSTextField *_floorLevelText;
 	IBOutlet NSButton *_isWater;
 	IBOutlet NSButton *_isReflective;
+	
+	IBOutlet NSSegmentedControl *_addRemoveSegment;
 }
 
 
@@ -46,50 +48,15 @@
 
 - (void)levelWasLoaded;
 
+- (IBAction)levelAddRemoveSegment:(id)sender;
+
+- (IBAction)addNewLevel:(id)sender;
 
 - (IBAction)deleteSelectedLevel:(id)sender;
-/*
-{
-	if (levelEditorController->settings.deleteButtonTaps >= 3)
-	{
-		// Do a bakup save
-		levelEditorController->Save();
-		
-		// Remove the level
-		int index = -1;
-		for (int i = 0; i < levelEditorController->GetCurrentTotemWorld()->GetLevelCount(); i++)
-		{
-			if (levelEditorController->GetCurrentTotemWorld()->GetLevels()[i] == levelEditorController->GetCurrentLevel())
-			{
-				index = i;
-				break;
-			}
-		}
-		
-		if (index == -1) return;
-		
-		if (index == 0)
-		{
-			lev = levelEditorController->GetCurrentTotemWorld()->GetLevels()[1];
-		}
-		else
-		{
-			lev = levelEditorController->GetCurrentTotemWorld()->GetLevels()[0];
-		}
-		
-		
-		levelEditorController->SetCurrentLevel(lev);
-		txtLevelName->set_text(lev->GetLevelName());
-		
-		levelEditorController->GetCurrentTotemWorld()->RemoveLevelAtIndex(index);
-		
-		UpdateInterfaceState();
-		
-		RefreshLevelList();
-		
-		levelEditorController->settings.deleteButtonTaps = 0;
-	}
-}*/
+
+- (IBAction)UpdateLevelAABB:(id)sender;
+
+- (IBAction)UpdateLevelBackgrounds:(id)sender;
 
 - (IBAction)levelInfoWasChanged:(id)sender;
 

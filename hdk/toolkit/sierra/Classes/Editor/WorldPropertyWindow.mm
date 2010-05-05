@@ -55,6 +55,10 @@
 		 selector:@selector(levelDidChange:)
 		 name:NSTableViewSelectionDidChangeNotification
 		 object:nil];
+		
+		NSPoint o = NSMakePoint(0, 1600);
+		
+		[self.window setFrameTopLeftPoint:o];
 	}
 	return self;
 }
@@ -136,7 +140,7 @@
 }
 
 
-- (IBAction)levelInfoWasChanged:(id)sender
+- (IBAction)UpdateLevelFloorInfo:(id)sender
 {
 	/*
 	totemFloorInfo *floorInfo = (totemFloorInfo *)(level->GetFloorInfo());
@@ -159,6 +163,143 @@
 	floorInfo->m_floorLevel =  (float) strtof(currentLevelFloorLevel->get_text(), NULL);
 	floorInfo->m_isWater = (currentLevelFloorIsWater->get_int_val() != 0);
 	floorInfo->m_isReflective = (currentLevelReflectiveFloor->get_int_val() != 0);*/
+}
+
+
+- (IBAction)levelAddRemoveSegment:(id)sender
+{
+	if ([_addRemoveSegment selectedSegment] == 0)
+	{
+		[self addNewLevel:sender];
+	}
+	else if ([_addRemoveSegment selectedSegment] == 1)
+	{
+		[self deleteSelectedLevel:sender];
+	}
+}
+
+
+- (IBAction)addNewLevel:(id)sender
+{
+	[LevelEditor sharedInstance]->GenerateNewLevel();
+	[_levelsTableView reloadData];
+	[_levelsTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:[LevelEditor sharedInstance]->GetCurrentTotemWorld()->GetLevelCount()-1]
+				  byExtendingSelection:NO];
+	[[NSNotificationCenter defaultCenter] 
+	 postNotificationName:kLoadedLevelWasChangedNotification
+	 object:nil];
+}
+
+
+/**
+ * Needs an alert.
+ */
+- (IBAction)deleteSelectedLevel:(id)sender
+{
+	/*
+	if (levelEditorController->settings.deleteButtonTaps >= 3)
+	{
+		// Do a bakup save
+		levelEditorController->Save();
+		
+		// Remove the level
+		int index = -1;
+		for (int i = 0; i < levelEditorController->GetCurrentTotemWorld()->GetLevelCount(); i++)
+		{
+			if (levelEditorController->GetCurrentTotemWorld()->GetLevels()[i] == levelEditorController->GetCurrentLevel())
+			{
+				index = i;
+				break;
+			}
+		}
+		
+		if (index == -1) return;
+		
+		if (index == 0)
+		{
+			lev = levelEditorController->GetCurrentTotemWorld()->GetLevels()[1];
+		}
+		else
+		{
+			lev = levelEditorController->GetCurrentTotemWorld()->GetLevels()[0];
+		}
+		
+		
+		levelEditorController->SetCurrentLevel(lev);
+		txtLevelName->set_text(lev->GetLevelName());
+		
+		levelEditorController->GetCurrentTotemWorld()->RemoveLevelAtIndex(index);
+		
+		UpdateInterfaceState();
+		
+		RefreshLevelList();
+		
+		levelEditorController->settings.deleteButtonTaps = 0;
+	}
+	 */
+}
+
+
+- (IBAction)UpdateLevelAABB:(id)sender
+{
+	const totemLevel *level;
+	if (!(level = (totemLevel *)[LevelEditor sharedInstance]->GetCurrentLevel()))
+	{
+		return;
+	}
+	
+	((totemLevel *)level)->SetExtendAABB([_extendLevelAABBCheckbox state] == NSOnState);
+}
+
+
+- (IBAction)UpdateLevelBackgrounds:(id)sender
+{
+	const totemLevel *level;
+	const char *textureName;
+	if (!(level = [LevelEditor sharedInstance]->GetCurrentLevel()))
+	{
+		return;
+	}
+	
+	textureName = [_skyTexture getResourcePathOfImage];
+	if (textureName && strlen(textureName) > 0)
+	{
+		((totemLevel *)level)->SetSkyTextureName(textureName);
+	}
+	else
+	{
+		((totemLevel *)level)->SetSkyTextureName("");
+	}
+	
+	textureName = [_horizonTexture getResourcePathOfImage];
+	if (textureName && strlen(textureName) > 0)
+	{
+		((totemLevel *)level)->SetDistantBackgroundTextureName(textureName);
+	}
+	else
+	{
+		((totemLevel *)level)->SetDistantBackgroundTextureName("");
+	}
+	
+	textureName = [_middleTexture getResourcePathOfImage];
+	if (textureName && strlen(textureName) > 0)
+	{
+		((totemLevel *)level)->SetFarBackgroundTextureName(textureName);
+	}
+	else
+	{
+		((totemLevel *)level)->SetFarBackgroundTextureName("");
+	}
+	
+	textureName = [_nearTexture getResourcePathOfImage];
+	if (textureName && strlen(textureName) > 0)
+	{
+		((totemLevel *)level)->SetNearBackgroundTextureName(textureName);
+	}
+	else
+	{
+		((totemLevel *)level)->SetNearBackgroundTextureName("");
+	}
 }
 
 

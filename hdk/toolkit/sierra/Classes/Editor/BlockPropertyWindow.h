@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
+#import "hdImageView.h"
 
 @interface BlockPropertyWindow : NSWindowController <NSComboBoxDelegate, NSComboBoxDataSource>
 {
@@ -23,7 +23,7 @@
 	IBOutlet NSTextField *_tilingText;
 	
 	IBOutlet NSColorWell *_tint;
-	IBOutlet NSImageView *_texture;
+	IBOutlet hdImageView *_texture;
 	IBOutlet NSTextField *_textureName;
 }
 - (void)itemWasSelected;

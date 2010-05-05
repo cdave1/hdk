@@ -17,6 +17,8 @@
 	{
 		_editorViewController = [[EditorViewController alloc] init];
 		[self.window setContentView:_editorViewController.editorView];
+		//[self.window makeMainWindow];
+		[self.window setAcceptsMouseMovedEvents:YES];
 		[_editorViewController handleResize];
 		
 		_worldPropertyWindow = [[WorldPropertyWindow alloc] init];
@@ -29,6 +31,31 @@
 		_revoluteJointPropertyWindow = [[RevoluteJointPropertyWindow alloc] init];
 		_prismaticJointPropertyWindow = [[PrismaticJointPropertyWindow alloc] init];
 		//[_blockPropertyWindow showWindow:self];
+		
+
+		
+		[_texturePaletteWindow.window
+		 setFrameOrigin:NSMakePoint([NSScreen mainScreen].frame.size.width - _texturePaletteWindow.window.frame.size.width, 1600)];
+		
+		[_toolPanel setFrameOrigin:NSMakePoint(_worldPropertyWindow.window.frame.origin.x + 
+											   _worldPropertyWindow.window.frame.size.width, 
+											   1600)];
+		
+		[self.window setFrameOrigin:NSMakePoint(_worldPropertyWindow.window.frame.size.width, 5)];
+		NSRect mainWindowFrame = self.window.frame;
+		mainWindowFrame.size = NSMakeSize([NSScreen mainScreen].frame.size.width - 
+										  (_texturePaletteWindow.window.frame.size.width +
+										   _worldPropertyWindow.window.frame.size.width),
+										  [NSScreen mainScreen].frame.size.height - _toolPanel.frame.size.height - 30);
+		[self.window setFrame:mainWindowFrame display:YES];
+		[self.window addChildWindow:_toolPanel ordered:NSWindowAbove];
+		
+		//[_toolPanel setFloatingPanel:YES];
+		
+		[_blockMaterialComboBox selectItemAtIndex:0];
+		[_blockTypeComboBox selectItemAtIndex:0];
+		[_jointTypeComboBox selectItemAtIndex:0];
+		[_blockShapeComboBox selectItemAtIndex:0];
 	}
 	return self;
 }
@@ -37,6 +64,14 @@
 - (void)windowDidResize:(NSNotification *)notification
 {
 	[_editorViewController handleResize];
+}
+
+
+- (void)mouseMoved:(NSEvent *)mouseOver
+{
+	//hdPrintf("Mouse moved!\n");
+	if (![self.window isKeyWindow])
+		[self.window makeKeyWindow];
 }
 
 
@@ -158,75 +193,117 @@
 	[LevelEditor sharedInstance]->settings.showPhysics = [_physicsFilterCheckbox state] == NSOnState;
 }
 
+
+- (IBAction)commitBlockStates:(id)sender
+{
+	const totemLevel *level;
+	if (!(level = [LevelEditor sharedInstance]->GetCurrentLevel()))
+	{
+		return;
+	}
+	// Current shapes: make the current positions of the 
+	// blocks into the start positions.
+	((totemLevel *)level)->CommitBlockStates();
+}
+
+
+- (IBAction)updatePaletteTexture:(id)sender
+{
+	const char *textureName = [_currentTexture getResourcePathOfImage];
+	if (textureName)
+	{
+		[LevelEditor sharedInstance]->SetPaletteTexture(textureName);
+	}
+}
+
+
+- (IBAction)updatePaletteTint:(id)sender
+{
+	
+}
+
+
+
+- (IBAction)SetNewJointMode:(id)sender
+{
+	//levelEditorController->settings.interfacePaletteMode = e_interfacePaletteModeTotemJoint;
+}
+
+
 /*
+ - (IBAction)UpdateNewEventType(int)
+ {
+ levelEditorController->settings.newTotemEventType = (e_totemEventType)newEventTypesList->get_int_val();	
+ }*/
 
-void SetInterfaceMode_AddJoint(int)
+
+- (IBAction)SetNewEventMode:(id)sender
 {
-	levelEditorController->settings.interfacePaletteMode = e_interfacePaletteModeTotemJoint;
+	//[LevelEditor sharedInstance]->
 }
 
 
 
-void SetInterfaceMode_AddJack(int)
+
+- (IBAction)UpdateNewBlockType:(id)sender
 {
-	levelEditorController->settings.interfacePaletteMode = e_interfacePaletteModeTotemJack;
+	[LevelEditor sharedInstance]->SetNewBlockType(totemBlockTypeMenuItems[[_blockTypeComboBox indexOfSelectedItem]].blockType);
 }
 
 
-void SetInterfaceMode_AddEvent(int)
+- (IBAction)UpdateNewBlockShapeType:(id)sender
 {
-	levelEditorController->settings.interfacePaletteMode = e_interfacePaletteModeTotemEvent;
+	[LevelEditor sharedInstance]->SetNewBlockShapeType(totemShapeTypeMenuItems[[_blockShapeComboBox indexOfSelectedItem]].shapeType);
 }
 
 
-void UpdateNewJackType(int)
+- (IBAction) UpdateNewJointType:(id)sender
 {
-	levelEditorController->settings.newTotemJackType = (e_totemJackType)newJackTypesList->get_int_val();
+	[LevelEditor sharedInstance]->SetNewJointType(totemJointTypeMenuItems[[_jointTypeComboBox indexOfSelectedItem]].jointType);
 }
 
 
-void UpdateNewBlockType(int newType)
+- (IBAction)UpdateNewBlockMaterial:(id)sender
 {
-	levelEditorController->settings.newTotemBlockType = (e_totemBlockType)newBlockTypesList->get_int_val();
+	[LevelEditor sharedInstance]->SetNewBlockMaterialType(totemMaterialMenuItems[[_blockMaterialComboBox indexOfSelectedItem]].material);
 }
 
 
-void UpdateNewBlockShapeType(int)
+#pragma mark -
+#pragma mark NSComboBoxDelegate functions
+
+- (void)comboBoxSelectionDidChange:(NSNotification *)notification
 {
-	levelEditorController->settings.newTotemShapeType = (e_totemShapeType)newBlockShapesList->get_int_val();	
+	NSLog(@"%@", [notification name]);
 }
 
 
-void UpdateNewEventType(int)
+- (void)comboBoxWillDismiss:(NSNotification *)notification
 {
-	levelEditorController->settings.newTotemEventType = (e_totemEventType)newEventTypesList->get_int_val();	
+	NSLog(@"%@", [notification name]);
 }
-
-
-void UpdateNewJointType(int)
-{
-	levelEditorController->settings.newTotemJointType = (e_totemJointType)newJointTypesList->get_int_val();
-}
-
-
-void UpdateNewBlockMaterial(int newType)
-{
-	levelEditorController->settings.newTotemMaterial = (e_totemMaterial)newMaterialList->get_int_val();
-}*/
 
 
 #pragma mark -
 #pragma mark NSComboBoxDataSource functions
-/*
+
 - (id)comboBox:(NSComboBox *)aComboBox objectValueForItemAtIndex:(NSInteger)index
 {
-	if (aComboBox == _materialComboBox)
+	if (aComboBox == _blockMaterialComboBox)
 	{
 		return [NSString stringWithUTF8String:totemMaterialMenuItems[index].materialName];
 	}
-	else if (aComboBox == _blockTypeComboBox)
+	if (aComboBox == _blockTypeComboBox)
 	{
 		return [NSString stringWithUTF8String:totemBlockTypeMenuItems[index].blockTypeName];
+	}
+	if (aComboBox == _jointTypeComboBox)
+	{
+		return [NSString stringWithUTF8String:totemJointTypeMenuItems[index].jointTypeName];
+	}
+	if (aComboBox == _blockShapeComboBox)
+	{
+		return [NSString stringWithUTF8String:totemShapeTypeMenuItems[index].shapeTypeName];
 	}
 	return nil;
 }
@@ -234,16 +311,24 @@ void UpdateNewBlockMaterial(int newType)
 
 - (NSInteger)numberOfItemsInComboBox:(NSComboBox *)aComboBox
 {
-	if (aComboBox == _materialComboBox)
+	if (aComboBox == _blockMaterialComboBox)
 	{
 		return e_totemMaterial_Count;
 	}
-	else if (aComboBox == _blockTypeComboBox)
+	if (aComboBox == _blockTypeComboBox)
 	{
 		return e_totemBlockType_Count;
 	}
+	if (aComboBox == _jointTypeComboBox)
+	{
+		return e_totemJoinType_Count;
+	}
+	if (aComboBox == _blockShapeComboBox)
+	{
+		return e_totemShapeType_Count;
+	}
 	return 0;
-}*/
+}
 
 
 @end

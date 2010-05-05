@@ -85,6 +85,18 @@ mousevalues_t GetMouseValues()
 }
 
 
+/*
+ * Cleanup
+ */
+- (void) dealloc
+{
+	if( runningFullScreen )
+		[ self switchToOriginalDisplayMode ];
+	[ originalDisplayMode release ];
+	[super dealloc];
+}
+
+
 - (void)startRenderLoop
 {
 	keepRenderThreadAlive = YES;
@@ -147,6 +159,13 @@ mousevalues_t GetMouseValues()
 	UNLOCK_GL_CONTEXT;
 	[pool drain];
 }
+
+
+- (BOOL)acceptsFirstMouse:(NSEvent *)theEvent
+{
+	return YES;
+}
+
 
 /*
  * Create a pixel format and possible switch to full screen mode
@@ -341,14 +360,5 @@ mousevalues_t GetMouseValues()
 }
 
 
-/*
- * Cleanup
- */
-- (void) dealloc
-{
-	if( runningFullScreen )
-		[ self switchToOriginalDisplayMode ];
-	[ originalDisplayMode release ];
-	[super dealloc];
-}
+
 @end

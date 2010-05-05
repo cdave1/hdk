@@ -81,6 +81,15 @@ typedef enum
 } e_dragStyle;
 
 
+typedef enum
+{
+	e_drawingStyleEditorFull = 0,
+	e_drawingStyleEditorWireframe,
+	e_drawingStylePreview,
+	e_drawingStyleCount,
+} e_drawingStyle;
+
+
 
 struct Settings
 {
@@ -190,6 +199,9 @@ public:
 	void PhysicsOn();
 	void PhysicsOff();
 	
+	void SetPaletteTexture(const char *texturePath);
+	
+	void SetPaletteTint(const float r, const float g, const float b, const float a);
 	
 	
 	//void DoubleTouchDown(
@@ -265,6 +277,13 @@ public:
 	void SetPerspectiveProjection();
 	void SetOrthoProjection();
 	
+	void SetNewBlockShapeType(e_totemShapeType shapeType);
+	
+	void SetNewBlockMaterialType(e_totemMaterial material);
+	
+	void SetNewBlockType(e_totemBlockType blockType);
+	
+	void SetNewJointType(e_totemJointType jointType);
 	
 	// Selected game object
 	const uint32 GetSelectedGameObjectsCount() const;
@@ -338,8 +357,8 @@ private:
 	hdVec2 m_prevPan;
 	
 	// Interaction
-	
 	e_dragStyle m_dragStyle;
+	e_drawingStyle m_drawingStyle;
 	
 	// box 2d stuff
 	b2AABB m_physicsWorldAABB;
