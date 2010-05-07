@@ -105,7 +105,6 @@ struct Settings
 	//copiedGameObject(NULL),
 	//
 	
-	GLUTmodifiers(0),
 	screenLower(0.0f, 0.0f),
 	screenUpper(0.0f, 0.0f),
 	newTotemJackType(e_totemJackTypeDefault),
@@ -147,7 +146,6 @@ struct Settings
 	totemJoint** copiedJoints;
 	
 	
-	int GLUTmodifiers;
 	hdVec2 screenLower;
 	hdVec2 screenUpper;
 	e_totemJackType newTotemJackType;
@@ -193,7 +191,7 @@ public:
 	
 	void MouseDown(const int x, const int y);
 	void MouseDrag(const int x, const int y);
-	void MouseUp();
+	void MouseUp(bool shiftKeyDown);
 	
 	bool isPhysicsOn();
 	void PhysicsOn();
@@ -326,7 +324,7 @@ private:
 	
 	void AddNewEvent();
 	
-	void AddNewLayerPolygonQuad();
+	void AddNewLayerPolygonQuad(bool shiftKeyDown);
 	
 	void AddNewLayerPolygon();
 	

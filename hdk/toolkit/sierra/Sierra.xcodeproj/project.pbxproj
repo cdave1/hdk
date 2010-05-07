@@ -46,6 +46,17 @@
 		63D4E593118EE642005A7634 /* boxIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D4E591118EE642005A7634 /* boxIcon.png */; };
 		63D4E594118EE642005A7634 /* jointIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D4E592118EE642005A7634 /* jointIcon.png */; };
 		63D4E62A118F6666005A7634 /* hdImageView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63D4E629118F6666005A7634 /* hdImageView.mm */; };
+		63D4EC1111936422005A7634 /* iconCylinder.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D4EC0B11936422005A7634 /* iconCylinder.png */; };
+		63D4EC1211936422005A7634 /* iconHexagon.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D4EC0C11936422005A7634 /* iconHexagon.png */; };
+		63D4EC1311936422005A7634 /* iconJointDistance.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D4EC0D11936422005A7634 /* iconJointDistance.png */; };
+		63D4EC1411936422005A7634 /* iconJointRevolute.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D4EC0E11936422005A7634 /* iconJointRevolute.png */; };
+		63D4EC1511936422005A7634 /* iconMultistar.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D4EC0F11936422005A7634 /* iconMultistar.png */; };
+		63D4EC1611936422005A7634 /* iconPrismaticJoint.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D4EC1011936422005A7634 /* iconPrismaticJoint.png */; };
+		63D4EC1C11936433005A7634 /* iconSpikes.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D4EC1711936433005A7634 /* iconSpikes.png */; };
+		63D4EC1D11936433005A7634 /* iconStar.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D4EC1811936433005A7634 /* iconStar.png */; };
+		63D4EC1E11936433005A7634 /* iconTriangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D4EC1911936433005A7634 /* iconTriangle.png */; };
+		63D4EC1F11936433005A7634 /* iconTriangleFan.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D4EC1A11936433005A7634 /* iconTriangleFan.png */; };
+		63D4EC2011936433005A7634 /* iconTriangleStrip.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D4EC1B11936433005A7634 /* iconTriangleStrip.png */; };
 		63D60D0B118BED5700436B7D /* WorldPropertyWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63D60D0A118BED5700436B7D /* WorldPropertyWindow.mm */; };
 		63D60D0E118BED6700436B7D /* BlockPropertyWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63D60D0D118BED6700436B7D /* BlockPropertyWindow.mm */; };
 		63D60D11118BED7600436B7D /* PolygonPropertyWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63D60D10118BED7600436B7D /* PolygonPropertyWindow.mm */; };
@@ -175,6 +186,18 @@
 		63D4E592118EE642005A7634 /* jointIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = jointIcon.png; path = Resources/jointIcon.png; sourceTree = "<group>"; };
 		63D4E628118F6666005A7634 /* hdImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hdImageView.h; path = Classes/Extensions/hdImageView.h; sourceTree = "<group>"; };
 		63D4E629118F6666005A7634 /* hdImageView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = hdImageView.mm; path = Classes/Extensions/hdImageView.mm; sourceTree = "<group>"; };
+		63D4EC0B11936422005A7634 /* iconCylinder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconCylinder.png; path = Resources/iconCylinder.png; sourceTree = "<group>"; };
+		63D4EC0C11936422005A7634 /* iconHexagon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconHexagon.png; path = Resources/iconHexagon.png; sourceTree = "<group>"; };
+		63D4EC0D11936422005A7634 /* iconJointDistance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconJointDistance.png; path = Resources/iconJointDistance.png; sourceTree = "<group>"; };
+		63D4EC0E11936422005A7634 /* iconJointRevolute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconJointRevolute.png; path = Resources/iconJointRevolute.png; sourceTree = "<group>"; };
+		63D4EC0F11936422005A7634 /* iconMultistar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconMultistar.png; path = Resources/iconMultistar.png; sourceTree = "<group>"; };
+		63D4EC1011936422005A7634 /* iconPrismaticJoint.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconPrismaticJoint.png; path = Resources/iconPrismaticJoint.png; sourceTree = "<group>"; };
+		63D4EC1711936433005A7634 /* iconSpikes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconSpikes.png; path = Resources/iconSpikes.png; sourceTree = "<group>"; };
+		63D4EC1811936433005A7634 /* iconStar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconStar.png; path = Resources/iconStar.png; sourceTree = "<group>"; };
+		63D4EC1911936433005A7634 /* iconTriangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconTriangle.png; path = Resources/iconTriangle.png; sourceTree = "<group>"; };
+		63D4EC1A11936433005A7634 /* iconTriangleFan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconTriangleFan.png; path = Resources/iconTriangleFan.png; sourceTree = "<group>"; };
+		63D4EC1B11936433005A7634 /* iconTriangleStrip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iconTriangleStrip.png; path = Resources/iconTriangleStrip.png; sourceTree = "<group>"; };
+		63D4EC4F1194B057005A7634 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = Classes/config.h; sourceTree = "<group>"; };
 		63D60D09118BED5700436B7D /* WorldPropertyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WorldPropertyWindow.h; path = Classes/Editor/WorldPropertyWindow.h; sourceTree = "<group>"; };
 		63D60D0A118BED5700436B7D /* WorldPropertyWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = WorldPropertyWindow.mm; path = Classes/Editor/WorldPropertyWindow.mm; sourceTree = "<group>"; };
 		63D60D0C118BED6700436B7D /* BlockPropertyWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlockPropertyWindow.h; path = Classes/Editor/BlockPropertyWindow.h; sourceTree = "<group>"; };
@@ -303,6 +326,7 @@
 			children = (
 				6362D7141188E9D700184AE0 /* prefix.pch */,
 				29B97316FDCFA39411CA2CEA /* main.m */,
+				63D4EC4F1194B057005A7634 /* config.h */,
 			);
 			name = "Other Sources";
 			sourceTree = "<group>";
@@ -310,7 +334,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				63D4E591118EE642005A7634 /* boxIcon.png */,
+				63D4EC2111936436005A7634 /* Icons */,
 				63D4E592118EE642005A7634 /* jointIcon.png */,
 				63D4E588118EE43F005A7634 /* arrow.png */,
 				6362D7361188EA4C00184AE0 /* Info.plist */,
@@ -436,6 +460,25 @@
 				63CD3DE0118B77010086D7F5 /* AppDelegateMenu.mm */,
 			);
 			name = "Main Menu";
+			sourceTree = "<group>";
+		};
+		63D4EC2111936436005A7634 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				63D4E591118EE642005A7634 /* boxIcon.png */,
+				63D4EC1711936433005A7634 /* iconSpikes.png */,
+				63D4EC1811936433005A7634 /* iconStar.png */,
+				63D4EC1911936433005A7634 /* iconTriangle.png */,
+				63D4EC1A11936433005A7634 /* iconTriangleFan.png */,
+				63D4EC1B11936433005A7634 /* iconTriangleStrip.png */,
+				63D4EC0B11936422005A7634 /* iconCylinder.png */,
+				63D4EC0C11936422005A7634 /* iconHexagon.png */,
+				63D4EC0D11936422005A7634 /* iconJointDistance.png */,
+				63D4EC0E11936422005A7634 /* iconJointRevolute.png */,
+				63D4EC0F11936422005A7634 /* iconMultistar.png */,
+				63D4EC1011936422005A7634 /* iconPrismaticJoint.png */,
+			);
+			name = Icons;
 			sourceTree = "<group>";
 		};
 		63D60D04118BE7AE00436B7D /* World Property Window */ = {
@@ -614,6 +657,17 @@
 				63D4E589118EE43F005A7634 /* arrow.png in Resources */,
 				63D4E593118EE642005A7634 /* boxIcon.png in Resources */,
 				63D4E594118EE642005A7634 /* jointIcon.png in Resources */,
+				63D4EC1111936422005A7634 /* iconCylinder.png in Resources */,
+				63D4EC1211936422005A7634 /* iconHexagon.png in Resources */,
+				63D4EC1311936422005A7634 /* iconJointDistance.png in Resources */,
+				63D4EC1411936422005A7634 /* iconJointRevolute.png in Resources */,
+				63D4EC1511936422005A7634 /* iconMultistar.png in Resources */,
+				63D4EC1611936422005A7634 /* iconPrismaticJoint.png in Resources */,
+				63D4EC1C11936433005A7634 /* iconSpikes.png in Resources */,
+				63D4EC1D11936433005A7634 /* iconStar.png in Resources */,
+				63D4EC1E11936433005A7634 /* iconTriangle.png in Resources */,
+				63D4EC1F11936433005A7634 /* iconTriangleFan.png in Resources */,
+				63D4EC2011936433005A7634 /* iconTriangleStrip.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

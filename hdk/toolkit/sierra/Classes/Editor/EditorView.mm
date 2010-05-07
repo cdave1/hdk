@@ -343,7 +343,15 @@ mousevalues_t GetMouseValues()
 
 - (void)mouseUp:(NSEvent *)theEvent
 {
-	[LevelEditor sharedInstance]->MouseUp();
+	bool shiftKeyDown = (([theEvent modifierFlags] & NSShiftKeyMask) == NSShiftKeyMask);
+	[LevelEditor sharedInstance]->MouseUp(shiftKeyDown);
+	
+	if (([LevelEditor sharedInstance]->GetSelectedGameObjectSingle()))
+	{
+		[[NSNotificationCenter defaultCenter] 
+		 postNotificationName:kSingleItemSelectedNotification
+		 object:nil];
+	}
 }
 
 

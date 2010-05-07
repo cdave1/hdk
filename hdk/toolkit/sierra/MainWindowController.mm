@@ -9,6 +9,11 @@
 #import "MainWindowController.h"
 #import "LevelEditor.h"
 
+@interface MainWindowController ()
+- (void)SetButtonStates:(id)sender;
+@end
+
+
 @implementation MainWindowController
 
 - (id) init
@@ -180,12 +185,6 @@
 }
 
 
-- (IBAction)setBlockMode:(id)sender
-{
-	[LevelEditor sharedInstance]->settings.interfacePaletteMode = e_interfacePaletteModeAddTotemBlock;
-}
-
-
 - (IBAction)setFilter:(id)sender
 {
 	[LevelEditor sharedInstance]->settings.showCosmetics = [_cosmeticsFilterCheckbox state] == NSOnState;
@@ -223,13 +222,6 @@
 }
 
 
-
-- (IBAction)SetNewJointMode:(id)sender
-{
-	//levelEditorController->settings.interfacePaletteMode = e_interfacePaletteModeTotemJoint;
-}
-
-
 /*
  - (IBAction)UpdateNewEventType(int)
  {
@@ -245,28 +237,131 @@
 
 
 
-- (IBAction)UpdateNewBlockType:(id)sender
+- (IBAction)SetNewBlockMaterial:(id)sender
+{
+	[LevelEditor sharedInstance]->SetNewBlockMaterialType(totemMaterialMenuItems[[_blockMaterialComboBox indexOfSelectedItem]].material);
+}
+
+
+- (IBAction)SetNewBlockType:(id)sender
 {
 	[LevelEditor sharedInstance]->SetNewBlockType(totemBlockTypeMenuItems[[_blockTypeComboBox indexOfSelectedItem]].blockType);
 }
 
 
-- (IBAction)UpdateNewBlockShapeType:(id)sender
+/**
+ * toolbar buttons
+ */
+- (IBAction)SetNewShapeRectangle:(id)sender
 {
-	[LevelEditor sharedInstance]->SetNewBlockShapeType(totemShapeTypeMenuItems[[_blockShapeComboBox indexOfSelectedItem]].shapeType);
+	[self SetButtonStates:sender];
+	[LevelEditor sharedInstance]->settings.interfacePaletteMode = e_interfacePaletteModeAddTotemBlock;
+	[LevelEditor sharedInstance]->SetNewBlockShapeType(e_totemShapeTypeRectangle);
 }
 
 
-- (IBAction) UpdateNewJointType:(id)sender
+- (IBAction)SetNewShapeCircle:(id)sender
 {
-	[LevelEditor sharedInstance]->SetNewJointType(totemJointTypeMenuItems[[_jointTypeComboBox indexOfSelectedItem]].jointType);
+	[self SetButtonStates:sender];
+	[LevelEditor sharedInstance]->settings.interfacePaletteMode = e_interfacePaletteModeAddTotemBlock;
+	[LevelEditor sharedInstance]->SetNewBlockShapeType(e_totemShapeTypeCylinder);
 }
 
 
-- (IBAction)UpdateNewBlockMaterial:(id)sender
+- (IBAction)SetNewShapeFivePointStar:(id)sender
 {
-	[LevelEditor sharedInstance]->SetNewBlockMaterialType(totemMaterialMenuItems[[_blockMaterialComboBox indexOfSelectedItem]].material);
+	[self SetButtonStates:sender];
+	[LevelEditor sharedInstance]->settings.interfacePaletteMode = e_interfacePaletteModeAddTotemBlock;
+	[LevelEditor sharedInstance]->SetNewBlockShapeType(e_totemShapeTypeStar);
 }
+
+
+- (IBAction)SetNewShapeHexagon:(id)sender
+{
+	[self SetButtonStates:sender];
+	[LevelEditor sharedInstance]->settings.interfacePaletteMode = e_interfacePaletteModeAddTotemBlock;
+	[LevelEditor sharedInstance]->SetNewBlockShapeType(e_totemShapeTypeHexagon);
+}
+
+
+- (IBAction)SetNewShapeTriangle:(id)sender
+{
+	[self SetButtonStates:sender];
+	[LevelEditor sharedInstance]->settings.interfacePaletteMode = e_interfacePaletteModeAddTotemBlock;
+	[LevelEditor sharedInstance]->SetNewBlockShapeType(e_totemShapeTypeTriangle);
+}
+
+
+- (IBAction)SetNewShapeMultiStar:(id)sender
+{
+	[self SetButtonStates:sender];
+	[LevelEditor sharedInstance]->settings.interfacePaletteMode = e_interfacePaletteModeAddTotemBlock;
+	[LevelEditor sharedInstance]->SetNewBlockShapeType(e_totemShapeTypeMultiStar);
+}
+
+
+- (IBAction)SetNewShapeTriangleFan:(id)sender
+{
+	[self SetButtonStates:sender];
+	[LevelEditor sharedInstance]->settings.interfacePaletteMode = e_interfacePaletteModeAddTotemBlock;
+	[LevelEditor sharedInstance]->SetNewBlockShapeType(e_totemShapeTypeCustom);
+}
+
+
+- (IBAction)SetNewShapeTriangleStrip:(id)sender
+{
+	[self SetButtonStates:sender];
+	[LevelEditor sharedInstance]->settings.interfacePaletteMode = e_interfacePaletteModeAddTotemBlock;
+	[LevelEditor sharedInstance]->SetNewBlockShapeType(e_totemShapeTypeTriStrip);
+}
+
+
+- (IBAction)SetNewShapeSpikes:(id)sender
+{
+	[self SetButtonStates:sender];
+	[LevelEditor sharedInstance]->settings.interfacePaletteMode = e_interfacePaletteModeAddTotemBlock;
+	[LevelEditor sharedInstance]->SetNewBlockShapeType(e_totemShapeTypeSpikes);
+}
+
+
+- (IBAction)SetNewJointDistance:(id)sender
+{
+	[self SetButtonStates:sender];
+	[LevelEditor sharedInstance]->settings.interfacePaletteMode = e_interfacePaletteModeTotemJoint;
+	[LevelEditor sharedInstance]->SetNewJointType(e_totemJointTypeDistance);
+}
+
+
+- (IBAction)SetNewJointPrismatic:(id)sender
+{
+	[self SetButtonStates:sender];
+	[LevelEditor sharedInstance]->settings.interfacePaletteMode = e_interfacePaletteModeTotemJoint;
+	[LevelEditor sharedInstance]->SetNewJointType(e_totemJointTypePrismatic);
+}
+
+
+- (IBAction)SetNewJointRevolute:(id)sender
+{
+	[self SetButtonStates:sender];
+	[LevelEditor sharedInstance]->settings.interfacePaletteMode = e_interfacePaletteModeTotemJoint;
+	[LevelEditor sharedInstance]->SetNewJointType(e_totemJointTypeRevolute);
+}
+
+
+- (void)SetButtonStates:(id)sender
+{
+	for(NSView *view in [[_toolPanel contentView] subviews])
+	{
+		if (view != sender &&
+			[view class] == [NSButton class] && 
+			[view tag] == kToolbarToggleButtonTag)
+		{
+			[((NSButton *)view) setState:NSOffState];
+		}
+	}
+	[((NSButton *)sender) setState:NSOnState];
+}
+
 
 
 #pragma mark -

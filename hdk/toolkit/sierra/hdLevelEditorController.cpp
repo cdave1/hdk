@@ -868,7 +868,7 @@ void hdLevelEditorController::AddNewEvent()
 
 
 
-void hdLevelEditorController::AddNewLayerPolygonQuad()
+void hdLevelEditorController::AddNewLayerPolygonQuad(bool shiftKeyDown)
 {
 	hdVec2 aa, bb;
 	
@@ -884,7 +884,7 @@ void hdLevelEditorController::AddNewLayerPolygonQuad()
 		aa = hdMin(m_currentMouseDragPoint, m_startClickPoint);
 		bb = hdMax(m_currentMouseDragPoint, m_startClickPoint);
 		
-		if (settings.GLUTmodifiers == GLUT_ACTIVE_SHIFT)
+		if (shiftKeyDown)
 		{ 
 			float sideMax = hdMax((bb - aa).x, (bb - aa).y);
 			bb.Set(aa.x + sideMax, aa.y + sideMax);
@@ -1267,15 +1267,15 @@ void hdLevelEditorController::SetPaletteTint(const float r, const float g, const
 
 
 // TODO: Refactor - switch and put into separate functions.
-void hdLevelEditorController::MouseUp()
+void hdLevelEditorController::MouseUp(bool shiftKeyDown)
 {
 	if (settings.interfacePaletteMode == e_interfacePaletteModeCursor)
 	{
-		if (settings.GLUTmodifiers & (GLUT_ACTIVE_SHIFT | GLUT_ACTIVE_CTRL) > 0)
+		if (shiftKeyDown)
 		{
 			this->SelectMultipleGameObjects();
 		}
-		else if (settings.GLUTmodifiers == 0)
+		else
 		{
 			// Need to reject the mouse up selection event when we have a selected
 			// group. Reject if the mouse up event occurred while over any member
@@ -1337,7 +1337,7 @@ void hdLevelEditorController::MouseUp()
 	 } */
 	else if (settings.interfacePaletteMode == e_interfacePaletteModeLayerPolygonQuad || settings.interfacePaletteMode == e_interfacePaletteModeLayerPolygonQuadActualSize)
 	{
-		this->AddNewLayerPolygonQuad();
+		this->AddNewLayerPolygonQuad(shiftKeyDown);
 	}
 	else if (settings.interfacePaletteMode == e_interfacePaletteModeLayerPolygon)
 	{
@@ -1346,7 +1346,7 @@ void hdLevelEditorController::MouseUp()
 	m_currentMouseDragPoint = m_startClickPoint;
 	
 	// Hold down shift to complete a shape.
-	if (settings.GLUTmodifiers == GLUT_ACTIVE_SHIFT)
+	if (shiftKeyDown)
 	{
 		if (m_currentBlockShape == NULL) return;
 		
@@ -1857,11 +1857,13 @@ void hdLevelEditorController::SetupProjection()
 	glLoadIdentity();
 	if (settings.isPerspectiveProjection)
 	{
-		gluPerspective(90.0f, ratio, 0.01f, 100000.0f);
-		
-		//MatrixPerspectiveFovRH(mProjection, 90.0f*(hd_pi/180.0f), 1.0f/1.5f, 0.01f, 1000.0f, false);
-		//glMultMatrixf(mProjection.f);
-		
+#if 1
+		gluPerspective(90.0f, ratio, 1.0f, 10000.0f);
+#else
+		hdMatrix mProjection;
+		MatrixPerspectiveFovRH(mProjection, 90.0f*(hd_pi/180.0f), 1.0f/1.5f, 0.01f, 100000.0f, false);
+		glMultMatrixf(mProjection.f);
+#endif	
 		glTranslatef(-m_viewCenter.x, -m_viewCenter.y, 
 					 -((upper.y - lower.y)/2.0f));
 		
@@ -1990,8 +1992,14 @@ void hdLevelEditorController::Draw()
 				//bool showGround;
 				//bool showPhysics
 				
+				glEnable(GL_TEXTURE_2D);
 				glEnable(GL_DEPTH_TEST);
-				glDisable(GL_BLEND);
+				glEnable(GL_CULL_FACE);
+				glEnable(GL_BLEND);
+				glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+				glCullFace(GL_FRONT);
+				glDepthMask(GL_TRUE);
+				
 				totemBlock *block;
 				
 				for (int i = 0; i < m_currentLevel->GetBlockCount(); ++i)
@@ -2030,8 +2038,10 @@ void hdLevelEditorController::Draw()
 				{
 					m_currentLevel->GetEvents()->GetItems()[i]->Draw();
 				}
+				glDisable(GL_TEXTURE_2D);
 				glDisable(GL_BLEND);
 				glDisable(GL_DEPTH_TEST);
+				glDisable(GL_CULL_FACE);
 			}
 			else if (m_drawingStyle == e_drawingStylePreview)
 			{

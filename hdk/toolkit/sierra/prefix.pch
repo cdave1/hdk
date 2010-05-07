@@ -6,3 +6,4 @@
     #import <Cocoa/Cocoa.h>
 #endif
 #include "hdCore/hdCommon.h"
+#import "config.h"

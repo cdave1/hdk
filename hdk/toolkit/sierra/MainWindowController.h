@@ -53,29 +53,53 @@
 
 - (IBAction)togglePhysics:(id)sender;
 
-- (IBAction)setCursorMode:(id)sender;
 
-- (IBAction)setBlockMode:(id)sender;
+
+
 
 - (IBAction)setFilter:(id)sender;
 
 - (IBAction)commitBlockStates:(id)sender;
 
-- (IBAction)updatePaletteTexture:(id)sender;
-
-- (IBAction)updatePaletteTint:(id)sender;
 
 
+/**
+ * toolbar buttons
+ */
 
-- (IBAction)SetNewJointMode:(id)sender;
 
+- (IBAction)setCursorMode:(id)sender;
+
+- (IBAction)SetNewShapeRectangle:(id)sender;
+- (IBAction)SetNewShapeCircle:(id)sender;
+- (IBAction)SetNewShapeFivePointStar:(id)sender;
+- (IBAction)SetNewShapeHexagon:(id)sender;
+- (IBAction)SetNewShapeTriangle:(id)sender;
+- (IBAction)SetNewShapeMultiStar:(id)sender;
+
+- (IBAction)SetNewShapeTriangleFan:(id)sender;
+- (IBAction)SetNewShapeTriangleStrip:(id)sender;
+- (IBAction)SetNewShapeSpikes:(id)sender;
+
+- (IBAction)SetNewJointDistance:(id)sender;
+- (IBAction)SetNewJointPrismatic:(id)sender;
+- (IBAction)SetNewJointRevolute:(id)sender;
+
+/**
+ * Events
+ */
 - (IBAction)SetNewEventMode:(id)sender;
 
-- (IBAction)UpdateNewBlockType:(id)sender;
+/**
+ * Toolbar tint and texture
+ */
+- (IBAction)updatePaletteTexture:(id)sender;
+- (IBAction)updatePaletteTint:(id)sender;
 
-- (IBAction)UpdateNewBlockShapeType:(id)sender;
+/**
+ * toolbar drop boxes
+ */
+- (IBAction)SetNewBlockMaterial:(id)sender;
+- (IBAction)SetNewBlockType:(id)sender;
 
-- (IBAction) UpdateNewJointType:(id)sender;
-
-- (IBAction)UpdateNewBlockMaterial:(id)sender;
 @end
