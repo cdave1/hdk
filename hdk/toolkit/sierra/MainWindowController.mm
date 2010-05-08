@@ -84,10 +84,9 @@
 {
 	unichar unicodeKey;
 	
-	unicodeKey = [ [ theEvent characters ] characterAtIndex:0 ];
+	NSString *chars = [theEvent charactersIgnoringModifiers];
+	unicodeKey = [chars characterAtIndex:0];
 	unsigned short keyCode = [theEvent keyCode];
-	
-	hdPrintf("Key: %c %d %d %d\n", unicodeKey, unicodeKey, keyCode, [theEvent modifierFlags]);
 	
 	switch( unicodeKey )
 	{
@@ -114,7 +113,7 @@
 		case 't':
 			if (([theEvent modifierFlags] & NSControlKeyMask) == NSControlKeyMask)
 			{
-				//[LevelEditor sharedInstance]->ApplyCurrentTextureToSelected();
+				[LevelEditor sharedInstance]->ApplyCurrentTextureToSelected();
 			}
 			break;
 		case 'p':
@@ -181,6 +180,7 @@
 
 - (IBAction)setCursorMode:(id)sender
 {
+	[self SetButtonStates:sender];
 	[LevelEditor sharedInstance]->settings.interfacePaletteMode = e_interfacePaletteModeCursor;
 }
 

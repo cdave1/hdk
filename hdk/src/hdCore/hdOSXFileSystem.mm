@@ -236,7 +236,7 @@ filehandle_t *FileSystem_OpenFile( const char *filename, unsigned int FlagsAndAt
 	if ((FlagsAndAttributes & HD_FS_ABSOLUTE_PATH) == HD_FS_ABSOLUTE_PATH)
 	{
 		// Just use full filename
-		snprintf( netpath, sizeof( netpath ), filename);
+		snprintf( netpath, sizeof( netpath ), "%s", filename);
 	}
 	else
 	{

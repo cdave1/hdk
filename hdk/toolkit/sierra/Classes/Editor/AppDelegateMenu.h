@@ -14,12 +14,13 @@
  */
 @interface AppDelegate (MainMenuCategory)
 
-- (void)fileloadError:(NSString *)reason withFileName:(NSString *)fileName;
+- (void)fileSystemError:(NSString *)reason withFileName:(NSString *)fileName;
 
 - (IBAction)openNewWorld:(id)sender;
 
 - (IBAction)save:(id)sender;
 
+- (IBAction)saveAs:(id)sender;
 
 /**
  * Physics menu items

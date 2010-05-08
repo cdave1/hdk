@@ -10,6 +10,11 @@
 #import "LevelEditor.h"
 #import "NSImageView+Extensions.h"
 
+@interface RevoluteJointPropertyWindow ()
+- (void)updateInterfaceState:(totemJoint *)jnt;
+@end
+
+
 @implementation RevoluteJointPropertyWindow
 
 - (id) init
@@ -49,13 +54,19 @@
 		return;
 	}
 	
-	totemJoint* jnt = (totemJoint *)selected;
+	[self.window orderBack:self];
+	[self updateInterfaceState:(totemJoint *)selected];
+}
+
+
+- (void)updateInterfaceState:(totemJoint *)jnt
+{
 	if (jnt->GetJointType() != e_totemJointTypeRevolute)
 	{
 		[self.window orderOut:self];
 		return;
 	}
-	[self.window orderBack:self];
+	
 	[_motorEnabledCheckbox setState:(jnt->GetJointMotorEnabled() ? NSOnState : NSOffState)];
 	if (jnt->GetJointMotorEnabled())
 	{
@@ -95,8 +106,13 @@
 		[_upperAngleSlider setEnabled:NO];
 		[_upperAngleTextField setEnabled:NO];
 	}
+	
+	[_lowerAngleSlider setMinValue:-(double)hd_pi];
+	[_lowerAngleSlider setMaxValue:(double)hd_pi];
+	
+	[_upperAngleSlider setMinValue:-(double)hd_pi];
+	[_upperAngleSlider setMaxValue:(double)hd_pi];
 }
-
 
 
 - (IBAction)valueWasChanged:(id)sender
@@ -111,26 +127,27 @@
 		float motorSpeed, maxMotorTorque, lowerAngle, upperAngle;
 		
 		enableMotor = [_motorEnabledCheckbox state] == NSOnState;
-		enableLimit = [_limitEnabledCheckbox state] == NSOffState;
+		enableLimit = [_limitEnabledCheckbox state] == NSOnState;
 		
 		motorSpeed		= (float) [_motorSpeedTextField floatValue];
 		maxMotorTorque	= (float) [_maxTorqueTextField floatValue];
 		
 		if (enableLimit)
 		{
-			lowerAngle		= (float) [_lowerAngleSlider floatValue];
-			upperAngle		= (float) [_upperAngleSlider floatValue];
+			lowerAngle = [_lowerAngleSlider floatValue];
+			upperAngle = [_upperAngleSlider floatValue];
 		}
 		else
 		{
 			lowerAngle = upperAngle = 0.0f;
 		}
 		
-		[_lowerAngleTextField setFloatValue:lowerAngle];
-		[_upperAngleTextField setFloatValue:upperAngle];
+		[_lowerAngleTextField setFloatValue:[_lowerAngleSlider floatValue]];
+		[_upperAngleTextField setFloatValue:[_upperAngleSlider floatValue]];
 		
 		jnt->SetRevoluteJointProperties(enableMotor, enableLimit, lowerAngle, upperAngle, maxMotorTorque, motorSpeed);
 	}
+	[self updateInterfaceState:jnt];
 }
 
 

@@ -191,6 +191,7 @@
 }
 
 
+
 /**
  * Needs an alert.
  */
@@ -237,6 +238,18 @@
 		levelEditorController->settings.deleteButtonTaps = 0;
 	}
 	 */
+}
+
+
+- (IBAction)UpdateLevelName:(id)sender
+{
+	const totemLevel *level;
+	if (!(level = (totemLevel *)[LevelEditor sharedInstance]->GetCurrentLevel()))
+	{
+		return;
+	}
+	((totemLevel *)level)->SetLevelName([[_levelName stringValue] UTF8String]);
+	[_levelsTableView reloadData];
 }
 
 

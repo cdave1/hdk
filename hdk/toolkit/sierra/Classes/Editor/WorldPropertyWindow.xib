@@ -12,7 +12,7 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="42"/>
+			<integer value="91"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -887,7 +887,7 @@
 											<reference key="NSSuperview" ref="861624018"/>
 											<bool key="NSEnabled">YES</bool>
 											<object class="NSTextFieldCell" key="NSCell" id="343629908">
-												<int key="NSCellFlags">-1804468671</int>
+												<int key="NSCellFlags">-1803944383</int>
 												<int key="NSCellFlags2">272630784</int>
 												<string key="NSContents"/>
 												<reference key="NSSupport" ref="24"/>
@@ -1144,19 +1144,19 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
-						<string key="label">levelInfoWasChanged:</string>
-						<reference key="source" ref="1001"/>
-						<reference key="destination" ref="436916760"/>
-					</object>
-					<int key="connectionID">129</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
 						<string key="label">levelAddRemoveSegment:</string>
 						<reference key="source" ref="1001"/>
 						<reference key="destination" ref="770273292"/>
 					</object>
 					<int key="connectionID">130</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">UpdateLevelName:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="436916760"/>
+					</object>
+					<int key="connectionID">131</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1891,7 +1891,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">130</int>
+			<int key="maxID">131</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1912,10 +1912,10 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>UpdateLevelAABB:</string>
 							<string>UpdateLevelBackgrounds:</string>
+							<string>UpdateLevelName:</string>
 							<string>addNewLevel:</string>
 							<string>deleteSelectedLevel:</string>
 							<string>levelAddRemoveSegment:</string>
-							<string>levelInfoWasChanged:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>

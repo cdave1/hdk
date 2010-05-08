@@ -24,6 +24,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification 
 {
 	// Insert code here to initialize your application 
+	[_progressPanel orderOut:nil];
 }
 
 
@@ -38,9 +39,26 @@
 	[LevelEditor sharedInstance];
 	
 	[_mainWindowController.window makeKeyAndOrderFront:self];//= _mainWindowController.window;
+	
+	
 	//[_window makeKeyAndOrderFront:self];
 }
 
+
+
+- (void)showProgressPanel:(NSString *)title
+{
+	[_progressPanel setTitle:title];
+	[_progressPanel makeKeyAndOrderFront:nil];
+	[_progressIndicator startAnimation:self];
+}
+
+
+- (void)hideProgressPanel
+{
+	[_progressPanel orderOut:self];
+	[_progressIndicator stopAnimation:self];
+}
 
 
 

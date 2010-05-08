@@ -9,6 +9,7 @@
 #import "BlockPropertyWindow.h"
 #import "LevelEditor.h"
 #import "NSImageView+Extensions.h"
+#import "NSWindowController+Extensions.h"
 
 @implementation BlockPropertyWindow
 
@@ -26,6 +27,14 @@
 		 addObserver:self
 		 selector:@selector(itemWasUnselected)
 		 name:kSingleItemUnselectedNotification
+		 object:nil];
+		
+		
+		
+		[[NSNotificationCenter defaultCenter]
+		 addObserver:self
+		 selector:@selector(multipleItemsSelected)
+		 name:kMultipleItemsSelectedNotification
 		 object:nil];
 		
 		// initially hidden
@@ -59,6 +68,7 @@
 		return;
 	}
 	[self.window orderBack:self];
+	[self setAllEnabled:YES];
 	[_texture setImageAtContentRepositoryPath:((totemBlock*)selected)->GetTextureName()];
 	[_textureName setStringValue:[NSString stringWithUTF8String:((totemBlock*)selected)->GetTextureName()]];
 	
@@ -100,6 +110,25 @@
 	[_zOffset setFloatValue:((totemBlock*)selected)->GetZOffset()];
 	[_tiling setFloatValue:((totemBlock *)selected)->GetTextureRepeatX()];
 	
+	[self updateTextInterface];
+}
+
+
+- (void)multipleItemsSelected
+{
+	if (![LevelEditor sharedInstance]->SelectedItemsContainsType(e_totemTypeBlock)) return;
+	
+	[self.window orderBack:self];
+	[self setAllEnabled:NO];
+	
+	[_texture setEnabled:YES];
+	[_textureName setEnabled:YES];
+	[_tint setEnabled:YES];
+	[_materialComboBox setEnabled:YES];
+	[_blockTypeComboBox setEnabled:YES];
+	[_depth setEnabled:YES];
+	[_zOffset setEnabled:YES];
+	[_blockTag setEnabled:YES];
 	[self updateTextInterface];
 }
 
@@ -194,14 +223,23 @@
  */
 - (IBAction)UpdateSelectedBlockTexture:(id)sender
 {
-	totemBlock* selected = (totemBlock *)[LevelEditor sharedInstance]->GetSelectedTotemBlock();
+	totemBlock* selected = NULL;
 	const char *textureName = [_texture getResourcePathOfImage];
-	if (textureName && selected && (selected->IsTextureChangeable()))
+	if (!textureName) return;
+	
+	for (int i = 0; i < [LevelEditor sharedInstance]->GetSelectedGameObjectsCount(); ++i)
 	{
-		selected->SetTextureName(textureName);
-		selected->ResetTextureCoords();
-		[_textureName setStringValue:[NSString stringWithUTF8String:selected->GetTextureName()]];
+		if ([LevelEditor sharedInstance]->GetSelectedGameObjectAtIndex(i)->GetUserType() == e_totemTypeBlock)
+		{
+			selected = (totemBlock *)[LevelEditor sharedInstance]->GetSelectedGameObjectAtIndex(i);
+			if (selected && (selected->IsTextureChangeable()))
+			{
+				selected->SetTextureName(textureName);
+				selected->ResetTextureCoords();
+			}
+		}
 	}
+	[_textureName setStringValue:[NSString stringWithUTF8String:textureName]];
 }
 
 

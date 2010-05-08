@@ -10,12 +10,19 @@
 #import "LevelEditor.h"
 #import "NSImageView+Extensions.h"
 
+@interface PrismaticJointPropertyWindow ()
+- (void)updateInterfaceState:(totemJoint *)jnt;
+@end
+
+
 @implementation PrismaticJointPropertyWindow
 
 - (id) init
 {
 	if ((self = [super initWithWindowNibName:@"PrismaticJointPropertyWindow"]))
 	{
+		
+		
 		[[NSNotificationCenter defaultCenter]
 		 addObserver:self
 		 selector:@selector(itemWasSelected)
@@ -49,7 +56,13 @@
 		return;
 	}
 	
-	totemJoint* jnt = (totemJoint *)selected;
+	[self.window orderBack:self];
+	[self updateInterfaceState:(totemJoint *)selected];
+}
+
+
+- (void)updateInterfaceState:(totemJoint *)jnt
+{
 	if (jnt->GetJointType() != e_totemJointTypePrismatic)
 	{
 		[self.window orderOut:self];
@@ -115,7 +128,7 @@
 		float motorSpeed, maxMotorForce, lowerTranslation, upperTranslation;
 		
 		enableMotor = [_motorEnabledCheckbox state] == NSOnState;
-		enableLimit = [_limitEnabledCheckbox state] == NSOffState;
+		enableLimit = [_limitEnabledCheckbox state] == NSOnState;
 		
 		motorSpeed		= (float) [_motorSpeedTextField floatValue];
 		maxMotorForce	= (float) [_maxForceTextField floatValue];
@@ -135,8 +148,7 @@
 		[_lowerTranslationTextField setFloatValue:lowerTranslation];
 		[_upperTranslationTextField setFloatValue:upperTranslation];
 	}
-	
-
+	[self updateInterfaceState:jnt];
 }
 
 @end

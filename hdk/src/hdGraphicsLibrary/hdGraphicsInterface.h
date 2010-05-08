@@ -47,7 +47,7 @@
 #include "hdGraphicsLibrary/hdTexture.h"
 
 
-#define hdglError(_hdglUserinfo__) if (hdglErrorCode(_hdglUserinfo__)) hdPrintf("\t at: %s, %d, %s\n", __FILE__,__LINE__,__FUNCTION__)
+#define hdglError(_hdglUserinfo__) if (hdglErrorCode(_hdglUserinfo__)) hdPrintf("\t (%s) line %d in function %s\n", __FILE__,__LINE__,__FUNCTION__)
 
 
 #ifdef __cplusplus

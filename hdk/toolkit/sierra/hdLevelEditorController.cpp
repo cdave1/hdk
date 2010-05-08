@@ -27,7 +27,7 @@ hdLevelEditorController::hdLevelEditorController()
 	projectionAABB.upper = hdVec3(kScreenWidth, kScreenHeight, -kScreenDepth);
 	m_projection = new hdOrthographicProjection(m_gameWorld, projectionAABB);
 	
-	m_viewZoom = 8.0f;
+	m_viewZoom = 4.0f;
 	
 	m_viewCenter.Set(0.0f, 0.0f);
 	
@@ -72,6 +72,8 @@ hdLevelEditorController::hdLevelEditorController()
 	m_currentLevel->SetLevelName("(Unnamed Level)");
 	
 	m_totemWorld->AddLevel(m_currentLevel);
+	
+	m_canSaveCurrentWorldToExistingFile = false;
 }
 
 
@@ -171,110 +173,63 @@ void hdLevelEditorController::GenerateNewLevel()
 }
 
 
-
-void hdLevelEditorController::ToggleLayerMode(const e_interfaceLayerMode layerMode)
+bool hdLevelEditorController::CanSaveCurrentWorldToExistingFile()
 {
-	settings.interfaceLayerMode ^= (int)layerMode;
+	// If it's a new world created in the constructor, then this is false.
+	return m_canSaveCurrentWorldToExistingFile;
 }
 
 
-void hdLevelEditorController::SaveNewWorld(const char *name)
+bool hdLevelEditorController::SaveCurrentWorld()
 {
-	char filePath[256];
-	snprintf(filePath, 256, "%s%s", FileSystem_BaseDir(), name);
 	
-	std::ifstream ifs(filePath);
-	
-	if (ifs.is_open()) 
-	{
-		hdPrintf("This file name was already in use.");
-		return;
-	}
-	
-	totemWorld *world = new totemWorld(name);
-	totemLevel *level = new totemLevel();
-	
-	world->AddLevel(level);
-	
-	std::ofstream ofs(filePath);
-	{
-		boost::archive::text_oarchive oa(ofs);
-		oa << (* world);
-	}
+	if (this->CanSaveCurrentWorldToExistingFile())
+		return this->SaveCurrentWorldTo(m_currentWorldPath);
+	return false;
 }
 
 
-
-void hdLevelEditorController::Save()
+bool hdLevelEditorController::SaveCurrentWorldTo(const char *destPath)
 {
-	if (m_totemWorld == NULL) return;
-	if (strlen(settings.currentWorldPath) == 0) return;
+	if (m_totemWorld == NULL) return false;
+	if (strlen(destPath) == 0) return false;
 	
 	m_currentLevel->GetAABB();
 	
-	char filePath[256];
-	snprintf(filePath, 256, "%s%s", FileSystem_BaseDir(), settings.currentWorldPath);
-	/*
-	// Backup before using boost - too many corrupted files...
-	// This block is from ostream docs on www.cplusplus.com
+	// save a backup
+	if (!(totemWorldManager::Instance()->BackupTotemWorldFile(destPath)))
 	{
-		char * buffer;
-		long size;
-		
-		char backupPath[256];
-		snprintf(backupPath, 256, "/Users/david/Documents/Projects/TotemGames/tmp%s", settings.currentWorldPath);
-	
-		std::ifstream ifs(filePath);
-		std::ofstream backupStream(backupPath);
-	
-		ifs.seekg(0, std::ifstream::end);
-		size = ifs.tellg();
-		ifs.seekg(0);
-	
-		buffer = new char [size];
-		ifs.read(buffer, size);
-		
-		backupStream.write(buffer, size);
-		
-		delete [] buffer;
-		
-		ifs.close();
-		backupStream.close();
+		// Log an error, but don't stop saving
+		hdPrintf("Could not save a backup: %s", destPath);
 	}
 	
-	std::ofstream ofs(filePath);
+	// save text version
+	if (!(totemWorldManager::Instance()->SaveTotemWorld(m_totemWorld, destPath)))
 	{
-		boost::archive::text_oarchive oa(ofs);
-		oa << (* m_totemWorld);
-	}
-	ofs.close();
-	 */
-	
-	// HACK HACK HACK
-	// World name is just the path
-	
-	if (settings.currentWorldPath[0] == '/')
-	{
-		m_totemWorld->SetName(settings.currentWorldPath+1);
-	}
-	else
-	{
-		m_totemWorld->SetName(settings.currentWorldPath);
+		hdPrintf("Could not save text for world to: %s", destPath);
+		return false;
 	}
 	
-	
-	
-	
-	
-	
-	totemWorldManager::Instance()->SaveTotemWorld(m_totemWorld, filePath, true);
+	// save a binary version
+#if 1
+	hdPrintf("WARNING: not saving binary file.\n");
+#else
+	if (0 != (totemWorldManager::Instance()->SaveTotemWorldBinary(m_totemWorld, destPath)))
+	{
+		hdPrintf("Could not save binary file for world at: %s", destPath);
+		return false;
+	}
+#endif
+	snprintf(m_currentWorldPath, LEVEL_EDITOR_PATH_LEN, "%s", destPath);
+	m_canSaveCurrentWorldToExistingFile = true;
+	return true;
 }
 
 
 bool hdLevelEditorController::LoadWorld(const char *path)
 {
-	// Load from currentWorldPath
-	snprintf( settings.currentWorldPath, 256, "%s", path);
+	// Copy into currentWorldPath
+	snprintf(m_currentWorldPath, LEVEL_EDITOR_PATH_LEN, "%s", path);
 	
 	if (m_currentLevel != NULL)
 	{
@@ -304,49 +259,17 @@ bool hdLevelEditorController::LoadWorld(const char *path)
 	
 	this->InitPhysics();
 	
-	m_totemWorld = totemWorldManager::Instance()->FindTotemWorld(settings.currentWorldPath);
+	//m_totemWorld = totemWorldManager::Instance()->FindTotemWorld(m_currentWorldPath);
+	if (!(m_totemWorld = totemWorldManager::Instance()->LoadTotemWorldFromText(m_currentWorldPath)))
+	{
+		hdPrintf("Couldn't load file from text.\n");
+		return false;
+	}
 	
-	if (m_totemWorld == NULL)
-	{
-		hdPrintf("Could not find a compressed world file with name %s - loading uncompressed\n", settings.currentWorldPath);
-		
-		char filePath[256];
-		snprintf(filePath, 256, "%s%s", FileSystem_BaseDir(), settings.currentWorldPath);
-		
-		// Load Levels
-		std::ifstream ifs(filePath);
-		if (ifs.is_open()) {
-			m_totemWorld = new totemWorld();
-			
-			//TODO: check for std assertion failed exception.
-			boost::archive::text_iarchive ia(ifs);
-			
-			// read class state from archive
-			ia >> (* m_totemWorld);
-			
-			assert(m_totemWorld->GetLevelCount() > 0);
-			
-			this->SetLevel(0);
-		}
-		else
-		{
-			return false;
-			/*
-			snprintf(settings.currentWorldPath, 256, "%s", "(Unnamed)");
-			m_totemWorld = new totemWorld("New World");
-			totemLevel* newlev = new totemLevel();
-			this->SetCurrentLevel(newlev);
-			m_totemWorld->AddLevel(newlev);
-			 */
-		}
-		
-	}
-	else
-	{
-		hdPrintf("Compressed world loaded successfully.\n");
-		assert(m_totemWorld->GetLevelCount() > 0);
-		this->SetLevel(0);
-	}
+	assert(m_totemWorld->GetLevelCount() > 0);
+	this->SetLevel(0);
+	
+	m_canSaveCurrentWorldToExistingFile = true;
 	return true;
 }
 
@@ -357,6 +280,12 @@ const bool hdLevelEditorController::SetLevel(const uint32 levelId)
 	if (levelId >= m_totemWorld->GetLevelCount()) return false;
 	totemLevel *level = (totemLevel *)m_totemWorld->GetLevels()[levelId];
 	return this->SetCurrentLevel(level);
+}
+
+
+void hdLevelEditorController::ToggleLayerMode(const e_interfaceLayerMode layerMode)
+{
+	settings.interfaceLayerMode ^= (int)layerMode;
 }
 
 
@@ -409,8 +338,7 @@ void hdLevelEditorController::SelectMultipleGameObjects()
 	settings.DEPRECATEDselectedGameObject = NULL;
 	m_selectedGameObjects->RemoveAll();
 	
-	const int k_maxCount = 256;
-	hdGameObject* objs[k_maxCount];
+	hdGameObject* objs[LEVEL_EDITOR_MAX_SELECTED_OBJECTS];
 	
 	hdAABB mouseAABB;
 	hdVec3 bottom, top;
@@ -421,7 +349,7 @@ void hdLevelEditorController::SelectMultipleGameObjects()
 	mouseAABB.lower = hdMin(bottom, top);
 	mouseAABB.upper = hdMax(bottom, top);
 	
-	int clickObjectCount = m_gameWorld->AABBQuery(mouseAABB, objs, k_maxCount);
+	int clickObjectCount = m_gameWorld->AABBQuery(mouseAABB, objs, LEVEL_EDITOR_MAX_SELECTED_OBJECTS);
 	
 	
 	hdVec3 mousePoint = hdVec2toVec3(m_currentMouseDragPoint);
@@ -430,7 +358,7 @@ void hdLevelEditorController::SelectMultipleGameObjects()
 	
 	if (clickObjectCount >= 1)
 	{
-		for (int i = 0; i < hdMin(clickObjectCount,k_maxCount); i++)
+		for (int i = 0; i < hdMin(clickObjectCount,LEVEL_EDITOR_MAX_SELECTED_OBJECTS); i++)
 		{
 			if (CanSelectGameObject(objs[i]))
 			{
@@ -1256,8 +1184,29 @@ hdGameObject * hdLevelEditorController::GetSelectedGameObjectAtIndex(unsigned in
 }
 
 
+bool hdLevelEditorController::SelectedItemsContainsType(const e_totemType totemType) const
+{
+	bool containsBlocks = false;
+	for (int i = 0; i < this->GetSelectedGameObjectsCount(); ++i)
+	{
+		if ((containsBlocks = (m_selectedGameObjects->GetItems()[i]->GetUserType() == totemType))) break;
+	}
+	return containsBlocks;
+}
+
+
 void hdLevelEditorController::SetPaletteTexture(const char *texturePath)
 {
+	if (strlen(texturePath) > 0)
+	{
+		snprintf(m_currentPaletteTexture, LEVEL_EDITOR_PATH_LEN, "%s", texturePath);
+	}
+}
+
+
+const char * hdLevelEditorController::GetPaletteTexture() const
+{
+	return m_currentPaletteTexture;
 }
 
 
@@ -1502,9 +1451,10 @@ void hdLevelEditorController::PasteCopiedLevel()
 }
 
 
-void hdLevelEditorController::ApplyCurrentTextureToSelected(const char* texture)
+void hdLevelEditorController::ApplyCurrentTextureToSelected()
 {
 	if (m_selectedGameObjects->GetItemCount() == 0) return;
+	if (strlen(m_currentPaletteTexture) == 0) return;
 	
 	totemBlock* selected = NULL;
 	for(int i = 0; i < m_selectedGameObjects->GetItemCount(); i++)
@@ -1514,7 +1464,7 @@ void hdLevelEditorController::ApplyCurrentTextureToSelected(const char* texture)
 			selected = (totemBlock *)m_selectedGameObjects->GetItems()[i];
 			if (selected != NULL && selected->IsTextureChangeable())
 			{
-				selected->SetTextureName(texture);
+				selected->SetTextureName(m_currentPaletteTexture);
 				selected->ResetTextureCoords();
 			}
 		}
@@ -2038,10 +1988,13 @@ void hdLevelEditorController::Draw()
 				{
 					m_currentLevel->GetEvents()->GetItems()[i]->Draw();
 				}
+				glDisable(GL_CULL_FACE);
+				m_currentLevel->DrawFloor();
+				
 				glDisable(GL_TEXTURE_2D);
 				glDisable(GL_BLEND);
 				glDisable(GL_DEPTH_TEST);
-				glDisable(GL_CULL_FACE);
+				
 			}
 			else if (m_drawingStyle == e_drawingStylePreview)
 			{

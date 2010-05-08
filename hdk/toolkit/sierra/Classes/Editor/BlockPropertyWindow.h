@@ -28,6 +28,8 @@
 }
 - (void)itemWasSelected;
 - (void)itemWasUnselected;
+- (void)multipleItemsSelected;
+
 - (void)updateTextInterface;
 
 - (IBAction)UpdateSlidersFromText:(id)sender;

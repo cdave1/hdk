@@ -239,7 +239,7 @@
 							<reference key="NSSuperview" ref="523687160"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSSliderCell" key="NSCell" id="167692453">
-								<int key="NSCellFlags">-2080244224</int>
+								<int key="NSCellFlags">-2079981824</int>
 								<int key="NSCellFlags2">0</int>
 								<string key="NSContents"/>
 								<reference key="NSControlView" ref="756757826"/>
@@ -260,7 +260,7 @@
 							<reference key="NSSuperview" ref="523687160"/>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSSliderCell" key="NSCell" id="153807307">
-								<int key="NSCellFlags">-2080244224</int>
+								<int key="NSCellFlags">-2079981824</int>
 								<int key="NSCellFlags2">0</int>
 								<string key="NSContents"/>
 								<reference key="NSControlView" ref="224255588"/>

@@ -22,7 +22,7 @@ void hdPrintf(const char *fmt, ...)
 	
 	msg[sizeof(msg) - 1] = '\0';
 #ifdef LEVEL_EDITOR
-	std::cout << msg;
+	printf("%s", msg);
 #else
 	printf("%s", msg);
 #endif

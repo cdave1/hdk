@@ -58,6 +58,6 @@
 
 - (IBAction)UpdateLevelBackgrounds:(id)sender;
 
-- (IBAction)levelInfoWasChanged:(id)sender;
+- (IBAction)UpdateLevelName:(id)sender;
 
 @end

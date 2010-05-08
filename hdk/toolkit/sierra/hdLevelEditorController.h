@@ -34,9 +34,10 @@
 
 #include "hdLevelEditorUtilities.h"
 
+#define TOTEM_WORLD_NEW
 #define TOTEM_WORLD_TEXTFILE_EXTENSION ".ttw"
-
-
+#define LEVEL_EDITOR_PATH_LEN 1024
+#define LEVEL_EDITOR_MAX_SELECTED_OBJECTS 1024
 
 
 // include headers that implement a archive in simple text format
@@ -171,7 +172,7 @@ struct Settings
 	bool showGround;
 	bool showPhysics;
 	
-	char currentWorldPath[256];
+	
 	
 	
 };
@@ -184,21 +185,39 @@ public:
 	hdLevelEditorController();
 	~hdLevelEditorController();
 	
+	/**
+	 * Saving/delete world files
+	 */
+	bool SaveCurrentWorld();
+	bool SaveCurrentWorldTo(const char *destPath);
+	bool LoadWorld(const char *path);
+	bool CanSaveCurrentWorldToExistingFile();
+	
+	/**
+	 * Input settings and functions
+	 *
+	 * TODO: device agnostic to support multitouch?
+	 */
 	void StartPan(const float32 x, const float32 y);
 	void Pan(const float32 deltaX, float32 deltaY);
-	
-	
-	
 	void MouseDown(const int x, const int y);
 	void MouseDrag(const int x, const int y);
 	void MouseUp(bool shiftKeyDown);
+	
+	void SetDragStyleRotate();
+	void SetDragStyleScale();
+	void SetDragStyleMove();
+	void Zoom(const float32 delta);
+	void TogglePerspectiveProjection();
+	void SetPerspectiveProjection();
+	void SetOrthoProjection();
 	
 	bool isPhysicsOn();
 	void PhysicsOn();
 	void PhysicsOff();
 	
 	void SetPaletteTexture(const char *texturePath);
-	
+	const char * GetPaletteTexture() const;
 	void SetPaletteTint(const float r, const float g, const float b, const float a);
 	
 	
@@ -206,7 +225,9 @@ public:
 	//void DoubleTouchMove(const int ax, const int ay, const int bx, const int by);
 	
 	
-	
+	/**
+	 * Drawing
+	 */
 	void Draw();
 	
 	void DrawString(int x, int y, const char *string, ...);	
@@ -215,11 +236,7 @@ public:
 	
 	void DeleteKey();
 	
-	void Save();
-	
-	void SaveNewWorld(const char *name);
-	
-	bool LoadWorld(const char *path);
+
 	
 	void DoUnitTest();
 	
@@ -255,7 +272,7 @@ public:
 	
 	void PasteCopiedLevel();
 	
-	void ApplyCurrentTextureToSelected(const char* texture);
+	void ApplyCurrentTextureToSelected();
 	
 	void RepairSelectedShape();
 	
@@ -267,13 +284,7 @@ public:
 	
 	hdTypedefList<hdGameObject*, 1024>* m_copiedGameObjects;
 	
-	void SetDragStyleRotate();
-	void SetDragStyleScale();
-	void SetDragStyleMove();
-	void Zoom(const float32 delta);
-	void TogglePerspectiveProjection();
-	void SetPerspectiveProjection();
-	void SetOrthoProjection();
+
 	
 	void SetNewBlockShapeType(e_totemShapeType shapeType);
 	
@@ -290,10 +301,14 @@ public:
 	
 	const hdTypedefList<hdGameObject *, 1024> * GetSelectedGameObjects() const;
 	
-	hdGameObject *GetSelectedGameObjectAtIndex(unsigned int index) const;
+	hdGameObject * GetSelectedGameObjectAtIndex(unsigned int index) const;
+	
+	bool SelectedItemsContainsType(const e_totemType type) const; 
 	
 	Settings settings;
 	
+	
+
 
 	
 private:
@@ -342,10 +357,12 @@ private:
 	
 	hdVec2 ConvertSizeToWorld(const float32 x, const float32 y); 
 	
-	totemLevel lev;
 	
 	int32 m_textLine;
 	
+	// Bookkeeping
+	bool m_canSaveCurrentWorldToExistingFile;
+	char m_currentWorldPath[LEVEL_EDITOR_PATH_LEN];
 	
 	// View port
 	float32 m_viewZoom;
@@ -362,14 +379,16 @@ private:
 	b2AABB m_physicsWorldAABB;
 	b2World* m_physicsWorld;
 	
-	// 
-	hdVec2 m_targetScreenArea; // we are drawing for the iPhone.
+	// Target viewports.
+	hdVec2 m_targetScreenArea; 
 	hdVec2 m_targetScreenPosition;
 	
+	// Interaction
 	bool m_dragging;
 	hdVec2 m_startClickPoint;
 	hdVec2 m_previousMouseDragPoint;
 	hdVec2 m_currentMouseDragPoint;
+	char m_currentPaletteTexture[LEVEL_EDITOR_PATH_LEN];
 	
 	// gameworld stuff
 	hdOrthographicProjection *m_projection;

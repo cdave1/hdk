@@ -12,8 +12,8 @@
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="152"/>
 			<integer value="72"/>
+			<integer value="152"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -70,7 +70,7 @@
 									<int key="NSfFlags">3614</int>
 								</object>
 								<reference key="NSControlView" ref="743497567"/>
-								<int key="NSButtonFlags">-2033958657</int>
+								<int key="NSButtonFlags">-1228652289</int>
 								<int key="NSButtonFlags2">134</int>
 								<object class="NSCustomResource" key="NSNormalImage">
 									<string key="NSClassName">NSImage</string>
@@ -80,6 +80,10 @@
 								<string key="NSKeyEquivalent"/>
 								<int key="NSPeriodicDelay">400</int>
 								<int key="NSPeriodicInterval">75</int>
+								<object class="NSCustomResource" key="NSSound">
+									<string key="NSClassName">NSSound</string>
+									<string key="NSResourceName">Tink</string>
+								</object>
 							</object>
 						</object>
 						<object class="NSButton" id="838409551">

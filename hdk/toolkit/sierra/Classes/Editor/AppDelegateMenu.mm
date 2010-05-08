@@ -13,7 +13,7 @@
 @implementation AppDelegate (MainMenuCategory)
 
 
-- (void)fileloadError:(NSString *)reason withFileName:(NSString *)fileName
+- (void)fileSystemError:(NSString *)reason withFileName:(NSString *)fileName
 {
 	NSWindow *infoWindow;
 	
@@ -21,7 +21,7 @@
 										 [NSString stringWithFormat:@"File: %@", fileName],
 										 @"OK", nil, nil );
 	[NSApp runModalForWindow:infoWindow];
-	[infoWindow close];	
+	[infoWindow close];
 }
 
 
@@ -52,19 +52,16 @@
 			NSString *fileName = [[urls objectAtIndex:0] lastPathComponent];
 			if ([fileName hasSuffix:worldExtension])
 			{
-				NSString *p = [[[urls objectAtIndex:0] path] 
-							   stringByReplacingOccurrencesOfString:[NSString stringWithUTF8String:FileSystem_BaseDir()]
-							   withString:@""];
+				NSString *p = [[urls objectAtIndex:0] path];
 				if (![LevelEditor sharedInstance]->LoadWorld([p UTF8String]))
 				{
-					[self fileloadError:@"Could not load the specified totem world file." withFileName:fileName];
+					[self fileSystemError:@"Could not load the specified totem world file." withFileName:fileName];
 					return;
 				}
 			} 
 			else
 			{
-			
-				[self fileloadError:@"The specifed file was not a totem world file." withFileName:fileName];
+				[self fileSystemError:@"The specifed file was not a totem world file." withFileName:fileName];
 				return;
 			}
 			[[NSNotificationCenter defaultCenter] 
@@ -77,7 +74,56 @@
 
 - (IBAction)save:(id)sender
 {
-	[LevelEditor sharedInstance]->Save();
+	[self showProgressPanel:@"Saving world..."];
+	if (![LevelEditor sharedInstance]->SaveCurrentWorld())
+	{
+		[self fileSystemError:@"Could not save the current totem world file" withFileName:@"Current file"];
+	}
+	[self hideProgressPanel];
+}
+
+
+- (IBAction)saveAs:(id)sender
+{
+	// Need to open a file picker
+	NSSavePanel *savePanel = [NSSavePanel savePanel];
+	NSURL *fileURL = 
+		[NSURL fileURLWithPath:[NSString stringWithUTF8String:FileSystem_BaseDir()]];
+	NSString *worldExtension = [NSString stringWithUTF8String:TOTEM_WORLD_TEXTFILE_EXTENSION];
+	
+	hdPrintf("Saving file\n");
+	[savePanel setDirectoryURL:fileURL];
+	[savePanel setAllowedFileTypes:[NSArray arrayWithObject:@"ttw"]];
+	[savePanel setCanCreateDirectories:YES];
+	[savePanel setTitle:@"Save current world file"];
+	
+	if ([savePanel runModal])
+	{
+		if ([savePanel URL])
+		{
+			NSString *fileName = [[savePanel URL] lastPathComponent];
+			// can't save a file that already exists
+			if (FileSystem_FileExists([[[savePanel URL] path] UTF8String]))
+			{
+				[self fileSystemError:@"Can't save over file that already exists." withFileName:fileName];
+				return;
+			}
+			else if (![fileName hasSuffix:worldExtension])
+			{
+				[self fileSystemError:@"The specifed file was not a ttw file." withFileName:fileName];
+				return;
+			} 
+			else
+			{
+				NSString *p = [[savePanel URL] path];
+				if ((![LevelEditor sharedInstance]->SaveCurrentWorldTo([p UTF8String])))
+				{
+					[self fileSystemError:@"Could not save the specified totem world file." withFileName:fileName];
+					return;
+				}
+			}
+		}		
+	}
 }
 
 

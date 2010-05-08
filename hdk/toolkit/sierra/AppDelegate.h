@@ -16,7 +16,8 @@
 	NSWindow *_window;
 	
 	MainWindowController *_mainWindowController;
-	
+	IBOutlet NSPanel *_progressPanel;
+	IBOutlet NSProgressIndicator *_progressIndicator;
 	
 	// ItemPropertiesWindowController
 	// LevelPropertiesWindowController
@@ -28,5 +29,7 @@
 //- (void) keyDown:(NSEvent *)theEvent;
 //- (IBAction) setFullScreen:(id)sender;
 //- (IBAction) resize:(id)sender;
+- (void)showProgressPanel:(NSString *)title;
+- (void)hideProgressPanel;
 
 @end

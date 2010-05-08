@@ -346,11 +346,20 @@ mousevalues_t GetMouseValues()
 	bool shiftKeyDown = (([theEvent modifierFlags] & NSShiftKeyMask) == NSShiftKeyMask);
 	[LevelEditor sharedInstance]->MouseUp(shiftKeyDown);
 	
-	if (([LevelEditor sharedInstance]->GetSelectedGameObjectSingle()))
+	if ([LevelEditor sharedInstance]->GetSelectedGameObjectsCount() > 0)
 	{
-		[[NSNotificationCenter defaultCenter] 
-		 postNotificationName:kSingleItemSelectedNotification
-		 object:nil];
+		if (([LevelEditor sharedInstance]->GetSelectedGameObjectSingle()))
+		{
+			[[NSNotificationCenter defaultCenter] 
+			 postNotificationName:kSingleItemSelectedNotification
+			 object:nil];
+		}
+		else
+		{
+			[[NSNotificationCenter defaultCenter] 
+			 postNotificationName:kMultipleItemsSelectedNotification
+			 object:nil];	
+		}
 	}
 }
 
