@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "hdImageView.h"
+#import "NSView+Extensions.h"
 
 @interface WorldPropertyWindow : NSWindowController 
 	<NSTableViewDataSource,
@@ -28,8 +29,8 @@
 	
 	IBOutlet NSButton *_hasFloor;
 	IBOutlet NSBox *_hasFloorBox;
-	IBOutlet NSImageView *_floorTexture1;
-	IBOutlet NSImageView *_floorTexture2;
+	IBOutlet hdImageView *_floorTexture1;
+	IBOutlet hdImageView *_floorTexture2;
 	IBOutlet NSSlider *_floorLevel;
 	IBOutlet NSTextField *_floorLevelText;
 	IBOutlet NSButton *_isWater;
@@ -53,6 +54,10 @@
 - (IBAction)addNewLevel:(id)sender;
 
 - (IBAction)deleteSelectedLevel:(id)sender;
+
+- (IBAction)UpdateHasFloor:(id)sender;
+
+- (IBAction)UpdateLevelFloorInfo:(id)sender;
 
 - (IBAction)UpdateLevelAABB:(id)sender;
 

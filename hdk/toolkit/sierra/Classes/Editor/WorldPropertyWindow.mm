@@ -56,8 +56,8 @@
 		 name:NSTableViewSelectionDidChangeNotification
 		 object:nil];
 		
+		[[_hasFloorBox contentView] setAllControlsEnabled:NO];
 		NSPoint o = NSMakePoint(0, 1600);
-		
 		[self.window setFrameTopLeftPoint:o];
 	}
 	return self;
@@ -112,12 +112,12 @@
 	if (updatedLevel->GetFloorInfo() == NULL)
 	{
 		[_hasFloor setState:NSOffState];
-		[_hasFloorBox setHidden:YES];
+		[[_hasFloorBox contentView] setAllControlsEnabled:NO];
 	}
 	else
 	{
 		[_hasFloor setState:NSOnState];
-		[_hasFloorBox setHidden:NO];
+		[[_hasFloorBox contentView] setAllControlsEnabled:YES];
 		
 		const totemFloorInfo *floorInfo = updatedLevel->GetFloorInfo();
 		const char *floorTexture1Path = ((totemFloorInfo *)floorInfo)->GetFirstTexture()->name;
@@ -140,29 +140,47 @@
 }
 
 
+- (IBAction)UpdateHasFloor:(id)sender
+{
+	[[_hasFloorBox contentView] setAllControlsEnabled:[_hasFloor state] == NSOnState];
+}
+
+
 - (IBAction)UpdateLevelFloorInfo:(id)sender
 {
-	/*
+	const totemLevel *level;
+	const char *textureName;
+	
+	if (!(level = [LevelEditor sharedInstance]->GetCurrentLevel()))
+	{
+		return;
+	}
+	
 	totemFloorInfo *floorInfo = (totemFloorInfo *)(level->GetFloorInfo());
 	
 	if (floorInfo == NULL)
 	{
 		floorInfo = new totemFloorInfo();
-		level->SetFloorInfo(floorInfo);
+		((totemLevel *)level)->SetFloorInfo(floorInfo);
 	}
 	
-	if (currentLevelFloorTexture1->get_int_val() != -1)
+	
+	textureName = [_floorTexture1 getResourcePathOfImage];
+	if (textureName && strlen(textureName) > 0)
 	{
-		snprintf(floorInfo->m_firstTextureName, kMaxTexturePathSize, "%s", currentLevelFloorTexture1->curr_text.c_str());
+		snprintf(floorInfo->m_firstTextureName, kMaxTexturePathSize, "%s", textureName);
 	}
 	
-	if (currentLevelFloorTexture2->get_int_val() != -1)
+	textureName = [_floorTexture2 getResourcePathOfImage];
+	if (textureName && strlen(textureName) > 0)
 	{
-		snprintf(floorInfo->m_secondTextureName, kMaxTexturePathSize, "%s", currentLevelFloorTexture2->curr_text.c_str());
+		snprintf(floorInfo->m_secondTextureName, kMaxTexturePathSize, "%s", textureName);
 	}
-	floorInfo->m_floorLevel =  (float) strtof(currentLevelFloorLevel->get_text(), NULL);
-	floorInfo->m_isWater = (currentLevelFloorIsWater->get_int_val() != 0);
-	floorInfo->m_isReflective = (currentLevelReflectiveFloor->get_int_val() != 0);*/
+	
+	floorInfo->m_floorLevel = [_floorLevel floatValue];
+	floorInfo->m_isWater = [_isWater state] == NSOnState;
+	floorInfo->m_isReflective = [_isReflective state] == NSOnState;
+	floorInfo->ResetTextures();
 }
 
 

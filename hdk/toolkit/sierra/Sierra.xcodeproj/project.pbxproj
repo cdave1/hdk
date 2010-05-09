@@ -42,6 +42,7 @@
 		6362DB97118A2B4400184AE0 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6362DB96118A2B4400184AE0 /* GLUT.framework */; };
 		6362DC5E118A3B1B00184AE0 /* LevelEditor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6362DC5D118A3B1B00184AE0 /* LevelEditor.mm */; };
 		63CA6F2011956B2E0010C802 /* NSWindowController+Extensions.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63CA6F1F11956B2E0010C802 /* NSWindowController+Extensions.mm */; };
+		63CA6FDE119617CA0010C802 /* NSView+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CA6FDD119617CA0010C802 /* NSView+Extensions.m */; };
 		63CD3DE1118B77010086D7F5 /* AppDelegateMenu.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63CD3DE0118B77010086D7F5 /* AppDelegateMenu.mm */; };
 		63D4E589118EE43F005A7634 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D4E588118EE43F005A7634 /* arrow.png */; };
 		63D4E593118EE642005A7634 /* boxIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 63D4E591118EE642005A7634 /* boxIcon.png */; };
@@ -182,6 +183,8 @@
 		6362DC5D118A3B1B00184AE0 /* LevelEditor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LevelEditor.mm; path = Classes/LevelEditor.mm; sourceTree = "<group>"; };
 		63CA6F1E11956B2E0010C802 /* NSWindowController+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSWindowController+Extensions.h"; path = "Classes/Extensions/NSWindowController+Extensions.h"; sourceTree = "<group>"; };
 		63CA6F1F11956B2E0010C802 /* NSWindowController+Extensions.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "NSWindowController+Extensions.mm"; path = "Classes/Extensions/NSWindowController+Extensions.mm"; sourceTree = "<group>"; };
+		63CA6FDC119617CA0010C802 /* NSView+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSView+Extensions.h"; path = "Classes/Extensions/NSView+Extensions.h"; sourceTree = "<group>"; };
+		63CA6FDD119617CA0010C802 /* NSView+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSView+Extensions.m"; path = "Classes/Extensions/NSView+Extensions.m"; sourceTree = "<group>"; };
 		63CD3DDF118B77010086D7F5 /* AppDelegateMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegateMenu.h; path = Classes/Editor/AppDelegateMenu.h; sourceTree = "<group>"; };
 		63CD3DE0118B77010086D7F5 /* AppDelegateMenu.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegateMenu.mm; path = Classes/Editor/AppDelegateMenu.mm; sourceTree = "<group>"; };
 		63D4E588118EE43F005A7634 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = arrow.png; path = Resources/arrow.png; sourceTree = "<group>"; };
@@ -465,6 +468,15 @@
 			name = NSWindowController;
 			sourceTree = "<group>";
 		};
+		63CA6FDB119617B90010C802 /* NSView */ = {
+			isa = PBXGroup;
+			children = (
+				63CA6FDC119617CA0010C802 /* NSView+Extensions.h */,
+				63CA6FDD119617CA0010C802 /* NSView+Extensions.m */,
+			);
+			name = NSView;
+			sourceTree = "<group>";
+		};
 		63CD3DDE118B76EC0086D7F5 /* Main Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -563,6 +575,7 @@
 		63D60FE0118D176700436B7D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				63CA6FDB119617B90010C802 /* NSView */,
 				63CA6F1A11956B010010C802 /* NSWindowController */,
 				63D60FE1118D176C00436B7D /* NSImageVIew */,
 			);
@@ -725,6 +738,7 @@
 				63E99FC4118E09C900B47D37 /* PrismaticJointPropertyWindow.mm in Sources */,
 				63D4E62A118F6666005A7634 /* hdImageView.mm in Sources */,
 				63CA6F2011956B2E0010C802 /* NSWindowController+Extensions.mm in Sources */,
+				63CA6FDE119617CA0010C802 /* NSView+Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

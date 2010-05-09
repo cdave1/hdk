@@ -4,10 +4,10 @@
 		activeArchitecturePreference = i386;
 		activeBuildConfigurationName = Debug;
 		activeSDKPreference = macosx10.5;
-		activeTarget = 63D6FA1D118BB0CA00D76242 /* hdkOSX_32 */;
+		activeTarget = 63D6FA1D118BB0CA00D76242 /* hdkOSXmin_32 */;
 		addToTargets = (
-			D2AAC07D0554694100DB518D /* hdkOSX */,
-			6362D892118995A600184AE0 /* hdkOSX_64 */,
+			6362D892118995A600184AE0 /* hdkOSXmin_64 */,
+			63D6FA1D118BB0CA00D76242 /* hdkOSXmin_32 */,
 		);
 		codeSenseManager = 63CFF905117D8B6B00C011E0 /* Code sense */;
 		perUserDictionary = {
@@ -55,8 +55,8 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 295074639;
-			PBXWorkspaceStateSaveDate = 295074639;
+			PBXPerProjectTemplateStateSaveDate = 295069682;
+			PBXWorkspaceStateSaveDate = 295069682;
 		};
 		perUserProjectItems = {
 			63355FE21186E137001E7B41 /* PBXTextBookmark */ = 63355FE21186E137001E7B41 /* PBXTextBookmark */;
@@ -64,8 +64,6 @@
 			6362DB1F118A26BC00184AE0 /* PBXTextBookmark */ = 6362DB1F118A26BC00184AE0 /* PBXTextBookmark */;
 			6362DB29118A270A00184AE0 /* PBXTextBookmark */ = 6362DB29118A270A00184AE0 /* PBXTextBookmark */;
 			6362DB32118A270A00184AE0 /* PBXTextBookmark */ = 6362DB32118A270A00184AE0 /* PBXTextBookmark */;
-			6362DB33118A270A00184AE0 /* PBXTextBookmark */ = 6362DB33118A270A00184AE0 /* PBXTextBookmark */;
-			6362DB34118A270A00184AE0 /* PBXTextBookmark */ = 6362DB34118A270A00184AE0 /* PBXTextBookmark */;
 			6362DB35118A270A00184AE0 /* PBXTextBookmark */ = 6362DB35118A270A00184AE0 /* PBXTextBookmark */;
 			6362DB36118A270A00184AE0 /* PBXTextBookmark */ = 6362DB36118A270A00184AE0 /* PBXTextBookmark */;
 			6362DB37118A270A00184AE0 /* PBXTextBookmark */ = 6362DB37118A270A00184AE0 /* PBXTextBookmark */;
@@ -94,9 +92,26 @@
 			63C76D5C11865C5700C909BE /* PBXTextBookmark */ = 63C76D5C11865C5700C909BE /* PBXTextBookmark */;
 			63CA6D70119528A60010C802 /* PBXTextBookmark */ = 63CA6D70119528A60010C802 /* PBXTextBookmark */;
 			63CA6D71119528A60010C802 /* PBXTextBookmark */ = 63CA6D71119528A60010C802 /* PBXTextBookmark */;
-			63CA781411967C790010C802 /* PBXTextBookmark */ = 63CA781411967C790010C802 /* PBXTextBookmark */;
-			63CA781511967C790010C802 /* PBXBookmark */ = 63CA781511967C790010C802 /* PBXBookmark */;
-			63CA781611967C790010C802 /* PBXTextBookmark */ = 63CA781611967C790010C802 /* PBXTextBookmark */;
+			63CA6D74119528A60010C802 /* PBXTextBookmark */ = 63CA6D74119528A60010C802 /* PBXTextBookmark */;
+			63CA6D9D11952A180010C802 /* PBXTextBookmark */ = 63CA6D9D11952A180010C802 /* PBXTextBookmark */;
+			63CA6D9E11952A180010C802 /* PBXTextBookmark */ = 63CA6D9E11952A180010C802 /* PBXTextBookmark */;
+			63CA74E611965D5A0010C802 /* PBXTextBookmark */ = 63CA74E611965D5A0010C802 /* PBXTextBookmark */;
+			63CA74E711965D5A0010C802 /* PBXTextBookmark */ = 63CA74E711965D5A0010C802 /* PBXTextBookmark */;
+			63CA74ED11965D5A0010C802 /* PBXTextBookmark */ = 63CA74ED11965D5A0010C802 /* PBXTextBookmark */;
+			63CA74EE11965D5A0010C802 /* PBXTextBookmark */ = 63CA74EE11965D5A0010C802 /* PBXTextBookmark */;
+			63CA757F119663500010C802 /* PBXTextBookmark */ = 63CA757F119663500010C802 /* PBXTextBookmark */;
+			63CA759B119663C20010C802 /* PBXTextBookmark */ = 63CA759B119663C20010C802 /* PBXTextBookmark */;
+			63CA759C119663C20010C802 /* PBXTextBookmark */ = 63CA759C119663C20010C802 /* PBXTextBookmark */;
+			63CA759D119663C20010C802 /* PBXTextBookmark */ = 63CA759D119663C20010C802 /* PBXTextBookmark */;
+			63CA7669119667090010C802 /* PBXTextBookmark */ = 63CA7669119667090010C802 /* PBXTextBookmark */;
+			63CA7725119674BE0010C802 /* PBXTextBookmark */ = 63CA7725119674BE0010C802 /* PBXTextBookmark */;
+			63CA7726119674BE0010C802 /* PBXTextBookmark */ = 63CA7726119674BE0010C802 /* PBXTextBookmark */;
+			63CA7727119674BE0010C802 /* PBXTextBookmark */ = 63CA7727119674BE0010C802 /* PBXTextBookmark */;
+			63CA7728119674BE0010C802 /* PBXTextBookmark */ = 63CA7728119674BE0010C802 /* PBXTextBookmark */;
+			63CA7729119674BE0010C802 /* PBXTextBookmark */ = 63CA7729119674BE0010C802 /* PBXTextBookmark */;
+			63CA772A119674BE0010C802 /* PBXTextBookmark */ = 63CA772A119674BE0010C802 /* PBXTextBookmark */;
+			63CA772B119674BE0010C802 /* PBXTextBookmark */ = 63CA772B119674BE0010C802 /* PBXTextBookmark */;
+			63CA772C119674BE0010C802 /* PBXTextBookmark */ = 63CA772C119674BE0010C802 /* PBXTextBookmark */;
 			63CD3E67118B8AC20086D7F5 /* PBXTextBookmark */ = 63CD3E67118B8AC20086D7F5 /* PBXTextBookmark */;
 			63CD3E69118B8AC20086D7F5 /* PBXTextBookmark */ = 63CD3E69118B8AC20086D7F5 /* PBXTextBookmark */;
 			63CD3EA0118B8C470086D7F5 /* PBXTextBookmark */ = 63CD3EA0118B8C470086D7F5 /* PBXTextBookmark */;
@@ -118,7 +133,6 @@
 			63FC265E1184CF19004BB47B /* PBXTextBookmark */ = 63FC265E1184CF19004BB47B /* PBXTextBookmark */;
 			63FC265F1184CF19004BB47B /* PBXTextBookmark */ = 63FC265F1184CF19004BB47B /* PBXTextBookmark */;
 			63FC26B31184D273004BB47B /* PBXTextBookmark */ = 63FC26B31184D273004BB47B /* PBXTextBookmark */;
-			63FC26B51184D273004BB47B /* PBXTextBookmark */ = 63FC26B51184D273004BB47B /* PBXTextBookmark */;
 			63FC26B61184D273004BB47B /* PBXTextBookmark */ = 63FC26B61184D273004BB47B /* PBXTextBookmark */;
 			63FC26B81184D273004BB47B /* PBXTextBookmark */ = 63FC26B81184D273004BB47B /* PBXTextBookmark */;
 			63FC26B91184D273004BB47B /* PBXTextBookmark */ = 63FC26B91184D273004BB47B /* PBXTextBookmark */;
@@ -143,14 +157,7 @@
 		vrLen = 2932;
 		vrLoc = 6929;
 	};
-	6362D6F41188E8CB00184AE0 /* hdLevelEditor.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1187}}";
-			sepNavSelRange = "{239, 0}";
-			sepNavVisRange = "{0, 296}";
-		};
-	};
-	6362D892118995A600184AE0 /* hdkOSX_64 */ = {
+	6362D892118995A600184AE0 /* hdkOSXmin_64 */ = {
 		activeExec = 0;
 	};
 	6362DA841189972900184AE0 /* PBXTextBookmark */ = {
@@ -192,26 +199,6 @@
 		rType = 0;
 		vrLen = 1212;
 		vrLoc = 0;
-	};
-	6362DB33118A270A00184AE0 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E4283448116FF684008E3594 /* hdPointerList.h */;
-		name = "hdPointerList.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 1645;
-		vrLoc = 132;
-	};
-	6362DB34118A270A00184AE0 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E4283449116FF684008E3594 /* hdSerializablePointerList.h */;
-		name = "hdSerializablePointerList.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 1353;
-		vrLoc = 3260;
 	};
 	6362DB35118A270A00184AE0 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -314,33 +301,21 @@
 		vrLen = 2687;
 		vrLoc = 0;
 	};
-	63C76CB311863A9F00C909BE /* hdkOSX_prefix.pch */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1195}}";
-			sepNavSelRange = "{121, 0}";
-			sepNavVisRange = "{0, 121}";
-		};
-	};
-	63C76CC211863C6A00C909BE /* hdOpenGL.cpp */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 3216}}";
-			sepNavSelRange = "{4781, 0}";
-			sepNavVisRange = "{3054, 1758}";
-		};
-	};
 	63C76CC811863CEF00C909BE /* hdMouseInput.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1187}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1212}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = hdMouseInput.h;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdInput/hdMouseInput.h;
+		sourceTree = "<absolute>";
 	};
 	63C76CC911863CEF00C909BE /* hdMouseInput.cpp */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1187}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 153}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.cpp.cpp;
+		name = hdMouseInput.cpp;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdInput/hdMouseInput.cpp;
+		sourceTree = "<absolute>";
 	};
 	63C76CD2118646D000C909BE /* hdOSXSystemSettings.mm */ = {
 		uiCtxt = {
@@ -591,7 +566,7 @@
 		vrLen = 1487;
 		vrLoc = 0;
 	};
-	63CA781411967C790010C802 /* PBXTextBookmark */ = {
+	63CA6D74119528A60010C802 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = E4283475116FF684008E3594 /* hdOrthographicProjection.cpp */;
 		name = "hdOrthographicProjection.cpp: 1";
@@ -601,18 +576,215 @@
 		vrLen = 1212;
 		vrLoc = 0;
 	};
-	63CA781511967C790010C802 /* PBXBookmark */ = {
-		isa = PBXBookmark;
-		fRef = E41EA6121170810B00A30C8E /* hdk.h */;
-	};
-	63CA781611967C790010C802 /* PBXTextBookmark */ = {
+	63CA6D9D11952A180010C802 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = E41EA6121170810B00A30C8E /* hdk.h */;
-		name = "hdk.h: 25";
-		rLen = 0;
-		rLoc = 449;
+		fRef = E4283484116FF684008E3594 /* hdTextureManager.cpp */;
+		name = "hdTextureManager.cpp: 119";
+		rLen = 7;
+		rLoc = 2568;
 		rType = 0;
-		vrLen = 493;
+		vrLen = 1844;
+		vrLoc = 1508;
+	};
+	63CA6D9E11952A180010C802 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4283486116FF684008E3594 /* hdTGALoader.cpp */;
+		name = "hdTGALoader.cpp: 291";
+		rLen = 19;
+		rLoc = 5400;
+		rType = 0;
+		vrLen = 1988;
+		vrLoc = 4424;
+	};
+	63CA74E611965D5A0010C802 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 63C76CD4118646D000C909BE /* hdOSXFileSystem.mm */;
+		name = "hdOSXFileSystem.mm: 236";
+		rLen = 19;
+		rLoc = 4795;
+		rType = 0;
+		vrLen = 1984;
+		vrLoc = 3938;
+	};
+	63CA74E711965D5A0010C802 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E428346D116FF684008E3594 /* hdGameObject.cpp */;
+		name = "hdGameObject.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1366;
+		vrLoc = 0;
+	};
+	63CA74ED11965D5A0010C802 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4283479116FF684008E3594 /* hdPhysicsObject.h */;
+		name = "hdPhysicsObject.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 943;
+		vrLoc = 0;
+	};
+	63CA74EE11965D5A0010C802 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4283477116FF684008E3594 /* hdPhysicsGlue.cpp */;
+		name = "hdPhysicsGlue.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2319;
+		vrLoc = 5514;
+	};
+	63CA757F119663500010C802 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4283478116FF684008E3594 /* hdPhysicsGlue.h */;
+		name = "hdPhysicsGlue.h: 36";
+		rLen = 0;
+		rLoc = 1050;
+		rType = 0;
+		vrLen = 3160;
+		vrLoc = 0;
+	};
+	63CA75861196636C0010C802 /* hdk_min.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1210, 1135}}";
+			sepNavSelRange = "{303, 0}";
+			sepNavVisRange = "{0, 313}";
+		};
+	};
+	63CA759B119663C20010C802 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4283448116FF684008E3594 /* hdPointerList.h */;
+		name = "hdPointerList.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1595;
+		vrLoc = 132;
+	};
+	63CA759C119663C20010C802 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E428344A116FF684008E3594 /* hdTypedefList.h */;
+		name = "hdTypedefList.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1562;
+		vrLoc = 1969;
+	};
+	63CA759D119663C20010C802 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E4283449116FF684008E3594 /* hdSerializablePointerList.h */;
+		name = "hdSerializablePointerList.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1350;
+		vrLoc = 3260;
+	};
+	63CA75E11196669B0010C802 /* hdGraphicsLibrary.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1210, 1135}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 572}";
+		};
+	};
+	63CA7669119667090010C802 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E428344B116FF684008E3594 /* hdCollectionSettings.h */;
+		name = "hdCollectionSettings.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 319;
+		vrLoc = 0;
+	};
+	63CA7692119667C20010C802 /* hdAnimationEngine.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1210, 1135}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 653}";
+		};
+	};
+	63CA7725119674BE0010C802 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 63CA7692119667C20010C802 /* hdAnimationEngine.h */;
+		name = "hdAnimationEngine.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 653;
+		vrLoc = 0;
+	};
+	63CA7726119674BE0010C802 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E41EA6111170810B00A30C8E /* hdCollections.h */;
+		name = "hdCollections.h: 12";
+		rLen = 0;
+		rLoc = 184;
+		rType = 0;
+		vrLen = 327;
+		vrLoc = 0;
+	};
+	63CA7727119674BE0010C802 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E41EA6141170810B00A30C8E /* hdMath.h */;
+		name = "hdMath.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 302;
+		vrLoc = 0;
+	};
+	63CA7728119674BE0010C802 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E41EA6311170831600A30C8E /* hdGame.h */;
+		name = "hdGame.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 482;
+		vrLoc = 0;
+	};
+	63CA7729119674BE0010C802 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = E41EA6331170834B00A30C8E /* hdCore.h */;
+		name = "hdCore.h: 24";
+		rLen = 0;
+		rLoc = 538;
+		rType = 0;
+		vrLen = 553;
+		vrLoc = 0;
+	};
+	63CA772A119674BE0010C802 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 63CA75E11196669B0010C802 /* hdGraphicsLibrary.h */;
+		name = "hdGraphicsLibrary.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 572;
+		vrLoc = 0;
+	};
+	63CA772B119674BE0010C802 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 63CA75861196636C0010C802 /* hdk_min.h */;
+		name = "hdk_min.h: 20";
+		rLen = 0;
+		rLoc = 313;
+		rType = 0;
+		vrLen = 313;
+		vrLoc = 0;
+	};
+	63CA772C119674BE0010C802 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 63CA75861196636C0010C802 /* hdk_min.h */;
+		name = "hdk_min.h: 18";
+		rLen = 0;
+		rLoc = 303;
+		rType = 0;
+		vrLen = 313;
 		vrLoc = 0;
 	};
 	63CD3E67118B8AC20086D7F5 /* PBXTextBookmark */ = {
@@ -776,7 +948,7 @@
 		vrLen = 2019;
 		vrLoc = 0;
 	};
-	63D6FA1D118BB0CA00D76242 /* hdkOSX_32 */ = {
+	63D6FA1D118BB0CA00D76242 /* hdkOSXmin_32 */ = {
 		activeExec = 0;
 	};
 	63DDB79A118BAFD000814675 /* PBXTextBookmark */ = {
@@ -800,11 +972,12 @@
 		vrLoc = 3256;
 	};
 	63FC26571184CEDC004BB47B /* hdThumbPad.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {439, 1232}}";
-			sepNavSelRange = "{1164, 0}";
-			sepNavVisRange = "{1040, 172}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = hdThumbPad.h;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdInterface/hdThumbPad.h;
+		sourceTree = "<absolute>";
 	};
 	63FC265C1184CF19004BB47B /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -847,39 +1020,36 @@
 		vrLoc = 0;
 	};
 	63FC266B1184CF44004BB47B /* hdCamera.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1060, 1202}}";
-			sepNavSelRange = "{284, 0}";
-			sepNavVisRange = "{0, 284}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = hdCamera.h;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdGraphicsLibrary/hdCamera.h;
+		sourceTree = "<absolute>";
 	};
 	63FC266C1184CF44004BB47B /* hdCamera.cpp */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1179}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 145}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.cpp.cpp;
+		name = hdCamera.cpp;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdGraphicsLibrary/hdCamera.cpp;
+		sourceTree = "<absolute>";
 	};
 	63FC26921184D169004BB47B /* hdScripts.cpp */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 5605}}";
-			sepNavSelRange = "{551, 0}";
-			sepNavVisRange = "{0, 1535}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.cpp.cpp;
+		name = hdScripts.cpp;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdScripts/hdScripts.cpp;
+		sourceTree = "<absolute>";
 	};
 	63FC26931184D169004BB47B /* hdScripts.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1281}}";
-			sepNavSelRange = "{370, 0}";
-			sepNavVisRange = "{0, 1635}";
-		};
-	};
-	63FC26961184D18C004BB47B /* hdScripting.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1187}}";
-			sepNavSelRange = "{208, 0}";
-			sepNavVisRange = "{0, 217}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = hdScripts.h;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdScripts/hdScripts.h;
+		sourceTree = "<absolute>";
 	};
 	63FC26B31184D273004BB47B /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -890,16 +1060,6 @@
 		rType = 0;
 		vrLen = 284;
 		vrLoc = 0;
-	};
-	63FC26B51184D273004BB47B /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = E428344A116FF684008E3594 /* hdTypedefList.h */;
-		name = "hdTypedefList.h: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 1628;
-		vrLoc = 1969;
 	};
 	63FC26B61184D273004BB47B /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -991,92 +1151,57 @@
 		vrLen = 1052;
 		vrLoc = 0;
 	};
-	D2AAC07D0554694100DB518D /* hdkOSX */ = {
-		activeExec = 0;
-	};
 	E41EA6111170810B00A30C8E /* hdCollections.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1060, 1202}}";
-			sepNavSelRange = "{0, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1210, 1135}}";
+			sepNavSelRange = "{184, 0}";
 			sepNavVisRange = "{0, 327}";
-		};
-	};
-	E41EA6121170810B00A30C8E /* hdk.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1137}}";
-			sepNavSelRange = "{449, 0}";
-			sepNavVisRange = "{0, 493}";
-		};
-	};
-	E41EA6131170810B00A30C8E /* hdInterface.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1060, 1202}}";
-			sepNavSelRange = "{627, 13}";
-			sepNavVisRange = "{0, 763}";
 		};
 	};
 	E41EA6141170810B00A30C8E /* hdMath.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1060, 1204}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1210, 1135}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 302}";
 		};
 	};
-	E41EA6151170810B00A30C8E /* hdSoundSystem.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1195}}";
-			sepNavSelRange = "{312, 0}";
-			sepNavVisRange = "{0, 312}";
-		};
-	};
-	E41EA6241170815200A30C8E /* hdAnimationEngine.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1141}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 653}";
-		};
-	};
 	E41EA62F117082D400A30C8E /* hdSound.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1195}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 751}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = hdSound.h;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdSound/hdSound.h;
+		sourceTree = "<absolute>";
 	};
 	E41EA6311170831600A30C8E /* hdGame.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1060, 1204}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1210, 1135}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 482}";
 		};
 	};
 	E41EA6331170834B00A30C8E /* hdCore.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1171}}";
-			sepNavSelRange = "{546, 0}";
+			sepNavIntBoundsRect = "{{0, 0}, {1210, 1135}}";
+			sepNavSelRange = "{538, 0}";
 			sepNavVisRange = "{0, 553}";
 		};
 	};
-	E41EA63B1170846E00A30C8E /* hdGraphicsLibrary.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1145}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 572}";
-		};
-	};
 	E41EA63F1170859400A30C8E /* hdSoundSystemEnums.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1195}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 730}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = hdSoundSystemEnums.h;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdSound/hdSoundSystemEnums.h;
+		sourceTree = "<absolute>";
 	};
 	E41EA641117085EF00A30C8E /* hdMusicPlayerInterface.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1173}}";
-			sepNavSelRange = "{650, 27}";
-			sepNavVisRange = "{0, 685}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = hdMusicPlayerInterface.h;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdSound/hdMusicPlayerInterface.h;
+		sourceTree = "<absolute>";
 	};
 	E41EA75811709B3600A30C8E /* hdFileSystemUtils.h */ = {
 		uiCtxt = {
@@ -1092,13 +1217,6 @@
 			sepNavVisRange = "{0, 1802}";
 		};
 	};
-	E41EA85F1170A50E00A30C8E /* hdEffects.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1187}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 284}";
-		};
-	};
 	E41EA8A51170A8C700A30C8E /* hdScreenSettings.cpp */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1060, 2535}}";
@@ -1106,123 +1224,136 @@
 			sepNavVisRange = "{0, 1753}";
 		};
 	};
-	E41EA9B91170B4EF00A30C8E /* hdInput.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1185}}";
-			sepNavSelRange = "{362, 0}";
-			sepNavVisRange = "{0, 370}";
-		};
-	};
 	E428341F116FF684008E3594 /* AppleOpenALSupport.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1195}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 3115}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = AppleOpenALSupport.h;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdSound/CMOpenALSound/AppleOpenALSupport.h;
+		sourceTree = "<absolute>";
 	};
 	E4283420116FF684008E3594 /* CMOpenALSound.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1187}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1592}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = CMOpenALSound.h;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdSound/CMOpenALSound/CMOpenALSound.h;
+		sourceTree = "<absolute>";
 	};
 	E4283421116FF684008E3594 /* CMOpenALSound.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 4274}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 2412}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = CMOpenALSound.m;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdSound/CMOpenALSound/CMOpenALSound.m;
+		sourceTree = "<absolute>";
 	};
 	E4283422116FF684008E3594 /* CMOpenALSoundManager.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1173}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 2621}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = CMOpenALSoundManager.h;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdSound/CMOpenALSound/CMOpenALSoundManager.h;
+		sourceTree = "<absolute>";
 	};
 	E4283423116FF684008E3594 /* CMOpenALSoundManager.m */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 6431}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{1996, 2321}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.objc;
+		name = CMOpenALSoundManager.m;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdSound/CMOpenALSound/CMOpenALSoundManager.m;
+		sourceTree = "<absolute>";
 	};
 	E4283424116FF684008E3594 /* SynthesizeSingleton.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1195}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1353}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = SynthesizeSingleton.h;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdSound/CMOpenALSound/SynthesizeSingleton.h;
+		sourceTree = "<absolute>";
 	};
 	E4283426116FF684008E3594 /* hdSoundManager.cpp */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 6097}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{8007, 1638}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.cpp.cpp;
+		name = hdSoundManager.cpp;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdSound/hdSoundManager.cpp;
+		sourceTree = "<absolute>";
 	};
 	E4283427116FF684008E3594 /* hdSoundManager.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1350}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1691}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = hdSoundManager.h;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdSound/hdSoundManager.h;
+		sourceTree = "<absolute>";
 	};
 	E4283428116FF684008E3594 /* hdSoundEngineInterface.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1173}}";
-			sepNavSelRange = "{232, 38}";
-			sepNavVisRange = "{0, 1193}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = hdSoundEngineInterface.h;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdSound/hdSoundEngineInterface.h;
+		sourceTree = "<absolute>";
 	};
 	E4283429116FF684008E3594 /* hdOpenALSoundEngine.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1173}}";
-			sepNavSelRange = "{264, 22}";
-			sepNavVisRange = "{0, 801}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = hdOpenALSoundEngine.h;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdSound/hdOpenALSoundEngine.h;
+		sourceTree = "<absolute>";
 	};
 	E428342A116FF684008E3594 /* hdOpenALSoundEngine.mm */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 5491}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 2218}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.cpp.objcpp;
+		name = hdOpenALSoundEngine.mm;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdSound/hdOpenALSoundEngine.mm;
+		sourceTree = "<absolute>";
 	};
 	E428342B116FF684008E3594 /* hdOpenALPool.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1195}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1351}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = hdOpenALPool.h;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdSound/hdOpenALPool.h;
+		sourceTree = "<absolute>";
 	};
 	E428342C116FF684008E3594 /* hdOpenALPool.cpp */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 4415}}";
-			sepNavSelRange = "{202, 0}";
-			sepNavVisRange = "{0, 1634}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.cpp.cpp;
+		name = hdOpenALPool.cpp;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdSound/hdOpenALPool.cpp;
+		sourceTree = "<absolute>";
 	};
 	E4283448116FF684008E3594 /* hdPointerList.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 3613}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1210, 3599}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{132, 1645}";
+			sepNavVisRange = "{132, 1595}";
 		};
 	};
 	E4283449116FF684008E3594 /* hdSerializablePointerList.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1210, 3489}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{3260, 1353}";
+			sepNavVisRange = "{3260, 1350}";
 		};
 	};
 	E428344A116FF684008E3594 /* hdTypedefList.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1060, 2913}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1210, 2899}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{1969, 1628}";
+			sepNavVisRange = "{1969, 1562}";
+		};
+	};
+	E428344B116FF684008E3594 /* hdCollectionSettings.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1210, 1139}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 319}";
 		};
 	};
 	E428344D116FF684008E3594 /* hdApplication.h */ = {
@@ -1332,6 +1463,13 @@
 			sepNavVisRange = "{0, 615}";
 		};
 	};
+	E428346D116FF684008E3594 /* hdGameObject.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1210, 2185}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1366}";
+		};
+	};
 	E428346F116FF684008E3594 /* hdGameWorld.cpp */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1091, 5701}}";
@@ -1341,150 +1479,149 @@
 	};
 	E4283475116FF684008E3594 /* hdOrthographicProjection.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1137}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1210, 1155}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 1212}";
 		};
 	};
 	E4283477116FF684008E3594 /* hdPhysicsGlue.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 5482}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1210, 5652}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{5514, 2376}";
+			sepNavVisRange = "{5514, 2319}";
 		};
 	};
-	E428347A116FF684008E3594 /* b2Opt.h */ = {
+	E4283478116FF684008E3594 /* hdPhysicsGlue.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 4828}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1810}";
+			sepNavIntBoundsRect = "{{0, 0}, {1210, 1234}}";
+			sepNavSelRange = "{1050, 0}";
+			sepNavVisRange = "{0, 3160}";
 		};
 	};
-	E428347C116FF684008E3594 /* hdGraphicsInterface.h */ = {
+	E4283479116FF684008E3594 /* hdPhysicsObject.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1606}}";
-			sepNavSelRange = "{1176, 0}";
-			sepNavVisRange = "{550, 2308}";
+			sepNavIntBoundsRect = "{{0, 0}, {1210, 1145}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 943}";
 		};
 	};
 	E428347F116FF684008E3594 /* hdDrawingUtilities.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1405, 1419}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 3081}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = hdDrawingUtilities.h;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdGraphicsLibrary/hdDrawingUtilities.h;
+		sourceTree = "<absolute>";
 	};
 	E4283482116FF684008E3594 /* hdPolygon.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 3656}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 2019}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = hdPolygon.h;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdGraphicsLibrary/hdPolygon.h;
+		sourceTree = "<absolute>";
 	};
 	E4283483116FF684008E3594 /* hdTexture.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1848}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{585, 1382}";
-			sepNavWindowFrame = "{{42, 834}, {750, 558}}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = hdTexture.h;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdGraphicsLibrary/hdTexture.h;
+		sourceTree = "<absolute>";
 	};
 	E4283484116FF684008E3594 /* hdTextureManager.cpp */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 10830}}";
-			sepNavSelRange = "{2568, 7}";
-			sepNavVisRange = "{1546, 1806}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.cpp.cpp;
+		name = hdTextureManager.cpp;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdGraphicsLibrary/hdTextureManager.cpp;
+		sourceTree = "<absolute>";
 	};
 	E4283485116FF684008E3594 /* hdTextureManager.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1171}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1887}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = hdTextureManager.h;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdGraphicsLibrary/hdTextureManager.h;
+		sourceTree = "<absolute>";
 	};
 	E4283486116FF684008E3594 /* hdTGALoader.cpp */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 8559}}";
-			sepNavSelRange = "{5400, 19}";
-			sepNavVisRange = "{4427, 1985}";
-		};
-	};
-	E4283487116FF684008E3594 /* hdTGALoader.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1151}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 643}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.cpp.cpp;
+		name = hdTGALoader.cpp;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdGraphicsLibrary/hdTGALoader.cpp;
+		sourceTree = "<absolute>";
 	};
 	E4283488116FF684008E3594 /* hdPNGLoader.mm */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 5119}}";
-			sepNavSelRange = "{7430, 0}";
-			sepNavVisRange = "{3256, 1643}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.cpp.objcpp;
+		name = hdPNGLoader.mm;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdGraphicsLibrary/hdPNGLoader.mm;
+		sourceTree = "<absolute>";
 	};
 	E4283489116FF684008E3594 /* hdPNGLoader.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1195}}";
-			sepNavSelRange = "{206, 0}";
-			sepNavVisRange = "{0, 427}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = hdPNGLoader.h;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdGraphicsLibrary/hdPNGLoader.h;
+		sourceTree = "<absolute>";
 	};
 	E428348C116FF684008E3594 /* hdFontPolygon.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1060, 2550}}";
-			sepNavSelRange = "{187, 74}";
-			sepNavVisRange = "{0, 1606}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = hdFontPolygon.h;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdInterface/hdFontPolygon.h;
+		sourceTree = "<absolute>";
 	};
 	E4283494116FF684008E3594 /* hdInterfaceLayer.cpp */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1060, 1205}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1654}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.cpp.cpp;
+		name = hdInterfaceLayer.cpp;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdInterface/hdInterfaceLayer.cpp;
+		sourceTree = "<absolute>";
 	};
 	E4283497116FF684008E3594 /* hdReceiver.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1060, 1319}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1431}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = hdReceiver.h;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdInterface/hdReceiver.h;
+		sourceTree = "<absolute>";
 	};
 	E4283499116FF684008E3594 /* hdInterfaceController.cpp */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 9272}}";
-			sepNavSelRange = "{12250, 0}";
-			sepNavVisRange = "{11161, 2408}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.cpp.cpp;
+		name = hdInterfaceController.cpp;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdInterface/hdInterfaceController.cpp;
+		sourceTree = "<absolute>";
 	};
 	E428349C116FF684008E3594 /* hdUIImage.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1060, 1203}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1261}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.c.h;
+		name = hdUIImage.h;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdInterface/hdUIImage.h;
+		sourceTree = "<absolute>";
 	};
 	E428349D116FF684008E3594 /* hdUIImage.cpp */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1060, 1457}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 1925}";
-		};
+		isa = PBXFileReference;
+		fileEncoding = 4;
+		lastKnownFileType = sourcecode.cpp.cpp;
+		name = hdUIImage.cpp;
+		path = /Users/david/hdk/hdTech1/hdk/src/hdInterface/hdUIImage.cpp;
+		sourceTree = "<absolute>";
 	};
 	E42839EA11704C6B008E3594 /* hdScreenSettings.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1060, 1202}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{0, 1539}";
-		};
-	};
-	E4F36B8211714B8F00792A2D /* hdLibs.h */ = {
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1210, 1187}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 230}";
 		};
 	};
 	E4F36D4A1171699800792A2D /* basic_archive.cpp */ = {

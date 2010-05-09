@@ -80,7 +80,6 @@ hdLevelEditorController::hdLevelEditorController()
 
 hdLevelEditorController::~hdLevelEditorController()
 {
-	// By deleting the world, we delete the bomb, mouse joint, etc.
 	delete m_physicsWorld;
 	m_physicsWorld = NULL;
 	
@@ -1989,6 +1988,7 @@ void hdLevelEditorController::Draw()
 					m_currentLevel->GetEvents()->GetItems()[i]->Draw();
 				}
 				glDisable(GL_CULL_FACE);
+				
 				m_currentLevel->DrawFloor();
 				
 				glDisable(GL_TEXTURE_2D);

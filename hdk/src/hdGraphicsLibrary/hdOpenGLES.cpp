@@ -430,34 +430,38 @@ inline GLenum MinFilterToGL( bool MipMap, TMinFilter MinFilter )
 }
 
 
-void hdglError(const char* source)
+bool hdglErrorCode(const char *userInfo)
 {
-#ifdef DEBUG
 	GLenum error = glGetError();
-	switch (error) {
+	bool ret = (error != GL_NO_ERROR);
+#ifdef DEBUG
+	switch (error) 
+	{
 		case GL_NO_ERROR:
 			break;
 		case GL_INVALID_ENUM:
-			hdError(error, "GL Error: GL_INVALID_ENUM. %s\n\n", source);
+			hdError(error, "GL Error: GL_INVALID_ENUM. %s\n\n", userInfo);
 			break;
 		case GL_INVALID_VALUE:
 			//hdPrintf("%s\n", source);
-			hdError(error, "GL Error: GL_INVALID_VALUE. %s\n\n", source);
+			hdError(error, "GL Error: GL_INVALID_VALUE. %s\n\n", userInfo);
 			break;
 		case GL_INVALID_OPERATION:
-			hdError(error, "GL Error: GL_INVALID_OPERATION. %s\n\n", source);
+			hdError(error, "GL Error: GL_INVALID_OPERATION. %s\n\n", userInfo);
 			break;
 		case GL_STACK_OVERFLOW:
-			hdError(error, "GL Error: GL_STACK_OVERFLOW. %s\n\n", source);
+			hdError(error, "GL Error: GL_STACK_OVERFLOW. %s\n\n", userInfo);
 			break;
 		case GL_STACK_UNDERFLOW:
-			hdError(error, "GL Error: GL_STACK_UNDERFLOW. %s\n\n", source);
+			hdError(error, "GL Error: GL_STACK_UNDERFLOW. %s\n\n", userInfo);
 			break;
 		case GL_OUT_OF_MEMORY:
-			hdError(error, "GL Error: GL_OUT_OF_MEMORY. %s\n\n", source);
+			hdError(error, "GL Error: GL_OUT_OF_MEMORY. %s\n\n", userInfo);
 			break;
 		default:
+			hdError(error, "GL Error: UNHANDLED ERRORCODE. %s\n\n", userInfo);
 			break;
 	}
+	return ret;
 #endif
 }

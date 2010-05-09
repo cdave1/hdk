@@ -22,7 +22,7 @@
 	if([theTypes containsObject:NSFilenamesPboardType])
 	{
 		NSArray* thePaths = [thePasteboard propertyListForType:NSFilenamesPboardType];
-		_currentImagePath = [thePaths objectAtIndex:0];
+		_currentImagePath = [[thePaths objectAtIndex:0] copy];
 	}
 	else
 	{
@@ -40,7 +40,7 @@
 	if([theTypes containsObject:NSFilenamesPboardType])
 	{
 		NSArray* thePaths = [thePasteboard propertyListForType:NSFilenamesPboardType];
-		_currentImagePath = [thePaths objectAtIndex:0];
+		_currentImagePath = [[thePaths objectAtIndex:0] copy];
 	}
 	else
 	{
@@ -61,8 +61,10 @@
 
 - (const char *)getResourcePathOfImage
 {
+	
 	if (_currentImagePath)
 	{
+		NSLog(@"%@", _currentImagePath);
 		return [[_currentImagePath stringByReplacingOccurrencesOfString:[NSString stringWithUTF8String:FileSystem_BaseDir()]
 																 withString:@""] UTF8String];
 	}
