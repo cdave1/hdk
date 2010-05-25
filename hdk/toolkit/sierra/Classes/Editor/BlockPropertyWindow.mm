@@ -69,14 +69,29 @@
 	}
 	[self.window orderBack:self];
 	[self setAllEnabled:YES];
-	[_texture setImageAtContentRepositoryPath:((totemBlock*)selected)->GetTextureName()];
-	[_textureName setStringValue:[NSString stringWithUTF8String:((totemBlock*)selected)->GetTextureName()]];
+	if (((totemBlock*)selected)->IsTextureChangeable())
+	{
+		[_texture setEnabled:YES];
+		[_texture setImageAtContentRepositoryPath:((totemBlock*)selected)->GetTextureName()];
+		[_textureName setStringValue:[NSString stringWithUTF8String:((totemBlock*)selected)->GetTextureName()]];
+	}
+	else 
+	{
+		[_texture setEnabled:NO];
+	}
 	
-	NSColor *color = [NSColor colorWithDeviceRed:((totemBlock *)selected)->GetTint()[0]
-										   green:((totemBlock *)selected)->GetTint()[1]
-											blue:((totemBlock *)selected)->GetTint()[2]
-										   alpha:((totemBlock *)selected)->GetTint()[3]];
-	[_tint setColor:color];
+	if (((totemBlock *)selected)->GetTint())
+	{
+		NSColor *color = [NSColor colorWithDeviceRed:((totemBlock *)selected)->GetTint()[0]
+											   green:((totemBlock *)selected)->GetTint()[1]
+												blue:((totemBlock *)selected)->GetTint()[2]
+											   alpha:((totemBlock *)selected)->GetTint()[3]];
+		[_tint setColor:color];
+	} 
+	else 
+	{
+		[_tint setColor:[NSColor whiteColor]];
+	}
 	
 	/* 
 	 The following is a bit pedantic, given the structure of the block type and material
@@ -86,7 +101,7 @@
 	NSUInteger materialComboBoxIndex = 0, totemBlockTypeComboBoxIndex = 0;
 	for (int i = 0; i < hdMin((NSInteger)e_totemMaterial_Count, [_materialComboBox numberOfItems]); i++)
 	{
-		if (totemMaterialMenuItems[i].material == ((totemBlock*)selected)->GetMaterial())
+		if (totemMaterialMenuItems[i].material == ((totemBlock *)selected)->GetMaterial())
 		{
 			materialComboBoxIndex = i;
 			break;
@@ -95,7 +110,7 @@
 	
 	for (int i = 0; i < hdMin((NSInteger)e_totemBlockType_Count, [_blockTypeComboBox numberOfItems]); i++)
 	{
-		if (totemBlockTypeMenuItems[i].blockType == ((totemBlock*)selected)->GetBlockType())
+		if (totemBlockTypeMenuItems[i].blockType == ((totemBlock *)selected)->GetBlockType())
 		{
 			totemBlockTypeComboBoxIndex = i;
 			break;
@@ -105,9 +120,9 @@
 	[_materialComboBox selectItemAtIndex:materialComboBoxIndex];
 	[_blockTypeComboBox selectItemAtIndex:totemBlockTypeComboBoxIndex];
 	
-	[_blockTag setIntValue:((totemBlock*)selected)->GetTag()];
-	[_depth setFloatValue:-((totemBlock *)selected)->GetDepth()];
-	[_zOffset setFloatValue:((totemBlock*)selected)->GetZOffset()];
+	[_blockTag setIntValue:((totemBlock *)selected)->GetTag()];
+	[_depth setFloatValue:-((totemBlock *)selected)->GetDepth()]; /* keep the minus! */
+	[_zOffset setFloatValue:((totemBlock *)selected)->GetZOffset()];
 	[_tiling setFloatValue:((totemBlock *)selected)->GetTextureRepeatX()];
 	
 	[self updateTextInterface];

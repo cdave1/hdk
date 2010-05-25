@@ -10,7 +10,10 @@
 
 
 @implementation TextureImage
-@synthesize path = _path;
+
+@synthesize path = _path, 
+	title = _title,
+	subtitle = _subtitle;
 
 
 - (NSString *) imageRepresentationType
@@ -28,6 +31,19 @@
 - (NSString *) imageUID
 {
     return _path;
+}
+
+
+- (NSString *) imageTitle
+{
+	return _title;
+}
+
+
+
+- (NSString *) imageSubtitle
+{
+	return _subtitle;
 }
 
 @end

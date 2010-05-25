@@ -11,14 +11,6 @@
 
 @implementation NSImageView (Extensions)
 
-- (void)setImageAtContentRepositoryPath:(const char *)path
-{
-	if (path && strlen(path) > 0)
-	{
-		NSString *fullPath = [NSString stringWithFormat:@"%s%s", FileSystem_BaseDir(), path];
-		NSImage *img = [[NSImage alloc] initWithContentsOfFile:fullPath];
-		[self setImage:[img autorelease]];
-	}
-}
+
 
 @end

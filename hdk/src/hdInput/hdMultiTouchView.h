@@ -64,6 +64,8 @@ TouchScreenValues;
 	UIEvent* lastTouchEndedEvent;
 	
 	TouchScreenValues MultiTouchScreen[kMultiTouchScreenValues];
+	
+	BOOL _logOutput;
 }
 
 @property (readwrite, assign) NSObject *renderLock;
@@ -73,6 +75,8 @@ TouchScreenValues;
 - (int) GetCountTouchesBegan;
 - (int) GetCountTouchesMoved;
 - (int) GetTouchCount;
+
+@property BOOL logOutput;
 
 @end
 

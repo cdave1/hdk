@@ -256,6 +256,10 @@ public:
 	
 	totemWorld* GetCurrentTotemWorld() const;
 	
+	void GenerateNewEmptyWorldWithName(const char *name);
+	
+	void GenerateNewEmptyLevelWithName(const char *name);
+	
 	void GenerateNewLevel();
 	
 	void FinishCurrentShape();
@@ -266,7 +270,15 @@ public:
 	
 	void CopySelectedObjects();
 	
+	void SelectNone();
+	
+	void SelectAll();
+	
+	void PasteObjectsExternal(const hdGameObject **objects, const unsigned int itemCount);
+	
 	void PasteCopiedObjects();
+	
+	const hdGameObject ** GetSelectedObjects();
 	
 	void CopyCurrentLevel();
 	

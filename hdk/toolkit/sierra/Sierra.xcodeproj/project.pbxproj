@@ -41,6 +41,8 @@
 		6362DB7D118A2A7200184AE0 /* hdLevelEditorUtilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6362D7301188EA4100184AE0 /* hdLevelEditorUtilities.cpp */; };
 		6362DB97118A2B4400184AE0 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6362DB96118A2B4400184AE0 /* GLUT.framework */; };
 		6362DC5E118A3B1B00184AE0 /* LevelEditor.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6362DC5D118A3B1B00184AE0 /* LevelEditor.mm */; };
+		63C78E0A119B3BC100DD411F /* PrefabsPaletteWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63C78E09119B3BC100DD411F /* PrefabsPaletteWindow.mm */; };
+		63C78E0C119B3BD300DD411F /* PrefabsPaletteWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63C78E0B119B3BD300DD411F /* PrefabsPaletteWindow.xib */; };
 		63CA6F2011956B2E0010C802 /* NSWindowController+Extensions.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63CA6F1F11956B2E0010C802 /* NSWindowController+Extensions.mm */; };
 		63CA6FDE119617CA0010C802 /* NSView+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CA6FDD119617CA0010C802 /* NSView+Extensions.m */; };
 		63CD3DE1118B77010086D7F5 /* AppDelegateMenu.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63CD3DE0118B77010086D7F5 /* AppDelegateMenu.mm */; };
@@ -181,6 +183,9 @@
 		6362DB96118A2B4400184AE0 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		6362DC5C118A3B1B00184AE0 /* LevelEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LevelEditor.h; path = Classes/LevelEditor.h; sourceTree = "<group>"; };
 		6362DC5D118A3B1B00184AE0 /* LevelEditor.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = LevelEditor.mm; path = Classes/LevelEditor.mm; sourceTree = "<group>"; };
+		63C78E08119B3BC100DD411F /* PrefabsPaletteWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefabsPaletteWindow.h; path = Classes/Editor/PrefabsPaletteWindow.h; sourceTree = "<group>"; };
+		63C78E09119B3BC100DD411F /* PrefabsPaletteWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PrefabsPaletteWindow.mm; path = Classes/Editor/PrefabsPaletteWindow.mm; sourceTree = "<group>"; };
+		63C78E0B119B3BD300DD411F /* PrefabsPaletteWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PrefabsPaletteWindow.xib; path = Classes/Editor/PrefabsPaletteWindow.xib; sourceTree = "<group>"; };
 		63CA6F1E11956B2E0010C802 /* NSWindowController+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSWindowController+Extensions.h"; path = "Classes/Extensions/NSWindowController+Extensions.h"; sourceTree = "<group>"; };
 		63CA6F1F11956B2E0010C802 /* NSWindowController+Extensions.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "NSWindowController+Extensions.mm"; path = "Classes/Extensions/NSWindowController+Extensions.mm"; sourceTree = "<group>"; };
 		63CA6FDC119617CA0010C802 /* NSView+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSView+Extensions.h"; path = "Classes/Extensions/NSView+Extensions.h"; sourceTree = "<group>"; };
@@ -261,6 +266,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				63C78E06119B3AF900DD411F /* Prefabs */,
 				63D60D18118BED9600436B7D /* Texture Palette Window */,
 				63D60D08118BE7DE00436B7D /* Event Property Window */,
 				63D60D07118BE7D100436B7D /* Joint Properties */,
@@ -457,6 +463,16 @@
 				6362DAEC118A228E00184AE0 /* EditorView.mm */,
 			);
 			name = "Editor View Controller";
+			sourceTree = "<group>";
+		};
+		63C78E06119B3AF900DD411F /* Prefabs */ = {
+			isa = PBXGroup;
+			children = (
+				63C78E08119B3BC100DD411F /* PrefabsPaletteWindow.h */,
+				63C78E09119B3BC100DD411F /* PrefabsPaletteWindow.mm */,
+				63C78E0B119B3BD300DD411F /* PrefabsPaletteWindow.xib */,
+			);
+			name = Prefabs;
 			sourceTree = "<group>";
 		};
 		63CA6F1A11956B010010C802 /* NSWindowController */ = {
@@ -694,6 +710,7 @@
 				63D4EC1E11936433005A7634 /* iconTriangle.png in Resources */,
 				63D4EC1F11936433005A7634 /* iconTriangleFan.png in Resources */,
 				63D4EC2011936433005A7634 /* iconTriangleStrip.png in Resources */,
+				63C78E0C119B3BD300DD411F /* PrefabsPaletteWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -739,6 +756,7 @@
 				63D4E62A118F6666005A7634 /* hdImageView.mm in Sources */,
 				63CA6F2011956B2E0010C802 /* NSWindowController+Extensions.mm in Sources */,
 				63CA6FDE119617CA0010C802 /* NSView+Extensions.m in Sources */,
+				63C78E0A119B3BC100DD411F /* PrefabsPaletteWindow.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

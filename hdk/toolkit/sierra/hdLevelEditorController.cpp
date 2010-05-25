@@ -14,6 +14,7 @@ hdLevelEditorController::hdLevelEditorController()
 	m_targetScreenPosition = hdVec2(-1.6f, -2.4f);
 	
 	m_physicsWorld = NULL;
+	m_gameWorld = NULL;
 	
 	this->InitPhysics();
 	
@@ -128,6 +129,30 @@ void hdLevelEditorController::InitPhysics()
 }
 
 
+void hdLevelEditorController::GenerateNewEmptyWorldWithName(const char *name)
+{
+	this->InitPhysics();
+	m_totemWorld = new totemWorld(name);
+	this->GenerateNewEmptyLevelWithName(name);
+}
+
+
+
+void hdLevelEditorController::GenerateNewEmptyLevelWithName(const char *name)
+{
+	totemLevel *level = new totemLevel();
+	level->InitLayers();
+	if (name && strlen(name) > 0)
+		level->SetLevelName(name);
+	else
+	{
+		level->SetLevelName("(UNNAMED)");
+	}
+	m_totemWorld->AddLevel(level);
+	this->SetCurrentLevel(level);
+}
+
+
 void hdLevelEditorController::GenerateNewLevel()
 {
 	totemLevel *level = new totemLevel();
@@ -193,7 +218,8 @@ bool hdLevelEditorController::SaveCurrentWorldTo(const char *destPath)
 	if (m_totemWorld == NULL) return false;
 	if (strlen(destPath) == 0) return false;
 	
-	m_currentLevel->GetAABB();
+	if (m_currentLevel)
+		m_currentLevel->GetAABB();
 	
 	// save a backup
 	if (!(totemWorldManager::Instance()->BackupTotemWorldFile(destPath)))
@@ -1389,6 +1415,56 @@ void hdLevelEditorController::CopySelectedObjects()
 }
 
 
+void hdLevelEditorController::SelectAll()
+{
+	m_startClickPoint.Set(m_currentLevel->GetAABB().lower.x, m_currentLevel->GetAABB().lower.y);
+	m_currentMouseDragPoint.Set(m_currentLevel->GetAABB().upper.x, m_currentLevel->GetAABB().upper.y);
+	this->SelectMultipleGameObjects();
+}
+
+
+void hdLevelEditorController::SelectNone()
+{
+	m_selectedGameObjects->RemoveAll();
+}
+
+
+void hdLevelEditorController::PasteObjectsExternal(const hdGameObject **objects, const unsigned int itemCount)
+{
+	m_copiedGameObjects->RemoveAll();
+	
+	for (int i = 0; i < itemCount; i++)
+	{
+		m_copiedGameObjects->Add((hdGameObject *)objects[i]);
+	}
+	
+	this->PasteCopiedObjects();
+	
+	/*
+	for (int i = 0; i < itemCount; i++)
+	{
+		if (objects[i]->GetUserType() == (int)e_totemTypeBlock)
+		{
+			m_selectedGameObjects->Add(
+									   this->CopyBlockToLevel((totemBlock *)objects[i])
+									   );
+			++settings.copiedBlockCount;
+		}
+	}
+	
+	
+	for (int i = 0; i < itemCount; i++)
+	{
+		if (objects[i]->GetUserType() == (int)e_totemTypeJoint)
+		{
+			m_selectedGameObjects->Add(
+									   this->CopyJointToLevel((totemJoint *)objects[i])
+									   );
+		}
+	}*/
+}
+
+
 void hdLevelEditorController::PasteCopiedObjects()
 {
 	if (m_copiedGameObjects->GetItemCount() == 0) return;
@@ -1419,6 +1495,15 @@ void hdLevelEditorController::PasteCopiedObjects()
 									   );
 		}
 	}
+}
+
+
+const hdGameObject ** hdLevelEditorController::GetSelectedObjects()
+{
+	assert(m_selectedGameObjects);
+	if (m_selectedGameObjects->GetItemCount() > 0)
+		return (const hdGameObject **)m_selectedGameObjects->GetItems();
+	return NULL;
 }
 
 
@@ -1935,7 +2020,12 @@ void hdLevelEditorController::Draw()
 			if (m_drawingStyle == e_drawingStyleEditorFull)
 			{
 				//m_currentLevel->DrawEditorView();
-				m_currentLevel->Draw();
+				if (settings.showPhysics &&
+					settings.showCosmetics &&
+					settings.showGround)
+				{
+					m_currentLevel->Draw();
+				}
 				
 				//showCosmetics;
 				//bool showGround;

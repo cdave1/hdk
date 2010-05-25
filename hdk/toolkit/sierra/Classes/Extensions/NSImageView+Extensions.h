@@ -11,6 +11,5 @@
 
 @interface NSImageView (Extensions)
 
-- (void)setImageAtContentRepositoryPath:(const char *)path;
 
 @end

@@ -55,13 +55,15 @@ public:
 									  const float bPreviousX, const float bPreviousY,	
 									  const float bCurrentX, const float bCurrentY);
 	
-	virtual void HandleOrientationVectorUpdate(const float x, const float y, const float z) {}
+	virtual bool HandleOrientationVectorUpdate(const float x, const float y, const float z) { return false; }
 	
 	virtual void HandleResize(const float newWidth, const float newHeight);
 	
 	virtual void HandleOrientationChanged() {}
 	
 	const e_hdInterfaceOrientation GetOrientation() const;
+	
+	const bool IsLandscapeOrientation() const;
 	
 	void SetOrientation(const e_hdInterfaceOrientation orientation);
 	
@@ -196,6 +198,11 @@ inline const e_hdInterfaceOrientation hdInterfaceController::GetOrientation() co
 }
 
 
+inline const bool hdInterfaceController::IsLandscapeOrientation() const
+{
+	return (m_orientation == e_hdInterfaceOrientationLandscapeLeft ||
+			m_orientation == e_hdInterfaceOrientationLandscapeRight);
+}
 
 
 

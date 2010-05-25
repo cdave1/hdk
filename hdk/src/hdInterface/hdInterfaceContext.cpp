@@ -9,12 +9,11 @@
 
 #include "hdInterfaceContext.h"
 
-static hdInterfaceContext *instance = NULL;
-
 static hdTypedefList<hdReceiver*, 256> *m_receivers = NULL;
 
 static hdInterfaceController *m_controller = NULL;
 
+static bool loggingEnabled = false;
 
 void hdInterfaceContext::Init(hdInterfaceController *context)
 {
@@ -44,6 +43,18 @@ void hdInterfaceContext::TearDown(hdInterfaceController *context)
 	}
 	m_receivers = NULL;
 	m_controller = NULL;
+}
+
+
+void hdInterfaceContext::EnableLogging()
+{
+	loggingEnabled = true;
+}
+
+
+void hdInterfaceContext::DisableLogging()
+{
+	loggingEnabled = false;
 }
 
 
@@ -86,7 +97,8 @@ void hdInterfaceContext::HandleTapUp(float x, float y, int tapCount)
 	if (m_receivers->GetItemCount() == 0) return;
 	m_controller->ConvertRawToScreen(screen, x, y);
 	
-	hdPrintf("%3.3f, %3.3f, %3.3f, %3.3f\n", x, y, screen.x, screen.y);
+	if (loggingEnabled)
+		hdPrintf("%3.3f, %3.3f, %3.3f, %3.3f\n", x, y, screen.x, screen.y);
 	
 	for (i = 0; i < m_receivers->GetItemCount(); ++i)
 	{
@@ -108,7 +120,8 @@ void hdInterfaceContext::HandleTapDown(float x, float y, int tapCount)
 	if (m_receivers->GetItemCount() == 0) return;
 	m_controller->ConvertRawToScreen(screen, x, y);
 	
-	hdPrintf("%3.3f, %3.3f\n", screen.x, screen.y);
+	if (loggingEnabled)
+		hdPrintf("%3.3f, %3.3f\n", screen.x, screen.y);
 	
 	for (i = 0; i < m_receivers->GetItemCount(); ++i)
 	{
@@ -175,7 +188,8 @@ void hdInterfaceContext::HandleTapMovedSingle(const float previousX, const float
 	if (m_receivers->GetItemCount() == 0) return;
 	m_controller->ConvertRawToScreen(screen, currentX, currentY);
 	
-	hdPrintf("%3.3f, %3.3f\n", screen.x, screen.y);
+	if (loggingEnabled)
+		hdPrintf("%3.3f, %3.3f\n", screen.x, screen.y);
 	
 	for ( i = 0; i < m_receivers->GetItemCount(); ++i)
 	{

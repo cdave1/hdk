@@ -40,6 +40,10 @@ public:
 	
 	static void TearDown(hdInterfaceController *context);
 	
+	static void EnableLogging();
+	
+	static void DisableLogging();
+	
 	static bool AddReceiver(const hdReceiver *receiver);
 	
 	static bool RemoveReceiver(const hdReceiver *receiver);

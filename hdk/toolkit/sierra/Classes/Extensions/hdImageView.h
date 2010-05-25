@@ -16,6 +16,8 @@
 
 - (const char *)getResourcePathOfImage;
 
+- (void)setImageAtContentRepositoryPath:(const char *)path;
+
 @property (nonatomic, retain) NSString *currentImagePath;
 
 @end

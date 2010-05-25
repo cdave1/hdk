@@ -15,6 +15,7 @@
 #import "PrismaticJointPropertyWindow.h"
 #import "EventPropertyWindow.h"
 #import "TexturePaletteWindow.h"
+#import "PrefabsPaletteWindow.h"
 
 @interface MainWindowController : NSWindowController <NSComboBoxDelegate, NSComboBoxDataSource>
 {
@@ -49,11 +50,13 @@
 	RevoluteJointPropertyWindow *_revoluteJointPropertyWindow;
 	
 	PrismaticJointPropertyWindow *_prismaticJointPropertyWindow;
+	
+	PrefabsPaletteWindow *_prefabsPaletteWindow;
 }
 
 - (IBAction)togglePhysics:(id)sender;
 
-
+//- (IBAction)showPrefabs:(id)sender;
 
 
 

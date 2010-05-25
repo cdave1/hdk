@@ -13,8 +13,12 @@
 {
 @private
     NSString *_path;
+	NSString *_title;
+	NSString *_subtitle;
 }
 
 @property (nonatomic, copy) NSString *path;
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *subtitle;
 
 @end

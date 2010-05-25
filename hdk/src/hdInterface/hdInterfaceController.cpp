@@ -423,17 +423,8 @@ void hdInterfaceController::ConvertInterfaceToScreen(hdVec2& vOut, float x, floa
 	float pixelsPerUnitX = m_PixelScreenWidth / projectionBoundingBox.x;
 	float pixelsPerUnitY = m_PixelScreenHeight / projectionBoundingBox.y;
 	
-
-	if (m_orientation == e_hdInterfaceOrientationLandscape)
-	{
-		vOut.Set(pixelsPerUnitX * (x - projectionPosition.x), 
+	vOut.Set(pixelsPerUnitX * (x - projectionPosition.x), 
 				 pixelsPerUnitY * (y - projectionPosition.y));
-	}
-	else
-	{
-		vOut.Set(pixelsPerUnitX * (x - projectionPosition.x), 
-				 pixelsPerUnitY * (y - projectionPosition.y));
-	}
 }
 
 
@@ -445,22 +436,36 @@ void hdInterfaceController::ConvertInterfaceToScreen(hdVec2& vOut, float x, floa
  */
 void hdInterfaceController::ConvertRawToScreen(hdVec2& vOut, float x, float y)
 {
-#if (TARGET_OS_IPHONE == 1) || (TARGET_IPHONE_SIMULATOR == 1)	
-	if (m_orientation == e_hdInterfaceOrientationLandscape)
+#if (TARGET_OS_IPHONE == 1) || (TARGET_IPHONE_SIMULATOR == 1)
+#ifdef IPHONE_BUILD
+	if (m_orientation == e_hdInterfaceOrientationLandscapeLeft)
 	{
-		if (m_landscapeRotationZValue == 270.0f)
-		{
-			vOut.Set(y, x);
-		}
-		else
-		{
-			vOut.Set(m_PixelScreenWidth - y, m_PixelScreenHeight - x);
-		}
+		vOut.Set(y, m_PixelScreenHeight - x);
+	}
+	else if (m_orientation == e_hdInterfaceOrientationLandscapeRight)
+	{
+		vOut.Set(m_PixelScreenWidth - y, x);
 	}
 	else
 	{
 		vOut.Set(x, m_PixelScreenHeight - y);
 	}
+#else
+	if (m_orientation == e_hdInterfaceOrientationLandscapeLeft)
+	{
+		
+		vOut.Set(m_PixelScreenWidth - y, m_PixelScreenHeight - x);
+	}
+	else if (m_orientation == e_hdInterfaceOrientationLandscapeRight)
+	{
+		
+		vOut.Set(y, x);
+	}
+	else 
+	{
+		vOut.Set(x, y);
+	}
+#endif
 #else
 	vOut.Set(x, y);
 #endif
@@ -511,11 +516,13 @@ void hdInterfaceController::SetOrientation(const e_hdInterfaceOrientation orient
 	hdAABB projectionAABB;
 	e_hdInterfaceOrientation oldOrientation = m_orientation;
 
-	if (orientation == e_hdInterfaceOrientationPortrait)
+	if (orientation == e_hdInterfaceOrientationPortrait ||
+		orientation == e_hdInterfaceOrientationPortraitUpsideDown)
 	{
 		ScreenSettings_SetPortrait();
 	}
-	else if (orientation == e_hdInterfaceOrientationLandscape)
+	else if (orientation == e_hdInterfaceOrientationLandscapeLeft ||
+			 orientation == e_hdInterfaceOrientationLandscapeRight)
 	{
 		ScreenSettings_SetLandscape();
 	}
@@ -603,6 +610,7 @@ void hdInterfaceController::SetOrientation(const e_hdInterfaceOrientation orient
 	}
 	else
 	{
+		/*
 		if (oldOrientation != orientation)
 		{
 			// Swap aabb widths and heights
@@ -612,31 +620,42 @@ void hdInterfaceController::SetOrientation(const e_hdInterfaceOrientation orient
 			
 			m_projection->SetAABB(center - half, center + half);
 		}
+		 */
 	}
 #if (TARGET_OS_IPHONE == 1) || (TARGET_IPHONE_SIMULATOR == 1)
 	m_orientation = orientation;
-	
-	if (orientation == e_hdInterfaceOrientationPortrait)
+#if IPHONE_BUILD
+	if (orientation == e_hdInterfaceOrientationPortrait ||
+		orientation == e_hdInterfaceOrientationPortraitUpsideDown)
 	{
-		if (hdPlayerConfig::GetValue("FlipScreen") == "On")
-		{
-			m_landscapeRotationZValue = 0.0f;
-		}
+		m_landscapeRotationZValue = 0.0f;
 	}
-	else if (orientation == e_hdInterfaceOrientationLandscape)
+	else if (orientation == e_hdInterfaceOrientationLandscapeLeft)
 	{
-		if (hdPlayerConfig::GetValue("FlipScreen") == "On")
-		{
-			m_landscapeRotationZValue = 270.0f;
-		}
-		else
-		{
-			m_landscapeRotationZValue = 90.0f;
-		}
+		m_landscapeRotationZValue = 90.0f;
 	}
+	else if (orientation == e_hdInterfaceOrientationLandscapeRight)
+	{
+		m_landscapeRotationZValue = 270.0f;
+	}
+#else
+	if (orientation == e_hdInterfaceOrientationPortrait ||
+		orientation == e_hdInterfaceOrientationPortraitUpsideDown)
+	{
+		m_landscapeRotationZValue = 0.0f;
+	}
+	else if (orientation == e_hdInterfaceOrientationLandscapeLeft)
+	{
+		m_landscapeRotationZValue = 90.0f;
+	}
+	else if (orientation == e_hdInterfaceOrientationLandscapeRight)
+	{
+		m_landscapeRotationZValue = -90.0f;
+	}
+#endif
 	
 #else
-	m_orientation = e_hdInterfaceOrientationLandscape;
+	m_orientation = e_hdInterfaceOrientationLandscapeLeft;
 #endif
 	HandleOrientationChanged();
 }

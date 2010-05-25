@@ -21,7 +21,9 @@ typedef enum
 typedef enum
 {
 	e_hdInterfaceOrientationPortrait = 0,
-	e_hdInterfaceOrientationLandscape = 1,
+	e_hdInterfaceOrientationPortraitUpsideDown = 1,
+	e_hdInterfaceOrientationLandscapeLeft = 2,
+	e_hdInterfaceOrientationLandscapeRight = 3,
 } e_hdInterfaceOrientation;
 
 

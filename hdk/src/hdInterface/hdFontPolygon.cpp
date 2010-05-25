@@ -188,7 +188,7 @@ void hdFontPolygon::TextIntoGlyphs()
 	
 	if (strlen(m_text) == 0) 
 	{
-		hdPrintf("No text to process.\n");
+		//hdPrintf("No text to process.\n");
 	}
 	
 	len = strlen(m_text);

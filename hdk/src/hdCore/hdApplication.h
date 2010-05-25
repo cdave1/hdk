@@ -17,10 +17,13 @@
 class hdApplication
 	{
 	public:
+		
 		//! \brief initialization before the render API is intialized
 		bool InitApplication(bool synchronized);
 	
 		bool PrepareGameLoop();
+		
+		bool StartGameLoop();
 		
 		//! \brief release any memory/resources acquired by InitApplication()
 		bool QuitApplication();

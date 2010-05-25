@@ -265,7 +265,7 @@ hdFont* hdFontManager::LoadFluidFontFile(const char *filename)
 	
 	// HACK HACK HACK:
 	// Space character does not appear to have either a width or height - just need a width.
-	font->fileChars[(int)' '].screenWidth = maxHeight / 4;
+	font->fileChars[(int)' '].screenWidth = maxHeight / 5;
 	
 	FileSystem_CloseFile( hFile );
 	

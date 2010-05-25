@@ -3,7 +3,7 @@
 	<data>
 		<int key="IBDocument.SystemTarget">1060</int>
 		<string key="IBDocument.SystemVersion">10D573</string>
-		<string key="IBDocument.InterfaceBuilderVersion">785</string>
+		<string key="IBDocument.InterfaceBuilderVersion">762</string>
 		<string key="IBDocument.AppKitVersion">1038.29</string>
 		<string key="IBDocument.HIToolboxVersion">460.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
@@ -15,7 +15,7 @@
 			</object>
 			<object class="NSMutableArray" key="dict.values">
 				<bool key="EncodedWithXMLCoder">YES</bool>
-				<string>785</string>
+				<string>762</string>
 				<string>1.1</string>
 			</object>
 		</object>
@@ -239,14 +239,14 @@
 													<reference key="NSSuperview" ref="248540756"/>
 													<bool key="constrainsToOriginalSize">YES</bool>
 													<bool key="cellsHaveSubtitle">NO</bool>
-													<bool key="cellsHaveTitle">NO</bool>
+													<bool key="cellsHaveTitle">YES</bool>
 													<bool key="outlinesCells">NO</bool>
 													<bool key="shadowsCells">YES</bool>
 													<bool key="animates">YES</bool>
 													<bool key="allowsReordering">NO</bool>
 													<bool key="allowsMultipleSelection">NO</bool>
-													<float key="cellWidth">70</float>
-													<float key="cellHeight">70</float>
+													<float key="cellWidth">136</float>
+													<float key="cellHeight">136</float>
 													<reference key="dataSource"/>
 													<reference key="delegate"/>
 												</object>
@@ -495,6 +495,20 @@
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<bool key="EncodedWithXMLCoder">YES</bool>
 				<object class="IBPartialClassDescription">
+					<string key="className">NSView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">Classes/Extensions/NSView+Extensions.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">NSWindowController</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">Classes/Extensions/NSWindowController+Extensions.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
 					<string key="className">TextureImageBrowserView</string>
 					<string key="superclassName">IKImageBrowserView</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
@@ -516,25 +530,6 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>id</string>
 							<string>NSScrollView</string>
-						</object>
-					</object>
-					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>mImageBrowser</string>
-							<string>scrollView</string>
-						</object>
-						<object class="NSMutableArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBToOneOutletInfo">
-								<string key="name">mImageBrowser</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">scrollView</string>
-								<string key="candidateClassName">NSScrollView</string>
-							</object>
 						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
@@ -565,40 +560,6 @@
 							<string>id</string>
 							<string>NSScroller</string>
 							<string>NSScroller</string>
-						</object>
-					</object>
-					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<bool key="EncodedWithXMLCoder">YES</bool>
-						<object class="NSArray" key="dict.sortedKeys">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>_dataSource</string>
-							<string>_delegate</string>
-							<string>_dragDestinationDelegate</string>
-							<string>_horizontalScroller</string>
-							<string>_verticalScroller</string>
-						</object>
-						<object class="NSMutableArray" key="dict.values">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<object class="IBToOneOutletInfo">
-								<string key="name">_dataSource</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">_delegate</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">_dragDestinationDelegate</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">_horizontalScroller</string>
-								<string key="candidateClassName">NSScroller</string>
-							</object>
-							<object class="IBToOneOutletInfo">
-								<string key="name">_verticalScroller</string>
-								<string key="candidateClassName">NSScroller</string>
-							</object>
 						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier" id="825354874">
@@ -1091,13 +1052,6 @@
 					<object class="NSMutableDictionary" key="actions">
 						<string key="NS.key.0">showWindow:</string>
 						<string key="NS.object.0">id</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">showWindow:</string>
-						<object class="IBActionInfo" key="NS.object.0">
-							<string key="name">showWindow:</string>
-							<string key="candidateClassName">id</string>
-						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBFrameworkSource</string>

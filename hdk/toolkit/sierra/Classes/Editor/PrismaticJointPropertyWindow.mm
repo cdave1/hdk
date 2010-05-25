@@ -21,8 +21,6 @@
 {
 	if ((self = [super initWithWindowNibName:@"PrismaticJointPropertyWindow"]))
 	{
-		
-		
 		[[NSNotificationCenter defaultCenter]
 		 addObserver:self
 		 selector:@selector(itemWasSelected)
@@ -135,8 +133,8 @@
 		
 		if (enableLimit)
 		{
-			lowerTranslation = (float) [_lowerTranslationTextField floatValue];
-			upperTranslation = (float) [_upperTranslationTextField floatValue];
+			lowerTranslation = (float) [_lowerTranslationSlider floatValue];
+			upperTranslation = (float) [_upperTranslationSlider floatValue];
 		}
 		else
 		{

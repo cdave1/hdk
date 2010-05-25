@@ -35,6 +35,8 @@
 		_blockPropertyWindow = [[BlockPropertyWindow alloc] init];
 		_revoluteJointPropertyWindow = [[RevoluteJointPropertyWindow alloc] init];
 		_prismaticJointPropertyWindow = [[PrismaticJointPropertyWindow alloc] init];
+		_prefabsPaletteWindow = [[PrefabsPaletteWindow alloc] init];
+		[_prefabsPaletteWindow.window setFrameOrigin:NSMakePoint(0, 0)];
 		//[_blockPropertyWindow showWindow:self];
 		
 
@@ -97,27 +99,39 @@
 		case ' ':
 			[LevelEditor sharedInstance]->TogglePerspectiveProjection();
 			break;
+		case 'p':
+			if (([theEvent modifierFlags] & NSCommandKeyMask) == NSCommandKeyMask)
+			{
+				[_prefabsPaletteWindow makeNewPrefabFromSelected];
+			}
+			break;
+		case 'a':
+			if (([theEvent modifierFlags] & NSCommandKeyMask) == NSCommandKeyMask)
+			{
+				[LevelEditor sharedInstance]->SelectAll();
+			}
+			break;
 		case 'c':
-			if (([theEvent modifierFlags] & NSControlKeyMask) == NSControlKeyMask)
+			if (([theEvent modifierFlags] & NSCommandKeyMask) == NSCommandKeyMask)
 			{
 				[LevelEditor sharedInstance]->CopySelectedObjects();
 			}
 			break;
 			
 		case 'v':
-			if (([theEvent modifierFlags] & NSControlKeyMask) == NSControlKeyMask)
+			if (([theEvent modifierFlags] & NSCommandKeyMask) == NSCommandKeyMask)
 			{
 				[LevelEditor sharedInstance]->PasteCopiedObjects();
 			}
 			break;
 		case 't':
-			if (([theEvent modifierFlags] & NSControlKeyMask) == NSControlKeyMask)
+			if (([theEvent modifierFlags] & NSCommandKeyMask) == NSControlKeyMask)
 			{
 				[LevelEditor sharedInstance]->ApplyCurrentTextureToSelected();
 			}
 			break;
-		case 'p':
-			if (([theEvent modifierFlags] & NSControlKeyMask) == NSControlKeyMask)
+		case 'j':
+			if (([theEvent modifierFlags] & NSCommandKeyMask) == NSControlKeyMask)
 			{
 				[LevelEditor sharedInstance]->RepairSelectedShape();
 			}

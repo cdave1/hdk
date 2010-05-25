@@ -35,6 +35,8 @@
 			
 			TextureImage *image = [[TextureImage alloc] init];
 			image.path = [NSString stringWithFormat:@"%@%@", basePath, file];
+			image.title = file;
+			
 			hdPrintf("Loading texture: %s\n", [image.path UTF8String]);
 			[mImages addObject:image];
 			//[image release];

@@ -59,9 +59,21 @@
 }*/
 
 
+- (void)setImageAtContentRepositoryPath:(const char *)path
+{
+	if (path && strlen(path) > 0)
+	{
+		NSString *fullPath = [NSString stringWithFormat:@"%s%s", FileSystem_BaseDir(), path];
+		_currentImagePath = [fullPath copy];
+		NSImage *img = [[NSImage alloc] initWithContentsOfFile:fullPath];
+		[self setImage:[img autorelease]];
+	}
+}
+
+
 - (const char *)getResourcePathOfImage
 {
-	
+	if (![self image]) return NULL;
 	if (_currentImagePath)
 	{
 		NSLog(@"%@", _currentImagePath);

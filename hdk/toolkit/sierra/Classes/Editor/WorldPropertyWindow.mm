@@ -108,7 +108,7 @@
 	}
 	
 	[_levelName setStringValue:[NSString stringWithUTF8String:updatedLevel->GetLevelName()]];
-	
+	[_extendLevelAABBCheckbox setState:(((totemLevel *)updatedLevel)->GetExtendAABB() ? NSOnState : NSOffState)];
 	if (updatedLevel->GetFloorInfo() == NULL)
 	{
 		[_hasFloor setState:NSOffState];
@@ -116,7 +116,7 @@
 	}
 	else
 	{
-		[_hasFloor setState:NSOnState];
+		[_hasFloor setState:NSOnState];	
 		[[_hasFloorBox contentView] setAllControlsEnabled:YES];
 		
 		const totemFloorInfo *floorInfo = updatedLevel->GetFloorInfo();
@@ -331,6 +331,7 @@
 	{
 		((totemLevel *)level)->SetNearBackgroundTextureName("");
 	}
+	((totemLevel *)level)->ResetTextureCache();
 }
 
 

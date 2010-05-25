@@ -61,7 +61,7 @@ int GetTouchCount()
 @implementation hdMultiTouchView
 
 @synthesize renderLock;
-
+@synthesize logOutput = _logOutput;
 
 - (id) initWithFrame:(CGRect)frame
 {
@@ -77,7 +77,8 @@ int GetTouchCount()
 		TouchCount = 0;
 		
 		renderLock = nil;
-		touchScreenLock = [[NSObject alloc] init];
+		_logOutput = NO;
+		touchScreenLock = nil; //[[NSObject alloc] init];
 	}
 	
 	idFrame = self; 
@@ -262,9 +263,9 @@ int GetTouchCount()
 	
 	if (touch.phase == UITouchPhaseCancelled)
 	{
-#ifdef DEBUG 
-		printf("\t[TOUCH - CANCELLED] touch with id %d:\n", touchPtr);
-#endif
+		if (_logOutput)
+			printf("\t[TOUCH - CANCELLED] touch with id %d:\n", touchPtr);
+
 		MultiTouchScreen[pos].LocationXTouchBegan = 0.0;
 		MultiTouchScreen[pos].LocationYTouchBegan = 0.0;
 		
@@ -284,9 +285,9 @@ int GetTouchCount()
 	}
 	else if (touch.phase == UITouchPhaseEnded) 
 	{
-#ifdef DEBUG 
-		printf("\t[TOUCH - ENDED] touch with id %d:\n", touchPtr);
-#endif
+		if (_logOutput)
+			printf("\t[TOUCH - ENDED] touch with id %d:\n", touchPtr);
+
 		MultiTouchScreen[pos].TapCount = [touch tapCount];
 		if ([touch timestamp] - MultiTouchScreen[pos].TimeStamp < 0.045)
 		{
@@ -305,9 +306,9 @@ int GetTouchCount()
 	}
 	else if (touch.phase == UITouchPhaseBegan)
 	{
-#ifdef DEBUG 
-		printf("\t[TOUCH - BEGAN] touch with id %d:\n", touchPtr);
-#endif
+		if (_logOutput)
+			printf("\t[TOUCH - BEGAN] touch with id %d:\n", touchPtr);
+
 		MultiTouchScreen[pos].LocationXTouchMovedPrevious = location.x;
 		MultiTouchScreen[pos].LocationYTouchMovedPrevious = location.y;
 		
@@ -325,9 +326,9 @@ int GetTouchCount()
 	}
 	else if (touch.phase == UITouchPhaseMoved || touch.phase == UITouchPhaseStationary)
 	{
-#ifdef DEBUG 
-		printf("\t[TOUCH - MOVED] (%3.3f, %3.3f) touch with id %d:\n", location.x, location.y, touchPtr);
-#endif
+		if (_logOutput)
+			printf("\t[TOUCH - MOVED] (%3.3f, %3.3f) touch with id %d:\n", location.x, location.y, touchPtr);
+
 		if (MultiTouchScreen[pos].TouchDown == false)
 		{
 			//MultiTouchScreen[pos].LocationXTouchMovedPrevious = location.x;
