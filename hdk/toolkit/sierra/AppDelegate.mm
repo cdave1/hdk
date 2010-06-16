@@ -40,7 +40,6 @@
 	
 	[_mainWindowController.window makeKeyAndOrderFront:self];//= _mainWindowController.window;
 	
-	
 	//[_window makeKeyAndOrderFront:self];
 }
 

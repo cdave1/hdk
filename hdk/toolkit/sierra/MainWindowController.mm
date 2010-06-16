@@ -63,6 +63,13 @@
 		[_blockTypeComboBox selectItemAtIndex:0];
 		[_jointTypeComboBox selectItemAtIndex:0];
 		[_blockShapeComboBox selectItemAtIndex:0];
+		
+		
+		[[NSNotificationCenter defaultCenter]
+		 addObserver:self
+		 selector:@selector(levelWillBeDeleted)
+		 name:kLevelWasDeletedNotification
+		 object:nil];
 	}
 	return self;
 }
@@ -374,6 +381,61 @@
 		}
 	}
 	[((NSButton *)sender) setState:NSOnState];
+}
+
+
+
+- (void)levelWillBeDeleted
+{
+	NSAlert *alert = [[[NSAlert alloc] init] autorelease];
+	
+	[alert addButtonWithTitle:@"OK"];
+	[alert addButtonWithTitle:@"Cancel"];
+	[alert setMessageText:@"Delete this level?"];
+	[alert setInformativeText:@"Deleted levels cannot be restored."];
+	[alert setAlertStyle:NSWarningAlertStyle];
+	[alert beginSheetModalForWindow:[self window] modalDelegate:self didEndSelector:@selector(deleteAlertEnded:returnCode:contextInfo:) contextInfo:nil];
+}
+
+
+- (void)deleteAlertEnded:(NSAlert *)alert returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo 
+{
+    if (returnCode == NSAlertFirstButtonReturn)
+	{
+		// Do a backup save
+		[LevelEditor sharedInstance]->SaveCurrentWorld();
+		
+		// Remove the level
+		int index = -1;
+		for (int i = 0; i < [LevelEditor sharedInstance]->GetCurrentTotemWorld()->GetLevelCount(); i++)
+		{
+			if ([LevelEditor sharedInstance]->GetCurrentTotemWorld()->GetLevels()[i] == [LevelEditor sharedInstance]->GetCurrentLevel())
+			{
+				index = i;
+				break;
+			}
+		}
+		
+		if (index == -1) return;
+		
+		if (index == ([LevelEditor sharedInstance]->GetCurrentTotemWorld()->GetLevelCount() - 1))
+		{
+			[LevelEditor sharedInstance]->SetLevel(hdMax(0, index - 1));
+		}
+		else
+		{
+			[LevelEditor sharedInstance]->SetLevel(index + 1);
+		}
+		
+		
+		[LevelEditor sharedInstance]->GetCurrentTotemWorld()->RemoveLevelAtIndex(index);
+		
+
+		
+		[[NSNotificationCenter defaultCenter] 
+		 postNotificationName:kWorldWasLoadedNotification
+		 object:nil];
+    }
 }
 
 

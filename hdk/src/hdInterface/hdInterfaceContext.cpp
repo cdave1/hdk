@@ -61,6 +61,7 @@ void hdInterfaceContext::DisableLogging()
 bool hdInterfaceContext::AddReceiver(const hdReceiver *receiver)
 {
 	int res;
+	if (!m_receivers) return false;
 	
 	res = m_receivers->Add((hdReceiver *)receiver);
 	

@@ -9,13 +9,12 @@
 #ifndef _HD_ANIMATION_TIMING_H_
 #define _HD_ANIMATION_TIMING_H_
 
-class hdAnimationTimingFunction
+typedef enum
 {
-};
-
-
-class hdLogCurveTimingFunction : public hdAnimationTimingFunction
-{
-};
+	hdAnimationTimingFunctionLinear = 0,
+	hdAnimationTimingFunctionAccelerate,
+	hdAnimationTimingFunctionDecelerate,
+	hdAnimationTimingFunctionCount,
+} hdAnimationTimingFunction_t;
 
 #endif

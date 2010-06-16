@@ -20,7 +20,7 @@
 #define kSingleItemSelectedNotification @"kSingleItemSelectedNotification"
 #define kSingleItemUnselectedNotification @"kSingleItemUnselectedNotification"
 #define kMultipleItemsSelectedNotification @"kMultipleItemsSelectedNotification"
-
+#define kLevelWasDeletedNotification @"kLevelWasDeletedNotification"
 
 @interface LevelEditor : NSObject 
 

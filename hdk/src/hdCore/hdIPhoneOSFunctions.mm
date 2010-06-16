@@ -10,7 +10,7 @@
 #include "hdIPhoneOSFunctions.h"
 
 
-void* OSFunctions_PrepareThreadResources()
+void * OSFunctions_PrepareThreadResources()
 {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 	return pool;
@@ -19,4 +19,18 @@ void* OSFunctions_PrepareThreadResources()
 void OSFunctions_TearDownThreadResources(void *object)
 {
 	[((NSAutoreleasePool *)object) drain];
+}
+
+
+void OSFunctions_LoadExternalURL(const char *urlString)
+{
+	NSURL *url = nil;
+	if (strlen(urlString) == 0) return;
+	if ((url = [NSURL URLWithString:[NSString stringWithUTF8String:urlString]]))
+	{
+		if ([[UIApplication sharedApplication] canOpenURL:url])
+		{
+			[[UIApplication sharedApplication] openURL:url];
+		}
+	}
 }

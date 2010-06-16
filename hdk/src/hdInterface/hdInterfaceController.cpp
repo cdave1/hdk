@@ -534,94 +534,18 @@ void hdInterfaceController::SetOrientation(const e_hdInterfaceOrientation orient
 	ScreenSettings_GetZoomRatio(&m_lowerZoomRatioX, &m_lowerZoomRatioY,
 								&m_upperZoomRatioX, &m_upperZoomRatioY);
 	ScreenSettings_GetPixelsPerGameUnit(&m_pixelsPerGameUnit);
-	/*
-	if (orientation == e_hdInterfaceOrientationPortrait)
-	{
-		m_PixelScreenWidth = kPortraitPixelScreenWidth;
-		m_PixelScreenHeight = kPortraitPixelScreenHeight;
-		m_ScreenAspectRatio = kPortraitPixelAspectRatio;
-		
-		m_GameMinScreenWidth = kPortraitGameMinScreenWidth;
-		m_GameMinScreenHeight = kPortraitGameMinScreenHeight;
-		m_GameMaxScreenWidth = kPortraitGameMaxScreenWidth;
-		m_GameMaxScreenHeight = kPortraitGameMaxScreenHeight;
-	}
-	else if (orientation == e_hdInterfaceOrientationLandscape)
-	{
-		m_PixelScreenWidth = kLandscapePixelScreenWidth;
-		m_PixelScreenHeight = kLandscapePixelScreenHeight;
-		m_ScreenAspectRatio = kLandscapePixelAspectRatio;
-		
-		m_GameMinScreenWidth = kLandscapeGameMinScreenWidth;
-		m_GameMinScreenHeight = kLandscapeGameMinScreenHeight;
-		m_GameMaxScreenWidth = kLandscapeGameMaxScreenWidth; 
-		m_GameMaxScreenHeight = kLandscapeGameMaxScreenHeight; 
-	}*/
-#if 0
-	// default OSX settings
-	m_PixelScreenWidth = 1200.0f;
-	m_PixelScreenHeight = 800.0f;
-	m_ScreenAspectRatio = 0.666667f;
-	
-	m_GameMinScreenWidth = 7.5f;
-	m_GameMinScreenHeight = 5.0f;
-	m_GameMaxScreenWidth = 15.0f;
-	m_GameMaxScreenHeight = 10.0f;
-#endif
+
 	
 	if (m_projection == NULL)
 	{
 		ScreenSettings_GetDefaultCameraRect(&m_screenWidth, &m_screenHeight);
 		m_screenDepth = kDefaultScreenDepth;
-		
 
-		/*
-#if (TARGET_OS_IPHONE == 1) || (TARGET_IPHONE_SIMULATOR == 1)
-		if (orientation == e_hdInterfaceOrientationPortrait)
-		{
-			m_screenWidth = kPortraitGameScreenWidth;
-			m_screenHeight = kPortraitGameScreenHeight;
-			
-		}
-		else if (orientation == e_hdInterfaceOrientationLandscape)
-		{
-			m_screenWidth = kLandscapeGameScreenWidth;
-			m_screenHeight = kLandscapeGameScreenHeight;
-			m_screenDepth = kDefaultScreenDepth;
-		}
-#else*/
-#if 0
-		// OSX values
-		m_screenWidth = 4.8f;
-		m_screenHeight = 3.2f;
-		m_screenDepth = 50.0f;
-		if (hdPlayerConfig::GetValue("FlipScreen") == "On")
-		{
-			m_landscapeRotationZValue = 180.0f;
-		}
-		else
-		{
-			m_landscapeRotationZValue = 0.0f;
-		}
-#endif
 		projectionAABB.lower = hdVec3(0,0,0) - hdVec3(m_screenWidth, m_screenHeight, m_screenDepth);
 		projectionAABB.upper = hdVec3(m_screenWidth, m_screenHeight, m_screenDepth);
 		m_projection = new hdOrthographicProjection(m_gameWorld, projectionAABB);
 	}
-	else
-	{
-		/*
-		if (oldOrientation != orientation)
-		{
-			// Swap aabb widths and heights
-			projectionAABB = m_projection->GetAABB();
-			hdVec3 center = m_projection->GetWorldCenter();
-			hdVec3 half = 0.5f * hdVec3(projectionAABB.Height(), projectionAABB.Width(), m_screenDepth);
-			
-			m_projection->SetAABB(center - half, center + half);
-		}
-		 */
-	}
+	
 #if (TARGET_OS_IPHONE == 1) || (TARGET_IPHONE_SIMULATOR == 1)
 	m_orientation = orientation;
 #if IPHONE_BUILD

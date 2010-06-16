@@ -18,6 +18,8 @@ extern "C" {
 	
 	extern void OSFunctions_TearDownThreadResources(void *object);
 	
+	extern void OSFunctions_LoadExternalURL(const char *url);
+	
 #ifdef __cplusplus
 }
 #endif

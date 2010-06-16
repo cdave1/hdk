@@ -58,7 +58,7 @@
  */
 B2EXPORT void opt_b2Vec2Mul(const float* A, const float* v, float *dst)
 {
-#ifdef _ARM_ARCH_7
+#ifdef _ARM_ARCH_7 && defined(__ARM_NEON__)
 	
 	asm volatile
 	(
@@ -73,7 +73,7 @@ B2EXPORT void opt_b2Vec2Mul(const float* A, const float* v, float *dst)
 	 : "memory", "d0", "d2", "q8" 
 	 );
 	
-#elif defined(_ARM_ARCH_6) && !defined(__ARM_NEON__)
+#elif 0 // defined(_ARM_ARCH_6) && !defined(__ARM_NEON__)
 	
 	asm volatile 
 	(

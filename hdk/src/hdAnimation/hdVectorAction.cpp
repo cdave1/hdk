@@ -19,6 +19,8 @@ void hdVectorAction::Apply(hdTimeInterval elapsed, hdGameObject* gameObject)
 {
 	if (gameObject == NULL) return;
 	
+	float delta = this->GetTimingFunctionDelta(elapsed);
+	
 	hdVec3 current = gameObject->GetWorldCenter(); //GetTransform().translation; // GetPosition();
 	
 	hdVec3 distanceToDest = m_destination;
@@ -32,7 +34,7 @@ void hdVectorAction::Apply(hdTimeInterval elapsed, hdGameObject* gameObject)
 	if (denom <= 0.0f) return;
 	distanceToDest *= (1.0f / denom);
 	// Multiply this by the elapsed proportion of time
-	distanceToDest *= (elapsed / m_duration);
+	distanceToDest *= (delta * (elapsed / m_duration));
 	
 	//hdTranslateVertices(gameObject->GetVertices(), gameObject->GetVertexCount(), distanceToDest);
 	//gameObject->GetTransform().translation = current+distanceToDest;

@@ -167,7 +167,7 @@
 		6362D7641189930C00184AE0 /* totemFloorInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemFloorInfo.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemFloorInfo.h; sourceTree = SOURCE_ROOT; };
 		6362D7651189930C00184AE0 /* totemFloorInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemFloorInfo.cpp; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemFloorInfo.cpp; sourceTree = SOURCE_ROOT; };
 		6362D7D01189953E00184AE0 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
-		6362D7F61189955300184AE0 /* libpng12.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng12.0.dylib; path = /Developer/Apple/SDKs/MacOSX10.5.sdk/usr/X11/lib/libpng12.0.dylib; sourceTree = "<absolute>"; };
+		6362D7F61189955300184AE0 /* libpng12.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng12.0.dylib; path = SDKs/MacOSX10.5.sdk/usr/X11/lib/libpng12.0.dylib; sourceTree = DEVELOPER_DIR; };
 		6362D8791189957C00184AE0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		6362D87B1189957C00184AE0 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		6362D87D1189957C00184AE0 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -812,7 +812,7 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Developer/Apple/SDKs/MacOSX10.5.sdk/usr/X11/lib,
+					/Developer/SDKs/MacOSX10.5.sdk/usr/X11/lib,
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
@@ -841,7 +841,7 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Developer/Apple/SDKs/MacOSX10.5.sdk/usr/X11/lib,
+					/Developer/SDKs/MacOSX10.5.sdk/usr/X11/lib,
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";

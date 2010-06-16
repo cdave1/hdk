@@ -1415,7 +1415,7 @@ void hdLevelEditorController::CopySelectedObjects()
 }
 
 
-void hdLevelEditorController::SelectAll()
+void hdLevelEditorController::SelectAll()	
 {
 	m_startClickPoint.Set(m_currentLevel->GetAABB().lower.x, m_currentLevel->GetAABB().lower.y);
 	m_currentMouseDragPoint.Set(m_currentLevel->GetAABB().upper.x, m_currentLevel->GetAABB().upper.y);

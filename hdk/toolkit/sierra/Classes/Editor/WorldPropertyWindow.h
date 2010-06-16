@@ -55,6 +55,8 @@
 
 - (IBAction)deleteSelectedLevel:(id)sender;
 
+- (void)deleteAlertEnded:(NSAlert *)alert returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo;
+
 - (IBAction)UpdateHasFloor:(id)sender;
 
 - (IBAction)UpdateLevelFloorInfo:(id)sender;
@@ -64,5 +66,7 @@
 - (IBAction)UpdateLevelBackgrounds:(id)sender;
 
 - (IBAction)UpdateLevelName:(id)sender;
+
+- (IBAction)UpdateWorldName:(id)sender;
 
 @end

@@ -9,6 +9,7 @@
 #ifndef _HD_ACTION_H_
 #define _HD_ACTION_H_
 
+#include <float.h>
 #include "hdGame/hdGameObject.h"
 #include "hdAnimation/hdAnimationTimingFunction.h"
 
@@ -37,17 +38,20 @@ public:
 	
 	void SetDuration(const hdTimeInterval duration);
 	
+	const hdAnimationTimingFunction_t GetTimingFunction() const;
+	
+	void SetTimingFunction(const hdAnimationTimingFunction_t func);
+	
 	bool m_HACKHACKHACK_logTiming;
 	
+	const float GetTimingFunctionDelta(const hdTimeInterval elapsed);
+	
 protected:
-	hdAnimationTimingFunction* m_timingFunction;
+	hdAnimationTimingFunction_t m_timingFunction;
 	
 	hdTimeInterval m_duration;
 	
 	hdTimeInterval m_progress;
-	
-	
-	
 };
 
 
@@ -72,6 +76,25 @@ inline const hdTimeInterval hdAction::GetDuration()
 inline void hdAction::SetDuration(const hdTimeInterval duration)
 {
 	m_duration = duration;
+}
+
+
+inline const hdAnimationTimingFunction_t hdAction::GetTimingFunction() const
+{
+	return m_timingFunction; 
+}
+
+
+inline void hdAction::SetTimingFunction(const hdAnimationTimingFunction_t func)
+{
+	if (m_progress >= 0.0f && m_progress < FLT_EPSILON)
+	{
+		m_timingFunction = func;
+	}
+	else 
+	{
+		hdError(0, "Cannot change animation timing function while action is in progress.");
+	}
 }
 
 #endif

@@ -42,12 +42,24 @@ void SoundEngine_Init()
 	}
 	
 #if USE_AVPLAYER_FOR_MUSIC == 1
-	if (avAudioWrapper == nil)
+	UInt32	propertySize, audioIsAlreadyPlaying = 0;
+	
+#if TARGET_OS_IPHONE == 1 || TARGET_IPHONE_SIMULATOR == 1
+	// do not open the track if the audio hardware is already in use (could be the iPod app playing music)
+	propertySize = sizeof(UInt32);
+	AudioSessionGetProperty(kAudioSessionProperty_OtherAudioIsPlaying, &propertySize, &audioIsAlreadyPlaying);
+#endif
+	if (audioIsAlreadyPlaying != 0)
+	{
+		AudioSessionSetActive(YES);
+	}
+	else if (avAudioWrapper == nil)
 	{
 		avAudioWrapper = [[hdAVAudioWrapper alloc] init];
 	}
 #endif
 }
+
 
 /*
  - (void) loadSound:(NSString *)file withVolume:(float)volume withPitch:(float)pitch;
@@ -102,7 +114,7 @@ int SoundEngine_UnloadEffect(const hdSound* sound)
 int SoundEngine_LoadBackgroundMusic(hdSound* sound)
 {
 #if USE_AVPLAYER_FOR_MUSIC == 1
-	assert(avAudioWrapper != nil);
+	if (!avAudioWrapper) return 0;
 	return [avAudioWrapper LoadSoundWithFileName:[NSString stringWithCString:sound->fullFilePath encoding:NSASCIIStringEncoding] withVolume:sound->volume];
 #else
 	return 0;
@@ -114,7 +126,7 @@ int SoundEngine_LoadBackgroundMusic(hdSound* sound)
 int SoundEngine_PlayBackgroundMusic(const hdSound* sound, const bool loops)
 {
 #if USE_AVPLAYER_FOR_MUSIC == 1
-	assert(avAudioWrapper != nil);
+	if (!avAudioWrapper) return 0;
 	return [avAudioWrapper PlaySoundWithFileName:[NSString stringWithCString:sound->fullFilePath encoding:NSASCIIStringEncoding] loops:loops];
 #else
 	return 0;
@@ -125,7 +137,7 @@ int SoundEngine_PlayBackgroundMusic(const hdSound* sound, const bool loops)
 int SoundEngine_StopBackgroundMusic(const hdSound* sound)
 {
 #if USE_AVPLAYER_FOR_MUSIC == 1
-	assert(avAudioWrapper != nil);
+	if (!avAudioWrapper) return 0;
 	return [avAudioWrapper StopSoundWithFileName:[NSString stringWithCString:sound->fullFilePath encoding:NSASCIIStringEncoding]];
 #else
 	return 0;
@@ -136,7 +148,7 @@ int SoundEngine_StopBackgroundMusic(const hdSound* sound)
 int SoundEngine_PauseBackgroundMusic(const hdSound* sound)
 {
 #if USE_AVPLAYER_FOR_MUSIC == 1
-	assert(avAudioWrapper != nil);
+	if (!avAudioWrapper) return 0;
 	return [avAudioWrapper PauseSoundWithFileName:[NSString stringWithCString:sound->fullFilePath encoding:NSASCIIStringEncoding]];
 #else
 	return 0;
@@ -147,7 +159,7 @@ int SoundEngine_PauseBackgroundMusic(const hdSound* sound)
 int SoundEngine_RewindBackgroundMusic(const hdSound* sound)
 {
 #if USE_AVPLAYER_FOR_MUSIC == 1
-	assert(avAudioWrapper != nil);
+	if (!avAudioWrapper) return 0;
 	return [avAudioWrapper RewindSoundWithFileName:[NSString stringWithCString:sound->fullFilePath encoding:NSASCIIStringEncoding] playAfterRewind:false];
 #else
 	return 0;
@@ -158,7 +170,7 @@ int SoundEngine_RewindBackgroundMusic(const hdSound* sound)
 int SoundEngine_UnloadBackgroundMusic(const hdSound* sound)
 {
 #if USE_AVPLAYER_FOR_MUSIC == 1
-	assert(avAudioWrapper != nil);
+	if (!avAudioWrapper) return 0;
 	return [avAudioWrapper UnloadSoundWithFileName:[NSString stringWithCString:sound->fullFilePath encoding:NSASCIIStringEncoding]];
 #else
 	return 0;
@@ -178,7 +190,7 @@ int SoundEngine_PlayVibrationEffect(const hdSound *sound)
 void SoundEngine_Purge()
 {
 #if USE_AVPLAYER_FOR_MUSIC == 1
-	assert(avAudioWrapper != nil);
+	//assert(avAudioWrapper != nil);
 #endif
 	assert(sharedCMOpenALSoundManager != nil);
 	[sharedCMOpenALSoundManager purgeSounds];
@@ -194,9 +206,11 @@ void SoundEngine_Teardown()
 	[sharedCMOpenALSoundManager release];
 	sharedCMOpenALSoundManager = nil;
 #if USE_AVPLAYER_FOR_MUSIC == 1	
-	assert(avAudioWrapper != nil);
-	[avAudioWrapper release];
-	avAudioWrapper = nil;
+	if (avAudioWrapper)
+	{
+		[avAudioWrapper release];
+		avAudioWrapper = nil;
+	}
 #endif
 	//	 [[CMOpenALSoundManager sharedCMOpenALSoundManager] shutdownOpenAL];
 }

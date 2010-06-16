@@ -9,7 +9,7 @@
 #import "WorldPropertyWindow.h"
 #import "LevelEditor.h"
 #import "NSImageView+Extensions.h"
-
+#import "AppDelegate.h"
 
 @implementation WorldPropertyWindow
 
@@ -215,48 +215,17 @@
  */
 - (IBAction)deleteSelectedLevel:(id)sender
 {
-	/*
-	if (levelEditorController->settings.deleteButtonTaps >= 3)
+	const totemLevel *level;
+	if ((level = (totemLevel *)[LevelEditor sharedInstance]->GetCurrentLevel()))
 	{
-		// Do a bakup save
-		levelEditorController->Save();
-		
-		// Remove the level
-		int index = -1;
-		for (int i = 0; i < levelEditorController->GetCurrentTotemWorld()->GetLevelCount(); i++)
-		{
-			if (levelEditorController->GetCurrentTotemWorld()->GetLevels()[i] == levelEditorController->GetCurrentLevel())
-			{
-				index = i;
-				break;
-			}
-		}
-		
-		if (index == -1) return;
-		
-		if (index == 0)
-		{
-			lev = levelEditorController->GetCurrentTotemWorld()->GetLevels()[1];
-		}
-		else
-		{
-			lev = levelEditorController->GetCurrentTotemWorld()->GetLevels()[0];
-		}
-		
-		
-		levelEditorController->SetCurrentLevel(lev);
-		txtLevelName->set_text(lev->GetLevelName());
-		
-		levelEditorController->GetCurrentTotemWorld()->RemoveLevelAtIndex(index);
-		
-		UpdateInterfaceState();
-		
-		RefreshLevelList();
-		
-		levelEditorController->settings.deleteButtonTaps = 0;
+		[[NSNotificationCenter defaultCenter] 
+		 postNotificationName:kLevelWasDeletedNotification
+		 object:nil];
 	}
-	 */
 }
+
+
+
 
 
 - (IBAction)UpdateLevelName:(id)sender
@@ -268,6 +237,20 @@
 	}
 	((totemLevel *)level)->SetLevelName([[_levelName stringValue] UTF8String]);
 	[_levelsTableView reloadData];
+}
+
+
+- (IBAction)UpdateWorldName:(id)sender
+{
+	const totemWorld *world;
+	if ((world = [LevelEditor sharedInstance]->GetCurrentTotemWorld()))
+	{
+		NSString *worldName = [_worldName stringValue];
+		if ([worldName length] == 0)
+			((totemWorld *)world)->SetName("(NONAME)");
+		else 
+			((totemWorld *)world)->SetName([worldName UTF8String]);
+	}
 }
 
 

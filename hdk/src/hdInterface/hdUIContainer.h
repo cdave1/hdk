@@ -44,7 +44,9 @@ public:
 	
 	void Show();
 	
+	void Enable();
 	
+	void Disable();
 
 	
 	

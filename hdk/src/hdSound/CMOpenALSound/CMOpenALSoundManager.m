@@ -46,7 +46,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(CMOpenALSoundManager);
 		//session info
 		AudioSessionInitialize(NULL, NULL, NULL, NULL);	
 #endif
-		//[self checkIfiPodIsPlaying];
+		[self checkIfiPodIsPlaying];
 		
 		if(![self initOpenAL])
 		{
@@ -136,7 +136,7 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(CMOpenALSoundManager);
 	propertySize = sizeof(UInt32);
 	AudioSessionGetProperty(kAudioSessionProperty_OtherAudioIsPlaying, &propertySize, &audioIsAlreadyPlaying);	
 	
-	if (audioIsAlreadyPlaying != 0 && ![self isBackGroundMusicPlaying]) //audio could be ours...
+	if (audioIsAlreadyPlaying != 0) //audio could be ours...
 	{
 		isiPodAudioPlaying = YES;
 		

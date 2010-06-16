@@ -54,6 +54,14 @@
 	PrefabsPaletteWindow *_prefabsPaletteWindow;
 }
 
+/**
+ * Notification handlers
+ */
+- (void)levelWillBeDeleted;
+
+- (void)deleteAlertEnded:(NSAlert *)alert returnCode:(NSInteger)returnCode contextInfo:(void *)contextInfo;
+
+
 - (IBAction)togglePhysics:(id)sender;
 
 //- (IBAction)showPrefabs:(id)sender;
@@ -63,6 +71,7 @@
 - (IBAction)setFilter:(id)sender;
 
 - (IBAction)commitBlockStates:(id)sender;
+
 
 
 

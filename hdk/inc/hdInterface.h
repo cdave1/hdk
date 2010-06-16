@@ -22,6 +22,7 @@
 #include "hdInterface/hdCheckbox.h"
 
 #include "hdInterface/hdInterfaceContext.h"
+#include "hdInterface/hdViewController.h"
 
 //#include "hdUISegmentedControl.h"
 

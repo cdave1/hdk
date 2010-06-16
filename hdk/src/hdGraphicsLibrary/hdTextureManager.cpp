@@ -111,7 +111,7 @@ hdTexture* hdTextureManager::FindTexture(const char* name, texturetype_t type)
 		}
 	}
 	
-	hdPrintf("hdTextureManager::FindTexture: %s\n", name);
+	hdPrintf("[hdTextureManager] Looking for texture file: %s\n", name);
 	
 	if (std::string(name).find(string(".tga")) != string::npos)
 	{
@@ -147,7 +147,7 @@ hdTexture* hdTextureManager::FindTexture(const char* name, texturetype_t type)
 		return tex;
 	}*/
 #endif
-	
+	hdPrintf("[hdTextureManager] ERROR: could not find texture file: %s\n", name);
 	return m_nullTexture;
 }
 
@@ -591,7 +591,7 @@ hdTexture* hdTextureManager::LoadTexture(const char* name, unsigned char* data, 
 	hdglError("glGenerateMipmapOES");
 	
 	
-	hdPrintf("Finished Loading texture: %s\n", tex->name);
+	hdPrintf("[hdTextureManager] Finished Loading texture: %s\n\n", tex->name);
 	
 	return tex;
 }

@@ -76,6 +76,26 @@ void hdUIContainer::Show()
 }
 
 
+void hdUIContainer::Enable()
+{
+	for (int i = 0; i < m_receivers->GetItemCount(); ++i)
+	{
+		m_receivers->GetItems()[i]->Enable();
+	}
+	((hdReceiver *)this)->Enable();
+}
+
+
+void hdUIContainer::Disable()
+{
+	for (int i = 0; i < m_receivers->GetItemCount(); ++i)
+	{
+		m_receivers->GetItems()[i]->Disable();
+	}
+	((hdReceiver *)this)->Disable();
+}
+
+
 void hdUIContainer::Translate(const hdVec3& translationVector, const hdVec3& translationAxis)
 {
 	//this->RotateAndTranslate(hdVec3(0,0,0), translationVector+translationAxis);

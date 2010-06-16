@@ -8,7 +8,11 @@
 
 #import "hdAVAudioWrapper.h"
 
-
+@interface hdAVAudioWrapper ()
+- (void)isIPodPlaying;
+- (BOOL)isPlayingAvAudio;
+- (void)cleanUpSound;
+@end
 
 
 
@@ -90,6 +94,25 @@ void MusicPlayer_Teardown()
 	players = nil;
 	[super dealloc];
 }
+
+
+
+- (BOOL)isPlaying
+{
+	BOOL playing = false;
+	NSArray *keys = [players keys];
+	for (NSString *filename in keys)
+	{
+		AVAudioPlayer *player = [players valueForKey:filename];
+		if (player.playing)
+		{
+			playing = true;
+			break;
+		}
+	}
+	return playing;
+}
+
 
 
 - (NSInteger)LoadSoundWithFileName:(NSString *)fileName withVolume:(float)volume

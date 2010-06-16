@@ -318,7 +318,7 @@ void hdButton::Draw() const
 	}
 	else
 	{
-		float tint[4] = { 1.0f, 1.0f, 1.0f, 1.0f };
+		const float tint[4] = { 1.0f, 1.0f, 1.0f, 1.0f };
 		DrawVerticesWithTint(((hdPolygon*)this)->GetVertices(), 
 							 ((hdPolygon*)this)->GetTextureCoordinates(), 
 							 4, 
