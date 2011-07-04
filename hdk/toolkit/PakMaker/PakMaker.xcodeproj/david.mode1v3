@@ -349,12 +349,12 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>63C78A121197575200DD411F</string>
+										<string>63A5C45D11D6F41F000CDD63</string>
 										<key>history</key>
 										<array>
 											<string>63C78A101197575200DD411F</string>
 											<string>63C78A111197575200DD411F</string>
-											<string>6362D6C91188D4BB00184AE0</string>
+											<string>63C78A121197575200DD411F</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -366,14 +366,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1137, 577}}</string>
+								<string>{{0, 0}, {1137, 572}}</string>
 								<key>RubberWindowFrame</key>
 								<string>1114 607 1409 811 0 0 2560 1418 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>577pt</string>
+							<string>572pt</string>
 						</dict>
 						<dict>
 							<key>ContentConfiguration</key>
@@ -386,14 +386,14 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 582}, {1137, 188}}</string>
+								<string>{{0, 577}, {1137, 193}}</string>
 								<key>RubberWindowFrame</key>
 								<string>1114 607 1409 811 0 0 2560 1418 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
 							<key>Proportion</key>
-							<string>188pt</string>
+							<string>193pt</string>
 						</dict>
 					</array>
 					<key>Proportion</key>
@@ -412,9 +412,9 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>63C78A131197575200DD411F</string>
+				<string>63A5C45E11D6F41F000CDD63</string>
 				<string>1CE0B1FE06471DED0097A5F4</string>
-				<string>63C78A141197575200DD411F</string>
+				<string>63A5C45F11D6F41F000CDD63</string>
 				<string>1CE0B20306471E060097A5F4</string>
 				<string>1CE0B20506471E060097A5F4</string>
 			</array>
@@ -535,7 +535,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>295130962.06770998</real>
+	<real>299299871.30320901</real>
 	<key>ToolbarDisplayMode</key>
 	<integer>1</integer>
 	<key>ToolbarIsVisible</key>
@@ -631,7 +631,7 @@
 			<key>TableOfContents</key>
 			<array>
 				<string>63B4BD4F10753AE500A0A288</string>
-				<string>63C78A151197575200DD411F</string>
+				<string>63A5C46011D6F41F000CDD63</string>
 				<string>1CD0528F0623707200166675</string>
 				<string>XCMainBuildResultsModuleGUID</string>
 			</array>

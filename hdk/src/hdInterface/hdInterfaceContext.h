@@ -63,8 +63,6 @@ public:
 							  const float aCurrentX, const float aCurrentY,
 							  const float bPreviousX, const float bPreviousY,
 							  const float bCurrentX, const float bCurrentY);
-	
-	static void HandleOrientationVectorUpdate(const float x, const float y, const float z);
 };
 
 

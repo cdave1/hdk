@@ -3,17 +3,17 @@
 	<data>
 		<int key="IBDocument.SystemTarget">1060</int>
 		<string key="IBDocument.SystemVersion">10D573</string>
-		<string key="IBDocument.InterfaceBuilderVersion">762</string>
+		<string key="IBDocument.InterfaceBuilderVersion">788</string>
 		<string key="IBDocument.AppKitVersion">1038.29</string>
 		<string key="IBDocument.HIToolboxVersion">460.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.CocoaPlugin</string>
-			<string key="NS.object.0">762</string>
+			<string key="NS.object.0">788</string>
 		</object>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="152"/>
 			<integer value="72"/>
+			<integer value="152"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -234,11 +234,34 @@
 								<reference key="NSControlView" ref="292994701"/>
 								<int key="NSButtonFlags">-1228652289</int>
 								<int key="NSButtonFlags2">134</int>
-								<object class="NSCustomResource" key="NSNormalImage">
+								<object class="NSCustomResource" key="NSNormalImage" id="916555535">
 									<string key="NSClassName">NSImage</string>
 									<string key="NSResourceName">iconTriangleFan</string>
 								</object>
 								<string key="NSAlternateContents"/>
+								<string key="NSKeyEquivalent"/>
+								<int key="NSPeriodicDelay">400</int>
+								<int key="NSPeriodicInterval">75</int>
+								<reference key="NSSound" ref="385266120"/>
+							</object>
+						</object>
+						<object class="NSButton" id="1007972073">
+							<reference key="NSNextResponder" ref="144379289"/>
+							<int key="NSvFlags">268</int>
+							<string key="NSFrame">{{662, 5}, {32, 32}}</string>
+							<reference key="NSSuperview" ref="144379289"/>
+							<int key="NSTag">1</int>
+							<bool key="NSEnabled">YES</bool>
+							<object class="NSButtonCell" key="NSCell" id="419022232">
+								<int key="NSCellFlags">67239424</int>
+								<int key="NSCellFlags2">134479872</int>
+								<string key="NSContents"/>
+								<reference key="NSSupport" ref="22"/>
+								<reference key="NSControlView" ref="1007972073"/>
+								<int key="NSButtonFlags">-1228128001</int>
+								<int key="NSButtonFlags2">134</int>
+								<reference key="NSNormalImage" ref="916555535"/>
+								<string key="NSAlternateContents">Add Mesh</string>
 								<string key="NSKeyEquivalent"/>
 								<int key="NSPeriodicDelay">400</int>
 								<int key="NSPeriodicInterval">75</int>
@@ -1140,6 +1163,22 @@
 					</object>
 					<int key="connectionID">230</int>
 				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">SetNewShapeMesh:</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="1007972073"/>
+					</object>
+					<int key="connectionID">234</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">_meshButton</string>
+						<reference key="source" ref="1001"/>
+						<reference key="destination" ref="1007972073"/>
+					</object>
+					<int key="connectionID">235</int>
+				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
 				<object class="NSArray" key="orderedObjects">
@@ -1203,6 +1242,7 @@
 							<reference ref="12459876"/>
 							<reference ref="608326399"/>
 							<reference ref="71293227"/>
+							<reference ref="1007972073"/>
 						</object>
 						<reference key="parent" ref="958632601"/>
 					</object>
@@ -1520,6 +1560,20 @@
 						<reference key="object" ref="608326399"/>
 						<reference key="parent" ref="144379289"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">231</int>
+						<reference key="object" ref="1007972073"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="419022232"/>
+						</object>
+						<reference key="parent" ref="144379289"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">232</int>
+						<reference key="object" ref="419022232"/>
+						<reference key="parent" ref="1007972073"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -1557,6 +1611,8 @@
 					<string>209.IBPluginDependency</string>
 					<string>211.IBPluginDependency</string>
 					<string>212.IBPluginDependency</string>
+					<string>231.IBPluginDependency</string>
+					<string>232.IBPluginDependency</string>
 					<string>71.IBEditorWindowLastContentRect</string>
 					<string>71.IBPluginDependency</string>
 					<string>71.IBWindowTemplateEditedContentRect</string>
@@ -1587,6 +1643,8 @@
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>{{473, 70}, {1255, 887}}</string>
 					<boolean value="YES"/>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -1655,7 +1713,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">230</int>
+			<int key="maxID">235</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1676,6 +1734,7 @@
 							<string>SetNewShapeCircle:</string>
 							<string>SetNewShapeFivePointStar:</string>
 							<string>SetNewShapeHexagon:</string>
+							<string>SetNewShapeMesh:</string>
 							<string>SetNewShapeMultiStar:</string>
 							<string>SetNewShapeRectangle:</string>
 							<string>SetNewShapeSpikes:</string>
@@ -1712,6 +1771,126 @@
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
+							<string>id</string>
+						</object>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>SetNewBlockMaterial:</string>
+							<string>SetNewBlockType:</string>
+							<string>SetNewEventMode:</string>
+							<string>SetNewJointDistance:</string>
+							<string>SetNewJointPrismatic:</string>
+							<string>SetNewJointRevolute:</string>
+							<string>SetNewShapeCircle:</string>
+							<string>SetNewShapeFivePointStar:</string>
+							<string>SetNewShapeHexagon:</string>
+							<string>SetNewShapeMesh:</string>
+							<string>SetNewShapeMultiStar:</string>
+							<string>SetNewShapeRectangle:</string>
+							<string>SetNewShapeSpikes:</string>
+							<string>SetNewShapeTriangle:</string>
+							<string>SetNewShapeTriangleFan:</string>
+							<string>SetNewShapeTriangleStrip:</string>
+							<string>commitBlockStates:</string>
+							<string>setCursorMode:</string>
+							<string>setFilter:</string>
+							<string>togglePhysics:</string>
+							<string>updatePaletteTexture:</string>
+							<string>updatePaletteTint:</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBActionInfo">
+								<string key="name">SetNewBlockMaterial:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">SetNewBlockType:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">SetNewEventMode:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">SetNewJointDistance:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">SetNewJointPrismatic:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">SetNewJointRevolute:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">SetNewShapeCircle:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">SetNewShapeFivePointStar:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">SetNewShapeHexagon:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">SetNewShapeMesh:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">SetNewShapeMultiStar:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">SetNewShapeRectangle:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">SetNewShapeSpikes:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">SetNewShapeTriangle:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">SetNewShapeTriangleFan:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">SetNewShapeTriangleStrip:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">commitBlockStates:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">setCursorMode:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">setFilter:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">togglePhysics:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">updatePaletteTexture:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">updatePaletteTint:</string>
+								<string key="candidateClassName">id</string>
+							</object>
 						</object>
 					</object>
 					<object class="NSMutableDictionary" key="outlets">
@@ -1731,6 +1910,7 @@
 							<string>_jointButton</string>
 							<string>_jointTypeComboBox</string>
 							<string>_mainPanel</string>
+							<string>_meshButton</string>
 							<string>_physicsFilterCheckbox</string>
 							<string>_progress</string>
 							<string>_togglePhysics</string>
@@ -1752,9 +1932,109 @@
 							<string>NSComboBox</string>
 							<string>NSPanel</string>
 							<string>NSButton</string>
+							<string>NSButton</string>
 							<string>NSProgressIndicator</string>
 							<string>NSButton</string>
 							<string>NSPanel</string>
+						</object>
+					</object>
+					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<bool key="EncodedWithXMLCoder">YES</bool>
+						<object class="NSArray" key="dict.sortedKeys">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>_blockButton</string>
+							<string>_blockMaterialComboBox</string>
+							<string>_blockShapeComboBox</string>
+							<string>_blockTypeComboBox</string>
+							<string>_contentView</string>
+							<string>_cosmeticsFilterCheckbox</string>
+							<string>_currentTexture</string>
+							<string>_currentTint</string>
+							<string>_cursorButton</string>
+							<string>_groundFilterCheckbox</string>
+							<string>_jointButton</string>
+							<string>_jointTypeComboBox</string>
+							<string>_mainPanel</string>
+							<string>_meshButton</string>
+							<string>_physicsFilterCheckbox</string>
+							<string>_progress</string>
+							<string>_togglePhysics</string>
+							<string>_toolPanel</string>
+						</object>
+						<object class="NSMutableArray" key="dict.values">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<object class="IBToOneOutletInfo">
+								<string key="name">_blockButton</string>
+								<string key="candidateClassName">NSButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">_blockMaterialComboBox</string>
+								<string key="candidateClassName">NSComboBox</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">_blockShapeComboBox</string>
+								<string key="candidateClassName">NSComboBox</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">_blockTypeComboBox</string>
+								<string key="candidateClassName">NSComboBox</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">_contentView</string>
+								<string key="candidateClassName">NSView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">_cosmeticsFilterCheckbox</string>
+								<string key="candidateClassName">NSButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">_currentTexture</string>
+								<string key="candidateClassName">hdImageView</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">_currentTint</string>
+								<string key="candidateClassName">NSColorWell</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">_cursorButton</string>
+								<string key="candidateClassName">NSButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">_groundFilterCheckbox</string>
+								<string key="candidateClassName">NSButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">_jointButton</string>
+								<string key="candidateClassName">NSButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">_jointTypeComboBox</string>
+								<string key="candidateClassName">NSComboBox</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">_mainPanel</string>
+								<string key="candidateClassName">NSPanel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">_meshButton</string>
+								<string key="candidateClassName">NSButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">_physicsFilterCheckbox</string>
+								<string key="candidateClassName">NSButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">_progress</string>
+								<string key="candidateClassName">NSProgressIndicator</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">_togglePhysics</string>
+								<string key="candidateClassName">NSButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">_toolPanel</string>
+								<string key="candidateClassName">NSPanel</string>
+							</object>
 						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
@@ -2370,6 +2650,13 @@
 					<object class="NSMutableDictionary" key="actions">
 						<string key="NS.key.0">showWindow:</string>
 						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">showWindow:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">showWindow:</string>
+							<string key="candidateClassName">id</string>
+						</object>
 					</object>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBFrameworkSource</string>

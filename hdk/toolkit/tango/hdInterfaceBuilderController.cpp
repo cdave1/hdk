@@ -27,21 +27,9 @@ hdInterfaceBuilderController::hdInterfaceBuilderController()
 	m_copiedObjects = new hdTypedefList<hdIBProxy *, 1024>();
 	
 	m_drawingStyle	= e_drawingStyleEditorFull; //e_drawingStyleEditorFull;
+
 	
-	/*
-	m_bomb = NULL;
-	m_textLine = 30;
 	
-	m_pointCount = 0;
-	
-	m_destructionListener.test = this;
-	m_boundaryListener.test = this;
-	m_contactListener.test = this;
-	m_world->SetDestructionListener(&m_destructionListener);
-	m_world->SetBoundaryListener(&m_boundaryListener);
-	m_world->SetContactListener(&m_contactListener);
-	 */
-	//glEnable(GL_TEXTURE_2D);
 	m_currentViewController = NULL;
 	
 	

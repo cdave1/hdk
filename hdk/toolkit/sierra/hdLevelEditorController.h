@@ -62,6 +62,7 @@ typedef enum {
 	e_interfacePaletteModeLayerParticle,
 	e_interfacePaletteModeErase,
 	e_interfacePaletteModeTotemEvent,
+	e_interfacePaletteModeStraightlineMesh,
 	e_interfacePaletteModeCount
 } e_interfacePaletteMode;
 
@@ -220,7 +221,7 @@ public:
 	const char * GetPaletteTexture() const;
 	void SetPaletteTint(const float r, const float g, const float b, const float a);
 	
-	
+	void ApplyBGValuesToAllFollowingLevels();
 	//void DoubleTouchDown(
 	//void DoubleTouchMove(const int ax, const int ay, const int bx, const int by);
 	
@@ -331,6 +332,8 @@ private:
 	
 	void DrawModeInfo();
 	
+	void DrawExperimentalModelObjects();
+	
 	void ScaleSelectedObjects();
 	
 	void RotateSelectedObjects();
@@ -346,6 +349,8 @@ private:
 	void AddNewBlock();
 	
 	void AddNewJoint();
+	
+	void AddNewMesh();
 	
 	void AddNewJack();
 	
@@ -427,6 +432,13 @@ private:
 	
 	// list of unique textures of all worlds loaded.
 	std::map<string, string> uniqueTextures;
+	
+	
+	// TESTING AND PROTOTYPING AFTER THIS POINT
+	
+//	hdMesh *m_currentMesh;
+	
+//	hdTypedefList<hdMesh *, 64> * m_meshes;
 };
 
 

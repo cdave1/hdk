@@ -72,17 +72,14 @@ inline bool b2IsValid(Fixed x)
 /// not a NaN or infinity.
 inline bool b2IsValid(float32 x)
 {
-#ifdef _MSC_VER
-	return _finite(x) != 0;
-#else
-	
-#if (TARGET_OS_IPHONE == 1) && (TARGET_IPHONE_SIMULATOR == 0)
-	return __inline_isfinitef(x) != 0;
-#else
-	return finite(x);
-#endif
-	
-#endif
+	if (x != x)
+	{
+		// NaN.
+		return false;
+	}
+    
+	float32 infinity = std::numeric_limits<float32>::infinity();
+	return -infinity < x && x < infinity;
 }
 
 /// This is a approximate yet fast inverse square-root.

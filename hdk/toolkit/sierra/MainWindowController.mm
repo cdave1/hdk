@@ -132,13 +132,13 @@
 			}
 			break;
 		case 't':
-			if (([theEvent modifierFlags] & NSCommandKeyMask) == NSControlKeyMask)
+			if (([theEvent modifierFlags] & NSCommandKeyMask) == NSCommandKeyMask)
 			{
 				[LevelEditor sharedInstance]->ApplyCurrentTextureToSelected();
 			}
 			break;
 		case 'j':
-			if (([theEvent modifierFlags] & NSCommandKeyMask) == NSControlKeyMask)
+			if (([theEvent modifierFlags] & NSCommandKeyMask) == NSCommandKeyMask)
 			{
 				[LevelEditor sharedInstance]->RepairSelectedShape();
 			}
@@ -149,11 +149,10 @@
 				[LevelEditor sharedInstance]->DumpUniqueTextureList();
 			}
 			break;
-		case 'b':
-			if (([theEvent modifierFlags] & (NSControlKeyMask | NSShiftKeyMask)) == 
-				 (NSControlKeyMask | NSShiftKeyMask))
+		case 'g':
+			if (([theEvent modifierFlags] & (NSControlKeyMask) == (NSControlKeyMask)))
 			{
-				//[LevelEditor sharedInstance]->ApplyBGValuesToAllFollowingLevels();
+				[LevelEditor sharedInstance]->ApplyBGValuesToAllFollowingLevels();
 			}
 			break;
 			
@@ -267,6 +266,14 @@
 - (IBAction)SetNewBlockType:(id)sender
 {
 	[LevelEditor sharedInstance]->SetNewBlockType(totemBlockTypeMenuItems[[_blockTypeComboBox indexOfSelectedItem]].blockType);
+}
+
+
+// TEMPORARY
+- (IBAction)SetNewShapeMesh:(id)sender
+{
+	[self SetButtonStates:sender];
+	[LevelEditor sharedInstance]->settings.interfacePaletteMode = e_interfacePaletteModeStraightlineMesh;
 }
 
 

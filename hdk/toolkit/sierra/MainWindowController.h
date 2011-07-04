@@ -30,6 +30,7 @@
 	IBOutlet NSButton *_cosmeticsFilterCheckbox;
 	IBOutlet NSButton *_groundFilterCheckbox;
 	IBOutlet NSButton *_physicsFilterCheckbox;
+	IBOutlet NSButton *_meshButton;
 	
 	IBOutlet NSComboBox *_blockMaterialComboBox;
 	IBOutlet NSComboBox *_blockTypeComboBox;
@@ -88,6 +89,7 @@
 - (IBAction)SetNewShapeHexagon:(id)sender;
 - (IBAction)SetNewShapeTriangle:(id)sender;
 - (IBAction)SetNewShapeMultiStar:(id)sender;
+- (IBAction)SetNewShapeMesh:(id)sender;
 
 - (IBAction)SetNewShapeTriangleFan:(id)sender;
 - (IBAction)SetNewShapeTriangleStrip:(id)sender;

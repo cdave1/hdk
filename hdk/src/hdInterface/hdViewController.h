@@ -36,6 +36,9 @@ public:
 	void SetMouseUpCallbackForTaggedItems(const char *tag, void *obj, void (*func)(void *, void *));
 	
 	
+	const hdReceiver * GetInterfaceItemWithTag(const char *tag);
+	
+	
 	void SetCloseListener(void *obj, void (*func)(void *, void *));
 	
 	void Draw();

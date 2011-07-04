@@ -20,25 +20,23 @@ void hdVectorAction::Apply(hdTimeInterval elapsed, hdGameObject* gameObject)
 	if (gameObject == NULL) return;
 	
 	float delta = this->GetTimingFunctionDelta(elapsed);
+	float proportion = this->GetTimingFunctionProportion(elapsed);
 	
-	hdVec3 current = gameObject->GetWorldCenter(); //GetTransform().translation; // GetPosition();
-	
-	hdVec3 distanceToDest = m_destination;
+	hdVec3 current = gameObject->GetWorldCenter();
 	
 	// distance between the destination and the current game object location.
-	distanceToDest -= current;
+	hdVec3 distanceToDest = m_destination - current;
 	
 	// Calculate the total distance travelled by dividing the distance
-	// by the percentage to travel.
-	float denom = (1.0f - ((m_progress - elapsed) / m_duration));
+	// by the percentage of the original distance already travelled; this
+	// allows us to perform the vector action without retaining a starting
+	// position for the object being moved.
+	float denom = (1.0f - proportion);
 	if (denom <= 0.0f) return;
 	distanceToDest *= (1.0f / denom);
+	
 	// Multiply this by the elapsed proportion of time
 	distanceToDest *= (delta * (elapsed / m_duration));
-	
-	//hdTranslateVertices(gameObject->GetVertices(), gameObject->GetVertexCount(), distanceToDest);
-	//gameObject->GetTransform().translation = current+distanceToDest;
-	//gameObject->ResetAABB();
 	
 	gameObject->Translate(distanceToDest, current);
 	

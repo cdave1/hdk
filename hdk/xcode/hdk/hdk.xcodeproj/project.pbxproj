@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6384550A11C8291E00C421AB /* hdScripts.h in Headers */ = {isa = PBXBuildFile; fileRef = 6384550911C8291E00C421AB /* hdScripts.h */; };
-		6384550B11C8291E00C421AB /* hdScripts.h in Headers */ = {isa = PBXBuildFile; fileRef = 6384550911C8291E00C421AB /* hdScripts.h */; };
-		6384551811C8296100C421AB /* hdScripts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6384551711C8296100C421AB /* hdScripts.cpp */; };
-		6384551911C8296100C421AB /* hdScripts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6384551711C8296100C421AB /* hdScripts.cpp */; };
+		6353FD2B1340079400AD7F1D /* hdMultiTouchViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6353FD291340079400AD7F1D /* hdMultiTouchViewController.h */; };
+		6353FD2C1340079400AD7F1D /* hdMultiTouchViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6353FD291340079400AD7F1D /* hdMultiTouchViewController.h */; };
+		6353FD2D1340079400AD7F1D /* hdMultiTouchViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6353FD2A1340079400AD7F1D /* hdMultiTouchViewController.mm */; };
+		6353FD2E1340079400AD7F1D /* hdMultiTouchViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6353FD2A1340079400AD7F1D /* hdMultiTouchViewController.mm */; };
 		6384558911C8337300C421AB /* hdViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6384558711C8337300C421AB /* hdViewController.h */; };
 		6384558A11C8337300C421AB /* hdViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6384558811C8337300C421AB /* hdViewController.cpp */; };
 		6384558B11C8337300C421AB /* hdViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6384558711C8337300C421AB /* hdViewController.h */; };
 		6384558C11C8337300C421AB /* hdViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6384558811C8337300C421AB /* hdViewController.cpp */; };
+		63B351D611F821B100D20861 /* hdScripting.h in Headers */ = {isa = PBXBuildFile; fileRef = 63B351D511F821B100D20861 /* hdScripting.h */; };
+		63B351D711F821B100D20861 /* hdScripting.h in Headers */ = {isa = PBXBuildFile; fileRef = 63B351D511F821B100D20861 /* hdScripting.h */; };
 		63CA7785119678090010C802 /* error_code.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63CA7770119678090010C802 /* error_code.cpp */; };
 		63CA7786119678090010C802 /* config.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 63CA7771119678090010C802 /* config.hpp */; };
 		63CA7787119678090010C802 /* cygwin_error.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 63CA7772119678090010C802 /* cygwin_error.hpp */; };
@@ -330,7 +332,6 @@
 		63EC83E811BC9D02000DFE1A /* xml_woarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DE41171699800792A2D /* xml_woarchive.hpp */; };
 		63EC83E911BC9D02000DFE1A /* hdThumbPad.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FC26571184CEDC004BB47B /* hdThumbPad.h */; };
 		63EC83EA11BC9D02000DFE1A /* hdCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FC266B1184CF44004BB47B /* hdCamera.h */; };
-		63EC83EB11BC9D02000DFE1A /* hdScripting.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FC26961184D18C004BB47B /* hdScripting.h */; };
 		63EC83EC11BC9D02000DFE1A /* config.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 63CA7771119678090010C802 /* config.hpp */; };
 		63EC83ED11BC9D02000DFE1A /* cygwin_error.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 63CA7772119678090010C802 /* cygwin_error.hpp */; };
 		63EC83EE11BC9D02000DFE1A /* error_code.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 63CA7773119678090010C802 /* error_code.hpp */; };
@@ -553,7 +554,6 @@
 		63FC265A1184CEDC004BB47B /* hdThumbPad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63FC26581184CEDC004BB47B /* hdThumbPad.cpp */; };
 		63FC266D1184CF44004BB47B /* hdCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FC266B1184CF44004BB47B /* hdCamera.h */; };
 		63FC266E1184CF44004BB47B /* hdCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63FC266C1184CF44004BB47B /* hdCamera.cpp */; };
-		63FC26971184D18C004BB47B /* hdScripting.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FC26961184D18C004BB47B /* hdScripting.h */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		E41EA6171170810B00A30C8E /* hdCollections.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6111170810B00A30C8E /* hdCollections.h */; };
 		E41EA6181170810B00A30C8E /* hdk.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6121170810B00A30C8E /* hdk.h */; };
@@ -1018,10 +1018,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6384550911C8291E00C421AB /* hdScripts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = hdScripts.h; path = hdScripts/hdScripts.h; sourceTree = "<group>"; };
-		6384551711C8296100C421AB /* hdScripts.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = hdScripts.cpp; path = hdScripts/hdScripts.cpp; sourceTree = "<group>"; };
+		6353FD291340079400AD7F1D /* hdMultiTouchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdMultiTouchViewController.h; sourceTree = "<group>"; };
+		6353FD2A1340079400AD7F1D /* hdMultiTouchViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = hdMultiTouchViewController.mm; sourceTree = "<group>"; };
 		6384558711C8337300C421AB /* hdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdViewController.h; sourceTree = "<group>"; };
 		6384558811C8337300C421AB /* hdViewController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdViewController.cpp; sourceTree = "<group>"; };
+		63B351D511F821B100D20861 /* hdScripting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdScripting.h; sourceTree = "<group>"; };
 		63CA7770119678090010C802 /* error_code.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = error_code.cpp; sourceTree = "<group>"; };
 		63CA7771119678090010C802 /* config.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = config.hpp; path = ../../libs/boost_1_38_0/boost/system/config.hpp; sourceTree = SOURCE_ROOT; };
 		63CA7772119678090010C802 /* cygwin_error.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = cygwin_error.hpp; path = ../../libs/boost_1_38_0/boost/system/cygwin_error.hpp; sourceTree = SOURCE_ROOT; };
@@ -1061,7 +1062,6 @@
 		63FC26581184CEDC004BB47B /* hdThumbPad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdThumbPad.cpp; sourceTree = "<group>"; };
 		63FC266B1184CF44004BB47B /* hdCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdCamera.h; sourceTree = "<group>"; };
 		63FC266C1184CF44004BB47B /* hdCamera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdCamera.cpp; sourceTree = "<group>"; };
-		63FC26961184D18C004BB47B /* hdScripting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdScripting.h; sourceTree = "<group>"; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libhdk.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libhdk.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E41EA6111170810B00A30C8E /* hdCollections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdCollections.h; sourceTree = "<group>"; };
@@ -1621,15 +1621,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6384550811C8290A00C421AB /* hdScripting */ = {
-			isa = PBXGroup;
-			children = (
-				6384551711C8296100C421AB /* hdScripts.cpp */,
-				6384550911C8291E00C421AB /* hdScripts.h */,
-			);
-			name = hdScripting;
-			sourceTree = "<group>";
-		};
 		63CA776E119678090010C802 /* system */ = {
 			isa = PBXGroup;
 			children = (
@@ -1714,6 +1705,7 @@
 		E41EA60F1170810B00A30C8E /* inc */ = {
 			isa = PBXGroup;
 			children = (
+				63B351D511F821B100D20861 /* hdScripting.h */,
 				E41EA6121170810B00A30C8E /* hdk.h */,
 				E41EA6241170815200A30C8E /* hdAnimationEngine.h */,
 				E41EA6111170810B00A30C8E /* hdCollections.h */,
@@ -1726,7 +1718,6 @@
 				E41EA85F1170A50E00A30C8E /* hdEffects.h */,
 				E41EA9B91170B4EF00A30C8E /* hdInput.h */,
 				E4F36B8211714B8F00792A2D /* hdLibs.h */,
-				63FC26961184D18C004BB47B /* hdScripting.h */,
 				63FBC6C511C81C2700C2377F /* hdIB.h */,
 			);
 			name = inc;
@@ -1740,6 +1731,8 @@
 				E41EA9AC1170B37000A30C8E /* hdMultiTouchView.mm */,
 				E41EAA5D1170BCC000A30C8E /* hdAccelerometer.h */,
 				E41EAA5E1170BCC000A30C8E /* hdiPhoneAccelerometer.mm */,
+				6353FD291340079400AD7F1D /* hdMultiTouchViewController.h */,
+				6353FD2A1340079400AD7F1D /* hdMultiTouchViewController.mm */,
 			);
 			path = hdInput;
 			sourceTree = "<group>";
@@ -1747,7 +1740,6 @@
 		E428341A116FF684008E3594 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				6384550811C8290A00C421AB /* hdScripting */,
 				E428398811701BBE008E3594 /* hdk_prefix.pch */,
 				E428341C116FF684008E3594 /* hdSound */,
 				E428342F116FF684008E3594 /* hdAnimation */,
@@ -2829,7 +2821,6 @@
 				63EC83E811BC9D02000DFE1A /* xml_woarchive.hpp in Headers */,
 				63EC83E911BC9D02000DFE1A /* hdThumbPad.h in Headers */,
 				63EC83EA11BC9D02000DFE1A /* hdCamera.h in Headers */,
-				63EC83EB11BC9D02000DFE1A /* hdScripting.h in Headers */,
 				63EC83EC11BC9D02000DFE1A /* config.hpp in Headers */,
 				63EC83ED11BC9D02000DFE1A /* cygwin_error.hpp in Headers */,
 				63EC83EE11BC9D02000DFE1A /* error_code.hpp in Headers */,
@@ -2852,8 +2843,9 @@
 				63FBC6C211C81C1C00C2377F /* hdIBLoader.h in Headers */,
 				63FBC6C411C81C1C00C2377F /* hdIBEnums.h in Headers */,
 				63FBC6C711C81C2700C2377F /* hdIB.h in Headers */,
-				6384550B11C8291E00C421AB /* hdScripts.h in Headers */,
 				6384558B11C8337300C421AB /* hdViewController.h in Headers */,
+				63B351D711F821B100D20861 /* hdScripting.h in Headers */,
+				6353FD2C1340079400AD7F1D /* hdMultiTouchViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3158,7 +3150,6 @@
 				E4F36EAB1171699800792A2D /* xml_woarchive.hpp in Headers */,
 				63FC26591184CEDC004BB47B /* hdThumbPad.h in Headers */,
 				63FC266D1184CF44004BB47B /* hdCamera.h in Headers */,
-				63FC26971184D18C004BB47B /* hdScripting.h in Headers */,
 				63CA7786119678090010C802 /* config.hpp in Headers */,
 				63CA7787119678090010C802 /* cygwin_error.hpp in Headers */,
 				63CA7788119678090010C802 /* error_code.hpp in Headers */,
@@ -3181,8 +3172,9 @@
 				63FBC6B311C81C1C00C2377F /* hdIBLoader.h in Headers */,
 				63FBC6B511C81C1C00C2377F /* hdIBEnums.h in Headers */,
 				63FBC6C611C81C2700C2377F /* hdIB.h in Headers */,
-				6384550A11C8291E00C421AB /* hdScripts.h in Headers */,
 				6384558911C8337300C421AB /* hdViewController.h in Headers */,
+				63B351D611F821B100D20861 /* hdScripting.h in Headers */,
+				6353FD2B1340079400AD7F1D /* hdMultiTouchViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3230,7 +3222,14 @@
 			isa = PBXProject;
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "hdk" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* hdk */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
@@ -3418,8 +3417,8 @@
 				63FBC6BF11C81C1C00C2377F /* hdIBProxy.cpp in Sources */,
 				63FBC6C111C81C1C00C2377F /* hdIBViewController.cpp in Sources */,
 				63FBC6C311C81C1C00C2377F /* hdIBLoader.cpp in Sources */,
-				6384551911C8296100C421AB /* hdScripts.cpp in Sources */,
 				6384558C11C8337300C421AB /* hdViewController.cpp in Sources */,
+				6353FD2E1340079400AD7F1D /* hdMultiTouchViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3598,8 +3597,8 @@
 				63FBC6B011C81C1C00C2377F /* hdIBProxy.cpp in Sources */,
 				63FBC6B211C81C1C00C2377F /* hdIBViewController.cpp in Sources */,
 				63FBC6B411C81C1C00C2377F /* hdIBLoader.cpp in Sources */,
-				6384551811C8296100C421AB /* hdScripts.cpp in Sources */,
 				6384558A11C8337300C421AB /* hdViewController.cpp in Sources */,
+				6353FD2D1340079400AD7F1D /* hdMultiTouchViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3638,9 +3637,9 @@
 				);
 				PRODUCT_NAME = hdk;
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
-				SDKROOT = iphoneos3.2;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
-				VALID_ARCHS = armv7;
+				VALID_ARCHS = "armv7 i386";
 			};
 			name = Debug;
 		};
@@ -3680,9 +3679,9 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = hdk;
-				SDKROOT = iphoneos3.2;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
-				VALID_ARCHS = armv7;
+				VALID_ARCHS = "armv7 i386";
 			};
 			name = Release;
 		};
@@ -3692,12 +3691,15 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = iphoneos3.2;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv6 armv7 i386";
 			};
 			name = Debug;
 		};
@@ -3706,13 +3708,16 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.1.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
-				SDKROOT = iphoneos3.1.3;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv6 armv7 i386";
 			};
 			name = Release;
 		};
@@ -3720,7 +3725,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/hdk.dst;
 				GCC_DEBUGGING_SYMBOLS = full;
@@ -3741,7 +3746,7 @@
 					/Users/david/hdk/hdTech1/hdk/libs/boost_1_38_0,
 				);
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
@@ -3750,9 +3755,9 @@
 				);
 				PRODUCT_NAME = hdkiPhone;
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
-				SDKROOT = iphoneos3.1.3;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
-				VALID_ARCHS = "armv6 armv7";
+				VALID_ARCHS = "armv6 armv7 i386";
 			};
 			name = Debug;
 		};
@@ -3760,7 +3765,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				DSTROOT = /tmp/hdk.dst;
 				GCC_AUTO_VECTORIZATION = NO;
 				GCC_ENABLE_SSE3_EXTENSIONS = NO;
@@ -3786,7 +3791,7 @@
 					/Users/david/hdk/hdTech1/hdk/libs/boost_1_38_0,
 				);
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = (
 					"-fno-regmove",
@@ -3799,9 +3804,9 @@
 				);
 				PRODUCT_NAME = hdkiPhone;
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
-				SDKROOT = iphoneos3.1.3;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
-				VALID_ARCHS = "armv6 armv7";
+				VALID_ARCHS = "armv6 armv7 i386";
 			};
 			name = Release;
 		};

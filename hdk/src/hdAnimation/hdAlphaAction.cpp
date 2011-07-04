@@ -29,11 +29,11 @@ void hdAlphaAction::Apply(hdTimeInterval elapsed, hdGameObject* gameObject)
 	float current;
 	if (m_endAlpha > m_startAlpha) 
 	{
-		current = (m_endAlpha - m_startAlpha) * ((m_progress + elapsed) / m_duration);
+		current = (m_endAlpha - m_startAlpha) * ((m_progress) / m_duration);
 	} 
 	else
 	{
-		current = 1.0f + (m_endAlpha - m_startAlpha) * ((m_progress + elapsed) / m_duration);
+		current = 1.0f + (m_endAlpha - m_startAlpha) * ((m_progress) / m_duration);
 	}
 	
 	current = hdClamp(current, 0.0f, 1.0f);

@@ -20,7 +20,7 @@
 class hdInterfaceController 
 {
 public:	
-	hdInterfaceController();
+	hdInterfaceController(); 
 	
 	hdInterfaceController(const hdInterfaceController* parentController);
 
@@ -55,11 +55,7 @@ public:
 									  const float bPreviousX, const float bPreviousY,	
 									  const float bCurrentX, const float bCurrentY);
 	
-	virtual bool HandleOrientationVectorUpdate(const float x, const float y, const float z) { return false; }
-	
 	virtual void HandleResize(const float newWidth, const float newHeight);
-	
-	virtual void HandleOrientationChanged() {}
 	
 	const e_hdInterfaceOrientation GetOrientation() const;
 	

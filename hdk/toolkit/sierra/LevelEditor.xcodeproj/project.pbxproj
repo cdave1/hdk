@@ -77,6 +77,13 @@
 			remoteGlobalIDString = 6362DA72118995A600184AE0;
 			remoteInfo = "hdkOSX copy";
 		};
+		63C48C7112B0C70800F1541F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63C76D4D11865C4800C909BE /* hdkOSX.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 63D6FBFD118BB0CA00D76242 /* libhdkOSX_32.a */;
+			remoteInfo = hdkOSX_32;
+		};
 		63C76D5111865C4800C909BE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 63C76D4D11865C4800C909BE /* hdkOSX.xcodeproj */;
@@ -384,6 +391,7 @@
 			children = (
 				63C76D5211865C4800C909BE /* libhdkOSX.a */,
 				6362DA75118995A600184AE0 /* libhdkOSX_64.a */,
+				63C48C7212B0C70800F1541F /* libhdkOSX_32.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -426,7 +434,14 @@
 			isa = PBXProject;
 			buildConfigurationList = 1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "LevelEditor" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 08FB7794FE84155DC02AAC07 /* LevelEditor */;
 			projectDirPath = "";
 			projectReferences = (
@@ -448,6 +463,13 @@
 			fileType = archive.ar;
 			path = libhdkOSX_64.a;
 			remoteRef = 6362DA74118995A600184AE0 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		63C48C7212B0C70800F1541F /* libhdkOSX_32.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libhdkOSX_32.a;
+			remoteRef = 63C48C7112B0C70800F1541F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		63C76D5211865C4800C909BE /* libhdkOSX.a */ = {

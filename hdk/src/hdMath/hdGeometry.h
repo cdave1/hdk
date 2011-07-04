@@ -153,7 +153,7 @@ inline void hdScaleVertices(hdVec3* vertices, int vertexCount, const hdVec3& sca
 // Rotates vertices around origin.
 inline void hdRotateVertices(hdVec3* vertices, int vertexCount, const hdVec3& rotation)
 {
-#if (TARGET_IPHONE_SIMULATOR == 0) && (TARGET_OS_IPHONE == 1)	
+#if 1 //(TARGET_IPHONE_SIMULATOR == 0) && (TARGET_OS_IPHONE == 1)	
 	hdMatrix rot;
 	unsigned i;
 	

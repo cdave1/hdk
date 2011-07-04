@@ -26,6 +26,7 @@ typedef struct screenSettings
 	hdScreenOrientation_t orientation;
 	float aspectRatio;
 	float pixelsPerGameUnit;
+	float scaleFactor;
 	hdScreenRect screenRect;
 	hdScreenRect defaultCameraRect;
 	hdScreenRect minCameraRect;
@@ -50,6 +51,12 @@ void ScreenSettings_SetLandscape()
 void ScreenSettings_SetPortrait()
 {
 	screenSettings.orientation = hdScreenOrientationPortrait;
+}
+
+
+void ScreenSettings_SetScaleFactor(float scaleFactor)
+{
+	screenSettings.scaleFactor = hdMax(1.0f, scaleFactor);
 }
 
 
@@ -112,6 +119,12 @@ void ScreenSettings_GetScreenRect(float *outWidth, float *outHeight)
 }
 
 
+void ScreenSettings_GetScaleFactor(float *outScaleFactor)
+{
+	*outScaleFactor = hdClamp(screenSettings.scaleFactor, 1.0f, 10.0f);
+}
+
+
 void ScreenSettings_GetDefaultCameraRect(float *outWidth, float *outHeight)
 {
 	if (screenSettings.orientation == hdScreenOrientationLandscape)
@@ -166,8 +179,8 @@ void ScreenSettings_GetPixelsPerGameUnit(float *val)
 void ScreenSettings_GetZoomRatio(float *lowerX, float *lowerY, float *upperX, float *upperY)
 {
 	*lowerX = 1.0f;
-	*lowerY = 1.0f / screenSettings.aspectRatio;
+	*lowerY = 1.0f * screenSettings.aspectRatio;
 	*upperX = 2.0f;
-	*upperY = 2.0f / screenSettings.aspectRatio;
+	*upperY = 2.0f * screenSettings.aspectRatio;
 }
 

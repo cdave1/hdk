@@ -106,7 +106,7 @@ void b2Shape::CreateProxy(b2BroadPhase* broadPhase, const b2XForm& transform)
 	b2AABB aabb;
 	ComputeAABB(&aabb, transform);
 
-#ifdef DEBUG_
+#ifdef DEBUG
 	//printf("Transform position: %3.5f, %3.5f\n", transform.position.x, transform.position.y);
 	//printf("Transform R: %3.5f, %3.5f, %3.5f, %3.5f\n", transform.R.col1.x, transform.R.col1.y, transform.R.col2.x, transform.R.col2.y);
 	

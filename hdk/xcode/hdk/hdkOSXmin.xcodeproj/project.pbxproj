@@ -505,7 +505,6 @@
 		63CA76AE119667CD0010C802 /* hdAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63CA769A119667CD0010C802 /* hdAnimation.cpp */; };
 		63CA76AF119667CD0010C802 /* hdAnimationController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63CA769B119667CD0010C802 /* hdAnimationController.cpp */; };
 		63CA76B0119667CD0010C802 /* hdAnimationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 63CA769C119667CD0010C802 /* hdAnimationController.h */; };
-		63CA76B1119667CD0010C802 /* hdAnimationTimingFunction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63CA769D119667CD0010C802 /* hdAnimationTimingFunction.cpp */; };
 		63CA76B2119667CD0010C802 /* hdAnimationTimingFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = 63CA769E119667CD0010C802 /* hdAnimationTimingFunction.h */; };
 		63CA76B3119667CD0010C802 /* hdFunctionAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 63CA769F119667CD0010C802 /* hdFunctionAction.h */; };
 		63CA76B4119667CD0010C802 /* hdRotationAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63CA76A0119667CD0010C802 /* hdRotationAction.cpp */; };
@@ -525,7 +524,6 @@
 		63CA76C2119667CD0010C802 /* hdAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63CA769A119667CD0010C802 /* hdAnimation.cpp */; };
 		63CA76C3119667CD0010C802 /* hdAnimationController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63CA769B119667CD0010C802 /* hdAnimationController.cpp */; };
 		63CA76C4119667CD0010C802 /* hdAnimationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 63CA769C119667CD0010C802 /* hdAnimationController.h */; };
-		63CA76C5119667CD0010C802 /* hdAnimationTimingFunction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63CA769D119667CD0010C802 /* hdAnimationTimingFunction.cpp */; };
 		63CA76C6119667CD0010C802 /* hdAnimationTimingFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = 63CA769E119667CD0010C802 /* hdAnimationTimingFunction.h */; };
 		63CA76C7119667CD0010C802 /* hdFunctionAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 63CA769F119667CD0010C802 /* hdFunctionAction.h */; };
 		63CA76C8119667CD0010C802 /* hdRotationAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63CA76A0119667CD0010C802 /* hdRotationAction.cpp */; };
@@ -828,7 +826,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		63355F421186D94C001E7B41 /* libpng12.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng12.0.dylib; path = /Developer/Apple/SDKs/MacOSX10.5.sdk/usr/X11/lib/libpng12.0.dylib; sourceTree = "<absolute>"; };
+		63355F421186D94C001E7B41 /* libpng12.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng12.0.dylib; path = usr/X11/lib/libpng12.0.dylib; sourceTree = SDKROOT; };
 		6362DA72118995A600184AE0 /* libhdkOSXmin_64.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libhdkOSXmin_64.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		63891C921186B8D1000066F7 /* operations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = operations.cpp; sourceTree = "<group>"; };
 		63891C931186B8D1000066F7 /* path.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = path.cpp; sourceTree = "<group>"; };
@@ -962,7 +960,6 @@
 		63CA769A119667CD0010C802 /* hdAnimation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdAnimation.cpp; sourceTree = "<group>"; };
 		63CA769B119667CD0010C802 /* hdAnimationController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdAnimationController.cpp; sourceTree = "<group>"; };
 		63CA769C119667CD0010C802 /* hdAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdAnimationController.h; sourceTree = "<group>"; };
-		63CA769D119667CD0010C802 /* hdAnimationTimingFunction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdAnimationTimingFunction.cpp; sourceTree = "<group>"; };
 		63CA769E119667CD0010C802 /* hdAnimationTimingFunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdAnimationTimingFunction.h; sourceTree = "<group>"; };
 		63CA769F119667CD0010C802 /* hdFunctionAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdFunctionAction.h; sourceTree = "<group>"; };
 		63CA76A0119667CD0010C802 /* hdRotationAction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdRotationAction.cpp; sourceTree = "<group>"; };
@@ -1583,7 +1580,6 @@
 				63CA769A119667CD0010C802 /* hdAnimation.cpp */,
 				63CA769B119667CD0010C802 /* hdAnimationController.cpp */,
 				63CA769C119667CD0010C802 /* hdAnimationController.h */,
-				63CA769D119667CD0010C802 /* hdAnimationTimingFunction.cpp */,
 				63CA769E119667CD0010C802 /* hdAnimationTimingFunction.h */,
 				63CA769F119667CD0010C802 /* hdFunctionAction.h */,
 				63CA76A0119667CD0010C802 /* hdRotationAction.cpp */,
@@ -2670,7 +2666,14 @@
 			isa = PBXProject;
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "hdkOSXmin" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* hdk */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
@@ -2817,7 +2820,6 @@
 				63CA76AC119667CD0010C802 /* hdAction.cpp in Sources */,
 				63CA76AE119667CD0010C802 /* hdAnimation.cpp in Sources */,
 				63CA76AF119667CD0010C802 /* hdAnimationController.cpp in Sources */,
-				63CA76B1119667CD0010C802 /* hdAnimationTimingFunction.cpp in Sources */,
 				63CA76B4119667CD0010C802 /* hdRotationAction.cpp in Sources */,
 				63CA76B7119667CD0010C802 /* hdScaleAction.cpp in Sources */,
 				63CA76B8119667CD0010C802 /* hdTranslationAction.cpp in Sources */,
@@ -2960,7 +2962,6 @@
 				63CA76C0119667CD0010C802 /* hdAction.cpp in Sources */,
 				63CA76C2119667CD0010C802 /* hdAnimation.cpp in Sources */,
 				63CA76C3119667CD0010C802 /* hdAnimationController.cpp in Sources */,
-				63CA76C5119667CD0010C802 /* hdAnimationTimingFunction.cpp in Sources */,
 				63CA76C8119667CD0010C802 /* hdRotationAction.cpp in Sources */,
 				63CA76CB119667CD0010C802 /* hdScaleAction.cpp in Sources */,
 				63CA76CC119667CD0010C802 /* hdTranslationAction.cpp in Sources */,
@@ -3112,14 +3113,14 @@
 					"DEBUG=1",
 				);
 				HEADER_SEARCH_PATHS = (
-					/Developer/Apple/SDKs/MacOSX10.5.sdk/usr/X11/include,
+					/Developer/SDKs/MacOSX10.5.sdk/usr/X11/include,
 					/Users/david/hdk/hdTech1/hdk/src/,
 					/Users/david/hdk/hdTech1/hdk/libs/boost_1_38_0,
 				);
 				INSTALL_PATH = /usr/local/lib;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Developer/Apple/SDKs/MacOSX10.5.sdk/usr/X11/lib,
+					/Developer/SDKs/MacOSX10.5.sdk/usr/X11/lib,
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (

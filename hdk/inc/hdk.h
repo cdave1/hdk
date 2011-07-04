@@ -5,6 +5,7 @@
  *  Created by david on 14/02/09.
  *  Copyright 2009 n/a. All rights reserved.
  *
+ * VERSION: 1.0
  */
 
 #ifndef HDK_H

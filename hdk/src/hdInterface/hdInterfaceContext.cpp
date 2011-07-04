@@ -215,11 +215,3 @@ void hdInterfaceContext::HandleTapMovedDouble(const float aPreviousX, const floa
 									   bCurrentX, bCurrentY);
 }
 
-
-void hdInterfaceContext::HandleOrientationVectorUpdate(const float x, const float y, const float z)
-{
-	if (m_receivers->GetItemCount() == 0) return;
-		 
-	//m_controller->HandleOrientationChanged(x,y,z);	 
-}
-

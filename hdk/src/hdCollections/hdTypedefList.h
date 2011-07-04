@@ -48,6 +48,8 @@ class hdTypedefList
 		
 		T* GetItems();
 		
+		const T Top() const;
+		
 		const int GetItemCount() const;
 		
 		bool IsEmpty() const;
@@ -154,6 +156,14 @@ template<typename T, int Max>
 inline T* hdTypedefList<T, Max>::GetItems()
 {
 	return m_list;
+}
+
+
+template<typename T, int Max>
+const T hdTypedefList<T, Max>::Top() const
+{
+	if (m_itemCount == 0) return NULL;
+	return m_list[m_itemCount - 1];
 }
 
 

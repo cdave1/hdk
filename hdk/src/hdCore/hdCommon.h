@@ -27,6 +27,8 @@
 #define hdAssert(A) assert(A)
 #define kMaxStringSize 4096
 
+#define HDCALLBACK
+
 
 /*
  

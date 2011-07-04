@@ -90,6 +90,20 @@ void hdViewController::SetMouseUpCallbackForTaggedItems(const char *tag, void *o
 }
 
 
+const hdReceiver * hdViewController::GetInterfaceItemWithTag(const char *tag)
+{
+	for (unsigned i = 0; i < ((hdIBViewController *)m_hdIBViewController)->GetProxyList()->GetItemCount(); ++i)
+	{
+		hdIBProxy *proxy = ((hdIBViewController *)m_hdIBViewController)->GetProxyList()->GetItems()[i];
+		if (tag && strcmp(tag, proxy->GetTag()) == 0)
+		{
+			return proxy->GetInterfaceElement();
+		}
+	}
+    return NULL;
+}
+
+
 void hdViewController::InitSounds() {}
 
 

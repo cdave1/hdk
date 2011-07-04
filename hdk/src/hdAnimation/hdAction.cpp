@@ -62,12 +62,31 @@ const float hdAction::GetTimingFunctionDelta(const hdTimeInterval elapsed)
 	
 	if (m_timingFunction == hdAnimationTimingFunctionDecelerate)
 	{
-		float x = hdClamp((m_progress + elapsed)/m_duration, 0.0f, 1.0f);
-		if (x == 0.0f) return 1.0f;
+		float prev = hdClamp((m_progress - elapsed)/m_duration, 0.0f, 1.0f);
+		float curr = hdClamp((m_progress)/m_duration, 0.0f, 1.0f);
+		if (curr == 0.0f) return 1.0f;
 		
-		float s = 1.0f - (sinf(x * hd_half_pi));
-		hdPrintf("%3.5f\n",s/x);
-		return hdClamp(2.0f * (s/x), 1.0f, 10.0f);
+		float s = sinf(acosf(1.0f - curr)) - sinf(acosf(1.0f - prev));
+		return hdClamp(s/(elapsed/m_duration), 0.001f, 20.0f);
 	}
 	return 1.0f; 
 }
+
+
+const float hdAction::GetTimingFunctionProportion(const hdTimeInterval elapsed)
+{
+	if (m_timingFunction == hdAnimationTimingFunctionDecelerate)
+	{
+		float prev = hdClamp((m_progress - elapsed)/m_duration, 0.0f, 1.0f);
+		if (prev == 0.0f) return 1.0f;
+		return sinf(acosf(1.0f - prev));
+	}
+	else return (m_progress - elapsed)/m_duration;
+}
+
+
+const float hdAction::GetTimingFunctionElapsedProportion()
+{
+	return this->GetTimingFunctionProportion(0.0f);
+}
+

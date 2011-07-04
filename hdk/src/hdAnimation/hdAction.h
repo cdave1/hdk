@@ -46,6 +46,10 @@ public:
 	
 	const float GetTimingFunctionDelta(const hdTimeInterval elapsed);
 	
+	const float GetTimingFunctionProportion(const hdTimeInterval elapsed);
+	
+	const float GetTimingFunctionElapsedProportion();
+	
 protected:
 	hdAnimationTimingFunction_t m_timingFunction;
 	

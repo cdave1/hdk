@@ -68,7 +68,7 @@ void hdInterfaceController::Init(const e_hdInterfaceOrientation orientation, con
 	worldAABB.upper = hdVec3(m_screenWidth, m_screenHeight, -m_screenDepth);
 	m_gameWorld = new hdGameWorld(worldAABB);
 	
-	SetOrientation(orientation);
+	SetOrientation(e_hdInterfaceOrientationLandscapeLeft);
 
 	m_followObjectAnimation = NULL;
 	
@@ -386,10 +386,11 @@ void hdInterfaceController::ZoomProjection(const float aPreviousX, const float a
 	}
 	
 	// ensure the aabb is the same ratio as the screen
-	if ((hi.y - lo.y) / (hi.x - lo.x) != m_ScreenAspectRatio)
+	if ((hi.x - lo.x) / (hi.y - lo.y) != m_ScreenAspectRatio)
 	{
 		// Just set the bb upper value
-		hi.y = lo.y + (hi.x - lo.x) * m_ScreenAspectRatio;
+//		hi.y = lo.y + (hi.x - lo.x) * m_ScreenAspectRatio;
+        hi.x = lo.x + (hi.y - lo.y) * m_ScreenAspectRatio;
 	}
 	
 	m_projection->SetAABB(lo, hi);
@@ -437,35 +438,7 @@ void hdInterfaceController::ConvertInterfaceToScreen(hdVec2& vOut, float x, floa
 void hdInterfaceController::ConvertRawToScreen(hdVec2& vOut, float x, float y)
 {
 #if (TARGET_OS_IPHONE == 1) || (TARGET_IPHONE_SIMULATOR == 1)
-#ifdef IPHONE_BUILD
-	if (m_orientation == e_hdInterfaceOrientationLandscapeLeft)
-	{
-		vOut.Set(y, m_PixelScreenHeight - x);
-	}
-	else if (m_orientation == e_hdInterfaceOrientationLandscapeRight)
-	{
-		vOut.Set(m_PixelScreenWidth - y, x);
-	}
-	else
-	{
-		vOut.Set(x, m_PixelScreenHeight - y);
-	}
-#else
-	if (m_orientation == e_hdInterfaceOrientationLandscapeLeft)
-	{
-		
-		vOut.Set(m_PixelScreenWidth - y, m_PixelScreenHeight - x);
-	}
-	else if (m_orientation == e_hdInterfaceOrientationLandscapeRight)
-	{
-		
-		vOut.Set(y, x);
-	}
-	else 
-	{
-		vOut.Set(x, y);
-	}
-#endif
+	vOut.Set(x, m_PixelScreenHeight - y);
 #else
 	vOut.Set(x, y);
 #endif
@@ -500,8 +473,6 @@ void hdInterfaceController::HandleResize(const float newWidth, const float newHe
 	
 	m_projection->SetAABB(projectionAABB.lower, 
 						  projectionAABB.upper);
-	
-	HandleOrientationChanged();	
 }
 
 
@@ -514,6 +485,8 @@ void hdInterfaceController::ResetOrientation()
 void hdInterfaceController::SetOrientation(const e_hdInterfaceOrientation orientation)
 {
 	hdAABB projectionAABB;
+    ScreenSettings_SetLandscape();
+    /*
 	e_hdInterfaceOrientation oldOrientation = m_orientation;
 
 	if (orientation == e_hdInterfaceOrientationPortrait ||
@@ -525,7 +498,8 @@ void hdInterfaceController::SetOrientation(const e_hdInterfaceOrientation orient
 			 orientation == e_hdInterfaceOrientationLandscapeRight)
 	{
 		ScreenSettings_SetLandscape();
-	}
+	}*/
+    m_orientation = orientation;
 	
 	ScreenSettings_GetAspectRatio(&m_ScreenAspectRatio);
 	ScreenSettings_GetScreenRect(&m_PixelScreenWidth, &m_PixelScreenHeight);
@@ -545,43 +519,7 @@ void hdInterfaceController::SetOrientation(const e_hdInterfaceOrientation orient
 		projectionAABB.upper = hdVec3(m_screenWidth, m_screenHeight, m_screenDepth);
 		m_projection = new hdOrthographicProjection(m_gameWorld, projectionAABB);
 	}
-	
-#if (TARGET_OS_IPHONE == 1) || (TARGET_IPHONE_SIMULATOR == 1)
-	m_orientation = orientation;
-#if IPHONE_BUILD
-	if (orientation == e_hdInterfaceOrientationPortrait ||
-		orientation == e_hdInterfaceOrientationPortraitUpsideDown)
-	{
-		m_landscapeRotationZValue = 0.0f;
-	}
-	else if (orientation == e_hdInterfaceOrientationLandscapeLeft)
-	{
-		m_landscapeRotationZValue = 90.0f;
-	}
-	else if (orientation == e_hdInterfaceOrientationLandscapeRight)
-	{
-		m_landscapeRotationZValue = 270.0f;
-	}
-#else
-	if (orientation == e_hdInterfaceOrientationPortrait ||
-		orientation == e_hdInterfaceOrientationPortraitUpsideDown)
-	{
-		m_landscapeRotationZValue = 0.0f;
-	}
-	else if (orientation == e_hdInterfaceOrientationLandscapeLeft)
-	{
-		m_landscapeRotationZValue = 90.0f;
-	}
-	else if (orientation == e_hdInterfaceOrientationLandscapeRight)
-	{
-		m_landscapeRotationZValue = -90.0f;
-	}
-#endif
-	
-#else
-	m_orientation = e_hdInterfaceOrientationLandscapeLeft;
-#endif
-	HandleOrientationChanged();
+	m_landscapeRotationZValue = 0.0f;
 }
 
 

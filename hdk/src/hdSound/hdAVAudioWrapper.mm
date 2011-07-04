@@ -9,9 +9,9 @@
 #import "hdAVAudioWrapper.h"
 
 @interface hdAVAudioWrapper ()
-- (void)isIPodPlaying;
-- (BOOL)isPlayingAvAudio;
-- (void)cleanUpSound;
+//- (void)isIPodPlaying;
+//- (BOOL)isPlayingAvAudio;
+//- (void)cleanUpSound;
 @end
 
 
@@ -100,7 +100,7 @@ void MusicPlayer_Teardown()
 - (BOOL)isPlaying
 {
 	BOOL playing = false;
-	NSArray *keys = [players keys];
+	NSArray *keys = [players allKeys];
 	for (NSString *filename in keys)
 	{
 		AVAudioPlayer *player = [players valueForKey:filename];

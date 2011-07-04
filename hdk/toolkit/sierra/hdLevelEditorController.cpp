@@ -75,6 +75,12 @@ hdLevelEditorController::hdLevelEditorController()
 	m_totemWorld->AddLevel(m_currentLevel);
 	
 	m_canSaveCurrentWorldToExistingFile = false;
+	
+	
+	/*
+	 * /\/\eshes
+	 */
+	//m_meshes = new hdTypedefList<hdMesh *, 64>();
 }
 
 
@@ -90,6 +96,7 @@ hdLevelEditorController::~hdLevelEditorController()
 	totemWorldManager::TearDown();
 	
 	delete m_gameWorld;
+	//delete m_meshes;
 }
 
 
@@ -505,6 +512,10 @@ const bool hdLevelEditorController::CanSelectGameObject(const hdGameObject *obje
 			return true;
 		}
 	}
+	//else if (object->GetUserType() == HD_MESH_USER_TYPE)
+	//{
+	//	return true;
+	//}
 	
 	return false;
 }
@@ -547,27 +558,6 @@ void hdLevelEditorController::ScaleSelectedObjects()
 			hdVec3 scale(boxCurr.x / boxPrev.x, boxCurr.x / boxPrev.x, 1.0f);
 			
 			m_selectedGameObjects->GetItems()[i]->Scale(scale, center);
-			
-			/*
-			hdTranslateVertices(m_selectedGameObjects->GetItems()[i]->GetVertices(), 
-								m_selectedGameObjects->GetItems()[i]->GetVertexCount(), 
-								-center);
-			
-			hdScaleVertices(m_selectedGameObjects->GetItems()[i]->GetVertices(), 
-							m_selectedGameObjects->GetItems()[i]->GetVertexCount(), 
-							scale);
-			
-			hdTranslateVertices(m_selectedGameObjects->GetItems()[i]->GetVertices(), 
-								m_selectedGameObjects->GetItems()[i]->GetVertexCount(), 
-								center);
-			
-			
-			
-
-			
-			m_selectedGameObjects->GetItems()[i]->ResetAABB();
-			
-			((hdPolygon *)m_selectedGameObjects->GetItems()[i])->SetStartingVerticesToCurrent();*/
 		}
 	}
 }
@@ -605,27 +595,6 @@ void hdLevelEditorController::RotateSelectedObjects()
 			hdVec3 rot(0,0,delta);
 			
 			m_selectedGameObjects->GetItems()[i]->Rotate(rot, center);
-			
-			/*
-			hdTranslateVertices(m_selectedGameObjects->GetItems()[i]->GetVertices(), 
-								m_selectedGameObjects->GetItems()[i]->GetVertexCount(), 
-								-center);
-			
-			hdRotateVertices(m_selectedGameObjects->GetItems()[i]->GetVertices(), 
-							 m_selectedGameObjects->GetItems()[i]->GetVertexCount(), rot);
-			
-			hdTranslateVertices(m_selectedGameObjects->GetItems()[i]->GetVertices(), 
-								m_selectedGameObjects->GetItems()[i]->GetVertexCount(), 
-								center);
-			
-			//settings.DEPRECATEDselectedGameObject->ResetOBB();
-			//m_selectedGameObjects->GetItems()[i]->ResetOBB();
-			m_selectedGameObjects->GetItems()[i]->ResetAABB();
-			//((hdPolygon *)settings.DEPRECATEDselectedGameObject)->SetStartingVerticesToCurrent();
-			
-			//settings.DEPRECATEDselectedGameObject->GetOBB().transform.rotation += rot;
-			((hdPolygon *)m_selectedGameObjects->GetItems()[i])->SetStartingVerticesToCurrent();
-			*/
 		}
 	}
 }
@@ -674,6 +643,43 @@ void hdLevelEditorController::MoveSelectedObjects()
 	}
 }
 
+
+void hdLevelEditorController::ApplyBGValuesToAllFollowingLevels()
+{
+	totemLevel *level;
+	
+	int index = -1;
+	for (int i = 0; i < m_totemWorld->GetLevelCount(); i++)
+	{
+		if (m_totemWorld->GetLevels()[i] == this->GetCurrentLevel())
+		{
+			index = i;
+			break;
+		}
+	}
+	
+	if (index == -1) return;
+	
+	for (int i = index + 1; i < m_totemWorld->GetLevelCount(); i++)
+	{
+		level = (totemLevel *)m_totemWorld->GetLevels()[i];
+		
+		level->SetSkyTextureName(this->GetCurrentLevel()->GetSkyTextureName());
+		level->SetFarBackgroundTextureName(this->GetCurrentLevel()->GetFarBackgroundTextureName());
+		level->SetNearBackgroundTextureName(this->GetCurrentLevel()->GetNearBackgroundTextureName());
+		level->SetDistantBackgroundTextureName(this->GetCurrentLevel()->GetDistantBackgroundTextureName());
+		
+		
+		/*
+		 level->SetBackgroundBottomTint((int) atoi(currentLevelSkyTintBottomRed->get_text()),
+		 (int) atoi(currentLevelSkyTintBottomGreen->get_text()),
+		 (int) atoi(currentLevelSkyTintBottomBlue->get_text()));
+		 
+		 level->SetBackgroundTopTint((int) atoi(currentLevelSkyTintTopRed->get_text()),
+		 (int) atoi(currentLevelSkyTintTopGreen->get_text()),
+		 (int) atoi(currentLevelSkyTintTopBlue->get_text()));*/
+	}
+}
 
 
 void hdLevelEditorController::AddNewBlock()
@@ -750,6 +756,21 @@ void hdLevelEditorController::AddNewBlock()
 			}		
 		}
 	}
+}
+
+
+
+void hdLevelEditorController::AddNewMesh()
+{
+	//if (!m_currentMesh)
+	//{
+	//	m_currentMesh = new hdMesh();
+	//	m_currentMesh->Init(m_gameWorld);
+	//	m_meshes->Add(m_currentMesh);
+	//}
+	
+	//m_currentMesh->AddPoint(m_startClickPoint.x, m_startClickPoint.y, 0.0f);
+	//m_currentMesh->ResetAABB();
 }
 
 
@@ -1299,6 +1320,10 @@ void hdLevelEditorController::MouseUp(bool shiftKeyDown)
 	{
 		this->AddNewEvent();
 	}
+	else if (settings.interfacePaletteMode == e_interfacePaletteModeStraightlineMesh)
+	{
+		this->AddNewMesh();
+	}
 	/*
 	 else if (settings.interfacePaletteMode == e_interfacePaletteModeTotemShape)
 	 {
@@ -1322,18 +1347,32 @@ void hdLevelEditorController::MouseUp(bool shiftKeyDown)
 	// Hold down shift to complete a shape.
 	if (shiftKeyDown)
 	{
-		if (m_currentBlockShape == NULL) return;
+		//if (m_currentMesh)
+		//{
+		//	if (m_currentMesh->GetVertexCount() > 1)
+		//	{
+		//		m_currentMesh->AddPoint(m_currentMesh->GetVertices()[0]);
+		//		m_currentMesh->GenerateTesselation();
+		//	}
+		//	m_currentMesh = NULL;
+		//}
 		
-		// Ensure vertices are ordered correctly.
-		ReverseCCWVertices(m_currentBlockShape->GetVertices(), m_currentBlockShape->GetVertexCount());
-		m_currentBlockShape->SetStartingVerticesToCurrent();
-		m_currentBlockShape->ResetTextureCoords();
+		if (m_currentBlockShape)
+		{
+			
+			// Ensure vertices are ordered correctly.
+			ReverseCCWVertices(m_currentBlockShape->GetVertices(), m_currentBlockShape->GetVertexCount());
+			m_currentBlockShape->SetStartingVerticesToCurrent();
+			m_currentBlockShape->ResetTextureCoords();
+			
+			// stop shape editing
+			m_currentBlockShape = NULL;
+			m_currentLayerPolygon = NULL;
+			settings.DEPRECATEDselectedGameObject = NULL;
+			m_selectedGameObjects->RemoveAll();
+		}
 		
-		// stop shape editing
-		m_currentBlockShape = NULL;
-		m_currentLayerPolygon = NULL;
-		settings.DEPRECATEDselectedGameObject = NULL;
-		m_selectedGameObjects->RemoveAll();
+		
 	}
 }
 
@@ -1868,8 +1907,18 @@ void hdLevelEditorController::DrawString(int x, int y, const char *string, ...)
 	
 	glPopMatrix();
 	glMatrixMode(GL_PROJECTION);
-	glPopMatrix();
-	
+	glPopMatrix();	
+}
+
+
+// called when model projection drawing stuff.
+void hdLevelEditorController::DrawExperimentalModelObjects()
+{
+	//for (unsigned i = 0; i < m_meshes->GetItemCount(); ++i)
+	//{
+	//	hdMesh *mesh = m_meshes->GetItems()[i];
+	//	mesh->DebugDraw();
+	//}
 }
 
 
@@ -2207,6 +2256,8 @@ void hdLevelEditorController::Draw()
 	glVertex2f(- GameMaxScreenWidth/2 + GameMaxScreenWidth, -GameMaxScreenHeight/2 + GameMaxScreenHeight);
 	glVertex2f(- GameMaxScreenWidth/2 + GameMaxScreenWidth, -GameMaxScreenHeight/2);
 	glEnd();
+	
+	this->DrawExperimentalModelObjects();
 	
 	glPopMatrix();
 	

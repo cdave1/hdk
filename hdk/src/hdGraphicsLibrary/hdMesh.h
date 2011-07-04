@@ -5,47 +5,103 @@
  *  Created by david on 3/07/09.
  *  Copyright 2009 n/a. All rights reserved.
  *
+ * In the 2D context of the hdEngine, a mesh has a set of boundary
+ * contours and a set of internal polygons.
+ *
+ * The internal polygons are used to render the face, while
+ * the boundary is used to render the extrusion.
+ *
+ * NOTE: the boundary property can be used to generate 2D
+ * physics outlines from arbitrary meshes. We simply need
+ * to render the triangles of the mesh with a z value of 0,
+ * and then generate a boundary polygon.
+ *
+ * The mesh allows us to present any arbitrary shape, so in a way,
+ * it is no longer absolutely neccessary to retain shape information
+ * apart from cases where physics approximation is required (e.g just
+ * represent a 10 point start with a circle).
+ *
+ * One of the reasons I've been able to be quite productive is that
+ * the shape info is used by the physics engine. There may be a case for managing physics
+ * info separately. The downside to this is that it increases 
+ * complexity, in both interface and underlying bookkeeping, for a minor productivity gain.
+ *
+ * In any case, I think it is about time I forked a new version and copied across
+ * the totem classes into a 2D game folder.
  */
 
 #ifndef _HD_MESH_H_
 #define _HD_MESH_H_
 
-/*
-class hdMesh : public hdGameObject
+#include "hdGraphicsLibrary/hdPolygon.h"
+#include "hdGraphicsLibrary/hdMeshPolygon.h"
+
+#ifdef LEVEL_EDITOR
+#include "glut/glut.h"
+#else
+#define GLenum unsigned int
+#endif
+
+#define HD_MESH_USER_TYPE 0xF00D
+
+#define HD_MESH_POLYGON_COUNT 1024
+#define MESH_TEMP_VERTEX_COUNT 128
+
+typedef GLdouble gluVector_t[3];
+
+
+class hdMeshPolygon;
+
+class hdMesh : public hdPolygon
 {
-	
+public:
 	hdMesh();
 	
 	hdMesh(hdGameWorld* gameWorld);
 	
 	~hdMesh();
 	
-	void ResetAABB();
+	void Init(hdGameWorld *gameWorld);
 	
-	void ResetOBB();
+	void Rotate(const hdVec3& rotationVector, const hdVec3& rotationAxis);
 	
-	hdVec3* GetVertices();
-	
-	const int GetVertexCount() const;
-	
-	
-	hdVec2* GetTextureCoordinates();
-	
-	void SetStartingVerticesToCurrent();
-	
-	void ResetVertices();
-	
-	void ResetTextureCoords();
-	
-	void ResetTextureCoords(const hdAABB& aabb);
+	void Scale(const hdVec3& scaleVector, const hdVec3& scaleAxis);
 	
 	void MoveTo(const hdVec3& center);
+
+	void AddPointInternal(const float x, const float y, const float z);
 	
-	hdAABB GetStartingAABB() const;
+	const bool AddPolygonMesh(hdMeshPolygon *polygonMesh);
 	
-	hdVec3* GetStartingVertices();
+	void RemovePolygonMeshAtIndex(const uint32 index);
 	
-};*/
+	hdPolygon * GenerateTesselation();
+	
+	const float * Combine(const float x, const float y, const float z);
+	
+	void DebugDraw();
+	
+	void Begin(GLenum meshType);
+	
+	void End();
+	
+	
+private:
+	
+	hdMeshPolygon *m_currentMeshPolygon;
+	
+	hdTypedefList<hdMeshPolygon *, HD_MESH_POLYGON_COUNT> * m_polygons;
+	
+	hdTypedefList<hdVec3, MESH_TEMP_VERTEX_COUNT> * m_tempVertices;
+	
+	float m_tempVertex[3];
+	
+	gluVector_t * m_gluVectors;
+	
+};
+
+
+
 
 
 #endif
