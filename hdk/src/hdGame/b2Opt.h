@@ -58,7 +58,7 @@
  */
 B2EXPORT void opt_b2Vec2Mul(const float* A, const float* v, float *dst)
 {
-#ifdef _ARM_ARCH_7 && defined(__ARM_NEON__)
+#if defined(_ARM_ARCH_7) && defined(__ARM_NEON__)
 	
 	asm volatile
 	(

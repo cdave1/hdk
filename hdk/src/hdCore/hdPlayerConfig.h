@@ -31,16 +31,14 @@ public:
 	
 	static bool SetValue(const char *key, const char *value);
 	
-
-	
-	
-private:
-	friend class AppController;
-	
 	
 	static bool SaveConfigFile();
 	
 	static bool LoadConfigFile();
+	
+
+	
+	
 	
 	
 	

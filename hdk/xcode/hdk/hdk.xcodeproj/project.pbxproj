@@ -8,15 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6353FD2B1340079400AD7F1D /* hdMultiTouchViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6353FD291340079400AD7F1D /* hdMultiTouchViewController.h */; };
-		6353FD2C1340079400AD7F1D /* hdMultiTouchViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6353FD291340079400AD7F1D /* hdMultiTouchViewController.h */; };
 		6353FD2D1340079400AD7F1D /* hdMultiTouchViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6353FD2A1340079400AD7F1D /* hdMultiTouchViewController.mm */; };
-		6353FD2E1340079400AD7F1D /* hdMultiTouchViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6353FD2A1340079400AD7F1D /* hdMultiTouchViewController.mm */; };
 		6384558911C8337300C421AB /* hdViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6384558711C8337300C421AB /* hdViewController.h */; };
 		6384558A11C8337300C421AB /* hdViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6384558811C8337300C421AB /* hdViewController.cpp */; };
-		6384558B11C8337300C421AB /* hdViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6384558711C8337300C421AB /* hdViewController.h */; };
-		6384558C11C8337300C421AB /* hdViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6384558811C8337300C421AB /* hdViewController.cpp */; };
 		63B351D611F821B100D20861 /* hdScripting.h in Headers */ = {isa = PBXBuildFile; fileRef = 63B351D511F821B100D20861 /* hdScripting.h */; };
-		63B351D711F821B100D20861 /* hdScripting.h in Headers */ = {isa = PBXBuildFile; fileRef = 63B351D511F821B100D20861 /* hdScripting.h */; };
 		63CA7785119678090010C802 /* error_code.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63CA7770119678090010C802 /* error_code.cpp */; };
 		63CA7786119678090010C802 /* config.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 63CA7771119678090010C802 /* config.hpp */; };
 		63CA7787119678090010C802 /* cygwin_error.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 63CA7772119678090010C802 /* cygwin_error.hpp */; };
@@ -35,489 +30,6 @@
 		63CA7794119678090010C802 /* portability.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63CA7782119678090010C802 /* portability.cpp */; };
 		63CA7795119678090010C802 /* utf8_codecvt_facet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63CA7783119678090010C802 /* utf8_codecvt_facet.cpp */; };
 		63CA7796119678090010C802 /* utf8_codecvt_facet.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 63CA7784119678090010C802 /* utf8_codecvt_facet.hpp */; };
-		63EC82C211BC9D02000DFE1A /* AppleOpenALSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = E428341F116FF684008E3594 /* AppleOpenALSupport.h */; };
-		63EC82C311BC9D02000DFE1A /* CMOpenALSound.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283420116FF684008E3594 /* CMOpenALSound.h */; };
-		63EC82C411BC9D02000DFE1A /* CMOpenALSoundManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283422116FF684008E3594 /* CMOpenALSoundManager.h */; };
-		63EC82C511BC9D02000DFE1A /* SynthesizeSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283424116FF684008E3594 /* SynthesizeSingleton.h */; };
-		63EC82C611BC9D02000DFE1A /* hdSoundManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283427116FF684008E3594 /* hdSoundManager.h */; };
-		63EC82C711BC9D02000DFE1A /* hdSoundEngineInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283428116FF684008E3594 /* hdSoundEngineInterface.h */; };
-		63EC82C811BC9D02000DFE1A /* hdOpenALSoundEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283429116FF684008E3594 /* hdOpenALSoundEngine.h */; };
-		63EC82C911BC9D02000DFE1A /* hdOpenALPool.h in Headers */ = {isa = PBXBuildFile; fileRef = E428342B116FF684008E3594 /* hdOpenALPool.h */; };
-		63EC82CA11BC9D02000DFE1A /* hdAVAudioWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = E428342D116FF684008E3594 /* hdAVAudioWrapper.h */; };
-		63EC82CB11BC9D02000DFE1A /* hdPauseAction.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283430116FF684008E3594 /* hdPauseAction.h */; };
-		63EC82CC11BC9D02000DFE1A /* hdAction.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283432116FF684008E3594 /* hdAction.h */; };
-		63EC82CD11BC9D02000DFE1A /* hdAnimationController.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283436116FF684008E3594 /* hdAnimationController.h */; };
-		63EC82CE11BC9D02000DFE1A /* hdAnimationTimingFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283439116FF684008E3594 /* hdAnimationTimingFunction.h */; };
-		63EC82CF11BC9D02000DFE1A /* hdFunctionAction.h in Headers */ = {isa = PBXBuildFile; fileRef = E428343B116FF684008E3594 /* hdFunctionAction.h */; };
-		63EC82D011BC9D02000DFE1A /* hdRotationAction.h in Headers */ = {isa = PBXBuildFile; fileRef = E428343D116FF684008E3594 /* hdRotationAction.h */; };
-		63EC82D111BC9D02000DFE1A /* hdScaleAction.h in Headers */ = {isa = PBXBuildFile; fileRef = E428343E116FF684008E3594 /* hdScaleAction.h */; };
-		63EC82D211BC9D02000DFE1A /* hdTranslationAction.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283441116FF684008E3594 /* hdTranslationAction.h */; };
-		63EC82D311BC9D02000DFE1A /* hdVectorAction.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283443116FF684008E3594 /* hdVectorAction.h */; };
-		63EC82D411BC9D02000DFE1A /* hdAlphaAction.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283444116FF684008E3594 /* hdAlphaAction.h */; };
-		63EC82D511BC9D02000DFE1A /* hdPointerList.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283448116FF684008E3594 /* hdPointerList.h */; };
-		63EC82D611BC9D02000DFE1A /* hdSerializablePointerList.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283449116FF684008E3594 /* hdSerializablePointerList.h */; };
-		63EC82D711BC9D02000DFE1A /* hdTypedefList.h in Headers */ = {isa = PBXBuildFile; fileRef = E428344A116FF684008E3594 /* hdTypedefList.h */; };
-		63EC82D811BC9D02000DFE1A /* hdCollectionSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = E428344B116FF684008E3594 /* hdCollectionSettings.h */; };
-		63EC82D911BC9D02000DFE1A /* hdApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = E428344D116FF684008E3594 /* hdApplication.h */; };
-		63EC82DA11BC9D02000DFE1A /* hdCompression.h in Headers */ = {isa = PBXBuildFile; fileRef = E428344F116FF684008E3594 /* hdCompression.h */; };
-		63EC82DB11BC9D02000DFE1A /* hdPakFileSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283451116FF684008E3594 /* hdPakFileSystem.h */; };
-		63EC82DC11BC9D02000DFE1A /* hdCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283453116FF684008E3594 /* hdCommon.h */; };
-		63EC82DD11BC9D02000DFE1A /* hdTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283456116FF684008E3594 /* hdTypes.h */; };
-		63EC82DE11BC9D02000DFE1A /* hdFileSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283457116FF684008E3594 /* hdFileSystem.h */; };
-		63EC82DF11BC9D02000DFE1A /* hdIPhoneFileSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283458116FF684008E3594 /* hdIPhoneFileSystem.h */; };
-		63EC82E011BC9D02000DFE1A /* hdSystemSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = E428345A116FF684008E3594 /* hdSystemSettings.h */; };
-		63EC82E111BC9D02000DFE1A /* hdIPhoneSystemSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = E428345B116FF684008E3594 /* hdIPhoneSystemSettings.h */; };
-		63EC82E211BC9D02000DFE1A /* hdOSFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = E428345D116FF684008E3594 /* hdOSFunctions.h */; };
-		63EC82E311BC9D02000DFE1A /* hdIPhoneOSFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = E428345E116FF684008E3594 /* hdIPhoneOSFunctions.h */; };
-		63EC82E411BC9D02000DFE1A /* hdConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283460116FF684008E3594 /* hdConfig.h */; };
-		63EC82E511BC9D02000DFE1A /* hdFileSystemSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283462116FF684008E3594 /* hdFileSystemSupport.h */; };
-		63EC82E611BC9D02000DFE1A /* hdPlayerConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283463116FF684008E3594 /* hdPlayerConfig.h */; };
-		63EC82E711BC9D02000DFE1A /* hdPhysicsJoint.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283466116FF684008E3594 /* hdPhysicsJoint.h */; };
-		63EC82E811BC9D02000DFE1A /* hd2DGameController.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283468116FF684008E3594 /* hd2DGameController.h */; };
-		63EC82E911BC9D02000DFE1A /* hdAgent.h in Headers */ = {isa = PBXBuildFile; fileRef = E428346A116FF684008E3594 /* hdAgent.h */; };
-		63EC82EA11BC9D02000DFE1A /* hdBody.h in Headers */ = {isa = PBXBuildFile; fileRef = E428346C116FF684008E3594 /* hdBody.h */; };
-		63EC82EB11BC9D02000DFE1A /* hdGameObject.h in Headers */ = {isa = PBXBuildFile; fileRef = E428346E116FF684008E3594 /* hdGameObject.h */; };
-		63EC82EC11BC9D02000DFE1A /* hdGameWorld.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283470116FF684008E3594 /* hdGameWorld.h */; };
-		63EC82ED11BC9D02000DFE1A /* hdLevel.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283472116FF684008E3594 /* hdLevel.h */; };
-		63EC82EE11BC9D02000DFE1A /* hdLevelGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283474116FF684008E3594 /* hdLevelGroup.h */; };
-		63EC82EF11BC9D02000DFE1A /* hdOrthographicProjection.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283476116FF684008E3594 /* hdOrthographicProjection.h */; };
-		63EC82F011BC9D02000DFE1A /* hdPhysicsGlue.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283478116FF684008E3594 /* hdPhysicsGlue.h */; };
-		63EC82F111BC9D02000DFE1A /* hdPhysicsObject.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283479116FF684008E3594 /* hdPhysicsObject.h */; };
-		63EC82F211BC9D02000DFE1A /* b2Opt.h in Headers */ = {isa = PBXBuildFile; fileRef = E428347A116FF684008E3594 /* b2Opt.h */; };
-		63EC82F311BC9D02000DFE1A /* hdGraphicsInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = E428347C116FF684008E3594 /* hdGraphicsInterface.h */; };
-		63EC82F411BC9D02000DFE1A /* hdDrawable.h in Headers */ = {isa = PBXBuildFile; fileRef = E428347D116FF684008E3594 /* hdDrawable.h */; };
-		63EC82F511BC9D02000DFE1A /* hdDrawingUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = E428347F116FF684008E3594 /* hdDrawingUtilities.h */; };
-		63EC82F611BC9D02000DFE1A /* hdPolygon.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283482116FF684008E3594 /* hdPolygon.h */; };
-		63EC82F711BC9D02000DFE1A /* hdTexture.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283483116FF684008E3594 /* hdTexture.h */; };
-		63EC82F811BC9D02000DFE1A /* hdTextureManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283485116FF684008E3594 /* hdTextureManager.h */; };
-		63EC82F911BC9D02000DFE1A /* hdTGALoader.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283487116FF684008E3594 /* hdTGALoader.h */; };
-		63EC82FA11BC9D02000DFE1A /* hdPNGLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283489116FF684008E3594 /* hdPNGLoader.h */; };
-		63EC82FB11BC9D02000DFE1A /* hdFontPolygon.h in Headers */ = {isa = PBXBuildFile; fileRef = E428348C116FF684008E3594 /* hdFontPolygon.h */; };
-		63EC82FC11BC9D02000DFE1A /* hdFont.h in Headers */ = {isa = PBXBuildFile; fileRef = E428348E116FF684008E3594 /* hdFont.h */; };
-		63EC82FD11BC9D02000DFE1A /* hdFontManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283490116FF684008E3594 /* hdFontManager.h */; };
-		63EC82FE11BC9D02000DFE1A /* hdButton.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283492116FF684008E3594 /* hdButton.h */; };
-		63EC82FF11BC9D02000DFE1A /* hdInterfaceLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283495116FF684008E3594 /* hdInterfaceLayer.h */; };
-		63EC830011BC9D02000DFE1A /* hdReceiver.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283497116FF684008E3594 /* hdReceiver.h */; };
-		63EC830111BC9D02000DFE1A /* hdInterfaceController.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283498116FF684008E3594 /* hdInterfaceController.h */; };
-		63EC830211BC9D02000DFE1A /* hdUIContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = E428349A116FF684008E3594 /* hdUIContainer.h */; };
-		63EC830311BC9D02000DFE1A /* hdUIImage.h in Headers */ = {isa = PBXBuildFile; fileRef = E428349C116FF684008E3594 /* hdUIImage.h */; };
-		63EC830411BC9D02000DFE1A /* hdInterfaceEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = E428349E116FF684008E3594 /* hdInterfaceEnums.h */; };
-		63EC830511BC9D02000DFE1A /* hdUISegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = E428349F116FF684008E3594 /* hdUISegmentedControl.h */; };
-		63EC830611BC9D02000DFE1A /* hdCheckbox.h in Headers */ = {isa = PBXBuildFile; fileRef = E42834A1116FF684008E3594 /* hdCheckbox.h */; };
-		63EC830711BC9D02000DFE1A /* hdInterfaceContext.h in Headers */ = {isa = PBXBuildFile; fileRef = E42834A3116FF684008E3594 /* hdInterfaceContext.h */; };
-		63EC830811BC9D02000DFE1A /* hdFixed.h in Headers */ = {isa = PBXBuildFile; fileRef = E42834A6116FF684008E3594 /* hdFixed.h */; };
-		63EC830911BC9D02000DFE1A /* hdGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = E42834A7116FF684008E3594 /* hdGeometry.h */; };
-		63EC830A11BC9D02000DFE1A /* hdMathSerializable.h in Headers */ = {isa = PBXBuildFile; fileRef = E42834A9116FF684008E3594 /* hdMathSerializable.h */; };
-		63EC830B11BC9D02000DFE1A /* hdMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = E42834AB116FF684008E3594 /* hdMatrix.h */; };
-		63EC830C11BC9D02000DFE1A /* hdParticleEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = E42834AE116FF684008E3594 /* hdParticleEmitter.h */; };
-		63EC830D11BC9D02000DFE1A /* hdPhysicsParticleEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = E42834B0116FF684008E3594 /* hdPhysicsParticleEmitter.h */; };
-		63EC830E11BC9D02000DFE1A /* Box2D.h in Headers */ = {isa = PBXBuildFile; fileRef = E428377C117005AB008E3594 /* Box2D.h */; };
-		63EC830F11BC9D02000DFE1A /* b2BroadPhase.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283780117005AB008E3594 /* b2BroadPhase.h */; };
-		63EC831011BC9D02000DFE1A /* b2Collision.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283784117005AB008E3594 /* b2Collision.h */; };
-		63EC831111BC9D02000DFE1A /* b2PairManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283787117005AB008E3594 /* b2PairManager.h */; };
-		63EC831211BC9D02000DFE1A /* b2CircleShape.h in Headers */ = {isa = PBXBuildFile; fileRef = E428378B117005AB008E3594 /* b2CircleShape.h */; };
-		63EC831311BC9D02000DFE1A /* b2EdgeShape.h in Headers */ = {isa = PBXBuildFile; fileRef = E428378D117005AB008E3594 /* b2EdgeShape.h */; };
-		63EC831411BC9D02000DFE1A /* b2PolygonShape.h in Headers */ = {isa = PBXBuildFile; fileRef = E428378F117005AB008E3594 /* b2PolygonShape.h */; };
-		63EC831511BC9D02000DFE1A /* b2Shape.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283791117005AB008E3594 /* b2Shape.h */; };
-		63EC831611BC9D02000DFE1A /* b2BlockAllocator.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283794117005AB008E3594 /* b2BlockAllocator.h */; };
-		63EC831711BC9D02000DFE1A /* b2Math.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283796117005AB008E3594 /* b2Math.h */; };
-		63EC831811BC9D02000DFE1A /* b2Settings.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283798117005AB008E3594 /* b2Settings.h */; };
-		63EC831911BC9D02000DFE1A /* b2StackAllocator.h in Headers */ = {isa = PBXBuildFile; fileRef = E428379A117005AB008E3594 /* b2StackAllocator.h */; };
-		63EC831A11BC9D02000DFE1A /* Fixed.h in Headers */ = {isa = PBXBuildFile; fileRef = E428379B117005AB008E3594 /* Fixed.h */; };
-		63EC831B11BC9D02000DFE1A /* jtypes.h in Headers */ = {isa = PBXBuildFile; fileRef = E428379C117005AB008E3594 /* jtypes.h */; };
-		63EC831C11BC9D02000DFE1A /* b2Body.h in Headers */ = {isa = PBXBuildFile; fileRef = E428379F117005AB008E3594 /* b2Body.h */; };
-		63EC831D11BC9D02000DFE1A /* b2ContactManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837A1117005AB008E3594 /* b2ContactManager.h */; };
-		63EC831E11BC9D02000DFE1A /* b2Island.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837A3117005AB008E3594 /* b2Island.h */; };
-		63EC831F11BC9D02000DFE1A /* b2World.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837A5117005AB008E3594 /* b2World.h */; };
-		63EC832011BC9D02000DFE1A /* b2WorldCallbacks.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837A7117005AB008E3594 /* b2WorldCallbacks.h */; };
-		63EC832111BC9D02000DFE1A /* b2CircleContact.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837AA117005AB008E3594 /* b2CircleContact.h */; };
-		63EC832211BC9D02000DFE1A /* b2Contact.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837AC117005AB008E3594 /* b2Contact.h */; };
-		63EC832311BC9D02000DFE1A /* b2ContactSolver.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837AE117005AB008E3594 /* b2ContactSolver.h */; };
-		63EC832411BC9D02000DFE1A /* b2EdgeAndCircleContact.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837B0117005AB008E3594 /* b2EdgeAndCircleContact.h */; };
-		63EC832511BC9D02000DFE1A /* b2NullContact.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837B1117005AB008E3594 /* b2NullContact.h */; };
-		63EC832611BC9D02000DFE1A /* b2PolyAndCircleContact.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837B3117005AB008E3594 /* b2PolyAndCircleContact.h */; };
-		63EC832711BC9D02000DFE1A /* b2PolyAndEdgeContact.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837B5117005AB008E3594 /* b2PolyAndEdgeContact.h */; };
-		63EC832811BC9D02000DFE1A /* b2PolyContact.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837B7117005AB008E3594 /* b2PolyContact.h */; };
-		63EC832911BC9D02000DFE1A /* b2BuoyancyController.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837BA117005AB008E3594 /* b2BuoyancyController.h */; };
-		63EC832A11BC9D02000DFE1A /* b2ConstantAccelController.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837BC117005AB008E3594 /* b2ConstantAccelController.h */; };
-		63EC832B11BC9D02000DFE1A /* b2ConstantForceController.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837BE117005AB008E3594 /* b2ConstantForceController.h */; };
-		63EC832C11BC9D02000DFE1A /* b2Controller.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837C0117005AB008E3594 /* b2Controller.h */; };
-		63EC832D11BC9D02000DFE1A /* b2GravityController.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837C2117005AB008E3594 /* b2GravityController.h */; };
-		63EC832E11BC9D02000DFE1A /* b2TensorDampingController.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837C4117005AB008E3594 /* b2TensorDampingController.h */; };
-		63EC832F11BC9D02000DFE1A /* b2DistanceJoint.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837C7117005AB008E3594 /* b2DistanceJoint.h */; };
-		63EC833011BC9D02000DFE1A /* b2GearJoint.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837C9117005AB008E3594 /* b2GearJoint.h */; };
-		63EC833111BC9D02000DFE1A /* b2Joint.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837CB117005AB008E3594 /* b2Joint.h */; };
-		63EC833211BC9D02000DFE1A /* b2LineJoint.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837CD117005AB008E3594 /* b2LineJoint.h */; };
-		63EC833311BC9D02000DFE1A /* b2MouseJoint.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837CF117005AB008E3594 /* b2MouseJoint.h */; };
-		63EC833411BC9D02000DFE1A /* b2PrismaticJoint.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837D1117005AB008E3594 /* b2PrismaticJoint.h */; };
-		63EC833511BC9D02000DFE1A /* b2PulleyJoint.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837D3117005AB008E3594 /* b2PulleyJoint.h */; };
-		63EC833611BC9D02000DFE1A /* b2RevoluteJoint.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837D5117005AB008E3594 /* b2RevoluteJoint.h */; };
-		63EC833711BC9D02000DFE1A /* hdk_prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = E428398811701BBE008E3594 /* hdk_prefix.pch */; };
-		63EC833811BC9D02000DFE1A /* hdScreenSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = E42839EA11704C6B008E3594 /* hdScreenSettings.h */; };
-		63EC833911BC9D02000DFE1A /* hdCollections.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6111170810B00A30C8E /* hdCollections.h */; };
-		63EC833A11BC9D02000DFE1A /* hdk.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6121170810B00A30C8E /* hdk.h */; };
-		63EC833B11BC9D02000DFE1A /* hdInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6131170810B00A30C8E /* hdInterface.h */; };
-		63EC833C11BC9D02000DFE1A /* hdMath.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6141170810B00A30C8E /* hdMath.h */; };
-		63EC833D11BC9D02000DFE1A /* hdSoundSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6151170810B00A30C8E /* hdSoundSystem.h */; };
-		63EC833E11BC9D02000DFE1A /* hdAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6221170814A00A30C8E /* hdAnimation.h */; };
-		63EC833F11BC9D02000DFE1A /* hdAnimationEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6241170815200A30C8E /* hdAnimationEngine.h */; };
-		63EC834011BC9D02000DFE1A /* hdSound.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA62F117082D400A30C8E /* hdSound.h */; };
-		63EC834111BC9D02000DFE1A /* hdGame.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6311170831600A30C8E /* hdGame.h */; };
-		63EC834211BC9D02000DFE1A /* hdCore.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6331170834B00A30C8E /* hdCore.h */; };
-		63EC834311BC9D02000DFE1A /* hdGraphicsLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA63B1170846E00A30C8E /* hdGraphicsLibrary.h */; };
-		63EC834411BC9D02000DFE1A /* hdSoundSystemEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA63F1170859400A30C8E /* hdSoundSystemEnums.h */; };
-		63EC834511BC9D02000DFE1A /* hdMusicPlayerInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA641117085EF00A30C8E /* hdMusicPlayerInterface.h */; };
-		63EC834611BC9D02000DFE1A /* hdMathCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA66D1170899C00A30C8E /* hdMathCommon.h */; };
-		63EC834711BC9D02000DFE1A /* hdFileSystemUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA75811709B3600A30C8E /* hdFileSystemUtils.h */; };
-		63EC834811BC9D02000DFE1A /* hdEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA85F1170A50E00A30C8E /* hdEffects.h */; };
-		63EC834911BC9D02000DFE1A /* hdGLES1Surface.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA97F1170B1BE00A30C8E /* hdGLES1Surface.h */; };
-		63EC834A11BC9D02000DFE1A /* hdGLES2Surface.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA9811170B1BE00A30C8E /* hdGLES2Surface.h */; };
-		63EC834B11BC9D02000DFE1A /* hdGLESSurface.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA9831170B1BE00A30C8E /* hdGLESSurface.h */; };
-		63EC834C11BC9D02000DFE1A /* hdGLView.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA9851170B1BE00A30C8E /* hdGLView.h */; };
-		63EC834D11BC9D02000DFE1A /* hdMultiTouchView.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA9AB1170B37000A30C8E /* hdMultiTouchView.h */; };
-		63EC834E11BC9D02000DFE1A /* hdInput.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA9B91170B4EF00A30C8E /* hdInput.h */; };
-		63EC834F11BC9D02000DFE1A /* hdAccelerometer.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EAA5D1170BCC000A30C8E /* hdAccelerometer.h */; };
-		63EC835011BC9D02000DFE1A /* hdLibs.h in Headers */ = {isa = PBXBuildFile; fileRef = E4F36B8211714B8F00792A2D /* hdLibs.h */; };
-		63EC835111BC9D02000DFE1A /* neon_matrix_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = E4F36BCE11714DAD00792A2D /* neon_matrix_impl.h */; };
-		63EC835211BC9D02000DFE1A /* common_macros.h in Headers */ = {isa = PBXBuildFile; fileRef = E4F36BD011714DAD00792A2D /* common_macros.h */; };
-		63EC835311BC9D02000DFE1A /* matrix_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = E4F36BD211714DAD00792A2D /* matrix_impl.h */; };
-		63EC835411BC9D02000DFE1A /* utility_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = E4F36BD411714DAD00792A2D /* utility_impl.h */; };
-		63EC835511BC9D02000DFE1A /* vfp_clobbers.h in Headers */ = {isa = PBXBuildFile; fileRef = E4F36BD511714DAD00792A2D /* vfp_clobbers.h */; };
-		63EC835611BC9D02000DFE1A /* concepts.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D101171699800792A2D /* concepts.hpp */; };
-		63EC835711BC9D02000DFE1A /* borland.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D121171699800792A2D /* borland.hpp */; };
-		63EC835811BC9D02000DFE1A /* cwchar.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D131171699800792A2D /* cwchar.hpp */; };
-		63EC835911BC9D02000DFE1A /* config.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D141171699800792A2D /* config.hpp */; };
-		63EC835A11BC9D02000DFE1A /* icu.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D151171699800792A2D /* icu.hpp */; };
-		63EC835B11BC9D02000DFE1A /* mfc.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D161171699800792A2D /* mfc.hpp */; };
-		63EC835C11BC9D02000DFE1A /* pattern_except.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D171171699800792A2D /* pattern_except.hpp */; };
-		63EC835D11BC9D02000DFE1A /* object_cache.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D191171699800792A2D /* object_cache.hpp */; };
-		63EC835E11BC9D02000DFE1A /* static_mutex.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D1A1171699800792A2D /* static_mutex.hpp */; };
-		63EC835F11BC9D02000DFE1A /* unicode_iterator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D1B1171699800792A2D /* unicode_iterator.hpp */; };
-		63EC836011BC9D02000DFE1A /* regex_traits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D1C1171699800792A2D /* regex_traits.hpp */; };
-		63EC836111BC9D02000DFE1A /* user.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D1D1171699800792A2D /* user.hpp */; };
-		63EC836211BC9D02000DFE1A /* basic_regex.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D1F1171699800792A2D /* basic_regex.hpp */; };
-		63EC836311BC9D02000DFE1A /* basic_regex_creator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D201171699800792A2D /* basic_regex_creator.hpp */; };
-		63EC836411BC9D02000DFE1A /* basic_regex_parser.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D211171699800792A2D /* basic_regex_parser.hpp */; };
-		63EC836511BC9D02000DFE1A /* c_regex_traits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D221171699800792A2D /* c_regex_traits.hpp */; };
-		63EC836611BC9D02000DFE1A /* char_regex_traits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D231171699800792A2D /* char_regex_traits.hpp */; };
-		63EC836711BC9D02000DFE1A /* cpp_regex_traits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D241171699800792A2D /* cpp_regex_traits.hpp */; };
-		63EC836811BC9D02000DFE1A /* cregex.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D251171699800792A2D /* cregex.hpp */; };
-		63EC836911BC9D02000DFE1A /* error_type.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D261171699800792A2D /* error_type.hpp */; };
-		63EC836A11BC9D02000DFE1A /* fileiter.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D271171699800792A2D /* fileiter.hpp */; };
-		63EC836B11BC9D02000DFE1A /* instances.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D281171699800792A2D /* instances.hpp */; };
-		63EC836C11BC9D02000DFE1A /* iterator_category.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D291171699800792A2D /* iterator_category.hpp */; };
-		63EC836D11BC9D02000DFE1A /* iterator_traits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D2A1171699800792A2D /* iterator_traits.hpp */; };
-		63EC836E11BC9D02000DFE1A /* match_flags.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D2B1171699800792A2D /* match_flags.hpp */; };
-		63EC836F11BC9D02000DFE1A /* match_results.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D2C1171699800792A2D /* match_results.hpp */; };
-		63EC837011BC9D02000DFE1A /* mem_block_cache.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D2D1171699800792A2D /* mem_block_cache.hpp */; };
-		63EC837111BC9D02000DFE1A /* perl_matcher.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D2E1171699800792A2D /* perl_matcher.hpp */; };
-		63EC837211BC9D02000DFE1A /* perl_matcher_common.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D2F1171699800792A2D /* perl_matcher_common.hpp */; };
-		63EC837311BC9D02000DFE1A /* perl_matcher_non_recursive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D301171699800792A2D /* perl_matcher_non_recursive.hpp */; };
-		63EC837411BC9D02000DFE1A /* perl_matcher_recursive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D311171699800792A2D /* perl_matcher_recursive.hpp */; };
-		63EC837511BC9D02000DFE1A /* primary_transform.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D321171699800792A2D /* primary_transform.hpp */; };
-		63EC837611BC9D02000DFE1A /* protected_call.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D331171699800792A2D /* protected_call.hpp */; };
-		63EC837711BC9D02000DFE1A /* regbase.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D341171699800792A2D /* regbase.hpp */; };
-		63EC837811BC9D02000DFE1A /* regex.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D351171699800792A2D /* regex.hpp */; };
-		63EC837911BC9D02000DFE1A /* regex_format.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D361171699800792A2D /* regex_format.hpp */; };
-		63EC837A11BC9D02000DFE1A /* regex_fwd.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D371171699800792A2D /* regex_fwd.hpp */; };
-		63EC837B11BC9D02000DFE1A /* regex_grep.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D381171699800792A2D /* regex_grep.hpp */; };
-		63EC837C11BC9D02000DFE1A /* regex_iterator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D391171699800792A2D /* regex_iterator.hpp */; };
-		63EC837D11BC9D02000DFE1A /* regex_match.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D3A1171699800792A2D /* regex_match.hpp */; };
-		63EC837E11BC9D02000DFE1A /* regex_merge.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D3B1171699800792A2D /* regex_merge.hpp */; };
-		63EC837F11BC9D02000DFE1A /* regex_raw_buffer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D3C1171699800792A2D /* regex_raw_buffer.hpp */; };
-		63EC838011BC9D02000DFE1A /* regex_replace.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D3D1171699800792A2D /* regex_replace.hpp */; };
-		63EC838111BC9D02000DFE1A /* regex_search.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D3E1171699800792A2D /* regex_search.hpp */; };
-		63EC838211BC9D02000DFE1A /* regex_split.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D3F1171699800792A2D /* regex_split.hpp */; };
-		63EC838311BC9D02000DFE1A /* regex_token_iterator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D401171699800792A2D /* regex_token_iterator.hpp */; };
-		63EC838411BC9D02000DFE1A /* regex_traits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D411171699800792A2D /* regex_traits.hpp */; };
-		63EC838511BC9D02000DFE1A /* regex_traits_defaults.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D421171699800792A2D /* regex_traits_defaults.hpp */; };
-		63EC838611BC9D02000DFE1A /* regex_workaround.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D431171699800792A2D /* regex_workaround.hpp */; };
-		63EC838711BC9D02000DFE1A /* states.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D441171699800792A2D /* states.hpp */; };
-		63EC838811BC9D02000DFE1A /* sub_match.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D451171699800792A2D /* sub_match.hpp */; };
-		63EC838911BC9D02000DFE1A /* syntax_type.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D461171699800792A2D /* syntax_type.hpp */; };
-		63EC838A11BC9D02000DFE1A /* u32regex_iterator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D471171699800792A2D /* u32regex_iterator.hpp */; };
-		63EC838B11BC9D02000DFE1A /* u32regex_token_iterator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D481171699800792A2D /* u32regex_token_iterator.hpp */; };
-		63EC838C11BC9D02000DFE1A /* add_facet.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D711171699800792A2D /* add_facet.hpp */; };
-		63EC838D11BC9D02000DFE1A /* archive_exception.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D721171699800792A2D /* archive_exception.hpp */; };
-		63EC838E11BC9D02000DFE1A /* basic_archive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D731171699800792A2D /* basic_archive.hpp */; };
-		63EC838F11BC9D02000DFE1A /* basic_binary_iarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D741171699800792A2D /* basic_binary_iarchive.hpp */; };
-		63EC839011BC9D02000DFE1A /* basic_binary_iprimitive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D751171699800792A2D /* basic_binary_iprimitive.hpp */; };
-		63EC839111BC9D02000DFE1A /* basic_binary_oarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D761171699800792A2D /* basic_binary_oarchive.hpp */; };
-		63EC839211BC9D02000DFE1A /* basic_binary_oprimitive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D771171699800792A2D /* basic_binary_oprimitive.hpp */; };
-		63EC839311BC9D02000DFE1A /* basic_streambuf_locale_saver.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D781171699800792A2D /* basic_streambuf_locale_saver.hpp */; };
-		63EC839411BC9D02000DFE1A /* basic_text_iarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D791171699800792A2D /* basic_text_iarchive.hpp */; };
-		63EC839511BC9D02000DFE1A /* basic_text_iprimitive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D7A1171699800792A2D /* basic_text_iprimitive.hpp */; };
-		63EC839611BC9D02000DFE1A /* basic_text_oarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D7B1171699800792A2D /* basic_text_oarchive.hpp */; };
-		63EC839711BC9D02000DFE1A /* basic_text_oprimitive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D7C1171699800792A2D /* basic_text_oprimitive.hpp */; };
-		63EC839811BC9D02000DFE1A /* basic_xml_archive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D7D1171699800792A2D /* basic_xml_archive.hpp */; };
-		63EC839911BC9D02000DFE1A /* basic_xml_iarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D7E1171699800792A2D /* basic_xml_iarchive.hpp */; };
-		63EC839A11BC9D02000DFE1A /* basic_xml_oarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D7F1171699800792A2D /* basic_xml_oarchive.hpp */; };
-		63EC839B11BC9D02000DFE1A /* binary_iarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D801171699800792A2D /* binary_iarchive.hpp */; };
-		63EC839C11BC9D02000DFE1A /* binary_iarchive_impl.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D811171699800792A2D /* binary_iarchive_impl.hpp */; };
-		63EC839D11BC9D02000DFE1A /* binary_oarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D821171699800792A2D /* binary_oarchive.hpp */; };
-		63EC839E11BC9D02000DFE1A /* binary_oarchive_impl.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D831171699800792A2D /* binary_oarchive_impl.hpp */; };
-		63EC839F11BC9D02000DFE1A /* binary_wiarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D841171699800792A2D /* binary_wiarchive.hpp */; };
-		63EC83A011BC9D02000DFE1A /* binary_woarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D851171699800792A2D /* binary_woarchive.hpp */; };
-		63EC83A111BC9D02000DFE1A /* codecvt_null.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D861171699800792A2D /* codecvt_null.hpp */; };
-		63EC83A211BC9D02000DFE1A /* abi_prefix.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D881171699800792A2D /* abi_prefix.hpp */; };
-		63EC83A311BC9D02000DFE1A /* abi_suffix.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D891171699800792A2D /* abi_suffix.hpp */; };
-		63EC83A411BC9D02000DFE1A /* archive_pointer_iserializer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D8A1171699800792A2D /* archive_pointer_iserializer.hpp */; };
-		63EC83A511BC9D02000DFE1A /* archive_pointer_oserializer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D8B1171699800792A2D /* archive_pointer_oserializer.hpp */; };
-		63EC83A611BC9D02000DFE1A /* auto_link_archive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D8C1171699800792A2D /* auto_link_archive.hpp */; };
-		63EC83A711BC9D02000DFE1A /* auto_link_warchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D8D1171699800792A2D /* auto_link_warchive.hpp */; };
-		63EC83A811BC9D02000DFE1A /* basic_archive_impl.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D8E1171699800792A2D /* basic_archive_impl.hpp */; };
-		63EC83A911BC9D02000DFE1A /* basic_config.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D8F1171699800792A2D /* basic_config.hpp */; };
-		63EC83AA11BC9D02000DFE1A /* basic_iarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D901171699800792A2D /* basic_iarchive.hpp */; };
-		63EC83AB11BC9D02000DFE1A /* basic_iserializer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D911171699800792A2D /* basic_iserializer.hpp */; };
-		63EC83AC11BC9D02000DFE1A /* basic_oarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D921171699800792A2D /* basic_oarchive.hpp */; };
-		63EC83AD11BC9D02000DFE1A /* basic_oserializer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D931171699800792A2D /* basic_oserializer.hpp */; };
-		63EC83AE11BC9D02000DFE1A /* basic_pointer_iserializer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D941171699800792A2D /* basic_pointer_iserializer.hpp */; };
-		63EC83AF11BC9D02000DFE1A /* basic_pointer_oserializer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D951171699800792A2D /* basic_pointer_oserializer.hpp */; };
-		63EC83B011BC9D02000DFE1A /* basic_serializer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D961171699800792A2D /* basic_serializer.hpp */; };
-		63EC83B111BC9D02000DFE1A /* basic_serializer_map.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D971171699800792A2D /* basic_serializer_map.hpp */; };
-		63EC83B211BC9D02000DFE1A /* common_iarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D981171699800792A2D /* common_iarchive.hpp */; };
-		63EC83B311BC9D02000DFE1A /* common_oarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D991171699800792A2D /* common_oarchive.hpp */; };
-		63EC83B411BC9D02000DFE1A /* decl.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D9A1171699800792A2D /* decl.hpp */; };
-		63EC83B511BC9D02000DFE1A /* interface_iarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D9B1171699800792A2D /* interface_iarchive.hpp */; };
-		63EC83B611BC9D02000DFE1A /* interface_oarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D9C1171699800792A2D /* interface_oarchive.hpp */; };
-		63EC83B711BC9D02000DFE1A /* iserializer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D9D1171699800792A2D /* iserializer.hpp */; };
-		63EC83B811BC9D02000DFE1A /* oserializer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D9E1171699800792A2D /* oserializer.hpp */; };
-		63EC83B911BC9D02000DFE1A /* polymorphic_iarchive_route.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D9F1171699800792A2D /* polymorphic_iarchive_route.hpp */; };
-		63EC83BA11BC9D02000DFE1A /* polymorphic_oarchive_route.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DA01171699800792A2D /* polymorphic_oarchive_route.hpp */; };
-		63EC83BB11BC9D02000DFE1A /* register_archive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DA11171699800792A2D /* register_archive.hpp */; };
-		63EC83BC11BC9D02000DFE1A /* utf8_codecvt_facet.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DA21171699800792A2D /* utf8_codecvt_facet.hpp */; };
-		63EC83BD11BC9D02000DFE1A /* dinkumware.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DA31171699800792A2D /* dinkumware.hpp */; };
-		63EC83BE11BC9D02000DFE1A /* basic_xml_grammar.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DAF1171699800792A2D /* basic_xml_grammar.hpp */; };
-		63EC83BF11BC9D02000DFE1A /* base64_exception.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DBB1171699800792A2D /* base64_exception.hpp */; };
-		63EC83C011BC9D02000DFE1A /* base64_from_binary.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DBC1171699800792A2D /* base64_from_binary.hpp */; };
-		63EC83C111BC9D02000DFE1A /* binary_from_base64.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DBD1171699800792A2D /* binary_from_base64.hpp */; };
-		63EC83C211BC9D02000DFE1A /* dataflow.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DBE1171699800792A2D /* dataflow.hpp */; };
-		63EC83C311BC9D02000DFE1A /* dataflow_exception.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DBF1171699800792A2D /* dataflow_exception.hpp */; };
-		63EC83C411BC9D02000DFE1A /* escape.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DC01171699800792A2D /* escape.hpp */; };
-		63EC83C511BC9D02000DFE1A /* head_iterator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DC11171699800792A2D /* head_iterator.hpp */; };
-		63EC83C611BC9D02000DFE1A /* insert_linebreaks.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DC21171699800792A2D /* insert_linebreaks.hpp */; };
-		63EC83C711BC9D02000DFE1A /* istream_iterator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DC31171699800792A2D /* istream_iterator.hpp */; };
-		63EC83C811BC9D02000DFE1A /* mb_from_wchar.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DC41171699800792A2D /* mb_from_wchar.hpp */; };
-		63EC83C911BC9D02000DFE1A /* ostream_iterator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DC51171699800792A2D /* ostream_iterator.hpp */; };
-		63EC83CA11BC9D02000DFE1A /* remove_whitespace.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DC61171699800792A2D /* remove_whitespace.hpp */; };
-		63EC83CB11BC9D02000DFE1A /* transform_width.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DC71171699800792A2D /* transform_width.hpp */; };
-		63EC83CC11BC9D02000DFE1A /* unescape.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DC81171699800792A2D /* unescape.hpp */; };
-		63EC83CD11BC9D02000DFE1A /* wchar_from_mb.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DC91171699800792A2D /* wchar_from_mb.hpp */; };
-		63EC83CE11BC9D02000DFE1A /* xml_escape.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DCA1171699800792A2D /* xml_escape.hpp */; };
-		63EC83CF11BC9D02000DFE1A /* xml_unescape.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DCB1171699800792A2D /* xml_unescape.hpp */; };
-		63EC83D011BC9D02000DFE1A /* xml_unescape_exception.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DCC1171699800792A2D /* xml_unescape_exception.hpp */; };
-		63EC83D111BC9D02000DFE1A /* polymorphic_binary_iarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DCD1171699800792A2D /* polymorphic_binary_iarchive.hpp */; };
-		63EC83D211BC9D02000DFE1A /* polymorphic_binary_oarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DCE1171699800792A2D /* polymorphic_binary_oarchive.hpp */; };
-		63EC83D311BC9D02000DFE1A /* polymorphic_iarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DCF1171699800792A2D /* polymorphic_iarchive.hpp */; };
-		63EC83D411BC9D02000DFE1A /* polymorphic_oarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DD01171699800792A2D /* polymorphic_oarchive.hpp */; };
-		63EC83D511BC9D02000DFE1A /* polymorphic_text_iarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DD11171699800792A2D /* polymorphic_text_iarchive.hpp */; };
-		63EC83D611BC9D02000DFE1A /* polymorphic_text_oarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DD21171699800792A2D /* polymorphic_text_oarchive.hpp */; };
-		63EC83D711BC9D02000DFE1A /* polymorphic_text_wiarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DD31171699800792A2D /* polymorphic_text_wiarchive.hpp */; };
-		63EC83D811BC9D02000DFE1A /* polymorphic_text_woarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DD41171699800792A2D /* polymorphic_text_woarchive.hpp */; };
-		63EC83D911BC9D02000DFE1A /* polymorphic_xml_iarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DD51171699800792A2D /* polymorphic_xml_iarchive.hpp */; };
-		63EC83DA11BC9D02000DFE1A /* polymorphic_xml_oarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DD61171699800792A2D /* polymorphic_xml_oarchive.hpp */; };
-		63EC83DB11BC9D02000DFE1A /* polymorphic_xml_wiarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DD71171699800792A2D /* polymorphic_xml_wiarchive.hpp */; };
-		63EC83DC11BC9D02000DFE1A /* polymorphic_xml_woarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DD81171699800792A2D /* polymorphic_xml_woarchive.hpp */; };
-		63EC83DD11BC9D02000DFE1A /* shared_ptr_helper.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DD91171699800792A2D /* shared_ptr_helper.hpp */; };
-		63EC83DE11BC9D02000DFE1A /* text_iarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DDA1171699800792A2D /* text_iarchive.hpp */; };
-		63EC83DF11BC9D02000DFE1A /* text_oarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DDB1171699800792A2D /* text_oarchive.hpp */; };
-		63EC83E011BC9D02000DFE1A /* text_wiarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DDC1171699800792A2D /* text_wiarchive.hpp */; };
-		63EC83E111BC9D02000DFE1A /* text_woarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DDD1171699800792A2D /* text_woarchive.hpp */; };
-		63EC83E211BC9D02000DFE1A /* tmpdir.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DDE1171699800792A2D /* tmpdir.hpp */; };
-		63EC83E311BC9D02000DFE1A /* wcslen.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DDF1171699800792A2D /* wcslen.hpp */; };
-		63EC83E411BC9D02000DFE1A /* xml_archive_exception.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DE01171699800792A2D /* xml_archive_exception.hpp */; };
-		63EC83E511BC9D02000DFE1A /* xml_iarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DE11171699800792A2D /* xml_iarchive.hpp */; };
-		63EC83E611BC9D02000DFE1A /* xml_oarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DE21171699800792A2D /* xml_oarchive.hpp */; };
-		63EC83E711BC9D02000DFE1A /* xml_wiarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DE31171699800792A2D /* xml_wiarchive.hpp */; };
-		63EC83E811BC9D02000DFE1A /* xml_woarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DE41171699800792A2D /* xml_woarchive.hpp */; };
-		63EC83E911BC9D02000DFE1A /* hdThumbPad.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FC26571184CEDC004BB47B /* hdThumbPad.h */; };
-		63EC83EA11BC9D02000DFE1A /* hdCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FC266B1184CF44004BB47B /* hdCamera.h */; };
-		63EC83EC11BC9D02000DFE1A /* config.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 63CA7771119678090010C802 /* config.hpp */; };
-		63EC83ED11BC9D02000DFE1A /* cygwin_error.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 63CA7772119678090010C802 /* cygwin_error.hpp */; };
-		63EC83EE11BC9D02000DFE1A /* error_code.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 63CA7773119678090010C802 /* error_code.hpp */; };
-		63EC83EF11BC9D02000DFE1A /* linux_error.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 63CA7774119678090010C802 /* linux_error.hpp */; };
-		63EC83F011BC9D02000DFE1A /* system_error.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 63CA7775119678090010C802 /* system_error.hpp */; };
-		63EC83F111BC9D02000DFE1A /* config.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 63CA7778119678090010C802 /* config.hpp */; };
-		63EC83F211BC9D02000DFE1A /* convenience.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 63CA7779119678090010C802 /* convenience.hpp */; };
-		63EC83F311BC9D02000DFE1A /* exception.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 63CA777A119678090010C802 /* exception.hpp */; };
-		63EC83F411BC9D02000DFE1A /* fstream.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 63CA777B119678090010C802 /* fstream.hpp */; };
-		63EC83F511BC9D02000DFE1A /* operations.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 63CA777C119678090010C802 /* operations.hpp */; };
-		63EC83F611BC9D02000DFE1A /* path.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 63CA777D119678090010C802 /* path.hpp */; };
-		63EC83F711BC9D02000DFE1A /* filesystem.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 63CA777E119678090010C802 /* filesystem.hpp */; };
-		63EC83F811BC9D02000DFE1A /* utf8_codecvt_facet.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 63CA7784119678090010C802 /* utf8_codecvt_facet.hpp */; };
-		63EC83FA11BC9D02000DFE1A /* AppleOpenALSupport.c in Sources */ = {isa = PBXBuildFile; fileRef = E428341E116FF684008E3594 /* AppleOpenALSupport.c */; };
-		63EC83FB11BC9D02000DFE1A /* CMOpenALSound.m in Sources */ = {isa = PBXBuildFile; fileRef = E4283421116FF684008E3594 /* CMOpenALSound.m */; };
-		63EC83FC11BC9D02000DFE1A /* CMOpenALSoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E4283423116FF684008E3594 /* CMOpenALSoundManager.m */; };
-		63EC83FD11BC9D02000DFE1A /* hdSoundManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283426116FF684008E3594 /* hdSoundManager.cpp */; };
-		63EC83FE11BC9D02000DFE1A /* hdOpenALSoundEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = E428342A116FF684008E3594 /* hdOpenALSoundEngine.mm */; };
-		63EC83FF11BC9D02000DFE1A /* hdOpenALPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428342C116FF684008E3594 /* hdOpenALPool.cpp */; };
-		63EC840011BC9D02000DFE1A /* hdAVAudioWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = E428342E116FF684008E3594 /* hdAVAudioWrapper.mm */; };
-		63EC840111BC9D02000DFE1A /* hdAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283431116FF684008E3594 /* hdAction.cpp */; };
-		63EC840211BC9D02000DFE1A /* hdAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283433116FF684008E3594 /* hdAnimation.cpp */; };
-		63EC840311BC9D02000DFE1A /* hdAnimationController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283435116FF684008E3594 /* hdAnimationController.cpp */; };
-		63EC840511BC9D02000DFE1A /* hdRotationAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428343C116FF684008E3594 /* hdRotationAction.cpp */; };
-		63EC840611BC9D02000DFE1A /* hdScaleAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428343F116FF684008E3594 /* hdScaleAction.cpp */; };
-		63EC840711BC9D02000DFE1A /* hdTranslationAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283440116FF684008E3594 /* hdTranslationAction.cpp */; };
-		63EC840811BC9D02000DFE1A /* hdVectorAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283442116FF684008E3594 /* hdVectorAction.cpp */; };
-		63EC840911BC9D02000DFE1A /* hdAlphaAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283445116FF684008E3594 /* hdAlphaAction.cpp */; };
-		63EC840A11BC9D02000DFE1A /* hdCompression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428344E116FF684008E3594 /* hdCompression.cpp */; };
-		63EC840B11BC9D02000DFE1A /* hdPakFileSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283450116FF684008E3594 /* hdPakFileSystem.cpp */; };
-		63EC840C11BC9D02000DFE1A /* hdCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283452116FF684008E3594 /* hdCommon.cpp */; };
-		63EC840D11BC9D02000DFE1A /* hdIPhoneFileSystem.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4283459116FF684008E3594 /* hdIPhoneFileSystem.mm */; };
-		63EC840E11BC9D02000DFE1A /* hdIPhoneSystemSettings.mm in Sources */ = {isa = PBXBuildFile; fileRef = E428345C116FF684008E3594 /* hdIPhoneSystemSettings.mm */; };
-		63EC840F11BC9D02000DFE1A /* hdIPhoneOSFunctions.mm in Sources */ = {isa = PBXBuildFile; fileRef = E428345F116FF684008E3594 /* hdIPhoneOSFunctions.mm */; };
-		63EC841011BC9D02000DFE1A /* hdConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283461116FF684008E3594 /* hdConfig.cpp */; };
-		63EC841111BC9D02000DFE1A /* hdPlayerConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283464116FF684008E3594 /* hdPlayerConfig.cpp */; };
-		63EC841211BC9D02000DFE1A /* hd2DGameController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283467116FF684008E3594 /* hd2DGameController.cpp */; };
-		63EC841311BC9D02000DFE1A /* hdAgent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283469116FF684008E3594 /* hdAgent.cpp */; };
-		63EC841411BC9D02000DFE1A /* hdBody.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428346B116FF684008E3594 /* hdBody.cpp */; };
-		63EC841511BC9D02000DFE1A /* hdGameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428346D116FF684008E3594 /* hdGameObject.cpp */; };
-		63EC841611BC9D02000DFE1A /* hdGameWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428346F116FF684008E3594 /* hdGameWorld.cpp */; };
-		63EC841711BC9D02000DFE1A /* hdLevel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283471116FF684008E3594 /* hdLevel.cpp */; };
-		63EC841811BC9D02000DFE1A /* hdLevelGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283473116FF684008E3594 /* hdLevelGroup.cpp */; };
-		63EC841911BC9D02000DFE1A /* hdOrthographicProjection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283475116FF684008E3594 /* hdOrthographicProjection.cpp */; };
-		63EC841A11BC9D02000DFE1A /* hdPhysicsGlue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283477116FF684008E3594 /* hdPhysicsGlue.cpp */; };
-		63EC841B11BC9D02000DFE1A /* hdDrawingUtilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428347E116FF684008E3594 /* hdDrawingUtilities.cpp */; };
-		63EC841C11BC9D02000DFE1A /* hdOpenGLES.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283480116FF684008E3594 /* hdOpenGLES.cpp */; };
-		63EC841D11BC9D02000DFE1A /* hdPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283481116FF684008E3594 /* hdPolygon.cpp */; };
-		63EC841E11BC9D02000DFE1A /* hdTextureManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283484116FF684008E3594 /* hdTextureManager.cpp */; };
-		63EC841F11BC9D02000DFE1A /* hdTGALoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283486116FF684008E3594 /* hdTGALoader.cpp */; };
-		63EC842011BC9D02000DFE1A /* hdPNGLoader.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4283488116FF684008E3594 /* hdPNGLoader.mm */; };
-		63EC842111BC9D02000DFE1A /* hdFontPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428348B116FF684008E3594 /* hdFontPolygon.cpp */; };
-		63EC842211BC9D02000DFE1A /* hdFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428348D116FF684008E3594 /* hdFont.cpp */; };
-		63EC842311BC9D02000DFE1A /* hdFontManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428348F116FF684008E3594 /* hdFontManager.cpp */; };
-		63EC842411BC9D02000DFE1A /* hdButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283491116FF684008E3594 /* hdButton.cpp */; };
-		63EC842511BC9D02000DFE1A /* hdInterfaceLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283494116FF684008E3594 /* hdInterfaceLayer.cpp */; };
-		63EC842611BC9D02000DFE1A /* hdReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283496116FF684008E3594 /* hdReceiver.cpp */; };
-		63EC842711BC9D02000DFE1A /* hdInterfaceController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283499116FF684008E3594 /* hdInterfaceController.cpp */; };
-		63EC842811BC9D02000DFE1A /* hdUIContainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428349B116FF684008E3594 /* hdUIContainer.cpp */; };
-		63EC842911BC9D02000DFE1A /* hdUIImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428349D116FF684008E3594 /* hdUIImage.cpp */; };
-		63EC842A11BC9D02000DFE1A /* hdUISegmentedControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42834A0116FF684008E3594 /* hdUISegmentedControl.cpp */; };
-		63EC842B11BC9D02000DFE1A /* hdCheckbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42834A2116FF684008E3594 /* hdCheckbox.cpp */; };
-		63EC842C11BC9D02000DFE1A /* hdInterfaceContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42834A4116FF684008E3594 /* hdInterfaceContext.cpp */; };
-		63EC842D11BC9D02000DFE1A /* hdMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42834AA116FF684008E3594 /* hdMatrix.cpp */; };
-		63EC842E11BC9D02000DFE1A /* hdParticleEmitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42834AD116FF684008E3594 /* hdParticleEmitter.cpp */; };
-		63EC842F11BC9D02000DFE1A /* hdPhysicsParticleEmitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42834AF116FF684008E3594 /* hdPhysicsParticleEmitter.cpp */; };
-		63EC843011BC9D02000DFE1A /* b2BroadPhase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428377F117005AB008E3594 /* b2BroadPhase.cpp */; };
-		63EC843111BC9D02000DFE1A /* b2CollideCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283781117005AB008E3594 /* b2CollideCircle.cpp */; };
-		63EC843211BC9D02000DFE1A /* b2CollidePoly.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283782117005AB008E3594 /* b2CollidePoly.cpp */; };
-		63EC843311BC9D02000DFE1A /* b2Collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283783117005AB008E3594 /* b2Collision.cpp */; };
-		63EC843411BC9D02000DFE1A /* b2Distance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283785117005AB008E3594 /* b2Distance.cpp */; };
-		63EC843511BC9D02000DFE1A /* b2PairManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283786117005AB008E3594 /* b2PairManager.cpp */; };
-		63EC843611BC9D02000DFE1A /* b2TimeOfImpact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283788117005AB008E3594 /* b2TimeOfImpact.cpp */; };
-		63EC843711BC9D02000DFE1A /* b2CircleShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428378A117005AB008E3594 /* b2CircleShape.cpp */; };
-		63EC843811BC9D02000DFE1A /* b2EdgeShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428378C117005AB008E3594 /* b2EdgeShape.cpp */; };
-		63EC843911BC9D02000DFE1A /* b2PolygonShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428378E117005AB008E3594 /* b2PolygonShape.cpp */; };
-		63EC843A11BC9D02000DFE1A /* b2Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283790117005AB008E3594 /* b2Shape.cpp */; };
-		63EC843B11BC9D02000DFE1A /* b2BlockAllocator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283793117005AB008E3594 /* b2BlockAllocator.cpp */; };
-		63EC843C11BC9D02000DFE1A /* b2Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283795117005AB008E3594 /* b2Math.cpp */; };
-		63EC843D11BC9D02000DFE1A /* b2Settings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283797117005AB008E3594 /* b2Settings.cpp */; };
-		63EC843E11BC9D02000DFE1A /* b2StackAllocator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283799117005AB008E3594 /* b2StackAllocator.cpp */; };
-		63EC843F11BC9D02000DFE1A /* b2Body.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428379E117005AB008E3594 /* b2Body.cpp */; };
-		63EC844011BC9D02000DFE1A /* b2ContactManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837A0117005AB008E3594 /* b2ContactManager.cpp */; };
-		63EC844111BC9D02000DFE1A /* b2Island.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837A2117005AB008E3594 /* b2Island.cpp */; };
-		63EC844211BC9D02000DFE1A /* b2World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837A4117005AB008E3594 /* b2World.cpp */; };
-		63EC844311BC9D02000DFE1A /* b2WorldCallbacks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837A6117005AB008E3594 /* b2WorldCallbacks.cpp */; };
-		63EC844411BC9D02000DFE1A /* b2CircleContact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837A9117005AB008E3594 /* b2CircleContact.cpp */; };
-		63EC844511BC9D02000DFE1A /* b2Contact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837AB117005AB008E3594 /* b2Contact.cpp */; };
-		63EC844611BC9D02000DFE1A /* b2ContactSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837AD117005AB008E3594 /* b2ContactSolver.cpp */; };
-		63EC844711BC9D02000DFE1A /* b2EdgeAndCircleContact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837AF117005AB008E3594 /* b2EdgeAndCircleContact.cpp */; };
-		63EC844811BC9D02000DFE1A /* b2PolyAndCircleContact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837B2117005AB008E3594 /* b2PolyAndCircleContact.cpp */; };
-		63EC844911BC9D02000DFE1A /* b2PolyAndEdgeContact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837B4117005AB008E3594 /* b2PolyAndEdgeContact.cpp */; };
-		63EC844A11BC9D02000DFE1A /* b2PolyContact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837B6117005AB008E3594 /* b2PolyContact.cpp */; };
-		63EC844B11BC9D02000DFE1A /* b2BuoyancyController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837B9117005AB008E3594 /* b2BuoyancyController.cpp */; };
-		63EC844C11BC9D02000DFE1A /* b2ConstantAccelController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837BB117005AB008E3594 /* b2ConstantAccelController.cpp */; };
-		63EC844D11BC9D02000DFE1A /* b2ConstantForceController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837BD117005AB008E3594 /* b2ConstantForceController.cpp */; };
-		63EC844E11BC9D02000DFE1A /* b2Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837BF117005AB008E3594 /* b2Controller.cpp */; };
-		63EC844F11BC9D02000DFE1A /* b2GravityController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837C1117005AB008E3594 /* b2GravityController.cpp */; };
-		63EC845011BC9D02000DFE1A /* b2TensorDampingController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837C3117005AB008E3594 /* b2TensorDampingController.cpp */; };
-		63EC845111BC9D02000DFE1A /* b2DistanceJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837C6117005AB008E3594 /* b2DistanceJoint.cpp */; };
-		63EC845211BC9D02000DFE1A /* b2GearJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837C8117005AB008E3594 /* b2GearJoint.cpp */; };
-		63EC845311BC9D02000DFE1A /* b2Joint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837CA117005AB008E3594 /* b2Joint.cpp */; };
-		63EC845411BC9D02000DFE1A /* b2LineJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837CC117005AB008E3594 /* b2LineJoint.cpp */; };
-		63EC845511BC9D02000DFE1A /* b2MouseJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837CE117005AB008E3594 /* b2MouseJoint.cpp */; };
-		63EC845611BC9D02000DFE1A /* b2PrismaticJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837D0117005AB008E3594 /* b2PrismaticJoint.cpp */; };
-		63EC845711BC9D02000DFE1A /* b2PulleyJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837D2117005AB008E3594 /* b2PulleyJoint.cpp */; };
-		63EC845811BC9D02000DFE1A /* b2RevoluteJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837D4117005AB008E3594 /* b2RevoluteJoint.cpp */; };
-		63EC845911BC9D02000DFE1A /* hdFileSystemUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E41EA75911709B3600A30C8E /* hdFileSystemUtils.cpp */; };
-		63EC845A11BC9D02000DFE1A /* hdScreenSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E41EA8A51170A8C700A30C8E /* hdScreenSettings.cpp */; };
-		63EC845B11BC9D02000DFE1A /* hdGLES1Surface.mm in Sources */ = {isa = PBXBuildFile; fileRef = E41EA9801170B1BE00A30C8E /* hdGLES1Surface.mm */; };
-		63EC845C11BC9D02000DFE1A /* hdGLES2Surface.mm in Sources */ = {isa = PBXBuildFile; fileRef = E41EA9821170B1BE00A30C8E /* hdGLES2Surface.mm */; };
-		63EC845D11BC9D02000DFE1A /* hdGLESSurface.mm in Sources */ = {isa = PBXBuildFile; fileRef = E41EA9841170B1BE00A30C8E /* hdGLESSurface.mm */; };
-		63EC845E11BC9D02000DFE1A /* hdGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E41EA9861170B1BE00A30C8E /* hdGLView.mm */; };
-		63EC845F11BC9D02000DFE1A /* hdMultiTouchView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E41EA9AC1170B37000A30C8E /* hdMultiTouchView.mm */; };
-		63EC846011BC9D02000DFE1A /* hdiPhoneAccelerometer.mm in Sources */ = {isa = PBXBuildFile; fileRef = E41EAA5E1170BCC000A30C8E /* hdiPhoneAccelerometer.mm */; };
-		63EC846111BC9D02000DFE1A /* neon_matrix_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36BCD11714DAD00792A2D /* neon_matrix_impl.cpp */; };
-		63EC846211BC9D02000DFE1A /* matrix_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36BD111714DAD00792A2D /* matrix_impl.cpp */; };
-		63EC846311BC9D02000DFE1A /* utility_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36BD311714DAD00792A2D /* utility_impl.cpp */; };
-		63EC846411BC9D02000DFE1A /* c_regex_traits.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36CFF1171699800792A2D /* c_regex_traits.cpp */; };
-		63EC846511BC9D02000DFE1A /* cpp_regex_traits.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D001171699800792A2D /* cpp_regex_traits.cpp */; };
-		63EC846611BC9D02000DFE1A /* cregex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D011171699800792A2D /* cregex.cpp */; };
-		63EC846711BC9D02000DFE1A /* fileiter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D021171699800792A2D /* fileiter.cpp */; };
-		63EC846811BC9D02000DFE1A /* icu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D031171699800792A2D /* icu.cpp */; };
-		63EC846911BC9D02000DFE1A /* instances.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D041171699800792A2D /* instances.cpp */; };
-		63EC846A11BC9D02000DFE1A /* posix_api.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D051171699800792A2D /* posix_api.cpp */; };
-		63EC846B11BC9D02000DFE1A /* regex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D061171699800792A2D /* regex.cpp */; };
-		63EC846C11BC9D02000DFE1A /* regex_debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D071171699800792A2D /* regex_debug.cpp */; };
-		63EC846D11BC9D02000DFE1A /* regex_raw_buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D081171699800792A2D /* regex_raw_buffer.cpp */; };
-		63EC846E11BC9D02000DFE1A /* regex_traits_defaults.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D091171699800792A2D /* regex_traits_defaults.cpp */; };
-		63EC846F11BC9D02000DFE1A /* static_mutex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D0A1171699800792A2D /* static_mutex.cpp */; };
-		63EC847011BC9D02000DFE1A /* usinstances.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D0B1171699800792A2D /* usinstances.cpp */; };
-		63EC847111BC9D02000DFE1A /* wc_regex_traits.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D0C1171699800792A2D /* wc_regex_traits.cpp */; };
-		63EC847211BC9D02000DFE1A /* wide_posix_api.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D0D1171699800792A2D /* wide_posix_api.cpp */; };
-		63EC847311BC9D02000DFE1A /* winstances.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D0E1171699800792A2D /* winstances.cpp */; };
-		63EC847411BC9D02000DFE1A /* basic_archive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D4A1171699800792A2D /* basic_archive.cpp */; };
-		63EC847511BC9D02000DFE1A /* basic_iarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D4B1171699800792A2D /* basic_iarchive.cpp */; };
-		63EC847611BC9D02000DFE1A /* basic_iserializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D4C1171699800792A2D /* basic_iserializer.cpp */; };
-		63EC847711BC9D02000DFE1A /* basic_oarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D4D1171699800792A2D /* basic_oarchive.cpp */; };
-		63EC847811BC9D02000DFE1A /* basic_oserializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D4E1171699800792A2D /* basic_oserializer.cpp */; };
-		63EC847911BC9D02000DFE1A /* basic_pointer_iserializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D4F1171699800792A2D /* basic_pointer_iserializer.cpp */; };
-		63EC847A11BC9D02000DFE1A /* basic_pointer_oserializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D501171699800792A2D /* basic_pointer_oserializer.cpp */; };
-		63EC847B11BC9D02000DFE1A /* basic_serializer_map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D511171699800792A2D /* basic_serializer_map.cpp */; };
-		63EC847C11BC9D02000DFE1A /* basic_text_iprimitive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D521171699800792A2D /* basic_text_iprimitive.cpp */; };
-		63EC847D11BC9D02000DFE1A /* basic_text_oprimitive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D531171699800792A2D /* basic_text_oprimitive.cpp */; };
-		63EC847E11BC9D02000DFE1A /* basic_text_wiprimitive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D541171699800792A2D /* basic_text_wiprimitive.cpp */; };
-		63EC847F11BC9D02000DFE1A /* basic_text_woprimitive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D551171699800792A2D /* basic_text_woprimitive.cpp */; };
-		63EC848011BC9D02000DFE1A /* basic_xml_archive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D561171699800792A2D /* basic_xml_archive.cpp */; };
-		63EC848111BC9D02000DFE1A /* binary_iarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D581171699800792A2D /* binary_iarchive.cpp */; };
-		63EC848211BC9D02000DFE1A /* binary_oarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D591171699800792A2D /* binary_oarchive.cpp */; };
-		63EC848311BC9D02000DFE1A /* binary_wiarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D5A1171699800792A2D /* binary_wiarchive.cpp */; };
-		63EC848411BC9D02000DFE1A /* binary_woarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D5B1171699800792A2D /* binary_woarchive.cpp */; };
-		63EC848511BC9D02000DFE1A /* codecvt_null.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D5D1171699800792A2D /* codecvt_null.cpp */; };
-		63EC848611BC9D02000DFE1A /* extended_type_info.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D5E1171699800792A2D /* extended_type_info.cpp */; };
-		63EC848711BC9D02000DFE1A /* extended_type_info_no_rtti.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D5F1171699800792A2D /* extended_type_info_no_rtti.cpp */; };
-		63EC848811BC9D02000DFE1A /* extended_type_info_typeid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D601171699800792A2D /* extended_type_info_typeid.cpp */; };
-		63EC848911BC9D02000DFE1A /* polymorphic_iarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D611171699800792A2D /* polymorphic_iarchive.cpp */; };
-		63EC848A11BC9D02000DFE1A /* polymorphic_oarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D621171699800792A2D /* polymorphic_oarchive.cpp */; };
-		63EC848B11BC9D02000DFE1A /* stl_port.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D631171699800792A2D /* stl_port.cpp */; };
-		63EC848C11BC9D02000DFE1A /* text_iarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D641171699800792A2D /* text_iarchive.cpp */; };
-		63EC848D11BC9D02000DFE1A /* text_oarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D651171699800792A2D /* text_oarchive.cpp */; };
-		63EC848E11BC9D02000DFE1A /* text_wiarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D661171699800792A2D /* text_wiarchive.cpp */; };
-		63EC848F11BC9D02000DFE1A /* text_woarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D671171699800792A2D /* text_woarchive.cpp */; };
-		63EC849011BC9D02000DFE1A /* utf8_codecvt_facet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D681171699800792A2D /* utf8_codecvt_facet.cpp */; };
-		63EC849111BC9D02000DFE1A /* void_cast.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D691171699800792A2D /* void_cast.cpp */; };
-		63EC849211BC9D02000DFE1A /* xml_grammar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D6A1171699800792A2D /* xml_grammar.cpp */; };
-		63EC849311BC9D02000DFE1A /* xml_iarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D6B1171699800792A2D /* xml_iarchive.cpp */; };
-		63EC849411BC9D02000DFE1A /* xml_oarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D6C1171699800792A2D /* xml_oarchive.cpp */; };
-		63EC849511BC9D02000DFE1A /* xml_wgrammar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D6D1171699800792A2D /* xml_wgrammar.cpp */; };
-		63EC849611BC9D02000DFE1A /* xml_wiarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D6E1171699800792A2D /* xml_wiarchive.cpp */; };
-		63EC849711BC9D02000DFE1A /* xml_woarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D6F1171699800792A2D /* xml_woarchive.cpp */; };
-		63EC849811BC9D02000DFE1A /* hdThumbPad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63FC26581184CEDC004BB47B /* hdThumbPad.cpp */; };
-		63EC849911BC9D02000DFE1A /* hdCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63FC266C1184CF44004BB47B /* hdCamera.cpp */; };
-		63EC849A11BC9D02000DFE1A /* error_code.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63CA7770119678090010C802 /* error_code.cpp */; };
-		63EC849B11BC9D02000DFE1A /* operations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63CA7780119678090010C802 /* operations.cpp */; };
-		63EC849C11BC9D02000DFE1A /* path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63CA7781119678090010C802 /* path.cpp */; };
-		63EC849D11BC9D02000DFE1A /* portability.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63CA7782119678090010C802 /* portability.cpp */; };
-		63EC849E11BC9D02000DFE1A /* utf8_codecvt_facet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63CA7783119678090010C802 /* utf8_codecvt_facet.cpp */; };
-		63EC84A011BC9D02000DFE1A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
-		63EC84A111BC9D02000DFE1A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E428353E116FF69E008E3594 /* AVFoundation.framework */; };
-		63EC84A211BC9D02000DFE1A /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4283542116FF6A4008E3594 /* libz.1.2.3.dylib */; };
-		63EC84A311BC9D02000DFE1A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4283544116FF6A9008E3594 /* AudioToolbox.framework */; };
-		63EC84A411BC9D02000DFE1A /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4283548116FF6AE008E3594 /* CoreAudio.framework */; };
-		63EC84A511BC9D02000DFE1A /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E428354C116FF6B4008E3594 /* OpenAL.framework */; };
-		63EC84A611BC9D02000DFE1A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4283550116FF6B8008E3594 /* QuartzCore.framework */; };
-		63EC84A711BC9D02000DFE1A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4283554116FF6BE008E3594 /* OpenGLES.framework */; };
-		63EC84A811BC9D02000DFE1A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4283558116FF6C3008E3594 /* UIKit.framework */; };
 		63FBC6A711C81C1C00C2377F /* hdIBButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FBC69811C81C1C00C2377F /* hdIBButton.h */; };
 		63FBC6A811C81C1C00C2377F /* hdIBButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63FBC69911C81C1C00C2377F /* hdIBButton.cpp */; };
 		63FBC6A911C81C1C00C2377F /* hdIBImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FBC69A11C81C1C00C2377F /* hdIBImage.h */; };
@@ -533,23 +45,7 @@
 		63FBC6B311C81C1C00C2377F /* hdIBLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FBC6A411C81C1C00C2377F /* hdIBLoader.h */; };
 		63FBC6B411C81C1C00C2377F /* hdIBLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63FBC6A511C81C1C00C2377F /* hdIBLoader.cpp */; };
 		63FBC6B511C81C1C00C2377F /* hdIBEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FBC6A611C81C1C00C2377F /* hdIBEnums.h */; };
-		63FBC6B611C81C1C00C2377F /* hdIBButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FBC69811C81C1C00C2377F /* hdIBButton.h */; };
-		63FBC6B711C81C1C00C2377F /* hdIBButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63FBC69911C81C1C00C2377F /* hdIBButton.cpp */; };
-		63FBC6B811C81C1C00C2377F /* hdIBImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FBC69A11C81C1C00C2377F /* hdIBImage.h */; };
-		63FBC6B911C81C1C00C2377F /* hdIBImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63FBC69B11C81C1C00C2377F /* hdIBImage.cpp */; };
-		63FBC6BA11C81C1C00C2377F /* hdIBFontPolygon.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FBC69C11C81C1C00C2377F /* hdIBFontPolygon.h */; };
-		63FBC6BB11C81C1C00C2377F /* hdIBFontPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63FBC69D11C81C1C00C2377F /* hdIBFontPolygon.cpp */; };
-		63FBC6BC11C81C1C00C2377F /* hdIBContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FBC69E11C81C1C00C2377F /* hdIBContainer.h */; };
-		63FBC6BD11C81C1C00C2377F /* hdIBContainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63FBC69F11C81C1C00C2377F /* hdIBContainer.cpp */; };
-		63FBC6BE11C81C1C00C2377F /* hdIBProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FBC6A011C81C1C00C2377F /* hdIBProxy.h */; };
-		63FBC6BF11C81C1C00C2377F /* hdIBProxy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63FBC6A111C81C1C00C2377F /* hdIBProxy.cpp */; };
-		63FBC6C011C81C1C00C2377F /* hdIBViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FBC6A211C81C1C00C2377F /* hdIBViewController.h */; };
-		63FBC6C111C81C1C00C2377F /* hdIBViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63FBC6A311C81C1C00C2377F /* hdIBViewController.cpp */; };
-		63FBC6C211C81C1C00C2377F /* hdIBLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FBC6A411C81C1C00C2377F /* hdIBLoader.h */; };
-		63FBC6C311C81C1C00C2377F /* hdIBLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63FBC6A511C81C1C00C2377F /* hdIBLoader.cpp */; };
-		63FBC6C411C81C1C00C2377F /* hdIBEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FBC6A611C81C1C00C2377F /* hdIBEnums.h */; };
 		63FBC6C611C81C2700C2377F /* hdIB.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FBC6C511C81C2700C2377F /* hdIB.h */; };
-		63FBC6C711C81C2700C2377F /* hdIB.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FBC6C511C81C2700C2377F /* hdIB.h */; };
 		63FC26591184CEDC004BB47B /* hdThumbPad.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FC26571184CEDC004BB47B /* hdThumbPad.h */; };
 		63FC265A1184CEDC004BB47B /* hdThumbPad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63FC26581184CEDC004BB47B /* hdThumbPad.cpp */; };
 		63FC266D1184CF44004BB47B /* hdCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FC266B1184CF44004BB47B /* hdCamera.h */; };
@@ -716,7 +212,6 @@
 		E428353B116FF684008E3594 /* hdPhysicsParticleEmitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42834AF116FF684008E3594 /* hdPhysicsParticleEmitter.cpp */; };
 		E428353C116FF684008E3594 /* hdPhysicsParticleEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = E42834B0116FF684008E3594 /* hdPhysicsParticleEmitter.h */; };
 		E428353F116FF69E008E3594 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E428353E116FF69E008E3594 /* AVFoundation.framework */; };
-		E4283543116FF6A4008E3594 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4283542116FF6A4008E3594 /* libz.1.2.3.dylib */; };
 		E4283545116FF6A9008E3594 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4283544116FF6A9008E3594 /* AudioToolbox.framework */; };
 		E4283549116FF6AE008E3594 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4283548116FF6AE008E3594 /* CoreAudio.framework */; };
 		E428354D116FF6B4008E3594 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E428354C116FF6B4008E3594 /* OpenAL.framework */; };
@@ -810,12 +305,6 @@
 		E4F36B8311714B8F00792A2D /* hdLibs.h in Headers */ = {isa = PBXBuildFile; fileRef = E4F36B8211714B8F00792A2D /* hdLibs.h */; };
 		E4F36BD611714DAD00792A2D /* neon_matrix_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36BCD11714DAD00792A2D /* neon_matrix_impl.cpp */; };
 		E4F36BD711714DAD00792A2D /* neon_matrix_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = E4F36BCE11714DAD00792A2D /* neon_matrix_impl.h */; };
-		E4F36BD811714DAD00792A2D /* common_macros.h in Headers */ = {isa = PBXBuildFile; fileRef = E4F36BD011714DAD00792A2D /* common_macros.h */; };
-		E4F36BD911714DAD00792A2D /* matrix_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36BD111714DAD00792A2D /* matrix_impl.cpp */; };
-		E4F36BDA11714DAD00792A2D /* matrix_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = E4F36BD211714DAD00792A2D /* matrix_impl.h */; };
-		E4F36BDB11714DAD00792A2D /* utility_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36BD311714DAD00792A2D /* utility_impl.cpp */; };
-		E4F36BDC11714DAD00792A2D /* utility_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = E4F36BD411714DAD00792A2D /* utility_impl.h */; };
-		E4F36BDD11714DAD00792A2D /* vfp_clobbers.h in Headers */ = {isa = PBXBuildFile; fileRef = E4F36BD511714DAD00792A2D /* vfp_clobbers.h */; };
 		E4F36DE51171699800792A2D /* c_regex_traits.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36CFF1171699800792A2D /* c_regex_traits.cpp */; };
 		E4F36DE61171699800792A2D /* cpp_regex_traits.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D001171699800792A2D /* cpp_regex_traits.cpp */; };
 		E4F36DE71171699800792A2D /* cregex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36D011171699800792A2D /* cregex.cpp */; };
@@ -1018,10 +507,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		551EDF1A1827A191007E6CC3 /* paths.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = paths.xcconfig; path = ../paths.xcconfig; sourceTree = "<group>"; };
 		6353FD291340079400AD7F1D /* hdMultiTouchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdMultiTouchViewController.h; sourceTree = "<group>"; };
 		6353FD2A1340079400AD7F1D /* hdMultiTouchViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = hdMultiTouchViewController.mm; sourceTree = "<group>"; };
 		6384558711C8337300C421AB /* hdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdViewController.h; sourceTree = "<group>"; };
 		6384558811C8337300C421AB /* hdViewController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdViewController.cpp; sourceTree = "<group>"; };
+		638ABA7A172CAFF200BACCFD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		63B351D511F821B100D20861 /* hdScripting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdScripting.h; sourceTree = "<group>"; };
 		63CA7770119678090010C802 /* error_code.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = error_code.cpp; sourceTree = "<group>"; };
 		63CA7771119678090010C802 /* config.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = config.hpp; path = ../../libs/boost_1_38_0/boost/system/config.hpp; sourceTree = SOURCE_ROOT; };
@@ -1041,7 +532,6 @@
 		63CA7782119678090010C802 /* portability.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = portability.cpp; sourceTree = "<group>"; };
 		63CA7783119678090010C802 /* utf8_codecvt_facet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = utf8_codecvt_facet.cpp; sourceTree = "<group>"; };
 		63CA7784119678090010C802 /* utf8_codecvt_facet.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = utf8_codecvt_facet.hpp; sourceTree = "<group>"; };
-		63EC84AC11BC9D02000DFE1A /* libhdkiPhone.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libhdkiPhone.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		63FBC69811C81C1C00C2377F /* hdIBButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdIBButton.h; sourceTree = "<group>"; };
 		63FBC69911C81C1C00C2377F /* hdIBButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdIBButton.cpp; sourceTree = "<group>"; };
 		63FBC69A11C81C1C00C2377F /* hdIBImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdIBImage.h; sourceTree = "<group>"; };
@@ -1225,7 +715,6 @@
 		E42834AF116FF684008E3594 /* hdPhysicsParticleEmitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdPhysicsParticleEmitter.cpp; sourceTree = "<group>"; };
 		E42834B0116FF684008E3594 /* hdPhysicsParticleEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdPhysicsParticleEmitter.h; sourceTree = "<group>"; };
 		E428353E116FF69E008E3594 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		E4283542116FF6A4008E3594 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
 		E4283544116FF6A9008E3594 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E4283548116FF6AE008E3594 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		E428354C116FF6B4008E3594 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -1319,12 +808,6 @@
 		E4F36B8211714B8F00792A2D /* hdLibs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdLibs.h; sourceTree = "<group>"; };
 		E4F36BCD11714DAD00792A2D /* neon_matrix_impl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = neon_matrix_impl.cpp; sourceTree = "<group>"; };
 		E4F36BCE11714DAD00792A2D /* neon_matrix_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = neon_matrix_impl.h; sourceTree = "<group>"; };
-		E4F36BD011714DAD00792A2D /* common_macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_macros.h; sourceTree = "<group>"; };
-		E4F36BD111714DAD00792A2D /* matrix_impl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = matrix_impl.cpp; sourceTree = "<group>"; };
-		E4F36BD211714DAD00792A2D /* matrix_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matrix_impl.h; sourceTree = "<group>"; };
-		E4F36BD311714DAD00792A2D /* utility_impl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = utility_impl.cpp; sourceTree = "<group>"; };
-		E4F36BD411714DAD00792A2D /* utility_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utility_impl.h; sourceTree = "<group>"; };
-		E4F36BD511714DAD00792A2D /* vfp_clobbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vfp_clobbers.h; sourceTree = "<group>"; };
 		E4F36CFF1171699800792A2D /* c_regex_traits.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = c_regex_traits.cpp; sourceTree = "<group>"; };
 		E4F36D001171699800792A2D /* cpp_regex_traits.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cpp_regex_traits.cpp; sourceTree = "<group>"; };
 		E4F36D011171699800792A2D /* cregex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = cregex.cpp; sourceTree = "<group>"; };
@@ -1549,29 +1032,12 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		63EC849F11BC9D02000DFE1A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				63EC84A011BC9D02000DFE1A /* Foundation.framework in Frameworks */,
-				63EC84A111BC9D02000DFE1A /* AVFoundation.framework in Frameworks */,
-				63EC84A211BC9D02000DFE1A /* libz.1.2.3.dylib in Frameworks */,
-				63EC84A311BC9D02000DFE1A /* AudioToolbox.framework in Frameworks */,
-				63EC84A411BC9D02000DFE1A /* CoreAudio.framework in Frameworks */,
-				63EC84A511BC9D02000DFE1A /* OpenAL.framework in Frameworks */,
-				63EC84A611BC9D02000DFE1A /* QuartzCore.framework in Frameworks */,
-				63EC84A711BC9D02000DFE1A /* OpenGLES.framework in Frameworks */,
-				63EC84A811BC9D02000DFE1A /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D2AAC07C0554694100DB518D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
 				E428353F116FF69E008E3594 /* AVFoundation.framework in Frameworks */,
-				E4283543116FF6A4008E3594 /* libz.1.2.3.dylib in Frameworks */,
 				E4283545116FF6A9008E3594 /* AudioToolbox.framework in Frameworks */,
 				E4283549116FF6AE008E3594 /* CoreAudio.framework in Frameworks */,
 				E428354D116FF6B4008E3594 /* OpenAL.framework in Frameworks */,
@@ -1588,7 +1054,6 @@
 			isa = PBXGroup;
 			children = (
 				D2AAC07E0554694100DB518D /* libhdk.a */,
-				63EC84AC11BC9D02000DFE1A /* libhdkiPhone.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1596,6 +1061,8 @@
 		0867D691FE84028FC02AAC07 /* hdk */ = {
 			isa = PBXGroup;
 			children = (
+				638ABA7A172CAFF200BACCFD /* libz.dylib */,
+				551EDF1A1827A191007E6CC3 /* paths.xcconfig */,
 				E41EA60F1170810B00A30C8E /* inc */,
 				E428355E116FF8C1008E3594 /* libs */,
 				E428341A116FF684008E3594 /* src */,
@@ -1610,7 +1077,6 @@
 			children = (
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
 				E428353E116FF69E008E3594 /* AVFoundation.framework */,
-				E4283542116FF6A4008E3594 /* libz.1.2.3.dylib */,
 				E4283544116FF6A9008E3594 /* AudioToolbox.framework */,
 				E4283548116FF6AE008E3594 /* CoreAudio.framework */,
 				E428354C116FF6B4008E3594 /* OpenAL.framework */,
@@ -1832,31 +1298,31 @@
 			isa = PBXGroup;
 			children = (
 				E428344D116FF684008E3594 /* hdApplication.h */,
-				E428344E116FF684008E3594 /* hdCompression.cpp */,
-				E428344F116FF684008E3594 /* hdCompression.h */,
-				E4283450116FF684008E3594 /* hdPakFileSystem.cpp */,
-				E4283451116FF684008E3594 /* hdPakFileSystem.h */,
 				E4283452116FF684008E3594 /* hdCommon.cpp */,
 				E4283453116FF684008E3594 /* hdCommon.h */,
-				E4283456116FF684008E3594 /* hdTypes.h */,
+				E428344E116FF684008E3594 /* hdCompression.cpp */,
+				E428344F116FF684008E3594 /* hdCompression.h */,
+				E4283461116FF684008E3594 /* hdConfig.cpp */,
+				E4283460116FF684008E3594 /* hdConfig.h */,
 				E4283457116FF684008E3594 /* hdFileSystem.h */,
+				E4283462116FF684008E3594 /* hdFileSystemSupport.h */,
+				E41EA75911709B3600A30C8E /* hdFileSystemUtils.cpp */,
+				E41EA75811709B3600A30C8E /* hdFileSystemUtils.h */,
 				E4283458116FF684008E3594 /* hdIPhoneFileSystem.h */,
 				E4283459116FF684008E3594 /* hdIPhoneFileSystem.mm */,
-				E428345A116FF684008E3594 /* hdSystemSettings.h */,
+				E428345E116FF684008E3594 /* hdIPhoneOSFunctions.h */,
+				E428345F116FF684008E3594 /* hdIPhoneOSFunctions.mm */,
 				E428345B116FF684008E3594 /* hdIPhoneSystemSettings.h */,
 				E428345C116FF684008E3594 /* hdIPhoneSystemSettings.mm */,
 				E428345D116FF684008E3594 /* hdOSFunctions.h */,
-				E428345E116FF684008E3594 /* hdIPhoneOSFunctions.h */,
-				E428345F116FF684008E3594 /* hdIPhoneOSFunctions.mm */,
-				E4283460116FF684008E3594 /* hdConfig.h */,
-				E4283461116FF684008E3594 /* hdConfig.cpp */,
-				E4283462116FF684008E3594 /* hdFileSystemSupport.h */,
-				E4283463116FF684008E3594 /* hdPlayerConfig.h */,
+				E4283450116FF684008E3594 /* hdPakFileSystem.cpp */,
+				E4283451116FF684008E3594 /* hdPakFileSystem.h */,
 				E4283464116FF684008E3594 /* hdPlayerConfig.cpp */,
-				E42839EA11704C6B008E3594 /* hdScreenSettings.h */,
+				E4283463116FF684008E3594 /* hdPlayerConfig.h */,
 				E41EA8A51170A8C700A30C8E /* hdScreenSettings.cpp */,
-				E41EA75811709B3600A30C8E /* hdFileSystemUtils.h */,
-				E41EA75911709B3600A30C8E /* hdFileSystemUtils.cpp */,
+				E42839EA11704C6B008E3594 /* hdScreenSettings.h */,
+				E428345A116FF684008E3594 /* hdSystemSettings.h */,
+				E4283456116FF684008E3594 /* hdTypes.h */,
 			);
 			path = hdCore;
 			sourceTree = "<group>";
@@ -1864,7 +1330,7 @@
 		E4283465116FF684008E3594 /* hdGame */ = {
 			isa = PBXGroup;
 			children = (
-				E4283466116FF684008E3594 /* hdPhysicsJoint.h */,
+				E428347A116FF684008E3594 /* b2Opt.h */,
 				E4283467116FF684008E3594 /* hd2DGameController.cpp */,
 				E4283468116FF684008E3594 /* hd2DGameController.h */,
 				E4283469116FF684008E3594 /* hdAgent.cpp */,
@@ -1883,8 +1349,8 @@
 				E4283476116FF684008E3594 /* hdOrthographicProjection.h */,
 				E4283477116FF684008E3594 /* hdPhysicsGlue.cpp */,
 				E4283478116FF684008E3594 /* hdPhysicsGlue.h */,
+				E4283466116FF684008E3594 /* hdPhysicsJoint.h */,
 				E4283479116FF684008E3594 /* hdPhysicsObject.h */,
-				E428347A116FF684008E3594 /* b2Opt.h */,
 			);
 			path = hdGame;
 			sourceTree = "<group>";
@@ -1892,8 +1358,11 @@
 		E428347B116FF684008E3594 /* hdGraphicsLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				63FC266B1184CF44004BB47B /* hdCamera.h */,
 				63FC266C1184CF44004BB47B /* hdCamera.cpp */,
+				63FC266B1184CF44004BB47B /* hdCamera.h */,
+				E428347D116FF684008E3594 /* hdDrawable.h */,
+				E428347E116FF684008E3594 /* hdDrawingUtilities.cpp */,
+				E428347F116FF684008E3594 /* hdDrawingUtilities.h */,
 				E41EA97F1170B1BE00A30C8E /* hdGLES1Surface.h */,
 				E41EA9801170B1BE00A30C8E /* hdGLES1Surface.mm */,
 				E41EA9811170B1BE00A30C8E /* hdGLES2Surface.h */,
@@ -1903,10 +1372,9 @@
 				E41EA9851170B1BE00A30C8E /* hdGLView.h */,
 				E41EA9861170B1BE00A30C8E /* hdGLView.mm */,
 				E428347C116FF684008E3594 /* hdGraphicsInterface.h */,
-				E428347D116FF684008E3594 /* hdDrawable.h */,
-				E428347E116FF684008E3594 /* hdDrawingUtilities.cpp */,
-				E428347F116FF684008E3594 /* hdDrawingUtilities.h */,
 				E4283480116FF684008E3594 /* hdOpenGLES.cpp */,
+				E4283489116FF684008E3594 /* hdPNGLoader.h */,
+				E4283488116FF684008E3594 /* hdPNGLoader.mm */,
 				E4283481116FF684008E3594 /* hdPolygon.cpp */,
 				E4283482116FF684008E3594 /* hdPolygon.h */,
 				E4283483116FF684008E3594 /* hdTexture.h */,
@@ -1914,8 +1382,6 @@
 				E4283485116FF684008E3594 /* hdTextureManager.h */,
 				E4283486116FF684008E3594 /* hdTGALoader.cpp */,
 				E4283487116FF684008E3594 /* hdTGALoader.h */,
-				E4283488116FF684008E3594 /* hdPNGLoader.mm */,
-				E4283489116FF684008E3594 /* hdPNGLoader.h */,
 			);
 			path = hdGraphicsLibrary;
 			sourceTree = "<group>";
@@ -1923,36 +1389,36 @@
 		E428348A116FF684008E3594 /* hdInterface */ = {
 			isa = PBXGroup;
 			children = (
-				6384558711C8337300C421AB /* hdViewController.h */,
-				6384558811C8337300C421AB /* hdViewController.cpp */,
-				63FBC69711C81C1C00C2377F /* hdInterfaceBuilder */,
-				63FC26571184CEDC004BB47B /* hdThumbPad.h */,
-				63FC26581184CEDC004BB47B /* hdThumbPad.cpp */,
-				E428348B116FF684008E3594 /* hdFontPolygon.cpp */,
-				E428348C116FF684008E3594 /* hdFontPolygon.h */,
+				E4283491116FF684008E3594 /* hdButton.cpp */,
+				E4283492116FF684008E3594 /* hdButton.h */,
+				E42834A2116FF684008E3594 /* hdCheckbox.cpp */,
+				E42834A1116FF684008E3594 /* hdCheckbox.h */,
 				E428348D116FF684008E3594 /* hdFont.cpp */,
 				E428348E116FF684008E3594 /* hdFont.h */,
 				E428348F116FF684008E3594 /* hdFontManager.cpp */,
 				E4283490116FF684008E3594 /* hdFontManager.h */,
-				E4283491116FF684008E3594 /* hdButton.cpp */,
-				E4283492116FF684008E3594 /* hdButton.h */,
+				E428348B116FF684008E3594 /* hdFontPolygon.cpp */,
+				E428348C116FF684008E3594 /* hdFontPolygon.h */,
+				63FBC69711C81C1C00C2377F /* hdInterfaceBuilder */,
+				E42834A4116FF684008E3594 /* hdInterfaceContext.cpp */,
+				E42834A3116FF684008E3594 /* hdInterfaceContext.h */,
+				E4283499116FF684008E3594 /* hdInterfaceController.cpp */,
+				E4283498116FF684008E3594 /* hdInterfaceController.h */,
+				E428349E116FF684008E3594 /* hdInterfaceEnums.h */,
 				E4283494116FF684008E3594 /* hdInterfaceLayer.cpp */,
 				E4283495116FF684008E3594 /* hdInterfaceLayer.h */,
 				E4283496116FF684008E3594 /* hdReceiver.cpp */,
 				E4283497116FF684008E3594 /* hdReceiver.h */,
-				E4283498116FF684008E3594 /* hdInterfaceController.h */,
-				E4283499116FF684008E3594 /* hdInterfaceController.cpp */,
-				E428349A116FF684008E3594 /* hdUIContainer.h */,
+				63FC26581184CEDC004BB47B /* hdThumbPad.cpp */,
+				63FC26571184CEDC004BB47B /* hdThumbPad.h */,
 				E428349B116FF684008E3594 /* hdUIContainer.cpp */,
-				E428349C116FF684008E3594 /* hdUIImage.h */,
+				E428349A116FF684008E3594 /* hdUIContainer.h */,
 				E428349D116FF684008E3594 /* hdUIImage.cpp */,
-				E428349E116FF684008E3594 /* hdInterfaceEnums.h */,
-				E428349F116FF684008E3594 /* hdUISegmentedControl.h */,
+				E428349C116FF684008E3594 /* hdUIImage.h */,
 				E42834A0116FF684008E3594 /* hdUISegmentedControl.cpp */,
-				E42834A1116FF684008E3594 /* hdCheckbox.h */,
-				E42834A2116FF684008E3594 /* hdCheckbox.cpp */,
-				E42834A3116FF684008E3594 /* hdInterfaceContext.h */,
-				E42834A4116FF684008E3594 /* hdInterfaceContext.cpp */,
+				E428349F116FF684008E3594 /* hdUISegmentedControl.h */,
+				6384558811C8337300C421AB /* hdViewController.cpp */,
+				6384558711C8337300C421AB /* hdViewController.h */,
 			);
 			path = hdInterface;
 			sourceTree = "<group>";
@@ -1961,7 +1427,6 @@
 			isa = PBXGroup;
 			children = (
 				E4F36BCC11714DAD00792A2D /* neon */,
-				E4F36BCF11714DAD00792A2D /* vfp */,
 				E42834A6116FF684008E3594 /* hdFixed.h */,
 				E42834A7116FF684008E3594 /* hdGeometry.h */,
 				E42834A9116FF684008E3594 /* hdMathSerializable.h */,
@@ -2176,19 +1641,6 @@
 				E4F36BCE11714DAD00792A2D /* neon_matrix_impl.h */,
 			);
 			path = neon;
-			sourceTree = "<group>";
-		};
-		E4F36BCF11714DAD00792A2D /* vfp */ = {
-			isa = PBXGroup;
-			children = (
-				E4F36BD011714DAD00792A2D /* common_macros.h */,
-				E4F36BD111714DAD00792A2D /* matrix_impl.cpp */,
-				E4F36BD211714DAD00792A2D /* matrix_impl.h */,
-				E4F36BD311714DAD00792A2D /* utility_impl.cpp */,
-				E4F36BD411714DAD00792A2D /* utility_impl.h */,
-				E4F36BD511714DAD00792A2D /* vfp_clobbers.h */,
-			);
-			path = vfp;
 			sourceTree = "<group>";
 		};
 		E4F36CF41171698F00792A2D /* boost */ = {
@@ -2520,335 +1972,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		63EC82C111BC9D02000DFE1A /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				63EC82C211BC9D02000DFE1A /* AppleOpenALSupport.h in Headers */,
-				63EC82C311BC9D02000DFE1A /* CMOpenALSound.h in Headers */,
-				63EC82C411BC9D02000DFE1A /* CMOpenALSoundManager.h in Headers */,
-				63EC82C511BC9D02000DFE1A /* SynthesizeSingleton.h in Headers */,
-				63EC82C611BC9D02000DFE1A /* hdSoundManager.h in Headers */,
-				63EC82C711BC9D02000DFE1A /* hdSoundEngineInterface.h in Headers */,
-				63EC82C811BC9D02000DFE1A /* hdOpenALSoundEngine.h in Headers */,
-				63EC82C911BC9D02000DFE1A /* hdOpenALPool.h in Headers */,
-				63EC82CA11BC9D02000DFE1A /* hdAVAudioWrapper.h in Headers */,
-				63EC82CB11BC9D02000DFE1A /* hdPauseAction.h in Headers */,
-				63EC82CC11BC9D02000DFE1A /* hdAction.h in Headers */,
-				63EC82CD11BC9D02000DFE1A /* hdAnimationController.h in Headers */,
-				63EC82CE11BC9D02000DFE1A /* hdAnimationTimingFunction.h in Headers */,
-				63EC82CF11BC9D02000DFE1A /* hdFunctionAction.h in Headers */,
-				63EC82D011BC9D02000DFE1A /* hdRotationAction.h in Headers */,
-				63EC82D111BC9D02000DFE1A /* hdScaleAction.h in Headers */,
-				63EC82D211BC9D02000DFE1A /* hdTranslationAction.h in Headers */,
-				63EC82D311BC9D02000DFE1A /* hdVectorAction.h in Headers */,
-				63EC82D411BC9D02000DFE1A /* hdAlphaAction.h in Headers */,
-				63EC82D511BC9D02000DFE1A /* hdPointerList.h in Headers */,
-				63EC82D611BC9D02000DFE1A /* hdSerializablePointerList.h in Headers */,
-				63EC82D711BC9D02000DFE1A /* hdTypedefList.h in Headers */,
-				63EC82D811BC9D02000DFE1A /* hdCollectionSettings.h in Headers */,
-				63EC82D911BC9D02000DFE1A /* hdApplication.h in Headers */,
-				63EC82DA11BC9D02000DFE1A /* hdCompression.h in Headers */,
-				63EC82DB11BC9D02000DFE1A /* hdPakFileSystem.h in Headers */,
-				63EC82DC11BC9D02000DFE1A /* hdCommon.h in Headers */,
-				63EC82DD11BC9D02000DFE1A /* hdTypes.h in Headers */,
-				63EC82DE11BC9D02000DFE1A /* hdFileSystem.h in Headers */,
-				63EC82DF11BC9D02000DFE1A /* hdIPhoneFileSystem.h in Headers */,
-				63EC82E011BC9D02000DFE1A /* hdSystemSettings.h in Headers */,
-				63EC82E111BC9D02000DFE1A /* hdIPhoneSystemSettings.h in Headers */,
-				63EC82E211BC9D02000DFE1A /* hdOSFunctions.h in Headers */,
-				63EC82E311BC9D02000DFE1A /* hdIPhoneOSFunctions.h in Headers */,
-				63EC82E411BC9D02000DFE1A /* hdConfig.h in Headers */,
-				63EC82E511BC9D02000DFE1A /* hdFileSystemSupport.h in Headers */,
-				63EC82E611BC9D02000DFE1A /* hdPlayerConfig.h in Headers */,
-				63EC82E711BC9D02000DFE1A /* hdPhysicsJoint.h in Headers */,
-				63EC82E811BC9D02000DFE1A /* hd2DGameController.h in Headers */,
-				63EC82E911BC9D02000DFE1A /* hdAgent.h in Headers */,
-				63EC82EA11BC9D02000DFE1A /* hdBody.h in Headers */,
-				63EC82EB11BC9D02000DFE1A /* hdGameObject.h in Headers */,
-				63EC82EC11BC9D02000DFE1A /* hdGameWorld.h in Headers */,
-				63EC82ED11BC9D02000DFE1A /* hdLevel.h in Headers */,
-				63EC82EE11BC9D02000DFE1A /* hdLevelGroup.h in Headers */,
-				63EC82EF11BC9D02000DFE1A /* hdOrthographicProjection.h in Headers */,
-				63EC82F011BC9D02000DFE1A /* hdPhysicsGlue.h in Headers */,
-				63EC82F111BC9D02000DFE1A /* hdPhysicsObject.h in Headers */,
-				63EC82F211BC9D02000DFE1A /* b2Opt.h in Headers */,
-				63EC82F311BC9D02000DFE1A /* hdGraphicsInterface.h in Headers */,
-				63EC82F411BC9D02000DFE1A /* hdDrawable.h in Headers */,
-				63EC82F511BC9D02000DFE1A /* hdDrawingUtilities.h in Headers */,
-				63EC82F611BC9D02000DFE1A /* hdPolygon.h in Headers */,
-				63EC82F711BC9D02000DFE1A /* hdTexture.h in Headers */,
-				63EC82F811BC9D02000DFE1A /* hdTextureManager.h in Headers */,
-				63EC82F911BC9D02000DFE1A /* hdTGALoader.h in Headers */,
-				63EC82FA11BC9D02000DFE1A /* hdPNGLoader.h in Headers */,
-				63EC82FB11BC9D02000DFE1A /* hdFontPolygon.h in Headers */,
-				63EC82FC11BC9D02000DFE1A /* hdFont.h in Headers */,
-				63EC82FD11BC9D02000DFE1A /* hdFontManager.h in Headers */,
-				63EC82FE11BC9D02000DFE1A /* hdButton.h in Headers */,
-				63EC82FF11BC9D02000DFE1A /* hdInterfaceLayer.h in Headers */,
-				63EC830011BC9D02000DFE1A /* hdReceiver.h in Headers */,
-				63EC830111BC9D02000DFE1A /* hdInterfaceController.h in Headers */,
-				63EC830211BC9D02000DFE1A /* hdUIContainer.h in Headers */,
-				63EC830311BC9D02000DFE1A /* hdUIImage.h in Headers */,
-				63EC830411BC9D02000DFE1A /* hdInterfaceEnums.h in Headers */,
-				63EC830511BC9D02000DFE1A /* hdUISegmentedControl.h in Headers */,
-				63EC830611BC9D02000DFE1A /* hdCheckbox.h in Headers */,
-				63EC830711BC9D02000DFE1A /* hdInterfaceContext.h in Headers */,
-				63EC830811BC9D02000DFE1A /* hdFixed.h in Headers */,
-				63EC830911BC9D02000DFE1A /* hdGeometry.h in Headers */,
-				63EC830A11BC9D02000DFE1A /* hdMathSerializable.h in Headers */,
-				63EC830B11BC9D02000DFE1A /* hdMatrix.h in Headers */,
-				63EC830C11BC9D02000DFE1A /* hdParticleEmitter.h in Headers */,
-				63EC830D11BC9D02000DFE1A /* hdPhysicsParticleEmitter.h in Headers */,
-				63EC830E11BC9D02000DFE1A /* Box2D.h in Headers */,
-				63EC830F11BC9D02000DFE1A /* b2BroadPhase.h in Headers */,
-				63EC831011BC9D02000DFE1A /* b2Collision.h in Headers */,
-				63EC831111BC9D02000DFE1A /* b2PairManager.h in Headers */,
-				63EC831211BC9D02000DFE1A /* b2CircleShape.h in Headers */,
-				63EC831311BC9D02000DFE1A /* b2EdgeShape.h in Headers */,
-				63EC831411BC9D02000DFE1A /* b2PolygonShape.h in Headers */,
-				63EC831511BC9D02000DFE1A /* b2Shape.h in Headers */,
-				63EC831611BC9D02000DFE1A /* b2BlockAllocator.h in Headers */,
-				63EC831711BC9D02000DFE1A /* b2Math.h in Headers */,
-				63EC831811BC9D02000DFE1A /* b2Settings.h in Headers */,
-				63EC831911BC9D02000DFE1A /* b2StackAllocator.h in Headers */,
-				63EC831A11BC9D02000DFE1A /* Fixed.h in Headers */,
-				63EC831B11BC9D02000DFE1A /* jtypes.h in Headers */,
-				63EC831C11BC9D02000DFE1A /* b2Body.h in Headers */,
-				63EC831D11BC9D02000DFE1A /* b2ContactManager.h in Headers */,
-				63EC831E11BC9D02000DFE1A /* b2Island.h in Headers */,
-				63EC831F11BC9D02000DFE1A /* b2World.h in Headers */,
-				63EC832011BC9D02000DFE1A /* b2WorldCallbacks.h in Headers */,
-				63EC832111BC9D02000DFE1A /* b2CircleContact.h in Headers */,
-				63EC832211BC9D02000DFE1A /* b2Contact.h in Headers */,
-				63EC832311BC9D02000DFE1A /* b2ContactSolver.h in Headers */,
-				63EC832411BC9D02000DFE1A /* b2EdgeAndCircleContact.h in Headers */,
-				63EC832511BC9D02000DFE1A /* b2NullContact.h in Headers */,
-				63EC832611BC9D02000DFE1A /* b2PolyAndCircleContact.h in Headers */,
-				63EC832711BC9D02000DFE1A /* b2PolyAndEdgeContact.h in Headers */,
-				63EC832811BC9D02000DFE1A /* b2PolyContact.h in Headers */,
-				63EC832911BC9D02000DFE1A /* b2BuoyancyController.h in Headers */,
-				63EC832A11BC9D02000DFE1A /* b2ConstantAccelController.h in Headers */,
-				63EC832B11BC9D02000DFE1A /* b2ConstantForceController.h in Headers */,
-				63EC832C11BC9D02000DFE1A /* b2Controller.h in Headers */,
-				63EC832D11BC9D02000DFE1A /* b2GravityController.h in Headers */,
-				63EC832E11BC9D02000DFE1A /* b2TensorDampingController.h in Headers */,
-				63EC832F11BC9D02000DFE1A /* b2DistanceJoint.h in Headers */,
-				63EC833011BC9D02000DFE1A /* b2GearJoint.h in Headers */,
-				63EC833111BC9D02000DFE1A /* b2Joint.h in Headers */,
-				63EC833211BC9D02000DFE1A /* b2LineJoint.h in Headers */,
-				63EC833311BC9D02000DFE1A /* b2MouseJoint.h in Headers */,
-				63EC833411BC9D02000DFE1A /* b2PrismaticJoint.h in Headers */,
-				63EC833511BC9D02000DFE1A /* b2PulleyJoint.h in Headers */,
-				63EC833611BC9D02000DFE1A /* b2RevoluteJoint.h in Headers */,
-				63EC833711BC9D02000DFE1A /* hdk_prefix.pch in Headers */,
-				63EC833811BC9D02000DFE1A /* hdScreenSettings.h in Headers */,
-				63EC833911BC9D02000DFE1A /* hdCollections.h in Headers */,
-				63EC833A11BC9D02000DFE1A /* hdk.h in Headers */,
-				63EC833B11BC9D02000DFE1A /* hdInterface.h in Headers */,
-				63EC833C11BC9D02000DFE1A /* hdMath.h in Headers */,
-				63EC833D11BC9D02000DFE1A /* hdSoundSystem.h in Headers */,
-				63EC833E11BC9D02000DFE1A /* hdAnimation.h in Headers */,
-				63EC833F11BC9D02000DFE1A /* hdAnimationEngine.h in Headers */,
-				63EC834011BC9D02000DFE1A /* hdSound.h in Headers */,
-				63EC834111BC9D02000DFE1A /* hdGame.h in Headers */,
-				63EC834211BC9D02000DFE1A /* hdCore.h in Headers */,
-				63EC834311BC9D02000DFE1A /* hdGraphicsLibrary.h in Headers */,
-				63EC834411BC9D02000DFE1A /* hdSoundSystemEnums.h in Headers */,
-				63EC834511BC9D02000DFE1A /* hdMusicPlayerInterface.h in Headers */,
-				63EC834611BC9D02000DFE1A /* hdMathCommon.h in Headers */,
-				63EC834711BC9D02000DFE1A /* hdFileSystemUtils.h in Headers */,
-				63EC834811BC9D02000DFE1A /* hdEffects.h in Headers */,
-				63EC834911BC9D02000DFE1A /* hdGLES1Surface.h in Headers */,
-				63EC834A11BC9D02000DFE1A /* hdGLES2Surface.h in Headers */,
-				63EC834B11BC9D02000DFE1A /* hdGLESSurface.h in Headers */,
-				63EC834C11BC9D02000DFE1A /* hdGLView.h in Headers */,
-				63EC834D11BC9D02000DFE1A /* hdMultiTouchView.h in Headers */,
-				63EC834E11BC9D02000DFE1A /* hdInput.h in Headers */,
-				63EC834F11BC9D02000DFE1A /* hdAccelerometer.h in Headers */,
-				63EC835011BC9D02000DFE1A /* hdLibs.h in Headers */,
-				63EC835111BC9D02000DFE1A /* neon_matrix_impl.h in Headers */,
-				63EC835211BC9D02000DFE1A /* common_macros.h in Headers */,
-				63EC835311BC9D02000DFE1A /* matrix_impl.h in Headers */,
-				63EC835411BC9D02000DFE1A /* utility_impl.h in Headers */,
-				63EC835511BC9D02000DFE1A /* vfp_clobbers.h in Headers */,
-				63EC835611BC9D02000DFE1A /* concepts.hpp in Headers */,
-				63EC835711BC9D02000DFE1A /* borland.hpp in Headers */,
-				63EC835811BC9D02000DFE1A /* cwchar.hpp in Headers */,
-				63EC835911BC9D02000DFE1A /* config.hpp in Headers */,
-				63EC835A11BC9D02000DFE1A /* icu.hpp in Headers */,
-				63EC835B11BC9D02000DFE1A /* mfc.hpp in Headers */,
-				63EC835C11BC9D02000DFE1A /* pattern_except.hpp in Headers */,
-				63EC835D11BC9D02000DFE1A /* object_cache.hpp in Headers */,
-				63EC835E11BC9D02000DFE1A /* static_mutex.hpp in Headers */,
-				63EC835F11BC9D02000DFE1A /* unicode_iterator.hpp in Headers */,
-				63EC836011BC9D02000DFE1A /* regex_traits.hpp in Headers */,
-				63EC836111BC9D02000DFE1A /* user.hpp in Headers */,
-				63EC836211BC9D02000DFE1A /* basic_regex.hpp in Headers */,
-				63EC836311BC9D02000DFE1A /* basic_regex_creator.hpp in Headers */,
-				63EC836411BC9D02000DFE1A /* basic_regex_parser.hpp in Headers */,
-				63EC836511BC9D02000DFE1A /* c_regex_traits.hpp in Headers */,
-				63EC836611BC9D02000DFE1A /* char_regex_traits.hpp in Headers */,
-				63EC836711BC9D02000DFE1A /* cpp_regex_traits.hpp in Headers */,
-				63EC836811BC9D02000DFE1A /* cregex.hpp in Headers */,
-				63EC836911BC9D02000DFE1A /* error_type.hpp in Headers */,
-				63EC836A11BC9D02000DFE1A /* fileiter.hpp in Headers */,
-				63EC836B11BC9D02000DFE1A /* instances.hpp in Headers */,
-				63EC836C11BC9D02000DFE1A /* iterator_category.hpp in Headers */,
-				63EC836D11BC9D02000DFE1A /* iterator_traits.hpp in Headers */,
-				63EC836E11BC9D02000DFE1A /* match_flags.hpp in Headers */,
-				63EC836F11BC9D02000DFE1A /* match_results.hpp in Headers */,
-				63EC837011BC9D02000DFE1A /* mem_block_cache.hpp in Headers */,
-				63EC837111BC9D02000DFE1A /* perl_matcher.hpp in Headers */,
-				63EC837211BC9D02000DFE1A /* perl_matcher_common.hpp in Headers */,
-				63EC837311BC9D02000DFE1A /* perl_matcher_non_recursive.hpp in Headers */,
-				63EC837411BC9D02000DFE1A /* perl_matcher_recursive.hpp in Headers */,
-				63EC837511BC9D02000DFE1A /* primary_transform.hpp in Headers */,
-				63EC837611BC9D02000DFE1A /* protected_call.hpp in Headers */,
-				63EC837711BC9D02000DFE1A /* regbase.hpp in Headers */,
-				63EC837811BC9D02000DFE1A /* regex.hpp in Headers */,
-				63EC837911BC9D02000DFE1A /* regex_format.hpp in Headers */,
-				63EC837A11BC9D02000DFE1A /* regex_fwd.hpp in Headers */,
-				63EC837B11BC9D02000DFE1A /* regex_grep.hpp in Headers */,
-				63EC837C11BC9D02000DFE1A /* regex_iterator.hpp in Headers */,
-				63EC837D11BC9D02000DFE1A /* regex_match.hpp in Headers */,
-				63EC837E11BC9D02000DFE1A /* regex_merge.hpp in Headers */,
-				63EC837F11BC9D02000DFE1A /* regex_raw_buffer.hpp in Headers */,
-				63EC838011BC9D02000DFE1A /* regex_replace.hpp in Headers */,
-				63EC838111BC9D02000DFE1A /* regex_search.hpp in Headers */,
-				63EC838211BC9D02000DFE1A /* regex_split.hpp in Headers */,
-				63EC838311BC9D02000DFE1A /* regex_token_iterator.hpp in Headers */,
-				63EC838411BC9D02000DFE1A /* regex_traits.hpp in Headers */,
-				63EC838511BC9D02000DFE1A /* regex_traits_defaults.hpp in Headers */,
-				63EC838611BC9D02000DFE1A /* regex_workaround.hpp in Headers */,
-				63EC838711BC9D02000DFE1A /* states.hpp in Headers */,
-				63EC838811BC9D02000DFE1A /* sub_match.hpp in Headers */,
-				63EC838911BC9D02000DFE1A /* syntax_type.hpp in Headers */,
-				63EC838A11BC9D02000DFE1A /* u32regex_iterator.hpp in Headers */,
-				63EC838B11BC9D02000DFE1A /* u32regex_token_iterator.hpp in Headers */,
-				63EC838C11BC9D02000DFE1A /* add_facet.hpp in Headers */,
-				63EC838D11BC9D02000DFE1A /* archive_exception.hpp in Headers */,
-				63EC838E11BC9D02000DFE1A /* basic_archive.hpp in Headers */,
-				63EC838F11BC9D02000DFE1A /* basic_binary_iarchive.hpp in Headers */,
-				63EC839011BC9D02000DFE1A /* basic_binary_iprimitive.hpp in Headers */,
-				63EC839111BC9D02000DFE1A /* basic_binary_oarchive.hpp in Headers */,
-				63EC839211BC9D02000DFE1A /* basic_binary_oprimitive.hpp in Headers */,
-				63EC839311BC9D02000DFE1A /* basic_streambuf_locale_saver.hpp in Headers */,
-				63EC839411BC9D02000DFE1A /* basic_text_iarchive.hpp in Headers */,
-				63EC839511BC9D02000DFE1A /* basic_text_iprimitive.hpp in Headers */,
-				63EC839611BC9D02000DFE1A /* basic_text_oarchive.hpp in Headers */,
-				63EC839711BC9D02000DFE1A /* basic_text_oprimitive.hpp in Headers */,
-				63EC839811BC9D02000DFE1A /* basic_xml_archive.hpp in Headers */,
-				63EC839911BC9D02000DFE1A /* basic_xml_iarchive.hpp in Headers */,
-				63EC839A11BC9D02000DFE1A /* basic_xml_oarchive.hpp in Headers */,
-				63EC839B11BC9D02000DFE1A /* binary_iarchive.hpp in Headers */,
-				63EC839C11BC9D02000DFE1A /* binary_iarchive_impl.hpp in Headers */,
-				63EC839D11BC9D02000DFE1A /* binary_oarchive.hpp in Headers */,
-				63EC839E11BC9D02000DFE1A /* binary_oarchive_impl.hpp in Headers */,
-				63EC839F11BC9D02000DFE1A /* binary_wiarchive.hpp in Headers */,
-				63EC83A011BC9D02000DFE1A /* binary_woarchive.hpp in Headers */,
-				63EC83A111BC9D02000DFE1A /* codecvt_null.hpp in Headers */,
-				63EC83A211BC9D02000DFE1A /* abi_prefix.hpp in Headers */,
-				63EC83A311BC9D02000DFE1A /* abi_suffix.hpp in Headers */,
-				63EC83A411BC9D02000DFE1A /* archive_pointer_iserializer.hpp in Headers */,
-				63EC83A511BC9D02000DFE1A /* archive_pointer_oserializer.hpp in Headers */,
-				63EC83A611BC9D02000DFE1A /* auto_link_archive.hpp in Headers */,
-				63EC83A711BC9D02000DFE1A /* auto_link_warchive.hpp in Headers */,
-				63EC83A811BC9D02000DFE1A /* basic_archive_impl.hpp in Headers */,
-				63EC83A911BC9D02000DFE1A /* basic_config.hpp in Headers */,
-				63EC83AA11BC9D02000DFE1A /* basic_iarchive.hpp in Headers */,
-				63EC83AB11BC9D02000DFE1A /* basic_iserializer.hpp in Headers */,
-				63EC83AC11BC9D02000DFE1A /* basic_oarchive.hpp in Headers */,
-				63EC83AD11BC9D02000DFE1A /* basic_oserializer.hpp in Headers */,
-				63EC83AE11BC9D02000DFE1A /* basic_pointer_iserializer.hpp in Headers */,
-				63EC83AF11BC9D02000DFE1A /* basic_pointer_oserializer.hpp in Headers */,
-				63EC83B011BC9D02000DFE1A /* basic_serializer.hpp in Headers */,
-				63EC83B111BC9D02000DFE1A /* basic_serializer_map.hpp in Headers */,
-				63EC83B211BC9D02000DFE1A /* common_iarchive.hpp in Headers */,
-				63EC83B311BC9D02000DFE1A /* common_oarchive.hpp in Headers */,
-				63EC83B411BC9D02000DFE1A /* decl.hpp in Headers */,
-				63EC83B511BC9D02000DFE1A /* interface_iarchive.hpp in Headers */,
-				63EC83B611BC9D02000DFE1A /* interface_oarchive.hpp in Headers */,
-				63EC83B711BC9D02000DFE1A /* iserializer.hpp in Headers */,
-				63EC83B811BC9D02000DFE1A /* oserializer.hpp in Headers */,
-				63EC83B911BC9D02000DFE1A /* polymorphic_iarchive_route.hpp in Headers */,
-				63EC83BA11BC9D02000DFE1A /* polymorphic_oarchive_route.hpp in Headers */,
-				63EC83BB11BC9D02000DFE1A /* register_archive.hpp in Headers */,
-				63EC83BC11BC9D02000DFE1A /* utf8_codecvt_facet.hpp in Headers */,
-				63EC83BD11BC9D02000DFE1A /* dinkumware.hpp in Headers */,
-				63EC83BE11BC9D02000DFE1A /* basic_xml_grammar.hpp in Headers */,
-				63EC83BF11BC9D02000DFE1A /* base64_exception.hpp in Headers */,
-				63EC83C011BC9D02000DFE1A /* base64_from_binary.hpp in Headers */,
-				63EC83C111BC9D02000DFE1A /* binary_from_base64.hpp in Headers */,
-				63EC83C211BC9D02000DFE1A /* dataflow.hpp in Headers */,
-				63EC83C311BC9D02000DFE1A /* dataflow_exception.hpp in Headers */,
-				63EC83C411BC9D02000DFE1A /* escape.hpp in Headers */,
-				63EC83C511BC9D02000DFE1A /* head_iterator.hpp in Headers */,
-				63EC83C611BC9D02000DFE1A /* insert_linebreaks.hpp in Headers */,
-				63EC83C711BC9D02000DFE1A /* istream_iterator.hpp in Headers */,
-				63EC83C811BC9D02000DFE1A /* mb_from_wchar.hpp in Headers */,
-				63EC83C911BC9D02000DFE1A /* ostream_iterator.hpp in Headers */,
-				63EC83CA11BC9D02000DFE1A /* remove_whitespace.hpp in Headers */,
-				63EC83CB11BC9D02000DFE1A /* transform_width.hpp in Headers */,
-				63EC83CC11BC9D02000DFE1A /* unescape.hpp in Headers */,
-				63EC83CD11BC9D02000DFE1A /* wchar_from_mb.hpp in Headers */,
-				63EC83CE11BC9D02000DFE1A /* xml_escape.hpp in Headers */,
-				63EC83CF11BC9D02000DFE1A /* xml_unescape.hpp in Headers */,
-				63EC83D011BC9D02000DFE1A /* xml_unescape_exception.hpp in Headers */,
-				63EC83D111BC9D02000DFE1A /* polymorphic_binary_iarchive.hpp in Headers */,
-				63EC83D211BC9D02000DFE1A /* polymorphic_binary_oarchive.hpp in Headers */,
-				63EC83D311BC9D02000DFE1A /* polymorphic_iarchive.hpp in Headers */,
-				63EC83D411BC9D02000DFE1A /* polymorphic_oarchive.hpp in Headers */,
-				63EC83D511BC9D02000DFE1A /* polymorphic_text_iarchive.hpp in Headers */,
-				63EC83D611BC9D02000DFE1A /* polymorphic_text_oarchive.hpp in Headers */,
-				63EC83D711BC9D02000DFE1A /* polymorphic_text_wiarchive.hpp in Headers */,
-				63EC83D811BC9D02000DFE1A /* polymorphic_text_woarchive.hpp in Headers */,
-				63EC83D911BC9D02000DFE1A /* polymorphic_xml_iarchive.hpp in Headers */,
-				63EC83DA11BC9D02000DFE1A /* polymorphic_xml_oarchive.hpp in Headers */,
-				63EC83DB11BC9D02000DFE1A /* polymorphic_xml_wiarchive.hpp in Headers */,
-				63EC83DC11BC9D02000DFE1A /* polymorphic_xml_woarchive.hpp in Headers */,
-				63EC83DD11BC9D02000DFE1A /* shared_ptr_helper.hpp in Headers */,
-				63EC83DE11BC9D02000DFE1A /* text_iarchive.hpp in Headers */,
-				63EC83DF11BC9D02000DFE1A /* text_oarchive.hpp in Headers */,
-				63EC83E011BC9D02000DFE1A /* text_wiarchive.hpp in Headers */,
-				63EC83E111BC9D02000DFE1A /* text_woarchive.hpp in Headers */,
-				63EC83E211BC9D02000DFE1A /* tmpdir.hpp in Headers */,
-				63EC83E311BC9D02000DFE1A /* wcslen.hpp in Headers */,
-				63EC83E411BC9D02000DFE1A /* xml_archive_exception.hpp in Headers */,
-				63EC83E511BC9D02000DFE1A /* xml_iarchive.hpp in Headers */,
-				63EC83E611BC9D02000DFE1A /* xml_oarchive.hpp in Headers */,
-				63EC83E711BC9D02000DFE1A /* xml_wiarchive.hpp in Headers */,
-				63EC83E811BC9D02000DFE1A /* xml_woarchive.hpp in Headers */,
-				63EC83E911BC9D02000DFE1A /* hdThumbPad.h in Headers */,
-				63EC83EA11BC9D02000DFE1A /* hdCamera.h in Headers */,
-				63EC83EC11BC9D02000DFE1A /* config.hpp in Headers */,
-				63EC83ED11BC9D02000DFE1A /* cygwin_error.hpp in Headers */,
-				63EC83EE11BC9D02000DFE1A /* error_code.hpp in Headers */,
-				63EC83EF11BC9D02000DFE1A /* linux_error.hpp in Headers */,
-				63EC83F011BC9D02000DFE1A /* system_error.hpp in Headers */,
-				63EC83F111BC9D02000DFE1A /* config.hpp in Headers */,
-				63EC83F211BC9D02000DFE1A /* convenience.hpp in Headers */,
-				63EC83F311BC9D02000DFE1A /* exception.hpp in Headers */,
-				63EC83F411BC9D02000DFE1A /* fstream.hpp in Headers */,
-				63EC83F511BC9D02000DFE1A /* operations.hpp in Headers */,
-				63EC83F611BC9D02000DFE1A /* path.hpp in Headers */,
-				63EC83F711BC9D02000DFE1A /* filesystem.hpp in Headers */,
-				63EC83F811BC9D02000DFE1A /* utf8_codecvt_facet.hpp in Headers */,
-				63FBC6B611C81C1C00C2377F /* hdIBButton.h in Headers */,
-				63FBC6B811C81C1C00C2377F /* hdIBImage.h in Headers */,
-				63FBC6BA11C81C1C00C2377F /* hdIBFontPolygon.h in Headers */,
-				63FBC6BC11C81C1C00C2377F /* hdIBContainer.h in Headers */,
-				63FBC6BE11C81C1C00C2377F /* hdIBProxy.h in Headers */,
-				63FBC6C011C81C1C00C2377F /* hdIBViewController.h in Headers */,
-				63FBC6C211C81C1C00C2377F /* hdIBLoader.h in Headers */,
-				63FBC6C411C81C1C00C2377F /* hdIBEnums.h in Headers */,
-				63FBC6C711C81C2700C2377F /* hdIB.h in Headers */,
-				6384558B11C8337300C421AB /* hdViewController.h in Headers */,
-				63B351D711F821B100D20861 /* hdScripting.h in Headers */,
-				6353FD2C1340079400AD7F1D /* hdMultiTouchViewController.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D2AAC07A0554694100DB518D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -2997,10 +2120,6 @@
 				E41EAA5F1170BCC000A30C8E /* hdAccelerometer.h in Headers */,
 				E4F36B8311714B8F00792A2D /* hdLibs.h in Headers */,
 				E4F36BD711714DAD00792A2D /* neon_matrix_impl.h in Headers */,
-				E4F36BD811714DAD00792A2D /* common_macros.h in Headers */,
-				E4F36BDA11714DAD00792A2D /* matrix_impl.h in Headers */,
-				E4F36BDC11714DAD00792A2D /* utility_impl.h in Headers */,
-				E4F36BDD11714DAD00792A2D /* vfp_clobbers.h in Headers */,
 				E4F36DF51171699800792A2D /* concepts.hpp in Headers */,
 				E4F36DF61171699800792A2D /* borland.hpp in Headers */,
 				E4F36DF71171699800792A2D /* cwchar.hpp in Headers */,
@@ -3181,23 +2300,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		63EC82C011BC9D02000DFE1A /* hdkIPhone */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 63EC84A911BC9D02000DFE1A /* Build configuration list for PBXNativeTarget "hdkIPhone" */;
-			buildPhases = (
-				63EC82C111BC9D02000DFE1A /* Headers */,
-				63EC83F911BC9D02000DFE1A /* Sources */,
-				63EC849F11BC9D02000DFE1A /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = hdkIPhone;
-			productName = hdk;
-			productReference = 63EC84AC11BC9D02000DFE1A /* libhdkiPhone.a */;
-			productType = "com.apple.product-type.library.static";
-		};
 		D2AAC07D0554694100DB518D /* hdk */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "hdk" */;
@@ -3220,6 +2322,8 @@
 /* Begin PBXProject section */
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "hdk" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -3236,192 +2340,11 @@
 			projectRoot = "";
 			targets = (
 				D2AAC07D0554694100DB518D /* hdk */,
-				63EC82C011BC9D02000DFE1A /* hdkIPhone */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		63EC83F911BC9D02000DFE1A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				63EC83FA11BC9D02000DFE1A /* AppleOpenALSupport.c in Sources */,
-				63EC83FB11BC9D02000DFE1A /* CMOpenALSound.m in Sources */,
-				63EC83FC11BC9D02000DFE1A /* CMOpenALSoundManager.m in Sources */,
-				63EC83FD11BC9D02000DFE1A /* hdSoundManager.cpp in Sources */,
-				63EC83FE11BC9D02000DFE1A /* hdOpenALSoundEngine.mm in Sources */,
-				63EC83FF11BC9D02000DFE1A /* hdOpenALPool.cpp in Sources */,
-				63EC840011BC9D02000DFE1A /* hdAVAudioWrapper.mm in Sources */,
-				63EC840111BC9D02000DFE1A /* hdAction.cpp in Sources */,
-				63EC840211BC9D02000DFE1A /* hdAnimation.cpp in Sources */,
-				63EC840311BC9D02000DFE1A /* hdAnimationController.cpp in Sources */,
-				63EC840511BC9D02000DFE1A /* hdRotationAction.cpp in Sources */,
-				63EC840611BC9D02000DFE1A /* hdScaleAction.cpp in Sources */,
-				63EC840711BC9D02000DFE1A /* hdTranslationAction.cpp in Sources */,
-				63EC840811BC9D02000DFE1A /* hdVectorAction.cpp in Sources */,
-				63EC840911BC9D02000DFE1A /* hdAlphaAction.cpp in Sources */,
-				63EC840A11BC9D02000DFE1A /* hdCompression.cpp in Sources */,
-				63EC840B11BC9D02000DFE1A /* hdPakFileSystem.cpp in Sources */,
-				63EC840C11BC9D02000DFE1A /* hdCommon.cpp in Sources */,
-				63EC840D11BC9D02000DFE1A /* hdIPhoneFileSystem.mm in Sources */,
-				63EC840E11BC9D02000DFE1A /* hdIPhoneSystemSettings.mm in Sources */,
-				63EC840F11BC9D02000DFE1A /* hdIPhoneOSFunctions.mm in Sources */,
-				63EC841011BC9D02000DFE1A /* hdConfig.cpp in Sources */,
-				63EC841111BC9D02000DFE1A /* hdPlayerConfig.cpp in Sources */,
-				63EC841211BC9D02000DFE1A /* hd2DGameController.cpp in Sources */,
-				63EC841311BC9D02000DFE1A /* hdAgent.cpp in Sources */,
-				63EC841411BC9D02000DFE1A /* hdBody.cpp in Sources */,
-				63EC841511BC9D02000DFE1A /* hdGameObject.cpp in Sources */,
-				63EC841611BC9D02000DFE1A /* hdGameWorld.cpp in Sources */,
-				63EC841711BC9D02000DFE1A /* hdLevel.cpp in Sources */,
-				63EC841811BC9D02000DFE1A /* hdLevelGroup.cpp in Sources */,
-				63EC841911BC9D02000DFE1A /* hdOrthographicProjection.cpp in Sources */,
-				63EC841A11BC9D02000DFE1A /* hdPhysicsGlue.cpp in Sources */,
-				63EC841B11BC9D02000DFE1A /* hdDrawingUtilities.cpp in Sources */,
-				63EC841C11BC9D02000DFE1A /* hdOpenGLES.cpp in Sources */,
-				63EC841D11BC9D02000DFE1A /* hdPolygon.cpp in Sources */,
-				63EC841E11BC9D02000DFE1A /* hdTextureManager.cpp in Sources */,
-				63EC841F11BC9D02000DFE1A /* hdTGALoader.cpp in Sources */,
-				63EC842011BC9D02000DFE1A /* hdPNGLoader.mm in Sources */,
-				63EC842111BC9D02000DFE1A /* hdFontPolygon.cpp in Sources */,
-				63EC842211BC9D02000DFE1A /* hdFont.cpp in Sources */,
-				63EC842311BC9D02000DFE1A /* hdFontManager.cpp in Sources */,
-				63EC842411BC9D02000DFE1A /* hdButton.cpp in Sources */,
-				63EC842511BC9D02000DFE1A /* hdInterfaceLayer.cpp in Sources */,
-				63EC842611BC9D02000DFE1A /* hdReceiver.cpp in Sources */,
-				63EC842711BC9D02000DFE1A /* hdInterfaceController.cpp in Sources */,
-				63EC842811BC9D02000DFE1A /* hdUIContainer.cpp in Sources */,
-				63EC842911BC9D02000DFE1A /* hdUIImage.cpp in Sources */,
-				63EC842A11BC9D02000DFE1A /* hdUISegmentedControl.cpp in Sources */,
-				63EC842B11BC9D02000DFE1A /* hdCheckbox.cpp in Sources */,
-				63EC842C11BC9D02000DFE1A /* hdInterfaceContext.cpp in Sources */,
-				63EC842D11BC9D02000DFE1A /* hdMatrix.cpp in Sources */,
-				63EC842E11BC9D02000DFE1A /* hdParticleEmitter.cpp in Sources */,
-				63EC842F11BC9D02000DFE1A /* hdPhysicsParticleEmitter.cpp in Sources */,
-				63EC843011BC9D02000DFE1A /* b2BroadPhase.cpp in Sources */,
-				63EC843111BC9D02000DFE1A /* b2CollideCircle.cpp in Sources */,
-				63EC843211BC9D02000DFE1A /* b2CollidePoly.cpp in Sources */,
-				63EC843311BC9D02000DFE1A /* b2Collision.cpp in Sources */,
-				63EC843411BC9D02000DFE1A /* b2Distance.cpp in Sources */,
-				63EC843511BC9D02000DFE1A /* b2PairManager.cpp in Sources */,
-				63EC843611BC9D02000DFE1A /* b2TimeOfImpact.cpp in Sources */,
-				63EC843711BC9D02000DFE1A /* b2CircleShape.cpp in Sources */,
-				63EC843811BC9D02000DFE1A /* b2EdgeShape.cpp in Sources */,
-				63EC843911BC9D02000DFE1A /* b2PolygonShape.cpp in Sources */,
-				63EC843A11BC9D02000DFE1A /* b2Shape.cpp in Sources */,
-				63EC843B11BC9D02000DFE1A /* b2BlockAllocator.cpp in Sources */,
-				63EC843C11BC9D02000DFE1A /* b2Math.cpp in Sources */,
-				63EC843D11BC9D02000DFE1A /* b2Settings.cpp in Sources */,
-				63EC843E11BC9D02000DFE1A /* b2StackAllocator.cpp in Sources */,
-				63EC843F11BC9D02000DFE1A /* b2Body.cpp in Sources */,
-				63EC844011BC9D02000DFE1A /* b2ContactManager.cpp in Sources */,
-				63EC844111BC9D02000DFE1A /* b2Island.cpp in Sources */,
-				63EC844211BC9D02000DFE1A /* b2World.cpp in Sources */,
-				63EC844311BC9D02000DFE1A /* b2WorldCallbacks.cpp in Sources */,
-				63EC844411BC9D02000DFE1A /* b2CircleContact.cpp in Sources */,
-				63EC844511BC9D02000DFE1A /* b2Contact.cpp in Sources */,
-				63EC844611BC9D02000DFE1A /* b2ContactSolver.cpp in Sources */,
-				63EC844711BC9D02000DFE1A /* b2EdgeAndCircleContact.cpp in Sources */,
-				63EC844811BC9D02000DFE1A /* b2PolyAndCircleContact.cpp in Sources */,
-				63EC844911BC9D02000DFE1A /* b2PolyAndEdgeContact.cpp in Sources */,
-				63EC844A11BC9D02000DFE1A /* b2PolyContact.cpp in Sources */,
-				63EC844B11BC9D02000DFE1A /* b2BuoyancyController.cpp in Sources */,
-				63EC844C11BC9D02000DFE1A /* b2ConstantAccelController.cpp in Sources */,
-				63EC844D11BC9D02000DFE1A /* b2ConstantForceController.cpp in Sources */,
-				63EC844E11BC9D02000DFE1A /* b2Controller.cpp in Sources */,
-				63EC844F11BC9D02000DFE1A /* b2GravityController.cpp in Sources */,
-				63EC845011BC9D02000DFE1A /* b2TensorDampingController.cpp in Sources */,
-				63EC845111BC9D02000DFE1A /* b2DistanceJoint.cpp in Sources */,
-				63EC845211BC9D02000DFE1A /* b2GearJoint.cpp in Sources */,
-				63EC845311BC9D02000DFE1A /* b2Joint.cpp in Sources */,
-				63EC845411BC9D02000DFE1A /* b2LineJoint.cpp in Sources */,
-				63EC845511BC9D02000DFE1A /* b2MouseJoint.cpp in Sources */,
-				63EC845611BC9D02000DFE1A /* b2PrismaticJoint.cpp in Sources */,
-				63EC845711BC9D02000DFE1A /* b2PulleyJoint.cpp in Sources */,
-				63EC845811BC9D02000DFE1A /* b2RevoluteJoint.cpp in Sources */,
-				63EC845911BC9D02000DFE1A /* hdFileSystemUtils.cpp in Sources */,
-				63EC845A11BC9D02000DFE1A /* hdScreenSettings.cpp in Sources */,
-				63EC845B11BC9D02000DFE1A /* hdGLES1Surface.mm in Sources */,
-				63EC845C11BC9D02000DFE1A /* hdGLES2Surface.mm in Sources */,
-				63EC845D11BC9D02000DFE1A /* hdGLESSurface.mm in Sources */,
-				63EC845E11BC9D02000DFE1A /* hdGLView.mm in Sources */,
-				63EC845F11BC9D02000DFE1A /* hdMultiTouchView.mm in Sources */,
-				63EC846011BC9D02000DFE1A /* hdiPhoneAccelerometer.mm in Sources */,
-				63EC846111BC9D02000DFE1A /* neon_matrix_impl.cpp in Sources */,
-				63EC846211BC9D02000DFE1A /* matrix_impl.cpp in Sources */,
-				63EC846311BC9D02000DFE1A /* utility_impl.cpp in Sources */,
-				63EC846411BC9D02000DFE1A /* c_regex_traits.cpp in Sources */,
-				63EC846511BC9D02000DFE1A /* cpp_regex_traits.cpp in Sources */,
-				63EC846611BC9D02000DFE1A /* cregex.cpp in Sources */,
-				63EC846711BC9D02000DFE1A /* fileiter.cpp in Sources */,
-				63EC846811BC9D02000DFE1A /* icu.cpp in Sources */,
-				63EC846911BC9D02000DFE1A /* instances.cpp in Sources */,
-				63EC846A11BC9D02000DFE1A /* posix_api.cpp in Sources */,
-				63EC846B11BC9D02000DFE1A /* regex.cpp in Sources */,
-				63EC846C11BC9D02000DFE1A /* regex_debug.cpp in Sources */,
-				63EC846D11BC9D02000DFE1A /* regex_raw_buffer.cpp in Sources */,
-				63EC846E11BC9D02000DFE1A /* regex_traits_defaults.cpp in Sources */,
-				63EC846F11BC9D02000DFE1A /* static_mutex.cpp in Sources */,
-				63EC847011BC9D02000DFE1A /* usinstances.cpp in Sources */,
-				63EC847111BC9D02000DFE1A /* wc_regex_traits.cpp in Sources */,
-				63EC847211BC9D02000DFE1A /* wide_posix_api.cpp in Sources */,
-				63EC847311BC9D02000DFE1A /* winstances.cpp in Sources */,
-				63EC847411BC9D02000DFE1A /* basic_archive.cpp in Sources */,
-				63EC847511BC9D02000DFE1A /* basic_iarchive.cpp in Sources */,
-				63EC847611BC9D02000DFE1A /* basic_iserializer.cpp in Sources */,
-				63EC847711BC9D02000DFE1A /* basic_oarchive.cpp in Sources */,
-				63EC847811BC9D02000DFE1A /* basic_oserializer.cpp in Sources */,
-				63EC847911BC9D02000DFE1A /* basic_pointer_iserializer.cpp in Sources */,
-				63EC847A11BC9D02000DFE1A /* basic_pointer_oserializer.cpp in Sources */,
-				63EC847B11BC9D02000DFE1A /* basic_serializer_map.cpp in Sources */,
-				63EC847C11BC9D02000DFE1A /* basic_text_iprimitive.cpp in Sources */,
-				63EC847D11BC9D02000DFE1A /* basic_text_oprimitive.cpp in Sources */,
-				63EC847E11BC9D02000DFE1A /* basic_text_wiprimitive.cpp in Sources */,
-				63EC847F11BC9D02000DFE1A /* basic_text_woprimitive.cpp in Sources */,
-				63EC848011BC9D02000DFE1A /* basic_xml_archive.cpp in Sources */,
-				63EC848111BC9D02000DFE1A /* binary_iarchive.cpp in Sources */,
-				63EC848211BC9D02000DFE1A /* binary_oarchive.cpp in Sources */,
-				63EC848311BC9D02000DFE1A /* binary_wiarchive.cpp in Sources */,
-				63EC848411BC9D02000DFE1A /* binary_woarchive.cpp in Sources */,
-				63EC848511BC9D02000DFE1A /* codecvt_null.cpp in Sources */,
-				63EC848611BC9D02000DFE1A /* extended_type_info.cpp in Sources */,
-				63EC848711BC9D02000DFE1A /* extended_type_info_no_rtti.cpp in Sources */,
-				63EC848811BC9D02000DFE1A /* extended_type_info_typeid.cpp in Sources */,
-				63EC848911BC9D02000DFE1A /* polymorphic_iarchive.cpp in Sources */,
-				63EC848A11BC9D02000DFE1A /* polymorphic_oarchive.cpp in Sources */,
-				63EC848B11BC9D02000DFE1A /* stl_port.cpp in Sources */,
-				63EC848C11BC9D02000DFE1A /* text_iarchive.cpp in Sources */,
-				63EC848D11BC9D02000DFE1A /* text_oarchive.cpp in Sources */,
-				63EC848E11BC9D02000DFE1A /* text_wiarchive.cpp in Sources */,
-				63EC848F11BC9D02000DFE1A /* text_woarchive.cpp in Sources */,
-				63EC849011BC9D02000DFE1A /* utf8_codecvt_facet.cpp in Sources */,
-				63EC849111BC9D02000DFE1A /* void_cast.cpp in Sources */,
-				63EC849211BC9D02000DFE1A /* xml_grammar.cpp in Sources */,
-				63EC849311BC9D02000DFE1A /* xml_iarchive.cpp in Sources */,
-				63EC849411BC9D02000DFE1A /* xml_oarchive.cpp in Sources */,
-				63EC849511BC9D02000DFE1A /* xml_wgrammar.cpp in Sources */,
-				63EC849611BC9D02000DFE1A /* xml_wiarchive.cpp in Sources */,
-				63EC849711BC9D02000DFE1A /* xml_woarchive.cpp in Sources */,
-				63EC849811BC9D02000DFE1A /* hdThumbPad.cpp in Sources */,
-				63EC849911BC9D02000DFE1A /* hdCamera.cpp in Sources */,
-				63EC849A11BC9D02000DFE1A /* error_code.cpp in Sources */,
-				63EC849B11BC9D02000DFE1A /* operations.cpp in Sources */,
-				63EC849C11BC9D02000DFE1A /* path.cpp in Sources */,
-				63EC849D11BC9D02000DFE1A /* portability.cpp in Sources */,
-				63EC849E11BC9D02000DFE1A /* utf8_codecvt_facet.cpp in Sources */,
-				63FBC6B711C81C1C00C2377F /* hdIBButton.cpp in Sources */,
-				63FBC6B911C81C1C00C2377F /* hdIBImage.cpp in Sources */,
-				63FBC6BB11C81C1C00C2377F /* hdIBFontPolygon.cpp in Sources */,
-				63FBC6BD11C81C1C00C2377F /* hdIBContainer.cpp in Sources */,
-				63FBC6BF11C81C1C00C2377F /* hdIBProxy.cpp in Sources */,
-				63FBC6C111C81C1C00C2377F /* hdIBViewController.cpp in Sources */,
-				63FBC6C311C81C1C00C2377F /* hdIBLoader.cpp in Sources */,
-				6384558C11C8337300C421AB /* hdViewController.cpp in Sources */,
-				6353FD2E1340079400AD7F1D /* hdMultiTouchViewController.mm in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D2AAC07B0554694100DB518D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -3529,8 +2452,6 @@
 				E41EA9AE1170B37000A30C8E /* hdMultiTouchView.mm in Sources */,
 				E41EAA601170BCC000A30C8E /* hdiPhoneAccelerometer.mm in Sources */,
 				E4F36BD611714DAD00792A2D /* neon_matrix_impl.cpp in Sources */,
-				E4F36BD911714DAD00792A2D /* matrix_impl.cpp in Sources */,
-				E4F36BDB11714DAD00792A2D /* utility_impl.cpp in Sources */,
 				E4F36DE51171699800792A2D /* c_regex_traits.cpp in Sources */,
 				E4F36DE61171699800792A2D /* cpp_regex_traits.cpp in Sources */,
 				E4F36DE71171699800792A2D /* cregex.cpp in Sources */,
@@ -3607,9 +2528,8 @@
 /* Begin XCBuildConfiguration section */
 		1DEB921F08733DC00010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 551EDF1A1827A191007E6CC3 /* paths.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/hdk.dst;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -3624,30 +2544,19 @@
 					"DEBUG=1",
 				);
 				GCC_THUMB_SUPPORT = NO;
-				HEADER_SEARCH_PATHS = (
-					/Users/david/hdk/hdTech1/hdk/src/,
-					/Users/david/hdk/hdTech1/hdk/libs/boost_1_38_0,
-				);
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
-				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
 				);
 				PRODUCT_NAME = hdk;
-				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 2;
-				VALID_ARCHS = "armv7 i386";
 			};
 			name = Debug;
 		};
 		1DEB922008733DC00010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 551EDF1A1827A191007E6CC3 /* paths.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
 				DSTROOT = /tmp/hdk.dst;
 				GCC_AUTO_VECTORIZATION = YES;
 				GCC_ENABLE_SSE3_EXTENSIONS = NO;
@@ -3663,150 +2572,62 @@
 				);
 				GCC_THUMB_SUPPORT = NO;
 				GCC_UNROLL_LOOPS = YES;
-				HEADER_SEARCH_PATHS = (
-					/Users/david/hdk/hdTech1/hdk/src/,
-					/Users/david/hdk/hdTech1/hdk/libs/boost_1_38_0,
-				);
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
-				ONLY_ACTIVE_ARCH = YES;
-				OTHER_CFLAGS = (
-					"-ffast-math",
-					"-fast",
-				);
 				OTHER_LDFLAGS = (
 					"-all_load",
 					"-ObjC",
 				);
 				PRODUCT_NAME = hdk;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 2;
-				VALID_ARCHS = "armv7 i386";
 			};
 			name = Release;
 		};
 		1DEB922308733DC00010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 551EDF1A1827A191007E6CC3 /* paths.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = "";
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-ftemplate-depth=256",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv6 armv7 i386";
+				VALID_ARCHS = "armv7s armv7";
 			};
 			name = Debug;
 		};
 		1DEB922408733DC00010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 551EDF1A1827A191007E6CC3 /* paths.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_CFLAGS = "-fno-regmove";
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-ftemplate-depth=256",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 1;
-				VALID_ARCHS = "armv6 armv7 i386";
-			};
-			name = Release;
-		};
-		63EC84AA11BC9D02000DFE1A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/hdk.dst;
-				GCC_DEBUGGING_SYMBOLS = full;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = hdk_prefix.pch;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"_NOMEMORYMANAGER=1",
-					VFP_NO_THUMB,
-					"DEBUG=1",
-				);
-				GCC_THUMB_SUPPORT = NO;
-				HEADER_SEARCH_PATHS = (
-					/Users/david/hdk/hdTech1/hdk/src/,
-					/Users/david/hdk/hdTech1/hdk/libs/boost_1_38_0,
-				);
-				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = (
-					"-all_load",
-					"-ObjC",
-				);
-				PRODUCT_NAME = hdkiPhone;
-				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 1;
-				VALID_ARCHS = "armv6 armv7 i386";
-			};
-			name = Debug;
-		};
-		63EC84AB11BC9D02000DFE1A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				DSTROOT = /tmp/hdk.dst;
-				GCC_AUTO_VECTORIZATION = NO;
-				GCC_ENABLE_SSE3_EXTENSIONS = NO;
-				GCC_ENABLE_SYMBOL_SEPARATION = YES;
-				GCC_FAST_MATH = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = hdk_prefix.pch;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					VFP_NO_THUMB,
-					"_NOMEMORYMANAGER=1",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
-				GCC_THREADSAFE_STATICS = YES;
-				GCC_THUMB_SUPPORT = NO;
-				GCC_UNROLL_LOOPS = YES;
-				GCC_VERSION = 4.2;
-				HEADER_SEARCH_PATHS = (
-					/Users/david/hdk/hdTech1/hdk/src/,
-					/Users/david/hdk/hdTech1/hdk/libs/boost_1_38_0,
-				);
-				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CFLAGS = (
-					"-fno-regmove",
-					"-fast",
-					"-ffast-math",
-				);
-				OTHER_LDFLAGS = (
-					"-all_load",
-					"-ObjC",
-				);
-				PRODUCT_NAME = hdkiPhone;
-				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = 1;
-				VALID_ARCHS = "armv6 armv7 i386";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "armv7s armv7";
 			};
 			name = Release;
 		};
@@ -3827,15 +2648,6 @@
 			buildConfigurations = (
 				1DEB922308733DC00010E9CD /* Debug */,
 				1DEB922408733DC00010E9CD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		63EC84A911BC9D02000DFE1A /* Build configuration list for PBXNativeTarget "hdkIPhone" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				63EC84AA11BC9D02000DFE1A /* Debug */,
-				63EC84AB11BC9D02000DFE1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

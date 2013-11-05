@@ -23,11 +23,6 @@
 
 #include "hdMath/neon/neon_matrix_impl.h"
 
-#ifdef __thumb__
-#error "This file should be compiled in ARM mode only."
-// Note in Xcode, right click file, Get Info->Build, Other compiler flags = "-marm"
-#endif
-
 //#ifdef _ARM_ARCH_7
 #ifdef __ARM_NEON__
 #warning "NEON Matrix functions are included." 
@@ -36,7 +31,7 @@
 // https://www.blogger.com/comment.g?blogID=398682525365778708&postID=7527893703750196380&page=1
 void NEON_Matrix4Mul(const float* a, const float* b, float* output )
 {
-	_asm volatile
+	asm volatile
 	(
 	 // Store A & B leaving room at top of registers for result (q0-q3)
 	 "vldmia %1, { q0-q3 }	\n\t"
@@ -76,7 +71,7 @@ void NEON_Matrix4Mul(const float* a, const float* b, float* output )
 	 
 void NEON_Matrix4Vector4Mul(const float* m, const float* v, float* output)
 {
-	 _asm volatile
+	 asm volatile
 	 (
 	 // Store m & v leaving room at top of registers for result (q0)
 	 "vldmia %1, {q1-q4 }	\n\t"	// q2-q5 = m
@@ -106,7 +101,7 @@ void NEON_Matrix4Vector4Mul(const float* m, const float* v, float* output)
 
 void NEON_Matrix4Vector3Mul(const float* m, const float* v, float* output)
 {
-	_asm volatile
+	asm volatile
 	(
 	 // Store m & v leaving room at top of registers for result (q0)
 	 "vldmia %1, {q8-q10 }	\n\t"	// q2-q5 = m

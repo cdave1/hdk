@@ -19,7 +19,7 @@ class hdApplication
 	public:
 		
 		//! \brief initialization before the render API is intialized
-		bool InitApplication(bool synchronized);
+		bool InitApplication();
 	
 		bool PrepareGameLoop();
 		
@@ -55,4 +55,4 @@ class hdApplication
 	};
 
 
-#endif APPLICATION_H_
+#endif

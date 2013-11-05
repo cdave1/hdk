@@ -8,7 +8,7 @@
 
 OTHER_LDFLAGS = -all_load -ObjC
 
-HDKPATH = /Users/david/hdk/hdTech1/hdk/
+HDKPATH = /Users/david1/hdk/hdTech1/hdk/
 HDKPATHS = $(HDKPATH)libs/boost_1_38_0 $(HDKPATH)libs/Box2D/2.02/Include $(HDKPATH)libs/Box2D/2.02/Source/Dynamics/Controllers $(HDKPATH)inc/ $(HDKPATH)src/
 
 //CCCPATH = /Users/davidpetrie/Documents/Projects/ccc/ccc/

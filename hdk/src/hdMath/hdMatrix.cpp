@@ -16,6 +16,7 @@
 #if (TARGET_OS_IPHONE == 1) && (TARGET_IPHONE_SIMULATOR == 0)
 #warning "iPhone"
 #ifdef _ARM_ARCH_7
+#warning "neon"
 #include "hdMath/neon/neon_matrix_impl.h"
 #else
 #include "hdMath/vfp/matrix_impl.h"

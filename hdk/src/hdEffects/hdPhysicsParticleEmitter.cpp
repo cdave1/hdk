@@ -81,7 +81,8 @@ bool hdPhysicsParticle::RayIntersection(const hdVec3* ray, hdVec3& vOut)
 	hdVec3* vertices = this->GetVertices();
 	hdVec3 triangle[3];
 	int i1, i2;
-	hdVec3 verticesWithDepth[this->GetVertexCount()];
+    
+	static hdVec3 verticesWithDepth[256];
 	
 	for (int i = 0; i < this->GetVertexCount(); ++i)
 	{
