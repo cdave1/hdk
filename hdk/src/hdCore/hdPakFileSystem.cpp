@@ -9,41 +9,6 @@
 
 #include "hdPakFileSystem.h"
 
-
-/*
- Notes while developing:
- 
- create file map list.
- 
- For each folder in strings file
- {
- create new pak file	
- 
- For each path in strings, load raw file bytes
- {
- 1. Get unpacked size
- 2. Store path in map
- 3. Create file object
- - pak file.
- - raw size
- - path
- - unpacked name
- Add to map.
- 4. Zip the file
- 5. Store zipped size in file object
- 6. Malloc file object space for zipped
- bytes and memcpy to this space.
- 7. Append this data to the pak file.
- 
- 7. Record heap counter size
- }
- 
- combine all raw data into pak file.
- 
- }
- Serialize the list of maps as binary and zip as pak0.pak
- */
-
 void hdPakFileSystem::MakePak(const char* baseDir, const char* pakManifestFilePath, const char *destDir)
 {
 	char tmp[256];
@@ -75,7 +40,6 @@ void hdPakFileSystem::MakePak(const char* baseDir, const char* pakManifestFilePa
 	pakFile = NULL;
 	pakFileEntry = NULL;
 
-	
 	boost::regex dirLinePattern("^(.+):([Z])*$");
 	
 	std::istringstream iss((char *)pakManifestFileBytes);
@@ -493,9 +457,6 @@ int hdPakFileSystem::OpenFile(const char* fileName,  char **fileBytes, int *file
 		goto OpenFileFail;
 	}
 	
-	
-
-	
 	if (pakFile->m_isCompressed)
 	{
 		hdCompression_Unzip(compressedBuffer, fileEntry->m_compressedSize, 
@@ -532,7 +493,6 @@ int hdPakFileSystem::OpenFile(const char* fileName,  char **fileBytes, int *file
 
 	return 0;
 
-	
 	
 OpenFileFail:
 	

@@ -3,30 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* Application.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* Application.xib */; };
 		6362D56F11881AE300184AE0 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6362D56E11881AE300184AE0 /* OpenGL.framework */; };
 		6362D7131188E9CC00184AE0 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6362D7121188E9CC00184AE0 /* AppDelegate.mm */; };
-		6362D7221188EA0700184AE0 /* paths_osx.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6362D7211188EA0700184AE0 /* paths_osx.xcconfig */; };
-		6362D7371188EA4C00184AE0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6362D7361188EA4C00184AE0 /* Info.plist */; };
-		6362D7681189930C00184AE0 /* totemWorldManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6362D7491189930C00184AE0 /* totemWorldManager.cpp */; };
-		6362D7691189930C00184AE0 /* totemEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6362D74A1189930C00184AE0 /* totemEvent.cpp */; };
-		6362D76A1189930C00184AE0 /* totemBlock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6362D74C1189930C00184AE0 /* totemBlock.cpp */; };
-		6362D76B1189930C00184AE0 /* totemItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6362D7521189930C00184AE0 /* totemItem.cpp */; };
-		6362D76C1189930C00184AE0 /* totemJack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6362D7541189930C00184AE0 /* totemJack.cpp */; };
-		6362D76D1189930C00184AE0 /* totemJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6362D7561189930C00184AE0 /* totemJoint.cpp */; };
-		6362D76E1189930C00184AE0 /* totemLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6362D7581189930C00184AE0 /* totemLayer.cpp */; };
-		6362D76F1189930C00184AE0 /* totemLevel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6362D75A1189930C00184AE0 /* totemLevel.cpp */; };
-		6362D7701189930C00184AE0 /* totemPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6362D75C1189930C00184AE0 /* totemPolygon.cpp */; };
-		6362D7711189930C00184AE0 /* totemUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6362D75E1189930C00184AE0 /* totemUtils.cpp */; };
-		6362D7721189930C00184AE0 /* totemWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6362D7601189930C00184AE0 /* totemWorld.cpp */; };
-		6362D7731189930C00184AE0 /* totemContactManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6362D7631189930C00184AE0 /* totemContactManager.cpp */; };
-		6362D7741189930C00184AE0 /* totemFloorInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6362D7651189930C00184AE0 /* totemFloorInfo.cpp */; };
-		6362D7D11189953E00184AE0 /* libz.1.2.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6362D7D01189953E00184AE0 /* libz.1.2.3.dylib */; };
-		6362D7F71189955300184AE0 /* libpng12.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6362D7F61189955300184AE0 /* libpng12.0.dylib */; };
 		6362D8771189955D00184AE0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B97325FDCFA39411CA2CEA /* Foundation.framework */; };
 		6362D87A1189957C00184AE0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6362D8791189957C00184AE0 /* AudioToolbox.framework */; };
 		6362D87C1189957C00184AE0 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6362D87B1189957C00184AE0 /* CoreAudio.framework */; };
@@ -77,12 +60,26 @@
 		63D60DB5118C188000436B7D /* TextureImage.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63D60DB4118C188000436B7D /* TextureImage.mm */; };
 		63D60ED8118C310C00436B7D /* TextureImageBrowserView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63D60ED7118C310C00436B7D /* TextureImageBrowserView.mm */; };
 		63D60FE4118D178700436B7D /* NSImageView+Extensions.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63D60FE3118D178700436B7D /* NSImageView+Extensions.mm */; };
-		63D6FC28118BB11A00D76242 /* libhdkOSX_32.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D6FC00118BB0CA00D76242 /* libhdkOSX_32.a */; };
 		63E99FC4118E09C900B47D37 /* PrismaticJointPropertyWindow.mm in Sources */ = {isa = PBXBuildFile; fileRef = 63E99FC3118E09C900B47D37 /* PrismaticJointPropertyWindow.mm */; };
 		63E99FC6118E09DE00B47D37 /* PrismaticJointPropertyWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63E99FC5118E09DE00B47D37 /* PrismaticJointPropertyWindow.xib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		E4A95BDE1968CA0500DCD2A0 /* libhdkOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6362D7291188EA2600184AE0 /* libhdkOSX.a */; };
+		E4A95C001968CC3300DCD2A0 /* totemBlock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4A95BE21968CC3300DCD2A0 /* totemBlock.cpp */; };
+		E4A95C011968CC3300DCD2A0 /* totemContactManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4A95BE51968CC3300DCD2A0 /* totemContactManager.cpp */; };
+		E4A95C021968CC3300DCD2A0 /* totemEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4A95BE81968CC3300DCD2A0 /* totemEvent.cpp */; };
+		E4A95C031968CC3300DCD2A0 /* totemFloorInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4A95BEA1968CC3300DCD2A0 /* totemFloorInfo.cpp */; };
+		E4A95C041968CC3300DCD2A0 /* totemItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4A95BEE1968CC3300DCD2A0 /* totemItem.cpp */; };
+		E4A95C051968CC3300DCD2A0 /* totemJack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4A95BF01968CC3300DCD2A0 /* totemJack.cpp */; };
+		E4A95C061968CC3300DCD2A0 /* totemJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4A95BF21968CC3300DCD2A0 /* totemJoint.cpp */; };
+		E4A95C071968CC3300DCD2A0 /* totemLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4A95BF41968CC3300DCD2A0 /* totemLayer.cpp */; };
+		E4A95C081968CC3300DCD2A0 /* totemLevel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4A95BF61968CC3300DCD2A0 /* totemLevel.cpp */; };
+		E4A95C091968CC3300DCD2A0 /* totemPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4A95BF81968CC3300DCD2A0 /* totemPolygon.cpp */; };
+		E4A95C0A1968CC3300DCD2A0 /* totemUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4A95BFA1968CC3300DCD2A0 /* totemUtils.cpp */; };
+		E4A95C0B1968CC3300DCD2A0 /* totemWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4A95BFC1968CC3300DCD2A0 /* totemWorld.cpp */; };
+		E4A95C0C1968CC3300DCD2A0 /* totemWorldManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4A95BFE1968CC3300DCD2A0 /* totemWorldManager.cpp */; };
+		E4A95C101968CD4600DCD2A0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A95C0F1968CD4600DCD2A0 /* libz.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,12 +104,12 @@
 			remoteGlobalIDString = 63D6FBFD118BB0CA00D76242;
 			remoteInfo = "hdkOSX_64 copy";
 		};
-		63D6FC0E118BB10F00D76242 /* PBXContainerItemProxy */ = {
+		E4A95BDF1968CA0B00DCD2A0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6362D7241188EA2600184AE0 /* hdkOSX.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 63D6FA1D118BB0CA00D76242;
-			remoteInfo = hdkOSX_32;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = hdkOSX;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -136,36 +133,6 @@
 		6362D7311188EA4100184AE0 /* hdLevelEditorUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdLevelEditorUtilities.h; sourceTree = "<group>"; };
 		6362D7321188EA4100184AE0 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		6362D7361188EA4C00184AE0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6362D7481189930C00184AE0 /* totemWorldManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemWorldManager.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemWorldManager.h; sourceTree = SOURCE_ROOT; };
-		6362D7491189930C00184AE0 /* totemWorldManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemWorldManager.cpp; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemWorldManager.cpp; sourceTree = SOURCE_ROOT; };
-		6362D74A1189930C00184AE0 /* totemEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemEvent.cpp; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemEvent.cpp; sourceTree = SOURCE_ROOT; };
-		6362D74B1189930C00184AE0 /* totemEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemEvent.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemEvent.h; sourceTree = SOURCE_ROOT; };
-		6362D74C1189930C00184AE0 /* totemBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemBlock.cpp; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemBlock.cpp; sourceTree = SOURCE_ROOT; };
-		6362D74D1189930C00184AE0 /* totemBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemBlock.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemBlock.h; sourceTree = SOURCE_ROOT; };
-		6362D74E1189930C00184AE0 /* totemConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemConstants.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemConstants.h; sourceTree = SOURCE_ROOT; };
-		6362D74F1189930C00184AE0 /* totemEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemEnums.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemEnums.h; sourceTree = SOURCE_ROOT; };
-		6362D7501189930C00184AE0 /* totemGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemGame.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemGame.h; sourceTree = SOURCE_ROOT; };
-		6362D7511189930C00184AE0 /* totemGameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemGameObject.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemGameObject.h; sourceTree = SOURCE_ROOT; };
-		6362D7521189930C00184AE0 /* totemItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemItem.cpp; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemItem.cpp; sourceTree = SOURCE_ROOT; };
-		6362D7531189930C00184AE0 /* totemItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemItem.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemItem.h; sourceTree = SOURCE_ROOT; };
-		6362D7541189930C00184AE0 /* totemJack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemJack.cpp; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemJack.cpp; sourceTree = SOURCE_ROOT; };
-		6362D7551189930C00184AE0 /* totemJack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemJack.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemJack.h; sourceTree = SOURCE_ROOT; };
-		6362D7561189930C00184AE0 /* totemJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemJoint.cpp; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemJoint.cpp; sourceTree = SOURCE_ROOT; };
-		6362D7571189930C00184AE0 /* totemJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemJoint.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemJoint.h; sourceTree = SOURCE_ROOT; };
-		6362D7581189930C00184AE0 /* totemLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemLayer.cpp; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemLayer.cpp; sourceTree = SOURCE_ROOT; };
-		6362D7591189930C00184AE0 /* totemLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemLayer.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemLayer.h; sourceTree = SOURCE_ROOT; };
-		6362D75A1189930C00184AE0 /* totemLevel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemLevel.cpp; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemLevel.cpp; sourceTree = SOURCE_ROOT; };
-		6362D75B1189930C00184AE0 /* totemLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemLevel.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemLevel.h; sourceTree = SOURCE_ROOT; };
-		6362D75C1189930C00184AE0 /* totemPolygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemPolygon.cpp; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemPolygon.cpp; sourceTree = SOURCE_ROOT; };
-		6362D75D1189930C00184AE0 /* totemPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemPolygon.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemPolygon.h; sourceTree = SOURCE_ROOT; };
-		6362D75E1189930C00184AE0 /* totemUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemUtils.cpp; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemUtils.cpp; sourceTree = SOURCE_ROOT; };
-		6362D75F1189930C00184AE0 /* totemUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemUtils.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemUtils.h; sourceTree = SOURCE_ROOT; };
-		6362D7601189930C00184AE0 /* totemWorld.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemWorld.cpp; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemWorld.cpp; sourceTree = SOURCE_ROOT; };
-		6362D7611189930C00184AE0 /* totemWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemWorld.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemWorld.h; sourceTree = SOURCE_ROOT; };
-		6362D7621189930C00184AE0 /* totemContactManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemContactManager.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemContactManager.h; sourceTree = SOURCE_ROOT; };
-		6362D7631189930C00184AE0 /* totemContactManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemContactManager.cpp; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemContactManager.cpp; sourceTree = SOURCE_ROOT; };
-		6362D7641189930C00184AE0 /* totemFloorInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemFloorInfo.h; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemFloorInfo.h; sourceTree = SOURCE_ROOT; };
-		6362D7651189930C00184AE0 /* totemFloorInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemFloorInfo.cpp; path = ../../../../../Projects/Hackdirt/TotemGames/src/gameClasses/totemFloorInfo.cpp; sourceTree = SOURCE_ROOT; };
 		6362D7D01189953E00184AE0 /* libz.1.2.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.3.dylib; path = usr/lib/libz.1.2.3.dylib; sourceTree = SDKROOT; };
 		6362D7F61189955300184AE0 /* libpng12.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng12.0.dylib; path = SDKs/MacOSX10.5.sdk/usr/X11/lib/libpng12.0.dylib; sourceTree = DEVELOPER_DIR; };
 		6362D8791189957C00184AE0 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -238,6 +205,37 @@
 		63E99FC3118E09C900B47D37 /* PrismaticJointPropertyWindow.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PrismaticJointPropertyWindow.mm; path = Classes/Editor/PrismaticJointPropertyWindow.mm; sourceTree = "<group>"; };
 		63E99FC5118E09DE00B47D37 /* PrismaticJointPropertyWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = PrismaticJointPropertyWindow.xib; path = Classes/Editor/PrismaticJointPropertyWindow.xib; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* Sierra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sierra.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4A95BE21968CC3300DCD2A0 /* totemBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemBlock.cpp; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemBlock.cpp; sourceTree = "<group>"; };
+		E4A95BE31968CC3300DCD2A0 /* totemBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemBlock.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemBlock.h; sourceTree = "<group>"; };
+		E4A95BE41968CC3300DCD2A0 /* totemConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemConstants.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemConstants.h; sourceTree = "<group>"; };
+		E4A95BE51968CC3300DCD2A0 /* totemContactManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemContactManager.cpp; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemContactManager.cpp; sourceTree = "<group>"; };
+		E4A95BE61968CC3300DCD2A0 /* totemContactManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemContactManager.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemContactManager.h; sourceTree = "<group>"; };
+		E4A95BE71968CC3300DCD2A0 /* totemEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemEnums.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemEnums.h; sourceTree = "<group>"; };
+		E4A95BE81968CC3300DCD2A0 /* totemEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemEvent.cpp; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemEvent.cpp; sourceTree = "<group>"; };
+		E4A95BE91968CC3300DCD2A0 /* totemEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemEvent.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemEvent.h; sourceTree = "<group>"; };
+		E4A95BEA1968CC3300DCD2A0 /* totemFloorInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemFloorInfo.cpp; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemFloorInfo.cpp; sourceTree = "<group>"; };
+		E4A95BEB1968CC3300DCD2A0 /* totemFloorInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemFloorInfo.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemFloorInfo.h; sourceTree = "<group>"; };
+		E4A95BEC1968CC3300DCD2A0 /* totemGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemGame.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemGame.h; sourceTree = "<group>"; };
+		E4A95BED1968CC3300DCD2A0 /* totemGameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemGameObject.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemGameObject.h; sourceTree = "<group>"; };
+		E4A95BEE1968CC3300DCD2A0 /* totemItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemItem.cpp; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemItem.cpp; sourceTree = "<group>"; };
+		E4A95BEF1968CC3300DCD2A0 /* totemItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemItem.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemItem.h; sourceTree = "<group>"; };
+		E4A95BF01968CC3300DCD2A0 /* totemJack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemJack.cpp; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemJack.cpp; sourceTree = "<group>"; };
+		E4A95BF11968CC3300DCD2A0 /* totemJack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemJack.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemJack.h; sourceTree = "<group>"; };
+		E4A95BF21968CC3300DCD2A0 /* totemJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemJoint.cpp; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemJoint.cpp; sourceTree = "<group>"; };
+		E4A95BF31968CC3300DCD2A0 /* totemJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemJoint.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemJoint.h; sourceTree = "<group>"; };
+		E4A95BF41968CC3300DCD2A0 /* totemLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemLayer.cpp; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemLayer.cpp; sourceTree = "<group>"; };
+		E4A95BF51968CC3300DCD2A0 /* totemLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemLayer.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemLayer.h; sourceTree = "<group>"; };
+		E4A95BF61968CC3300DCD2A0 /* totemLevel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemLevel.cpp; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemLevel.cpp; sourceTree = "<group>"; };
+		E4A95BF71968CC3300DCD2A0 /* totemLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemLevel.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemLevel.h; sourceTree = "<group>"; };
+		E4A95BF81968CC3300DCD2A0 /* totemPolygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemPolygon.cpp; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemPolygon.cpp; sourceTree = "<group>"; };
+		E4A95BF91968CC3300DCD2A0 /* totemPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemPolygon.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemPolygon.h; sourceTree = "<group>"; };
+		E4A95BFA1968CC3300DCD2A0 /* totemUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemUtils.cpp; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemUtils.cpp; sourceTree = "<group>"; };
+		E4A95BFB1968CC3300DCD2A0 /* totemUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemUtils.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemUtils.h; sourceTree = "<group>"; };
+		E4A95BFC1968CC3300DCD2A0 /* totemWorld.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemWorld.cpp; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemWorld.cpp; sourceTree = "<group>"; };
+		E4A95BFD1968CC3300DCD2A0 /* totemWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemWorld.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemWorld.h; sourceTree = "<group>"; };
+		E4A95BFE1968CC3300DCD2A0 /* totemWorldManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemWorldManager.cpp; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemWorldManager.cpp; sourceTree = "<group>"; };
+		E4A95BFF1968CC3300DCD2A0 /* totemWorldManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemWorldManager.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemWorldManager.h; sourceTree = "<group>"; };
+		E4A95C0F1968CD4600DCD2A0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,12 +243,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63D6FC28118BB11A00D76242 /* libhdkOSX_32.a in Frameworks */,
+				E4A95C101968CD4600DCD2A0 /* libz.dylib in Frameworks */,
+				E4A95BDE1968CA0500DCD2A0 /* libhdkOSX.a in Frameworks */,
 				6362D8771189955D00184AE0 /* Foundation.framework in Frameworks */,
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				6362D56F11881AE300184AE0 /* OpenGL.framework in Frameworks */,
-				6362D7D11189953E00184AE0 /* libz.1.2.3.dylib in Frameworks */,
-				6362D7F71189955300184AE0 /* libpng12.0.dylib in Frameworks */,
 				6362D87A1189957C00184AE0 /* AudioToolbox.framework in Frameworks */,
 				6362D87C1189957C00184AE0 /* CoreAudio.framework in Frameworks */,
 				6362D87E1189957C00184AE0 /* OpenAL.framework in Frameworks */,
@@ -359,6 +356,7 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E4A95C0F1968CD4600DCD2A0 /* libz.dylib */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
@@ -408,36 +406,36 @@
 		6362D7381188EA5E00184AE0 /* Totem */ = {
 			isa = PBXGroup;
 			children = (
-				6362D7481189930C00184AE0 /* totemWorldManager.h */,
-				6362D7491189930C00184AE0 /* totemWorldManager.cpp */,
-				6362D74A1189930C00184AE0 /* totemEvent.cpp */,
-				6362D74B1189930C00184AE0 /* totemEvent.h */,
-				6362D74C1189930C00184AE0 /* totemBlock.cpp */,
-				6362D74D1189930C00184AE0 /* totemBlock.h */,
-				6362D74E1189930C00184AE0 /* totemConstants.h */,
-				6362D74F1189930C00184AE0 /* totemEnums.h */,
-				6362D7501189930C00184AE0 /* totemGame.h */,
-				6362D7511189930C00184AE0 /* totemGameObject.h */,
-				6362D7521189930C00184AE0 /* totemItem.cpp */,
-				6362D7531189930C00184AE0 /* totemItem.h */,
-				6362D7541189930C00184AE0 /* totemJack.cpp */,
-				6362D7551189930C00184AE0 /* totemJack.h */,
-				6362D7561189930C00184AE0 /* totemJoint.cpp */,
-				6362D7571189930C00184AE0 /* totemJoint.h */,
-				6362D7581189930C00184AE0 /* totemLayer.cpp */,
-				6362D7591189930C00184AE0 /* totemLayer.h */,
-				6362D75A1189930C00184AE0 /* totemLevel.cpp */,
-				6362D75B1189930C00184AE0 /* totemLevel.h */,
-				6362D75C1189930C00184AE0 /* totemPolygon.cpp */,
-				6362D75D1189930C00184AE0 /* totemPolygon.h */,
-				6362D75E1189930C00184AE0 /* totemUtils.cpp */,
-				6362D75F1189930C00184AE0 /* totemUtils.h */,
-				6362D7601189930C00184AE0 /* totemWorld.cpp */,
-				6362D7611189930C00184AE0 /* totemWorld.h */,
-				6362D7621189930C00184AE0 /* totemContactManager.h */,
-				6362D7631189930C00184AE0 /* totemContactManager.cpp */,
-				6362D7641189930C00184AE0 /* totemFloorInfo.h */,
-				6362D7651189930C00184AE0 /* totemFloorInfo.cpp */,
+				E4A95BE21968CC3300DCD2A0 /* totemBlock.cpp */,
+				E4A95BE31968CC3300DCD2A0 /* totemBlock.h */,
+				E4A95BE41968CC3300DCD2A0 /* totemConstants.h */,
+				E4A95BE51968CC3300DCD2A0 /* totemContactManager.cpp */,
+				E4A95BE61968CC3300DCD2A0 /* totemContactManager.h */,
+				E4A95BE71968CC3300DCD2A0 /* totemEnums.h */,
+				E4A95BE81968CC3300DCD2A0 /* totemEvent.cpp */,
+				E4A95BE91968CC3300DCD2A0 /* totemEvent.h */,
+				E4A95BEA1968CC3300DCD2A0 /* totemFloorInfo.cpp */,
+				E4A95BEB1968CC3300DCD2A0 /* totemFloorInfo.h */,
+				E4A95BEC1968CC3300DCD2A0 /* totemGame.h */,
+				E4A95BED1968CC3300DCD2A0 /* totemGameObject.h */,
+				E4A95BEE1968CC3300DCD2A0 /* totemItem.cpp */,
+				E4A95BEF1968CC3300DCD2A0 /* totemItem.h */,
+				E4A95BF01968CC3300DCD2A0 /* totemJack.cpp */,
+				E4A95BF11968CC3300DCD2A0 /* totemJack.h */,
+				E4A95BF21968CC3300DCD2A0 /* totemJoint.cpp */,
+				E4A95BF31968CC3300DCD2A0 /* totemJoint.h */,
+				E4A95BF41968CC3300DCD2A0 /* totemLayer.cpp */,
+				E4A95BF51968CC3300DCD2A0 /* totemLayer.h */,
+				E4A95BF61968CC3300DCD2A0 /* totemLevel.cpp */,
+				E4A95BF71968CC3300DCD2A0 /* totemLevel.h */,
+				E4A95BF81968CC3300DCD2A0 /* totemPolygon.cpp */,
+				E4A95BF91968CC3300DCD2A0 /* totemPolygon.h */,
+				E4A95BFA1968CC3300DCD2A0 /* totemUtils.cpp */,
+				E4A95BFB1968CC3300DCD2A0 /* totemUtils.h */,
+				E4A95BFC1968CC3300DCD2A0 /* totemWorld.cpp */,
+				E4A95BFD1968CC3300DCD2A0 /* totemWorld.h */,
+				E4A95BFE1968CC3300DCD2A0 /* totemWorldManager.cpp */,
+				E4A95BFF1968CC3300DCD2A0 /* totemWorldManager.h */,
 			);
 			name = Totem;
 			sourceTree = "<group>";
@@ -623,7 +621,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				63D6FC0F118BB10F00D76242 /* PBXTargetDependency */,
+				E4A95BE01968CA0B00DCD2A0 /* PBXTargetDependency */,
 			);
 			name = Sierra;
 			productInstallPath = "$(HOME)/Applications";
@@ -636,8 +634,11 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Sierra" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -692,8 +693,6 @@
 			files = (
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* Application.xib in Resources */,
-				6362D7221188EA0700184AE0 /* paths_osx.xcconfig in Resources */,
-				6362D7371188EA4C00184AE0 /* Info.plist in Resources */,
 				6362DACE118A1FC200184AE0 /* MainWindow.xib in Resources */,
 				6362DB4B118A27D600184AE0 /* EditorViewController.xib in Resources */,
 				63D60D1D118BEDD900436B7D /* WorldPropertyWindow.xib in Resources */,
@@ -730,38 +729,38 @@
 			files = (
 				6362DB76118A2A6E00184AE0 /* hdLevelEditorController.cpp in Sources */,
 				6362DB7D118A2A7200184AE0 /* hdLevelEditorUtilities.cpp in Sources */,
+				E4A95C031968CC3300DCD2A0 /* totemFloorInfo.cpp in Sources */,
+				E4A95C041968CC3300DCD2A0 /* totemItem.cpp in Sources */,
+				E4A95C051968CC3300DCD2A0 /* totemJack.cpp in Sources */,
+				E4A95C071968CC3300DCD2A0 /* totemLayer.cpp in Sources */,
 				6362DB45118A275300184AE0 /* EditorView.mm in Sources */,
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				6362D7131188E9CC00184AE0 /* AppDelegate.mm in Sources */,
-				6362D7681189930C00184AE0 /* totemWorldManager.cpp in Sources */,
-				6362D7691189930C00184AE0 /* totemEvent.cpp in Sources */,
-				6362D76A1189930C00184AE0 /* totemBlock.cpp in Sources */,
-				6362D76B1189930C00184AE0 /* totemItem.cpp in Sources */,
-				6362D76C1189930C00184AE0 /* totemJack.cpp in Sources */,
-				6362D76D1189930C00184AE0 /* totemJoint.cpp in Sources */,
-				6362D76E1189930C00184AE0 /* totemLayer.cpp in Sources */,
-				6362D76F1189930C00184AE0 /* totemLevel.cpp in Sources */,
-				6362D7701189930C00184AE0 /* totemPolygon.cpp in Sources */,
-				6362D7711189930C00184AE0 /* totemUtils.cpp in Sources */,
-				6362D7721189930C00184AE0 /* totemWorld.cpp in Sources */,
-				6362D7731189930C00184AE0 /* totemContactManager.cpp in Sources */,
-				6362D7741189930C00184AE0 /* totemFloorInfo.cpp in Sources */,
+				E4A95C0B1968CC3300DCD2A0 /* totemWorld.cpp in Sources */,
+				E4A95C0A1968CC3300DCD2A0 /* totemUtils.cpp in Sources */,
+				E4A95C011968CC3300DCD2A0 /* totemContactManager.cpp in Sources */,
+				E4A95C001968CC3300DCD2A0 /* totemBlock.cpp in Sources */,
 				6362DACC118A1F1100184AE0 /* MainWindowController.mm in Sources */,
 				6362DAE7118A223300184AE0 /* EditorViewController.mm in Sources */,
 				6362DC5E118A3B1B00184AE0 /* LevelEditor.mm in Sources */,
 				63CD3DE1118B77010086D7F5 /* AppDelegateMenu.mm in Sources */,
 				63D60D0B118BED5700436B7D /* WorldPropertyWindow.mm in Sources */,
 				63D60D0E118BED6700436B7D /* BlockPropertyWindow.mm in Sources */,
+				E4A95C021968CC3300DCD2A0 /* totemEvent.cpp in Sources */,
 				63D60D11118BED7600436B7D /* PolygonPropertyWindow.mm in Sources */,
+				E4A95C061968CC3300DCD2A0 /* totemJoint.cpp in Sources */,
 				63D60D14118BED8400436B7D /* RevoluteJointPropertyWindow.mm in Sources */,
 				63D60D17118BED9300436B7D /* EventPropertyWindow.mm in Sources */,
 				63D60D1B118BEDAC00436B7D /* TexturePaletteWindow.mm in Sources */,
 				63D60DB5118C188000436B7D /* TextureImage.mm in Sources */,
 				63D60ED8118C310C00436B7D /* TextureImageBrowserView.mm in Sources */,
+				E4A95C091968CC3300DCD2A0 /* totemPolygon.cpp in Sources */,
+				E4A95C0C1968CC3300DCD2A0 /* totemWorldManager.cpp in Sources */,
 				63D60FE4118D178700436B7D /* NSImageView+Extensions.mm in Sources */,
 				63E99FC4118E09C900B47D37 /* PrismaticJointPropertyWindow.mm in Sources */,
 				63D4E62A118F6666005A7634 /* hdImageView.mm in Sources */,
 				63CA6F2011956B2E0010C802 /* NSWindowController+Extensions.mm in Sources */,
+				E4A95C081968CC3300DCD2A0 /* totemLevel.cpp in Sources */,
 				63CA6FDE119617CA0010C802 /* NSView+Extensions.m in Sources */,
 				63C78E0A119B3BC100DD411F /* PrefabsPaletteWindow.mm in Sources */,
 			);
@@ -770,10 +769,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		63D6FC0F118BB10F00D76242 /* PBXTargetDependency */ = {
+		E4A95BE01968CA0B00DCD2A0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = hdkOSX_32;
-			targetProxy = 63D6FC0E118BB10F00D76242 /* PBXContainerItemProxy */;
+			name = hdkOSX;
+			targetProxy = E4A95BDF1968CA0B00DCD2A0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -801,8 +800,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6362D7211188EA0700184AE0 /* paths_osx.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -814,18 +812,11 @@
 					"LEVEL_EDITOR=1",
 					"DEBUG=1",
 				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Developer/SDKs/MacOSX10.5.sdk/usr/X11/lib,
-				);
-				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = Sierra;
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
-				SDKROOT = macosx10.6;
 			};
 			name = Debug;
 		};
@@ -833,8 +824,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6362D7211188EA0700184AE0 /* paths_osx.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -843,44 +833,35 @@
 					"LEVEL_EDITOR=1",
 					"DEBUG=1",
 				);
-				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Developer/SDKs/MacOSX10.5.sdk/usr/X11/lib,
-				);
-				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = Sierra;
 				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
-				SDKROOT = macosx10.5;
 			};
 			name = Release;
 		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
-				SDKROOT = macosx10.6;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};

@@ -10,33 +10,23 @@
 #ifndef HD_APPLICATION_H_
 #define HD_APPLICATION_H_
 
-
-
-
-
 class hdApplication
 	{
 	public:
 		
-		//! \brief initialization before the render API is intialized
 		bool InitApplication();
 	
 		bool PrepareGameLoop();
 		
 		bool StartGameLoop();
 		
-		//! \brief release any memory/resources acquired by InitApplication()
 		bool QuitApplication();
-		
 		
 		bool PauseApplication();
 		
-		
 		bool ResumeApplication();
 		
-		
 		bool ApplicationWillTerminate();
-		
 		
 		bool HandleLowMemoryWarning();
 		
@@ -46,11 +36,8 @@ class hdApplication
 		
 		bool HandlePlayerInput();
 		
-		//! \brief update the camera matrix and other things that need to be done to setup rendering
 		bool UpdateScene();
 		
-		//! \brief It is main application function in which you have to do your own rendering.  Will be
-		//! called repeatedly until the application exits.
 		bool RenderScene();
 	};
 

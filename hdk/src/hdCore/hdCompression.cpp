@@ -73,15 +73,12 @@ int hdCompression_Zip(const char* inBuffer, const long inLen,
 int hdCompression_Unzip(const char* inBuffer, const long inLen, 
 						char **outBuffer, long* outLen)
 {
-
-	
 	/* zlib stuff */
 	Bytef *zDestBuffer;
 	uLongf zDestLen;
 	Bytef *zSourceBuffer;
 	uLongf zSourceLen;
 	int zRes;
-	
 	
 	/* first 16 bytes containing uncompressed file size */
 	char tmp[16];

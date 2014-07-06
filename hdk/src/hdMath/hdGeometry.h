@@ -13,8 +13,6 @@
 #include "hdMath/hdMathCommon.h"
 #include "hdMath/hdMatrix.h"
 
-//typedef struct hdAABB;
-//typedef struct hdOBB;
 typedef struct hdTransform;
 
 void hdScaleVertices(hdVec3* vertices, int vertexCount, const hdVec3& scale);
@@ -86,9 +84,6 @@ struct hdOBB
 };
 
 
-
-
-
 inline void hdTransformVertices(hdVec3* vertices, int vertexCount, const hdVec3& origin, const hdTransform& oldTransform, const hdTransform& newTransform)
 {
 	hdMatrix rot, trans, scale, res;
@@ -101,20 +96,16 @@ inline void hdTransformVertices(hdVec3* vertices, int vertexCount, const hdVec3&
 	if ((oldTransform.rotation == newTransform.rotation) == false)
 	{
 		hdVec3 diff = newTransform.rotation - oldTransform.rotation;
-		//hdRotateVertices(vertices, vertexCount, newTransform.rotation);
 		MatrixRotationXYZAxis(rot, diff.z, origin);
 	}
 	if ((oldTransform.translation == newTransform.translation) == false)
 	{
 		hdVec3 diff = newTransform.translation - oldTransform.translation;
 		MatrixTranslation(trans, diff.x, diff.y, diff.z);
-		
-		//hdTranslateVertices(vertices, vertexCount, diff);
 	}
 
 	if ((oldTransform.scale == newTransform.scale) == false)
 	{
-		hdVec3 diff = newTransform.scale - oldTransform.scale;
 		hdScaleVertices(vertices, vertexCount, newTransform.scale);
 	}
 	
@@ -123,9 +114,8 @@ inline void hdTransformVertices(hdVec3* vertices, int vertexCount, const hdVec3&
 	
 	for (int i = 0; i < vertexCount; ++i)
 	{
-		hdVec3 vert; //X, vertY;
+		hdVec3 vert;
 		MatrixVec4Multiply(vert, vertices[i], res);
-		//MatrixVec3Multiply(vertY, vertices[i], ry);
 		vertices[i] = vert;
 	}
 }
@@ -149,11 +139,10 @@ inline void hdScaleVertices(hdVec3* vertices, int vertexCount, const hdVec3& sca
 }
 
 
-
 // Rotates vertices around origin.
 inline void hdRotateVertices(hdVec3* vertices, int vertexCount, const hdVec3& rotation)
 {
-#if 1 //(TARGET_IPHONE_SIMULATOR == 0) && (TARGET_OS_IPHONE == 1)	
+#if (TARGET_IPHONE_SIMULATOR == 0) && (TARGET_OS_IPHONE == 1)
 	hdMatrix rot;
 	unsigned i;
 	
@@ -179,7 +168,6 @@ inline void hdRotateVertices(hdVec3* vertices, int vertexCount, const hdVec3& ro
 	}
 #endif
 }
-
 
 
 inline void hdTranslateVertices(hdVec3* vertices, int vertexCount, const hdVec3& translation)
@@ -401,12 +389,6 @@ inline float hdGetAngle(const hdVec2& v1, const hdVec2& v2, const hdVec2& ref)
 	_v2 = hdNormalize(_v2);
 	
 	float angle = atan2f(_v2.y, _v2.x) - atan2f(_v1.y, _v1.x);
-	
-	
-	
-	//	hdVec2 c = hdCross(v1, v2);
-	//	float angle = atan2(c.Length(), hdDot(v1, v2));
-	//return (angle < 0.0f) ? angle + (2.0f * hd_pi) : angle;
 	return angle;
 }
 
@@ -416,10 +398,6 @@ inline float hdGetAngle(const hdVec3& v1, const hdVec3& v2, const hdVec3& ref)
 {
 	return hdGetAngle(hdVec3toVec2(v1), hdVec3toVec2(v2), hdVec3toVec2(ref));
 }
-
-
-
-
 
 
 // Adapted from algorithm 6 from softsurfer.com
@@ -473,7 +451,6 @@ inline bool hdRayIntersectsTriangle(const hdVec3 *triangle, const hdVec3 *ray, h
 	if (t < 0.0 || (s + t) > 1.0f) return false;
 	
 	return true;
-	
 }
 
 
@@ -517,25 +494,6 @@ inline float hdPolygonArea(const hdVec3 *vertices, const int vertexCount)
 	return accum;
 }
 
- 
-
-//inline float hdGetAngle(const hdVec2& a, const hdVec2&b, const hdVec2&c)
-//{
-
-
-/*
- hdVec2 ab = a - b;
- hdVec2 ac = a - c;
- 
- float dot = hdDot(ab, ac);
- float sq = ab.Length() * ac.Length();
- float arc = dot / sq;
- assert(arc <= 1.0f && arc >= -1.0f);
- float delta = acosf(arc);
- assert(isfinite(delta));
- return (dot < 0) ? -delta : delta;*/
-//}
-
 
 // Return the "most counter clockwise" point of a and b in around pivot.
 // convex if sum of cross product signs is positive and equal to the number of 
@@ -566,6 +524,5 @@ inline bool hdIsConvexCW(const hdVec3* vertices, const int vertexCount)
 	
 	return contains == -vertexCount;
 }
-
 
 #endif

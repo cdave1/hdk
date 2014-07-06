@@ -54,8 +54,6 @@ typedef struct
 } particle_info_t;
 
 
-
-
 class hdPhysicsParticle : public hdPolygon, public hdDrawable
 {
 public:
@@ -106,11 +104,7 @@ public:
 };
 
 
-
 #define kPhysicsParticleMax 64
-
-
-
 
 // Creates physics objects as particles - lets the physics world handle particle
 // parameter updates.

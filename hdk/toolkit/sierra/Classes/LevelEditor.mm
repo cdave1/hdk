@@ -20,7 +20,7 @@ static NSLock *_editorContextLock = nil;
 	if (!_instance)
 	{
 		_instance = new hdLevelEditorController();
-		FileSystem_Init("/Users/david/Projects/Hackdirt/TotemGames/res");
+		FileSystem_Init("/Users/davidpetrie/Dropbox/Hackdirt/TotemGames/res");
 	}
 	return _instance;
 }

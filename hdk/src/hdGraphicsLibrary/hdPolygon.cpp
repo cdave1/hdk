@@ -20,7 +20,6 @@ hdPolygon::hdPolygon() : hdGameObject()
 }
 
 
-
 hdPolygon::hdPolygon(hdGameWorld* gameWorld) : hdGameObject(gameWorld)
 {
 	m_vertices = new hdTypedefList<hdVec3, kMaxPolygonVertices>();
@@ -99,7 +98,6 @@ void hdPolygon::ResetTextureCoords2()
 	
 	// Recalculate texture coords.
 	hdVec3 box = m_aabb.upper - m_aabb.lower;
-	//if (box.x == 0.0 || box.y == 0.0) return;
 	
 	float longest = hdMax(box.x, box.y); // longest side
 	longest = hdMax(longest, box.z);
@@ -111,16 +109,6 @@ void hdPolygon::ResetTextureCoords2()
 		m_texCoords->Add(hdVec2(m_texRepeatX, 0));
 		m_texCoords->Add(hdVec2(m_texRepeatX, m_texRepeatY));
 	}
-	/*
-	for (int i = 0; i < this->GetVertexCount(); ++i)
-	{
-		v = m_vertices->GetItems()[i];
-		x = m_texRepeatX * ((v.x - m_aabb.lower.x)/longest);
-		y = m_texRepeatY * (1.0f - ((v.y - m_aabb.lower.y)/longest));
-		
-		m_texCoords->Add(hdVec2(x, y));
-	}*/
-	
 }
 
 
@@ -216,7 +204,7 @@ void hdPolygon::SetAs2DBox(const hdVec2& aa, const hdVec2& bb)
 
 void hdPolygon::MoveTo(const hdVec3& center)
 {
-	hdVec3 current = this->GetWorldCenter(); //GetTransform().translation; // GetPosition();
+	hdVec3 current = this->GetWorldCenter();
 	
 	hdVec3 distanceToDest = center;
 	
@@ -357,12 +345,3 @@ void hdPolygon::Scale(const hdVec3& scaleVector, const hdVec3& scaleAxis)
 	this->ResetAABB();
 	this->SetStartingVerticesToCurrent();
 }
-
-/*
-void hdPolygon::Draw() const
-{
-	assert(m_gameObject != NULL);
-	assert(m_vertices != NULL);
-	if (m_vertices->GetItemCount() == 0) return;
-	
-}*/

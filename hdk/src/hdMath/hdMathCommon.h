@@ -320,11 +320,6 @@ inline float hdCosf(const float rads)
 }
 
 
-
-
-
-
-
 template <typename T>
 inline T hdMin(T a, T b)
 {

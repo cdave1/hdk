@@ -57,7 +57,8 @@ void RecurseDirectory(string pathBase, string subDir, list<string> *fileList, in
 	{
 		try
 		{
-			filename = subDir + "/" + dir_iter->path().filename();
+#warning "This code is broken"
+			filename = subDir + "/" + "whatever"; //"std::string(dir_iter->path().filename());
 		} catch (exception e)
 		{
 			return;

@@ -29,7 +29,6 @@ extern "C" {
 	extern filehandle_t *FileSystem_OpenFile( const char *filename, unsigned int FlagsAndAttributes );
 	
 	extern void FileSystem_CloseFile( filehandle_t *fhandle );
-	// note: this can't be called from another DLL, due to MS libc issues
 	
 	extern unsigned int FileSystem_ReadFile( void *buffer, unsigned int size, unsigned int count, filehandle_t *fhandle );
 	
@@ -42,9 +41,9 @@ extern "C" {
 	extern void FileSystem_InitFileSystem(const char* p);
 	
 	extern char *FileSystem_BaseDir( void );
+    
 	/*
 	 * Returns 0 on success, -1 on fail.
-	 *
 	 */
 	extern int FileSystem_ReadFromFile(void** dest, int* len, const char* fileName);
 	
@@ -53,6 +52,5 @@ extern "C" {
 #ifdef __cplusplus
 }
 #endif
-
 
 #endif

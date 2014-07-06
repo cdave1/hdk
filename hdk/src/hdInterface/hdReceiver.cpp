@@ -50,16 +50,9 @@ void hdReceiver::RotateAndTranslate2(const hdVec3& rotVector, const hdVec3& rota
 {
 	if (m_canRotate)
 	{
-		// 
-		//hdTranslateVertices(this->GetVertices(), this->GetVertexCount(), transVector - transVectorAxis);
-		
-		// rotate around rotationAxis
-		
 		hdTranslateVertices(this->GetVertices(), this->GetVertexCount(), -rotationAxis);
 		hdRotateVertices(this->GetVertices(), this->GetVertexCount(), rotVector - m_obb.transform.rotation);
 		hdTranslateVertices(this->GetVertices(), this->GetVertexCount(), rotationAxis);
-		
-		
 		
 		m_obb.transform.translation.Set(transVector.x, transVector.y, transVector.z);
 		m_obb.transform.rotation.Set(rotVector.x, rotVector.y, rotVector.z);
@@ -79,15 +72,9 @@ void hdReceiver::RotateAndTranslate2(const hdVec3& rotVector, const hdVec3& rota
 // the object will end up AT transvector.
 void hdReceiver::RotateAndTranslate(const hdVec3& rotVector, const hdVec3& transVector)
 {
-	
-	//hdTranslateVertices(this->GetVertices(), this->GetVertexCount(), -(this->GetWorldCenter()));
-	//hdRotateVertices(this->GetVertices(), this->GetVertexCount(), rotVector - m_obb.transform.rotation);
-	//hdTranslateVertices(this->GetVertices(), this->GetVertexCount(), (this->GetWorldCenter()) + (transVector - (this->GetWorldCenter())));
-	
 	if (m_canRotate)
 	{
 		// rotate around transvector
-		
 		hdTranslateVertices(this->GetVertices(), this->GetVertexCount(), -m_obb.transform.translation);
 		hdRotateVertices(this->GetVertices(), this->GetVertexCount(), rotVector - m_obb.transform.rotation);
 		hdTranslateVertices(this->GetVertices(), this->GetVertexCount(), m_obb.transform.translation + (transVector - m_obb.transform.translation));

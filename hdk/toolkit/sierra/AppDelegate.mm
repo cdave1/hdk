@@ -23,7 +23,6 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification 
 {
-	// Insert code here to initialize your application 
 	[_progressPanel orderOut:nil];
 }
 
@@ -32,15 +31,13 @@
 {  
 	_lock = [[NSObject alloc] init];
 	
-	[NSApp setDelegate:self];   // We want delegate notifications
+	[NSApp setDelegate:self];
 	
 	_mainWindowController = [[MainWindowController alloc] init];
 	
 	[LevelEditor sharedInstance];
 	
-	[_mainWindowController.window makeKeyAndOrderFront:self];//= _mainWindowController.window;
-	
-	//[_window makeKeyAndOrderFront:self];
+	[_mainWindowController.window makeKeyAndOrderFront:self];
 }
 
 
@@ -60,31 +57,10 @@
 }
 
 
-
-
 - (void) dealloc
 {
-	//keepRenderThreadAlive = false;
-	
-	//if(!shell->QuitApplication())
-	//	printf("QuitApplication error\n");
-	
-	
-	
-	//[_glView release];
-	//[_glWindow release];
 	[_lock release];
-	
-	
-	
 	[super dealloc];
 }
-
-
-
-
-
-
-
 
 @end

@@ -29,9 +29,7 @@
 
 #define HDCALLBACK
 
-
 /*
- 
  /// Version numbering scheme.
  /// See http://en.wikipedia.org/wiki/Software_versioning
  struct hdVersion
@@ -43,11 +41,7 @@
  
  /// Current version.
  extern hdVersion hd_version;
- 
- 
  */
-
-
 
 #ifdef __cplusplus
 extern "C" {
@@ -61,20 +55,16 @@ extern "C" {
 	void* hdAlloc(int32 size);
 	
 	void hdFree(void* mem);
-	
-
-	
-extern void hdPrintf( const char *fmt, ... );
+		
+    extern void hdPrintf( const char *fmt, ... );
 	
 	extern void hdPrintfv(const char *fmt, va_list list);
-
-extern void hdError( int code, const char *fmt, ... );
+    
+    extern void hdError( int code, const char *fmt, ... );
 	
 #ifdef __cplusplus
 }
 #endif
-
-
 
 #ifdef DEBUG
 #define hdLog(xx, ...) hdPrintf(xx, ##__VA_ARGS__)

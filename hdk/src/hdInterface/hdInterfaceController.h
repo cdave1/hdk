@@ -183,8 +183,6 @@ inline void hdInterfaceController::SetWorldAABB(const hdAABB& aabb)
 {
 	assert(m_gameWorld != NULL);
 	m_gameWorld->SetAABB(aabb);
-	
-	
 }
 
 

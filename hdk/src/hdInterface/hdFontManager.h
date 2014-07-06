@@ -30,9 +30,6 @@
 #include "hdInterface/hdFont.h"
 
 
-
-
-
 class hdFontManager
 {
 	
@@ -68,6 +65,5 @@ public:
 	
 	void DestroyFonts();
 };
-
 
 #endif

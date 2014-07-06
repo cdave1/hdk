@@ -9,7 +9,7 @@
 
 #include "hdConfig.h"
 
-static map<string, string> configLookupTable;
+static std::map<std::string, std::string> configLookupTable;
 static bool configFileWasLoaded = false;
 
 
@@ -17,7 +17,7 @@ static bool configFileWasLoaded = false;
 
 void hdConfig::LoadConfigFile(const char *configFilePath)
 {
-	string line;
+	std::string line;
 	unsigned pos;
 	filehandle_t *hnd;
 	
@@ -26,7 +26,7 @@ void hdConfig::LoadConfigFile(const char *configFilePath)
 	// Matchings
 	boost::smatch matchings;
 	
-	// string line pattern: $Key = "$Value" 
+	// std::string line pattern: $Key = "$Value" 
 	boost::regex stringLinePattern("^\\s*([[:alnum:]]+)\\s*[=]\\s*[\"]([[:alnum:].,]+)[\"]\\s*$");
 	
 	hdPrintf("[hdConfig::LoadConfigFile] Loading config file at: %s\n", configFilePath);
@@ -36,13 +36,13 @@ void hdConfig::LoadConfigFile(const char *configFilePath)
 		hdPrintf("[hdConfig::LoadConfigFile] Could not load config file at: %s. Loading Defaults\n", configFilePath);
 		
 		// Default values are deliberately conservative.
-		configLookupTable[string(CONFIG_PHYSICSITERATIONSCOUNT_KEY)] = string("5");
-		configLookupTable[string(CONFIG_FIXEDPHYSICSINTERVAL_KEY)] = string("0");
-		configLookupTable[string(CONFIG_MAXTEXTUREBPP_KEY)] = string("2");
-		configLookupTable[string(CONFIG_MINFRAMEDURATION_KEY)] = string("0.032");
-		configLookupTable[string(CONFIG_TEXTUREQUALITYLEVEL_KEY)] = string("Medium");
-		configLookupTable[string(CONFIG_EFFECTSQUALITYLEVEL_KEY)] = string("Medium");
-		configLookupTable[string(CONFIG_LIGHTINGLEVEL_KEY)] = string("Medium");
+		configLookupTable[std::string(CONFIG_PHYSICSITERATIONSCOUNT_KEY)] = std::string("5");
+		configLookupTable[std::string(CONFIG_FIXEDPHYSICSINTERVAL_KEY)] = std::string("0");
+		configLookupTable[std::string(CONFIG_MAXTEXTUREBPP_KEY)] = std::string("2");
+		configLookupTable[std::string(CONFIG_MINFRAMEDURATION_KEY)] = std::string("0.032");
+		configLookupTable[std::string(CONFIG_TEXTUREQUALITYLEVEL_KEY)] = std::string("Medium");
+		configLookupTable[std::string(CONFIG_EFFECTSQUALITYLEVEL_KEY)] = std::string("Medium");
+		configLookupTable[std::string(CONFIG_LIGHTINGLEVEL_KEY)] = std::string("Medium");
 		
 		configFileWasLoaded = true;
 		return;
@@ -61,8 +61,8 @@ void hdConfig::LoadConfigFile(const char *configFilePath)
 			hdAssert(3 == matchings.size());
 			
 			// New line hack
-			string s(matchings[2]);
-			while((pos = s.find("\\n")) != string::npos)
+			std::string s(matchings[2]);
+			while((pos = s.find("\\n")) != std::string::npos)
 			{
 				s.replace(pos, 2, 1, '\n');
 			}
@@ -84,13 +84,11 @@ void hdConfig::LoadNullConfig()
 }
 
 
-string hdConfig::GetValueForKey(const char *key)
+std::string hdConfig::GetValueForKey(const char *key)
 {
-	//hdAssert(configFileWasLoaded);
+	std::string sKey(key);
 	
-	string sKey(key);
-	
-	if (configLookupTable.count(sKey) == 0) return string(key);
+	if (configLookupTable.count(sKey) == 0) return std::string(key);
 	
 	return configLookupTable[sKey];
 }

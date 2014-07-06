@@ -12,7 +12,7 @@
 
 static hdTextureManager* m_TextureManagerInstance = NULL;
 static int maxTextureBPP;
-static string m_textureQualityLevel;
+static std::string m_textureQualityLevel;
 
 hdTextureManager* hdTextureManager::Instance()
 {
@@ -113,7 +113,7 @@ hdTexture* hdTextureManager::FindTexture(const char* name, texturetype_t type)
 	
 	hdPrintf("[hdTextureManager] Looking for texture file: %s\n", name);
 	
-	if (std::string(name).find(string(".tga")) != string::npos)
+	if (std::string(name).find(std::string(".tga")) != std::string::npos)
 	{
 		
 		LoadTGA( name, &data, &width, &height, &bytes );
@@ -125,7 +125,7 @@ hdTexture* hdTextureManager::FindTexture(const char* name, texturetype_t type)
 		}
 	}
 	
-	if (std::string(name).find(string(".png")) != string::npos)
+	if (std::string(name).find(std::string(".png")) != std::string::npos)
 	{
 		LoadPNG( name, &data, &width, &height, &bytes );
 		if ( data ) {
@@ -137,16 +137,7 @@ hdTexture* hdTextureManager::FindTexture(const char* name, texturetype_t type)
 			return tex;
 		}
 	}
-	
-	
-#if TARGET_OS_IPHONE == 1 || TARGET_IPHONE_SIMULATOR == 1
-	/*
-	tex = this->LoadPVRTexture(name);
-	if (tex != NULL)
-	{
-		return tex;
-	}*/
-#endif
+    
 	hdPrintf("[hdTextureManager] ERROR: could not find texture file: %s\n", name);
 	return m_nullTexture;
 }
@@ -219,10 +210,13 @@ hdTexture* hdTextureManager::LoadTexture(const char* name, unsigned char* data, 
 	
 	hdTexture	*tex;
 	unsigned char *scaled;
+    unsigned short scaled_width, scaled_height;
+#if !defined(TARGET_GL_OPENGL)
 	unsigned char *downSized;
-	unsigned short scaled_width, scaled_height, downSizedWidth, downSizedHeight;
+	unsigned short downSizedWidth, downSizedHeight;
 	unsigned short* shortScaled;
 	bool downSample;
+#endif
 	
 	tex = new hdTexture(); //;hdAllocateTexture( name );
 	
@@ -239,7 +233,6 @@ hdTexture* hdTextureManager::LoadTexture(const char* name, unsigned char* data, 
 	tex->bytes = bytes;
 	tex->isPremultipliedAlpha = false;
 	snprintf(tex->name, kMaxTexturePathSize, "%s", name);
-//	tex->name = name;
 	
 	switch( type )
 	{
@@ -256,7 +249,6 @@ hdTexture* hdTextureManager::LoadTexture(const char* name, unsigned char* data, 
 			tex->MipMap = true;	
 			tex->WrapS = Repeat;
 			tex->WrapT = Repeat;
-			//			tex->MinFilter = LinearMipMapLinear;
 			tex->MinFilter = LinearMipMapNearest;
 			tex->MagFilter = Linear;
 			break;
@@ -280,16 +272,10 @@ hdTexture* hdTextureManager::LoadTexture(const char* name, unsigned char* data, 
 			tex->WrapS = Repeat;
 			tex->WrapT = Repeat;
 			tex->MinFilter = LinearMipMapLinear;
-			tex->MagFilter = Linear; 
-			/*
-			tex->MipMap = false;
-			tex->WrapS = Clamp;
-			tex->WrapT = Clamp;
-			tex->MinFilter = LinearMipMapOff;
-			tex->MagFilter = Nearest;*/
+			tex->MagFilter = Linear;
 			break;		
 		case TT_Background:
-			tex->MipMap = true; //false;	
+			tex->MipMap = true;
 			tex->WrapS = Repeat;
 			tex->WrapT = Repeat;
 			tex->MinFilter = LinearMipMapLinear;
@@ -340,13 +326,6 @@ hdTexture* hdTextureManager::LoadTexture(const char* name, unsigned char* data, 
 	if(scaled_height > tex->height && tex->MipMap )
 	{
 		scaled_height >>= 1;
-	}
-	
-	// let people sample down the world textures for speed
-	if( tex->MipMap )
-	{
-		//scaled_width >>= (int)gl_picmip->value;
-		//scaled_height >>= (int)gl_picmip->value;
 	}
 	
 	// don't ever bother with > glMaxTexSize textures
@@ -571,16 +550,7 @@ hdTexture* hdTextureManager::LoadTexture(const char* name, unsigned char* data, 
 	{
 		glGenerateMipmapEXT(GL_TEXTURE_2D);
 	}
-		
-	//if( tex->MipMap )
-	//{
-	//	int miplevel = 0;
-	
-	//	while( TM_MipMap( scaled, &scaled_width, &scaled_height, tex->bytes ) )
-	//	{
-	//		glTexImage2D( GL_TEXTURE_2D, ++miplevel, internalFormat[ tex->bytes ], scaled_width, scaled_height, 0, tex->bytes == 4 ? GL_RGBA : GL_RGB, GL_UNSIGNED_BYTE, scaled );
-	//	}
-	//}
+    
 #else
 	if (tex->MipMap)
 	{
@@ -589,10 +559,7 @@ hdTexture* hdTextureManager::LoadTexture(const char* name, unsigned char* data, 
 #endif	
 	
 	hdglError("glGenerateMipmapOES");
-	
-	
 	hdPrintf("[hdTextureManager] Finished Loading texture: %s\n\n", tex->name);
-	
 	return tex;
 }
 
@@ -602,7 +569,6 @@ int hdTextureManager::DownSizePixels(unsigned char*& dest, unsigned char *src, u
 									 unsigned short& destWidth, unsigned short& destHeight, 
 									 GLenum format)
 {
-	//unsigned short destWidth, destHeight;
 	unsigned col, row, byte;
 	unsigned char *ppOdd, *ppEven;
 	unsigned short pixelSum;
@@ -620,13 +586,10 @@ int hdTextureManager::DownSizePixels(unsigned char*& dest, unsigned char *src, u
 	destHeight = srcHeight >> 1;
 	
 	if (NULL == (dest = (unsigned char*)calloc(1, sz * srcBPP * destWidth * destHeight)))
-	//if (NULL == (dest = new unsigned char[destWidth * destHeight * srcBPP]))
 	{
 		hdPrintf("hdTextureManager::DownSizePixels OUT OF MEMORY.");
 		return -1;
 	}
-	
-	//memset(dest, 0, sz * srcBPP * destWidth * destHeight);
 	
 	ppOdd = src;
 	ppEven = src + (sz * srcWidth * srcBPP);

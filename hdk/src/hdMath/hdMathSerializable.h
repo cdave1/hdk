@@ -37,9 +37,7 @@ namespace boost {
 			vec3.y = fixed32(y);
 			vec3.z = fixed32(z);
 		}
-		
-	} // namespace serialization
-} // namespace boost
-
+    }
+}
 
 #endif

@@ -383,7 +383,6 @@ void hdLevelEditorController::SelectMultipleGameObjects()
 	
 	int clickObjectCount = m_gameWorld->AABBQuery(mouseAABB, objs, LEVEL_EDITOR_MAX_SELECTED_OBJECTS);
 	
-	
 	hdVec3 mousePoint = hdVec2toVec3(m_currentMouseDragPoint);
 	
 	if (clickObjectCount == 0) return;

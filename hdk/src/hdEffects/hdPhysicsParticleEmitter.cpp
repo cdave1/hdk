@@ -27,9 +27,6 @@ hdPhysicsParticle::hdPhysicsParticle(hdGameWorld *m_gameWorld) : hdPolygon(m_gam
 
 void hdPhysicsParticle::CreatePhysicsBody()
 {
-	
-	
-	
 }
 
 
@@ -119,12 +116,7 @@ bool hdPhysicsParticle::RayIntersection(const hdVec3* ray, hdVec3& vOut)
 void hdPhysicsParticle::Step()
 {	
 	if (m_physicsBody == NULL) return;
-	//if (m_physicsBody->IsSleeping()) return;
-	//if (m_physicsBody->IsFrozen()) return;
-	
 	b2XForm xform = m_physicsBody->GetXForm();
-	
-	//hdTransform transform;
 	
 	// Translate to origin, rotate, translate back again.
 	hdTranslateVertices(this->GetVertices(), this->GetVertexCount(), -m_obb.transform.translation);
@@ -281,9 +273,6 @@ void hdPhysicsParticleEmitter::StartNoSplit(const polygon_info_t& vars, const hd
 	
 	this->MakeParticle(particleInfo);
 }
-
-
-
 
 
 // Vertices2Particles breaking code.
@@ -512,9 +501,6 @@ bool hdPhysicsParticleEmitter::MakeParticle(const particle_info_t& info)
 		hdMake2DSingleShapePhysicsBody(m_physicsWorld, &p->m_physicsBody, p->GetWorldCenter(), 
 									   p->GetVertices(), p->GetVertexCount(), 0.4f, 0.5f, 0.1f, 
 									   false, false, 1, 0x02,  0x02);
-		//hd2DMultiShapePhysicsBody(m_physicsWorld, &p->m_physicsBody, p->GetWorldCenter(), 
-		//						  p->GetVertices(), p->GetVertexCount(), 0.4f, 0.5f, 0.1f,
-		//						  false, false, 1, 0x02,  0x02);
 	}
 	else
 	{
@@ -639,7 +625,6 @@ void hdPhysicsParticleEmitter::Draw() const
 	 * - Only call glEnd() when it is absolutely necessary.
 	 * - Only bind a new texture when the shard texture changes.
 	 */
-	//bool isGLBegin = false;
 	
 	glCullFace(GL_FRONT);
 	glEnable(GL_CULL_FACE);	
@@ -685,7 +670,7 @@ void hdPhysicsParticleEmitter::Draw() const
 				}
 			}
 			
-			if (hdMin(fabs(p->life) / 0.32f, 1.0f) < 1.0f)
+			if (hdMin(float(fabs(p->life) / 0.32f), 1.0f) < 1.0f)
 			{
 				glEnable(GL_BLEND);
 			}
@@ -694,7 +679,7 @@ void hdPhysicsParticleEmitter::Draw() const
 				glDisable(GL_BLEND);
 			}
 			
-			hdglColor4f(p->m_tint[0], p->m_tint[1], p->m_tint[2], hdMin(fabs(p->life) / 0.32f, 1.0f)); //p->m_tint[3]));
+			hdglColor4f(p->m_tint[0], p->m_tint[1], p->m_tint[2], hdMin(float(fabs(p->life) / 0.32f), 1.0f)); //p->m_tint[3]));
 			for (int j = 0; j < p->GetVertexCount(); ++j)
 			{
 				hdglTexCoord2f(p->GetTextureCoordinates()[j].x, p->GetTextureCoordinates()[j].y);
@@ -737,7 +722,7 @@ void hdPhysicsParticleEmitter::Draw() const
 					StartTextureEffect(HDGL_EFFECT_DOUBLE_INTENSITY);
 				}
 				hdglBegin(GL_QUADS);
-				if (hdMin(fabs(p->life) / 0.32f, 1.0f) < 1.0f)
+				if (hdMin(float(fabs(p->life) / 0.32f), 1.0f) < 1.0f)
 				{
 					glEnable(GL_BLEND);
 				}
@@ -748,23 +733,18 @@ void hdPhysicsParticleEmitter::Draw() const
 				currTexture = p->m_texture;
 			}
 			
-			
-			
 			DrawExtrusion(p->GetVertices(), 
 						  p->m_extrudedTextureCoords,
 						  p->GetVertexCount(), 
 						  p->GetStartingAABB(),
 						  p->m_texture, 
 						  p->m_tint, 
-						  hdMin(fabs(p->life) / 0.32f, 1.0f), 
+						  hdMin(float(fabs(p->life) / 0.32f), 1.0f),
 						  p->m_depth, 
 						  m_drawWithCustomLighting, 
 						  false,
 						  false,
-						  m_projection->GetWorldCenter());
-			
-
-		}
+						  m_projection->GetWorldCenter());		}
 	}
 	
 	if (currTexture != NULL)
@@ -775,11 +755,8 @@ void hdPhysicsParticleEmitter::Draw() const
 			StopTextureEffect(HDGL_EFFECT_DOUBLE_INTENSITY);
 		}
 	}
-	
-	
-	
+    
 	glDisable(GL_TEXTURE_2D);
-	
 	glDisable(GL_CULL_FACE);
 	
 #else

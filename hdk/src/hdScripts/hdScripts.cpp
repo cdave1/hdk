@@ -26,7 +26,6 @@ void Scripts_Init()
 }
 
 
-
 void Scripts_TearDown()
 {
 	if (currentCache != NULL)
@@ -267,7 +266,7 @@ void ParseWorldMessageScript(const char* scriptfilepath)
 				s.replace(pos, 2, 1, '\n');
 			}
 			
-			snprintf(msg.message, 256, s.c_str());
+			snprintf(msg.message, 256, "%s", s.c_str());
 			msg.messageType = e_hdMessageTypeText;
 			
 			if (HD_COLLECTIONS_ERROR_FULL == currentCache->Add(msg))
@@ -289,7 +288,7 @@ void ParseWorldMessageScript(const char* scriptfilepath)
 			
 			msg.contextId = currContextID;
 			msg.targetId = (int)strtol(string(matchings[2]).c_str(), NULL, 0);
-			snprintf(msg.texture, 256, string(matchings[3]).c_str());
+			snprintf(msg.texture, 256, "%s", string(matchings[3]).c_str());
 			msg.messageType = e_hdMessageTypeImage;
 			
 			if (HD_COLLECTIONS_ERROR_FULL == currentCache->Add(msg))
@@ -311,7 +310,7 @@ void ParseWorldMessageScript(const char* scriptfilepath)
 			
 			msg.contextId = currContextID;
 			msg.targetId = (int)strtol(string(matchings[2]).c_str(), NULL, 0);
-			snprintf(msg.texture, 256, string(matchings[3]).c_str());
+			snprintf(msg.texture, 256, "%s", string(matchings[3]).c_str());
 			
 			// New line hack
 			string s(matchings[4]);
@@ -320,8 +319,7 @@ void ParseWorldMessageScript(const char* scriptfilepath)
 				s.replace(pos, 2, 1, '\n');
 			}
 			
-			snprintf(msg.message, 256, s.c_str());
-			
+			snprintf(msg.message, 256, "%s", s.c_str());
 			
 			msg.messageType = e_hdMessageTypeCustomImageText;
 			
@@ -344,7 +342,7 @@ void ParseWorldMessageScript(const char* scriptfilepath)
 			
 			msg.contextId = currContextID;
 			msg.targetId = (int)strtol(string(matchings[2]).c_str(), NULL, 0);
-			snprintf(msg.texture, 256, string(matchings[3]).c_str());
+			snprintf(msg.texture, 256, "%s", string(matchings[3]).c_str());
 			
 			// New line hack
 			string s(matchings[4]);
@@ -353,7 +351,7 @@ void ParseWorldMessageScript(const char* scriptfilepath)
 				s.replace(pos, 2, 1, '\n');
 			}
 			
-			snprintf(msg.message, 256, s.c_str());
+			snprintf(msg.message, 256, "%s", s.c_str());
 			
 			msg.messageType = e_hdMessageTypeAvatar; //e_hdMessageTypeCustomImageText;
 			
@@ -366,4 +364,3 @@ void ParseWorldMessageScript(const char* scriptfilepath)
 	}
 	FileSystem_CloseFile(hnd);
 }
-

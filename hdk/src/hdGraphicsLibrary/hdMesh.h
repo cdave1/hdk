@@ -5,11 +5,11 @@
  *  Created by david on 3/07/09.
  *  Copyright 2009 n/a. All rights reserved.
  *
- * In the 2D context of the hdEngine, a mesh has a set of boundary
- * contours and a set of internal polygons.
+ * In the 2D context of the hdEngine, a mesh has a set of boundary contours and a set of internal 
+ * polygons.
  *
- * The internal polygons are used to render the face, while
- * the boundary is used to render the extrusion.
+ * The internal polygons are used to render the face, while the boundary is used to render the 
+ * extrusion.
  *
  * NOTE: the boundary property can be used to generate 2D
  * physics outlines from arbitrary meshes. We simply need
@@ -33,6 +33,7 @@
 #ifndef _HD_MESH_H_
 #define _HD_MESH_H_
 
+#include "hdGraphicsLibrary/hdGraphicsInterface.h"
 #include "hdGraphicsLibrary/hdPolygon.h"
 #include "hdGraphicsLibrary/hdMeshPolygon.h"
 
@@ -99,9 +100,5 @@ private:
 	gluVector_t * m_gluVectors;
 	
 };
-
-
-
-
 
 #endif

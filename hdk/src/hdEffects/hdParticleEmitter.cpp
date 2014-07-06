@@ -194,7 +194,6 @@ void hdParticleEmitter::Draw() const
 	
 	hdglError("particle emitter start");
 	glEnable(GL_BLEND);
-	//glBlendFunc(GL_SRC_ALPHA, GL_ONE);
 	
 	if (m_blendStyle == e_particleBlendStyleNormal)
 	{
@@ -216,7 +215,6 @@ void hdParticleEmitter::Draw() const
 
 	if (m_drawAsQuad)
 	{
-		
 		hdglBindTexture(m_texture);
 		
 		hdParticle particle;
@@ -239,15 +237,9 @@ void hdParticleEmitter::Draw() const
 			
 		}
 		hdglEnd();
-		
-		//glEnable(GL_DEPTH_TEST); 
-		
 	}
 	else
 	{
-	
-		//glDisable(GL_DEPTH_TEST);
-		//glMatrixMode( GL_MODELVIEW );
 		hdglBindTexture(m_texture);
 		hdglBegin(GL_POINTS);
 		glPointSize(m_particlePointSize);

@@ -68,26 +68,16 @@ hdFont* hdFontManager::FindFont(const char* name)
 		}
 	}
 	 
-	return LoadFluidFontFile( name); //, &data, &width, &height, &bytes );
-	/*
-	if ( data ) {
-		tex = this->LoadFont( name, data, width, height, bytes );
-		free( data );
-		return tex;
-	}
-	return m_nullFont;
-	 */
+	return LoadFluidFontFile(name);
 }
 
 
 /*
- *
  * .f files have a specific format. Characters are stored in a contiguous format.
  * We load the char data into a data structure, and then
  * prepare a buffer containing a map of the character pixels.
  *
  * NOTE: Character pixels are alpha values.
- *
  */
 hdFont* hdFontManager::LoadFluidFontFile(const char *filename)
 {
@@ -111,9 +101,7 @@ hdFont* hdFontManager::LoadFluidFontFile(const char *filename)
 	float pixelAreaRoot = 0;
 	unsigned short texSquare = 0;
 	
-	//unsigned char *data;
 	filehandle_t *hFile;
-	
 	
 	hdPrintf("Attempting to load font file: %s\n", filename);
 	
@@ -124,11 +112,9 @@ hdFont* hdFontManager::LoadFluidFontFile(const char *filename)
 		goto FONTFILELOADFAILED;
     }
 	
-	
 	font = new hdFont();
 	snprintf(font->name, kMaxFilePathSize, "%s", filename);
 	m_fonts->Add(font);
-	
 	
 	for (int i = 0; i < kFluidFontFileCharCount; ++i)
 	{
@@ -266,24 +252,18 @@ hdFont* hdFontManager::LoadFluidFontFile(const char *filename)
 	// HACK HACK HACK:
 	// Space character does not appear to have either a width or height - just need a width.
 	font->fileChars[(int)' '].screenWidth = maxHeight / 5;
-	
-	FileSystem_CloseFile( hFile );
-	
+	FileSystem_CloseFile(hFile);
 	return font;
 	
-	
-	
 FONTFILELOADFAILED:
-	// TODO: free font-fileChars[i].buffer ????
-	
 	if (font != NULL)
 	{
 		m_fonts->Remove(font);
 	}
 	
-	if( hFile )
+	if (hFile)
 	{
-		FileSystem_CloseFile( hFile );
+		FileSystem_CloseFile(hFile);
 	}
 	return NULL;
 }

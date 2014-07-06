@@ -14,7 +14,6 @@
 #ifndef HD_GRAPHICS_LIB
 #define HD_GRAPHICS_LIB
 
-
 #if TARGET_OS_IPHONE == 1 || TARGET_IPHONE_SIMULATOR == 1
 #define TARGET_GL_OPENGLES 1
 #elif TARGET_OS_MAC == 1
@@ -23,24 +22,24 @@
 
 
 #if TARGET_GL_OPENGLES == 1
-	#warning "Including open gl es"
-	#include <OpenGLES/ES1/gl.h>
-	#include <OpenGLES/ES1/glext.h>
-	#define GL_QUADS 888
-	#define hdglMaxTexSize 1024
+#include <OpenGLES/ES1/gl.h>
+#include <OpenGLES/ES1/glext.h>
+#define GL_QUADS 888
+#define hdglMaxTexSize 1024
 
-	typedef double GLdouble;
+typedef double GLdouble;
 #elif TARGET_GL_OPENGL == 1
-	#warning "Including open gl"
-	#include <OpenGL/OpenGL.h>
-	#include <OpenGL/gl.h>
-	#define hdglMaxTexSize 2048
+#include <OpenGL/OpenGL.h>
+#include <OpenGL/gl.h>
+#include <OpenGL/glext.h>
+#define hdglMaxTexSize 2048
 #else
-	#warning "no gl directive found - including opengl by default" 
-	#include <OpenGL/OpenGL.h>
-	#include <OpenGL/gl.h>
+#warning "no gl directive found - including opengl by default"
+#include <OpenGL/OpenGL.h>
+#include <OpenGL/gl.h>
+#include <OpenGL/glext.h>
 
-	#define hdglMaxTexSize 2048
+#define hdglMaxTexSize 2048
 #endif
 
 #include "hdCore/hdSystemSettings.h"

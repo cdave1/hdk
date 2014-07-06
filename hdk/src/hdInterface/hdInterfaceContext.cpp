@@ -17,8 +17,6 @@ static bool loggingEnabled = false;
 
 void hdInterfaceContext::Init(hdInterfaceController *context)
 {
-	//hdPrintf("[hdInterfaceContext::Init]");
-	
 	m_controller = context;
 	
 	if (m_receivers != NULL)
@@ -31,8 +29,6 @@ void hdInterfaceContext::Init(hdInterfaceController *context)
 
 void hdInterfaceContext::TearDown(hdInterfaceController *context)
 {
-	//hdPrintf("[hdInterfaceContext::TearDown]");
-	
 	if (m_controller != NULL
 		&& m_controller != context)
 		return;
@@ -78,8 +74,6 @@ bool hdInterfaceContext::AddReceiver(const hdReceiver *receiver)
 
 bool hdInterfaceContext::RemoveReceiver(const hdReceiver *receiver)
 {
-	//m_receivers->Remove(receiver);
-	
 	return true;
 }
 
@@ -143,13 +137,6 @@ void hdInterfaceContext::HandleSingleTap(const float x, const float y)
 	if (m_receivers == NULL) return;
 	if (m_receivers->GetItemCount() == 0) return;
 	m_controller->ConvertRawToScreen(screen, x, y);
-	
-	/*
-	for (int i = 0; i < m_receivers->GetItemCount(); ++i)
-	{
-		m_receivers->GetItems()[i]->MouseClick(screen.x, screen.y);
-	}
-	 */
 }
 	 
 

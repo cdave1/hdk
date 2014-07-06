@@ -12,7 +12,6 @@
 #include "hdGraphicsLibrary.h"
 #include "hdMath.h"
 
-
 class hdReceiver : public hdPolygon, public hdDrawable
 {
 public:

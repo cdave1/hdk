@@ -23,8 +23,6 @@ public:
 	
 	bool RemoveButton(hdButton* button);
 	
-	//void AddImage(hdUIImage* image);
-	
 	void Rotate(const hdVec3& rotationVector, const hdVec3& rotationAxis) {}
 	
 	void Scale(const hdVec3& scaleVector, const hdVec3& scaleAxis) {}
@@ -84,7 +82,5 @@ private:
 	
 	bool m_isEnabled;
 };
-
-
 
 #endif
