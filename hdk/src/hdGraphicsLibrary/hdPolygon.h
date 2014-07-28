@@ -18,18 +18,11 @@
  */
 
 /*
+ * A polygon inherits is an abstract class that stores vertex and texture coordinates 
+ * independantly of texture and color information.
  *
- * A polygon shape that uses hdDrawable and hdGameObject for
- * storage. It is an abstract class that stores vertex and
- * texture coordinates, but doesn't bother with drawing or
- * handling texture drawing. Main reason for no texture handling
- * is that many classes want vertices and tex coords taken care of,
- * but will use textures in their own way (example: animated sprites
- * and buttons).
- *
- * Texture coordinates are automatically calculated and then 
- * multiplied by the x and y repeat factors.
- *
+ * Texture coordinates are automatically calculated and then multiplied by the x and y 
+ * repeat factors.
  */
 
 #ifndef _HD_POLYGON_H_
@@ -38,9 +31,7 @@
 #include "hdGame.h"
 #include "hdCollections.h"
 
-//#define kMaxPolygonVertices 128
 #define kMaxPolygonVertices 96
-
 
 class hdPolygon : public hdGameObject
 {

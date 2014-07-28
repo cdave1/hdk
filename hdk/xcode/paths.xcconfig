@@ -8,8 +8,8 @@
 
 OTHER_LDFLAGS = -all_load -ObjC
 
-HDKPATH = /Users/david1/hdk/hdTech1/hdk/
-HDKPATHS = $(HDKPATH)libs/boost_1_38_0 $(HDKPATH)libs/Box2D/2.02/Include $(HDKPATH)libs/Box2D/2.02/Source/Dynamics/Controllers $(HDKPATH)inc/ $(HDKPATH)src/
+HDKPATH = /Users/davidpetrie/Projects/hdk/hdTech1/hdk/
+HDKPATHS = $(HDKPATH)libs/boost $(HDKPATH)libs/Box2D/2.02/Include $(HDKPATH)libs/Box2D/2.02/Source/Dynamics/Controllers $(HDKPATH)inc/ $(HDKPATH)src/
 
 //CCCPATH = /Users/davidpetrie/Documents/Projects/ccc/ccc/
 //CCCPATHS = $(CCCPATH)libs/asi-http-request/Classes/ $(CCCPATH)libs/JSON/ $(CCCPATH)libs/three20/src/ $(CCCPATH)src/

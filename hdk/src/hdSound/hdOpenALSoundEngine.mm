@@ -96,7 +96,7 @@ int SoundEngine_PlayEffect(const hdSound* sound)
 int SoundEngine_StopEffect(const hdSound* sound)
 {
 	assert(sharedCMOpenALSoundManager != nil);
-	[sharedCMOpenALSoundManager stopSound:[NSString stringWithCString:sound->fullFilePath]];
+	[sharedCMOpenALSoundManager stopSound:[NSString stringWithUTF8String:sound->fullFilePath]];
 	 return 0;
 }
 
@@ -112,7 +112,7 @@ int SoundEngine_LoadBackgroundMusic(hdSound* sound)
 {
 #if USE_AVPLAYER_FOR_MUSIC == 1
 	if (!avAudioWrapper) return 0;
-	return [avAudioWrapper LoadSoundWithFileName:[NSString stringWithCString:sound->fullFilePath encoding:NSASCIIStringEncoding] withVolume:sound->volume];
+	return [avAudioWrapper LoadSoundWithFileName:[NSString stringWithUTF8String:sound->fullFilePath] withVolume:sound->volume];
 #else
 	return 0;
 #endif

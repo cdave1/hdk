@@ -41,3 +41,5 @@ profile
 
 # Freetype 2
 freetype2/
+hdk/libs/boost
+hdk/libs/zlib*

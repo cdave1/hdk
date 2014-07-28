@@ -1,10 +1,21 @@
-//
-//  hdAccelerometer.m
-//  hdk
-//
-//  Created by David Petrie on 11/04/10.
-//  Copyright 2010 Hackdirt Ltd. All rights reserved.
-//
+/*
+ * Copyright (c) 2014 Hackdirt Ltd.
+ * Author: David Petrie (david@davidpetrie.com)
+ *
+ * This software is provided 'as-is', without any express or implied warranty.
+ * In no event will the authors be held liable for any damages arising from the
+ * use of this software. Permission is granted to anyone to use this software for
+ * any purpose, including commercial applications, and to alter it and
+ * redistribute it freely, subject to the following restrictions:
+ *
+ * 1. The origin of this software must not be misrepresented; you must not claim
+ * that you wrote the original software. If you use this software in a product, an
+ * acknowledgment in the product documentation would be appreciated but is not
+ * required.
+ * 2. Altered source versions must be plainly marked as such, and must not be
+ * misrepresented as being the original software.
+ * 3. This notice may not be removed or altered from any source distribution.
+ */
 
 #import "hdAccelerometer.h"
 
@@ -20,7 +31,6 @@
 }
 
 
-
 - (void) accelerometer:(UIAccelerometer*)accelerometer didAccelerate:(UIAcceleration*)Acceleration
 {
 	// use a basic low-pass filter to only keep the gravity in the accelerometer values
@@ -28,6 +38,7 @@
 	_accelerometer[1] = Acceleration.y * FILTERINGFACTOR + _accelerometer[1] * (1.0 - FILTERINGFACTOR);
 	_accelerometer[2] = Acceleration.z * FILTERINGFACTOR + _accelerometer[2] * (1.0 - FILTERINGFACTOR);
 }
+
 
 - (void) GetAccelerometerMatrix:(float *) matrix
 {
@@ -44,7 +55,8 @@
 	matrix[1] = _accelerometer[1] / length;
 	matrix[2] = _accelerometer[2] / length;
 	
-	//Setup second matrix column as an arbitrary vector in the plane perpendicular to the gravity vector {Gx, Gy, Gz} defined by by the equation "Gx * x + Gy * y + Gz * z = 0" in which we arbitrarily set x=0 and y=1
+	// Setup second matrix column as an arbitrary vector in the plane perpendicular to the gravity
+    // vector {Gx, Gy, Gz} defined by by the equation "Gx * x + Gy * y + Gz * z = 0" in which we arbitrarily set x=0 and y=1
 	matrix[4] = 0.0;
 	matrix[5] = 1.0;
 	matrix[6] = -_accelerometer[1] / _accelerometer[2];
@@ -58,6 +70,7 @@
 	matrix[9] = matrix[4] * matrix[2] - matrix[6] * matrix[0];
 	matrix[10] = matrix[0] * matrix[5] - matrix[1] * matrix[4];
 }
+
 
 - (void) GetAccelerometerVector:(double *) AccelValue;
 {

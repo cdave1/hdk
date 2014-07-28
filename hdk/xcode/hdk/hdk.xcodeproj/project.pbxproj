@@ -55,14 +55,6 @@
 		E41EA75B11709B3600A30C8E /* hdFileSystemUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E41EA75911709B3600A30C8E /* hdFileSystemUtils.cpp */; };
 		E41EA8601170A50E00A30C8E /* hdEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA85F1170A50E00A30C8E /* hdEffects.h */; };
 		E41EA8A61170A8C700A30C8E /* hdScreenSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E41EA8A51170A8C700A30C8E /* hdScreenSettings.cpp */; };
-		E41EA9871170B1BE00A30C8E /* hdGLES1Surface.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA97F1170B1BE00A30C8E /* hdGLES1Surface.h */; };
-		E41EA9881170B1BE00A30C8E /* hdGLES1Surface.mm in Sources */ = {isa = PBXBuildFile; fileRef = E41EA9801170B1BE00A30C8E /* hdGLES1Surface.mm */; };
-		E41EA9891170B1BE00A30C8E /* hdGLES2Surface.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA9811170B1BE00A30C8E /* hdGLES2Surface.h */; };
-		E41EA98A1170B1BE00A30C8E /* hdGLES2Surface.mm in Sources */ = {isa = PBXBuildFile; fileRef = E41EA9821170B1BE00A30C8E /* hdGLES2Surface.mm */; };
-		E41EA98B1170B1BE00A30C8E /* hdGLESSurface.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA9831170B1BE00A30C8E /* hdGLESSurface.h */; };
-		E41EA98C1170B1BE00A30C8E /* hdGLESSurface.mm in Sources */ = {isa = PBXBuildFile; fileRef = E41EA9841170B1BE00A30C8E /* hdGLESSurface.mm */; };
-		E41EA98D1170B1BE00A30C8E /* hdGLView.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA9851170B1BE00A30C8E /* hdGLView.h */; };
-		E41EA98E1170B1BE00A30C8E /* hdGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E41EA9861170B1BE00A30C8E /* hdGLView.mm */; };
 		E41EA9AD1170B37000A30C8E /* hdMultiTouchView.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA9AB1170B37000A30C8E /* hdMultiTouchView.h */; };
 		E41EA9AE1170B37000A30C8E /* hdMultiTouchView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E41EA9AC1170B37000A30C8E /* hdMultiTouchView.mm */; };
 		E41EA9BA1170B4EF00A30C8E /* hdInput.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA9B91170B4EF00A30C8E /* hdInput.h */; };
@@ -510,6 +502,7 @@
 		E44B5B2B198602AC001F9862 /* error_code.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5B28198602AC001F9862 /* error_code.cpp */; };
 		E44B5B2C198602AC001F9862 /* local_free_on_destruction.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5B29198602AC001F9862 /* local_free_on_destruction.hpp */; };
 		E44B5B2D198602AC001F9862 /* local_free_on_destruction.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5B29198602AC001F9862 /* local_free_on_destruction.hpp */; };
+		E4A7566519862B8A0004ACB6 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A7566419862B8A0004ACB6 /* GLKit.framework */; };
 		E4EEA1F91985F964003E3175 /* AppleOpenALSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = E428341F116FF684008E3594 /* AppleOpenALSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E4EEA1FA1985F964003E3175 /* CMOpenALSound.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283420116FF684008E3594 /* CMOpenALSound.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E4EEA1FB1985F964003E3175 /* CMOpenALSoundManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283422116FF684008E3594 /* CMOpenALSoundManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -641,10 +634,6 @@
 		E4EEA2791985F964003E3175 /* hdMathCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA66D1170899C00A30C8E /* hdMathCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E4EEA27A1985F964003E3175 /* hdFileSystemUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA75811709B3600A30C8E /* hdFileSystemUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E4EEA27B1985F964003E3175 /* hdEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA85F1170A50E00A30C8E /* hdEffects.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA27C1985F964003E3175 /* hdGLES1Surface.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA97F1170B1BE00A30C8E /* hdGLES1Surface.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA27D1985F964003E3175 /* hdGLES2Surface.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA9811170B1BE00A30C8E /* hdGLES2Surface.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA27E1985F964003E3175 /* hdGLESSurface.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA9831170B1BE00A30C8E /* hdGLESSurface.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA27F1985F964003E3175 /* hdGLView.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA9851170B1BE00A30C8E /* hdGLView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E4EEA2801985F964003E3175 /* hdMultiTouchView.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA9AB1170B37000A30C8E /* hdMultiTouchView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E4EEA2811985F964003E3175 /* hdInput.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA9B91170B4EF00A30C8E /* hdInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E4EEA2821985F964003E3175 /* hdAccelerometer.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EAA5D1170BCC000A30C8E /* hdAccelerometer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -755,10 +744,6 @@
 		E4EEA38C1985F964003E3175 /* b2RevoluteJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837D4117005AB008E3594 /* b2RevoluteJoint.cpp */; };
 		E4EEA38D1985F964003E3175 /* hdFileSystemUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E41EA75911709B3600A30C8E /* hdFileSystemUtils.cpp */; };
 		E4EEA38E1985F964003E3175 /* hdScreenSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E41EA8A51170A8C700A30C8E /* hdScreenSettings.cpp */; };
-		E4EEA38F1985F964003E3175 /* hdGLES1Surface.mm in Sources */ = {isa = PBXBuildFile; fileRef = E41EA9801170B1BE00A30C8E /* hdGLES1Surface.mm */; };
-		E4EEA3901985F964003E3175 /* hdGLES2Surface.mm in Sources */ = {isa = PBXBuildFile; fileRef = E41EA9821170B1BE00A30C8E /* hdGLES2Surface.mm */; };
-		E4EEA3911985F964003E3175 /* hdGLESSurface.mm in Sources */ = {isa = PBXBuildFile; fileRef = E41EA9841170B1BE00A30C8E /* hdGLESSurface.mm */; };
-		E4EEA3921985F964003E3175 /* hdGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E41EA9861170B1BE00A30C8E /* hdGLView.mm */; };
 		E4EEA3931985F964003E3175 /* hdMultiTouchView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E41EA9AC1170B37000A30C8E /* hdMultiTouchView.mm */; };
 		E4EEA3941985F964003E3175 /* hdiPhoneAccelerometer.mm in Sources */ = {isa = PBXBuildFile; fileRef = E41EAA5E1170BCC000A30C8E /* hdiPhoneAccelerometer.mm */; };
 		E4EEA3951985F964003E3175 /* neon_matrix_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36BCD11714DAD00792A2D /* neon_matrix_impl.cpp */; };
@@ -1085,14 +1070,6 @@
 		E41EA75911709B3600A30C8E /* hdFileSystemUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdFileSystemUtils.cpp; sourceTree = "<group>"; };
 		E41EA85F1170A50E00A30C8E /* hdEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdEffects.h; sourceTree = "<group>"; };
 		E41EA8A51170A8C700A30C8E /* hdScreenSettings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdScreenSettings.cpp; sourceTree = "<group>"; };
-		E41EA97F1170B1BE00A30C8E /* hdGLES1Surface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdGLES1Surface.h; sourceTree = "<group>"; };
-		E41EA9801170B1BE00A30C8E /* hdGLES1Surface.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = hdGLES1Surface.mm; sourceTree = "<group>"; };
-		E41EA9811170B1BE00A30C8E /* hdGLES2Surface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdGLES2Surface.h; sourceTree = "<group>"; };
-		E41EA9821170B1BE00A30C8E /* hdGLES2Surface.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = hdGLES2Surface.mm; sourceTree = "<group>"; };
-		E41EA9831170B1BE00A30C8E /* hdGLESSurface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdGLESSurface.h; sourceTree = "<group>"; };
-		E41EA9841170B1BE00A30C8E /* hdGLESSurface.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = hdGLESSurface.mm; sourceTree = "<group>"; };
-		E41EA9851170B1BE00A30C8E /* hdGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdGLView.h; sourceTree = "<group>"; };
-		E41EA9861170B1BE00A30C8E /* hdGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = hdGLView.mm; sourceTree = "<group>"; };
 		E41EA9AB1170B37000A30C8E /* hdMultiTouchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdMultiTouchView.h; sourceTree = "<group>"; };
 		E41EA9AC1170B37000A30C8E /* hdMultiTouchView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = hdMultiTouchView.mm; sourceTree = "<group>"; };
 		E41EA9B91170B4EF00A30C8E /* hdInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdInput.h; sourceTree = "<group>"; };
@@ -1426,6 +1403,7 @@
 		E44B5AD819860288001F9862 /* xml_woarchive.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = xml_woarchive.cpp; sourceTree = "<group>"; };
 		E44B5B28198602AC001F9862 /* error_code.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = error_code.cpp; sourceTree = "<group>"; };
 		E44B5B29198602AC001F9862 /* local_free_on_destruction.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = local_free_on_destruction.hpp; sourceTree = "<group>"; };
+		E4A7566419862B8A0004ACB6 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		E4EEA1EB1985F8EF003E3175 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		E4EEA1EF1985F8EF003E3175 /* Framework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Framework-Info.plist"; sourceTree = "<group>"; };
 		E4EEA1F11985F8EF003E3175 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -1610,6 +1588,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4A7566519862B8A0004ACB6 /* GLKit.framework in Frameworks */,
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
 				E428353F116FF69E008E3594 /* AVFoundation.framework in Frameworks */,
 				E4283545116FF6A9008E3594 /* AudioToolbox.framework in Frameworks */,
@@ -1666,6 +1645,7 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E4A7566419862B8A0004ACB6 /* GLKit.framework */,
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
 				E428353E116FF69E008E3594 /* AVFoundation.framework */,
 				E4283544116FF6A9008E3594 /* AudioToolbox.framework */,
@@ -1908,14 +1888,6 @@
 				E428347D116FF684008E3594 /* hdDrawable.h */,
 				E428347E116FF684008E3594 /* hdDrawingUtilities.cpp */,
 				E428347F116FF684008E3594 /* hdDrawingUtilities.h */,
-				E41EA97F1170B1BE00A30C8E /* hdGLES1Surface.h */,
-				E41EA9801170B1BE00A30C8E /* hdGLES1Surface.mm */,
-				E41EA9811170B1BE00A30C8E /* hdGLES2Surface.h */,
-				E41EA9821170B1BE00A30C8E /* hdGLES2Surface.mm */,
-				E41EA9831170B1BE00A30C8E /* hdGLESSurface.h */,
-				E41EA9841170B1BE00A30C8E /* hdGLESSurface.mm */,
-				E41EA9851170B1BE00A30C8E /* hdGLView.h */,
-				E41EA9861170B1BE00A30C8E /* hdGLView.mm */,
 				E428347C116FF684008E3594 /* hdGraphicsInterface.h */,
 				E4283480116FF684008E3594 /* hdOpenGLES.cpp */,
 				E4283489116FF684008E3594 /* hdPNGLoader.h */,
@@ -2840,10 +2812,6 @@
 				E41EA75A11709B3600A30C8E /* hdFileSystemUtils.h in Headers */,
 				E41EA8601170A50E00A30C8E /* hdEffects.h in Headers */,
 				E4EEA3FC1985FE3E003E3175 /* path.hpp in Headers */,
-				E41EA9871170B1BE00A30C8E /* hdGLES1Surface.h in Headers */,
-				E41EA9891170B1BE00A30C8E /* hdGLES2Surface.h in Headers */,
-				E41EA98B1170B1BE00A30C8E /* hdGLESSurface.h in Headers */,
-				E41EA98D1170B1BE00A30C8E /* hdGLView.h in Headers */,
 				E41EA9AD1170B37000A30C8E /* hdMultiTouchView.h in Headers */,
 				E41EA9BA1170B4EF00A30C8E /* hdInput.h in Headers */,
 				E4EEA4F21985FEC3003E3175 /* object_cache.hpp in Headers */,
@@ -3294,10 +3262,6 @@
 				E4EEA27A1985F964003E3175 /* hdFileSystemUtils.h in Headers */,
 				E4EEA27B1985F964003E3175 /* hdEffects.h in Headers */,
 				E4EEA4FD1985FEC3003E3175 /* basic_regex.hpp in Headers */,
-				E4EEA27C1985F964003E3175 /* hdGLES1Surface.h in Headers */,
-				E4EEA27D1985F964003E3175 /* hdGLES2Surface.h in Headers */,
-				E4EEA27E1985F964003E3175 /* hdGLESSurface.h in Headers */,
-				E4EEA27F1985F964003E3175 /* hdGLView.h in Headers */,
 				E4EEA2801985F964003E3175 /* hdMultiTouchView.h in Headers */,
 				E44B5A791986026B001F9862 /* serialization.hpp in Headers */,
 				E4EEA2811985F964003E3175 /* hdInput.h in Headers */,
@@ -3522,10 +3486,6 @@
 				E4283826117005AB008E3594 /* b2RevoluteJoint.cpp in Sources */,
 				E41EA75B11709B3600A30C8E /* hdFileSystemUtils.cpp in Sources */,
 				E41EA8A61170A8C700A30C8E /* hdScreenSettings.cpp in Sources */,
-				E41EA9881170B1BE00A30C8E /* hdGLES1Surface.mm in Sources */,
-				E41EA98A1170B1BE00A30C8E /* hdGLES2Surface.mm in Sources */,
-				E41EA98C1170B1BE00A30C8E /* hdGLESSurface.mm in Sources */,
-				E41EA98E1170B1BE00A30C8E /* hdGLView.mm in Sources */,
 				E41EA9AE1170B37000A30C8E /* hdMultiTouchView.mm in Sources */,
 				E4EEA5651985FF01003E3175 /* c_regex_traits.cpp in Sources */,
 				E41EAA601170BCC000A30C8E /* hdiPhoneAccelerometer.mm in Sources */,
@@ -3700,10 +3660,6 @@
 				E4EEA38C1985F964003E3175 /* b2RevoluteJoint.cpp in Sources */,
 				E4EEA38D1985F964003E3175 /* hdFileSystemUtils.cpp in Sources */,
 				E4EEA38E1985F964003E3175 /* hdScreenSettings.cpp in Sources */,
-				E4EEA38F1985F964003E3175 /* hdGLES1Surface.mm in Sources */,
-				E4EEA3901985F964003E3175 /* hdGLES2Surface.mm in Sources */,
-				E4EEA3911985F964003E3175 /* hdGLESSurface.mm in Sources */,
-				E4EEA3921985F964003E3175 /* hdGLView.mm in Sources */,
 				E4EEA3931985F964003E3175 /* hdMultiTouchView.mm in Sources */,
 				E4EEA5661985FF01003E3175 /* c_regex_traits.cpp in Sources */,
 				E4EEA3941985F964003E3175 /* hdiPhoneAccelerometer.mm in Sources */,

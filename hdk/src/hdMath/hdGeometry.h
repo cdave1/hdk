@@ -23,6 +23,8 @@
 #include "hdMath/hdMathCommon.h"
 #include "hdMath/hdMatrix.h"
 
+typedef struct hdTransform;
+
 void hdScaleVertices(hdVec3* vertices, int vertexCount, const hdVec3& scale);
 void hdRotateVertices(hdVec3* vertices, int vertexCount, const hdVec3& rotation);
 void hdTranslateVertices(hdVec3* vertices, int vertexCount, const hdVec3& translation);
@@ -48,14 +50,14 @@ struct hdAABB
 };
 
 
-typedef struct hdTransform
+struct hdTransform
 {
 	hdTransform() : rotation(0,0,0), translation(0,0,0), scale(1.0f, 1.0f, 1.0f) {}
 	
 	hdVec3 rotation;
 	hdVec3 translation;
 	hdVec3 scale;
-} hdTransform;
+};
 
 
 typedef enum

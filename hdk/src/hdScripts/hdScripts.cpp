@@ -313,12 +313,12 @@ void ParseWorldMessageScript(const char* scriptfilepath)
 			hdAssert(5 == matchings.size());
 			
 			msg.contextId = currContextID;
-			msg.targetId = (int)strtol(string(matchings[2]).c_str(), NULL, 0);
-			snprintf(msg.texture, 256, "%s", string(matchings[3]).c_str());
+			msg.targetId = (int)strtol(std::string(matchings[2]).c_str(), NULL, 0);
+			snprintf(msg.texture, 256, "%s", std::string(matchings[3]).c_str());
 			
 			// New line hack
-			string s(matchings[4]);
-			while((pos = s.find("\\n")) != string::npos)
+            std::string s(matchings[4]);
+			while((pos = s.find("\\n")) != std::string::npos)
 			{
 				s.replace(pos, 2, 1, '\n');
 			}
