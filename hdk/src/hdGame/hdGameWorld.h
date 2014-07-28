@@ -1,12 +1,21 @@
-//
-// hdGameWorld.h
-// AnimationEngine
-//
-// A container for game objects.
-//
-// Created by david on 14/02/09.
-// Copyright 2009 n/a. All rights reserved.
-//
+/*
+ * Copyright (c) 2014 Hackdirt Ltd.
+ * Author: David Petrie (david@davidpetrie.com)
+ *
+ * This software is provided 'as-is', without any express or implied warranty.
+ * In no event will the authors be held liable for any damages arising from the
+ * use of this software. Permission is granted to anyone to use this software for
+ * any purpose, including commercial applications, and to alter it and
+ * redistribute it freely, subject to the following restrictions:
+ *
+ * 1. The origin of this software must not be misrepresented; you must not claim
+ * that you wrote the original software. If you use this software in a product, an
+ * acknowledgment in the product documentation would be appreciated but is not
+ * required.
+ * 2. Altered source versions must be plainly marked as such, and must not be
+ * misrepresented as being the original software.
+ * 3. This notice may not be removed or altered from any source distribution.
+ */
 
 #ifndef HD_GAMEWORLD_H
 #define HD_GAMEWORLD_H
@@ -14,7 +23,6 @@
 #include "hdMath.h"
 #include "hdGame/hdGameObject.h"
 
-//struct hdGameObjectDef;
 class hdGameObject;
 
 class hdGameWorld
@@ -41,8 +49,6 @@ public:
 	const hdAABB GetAABB();
 	
 	void SetAABB(const hdAABB& aabb);
-	
-	
 	
 	void ResetAABB();
 	
@@ -80,11 +86,13 @@ public:
 	   objects iff nothing could be found.
 	 
 	 */
-	const int RayQuery(const unsigned int objectFilter, const hdVec3* ray, hdGameObject** objects, int maxObjects, hdVec3 &vOut);
+	const int RayQuery(const unsigned int objectFilter, const hdVec3* ray,
+                       hdGameObject** objects, int maxObjects, hdVec3 &vOut);
 	
-	
-	
-	const int RayQuery___2(const unsigned int objectFilter, const hdVec3* ray, hdGameObject** objects, int maxObjects, hdVec3 &vOut);
+
+	const int RayQuery___2(const unsigned int objectFilter, const hdVec3* ray,
+                           hdGameObject** objects, int maxObjects, hdVec3 &vOut);
+
 private:
 		
 	friend class hdGameObject;
@@ -96,8 +104,7 @@ private:
 	hdAABB m_aabb;
 		
 	bool m_lock;
-	
-	
+
 };
 
 
@@ -118,62 +125,4 @@ inline int32 hdGameWorld::GetGameObjectCount() const
 	return m_gameObjectCount;
 }
 
-
-
-
-
-/*
-class hdGameWorld
-{
-public:
-	// When the world is initialised it is given dimensions in terms
-	// of a vector, emanating from the origin.
-	// The projection is the view of the game world, creating a game object 
-	// initially at the origin with dimensions given by the vector.
-	hdGameWorld(const hdVec3& boundingBox, const hdVec3& projection);
-	
-	~hdGameWorld();
-	
-	hdGameObject* CreateGameObject(const hdGameObjectDef* def);
-	
-	void DestroyGameObject(hdGameObject* gameObject);
-	
-	hdGameObject* GetGameObjectList();
-	
-	hdGameObject* GetVisibleGameObjectList();
-	
-	int32 GetGameObjectCount() const;
-	
-	// The projection object is a game object.
-	hdGameObject* GetProjectionObject();
-	
-	const int PointQuery(const hdVec2& point, hdGameObject** objects, int maxObjects);
-
-private:
-	
-	friend class hdGameObject;
-	
-	hdGameObject* m_gameObjectList;
-	
-	int32 m_gameObjectCount;
-	
-	hdGameObject* m_projection;
-	
-	hdVec3 m_boundingBox;
-	
-	bool m_lock;
-};
-
-
-inline hdGameObject* hdGameWorld::GetProjectionObject()
-{
-	return m_projection;
-}
-
-
-inline int32 hdGameWorld::GetGameObjectCount() const
-{
-	return m_gameObjectCount;
-}
-*/
 #endif

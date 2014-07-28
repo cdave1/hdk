@@ -1,15 +1,25 @@
 /*
- *  hdPakMaker.h
- *  PakMaker
+ * Copyright (c) 2014 Hackdirt Ltd.
+ * Author: David Petrie (david@davidpetrie.com)
  *
- *  Created by david on 2/10/09.
- *  Copyright 2009 n/a. All rights reserved.
+ * This software is provided 'as-is', without any express or implied warranty.
+ * In no event will the authors be held liable for any damages arising from the
+ * use of this software. Permission is granted to anyone to use this software for
+ * any purpose, including commercial applications, and to alter it and
+ * redistribute it freely, subject to the following restrictions:
  *
+ * 1. The origin of this software must not be misrepresented; you must not claim
+ * that you wrote the original software. If you use this software in a product, an
+ * acknowledgment in the product documentation would be appreciated but is not
+ * required.
+ * 2. Altered source versions must be plainly marked as such, and must not be
+ * misrepresented as being the original software.
+ * 3. This notice may not be removed or altered from any source distribution.
  */
 
 #ifndef HD_PAK_MAKER_H
 #define HD_PAK_MAKER_H
-using namespace std;
+
 #include <fstream>
 
 #include <boost/regex.hpp>
@@ -23,8 +33,6 @@ using namespace std;
 #include <boost/serialization/list.hpp>
 #include <boost/serialization/string.hpp>
 #include <boost/serialization/version.hpp>
-
-
 
 
 class hdPakFileEntry
@@ -54,13 +62,13 @@ private:
 class hdPakFile
 {
 public:
-	string m_pakFileName;
+    std::string m_pakFileName;
 	
-	string m_directoryName;
+    std::string m_directoryName;
 	
 	bool m_isCompressed;
 	
-	std::map<string, hdPakFileEntry*> m_files;
+	std::map<std::string, hdPakFileEntry*> m_files;
 	
 	
 private:
@@ -79,9 +87,9 @@ private:
 class hdPakFileManifest
 {
 public:
-	std::map<string, string> m_fileLookupTable;
+	std::map<std::string, std::string> m_fileLookupTable;
 	
-	std::map<string, hdPakFile*> m_pakFiles;
+	std::map<std::string, hdPakFile*> m_pakFiles;
 	
 	int m_pakFileCount;
 	
@@ -114,6 +122,5 @@ public:
 private:
 	
 };
-
 
 #endif

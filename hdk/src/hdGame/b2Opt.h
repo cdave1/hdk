@@ -1,9 +1,23 @@
 /*
- *  b2Opt.h
- *  TotemGame
+ * Copyright (c) 2014 Hackdirt Ltd.
+ * Author: David Petrie (david@davidpetrie.com)
  *
- *  Created by david on 12/10/09.
- *  Copyright 2009 n/a. All rights reserved.
+ * This software is provided 'as-is', without any express or implied warranty.
+ * In no event will the authors be held liable for any damages arising from the
+ * use of this software. Permission is granted to anyone to use this software for
+ * any purpose, including commercial applications, and to alter it and
+ * redistribute it freely, subject to the following restrictions:
+ *
+ * 1. The origin of this software must not be misrepresented; you must not claim
+ * that you wrote the original software. If you use this software in a product, an
+ * acknowledgment in the product documentation would be appreciated but is not
+ * required.
+ * 2. Altered source versions must be plainly marked as such, and must not be
+ * misrepresented as being the original software.
+ * 3. This notice may not be removed or altered from any source distribution.
+ */
+
+/*
  *
  * Box2D ARM VFP/NEON optimisations.
  *
@@ -11,33 +25,6 @@
 
 #ifndef B2_OPTIMIZED_FUNCTIONS_H 
 #define B2_OPTIMIZED_FUNCTIONS_H
-
-
-#define B2EXPORT inline
-
-
-/*
- * 2x2 matrix * 2x1 vector = 2x1 vector
- */
-//B2EXPORT void opt_b2Vec2Mul(const float * A, const float * v, float *dst);
-
-/*
- * 2x2 matrix * 2x2 matrix = 2x2 matrix
- */
-//B2EXPORT void opt_b2MatMul(const float * A, const float * B, float *dst);
-
-/*
- * 2x2 matrix * 2x2 matrix = 2x2 matrix
- */
-//B2EXPORT void opt_b2MatMulT(const float * A, const float * B, float *dst);
-
-/*
- * 3x3 matrix * 3x1 vector = 3x1 vector
- */
-//B2EXPORT void opt_b2Vec3Mul(const float * A, const float * v, float *dst);
-
-
-
 
 #include "hdMath/hdMatrix.h"
 
@@ -56,7 +43,7 @@
 /*
  * 2x2 matrix * 2x1 vector = 2x1 vector
  */
-B2EXPORT void opt_b2Vec2Mul(const float* A, const float* v, float *dst)
+inline void opt_b2Vec2Mul(const float* A, const float* v, float *dst)
 {
 #if defined(_ARM_ARCH_7) && defined(__ARM_NEON__)
 	
@@ -73,7 +60,7 @@ B2EXPORT void opt_b2Vec2Mul(const float* A, const float* v, float *dst)
 	 : "memory", "d0", "d2", "q8" 
 	 );
 	
-#elif 0 // defined(_ARM_ARCH_6) && !defined(__ARM_NEON__)
+#elif defined(_ARM_ARCH_6) && !defined(__ARM_NEON__)
 	
 	asm volatile 
 	(
@@ -112,7 +99,7 @@ B2EXPORT void opt_b2Vec2Mul(const float* A, const float* v, float *dst)
 
 // // ie b2Vec2(v.x * A.col1.x + v.y * A.col1.y, v.x * A.col2.x + v.y * A.col2.y)
 /*
- B2EXPORT void opt_b2Vec2MulT(const float *A, const float *B, float *dst)
+ inline void opt_b2Vec2MulT(const float *A, const float *B, float *dst)
  {
  #ifdef _ARM_ARCH_7
  
@@ -147,10 +134,8 @@ B2EXPORT void opt_b2Vec2Mul(const float* A, const float* v, float *dst)
  #endif
  }*/
 
-
-
 // A * B
-B2EXPORT void opt_b2MatMul(const float* A, const float* B, float *dst)
+inline void opt_b2MatMul(const float* A, const float* B, float *dst)
 {
 	//#ifdef _ARM_ARCH_7
 	
@@ -205,11 +190,8 @@ B2EXPORT void opt_b2MatMul(const float* A, const float* B, float *dst)
 }
 
 
-
-
-
 // A^T * B
-B2EXPORT void opt_b2MatMulT(const float* A, const float* B, float *dst)
+inline void opt_b2MatMulT(const float* A, const float* B, float *dst)
 {
 	//#ifdef _ARM_ARCH_7
 	
@@ -262,13 +244,11 @@ B2EXPORT void opt_b2MatMulT(const float* A, const float* B, float *dst)
 	dst[0] = mOut.f[__11]; dst[2] = mOut.f[__21];
 	dst[1] = mOut.f[__12]; dst[3] = mOut.f[__22];
 #endif
-	
-	
 }
 
 
 /// Multiply a matrix times a vector.
-B2EXPORT void opt_b2Vec3Mul(const float* A, const float* v, float *dst)
+inline void opt_b2Vec3Mul(const float* A, const float* v, float *dst)
 {
 	/*
 	 #ifdef _ARM_ARCH_7
@@ -309,27 +289,15 @@ B2EXPORT void opt_b2Vec3Mul(const float* A, const float* v, float *dst)
 				  : "r0", "cc", "memory", VFP_CLOBBER_S0_S2, VFP_CLOBBER_S8_S10, VFP_CLOBBER_S16_S25 
 				  );
 #else
-	
-	/*
-	 
-	 */ 
-	//#error "b2 optimisations not available for this architecture."
 	hdMatrix m;
 	hdVec3 vec(v[0], v[1], v[2]), vOut;
 	
 	MatrixIdentity(m);
 	
-	//	m.f[__11] = A.col1.x;	m.f[__12] = A.col1.y;	m.f[__13] = A.col1.z;
-	//	m.f[__21] = A.col2.x;	m.f[__22] = A.col2.y;	m.f[__23] = A.col2.z;
-	//	m.f[__31] = A.col3.x;	m.f[__32] = A.col3.y;	m.f[__33] = A.col3.z;
-	
-	
 	m.f[__11] = A[0];	m.f[__12] = A[3];	m.f[__13] = A[6];
 	m.f[__21] = A[1];	m.f[__22] = A[4];	m.f[__23] = A[7];
 	m.f[__31] = A[2];	m.f[__32] = A[5];	m.f[__33] = A[8];
-	
-	
-	
+
 	MatrixVec3Multiply(vOut, vec, m);
 	
 	dst[0] = vOut.x; dst[1] = vOut.y; dst[2] = vOut.z;

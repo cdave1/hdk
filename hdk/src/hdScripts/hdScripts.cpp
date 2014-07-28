@@ -1,12 +1,21 @@
 /*
- *  hdMessage.cpp
- *  TotemGame
+ * Copyright (c) 2014 Hackdirt Ltd.
+ * Author: David Petrie (david@davidpetrie.com)
  *
- *  Created by david on 14/08/09.
- *  Copyright 2009 n/a. All rights reserved.
+ * This software is provided 'as-is', without any express or implied warranty.
+ * In no event will the authors be held liable for any damages arising from the
+ * use of this software. Permission is granted to anyone to use this software for
+ * any purpose, including commercial applications, and to alter it and
+ * redistribute it freely, subject to the following restrictions:
  *
+ * 1. The origin of this software must not be misrepresented; you must not claim
+ * that you wrote the original software. If you use this software in a product, an
+ * acknowledgment in the product documentation would be appreciated but is not
+ * required.
+ * 2. Altered source versions must be plainly marked as such, and must not be
+ * misrepresented as being the original software.
+ * 3. This notice may not be removed or altered from any source distribution.
  */
-
 
 #include "hdScripts.h"
 
@@ -100,7 +109,6 @@ string Scripts_GetStringForKey(const char *key)
 }
 
 
-
 // Loads the world with the given name...
 static int s_worldId = -1;
 void Scripts_LoadScript(const char *scriptfilepath, int worldId)
@@ -117,13 +125,13 @@ void Scripts_LoadScript(const char *scriptfilepath, int worldId)
 	
 	hdPrintf("[SCRIPTING] Loading script file: %s\n", scriptfilepath);
 		
-	snprintf(currentWorldFilePath, 256, scriptfilepath);
+	snprintf(currentWorldFilePath, 256, "%s", scriptfilepath);
 	currentCache->RemoveAll();
 	ParseWorldMessageScript(scriptfilepath);
 }
 
 
-// Get hte message in the currently loaded world 
+// Get the message in the currently loaded world
 int Scripts_GetLevelMessagesForTag(hdMessage** messages, 
 								   const int& messageCountMax,
 								   const int& context, 
@@ -185,7 +193,6 @@ int Scripts_CountContextMessagesForTag(const int& context,
 }
 
 
-
 // Buggy poor implentation of half of a packrat parser
 void ParseWorldMessageScript(const char* scriptfilepath)
 {
@@ -194,11 +201,8 @@ void ParseWorldMessageScript(const char* scriptfilepath)
 	int currContextID;
 	uint32 pos;
 	hdMessage msg;
-	char goalType[32];
-	char key[32];
 	filehandle_t *hnd;
 	contextOpened = false;
-	//currentCache->RemoveAll();
 	
 	if (NULL == (hnd = FileSystem_OpenFile(scriptfilepath, 0)))
 	{
@@ -353,7 +357,7 @@ void ParseWorldMessageScript(const char* scriptfilepath)
 			
 			snprintf(msg.message, 256, "%s", s.c_str());
 			
-			msg.messageType = e_hdMessageTypeAvatar; //e_hdMessageTypeCustomImageText;
+			msg.messageType = e_hdMessageTypeAvatar;
 			
 			if (HD_COLLECTIONS_ERROR_FULL == currentCache->Add(msg))
 			{

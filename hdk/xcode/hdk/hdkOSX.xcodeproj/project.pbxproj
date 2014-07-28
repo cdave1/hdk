@@ -119,18 +119,10 @@
 		E42834F6116FF684008E3594 /* hdPhysicsJoint.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283466116FF684008E3594 /* hdPhysicsJoint.h */; };
 		E42834F7116FF684008E3594 /* hd2DGameController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283467116FF684008E3594 /* hd2DGameController.cpp */; };
 		E42834F8116FF684008E3594 /* hd2DGameController.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283468116FF684008E3594 /* hd2DGameController.h */; };
-		E42834F9116FF684008E3594 /* hdAgent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283469116FF684008E3594 /* hdAgent.cpp */; };
-		E42834FA116FF684008E3594 /* hdAgent.h in Headers */ = {isa = PBXBuildFile; fileRef = E428346A116FF684008E3594 /* hdAgent.h */; };
-		E42834FB116FF684008E3594 /* hdBody.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428346B116FF684008E3594 /* hdBody.cpp */; };
-		E42834FC116FF684008E3594 /* hdBody.h in Headers */ = {isa = PBXBuildFile; fileRef = E428346C116FF684008E3594 /* hdBody.h */; };
 		E42834FD116FF684008E3594 /* hdGameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428346D116FF684008E3594 /* hdGameObject.cpp */; };
 		E42834FE116FF684008E3594 /* hdGameObject.h in Headers */ = {isa = PBXBuildFile; fileRef = E428346E116FF684008E3594 /* hdGameObject.h */; };
 		E42834FF116FF684008E3594 /* hdGameWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428346F116FF684008E3594 /* hdGameWorld.cpp */; };
 		E4283500116FF684008E3594 /* hdGameWorld.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283470116FF684008E3594 /* hdGameWorld.h */; };
-		E4283501116FF684008E3594 /* hdLevel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283471116FF684008E3594 /* hdLevel.cpp */; };
-		E4283502116FF684008E3594 /* hdLevel.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283472116FF684008E3594 /* hdLevel.h */; };
-		E4283503116FF684008E3594 /* hdLevelGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283473116FF684008E3594 /* hdLevelGroup.cpp */; };
-		E4283504116FF684008E3594 /* hdLevelGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283474116FF684008E3594 /* hdLevelGroup.h */; };
 		E4283505116FF684008E3594 /* hdOrthographicProjection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283475116FF684008E3594 /* hdOrthographicProjection.cpp */; };
 		E4283506116FF684008E3594 /* hdOrthographicProjection.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283476116FF684008E3594 /* hdOrthographicProjection.h */; };
 		E4283507116FF684008E3594 /* hdPhysicsGlue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283477116FF684008E3594 /* hdPhysicsGlue.cpp */; };
@@ -421,18 +413,10 @@
 		E4283466116FF684008E3594 /* hdPhysicsJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdPhysicsJoint.h; sourceTree = "<group>"; };
 		E4283467116FF684008E3594 /* hd2DGameController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hd2DGameController.cpp; sourceTree = "<group>"; };
 		E4283468116FF684008E3594 /* hd2DGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hd2DGameController.h; sourceTree = "<group>"; };
-		E4283469116FF684008E3594 /* hdAgent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdAgent.cpp; sourceTree = "<group>"; };
-		E428346A116FF684008E3594 /* hdAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdAgent.h; sourceTree = "<group>"; };
-		E428346B116FF684008E3594 /* hdBody.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdBody.cpp; sourceTree = "<group>"; };
-		E428346C116FF684008E3594 /* hdBody.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdBody.h; sourceTree = "<group>"; };
 		E428346D116FF684008E3594 /* hdGameObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdGameObject.cpp; sourceTree = "<group>"; };
 		E428346E116FF684008E3594 /* hdGameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdGameObject.h; sourceTree = "<group>"; };
 		E428346F116FF684008E3594 /* hdGameWorld.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdGameWorld.cpp; sourceTree = "<group>"; };
 		E4283470116FF684008E3594 /* hdGameWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdGameWorld.h; sourceTree = "<group>"; };
-		E4283471116FF684008E3594 /* hdLevel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdLevel.cpp; sourceTree = "<group>"; };
-		E4283472116FF684008E3594 /* hdLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdLevel.h; sourceTree = "<group>"; };
-		E4283473116FF684008E3594 /* hdLevelGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdLevelGroup.cpp; sourceTree = "<group>"; };
-		E4283474116FF684008E3594 /* hdLevelGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdLevelGroup.h; sourceTree = "<group>"; };
 		E4283475116FF684008E3594 /* hdOrthographicProjection.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdOrthographicProjection.cpp; sourceTree = "<group>"; };
 		E4283476116FF684008E3594 /* hdOrthographicProjection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdOrthographicProjection.h; sourceTree = "<group>"; };
 		E4283477116FF684008E3594 /* hdPhysicsGlue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdPhysicsGlue.cpp; sourceTree = "<group>"; };
@@ -573,6 +557,7 @@
 		E42837D4117005AB008E3594 /* b2RevoluteJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = b2RevoluteJoint.cpp; sourceTree = "<group>"; };
 		E42837D5117005AB008E3594 /* b2RevoluteJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = b2RevoluteJoint.h; sourceTree = "<group>"; };
 		E42839EA11704C6B008E3594 /* hdScreenSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdScreenSettings.h; sourceTree = "<group>"; };
+		E493381C1985CE4C00CE887D /* NOTES */ = {isa = PBXFileReference; lastKnownFileType = text; path = NOTES; sourceTree = "<group>"; };
 		E4A958B31968BE6200DCD2A0 /* paths_osx.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = paths_osx.xcconfig; path = ../paths_osx.xcconfig; sourceTree = "<group>"; };
 		E4A95B701968C17500DCD2A0 /* libboost_wserialization.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_wserialization.a; path = ../../../../../../../../usr/local/lib/libboost_wserialization.a; sourceTree = "<group>"; };
 		E4A95B721968C17C00DCD2A0 /* libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_system.a; path = ../../../../../../../../usr/local/lib/libboost_system.a; sourceTree = "<group>"; };
@@ -792,6 +777,7 @@
 		E428342F116FF684008E3594 /* hdAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				E493381C1985CE4C00CE887D /* NOTES */,
 				E41EA6221170814A00A30C8E /* hdAnimation.h */,
 				E4283430116FF684008E3594 /* hdPauseAction.h */,
 				E4283431116FF684008E3594 /* hdAction.cpp */,
@@ -863,18 +849,10 @@
 				E4283466116FF684008E3594 /* hdPhysicsJoint.h */,
 				E4283467116FF684008E3594 /* hd2DGameController.cpp */,
 				E4283468116FF684008E3594 /* hd2DGameController.h */,
-				E4283469116FF684008E3594 /* hdAgent.cpp */,
-				E428346A116FF684008E3594 /* hdAgent.h */,
-				E428346B116FF684008E3594 /* hdBody.cpp */,
-				E428346C116FF684008E3594 /* hdBody.h */,
 				E428346D116FF684008E3594 /* hdGameObject.cpp */,
 				E428346E116FF684008E3594 /* hdGameObject.h */,
 				E428346F116FF684008E3594 /* hdGameWorld.cpp */,
 				E4283470116FF684008E3594 /* hdGameWorld.h */,
-				E4283471116FF684008E3594 /* hdLevel.cpp */,
-				E4283472116FF684008E3594 /* hdLevel.h */,
-				E4283473116FF684008E3594 /* hdLevelGroup.cpp */,
-				E4283474116FF684008E3594 /* hdLevelGroup.h */,
 				E4283475116FF684008E3594 /* hdOrthographicProjection.cpp */,
 				E4283476116FF684008E3594 /* hdOrthographicProjection.h */,
 				E4283477116FF684008E3594 /* hdPhysicsGlue.cpp */,
@@ -1251,12 +1229,8 @@
 				E42834F4116FF684008E3594 /* hdPlayerConfig.h in Headers */,
 				E42834F6116FF684008E3594 /* hdPhysicsJoint.h in Headers */,
 				E42834F8116FF684008E3594 /* hd2DGameController.h in Headers */,
-				E42834FA116FF684008E3594 /* hdAgent.h in Headers */,
-				E42834FC116FF684008E3594 /* hdBody.h in Headers */,
 				E42834FE116FF684008E3594 /* hdGameObject.h in Headers */,
 				E4283500116FF684008E3594 /* hdGameWorld.h in Headers */,
-				E4283502116FF684008E3594 /* hdLevel.h in Headers */,
-				E4283504116FF684008E3594 /* hdLevelGroup.h in Headers */,
 				E4A95BA51968C44300DCD2A0 /* pngconf.h in Headers */,
 				E4283506116FF684008E3594 /* hdOrthographicProjection.h in Headers */,
 				E4283508116FF684008E3594 /* hdPhysicsGlue.h in Headers */,
@@ -1455,12 +1429,8 @@
 				E4A95BD81968C44300DCD2A0 /* pngwutil.c in Sources */,
 				E42834F5116FF684008E3594 /* hdPlayerConfig.cpp in Sources */,
 				E42834F7116FF684008E3594 /* hd2DGameController.cpp in Sources */,
-				E42834F9116FF684008E3594 /* hdAgent.cpp in Sources */,
-				E42834FB116FF684008E3594 /* hdBody.cpp in Sources */,
 				E42834FD116FF684008E3594 /* hdGameObject.cpp in Sources */,
 				E42834FF116FF684008E3594 /* hdGameWorld.cpp in Sources */,
-				E4283501116FF684008E3594 /* hdLevel.cpp in Sources */,
-				E4283503116FF684008E3594 /* hdLevelGroup.cpp in Sources */,
 				E4283505116FF684008E3594 /* hdOrthographicProjection.cpp in Sources */,
 				E4283507116FF684008E3594 /* hdPhysicsGlue.cpp in Sources */,
 				E428350D116FF684008E3594 /* hdDrawingUtilities.cpp in Sources */,

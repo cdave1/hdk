@@ -1,10 +1,21 @@
-//
-//  Animation.mm
-//  AnimationEngine
-//
-//  Created by david on 14/02/09.
-//  Copyright 2009 n/a. All rights reserved.
-//
+/*
+ * Copyright (c) 2014 Hackdirt Ltd.
+ * Author: David Petrie (david@davidpetrie.com)
+ *
+ * This software is provided 'as-is', without any express or implied warranty.
+ * In no event will the authors be held liable for any damages arising from the
+ * use of this software. Permission is granted to anyone to use this software for
+ * any purpose, including commercial applications, and to alter it and
+ * redistribute it freely, subject to the following restrictions:
+ *
+ * 1. The origin of this software must not be misrepresented; you must not claim
+ * that you wrote the original software. If you use this software in a product, an
+ * acknowledgment in the product documentation would be appreciated but is not
+ * required.
+ * 2. Altered source versions must be plainly marked as such, and must not be
+ * misrepresented as being the original software.
+ * 3. This notice may not be removed or altered from any source distribution.
+ */
 
 #include "hdAnimation.h"
 #include "hdAnimationController.h"
@@ -29,7 +40,6 @@ hdAnimation::hdAnimation()
 
 hdAnimation::~hdAnimation()
 {
-	//RemoveAllActions();
 	if (hdAnimationController::Instance()->DeleteAnimationStep(this, m_id) == false)
 	{
 		hdPrintf("hdAnimation Destructor: could not remove animation job from pipeline.\n");
@@ -39,10 +49,9 @@ hdAnimation::~hdAnimation()
 }
 
 
-
 int hdAnimation::StartAnimation()
 {
-	m_actionCounter = m_actions->GetItemCount() - 1; //self.actions.count - 1;
+	m_actionCounter = m_actions->GetItemCount() - 1;
 	
 	for (int i = 0; i < m_actions->GetItemCount(); ++i)
 	{
@@ -89,7 +98,6 @@ void hdAnimation::StopAnimation(bool completeAnimation, bool doCallback)
 
 void hdAnimation::StopAnimationDead()
 {
-	//hdAnimationController::Instance()->DeleteAnimationStep(this, m_id);
 	hdAnimationController::Instance()->DeleteAnimationStep(this, m_id);
 	m_id = -1;
 	if (m_status == e_animationFinished) return;
@@ -108,8 +116,6 @@ void hdAnimation::StopAnimationWithCompletion()
 	m_id = -1;
 	if (m_status == e_animationFinished) return;
 	m_status = e_animationStopped;
-	
-	//if (actionCounter == -1) return;
 	
 	// Finish all of the remaining actions
 	while (m_actionCounter > -1)
@@ -154,17 +160,15 @@ void hdAnimation::Step(hdTimeInterval elapsed)
 		return;
 	}
 #endif
-
 	
 	if (m_status == e_animationStopped)
 	{
 		return;
 	}
 	
-	hdAction* action = (hdAction *)m_actions->GetItems()[m_actionCounter]; // [self.actions objectAtIndex:actionCounter]; // head of queue
+	hdAction* action = (hdAction *)m_actions->GetItems()[m_actionCounter];
 	if (action->isFinished()) 
 	{
-		//[self.actions removeObjectAtIndex:0];
 		--m_actionCounter;
 		if (m_actionCounter == -1) 
 		{
@@ -176,10 +180,7 @@ void hdAnimation::Step(hdTimeInterval elapsed)
 			m_id = -1;
 			return;
 		}
-		else action =  m_actions->GetItems()[m_actionCounter]; // get another action
-		// HACK HACK HACK - the fact we have to do this ^^^ here indicates something
-		// wrong with the structure of this function.
-		// TODO REFACTORME FIXME etc etc...
+		else action =  m_actions->GetItems()[m_actionCounter];
 	}
 	
 	if (m_status == e_animationRunning)
@@ -198,5 +199,3 @@ void hdAnimation::Step(hdTimeInterval elapsed)
 	// Add this function to the pipeline so it is run on the next step.
 	hdAnimationController::Instance()->AddAnimationStep(this, &m_id);
 }
-
-

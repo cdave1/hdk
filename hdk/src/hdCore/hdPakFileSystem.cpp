@@ -1,10 +1,20 @@
 /*
- *  hdPakMaker.cpp
- *  PakMaker
+ * Copyright (c) 2014 Hackdirt Ltd.
+ * Author: David Petrie (david@davidpetrie.com)
  *
- *  Created by david on 2/10/09.
- *  Copyright 2009 n/a. All rights reserved.
+ * This software is provided 'as-is', without any express or implied warranty.
+ * In no event will the authors be held liable for any damages arising from the
+ * use of this software. Permission is granted to anyone to use this software for
+ * any purpose, including commercial applications, and to alter it and
+ * redistribute it freely, subject to the following restrictions:
  *
+ * 1. The origin of this software must not be misrepresented; you must not claim
+ * that you wrote the original software. If you use this software in a product, an
+ * acknowledgment in the product documentation would be appreciated but is not
+ * required.
+ * 2. Altered source versions must be plainly marked as such, and must not be
+ * misrepresented as being the original software.
+ * 3. This notice may not be removed or altered from any source distribution.
  */
 
 #include "hdPakFileSystem.h"
@@ -14,7 +24,7 @@ void hdPakFileSystem::MakePak(const char* baseDir, const char* pakManifestFilePa
 	char tmp[256];
 	void *pakManifestFileBytes;
 	int pakManifestFileLen;
-	string line;
+    std::string line;
 	
 	boost::smatch matchings;
 	
@@ -64,9 +74,9 @@ void hdPakFileSystem::MakePak(const char* baseDir, const char* pakManifestFilePa
 			
 			snprintf(tmp, 256, "pak%0d.pak", pakFileManifest->m_pakFiles.size() + 1);
 			
-			pakFile->m_pakFileName = string(tmp); 
+			pakFile->m_pakFileName = std::string(tmp);
 			pakFile->m_directoryName = matchings[1];
-			pakFile->m_isCompressed = (matchings[2] == string("Z"));
+			pakFile->m_isCompressed = (matchings[2] == std::string("Z"));
 			
 			pakFileManifest->m_pakFiles[pakFile->m_pakFileName] = pakFile;
 		}
@@ -76,7 +86,6 @@ void hdPakFileSystem::MakePak(const char* baseDir, const char* pakManifestFilePa
 			{
 				// Assume file.
 				hdAssert(pakFile != NULL);
-				//hdAssert(pakFileEntry == NULL);
 				
 				pakFileEntry = new hdPakFileEntry();
 				snprintf(pakFileEntry->m_fileName, 256, "%s/%s", pakFile->m_directoryName.c_str(), line.c_str());
@@ -85,16 +94,16 @@ void hdPakFileSystem::MakePak(const char* baseDir, const char* pakManifestFilePa
 				pakFileEntry->m_compressedSize = 0;
 				pakFileEntry->m_start = -1;
 				
-				pakFile->m_files[string(pakFileEntry->m_fileName)] = pakFileEntry;
+				pakFile->m_files[std::string(pakFileEntry->m_fileName)] = pakFileEntry;
 				
 				// Add file to lookup table.
-				pakFileManifest->m_fileLookupTable[string(pakFileEntry->m_fileName)] = pakFile->m_pakFileName;
+				pakFileManifest->m_fileLookupTable[std::string(pakFileEntry->m_fileName)] = pakFile->m_pakFileName;
 			}
 		}
 	}
 	
-	map<string, hdPakFile*>::iterator pakFiles;
-	map<string, hdPakFileEntry*>::iterator pakFileContents;
+	std::map<std::string, hdPakFile*>::iterator pakFiles;
+	std::map<std::string, hdPakFileEntry*>::iterator pakFileContents;
 	
 	pakFileSize = 0;
 	pakFileBytes = NULL;
@@ -178,9 +187,7 @@ void hdPakFileSystem::MakePak(const char* baseDir, const char* pakManifestFilePa
 				memcpy(pakFileBytes + (sizeof(char) * (pakFileSize - tmpPakFileEntry->m_compressedSize)), 
 					   compressedBytes, 
 					   tmpPakFileEntry->m_compressedSize);
-				
-				
-				
+
 				// Return resources.
 				if (uncompressedBytes != NULL) 
 					free(uncompressedBytes);
@@ -196,8 +203,6 @@ void hdPakFileSystem::MakePak(const char* baseDir, const char* pakManifestFilePa
 		// Our pak file should be ready
 		if (pakFileSize > 0 && pakFileBytes != NULL)
 		{
-			// pak file name:
-			
 			snprintf(tmp, 256, "%s/%s", destDir, (*pakFiles).second->m_pakFileName.c_str());
 			
 			if (false == FileSystem_FileExists(tmp))
@@ -238,7 +243,7 @@ void hdPakFileSystem::MakePak(const char* baseDir, const char* pakManifestFilePa
 		hdAssert (0 == createRes);
 	}
 	
-	std::ostringstream oss(ios::in | ios::out);
+	std::ostringstream oss(std::ios::in | std::ios::out);
 	boost::archive::binary_oarchive boa(oss);
 	boa << (* pakFileManifest);
 	
@@ -258,9 +263,7 @@ void hdPakFileSystem::MakePak(const char* baseDir, const char* pakManifestFilePa
 	free(zipped);
 	
 	delete [] ossBuffer;
-
 }
-
 
 
 static hdPakFileManifest *rdnlyPakFS = NULL;
@@ -285,21 +288,6 @@ void hdPakFileSystem::InitPakFileSystem(const char* baseDir)
 	snprintf(pakBaseDir, 256, "%s", baseDir);
 	snprintf(tmp, 256, "%s/pak0.pak", baseDir);
 	
-	/*
-	if (!FileSystem_FileExists(tmp))
-	{
-		hdPrintf("[hdPakFileSystem] Pak file manifest %s does not exist!\n", tmp);
-		rdnlyPakFS = NULL;
-		return;
-	}
-	
-	if (0 != FileSystem_ReadFromFile(&zippedManifest, (int *)&zippedLen, tmp))  
-	{
-		hdPrintf("[hdPakFileSystem] Couldn't read from pak file manifest %s\n", tmp);
-		rdnlyPakFS = NULL;
-		return;
-	}*/
-	
 	if (NULL == (hnd = FileSystem_OpenFile(tmp, HD_FS_ABSOLUTE_PATH)))
 	{
 		hdPrintf("[hdPakFileSystem] Pak file manifest %s does not exist!\n", tmp);
@@ -321,7 +309,6 @@ void hdPakFileSystem::InitPakFileSystem(const char* baseDir)
 		return;
 	}
 	
-	
 	if (0 != hdCompression_Unzip((char *)zippedManifest, zippedLen, 
 								 (char **)&unzippedManifest, &unzippedLen))
 	{
@@ -329,11 +316,10 @@ void hdPakFileSystem::InitPakFileSystem(const char* baseDir)
 		rdnlyPakFS = NULL;
 		return;
 	}
-	
-	
+
 	rdnlyPakFS = new hdPakFileManifest();
 	
-	std::istringstream iss(ios::in | ios::out);
+	std::istringstream iss(std::ios::in | std::ios::out);
 	iss.rdbuf()->sputn((const char*)unzippedManifest, unzippedLen);
 	boost::archive::binary_iarchive ia(iss);
 	ia >> (* rdnlyPakFS);
@@ -355,7 +341,7 @@ void hdPakFileSystem::PrintFileManifest()
 		return;
 	}
 	
-	map<string, string>::iterator lookupIter;
+	std::map<std::string, std::string>::iterator lookupIter;
 	
 	for (lookupIter = rdnlyPakFS->m_fileLookupTable.begin(); 
 		 lookupIter != rdnlyPakFS->m_fileLookupTable.end(); 
@@ -376,7 +362,7 @@ int hdPakFileSystem::OpenFile(const char* fileName,  char **fileBytes, int *file
 	char *uncompressedBuffer;
 	long uncompressedSize;
 	filehandle_t *pakFileHnd;
-	string pakFileName;
+	std::string pakFileName;
 	
 	*fileBytes = NULL;
 	*fileLen = 0;
@@ -393,12 +379,12 @@ int hdPakFileSystem::OpenFile(const char* fileName,  char **fileBytes, int *file
 	 * File needs to be in the file lookup table, as well as the
 	 * specific pak file manifest.
 	 */
-	if (rdnlyPakFS->m_fileLookupTable.count(string(fileName)) != 1) 
+	if (rdnlyPakFS->m_fileLookupTable.count(std::string(fileName)) != 1)
 	{
 		hdPrintf("[hdPakFileSystem] Couldn't find file %s\n", fileName);
 		goto OpenFileFail;		
 	}
-	pakFileName = rdnlyPakFS->m_fileLookupTable[string(fileName)];
+	pakFileName = rdnlyPakFS->m_fileLookupTable[std::string(fileName)];
 	
 	/*
 	 * So it's a serious inconsistency if the lookup table contains
@@ -417,9 +403,9 @@ int hdPakFileSystem::OpenFile(const char* fileName,  char **fileBytes, int *file
 	 * File will definitely exist if we're this far.
 	 */
 	hdAssert(pakFile->m_files.size() > 0);
-	hdAssert(pakFile->m_files.count(string(fileName)) == 1);
+	hdAssert(pakFile->m_files.count(std::string(fileName)) == 1);
 	
-	fileEntry = pakFile->m_files[string(fileName)];
+	fileEntry = pakFile->m_files[std::string(fileName)];
 	
 	hdAssert(strcmp(fileEntry->m_fileName, fileName) == 0);
 	
@@ -524,7 +510,6 @@ filehandle_t *hdPakFileSystem::OpenFile(const char* fileName)
 	}
 	
 	hnd = (filehandle_t*)calloc(1, sizeof(filehandle_t));
-	//memset(hnd, 0, sizeof( filehandle_t));
 	
 	if (-1 == hdPakFileSystem::OpenFile(fileName, (char **)&hnd->filedata, (int *)&hnd->filesize))
 	{

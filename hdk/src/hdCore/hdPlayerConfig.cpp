@@ -1,22 +1,32 @@
 /*
- *  hdPlayerConfig.cpp
- *  TotemGame
+ * Copyright (c) 2014 Hackdirt Ltd.
+ * Author: David Petrie (david@davidpetrie.com)
  *
- *  Created by david on 19/10/09.
- *  Copyright 2009 n/a. All rights reserved.
+ * This software is provided 'as-is', without any express or implied warranty.
+ * In no event will the authors be held liable for any damages arising from the
+ * use of this software. Permission is granted to anyone to use this software for
+ * any purpose, including commercial applications, and to alter it and
+ * redistribute it freely, subject to the following restrictions:
  *
+ * 1. The origin of this software must not be misrepresented; you must not claim
+ * that you wrote the original software. If you use this software in a product, an
+ * acknowledgment in the product documentation would be appreciated but is not
+ * required.
+ * 2. Altered source versions must be plainly marked as such, and must not be
+ * misrepresented as being the original software.
+ * 3. This notice may not be removed or altered from any source distribution.
  */
 
 #include "hdPlayerConfig.h"
 
-static map<string, string> configLookupTable;
+static std::map<std::string, std::string> configLookupTable;
 
 
-string hdPlayerConfig::GetValue(const char *key)
+std::string hdPlayerConfig::GetValue(const char *key)
 {
-	string sKey(key);
+	std::string sKey(key);
 	
-	if (configLookupTable.count(sKey) == 0) return string(key);
+	if (configLookupTable.count(sKey) == 0) return std::string(key);
 	
 	return configLookupTable[sKey];
 }
@@ -24,8 +34,8 @@ string hdPlayerConfig::GetValue(const char *key)
 
 bool hdPlayerConfig::SetValue(const char *key, const char *value)
 {
-	string sKey(key);
-	string sValue(value);
+	std::string sKey(key);
+	std::string sValue(value);
 	
 	configLookupTable[sKey] = sValue;
 	
@@ -37,10 +47,9 @@ bool hdPlayerConfig::SaveConfigFile()
 {
 	// create file.
 	// key = value pairs to string and dump to a file at path
-//	return true;
 	
 	int createRes, writeRes;
-	string sConfig;
+	std::string sConfig;
 	char tmp[256];
 	
 	if (!FileSystem_FileExists("player.config"))
@@ -50,7 +59,7 @@ bool hdPlayerConfig::SaveConfigFile()
 			return createRes;
 	}
 	
-	map<string, string>::iterator iter;
+	std::map<std::string, std::string>::iterator iter;
 	
 	/*
 	 * Create each pak file.
@@ -61,7 +70,7 @@ bool hdPlayerConfig::SaveConfigFile()
 	{
 		snprintf(tmp, 256, "%s = \"%s\"\n", (*iter).first.c_str(), (*iter).second.c_str());
 		
-		sConfig = sConfig + string(tmp);
+		sConfig = sConfig + std::string(tmp);
 	}
 	
 	writeRes = FileSystem_WriteToFile("player.config", sConfig.c_str(), sConfig.length());
@@ -72,7 +81,7 @@ bool hdPlayerConfig::SaveConfigFile()
 
 bool hdPlayerConfig::LoadConfigFile()
 {
-	string line;
+	std::string line;
 	void *buffer;
 	uint32 pos;
 	int len;
@@ -90,14 +99,13 @@ bool hdPlayerConfig::LoadConfigFile()
 		hdPrintf("[hdPlayerConfig::LoadConfigFile] player.config does not exist.\n");
 		return false;
 	}
-	
-	
+
 	if (0 != FileSystem_ReadFromFile(&buffer, &len, "player.config"))
 	{
 		return false;
 	}
 	
-	std::istringstream iss(ios::in | ios::out);
+	std::istringstream iss(std::ios::in | std::ios::out);
 	iss.rdbuf()->sputn((const char*)buffer, len);
 	free(buffer);
 	
@@ -112,8 +120,8 @@ bool hdPlayerConfig::LoadConfigFile()
 			hdAssert(3 == matchings.size());
 			
 			// New line hack
-			string s(matchings[2]);
-			while((pos = s.find("\\n")) != string::npos)
+			std::string s(matchings[2]);
+			while((pos = s.find("\\n")) != std::string::npos)
 			{
 				s.replace(pos, 2, 1, '\n');
 			}

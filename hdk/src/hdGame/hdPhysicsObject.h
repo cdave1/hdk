@@ -1,10 +1,20 @@
 /*
- *  hdPhysicsObject.h
- *  AnimationEngine
+ * Copyright (c) 2014 Hackdirt Ltd.
+ * Author: David Petrie (david@davidpetrie.com)
  *
- *  Created by david on 31/03/09.
- *  Copyright 2009 n/a. All rights reserved.
+ * This software is provided 'as-is', without any express or implied warranty.
+ * In no event will the authors be held liable for any damages arising from the
+ * use of this software. Permission is granted to anyone to use this software for
+ * any purpose, including commercial applications, and to alter it and
+ * redistribute it freely, subject to the following restrictions:
  *
+ * 1. The origin of this software must not be misrepresented; you must not claim
+ * that you wrote the original software. If you use this software in a product, an
+ * acknowledgment in the product documentation would be appreciated but is not
+ * required.
+ * 2. Altered source versions must be plainly marked as such, and must not be
+ * misrepresented as being the original software.
+ * 3. This notice may not be removed or altered from any source distribution.
  */
 
 #ifndef HD_PHYSICSOBJECT_H
@@ -15,47 +25,42 @@
 class b2World;
 class b2Body;
 
-class hdPhysicsObject 
+class hdPhysicsObject
 {
 public:
-	hdPhysicsObject() { m_physicsEnabled = true; m_physicsBody = NULL; }
-	
-	void DestroyPhysicsBody() 
-	{
-		//if (m_physicsUserObject != NULL) delete m_physicsUserObject;
-		if (m_physicsBody != NULL) 
-		{
-			hdPrintf("Destroying physics body\n");
-			m_physicsWorld->DestroyBody(m_physicsBody);
-			m_physicsBody = NULL;
-		}
-	}
-	
-	void ResetPhysicsBody()
-	{
-		this->DestroyPhysicsBody();
-		this->CreatePhysicsBody();
-	}
-	
-	
-	const b2Body* GetPhysicsBody()
-	{
-		return m_physicsBody;
-	}
-	
-	
+    hdPhysicsObject() { m_physicsEnabled = true; m_physicsBody = NULL; }
+
+    void DestroyPhysicsBody()
+    {
+        if (m_physicsBody != NULL)
+        {
+            hdPrintf("Destroying physics body\n");
+            m_physicsWorld->DestroyBody(m_physicsBody);
+            m_physicsBody = NULL;
+        }
+    }
+
+    void ResetPhysicsBody()
+    {
+        this->DestroyPhysicsBody();
+        this->CreatePhysicsBody();
+    }
+
+    const b2Body* GetPhysicsBody()
+    {
+        return m_physicsBody;
+    }
+    
+    
 protected:
-	b2World* m_physicsWorld;
-	
-	b2Body* m_physicsBody;
-	
-	//totemGameObject *m_physicsUserObject;
-	
-	virtual void CreatePhysicsBody() = 0;
-	
-	bool m_physicsEnabled;
+    b2World* m_physicsWorld;
+    
+    b2Body* m_physicsBody;
+    
+    virtual void CreatePhysicsBody() = 0;
+    
+    bool m_physicsEnabled;
 
 };
-
 
 #endif
