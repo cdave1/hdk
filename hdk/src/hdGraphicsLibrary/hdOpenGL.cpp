@@ -1,23 +1,36 @@
 /*
- *  hdGL.cpp
- *  AnimationEngine
+ * Copyright (c) 2014 Hackdirt Ltd.
+ * Author: David Petrie (david@davidpetrie.com)
  *
- *  Created by david on 26/03/09.
- *  Copyright 2009 n/a. All rights reserved.
+ * This software is provided 'as-is', without any express or implied warranty.
+ * In no event will the authors be held liable for any damages arising from the
+ * use of this software. Permission is granted to anyone to use this software for
+ * any purpose, including commercial applications, and to alter it and
+ * redistribute it freely, subject to the following restrictions:
  *
+ * 1. The origin of this software must not be misrepresented; you must not claim
+ * that you wrote the original software. If you use this software in a product, an
+ * acknowledgment in the product documentation would be appreciated but is not
+ * required.
+ * 2. Altered source versions must be plainly marked as such, and must not be
+ * misrepresented as being the original software.
+ * 3. This notice may not be removed or altered from any source distribution.
  */
 
 #include "hdGraphicsInterface.h"
 
-void		hdInitImmediateModeGL() {}
+void hdInitImmediateModeGL() {}
+
 
 void hdResetArrayPointers() {}
+
 
 void hdglClearBuffers()
 {
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);	
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 }
+
 
 void hdglBegin( GLenum prim ) {
 	glBegin(prim);
@@ -48,6 +61,7 @@ void hdglClipPlanef(GLenum plane, const float *equation)
 	
 	glClipPlane(plane, eqn);
 }
+
 
 void hdglBindTexture(const hdTexture *texture)
 {
@@ -89,25 +103,37 @@ void hdglBindTexture(const hdTexture *texture)
 void hdglVertex3f( float x, float y, float z ) {
 	glVertex3f(x, y, z);
 }
+
+
 void hdglVertex2i( GLint x, GLint y ) {
 	glVertex2i(x, y);
 }
+
+
 void hdglVertex2f( float x, float y ) {
 	glVertex2f(x, y);
 }
+
+
 void hdglColor4ub( GLubyte r, GLubyte g, GLubyte b, GLubyte a ) {
 	glColor4ub(r, g, b, a);
 }
+
+
 void hdglColor4f( GLfloat r, GLfloat g, GLfloat b, GLfloat a ) {
 	glColor4f(r, g, b, a);
 }
+
+
 void hdglTexCoord2i( GLint s, GLint t ) {
 	glTexCoord2i(s, t);
 }
+
+
 void hdglTexCoord2f( GLfloat s, GLfloat t ) {
-//	glTexCoord2i(s, t);
 	glTexCoord2f(s, t);
 }
+
 
 void hdglEnd() {
 	glEnd();
@@ -128,7 +154,7 @@ inline GLenum WrapToGL( TWrapMode mode )
 }
 
 
-inline GLenum MagFilterToGL( TMagFilter MagFilter )
+inline GLenum MagFilterToGL(TMagFilter MagFilter)
 {	
 	switch( MagFilter )
 	{
@@ -145,11 +171,12 @@ inline GLenum MagFilterToGL( TMagFilter MagFilter )
 	return GL_LINEAR;
 }
 
+
 inline GLenum MinFilterToGL( bool MipMap, TMinFilter MinFilter )
 {
-	if( MipMap )
+	if (MipMap)
 	{
-		switch( MinFilter )
+		switch (MinFilter)
 		{
 			case NearestMipMapOff: 
 				return GL_NEAREST;
@@ -195,11 +222,12 @@ inline GLenum MinFilterToGL( bool MipMap, TMinFilter MinFilter )
 	return GL_LINEAR;
 }
 
+
 bool hdglErrorCode(const char *userInfo)
 {
 	GLenum error = glGetError();
 	bool ret = (error != GL_NO_ERROR);
-//#warning "hdglError - not printing to stdout!!!"
+
 	switch (error) 
 	{
 		case GL_NO_ERROR:
@@ -208,7 +236,6 @@ bool hdglErrorCode(const char *userInfo)
 			hdError(error, "GL Error: GL_INVALID_ENUM. %s\n\n", userInfo);
 			break;
 		case GL_INVALID_VALUE:
-			//hdPrintf("%s\n", source);
 			hdError(error, "GL Error: GL_INVALID_VALUE. %s\n\n", userInfo);
 			break;
 		case GL_INVALID_OPERATION:

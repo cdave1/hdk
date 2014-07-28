@@ -1,15 +1,27 @@
+/*
+ * Copyright (c) 2014 Hackdirt Ltd.
+ * Author: David Petrie (david@davidpetrie.com)
+ *
+ * This software is provided 'as-is', without any express or implied warranty.
+ * In no event will the authors be held liable for any damages arising from the
+ * use of this software. Permission is granted to anyone to use this software for
+ * any purpose, including commercial applications, and to alter it and
+ * redistribute it freely, subject to the following restrictions:
+ *
+ * 1. The origin of this software must not be misrepresented; you must not claim
+ * that you wrote the original software. If you use this software in a product, an
+ * acknowledgment in the product documentation would be appreciated but is not
+ * required.
+ * 2. Altered source versions must be plainly marked as such, and must not be
+ * misrepresented as being the original software.
+ * 3. This notice may not be removed or altered from any source distribution.
+ */
+
 #include "hdSoundManager.h"
 
 static hdSoundManager* m_SoundManagerInstance = NULL;
 
-
-
-
-//#if (TARGET_OS_IPHONE == 1) || (TARGET_IPHONE_SIMULATOR == 1)	
 static signed int m_status;
-//#else
-//	int m_status;
-//#endif
 
 static hdPointerList<hdSound, kMaxSounds>* m_sounds = NULL;
 
@@ -20,7 +32,6 @@ static float m_maxMusicVolume;
 static float m_maxSoundVolume;
 
 static bool m_playVibrations = true;
-
 
 
 void hdSoundManager::TearDown()
@@ -98,7 +109,7 @@ void hdSoundManager::InitSoundManager()
 	
 	SoundEngine_Init();
 	
-	m_nullSound = NULL; //this->FindSound( "***r_noSound***", e_soundTypeNormal);
+	m_nullSound = NULL;
 	
 	m_maxMusicVolume = 1.0f;
 	
@@ -129,9 +140,8 @@ hdSound* hdSoundManager::FindSound(const char* filename, e_soundType type)
 		return m_nullSound;
 	}
 	
-	hdAssert(m_sounds != NULL); // Because I keep fucking this up.
-	
-	
+	hdAssert(m_sounds != NULL);
+
 	for (int i = 0; i < m_sounds->GetItemCount(); ++i)
 	{
 		if (strncmp(m_sounds->GetItems()[i]->filename, filename, kMaxSoundPathSize) == 0)
@@ -177,7 +187,6 @@ bool hdSoundManager::PlaySound(hdSound* sound)
 	
 	switch(sound->type)
 	{
-			//#if (TARGET_OS_IPHONE == 1) || (TARGET_IPHONE_SIMULATOR == 1)
 		case e_soundTypeBackground:
 			sound->isBackgroundPlaying = true;
 			
@@ -218,7 +227,6 @@ bool hdSoundManager::PlaySound(hdSound* sound)
 		default:
 			hdError(-1, "Sound Engine: unrecognised type for file, name: %s. Aborting...", sound->filename);
 			break;
-			//#endif
 	}
 	return true;
 }
@@ -230,18 +238,8 @@ bool hdSoundManager::StopSound(hdSound* sound)
 	
 	switch(sound->type)
 	{
-			//#if (TARGET_OS_IPHONE == 1) || (TARGET_IPHONE_SIMULATOR == 1)
-		
-		case e_soundTypeBackground: 
+		case e_soundTypeBackground:
 		case e_soundTypeBackgroundLooping:
-			/*
-			sound->isBackgroundPlaying = false;
-			m_status = SoundEngine_StopBackgroundMusic(false);
-			CheckSoundStatus();
-			m_status = SoundEngine_UnloadBackgroundMusicTrack();
-			CheckSoundStatus();
-			 */
-			
 			sound->isBackgroundPlaying = false;
 			m_status = SoundEngine_StopBackgroundMusic(sound);
 			CheckSoundStatus("SoundEngine_StopBackgroundMusic");
@@ -260,7 +258,6 @@ bool hdSoundManager::StopSound(hdSound* sound)
 		default:
 			hdError(-1, "Sound Engine: unrecognised type for file, name: %s. Aborting...", sound->filename);
 			break;
-			//#endif
 	}
 	
 	return true;
@@ -270,37 +267,6 @@ bool hdSoundManager::StopSound(hdSound* sound)
 hdSound* hdSoundManager::LoadLoopingSound(const char* loopFileName, const char* attackFileName, const char* decayFileName)
 {
 	return NULL;
-	/*
-	hdAssert(m_sounds != NULL);
-	
-	hdSound	*sound;
-	char* pathBase = hdGamedir();
-	
-	sound = new hdSound(); //;hdAllocateSound( name );
-	
-	m_sounds->Add(sound);
-	sound->soundId = 0;
-	sound->type = e_soundTypeLoop;
-	snprintf(sound->filename, kMaxSoundPathSize, loopFileName);
-	
-	//#if (TARGET_OS_IPHONE == 1) || (TARGET_IPHONE_SIMULATOR == 1)
-	char loopFilePath[kMaxSoundPathSize];
-	char attackFilePath[kMaxSoundPathSize];
-	char decayFilePath[kMaxSoundPathSize];
-	
-	pathBase = hdGamedir();
-	snprintf( loopFilePath, kMaxSoundPathSize, "%s/%s", pathBase, loopFileName );
-	snprintf( attackFilePath, kMaxSoundPathSize, "%s/%s", pathBase, attackFileName );
-	snprintf( decayFilePath, kMaxSoundPathSize, "%s/%s", pathBase, decayFileName );
-	
-	snprintf(sound->fullFilePath, kMaxSoundPathSize, loopFilePath);
-	
-	m_status = SoundEngine_LoadLoopingEffect(loopFilePath, attackFilePath, decayFilePath, (UInt32*)&sound->soundId);
-	//#endif
-	CheckSoundStatus();
-	
-	return sound;
-	 */
 }
 
 
@@ -309,9 +275,8 @@ hdSound* hdSoundManager::LoadSound(const char* filename, e_soundType type)
 	hdAssert(m_sounds != NULL);
 	
 	// looping sounds should be loaded with LoadLoopingSound.
-	assert(type != e_soundTypeLoop);
-	
-	
+	hdAssert(type != e_soundTypeLoop);
+
 	hdSound	*sound;
 	char* pathBase = FileSystem_BaseDir();
 	
@@ -345,11 +310,8 @@ hdSound* hdSoundManager::LoadSound(const char* filename, e_soundType type)
 			break;
 	}
 	
-	
-	
 	return sound;
 }
-
 
 
 bool hdSoundManager::UnloadSound(hdSound *sound)
@@ -358,7 +320,6 @@ bool hdSoundManager::UnloadSound(hdSound *sound)
 	
 	switch(sound->type)
 	{
-			//#if (TARGET_OS_IPHONE == 1) || (TARGET_IPHONE_SIMULATOR == 1)
 		case e_soundTypeBackground:
 		case e_soundTypeBackgroundLooping:
 			SoundEngine_UnloadBackgroundMusic(sound);
@@ -374,7 +335,6 @@ bool hdSoundManager::UnloadSound(hdSound *sound)
 		default:
 			hdError(-1, "Sound Engine: unrecognised type for file, name: %s. Aborting...", sound->filename);
 			break;
-			//#endif
 	}
 	m_sounds->Remove(sound);
 	
@@ -384,34 +344,15 @@ bool hdSoundManager::UnloadSound(hdSound *sound)
 
 void hdSoundManager::CheckSoundStatus(const char *location)
 {
-	//#if (TARGET_OS_IPHONE == 1) || (TARGET_IPHONE_SIMULATOR == 1)
 	if (m_status == 0) return;
 	hdPrintf("[hdSoundManager] iPhone sound engine error %d: %s\n", (int)m_status, location);
-	//#endif
 }
 
 
 void hdSoundManager::SetMusicMaxVolume(const float vol)
 {
 	m_maxMusicVolume = hdClamp(vol, 0.0f, 1.0f);
-	/*
-	if (m_maxMusicVolume == 0.0f)
-	{
-		// pause all
-		hdSound *sound;
-		for (int i = 0; i < m_sounds->GetItemCount(); ++i)
-		{
-			sound = m_sounds->GetItems()[i];
-			
-			if (sound->type == e_soundTypeBackground || 
-				sound->type == e_soundTypeBackgroundLooping)
-			{
-				StopSound(sound);
-			}
-		}
-	}*/
 }
-
 
 
 void hdSoundManager::SetSoundMaxVolume(const float vol)

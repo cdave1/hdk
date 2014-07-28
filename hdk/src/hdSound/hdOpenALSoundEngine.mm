@@ -1,14 +1,23 @@
 /*
- *  hdOpenALSoundEngine.cpp
- *  TotemGame
+ * Copyright (c) 2014 Hackdirt Ltd.
+ * Author: David Petrie (david@davidpetrie.com)
  *
- *  Created by david on 6/08/09.
- *  Copyright 2009 n/a. All rights reserved.
+ * This software is provided 'as-is', without any express or implied warranty.
+ * In no event will the authors be held liable for any damages arising from the
+ * use of this software. Permission is granted to anyone to use this software for
+ * any purpose, including commercial applications, and to alter it and
+ * redistribute it freely, subject to the following restrictions:
  *
+ * 1. The origin of this software must not be misrepresented; you must not claim
+ * that you wrote the original software. If you use this software in a product, an
+ * acknowledgment in the product documentation would be appreciated but is not
+ * required.
+ * 2. Altered source versions must be plainly marked as such, and must not be
+ * misrepresented as being the original software.
+ * 3. This notice may not be removed or altered from any source distribution.
  */
 
 #include "hdOpenALSoundEngine.h"
-
 
 #if USE_CM_OPEN_AL_SOUND == 1
 
@@ -18,7 +27,6 @@ typedef ALvoid	AL_APIENTRY	(*alcMacOSXMixerOutputRateProcPtr) (const ALdouble va
 static hdAVAudioWrapper* avAudioWrapper = nil;
 #endif
 
-
 void SoundEngine_Init()
 {	
 	static	alcMacOSXMixerOutputRateProcPtr	proc = NULL;
@@ -27,8 +35,9 @@ void SoundEngine_Init()
         proc = (alcMacOSXMixerOutputRateProcPtr) alcGetProcAddress(NULL, (const ALCchar*) "alcMacOSXMixerOutputRate");
     }
     
-    if (proc)
+    if (proc) {
         proc(22050);
+    }
 	
 	if (sharedCMOpenALSoundManager == nil)
 	{
@@ -61,15 +70,6 @@ void SoundEngine_Init()
 }
 
 
-/*
- - (void) loadSound:(NSString *)file withVolume:(float)volume withPitch:(float)pitch;
- - (void) playSound:(NSString *)file;
- - (void) playSoundWithVolumePitch:(NSString *)file withVolume:(float)volume withPitch:(float)pitch;
- - (void) stopSound:(NSString *)file;
- - (void) pauseSound:(NSString *)file;
- - (void) rewindSound:(NSString *)file;
- - (BOOL) isPlayingSound:(NSString *)file;
- */
 int SoundEngine_LoadEffect(hdSound* sound, const bool loops)
 {
 	assert(sharedCMOpenALSoundManager != nil);
@@ -104,11 +104,8 @@ int SoundEngine_StopEffect(const hdSound* sound)
 int SoundEngine_UnloadEffect(const hdSound* sound)
 {
 	assert(sharedCMOpenALSoundManager != nil);
-	 return 0; //SoundEngine_UnloadEffect(sound->soundId);
+	 return 0;
 }
-
-
-
 
 
 int SoundEngine_LoadBackgroundMusic(hdSound* sound)
@@ -189,9 +186,6 @@ int SoundEngine_PlayVibrationEffect(const hdSound *sound)
 
 void SoundEngine_Purge()
 {
-#if USE_AVPLAYER_FOR_MUSIC == 1
-	//assert(avAudioWrapper != nil);
-#endif
 	assert(sharedCMOpenALSoundManager != nil);
 	[sharedCMOpenALSoundManager purgeSounds];
 }
@@ -212,91 +206,13 @@ void SoundEngine_Teardown()
 		avAudioWrapper = nil;
 	}
 #endif
-	//	 [[CMOpenALSoundManager sharedCMOpenALSoundManager] shutdownOpenAL];
 }
 
-
-
-
-
-/*
- - (void) playBackgroundMusic:(NSString *)file;
- - (void) playBackgroundMusic:(NSString *)file forcePlay:(BOOL)forcePlay; //if forcePlay is YES, iPod audio will be stopped.
- - (void) stopBackgroundMusic;
- - (void) pauseBackgroundMusic;
- - (void) resumeBackgroundMusic;
- */
-/*
-int SoundEngine_LoadBackgroundMusic(hdSound* sound)
-{
-	assert(sharedCMOpenALSoundManager != nil);
-	// Don't do anything.
-	return 0;
-}
-
-
-int SoundEngine_PlayBackgroundMusic(const hdSound* sound, const bool forcePlay)
-{
-	assert(sharedCMOpenALSoundManager != nil);
-	[sharedCMOpenALSoundManager playBackgroundMusic:[NSString stringWithCString:sound->fullFilePath] 
-										  forcePlay:NO withVolume:sound->volume];
-	return 0;
-}
-
-
-int SoundEngine_StopBackgroundMusic(const hdSound* sound)
-{
-	assert(sharedCMOpenALSoundManager != nil);
-	[sharedCMOpenALSoundManager stopBackgroundMusic];
-	return 0;
-}
-
-
-int SoundEngine_RewindBackgroundMusic(const hdSound* effect)
-{
-	assert(sharedCMOpenALSoundManager != nil);
-	
-	return 0;
-}
-
-
-int SoundEngine_UnloadBackgroundMusic(const hdSound* effect)
-{
-	assert(sharedCMOpenALSoundManager != nil);
-	return 0;
-}
-
-
-void SoundEngine_Purge()
-{
-	assert(sharedCMOpenALSoundManager != nil);
-	[sharedCMOpenALSoundManager purgeSounds];
-}
-
-
-void SoundEngine_Teardown()
-{
-	assert(sharedCMOpenALSoundManager != nil);
-	[sharedCMOpenALSoundManager purgeSounds];
-	[sharedCMOpenALSoundManager release];
-	sharedCMOpenALSoundManager = nil;
-//	 [[CMOpenALSoundManager sharedCMOpenALSoundManager] shutdownOpenAL];
-}
-	*/ 
-	 
-	 
 
 #elif USE_OOLONG_SOUND_ENGINE == 1
 
 void SoundEngine_Init()
 {
-	/*
-	 AudioSessionInitialize(NULL,NULL,NULL,NULL);
-	 unsigned int sessionCategory = kAudioSessionCategory_MediaPlayback;
-	 int audio_ret = AudioSessionSetProperty(kAudioSessionProperty_AudioCategory, sizeof(sessionCategory), &sessionCategory);
-	 audio_ret |= AudioSessionSetActive(true);
-	 */
-	
 	SoundEngine_Initialize(44100);
 	SoundEngine_SetMasterVolume(1.0f);
 	SoundEngine_SetListenerPosition(0.0, 0.0, 1.0);
@@ -344,15 +260,7 @@ void SoundEngine_Init()
 {
 }
 
-/*
- - (void) loadSound:(NSString *)file withVolume:(float)volume withPitch:(float)pitch;
- - (void) playSound:(NSString *)file;
- - (void) playSoundWithVolumePitch:(NSString *)file withVolume:(float)volume withPitch:(float)pitch;
- - (void) stopSound:(NSString *)file;
- - (void) pauseSound:(NSString *)file;
- - (void) rewindSound:(NSString *)file;
- - (BOOL) isPlayingSound:(NSString *)file;
- */
+
 int SoundEngine_LoadEffect(hdSound* sound)
 {
 	return 0;
@@ -373,7 +281,7 @@ int SoundEngine_StopEffect(const hdSound* sound)
 
 int SoundEngine_UnloadEffect(const hdSound* sound)
 {
-	return 0; //SoundEngine_UnloadEffect(sound->soundId);
+	return 0;
 }
 
 

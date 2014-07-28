@@ -41,8 +41,6 @@
 		63FBBF9D11C47BD700C2377F /* hdIBEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FBBF9B11C47BD700C2377F /* hdIBEnums.h */; };
 		63FC26591184CEDC004BB47B /* hdThumbPad.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FC26571184CEDC004BB47B /* hdThumbPad.h */; };
 		63FC265A1184CEDC004BB47B /* hdThumbPad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63FC26581184CEDC004BB47B /* hdThumbPad.cpp */; };
-		63FC266D1184CF44004BB47B /* hdCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FC266B1184CF44004BB47B /* hdCamera.h */; };
-		63FC266E1184CF44004BB47B /* hdCamera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63FC266C1184CF44004BB47B /* hdCamera.cpp */; };
 		63FC26941184D169004BB47B /* hdScripts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63FC26921184D169004BB47B /* hdScripts.cpp */; };
 		63FC26951184D169004BB47B /* hdScripts.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FC26931184D169004BB47B /* hdScripts.h */; };
 		63FC26971184D18C004BB47B /* hdScripting.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FC26961184D18C004BB47B /* hdScripting.h */; };
@@ -344,8 +342,6 @@
 		63FBBF9B11C47BD700C2377F /* hdIBEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdIBEnums.h; sourceTree = "<group>"; };
 		63FC26571184CEDC004BB47B /* hdThumbPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdThumbPad.h; sourceTree = "<group>"; };
 		63FC26581184CEDC004BB47B /* hdThumbPad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdThumbPad.cpp; sourceTree = "<group>"; };
-		63FC266B1184CF44004BB47B /* hdCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdCamera.h; sourceTree = "<group>"; };
-		63FC266C1184CF44004BB47B /* hdCamera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdCamera.cpp; sourceTree = "<group>"; };
 		63FC26921184D169004BB47B /* hdScripts.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdScripts.cpp; sourceTree = "<group>"; };
 		63FC26931184D169004BB47B /* hdScripts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdScripts.h; sourceTree = "<group>"; };
 		63FC26961184D18C004BB47B /* hdScripting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdScripting.h; sourceTree = "<group>"; };
@@ -897,8 +893,6 @@
 				63A5C58811DDF56A000CDD63 /* hdMeshPolygon.cpp */,
 				63A5C58911DDF56A000CDD63 /* hdMeshPolygon.h */,
 				63C76CC211863C6A00C909BE /* hdOpenGL.cpp */,
-				63FC266B1184CF44004BB47B /* hdCamera.h */,
-				63FC266C1184CF44004BB47B /* hdCamera.cpp */,
 				E428347C116FF684008E3594 /* hdGraphicsInterface.h */,
 				E428347D116FF684008E3594 /* hdDrawable.h */,
 				E428347E116FF684008E3594 /* hdDrawingUtilities.cpp */,
@@ -1361,7 +1355,6 @@
 				E4F36BDC11714DAD00792A2D /* utility_impl.h in Headers */,
 				E4F36BDD11714DAD00792A2D /* vfp_clobbers.h in Headers */,
 				63FC26591184CEDC004BB47B /* hdThumbPad.h in Headers */,
-				63FC266D1184CF44004BB47B /* hdCamera.h in Headers */,
 				63FC26951184D169004BB47B /* hdScripts.h in Headers */,
 				63FC26971184D18C004BB47B /* hdScripting.h in Headers */,
 				63C76CB411863A9F00C909BE /* hdkOSX_prefix.pch in Headers */,
@@ -1547,7 +1540,6 @@
 				E4F36BD911714DAD00792A2D /* matrix_impl.cpp in Sources */,
 				E4F36BDB11714DAD00792A2D /* utility_impl.cpp in Sources */,
 				63FC265A1184CEDC004BB47B /* hdThumbPad.cpp in Sources */,
-				63FC266E1184CF44004BB47B /* hdCamera.cpp in Sources */,
 				63FC26941184D169004BB47B /* hdScripts.cpp in Sources */,
 				63C76CC311863C6A00C909BE /* hdOpenGL.cpp in Sources */,
 				63C76CCD11863CEF00C909BE /* hdMouseInput.cpp in Sources */,
