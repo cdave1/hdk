@@ -70,7 +70,6 @@
 		E4A95C011968CC3300DCD2A0 /* totemContactManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4A95BE51968CC3300DCD2A0 /* totemContactManager.cpp */; };
 		E4A95C021968CC3300DCD2A0 /* totemEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4A95BE81968CC3300DCD2A0 /* totemEvent.cpp */; };
 		E4A95C031968CC3300DCD2A0 /* totemFloorInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4A95BEA1968CC3300DCD2A0 /* totemFloorInfo.cpp */; };
-		E4A95C041968CC3300DCD2A0 /* totemItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4A95BEE1968CC3300DCD2A0 /* totemItem.cpp */; };
 		E4A95C051968CC3300DCD2A0 /* totemJack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4A95BF01968CC3300DCD2A0 /* totemJack.cpp */; };
 		E4A95C061968CC3300DCD2A0 /* totemJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4A95BF21968CC3300DCD2A0 /* totemJoint.cpp */; };
 		E4A95C071968CC3300DCD2A0 /* totemLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4A95BF41968CC3300DCD2A0 /* totemLayer.cpp */; };
@@ -89,20 +88,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = hdkOSX;
-		};
-		6362DA77118995A600184AE0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6362D7241188EA2600184AE0 /* hdkOSX.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 6362DA72118995A600184AE0;
-			remoteInfo = "hdkOSX copy";
-		};
-		63D6FBFF118BB0CA00D76242 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6362D7241188EA2600184AE0 /* hdkOSX.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 63D6FBFD118BB0CA00D76242;
-			remoteInfo = "hdkOSX_64 copy";
 		};
 		E4A95BDF1968CA0B00DCD2A0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -217,8 +202,6 @@
 		E4A95BEB1968CC3300DCD2A0 /* totemFloorInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemFloorInfo.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemFloorInfo.h; sourceTree = "<group>"; };
 		E4A95BEC1968CC3300DCD2A0 /* totemGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemGame.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemGame.h; sourceTree = "<group>"; };
 		E4A95BED1968CC3300DCD2A0 /* totemGameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemGameObject.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemGameObject.h; sourceTree = "<group>"; };
-		E4A95BEE1968CC3300DCD2A0 /* totemItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemItem.cpp; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemItem.cpp; sourceTree = "<group>"; };
-		E4A95BEF1968CC3300DCD2A0 /* totemItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemItem.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemItem.h; sourceTree = "<group>"; };
 		E4A95BF01968CC3300DCD2A0 /* totemJack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemJack.cpp; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemJack.cpp; sourceTree = "<group>"; };
 		E4A95BF11968CC3300DCD2A0 /* totemJack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemJack.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemJack.h; sourceTree = "<group>"; };
 		E4A95BF21968CC3300DCD2A0 /* totemJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemJoint.cpp; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemJoint.cpp; sourceTree = "<group>"; };
@@ -383,8 +366,6 @@
 			isa = PBXGroup;
 			children = (
 				6362D7291188EA2600184AE0 /* libhdkOSX.a */,
-				6362DA78118995A600184AE0 /* libhdkOSX_64.a */,
-				63D6FC00118BB0CA00D76242 /* libhdkOSX_32.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -418,8 +399,6 @@
 				E4A95BEB1968CC3300DCD2A0 /* totemFloorInfo.h */,
 				E4A95BEC1968CC3300DCD2A0 /* totemGame.h */,
 				E4A95BED1968CC3300DCD2A0 /* totemGameObject.h */,
-				E4A95BEE1968CC3300DCD2A0 /* totemItem.cpp */,
-				E4A95BEF1968CC3300DCD2A0 /* totemItem.h */,
 				E4A95BF01968CC3300DCD2A0 /* totemJack.cpp */,
 				E4A95BF11968CC3300DCD2A0 /* totemJack.h */,
 				E4A95BF21968CC3300DCD2A0 /* totemJoint.cpp */,
@@ -670,20 +649,6 @@
 			remoteRef = 6362D7281188EA2600184AE0 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		6362DA78118995A600184AE0 /* libhdkOSX_64.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libhdkOSX_64.a;
-			remoteRef = 6362DA77118995A600184AE0 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		63D6FC00118BB0CA00D76242 /* libhdkOSX_32.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libhdkOSX_32.a;
-			remoteRef = 63D6FBFF118BB0CA00D76242 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -730,7 +695,6 @@
 				6362DB76118A2A6E00184AE0 /* hdLevelEditorController.cpp in Sources */,
 				6362DB7D118A2A7200184AE0 /* hdLevelEditorUtilities.cpp in Sources */,
 				E4A95C031968CC3300DCD2A0 /* totemFloorInfo.cpp in Sources */,
-				E4A95C041968CC3300DCD2A0 /* totemItem.cpp in Sources */,
 				E4A95C051968CC3300DCD2A0 /* totemJack.cpp in Sources */,
 				E4A95C071968CC3300DCD2A0 /* totemLayer.cpp in Sources */,
 				6362DB45118A275300184AE0 /* EditorView.mm in Sources */,

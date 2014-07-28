@@ -17,8 +17,6 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-
-
 #ifndef APP_LEVEL_CONTROLLER_H
 #define APP_LEVEL_CONTROLLER_H
 

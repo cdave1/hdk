@@ -1,10 +1,20 @@
 /*
- *  AppLevelController.cpp
- *  TotemGame
+ * Copyright (c) 2014 Hackdirt Ltd.
+ * Author: David Petrie (david@davidpetrie.com)
+ * 
+ * This software is provided 'as-is', without any express or implied warranty.
+ * In no event will the authors be held liable for any damages arising from the 
+ * use of this software. Permission is granted to anyone to use this software for
+ * any purpose, including commercial applications, and to alter it and 
+ * redistribute it freely, subject to the following restrictions:
  *
- *  Created by david on 23/04/09.
- *  Copyright 2009 n/a. All rights reserved.
- *
+ * 1. The origin of this software must not be misrepresented; you must not claim 
+ * that you wrote the original software. If you use this software in a product, an 
+ * acknowledgment in the product documentation would be appreciated but is not 
+ * required.
+ * 2. Altered source versions must be plainly marked as such, and must not be 
+ * misrepresented as being the original software.
+ * 3. This notice may not be removed or altered from any source distribution.
  */
 
 using namespace std;
@@ -23,8 +33,6 @@ static hdTypedefList<surface_t, 128>* m_surfaces = NULL;
 
 static hdTexture *m_floor, *m_roof, *m_wall;
 
-// e_hdInterfaceOrientationLandscape
-// e_hdInterfaceOrientationPortrait
 AppLevelController::AppLevelController(const hdInterfaceController* parentController) : AppInterface(parentController)
 
 {	m_camera.eye.Set(0,0,0);
@@ -193,48 +201,11 @@ AppLevelController::AppLevelController(const hdInterfaceController* parentContro
 
 AppLevelController::~AppLevelController()
 {
-	
-	
-	delete m_glow;
-	
-	
-	
-	
-
-	
-	
-	
-	/*
-	 * Delete effects
-	 */
-	hdPrintf("\t\tDelete effects\n");
-	//delete m_physicsParticleEmitter;
-	
-	
-	
-	/*
-	 * Delete physics/level stuff
-	 */ 
-	hdPrintf("\t\tDelete physx\n");	
-	//delete m_physicsWorld;
-	
-	
-	//DeleteTextureFrameBuffer(m_textureFrameBuffer);
 }
 
 
 void AppLevelController::InitPhysics()
 {
-	/*
-	b2AABB m_physicsWorldAABB;
-	m_physicsWorldAABB.lowerBound.Set(-256.0f, -256.0f);
-	m_physicsWorldAABB.upperBound.Set(256.0f, 256.0f);
-	
-	b2Vec2 gravity(0.0f, kGravityMultiplier * -1.0f);
-	bool doSleep = true;
-	m_physicsWorld = new b2World(m_physicsWorldAABB, gravity, doSleep);
-	m_physicsWorld->SetContactListener(this);
-	 */
 }
 
 
@@ -250,7 +221,6 @@ void AppLevelController::InitSounds()
 void AppLevelController::InitEffects()
 {
 }
-
 
 
 void AppLevelController::PhysicsStep(double interval)
@@ -320,14 +290,7 @@ void AppLevelController::Step(double interval)
 	
 	
 	Game_Step(interval);
-	
-	// rotate the camera vertex
-	
-	
-	
-	
 } 
-
 
 
 static void gluLookAt(GLfloat eyex, GLfloat eyey, GLfloat eyez,
@@ -620,21 +583,10 @@ void AppLevelController::DrawInternalInterface()
 }
 
 
-
-
-/*
- * The cunting interaction model is fucked up beyond all hope.
- *
- * I've managed to write about some solutions. What I've built
- * works quite well, but it will fall apart at the meerest addition
- * to the code below.
- */
 void AppLevelController::HandleTapUp(float x, float y, int tapCount)
 {
 	Game_HandleTapUp(x, y, tapCount);
-	
 }
-
 
 
 void AppLevelController::HandleTapDown(float x, float y, int tapCount)
@@ -702,15 +654,9 @@ void AppLevelController::HandleTapMovedSingle(const float previousX, const float
 			
 			// Rotate camera center by screenDiff.
 			hdRotateVertices(&m_camera.center, 1, hdVec3(screenDiff.x * (0.25 * (hd_pi/90.0f)), screenDiff.y * (0.25 * (hd_pi/90.0f)), 0));
-			
-
 		}
-		
 	}
-	
-	
 }
-
 
 
 void AppLevelController::HandleTapMovedDouble(const float aPreviousX, const float aPreviousY,
@@ -723,20 +669,12 @@ void AppLevelController::HandleTapMovedDouble(const float aPreviousX, const floa
 }
 
 
-
 void AppLevelController::HandleOrientationChanged()
 {
 	this->RefreshLayout();
 	Game_HandleOrientationChanged();
 	PanProjection(0, 0, 0.1f, 0.1f);
 }
-
-
-/*
-bool AppLevelController::SelectBlockAtScreenPoint(float x, float y)
-{
-	return SelectBlockAtScreenPoint(e_hdInterfaceClickStateUp, x, y);
-}*/
 
 
 bool AppLevelController::BulletRayTest()
@@ -757,7 +695,6 @@ bool AppLevelController::BulletRayTest()
 
 
 void AppLevelController::Game_Step(double interval) {}
-
 
 
 const bool AppLevelController::Game_HandleTapUp(float x, float y, int tapCount)
@@ -798,4 +735,3 @@ const bool AppLevelController::Game_HandleTapMovedDouble(const float aPreviousX,
 {
 	return false;
 }void AppLevelController::Game_HandleOrientationChanged() {}
-

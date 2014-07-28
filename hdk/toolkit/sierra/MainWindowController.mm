@@ -1,10 +1,21 @@
-//
-//  MainWindowController.m
-//  Sierra
-//
-//  Created by David Petrie on 30/04/10.
-//  Copyright 2010 n/a. All rights reserved.
-//
+/*
+ * Copyright (c) 2014 Hackdirt Ltd.
+ * Author: David Petrie (david@davidpetrie.com)
+ *
+ * This software is provided 'as-is', without any express or implied warranty.
+ * In no event will the authors be held liable for any damages arising from the
+ * use of this software. Permission is granted to anyone to use this software for
+ * any purpose, including commercial applications, and to alter it and
+ * redistribute it freely, subject to the following restrictions:
+ *
+ * 1. The origin of this software must not be misrepresented; you must not claim
+ * that you wrote the original software. If you use this software in a product, an
+ * acknowledgment in the product documentation would be appreciated but is not
+ * required.
+ * 2. Altered source versions must be plainly marked as such, and must not be
+ * misrepresented as being the original software.
+ * 3. This notice may not be removed or altered from any source distribution.
+ */
 
 #import "MainWindowController.h"
 #import "LevelEditor.h"
@@ -22,7 +33,6 @@
 	{
 		_editorViewController = [[EditorViewController alloc] init];
 		[self.window setContentView:_editorViewController.editorView];
-		//[self.window makeMainWindow];
 		[self.window setAcceptsMouseMovedEvents:YES];
 		[_editorViewController handleResize];
 		
@@ -37,9 +47,6 @@
 		_prismaticJointPropertyWindow = [[PrismaticJointPropertyWindow alloc] init];
 		_prefabsPaletteWindow = [[PrefabsPaletteWindow alloc] init];
 		[_prefabsPaletteWindow.window setFrameOrigin:NSMakePoint(0, 0)];
-		//[_blockPropertyWindow showWindow:self];
-		
-
 		
 		[_texturePaletteWindow.window
 		 setFrameOrigin:NSMakePoint([NSScreen mainScreen].frame.size.width - _texturePaletteWindow.window.frame.size.width, 1600)];
@@ -57,14 +64,11 @@
 		[self.window setFrame:mainWindowFrame display:YES];
 		[self.window addChildWindow:_toolPanel ordered:NSWindowAbove];
 		
-		//[_toolPanel setFloatingPanel:YES];
-		
 		[_blockMaterialComboBox selectItemAtIndex:0];
 		[_blockTypeComboBox selectItemAtIndex:0];
 		[_jointTypeComboBox selectItemAtIndex:0];
 		[_blockShapeComboBox selectItemAtIndex:0];
-		
-		
+
 		[[NSNotificationCenter defaultCenter]
 		 addObserver:self
 		 selector:@selector(levelWillBeDeleted)
@@ -83,7 +87,6 @@
 
 - (void)mouseMoved:(NSEvent *)mouseOver
 {
-	//hdPrintf("Mouse moved!\n");
 	if (![self.window isKeyWindow])
 		[self.window makeKeyWindow];
 }
@@ -238,23 +241,12 @@
 
 - (IBAction)updatePaletteTint:(id)sender
 {
-	
 }
-
-
-/*
- - (IBAction)UpdateNewEventType(int)
- {
- levelEditorController->settings.newTotemEventType = (e_totemEventType)newEventTypesList->get_int_val();	
- }*/
 
 
 - (IBAction)SetNewEventMode:(id)sender
 {
-	//[LevelEditor sharedInstance]->
 }
-
-
 
 
 - (IBAction)SetNewBlockMaterial:(id)sender
@@ -391,7 +383,6 @@
 }
 
 
-
 - (void)levelWillBeDeleted
 {
 	NSAlert *alert = [[[NSAlert alloc] init] autorelease];
@@ -433,18 +424,14 @@
 		{
 			[LevelEditor sharedInstance]->SetLevel(index + 1);
 		}
-		
-		
-		[LevelEditor sharedInstance]->GetCurrentTotemWorld()->RemoveLevelAtIndex(index);
-		
 
-		
+		[LevelEditor sharedInstance]->GetCurrentTotemWorld()->RemoveLevelAtIndex(index);
+
 		[[NSNotificationCenter defaultCenter] 
 		 postNotificationName:kWorldWasLoadedNotification
 		 object:nil];
     }
 }
-
 
 
 #pragma mark -
@@ -507,6 +494,5 @@
 	}
 	return 0;
 }
-
 
 @end

@@ -1,3 +1,22 @@
+/*
+ * Copyright (c) 2014 Hackdirt Ltd.
+ * Author: David Petrie (david@davidpetrie.com)
+ *
+ * This software is provided 'as-is', without any express or implied warranty.
+ * In no event will the authors be held liable for any damages arising from the
+ * use of this software. Permission is granted to anyone to use this software for
+ * any purpose, including commercial applications, and to alter it and
+ * redistribute it freely, subject to the following restrictions:
+ *
+ * 1. The origin of this software must not be misrepresented; you must not claim
+ * that you wrote the original software. If you use this software in a product, an
+ * acknowledgment in the product documentation would be appreciated but is not
+ * required.
+ * 2. Altered source versions must be plainly marked as such, and must not be
+ * misrepresented as being the original software.
+ * 3. This notice may not be removed or altered from any source distribution.
+ */
+
 #include "hdk.h"
 
 #include <stdio.h>
@@ -5,25 +24,14 @@
 #include <fstream>
 #include <list>
 #include <string>
-#include <iostream>	
-//#include
-// include headers that implement a archive in simple text format
-
-
-
+#include <iostream>
 
 #include <boost/archive/text_oarchive.hpp>
 #include <boost/archive/text_iarchive.hpp>
 
-
-//#include "MemoryManager.h"
-
 #include "glui.h"
 
-
-
 #include "hdLevelEditorController.h"
-
 #include "totemGame.h"
 
 
@@ -33,9 +41,7 @@ namespace
 {
 	int32 testIndex = 0;
 	int32 testSelection = 0;
-	//TestEntry* entry;
 	hdLevelEditorController* levelEditorController;
-	//Settings settings;
 	int32 width = 1910;
 	int32 height = 1060;
 	int32 framePeriod = 16;
@@ -81,12 +87,6 @@ namespace
 	GLUI_Checkbox* toggleFilterCosmetics;
 	GLUI_Checkbox* toggleFilterGround;
 	GLUI_Checkbox* toggleFilterPhysics;
-	
-	// Checkboxes
-	//GLUI_Checkbox* toggleBackground;
-	//GLUI_Checkbox* toggleGameLayer;
-	//GLUI_Checkbox* toggleMidground;
-	//GLUI_Checkbox* toggleForground;
 	
 	GLUI *gluiBlockProperties;
 	GLUI_Panel* selectedBlockPropertiesPanel;
