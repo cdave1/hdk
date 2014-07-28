@@ -1,5 +1,21 @@
-
-
+/*
+ * Copyright (c) 2014 Hackdirt Ltd.
+ * Author: David Petrie (david@davidpetrie.com)
+ *
+ * This software is provided 'as-is', without any express or implied warranty.
+ * In no event will the authors be held liable for any damages arising from the
+ * use of this software. Permission is granted to anyone to use this software for
+ * any purpose, including commercial applications, and to alter it and
+ * redistribute it freely, subject to the following restrictions:
+ *
+ * 1. The origin of this software must not be misrepresented; you must not claim
+ * that you wrote the original software. If you use this software in a product, an
+ * acknowledgment in the product documentation would be appreciated but is not
+ * required.
+ * 2. Altered source versions must be plainly marked as such, and must not be
+ * misrepresented as being the original software.
+ * 3. This notice may not be removed or altered from any source distribution.
+ */
 
 #include "hdButton.h"
 
@@ -32,8 +48,6 @@ hdButton::hdButton(const char* textureNormal,
 	
 	this->Init();
 }
-
-
 
 
 hdButton::hdButton(const char* textureNormal, 
@@ -114,7 +128,7 @@ void hdButton::DoMouseDownCallback()
 {
 	if (m_mouseDownCallbackObject != NULL && m_mouseDownCallback != NULL)
 	{
-		(*m_mouseDownCallback)(m_mouseDownCallbackObject, this); //, (void *)this);
+		(*m_mouseDownCallback)(m_mouseDownCallbackObject, this);
 	}
 }
 
@@ -123,7 +137,7 @@ void hdButton::DoMouseOverCallback()
 {
 	if (m_mouseOverCallbackObject != NULL && m_mouseOverCallback != NULL)
 	{
-		(*m_mouseOverCallback)(m_mouseOverCallbackObject, this); //, (void *)this);
+		(*m_mouseOverCallback)(m_mouseOverCallbackObject, this);
 	}
 }
 
@@ -132,7 +146,7 @@ void hdButton::DoMouseUpCallback()
 {
 	if (m_mouseUpCallbackObject != NULL && m_mouseUpCallback != NULL)
 	{
-		(*m_mouseUpCallback)(m_mouseUpCallbackObject, this); //, (void *)this);
+		(*m_mouseUpCallback)(m_mouseUpCallbackObject, this);
 	}
 }
 
@@ -154,11 +168,7 @@ bool hdButton::MouseDown(float x, float y)
 	if (hdPolygonContainsPoint(((hdPolygon*)this)->GetVertices(), 4, hdVec3(x,y,0)))
 	{
 		if (m_buttonState == e_buttonWaiting)
-		{
-#ifdef DEBUG 
-			hdPrintf("[hdButton::MouseDown]\n");
-#endif
-			
+        {
 			m_buttonState = e_buttonMouseDown;
 			DoMouseDownCallback();
 			return true;
@@ -167,7 +177,6 @@ bool hdButton::MouseDown(float x, float y)
 		{
 			return false;
 		}
-		
 	} 
 	else 
 	{
@@ -196,18 +205,12 @@ bool hdButton::MouseOver(float x, float y)
 	{
 		if (m_buttonState == e_buttonMouseDown)
 		{
-#ifdef DEBUG 
-			hdPrintf("[hdButton::MouseOver] mouse down\n");
-#endif
 			m_buttonState = e_buttonMouseOver;
 			DoMouseOverCallback();
 			return true;
 		}
 		else if (m_buttonState == e_buttonMouseOver)
 		{
-#ifdef DEBUG 
-			hdPrintf("[hdButton::MouseOver] over\n");
-#endif
 			DoMouseOverCallback();
 			return true;
 		}
@@ -215,7 +218,6 @@ bool hdButton::MouseOver(float x, float y)
 		{
 			return false;
 		}
-		
 	} 
 	else 
 	{

@@ -1,10 +1,20 @@
 /*
- *  hdIBLoader.cpp
- *  hdkOSX
+ * Copyright (c) 2014 Hackdirt Ltd.
+ * Author: David Petrie (david@davidpetrie.com)
  *
- *  Created by David Petrie on 13/06/10.
- *  Copyright 2010 n/a. All rights reserved.
+ * This software is provided 'as-is', without any express or implied warranty.
+ * In no event will the authors be held liable for any damages arising from the
+ * use of this software. Permission is granted to anyone to use this software for
+ * any purpose, including commercial applications, and to alter it and
+ * redistribute it freely, subject to the following restrictions:
  *
+ * 1. The origin of this software must not be misrepresented; you must not claim
+ * that you wrote the original software. If you use this software in a product, an
+ * acknowledgment in the product documentation would be appreciated but is not
+ * required.
+ * 2. Altered source versions must be plainly marked as such, and must not be
+ * misrepresented as being the original software.
+ * 3. This notice may not be removed or altered from any source distribution.
  */
 
 #include "hdIBLoader.h"
@@ -170,7 +180,6 @@ int hdIBLoader::SaveViewControllerBinary(const hdIBViewController *vc, const cha
 	 On exit:
 	 - destLen is the actual size of the compressed buffer...
 	 */
-	//ossLen = oss.str().size() + 1;
 	ossLen = oss.str().size();
 	ossBuffer = new char[ossLen];
 	oss.rdbuf()->sgetn(ossBuffer, ossLen);

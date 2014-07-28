@@ -26,8 +26,5 @@
 #include "hdGame/hdOrthographicProjection.h"
 #include "hdGame/hdGameObject.h"
 #include "hdGame/hdGameWorld.h"
-#include "hdGame/hdAgent.h"
-#include "hdGame/hdLevelGroup.h"
-#include "hdGame/hdLevel.h"
 
 #endif

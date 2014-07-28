@@ -63,7 +63,6 @@ int OpenALPool_Init()
     memset(m_ownerSources, 0, sizeof(m_ownerSources));
     memset(m_freeSources, 0, sizeof(m_freeSources));
 
-
     alGenSources(kOwnerSourcePoolSize, m_ownerSources);
     alGenSources(kFreeSourcePoolSize, m_freeSources);
 

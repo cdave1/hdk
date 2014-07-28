@@ -1,10 +1,20 @@
 /*
- *  hdInterfaceContext.cpp
- *  Smashed
+ * Copyright (c) 2014 Hackdirt Ltd.
+ * Author: David Petrie (david@davidpetrie.com)
  *
- *  Created by david on 2/11/09.
- *  Copyright 2009 n/a. All rights reserved.
+ * This software is provided 'as-is', without any express or implied warranty.
+ * In no event will the authors be held liable for any damages arising from the
+ * use of this software. Permission is granted to anyone to use this software for
+ * any purpose, including commercial applications, and to alter it and
+ * redistribute it freely, subject to the following restrictions:
  *
+ * 1. The origin of this software must not be misrepresented; you must not claim
+ * that you wrote the original software. If you use this software in a product, an
+ * acknowledgment in the product documentation would be appreciated but is not
+ * required.
+ * 2. Altered source versions must be plainly marked as such, and must not be
+ * misrepresented as being the original software.
+ * 3. This notice may not be removed or altered from any source distribution.
  */
 
 #include "hdInterfaceContext.h"
@@ -14,6 +24,7 @@ static hdTypedefList<hdReceiver*, 256> *m_receivers = NULL;
 static hdInterfaceController *m_controller = NULL;
 
 static bool loggingEnabled = false;
+
 
 void hdInterfaceContext::Init(hdInterfaceController *context)
 {
@@ -82,7 +93,6 @@ void hdInterfaceContext::HandleTapUp(float x, float y, int tapCount)
 {
 	uint32 i;
 	hdVec2 screen;
-	void *out_NOT_USED;
 	
 	if (m_controller == NULL) return;
 	
@@ -127,7 +137,6 @@ void hdInterfaceContext::HandleTapDown(float x, float y, int tapCount)
 
 void hdInterfaceContext::HandleSingleTap(const float x, const float y)
 {
-	uint32 i;
 	hdVec2 screen;
 	
 	if (m_controller == NULL) return;
@@ -136,6 +145,7 @@ void hdInterfaceContext::HandleSingleTap(const float x, const float y)
 	
 	if (m_receivers == NULL) return;
 	if (m_receivers->GetItemCount() == 0) return;
+
 	m_controller->ConvertRawToScreen(screen, x, y);
 }
 	 
@@ -145,7 +155,6 @@ void hdInterfaceContext::HandleDoubleTap(float x, float y)
 {
 	uint32 i;
 	hdVec2 screen;
-	
 	
 	if (m_controller == NULL) return;
 	
@@ -201,4 +210,3 @@ void hdInterfaceContext::HandleTapMovedDouble(const float aPreviousX, const floa
 									   bPreviousX, bPreviousY,
 									   bCurrentX, bCurrentY);
 }
-

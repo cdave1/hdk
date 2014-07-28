@@ -35,7 +35,7 @@ class hdPlayerConfig
 {
 public:
 
-    static string GetValue(const char *key);
+    static std::string GetValue(const char *key);
 
     static bool SetValue(const char *key, const char *value);
 

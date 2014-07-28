@@ -1,10 +1,20 @@
 /*
- *  hdGeometry.h
- *  AnimationEngine
+ * Copyright (c) 2014 Hackdirt Ltd.
+ * Author: David Petrie (david@davidpetrie.com)
  *
- *  Created by david on 12/04/09.
- *  Copyright 2009 n/a. All rights reserved.
+ * This software is provided 'as-is', without any express or implied warranty.
+ * In no event will the authors be held liable for any damages arising from the
+ * use of this software. Permission is granted to anyone to use this software for
+ * any purpose, including commercial applications, and to alter it and
+ * redistribute it freely, subject to the following restrictions:
  *
+ * 1. The origin of this software must not be misrepresented; you must not claim
+ * that you wrote the original software. If you use this software in a product, an
+ * acknowledgment in the product documentation would be appreciated but is not
+ * required.
+ * 2. Altered source versions must be plainly marked as such, and must not be
+ * misrepresented as being the original software.
+ * 3. This notice may not be removed or altered from any source distribution.
  */
 
 #ifndef _HD_GEOMETRY_H_
@@ -12,8 +22,6 @@
 
 #include "hdMath/hdMathCommon.h"
 #include "hdMath/hdMatrix.h"
-
-typedef struct hdTransform;
 
 void hdScaleVertices(hdVec3* vertices, int vertexCount, const hdVec3& scale);
 void hdRotateVertices(hdVec3* vertices, int vertexCount, const hdVec3& rotation);
@@ -40,15 +48,15 @@ struct hdAABB
 };
 
 
-
-struct hdTransform 
+typedef struct hdTransform
 {
 	hdTransform() : rotation(0,0,0), translation(0,0,0), scale(1.0f, 1.0f, 1.0f) {}
 	
 	hdVec3 rotation;
 	hdVec3 translation;
 	hdVec3 scale;
-};
+} hdTransform;
+
 
 typedef enum
 {
@@ -91,7 +99,6 @@ inline void hdTransformVertices(hdVec3* vertices, int vertexCount, const hdVec3&
 	MatrixIdentity(rot);
 	MatrixIdentity(trans);
 	MatrixIdentity(scale);
-	
 
 	if ((oldTransform.rotation == newTransform.rotation) == false)
 	{
@@ -139,7 +146,9 @@ inline void hdScaleVertices(hdVec3* vertices, int vertexCount, const hdVec3& sca
 }
 
 
-// Rotates vertices around origin.
+/*
+ * Rotates vertices around origin.
+ */
 inline void hdRotateVertices(hdVec3* vertices, int vertexCount, const hdVec3& rotation)
 {
 #if (TARGET_IPHONE_SIMULATOR == 0) && (TARGET_OS_IPHONE == 1)
@@ -154,7 +163,7 @@ inline void hdRotateVertices(hdVec3* vertices, int vertexCount, const hdVec3& ro
 		MatrixVec3Multiply(vertices[i], vertices[i], rot);
 	}
 #else
-	hdVec3 vert; //X, vertY;
+	hdVec3 vert;
 	hdMatrix rot;
 	unsigned i;
 	
@@ -179,11 +188,12 @@ inline void hdTranslateVertices(hdVec3* vertices, int vertexCount, const hdVec3&
 }
 
 
-/* via SuperCollider help files */
+/* 
+ * via SuperCollider help files 
+ */
 inline float hdFastHypotenuse(const float x, const float y)
 {
 	const float sqrt2 = 1.41421;
-	
 	return fabs(x) + fabs(y) - ((sqrt2 - 1) * hdMin(fabs(x), fabs(y)));
 }
 
@@ -211,7 +221,9 @@ inline float Get2DNormal(const hdVec3& a, const hdVec3& b)
 }
 
 
-// Vector product at point b, from a to b to c
+/*
+ * Vector product at point b, from a to b to c
+ */
 inline float hdVectorProduct(const hdVec2& a, const hdVec2& b, const hdVec2& c)
 {
 	return (a.x * (b.y - c.y)) + (b.x * (c.y - a.y)) + (c.x * (a.y - b.y));
@@ -224,7 +236,9 @@ inline float hdVectorProduct(const hdVec3& a, const hdVec3& b, const hdVec3& c)
 }
 
 
-// Returns 1 if c is CCW of vector a-b, -1 if CW, and 0 if parallel
+/*
+ * Returns 1 if c is CCW of vector a-b, -1 if CW, and 0 if parallel
+ */
 inline signed int hdVectorProductSign(const hdVec2& a, const hdVec2& b, const hdVec2& c)
 {
 	float vectorProduct = hdVectorProduct(a,b,c);
@@ -261,9 +275,7 @@ inline float hdAABBArea(const hdVec3& v1, const hdVec3& v2)
 
 inline void hdFindAABB(const hdVec3* vertices, int vertexCount, hdAABB* aabb)
 {
-	//hdVec3 aabb[2];
-	
-	if (vertexCount < 2) 
+	if (vertexCount < 2)
 	{
 		aabb->lower.SetZero();
 		aabb->upper.SetZero();
@@ -272,40 +284,21 @@ inline void hdFindAABB(const hdVec3* vertices, int vertexCount, hdAABB* aabb)
 	{
 		aabb->lower = vertices[0];
 		aabb->upper = vertices[0];	
-		
-		// unrolled:
-#if (TARGET_IPHONE_SIMULATOR == 0) && (TARGET_OS_IPHONE == 1)
-		for (int i = 0; i < vertexCount; i = i + 3)
-		{
-			if (i >= vertexCount) break;
-			
-			aabb->lower = hdMin(aabb->lower, vertices[i]);
-			aabb->upper = hdMax(aabb->upper, vertices[i]);
-			
-			if (i+1 >= vertexCount) break;
-			
-			aabb->lower = hdMin(aabb->lower, vertices[i+1]);
-			aabb->upper = hdMax(aabb->upper, vertices[i+1]);
-			
-			if (i+2 >= vertexCount) break;
-			
-			aabb->lower = hdMin(aabb->lower, vertices[i+2]);
-			aabb->upper = hdMax(aabb->upper, vertices[i+2]);
-		}
-#else
+
 		for (int i = 0; i < vertexCount; ++i)
 		{
 			aabb->lower = hdMin(aabb->lower, vertices[i]);
 			aabb->upper = hdMax(aabb->upper, vertices[i]);
 		}
-#endif
 	}
 }
 
 
-// Another method (maybe faster?):
-// - Subtract point from lower, upper, and check signs of result
-// - signs should all be negative.
+/*
+ * Another method (maybe faster?):
+ * - Subtract point from lower, upper, and check signs of result
+ * - signs should all be negative.
+ */
 inline bool hdPointInsideAABB(const hdVec3& point, const hdAABB& aabb)
 {
 	return  ((point.x < aabb.lower.x || point.x > aabb.upper.x) == false) &&
@@ -326,7 +319,9 @@ inline bool hdAABBIntersection(const hdAABB& aabb1, const hdAABB& aabb2)
 }
 
 
-// Assume, for now, that point is on the same plane as points in polygon.
+/*
+ * Assume, for now, that point is on the same plane as points in polygon.
+ */
 inline bool hdPolygonContainsPoint(const hdVec3* vertices, const int vertexCount, const hdVec3& point)
 {
 	if (vertexCount == 1) return point == vertices[0];
@@ -341,8 +336,11 @@ inline bool hdPolygonContainsPoint(const hdVec3* vertices, const int vertexCount
 }
 
 
-// Determines if the polygon contains the point.
-// Assumes that the polygon points are arranged in counter clockwise order.
+/*
+ * Determines if the polygon contains the point.
+ *
+ * Assumes that the polygon points are arranged in counter clockwise order.
+ */
 inline bool hdPolygonContainsPoint(const hdVec2* polygon, const int polygonCount, const hdVec2& point)
 {
 	if (polygonCount == 1) return point == polygon[0];
@@ -357,10 +355,12 @@ inline bool hdPolygonContainsPoint(const hdVec2* polygon, const int polygonCount
 }
 
 
-// Assuming the vertices define the hull of a solid shape, this function
-// returns true as soon as a triangle can be found that contains the given point.
-//
-// Use sparingly.
+/*
+ * Assuming the vertices define the hull of a solid shape, this function
+ * returns true as soon as a triangle can be found that contains the given point.
+ *
+ * Use sparingly.
+ */
 inline bool hdConcavePolygonContainsPoint(const hdVec3* vertices, const int vertexCount, const hdVec3& center, const hdVec3& point)
 {
 	if (vertexCount == 1) return point == vertices[0];
@@ -379,7 +379,9 @@ inline bool hdConcavePolygonContainsPoint(const hdVec3* vertices, const int vert
 }
 
 
-// angle between v1 and v2 using ref
+/*
+ * Return the angle between v1 and v2 using ref
+ */
 inline float hdGetAngle(const hdVec2& v1, const hdVec2& v2, const hdVec2& ref)
 {
 	hdVec2 _v1 = v1 - ref;
@@ -400,7 +402,11 @@ inline float hdGetAngle(const hdVec3& v1, const hdVec3& v2, const hdVec3& ref)
 }
 
 
-// Adapted from algorithm 6 from softsurfer.com
+/*
+ * Ray intersection function.
+ *
+ * Adapted from algorithm 6 from softsurfer.com
+ */
 inline bool hdRayIntersectsTriangle(const hdVec3 *triangle, const hdVec3 *ray, hdVec3 &vOut)
 {
 	hdVec3 u, v, n;
@@ -428,9 +434,7 @@ inline bool hdRayIntersectsTriangle(const hdVec3 *triangle, const hdVec3 *ray, h
 	
 	dir *= r;
 	vOut = ray[0] + dir;
-	
-	//hdPrintf("%f, %f, %f\n", vOut.x, vOut.y, vOut.z);
-	//return hdPolygonContainsPoint(triangle, 3, vOut);
+
 	float uu, uv, vv, wu, wv, D;
 	
 	uu = u * u;
@@ -495,9 +499,12 @@ inline float hdPolygonArea(const hdVec3 *vertices, const int vertexCount)
 }
 
 
-// Return the "most counter clockwise" point of a and b in around pivot.
-// convex if sum of cross product signs is positive and equal to the number of 
-// vertices.
+/*
+ * Return the "most counter clockwise" point of a and b in around pivot.
+ *
+ * Returns true if sum of cross product signs is positive and equal to the number of
+ * vertices.
+ */
 inline bool hdIsConvexCCW(const hdVec3* vertices, const int vertexCount)
 {
 	if (vertexCount == 1) return false;

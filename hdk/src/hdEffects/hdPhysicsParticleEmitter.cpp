@@ -1,10 +1,20 @@
 /*
- *  hdPhysicsParticleEmitter.cpp
- *  hdGameEngine
+ * Copyright (c) 2014 Hackdirt Ltd.
+ * Author: David Petrie (david@davidpetrie.com)
  *
- *  Created by david on 15/04/09.
- *  Copyright 2009 n/a. All rights reserved.
+ * This software is provided 'as-is', without any express or implied warranty.
+ * In no event will the authors be held liable for any damages arising from the
+ * use of this software. Permission is granted to anyone to use this software for
+ * any purpose, including commercial applications, and to alter it and
+ * redistribute it freely, subject to the following restrictions:
  *
+ * 1. The origin of this software must not be misrepresented; you must not claim
+ * that you wrote the original software. If you use this software in a product, an
+ * acknowledgment in the product documentation would be appreciated but is not
+ * required.
+ * 2. Altered source versions must be plainly marked as such, and must not be
+ * misrepresented as being the original software.
+ * 3. This notice may not be removed or altered from any source distribution.
  */
 
 #include "hdPhysicsParticleEmitter.h"
@@ -121,7 +131,8 @@ void hdPhysicsParticle::Step()
 	// Translate to origin, rotate, translate back again.
 	hdTranslateVertices(this->GetVertices(), this->GetVertexCount(), -m_obb.transform.translation);
 	
-	hdRotateVertices(this->GetVertices(), this->GetVertexCount(), hdVec3(0.0f, 0.0f, m_physicsBody->GetAngle()) - m_obb.transform.rotation);
+	hdRotateVertices(this->GetVertices(), this->GetVertexCount(),
+                     hdVec3(0.0f, 0.0f, m_physicsBody->GetAngle()) - m_obb.transform.rotation);
 	
 	hdTranslateVertices(this->GetVertices(), this->GetVertexCount(), m_obb.transform.translation + (hdVec3(xform.position.x, xform.position.y, this->GetWorldCenter().z) - m_obb.transform.translation));
 	
@@ -275,12 +286,13 @@ void hdPhysicsParticleEmitter::StartNoSplit(const polygon_info_t& vars, const hd
 }
 
 
-// Vertices2Particles breaking code.
-//
-// These particle co-ords should be more closely aligned with the 
-// actual objects being broken apart; the particle making function
-// should be virtual; different implentations do what they need
-// to do.
+/*
+ * Vertices2Particles breaking code.
+ *
+ * These particle co-ords should be more closely aligned with the actual objects being broken
+ * apart; the particle making function should be virtual, and different implentations do what 
+ * they need to do depending on the effect that is required.
+ */
 void hdPhysicsParticleEmitter::Start(const polygon_info_t& vars)
 {
 	hdVec2 texDiff, texImpactPoint;
@@ -305,7 +317,7 @@ void hdPhysicsParticleEmitter::Start(const polygon_info_t& vars)
 			
 			if (rand() % 10 < 3)
 			{
-				// random midpoint between vertices[i] and vertices[i+1]
+				// pick a random midpoint between vertices[i] and vertices[i+1]
 				float midPointRatio = (float)hdRandom(0.25, 0.75);
 				hdVec3 midPoint = vars.vertices[i] + (midPointRatio * (vars.vertices[i1] - vars.vertices[i]));
 				hdVec2 texMidPoint = vars.texCoords[i] + (midPointRatio * (vars.texCoords[i1] - vars.texCoords[i]));
@@ -525,9 +537,7 @@ bool hdPhysicsParticleEmitter::MakeParticle(const particle_info_t& info)
 									 p->m_texture, 
 									 p->m_depth,
 									 1.0f);
-	
-	
-	
+
 	/* 
 	 * Particles explode away from the central touch point,
 	 * so we give them a linear velocity along the normal from
@@ -559,7 +569,6 @@ bool hdPhysicsParticleEmitter::MakeParticle(const particle_info_t& info)
 				p->m_physicsBody->SetLinearVelocity(b2Vec2(info.linearVelocity.x, info.linearVelocity.y));
 			}
 		}
-		//if (m_controller != NULL) m_controller->AddBody(p->m_physicsBody);
 	}
 	else
 	{
@@ -583,7 +592,6 @@ bool hdPhysicsParticleEmitter::MakeParticle(const particle_info_t& info)
 	p->life = m_duration - 0.1f;
 	return true;
 }
-
 
 
 void hdPhysicsParticleEmitter::Step(hdTimeInterval elapsed)
@@ -610,22 +618,19 @@ void hdPhysicsParticleEmitter::Step(hdTimeInterval elapsed)
 		p->life -= elapsed;
 	}
 }
-
-
  
 
 void hdPhysicsParticleEmitter::Draw() const
 {
-#if 1
 	hdPhysicsParticle *p;
 	hdTexture *currTexture;
 	int lastVertexCount;
+
 	/*
 	 * Speed up shard drawing by doing the following:
 	 * - Only call glEnd() when it is absolutely necessary.
 	 * - Only bind a new texture when the shard texture changes.
 	 */
-	
 	glCullFace(GL_FRONT);
 	glEnable(GL_CULL_FACE);	
 	glEnable(GL_TEXTURE_2D);
@@ -758,13 +763,6 @@ void hdPhysicsParticleEmitter::Draw() const
     
 	glDisable(GL_TEXTURE_2D);
 	glDisable(GL_CULL_FACE);
-	
-#else
-	glCullFace(GL_FRONT);
-	glEnable(GL_CULL_FACE);
-	m_particles->Map(&hdPhysicsParticle::Draw);
-	glDisable(GL_CULL_FACE);
-#endif
 }
 
 
