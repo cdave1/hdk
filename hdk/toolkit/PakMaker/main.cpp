@@ -8,8 +8,6 @@
 
 int main (int argc, char * const argv[]) 
 {
-	
-	// Two args:
 	// - dest folder, absolute path.
 	// - Input strings file
 	if (argc <= 1)
@@ -17,18 +15,22 @@ int main (int argc, char * const argv[])
 		//PakLoader_CreatePak("/Users/david/Documents/Projects/TotemGames/GameResources/", 
 		//					"/Users/david/Documents/Projects/TotemGames/GameResources/towersmash.manifest");
 		
-		PakLoader_TestPak("/Users/david/Documents/Projects/TotemGames/GameResources/", "Scripts/en/smashed.strings");
+		PakLoader_TestPak("/Users/davidpetrie/Dropbox/Hackdirt/TotemGames/res/BaseDir/", "Scripts/en/smashed.strings");
 		
 		
-		PakLoader_TestPak("/Users/david/Documents/Projects/TotemGames/GameResources/", "Interface/hd_logo1_512.png");
-		PakLoader_TestPak("/Users/david/Documents/Projects/TotemGames/GameResources/", "Fonts/bebas8.f");
-		PakLoader_TestPak("/Users/david/Documents/Projects/TotemGames/GameResources/", "Fonts/bebas10.f");		
-		PakLoader_TestPak("/Users/david/Documents/Projects/TotemGames/GameResources/", "Fonts/bebas11.f");
-		PakLoader_TestPak("/Users/david/Documents/Projects/TotemGames/GameResources/", "Fonts/bebas12.f");
-		PakLoader_TestPak("/Users/david/Documents/Projects/TotemGames/GameResources/", "Fonts/bebas14.f");
-		PakLoader_TestPak("/Users/david/Documents/Projects/TotemGames/GameResources/", "Fonts/bebas16.f");
+		PakLoader_TestPak("/Users/davidpetrie/Dropbox/Hackdirt/TotemGames/res/BaseDir/", "Interface/hd_logo1_512.png");
+		PakLoader_TestPak("/Users/davidpetrie/Dropbox/Hackdirt/TotemGames/res/BaseDir/", "Fonts/bebas8.f");
+		PakLoader_TestPak("/Users/davidpetrie/Dropbox/Hackdirt/TotemGames/res/BaseDir/", "Fonts/bebas10.f");
+		PakLoader_TestPak("/Users/davidpetrie/Dropbox/Hackdirt/TotemGames/res/BaseDir/", "Fonts/bebas11.f");
+		PakLoader_TestPak("/Users/davidpetrie/Dropbox/Hackdirt/TotemGames/res/BaseDir/", "Fonts/bebas12.f");
+		PakLoader_TestPak("/Users/davidpetrie/Dropbox/Hackdirt/TotemGames/res/BaseDir/", "Fonts/bebas14.f");
+		PakLoader_TestPak("/Users/davidpetrie/Dropbox/Hackdirt/TotemGames/res/BaseDir/", "Fonts/bebas16.f");
 		
 	}
+    else if (argc == 3) {
+		hdPrintf("Creating Pak...\n");
+		PakLoader_CreatePak("", argv[argc-2], argv[argc-1]);
+    }
 	else if (argc == 4)
 	{
 		hdPrintf("Creating Pak...\n");

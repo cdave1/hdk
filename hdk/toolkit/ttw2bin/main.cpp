@@ -32,8 +32,6 @@ int main (int argc, char * const argv[])
 				totemWorldManager::Instance()->SaveTotemWorldBinary(tw, src);
 				delete tw;
 			}
-			
-			
 		}
 	}
     return 0;
