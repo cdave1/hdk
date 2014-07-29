@@ -24,7 +24,8 @@
 #ifndef _HD_MATH_SERIALIZABLE_
 #define _HD_MATH_SERIALIZABLE_
 
-#include "hdMath/hdMathCommon.h"
+#include <hdk/hdMath/hdMathCommon.h>
+
 typedef float float32;
 #include <boost/archive/text_iarchive.hpp>
 #include <boost/archive/text_oarchive.hpp>

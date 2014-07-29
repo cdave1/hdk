@@ -35,9 +35,9 @@
 #define kMaxFonts 128
 #define kMaxFilePathSize 256
 
-#include "hdGraphicsLibrary.h"
-#include "hdCore/hdFileSystem.h"
-#include "hdInterface/hdFont.h"
+#include <hdk/hdGraphicsLibrary.h>
+#include <hdk/hdCore/hdFileSystem.h>
+#include <hdk/hdInterface/hdFont.h>
 
 class hdFontManager
 {

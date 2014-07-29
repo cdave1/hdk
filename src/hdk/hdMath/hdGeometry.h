@@ -20,8 +20,8 @@
 #ifndef _HD_GEOMETRY_H_
 #define _HD_GEOMETRY_H_
 
-#include "hdMath/hdMathCommon.h"
-#include "hdMath/hdMatrix.h"
+#include <hdk/hdMath/hdMathCommon.h>
+#include <hdk/hdMath/hdMatrix.h>
 
 typedef struct hdTransform;
 

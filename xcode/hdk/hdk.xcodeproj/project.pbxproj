@@ -253,7 +253,6 @@
 		E4ADE3AA19874AEF0039FF7A /* hdk.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39A19874AEF0039FF7A /* hdk.h */; };
 		E4ADE3AB19874AEF0039FF7A /* hdk_min.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39B19874AEF0039FF7A /* hdk_min.h */; };
 		E4ADE3AC19874AEF0039FF7A /* hdLevelEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39C19874AEF0039FF7A /* hdLevelEditor.h */; };
-		E4ADE3AD19874AEF0039FF7A /* hdLibs.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39D19874AEF0039FF7A /* hdLibs.h */; };
 		E4ADE3AE19874AEF0039FF7A /* hdMath.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39E19874AEF0039FF7A /* hdMath.h */; };
 		E4ADE3AF19874AEF0039FF7A /* hdScripting.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39F19874AEF0039FF7A /* hdScripting.h */; };
 		E4ADE3B019874AEF0039FF7A /* hdSoundSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE3A019874AEF0039FF7A /* hdSoundSystem.h */; };
@@ -334,10 +333,7 @@
 		E4ADE4E5198752990039FF7A /* hdMesh.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE40B198752980039FF7A /* hdMesh.h */; };
 		E4ADE4EA198752990039FF7A /* hdMeshPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4ADE410198752980039FF7A /* hdMeshPolygon.cpp */; };
 		E4ADE4EB198752990039FF7A /* hdMeshPolygon.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE411198752980039FF7A /* hdMeshPolygon.h */; };
-		E4ADE4EC198752990039FF7A /* hdOpenGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4ADE412198752980039FF7A /* hdOpenGL.cpp */; };
 		E4ADE4ED198752990039FF7A /* hdOpenGLES.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4ADE413198752980039FF7A /* hdOpenGLES.cpp */; };
-		E4ADE4EE198752990039FF7A /* hdOpenGLES.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE414198752980039FF7A /* hdOpenGLES.h */; };
-		E4ADE4EF198752990039FF7A /* hdOpenGLFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE415198752980039FF7A /* hdOpenGLFunctions.h */; };
 		E4ADE4F0198752990039FF7A /* hdPNGLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE416198752980039FF7A /* hdPNGLoader.h */; };
 		E4ADE4F1198752990039FF7A /* hdPNGLoader.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4ADE417198752980039FF7A /* hdPNGLoader.mm */; };
 		E4ADE4F2198752990039FF7A /* hdPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4ADE418198752980039FF7A /* hdPolygon.cpp */; };
@@ -776,7 +772,6 @@
 		E4ADE39A19874AEF0039FF7A /* hdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdk.h; sourceTree = "<group>"; };
 		E4ADE39B19874AEF0039FF7A /* hdk_min.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdk_min.h; sourceTree = "<group>"; };
 		E4ADE39C19874AEF0039FF7A /* hdLevelEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdLevelEditor.h; sourceTree = "<group>"; };
-		E4ADE39D19874AEF0039FF7A /* hdLibs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdLibs.h; sourceTree = "<group>"; };
 		E4ADE39E19874AEF0039FF7A /* hdMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdMath.h; sourceTree = "<group>"; };
 		E4ADE39F19874AEF0039FF7A /* hdScripting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdScripting.h; sourceTree = "<group>"; };
 		E4ADE3A019874AEF0039FF7A /* hdSoundSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdSoundSystem.h; sourceTree = "<group>"; };
@@ -858,10 +853,7 @@
 		E4ADE40B198752980039FF7A /* hdMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdMesh.h; sourceTree = "<group>"; };
 		E4ADE410198752980039FF7A /* hdMeshPolygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdMeshPolygon.cpp; sourceTree = "<group>"; };
 		E4ADE411198752980039FF7A /* hdMeshPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdMeshPolygon.h; sourceTree = "<group>"; };
-		E4ADE412198752980039FF7A /* hdOpenGL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdOpenGL.cpp; sourceTree = "<group>"; };
 		E4ADE413198752980039FF7A /* hdOpenGLES.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdOpenGLES.cpp; sourceTree = "<group>"; };
-		E4ADE414198752980039FF7A /* hdOpenGLES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdOpenGLES.h; sourceTree = "<group>"; };
-		E4ADE415198752980039FF7A /* hdOpenGLFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdOpenGLFunctions.h; sourceTree = "<group>"; };
 		E4ADE416198752980039FF7A /* hdPNGLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdPNGLoader.h; sourceTree = "<group>"; };
 		E4ADE417198752980039FF7A /* hdPNGLoader.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = hdPNGLoader.mm; sourceTree = "<group>"; };
 		E4ADE418198752980039FF7A /* hdPolygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdPolygon.cpp; sourceTree = "<group>"; };
@@ -1521,7 +1513,6 @@
 				E4ADE39A19874AEF0039FF7A /* hdk.h */,
 				E4ADE39B19874AEF0039FF7A /* hdk_min.h */,
 				E4ADE39C19874AEF0039FF7A /* hdLevelEditor.h */,
-				E4ADE39D19874AEF0039FF7A /* hdLibs.h */,
 				E4ADE39E19874AEF0039FF7A /* hdMath.h */,
 				E4ADE39F19874AEF0039FF7A /* hdScripting.h */,
 				E4ADE3A019874AEF0039FF7A /* hdSoundSystem.h */,
@@ -1673,10 +1664,7 @@
 				E4ADE40B198752980039FF7A /* hdMesh.h */,
 				E4ADE410198752980039FF7A /* hdMeshPolygon.cpp */,
 				E4ADE411198752980039FF7A /* hdMeshPolygon.h */,
-				E4ADE412198752980039FF7A /* hdOpenGL.cpp */,
 				E4ADE413198752980039FF7A /* hdOpenGLES.cpp */,
-				E4ADE414198752980039FF7A /* hdOpenGLES.h */,
-				E4ADE415198752980039FF7A /* hdOpenGLFunctions.h */,
 				E4ADE416198752980039FF7A /* hdPNGLoader.h */,
 				E4ADE417198752980039FF7A /* hdPNGLoader.mm */,
 				E4ADE418198752980039FF7A /* hdPolygon.cpp */,
@@ -2056,7 +2044,6 @@
 				E4ADE4AB198752990039FF7A /* hdTypedefList.h in Headers */,
 				E44B5A681986026B001F9862 /* level.hpp in Headers */,
 				E4283800117005AB008E3594 /* b2Contact.h in Headers */,
-				E4ADE4EE198752990039FF7A /* hdOpenGLES.h in Headers */,
 				E4283802117005AB008E3594 /* b2ContactSolver.h in Headers */,
 				E4283804117005AB008E3594 /* b2EdgeAndCircleContact.h in Headers */,
 				E4283805117005AB008E3594 /* b2NullContact.h in Headers */,
@@ -2233,7 +2220,6 @@
 				E4F36E8D1171699800792A2D /* remove_whitespace.hpp in Headers */,
 				E4ADE3B019874AEF0039FF7A /* hdSoundSystem.h in Headers */,
 				E44B5A6E1986026B001F9862 /* map.hpp in Headers */,
-				E4ADE4EF198752990039FF7A /* hdOpenGLFunctions.h in Headers */,
 				E4F36E8E1171699800792A2D /* transform_width.hpp in Headers */,
 				E44B5A881986026B001F9862 /* split_member.hpp in Headers */,
 				E4ADE55A198752990039FF7A /* hdSound.h in Headers */,
@@ -2301,7 +2287,6 @@
 				63CA778A119678090010C802 /* system_error.hpp in Headers */,
 				E4ADE4F6198752990039FF7A /* hdTexture.h in Headers */,
 				63CA7791119678090010C802 /* filesystem.hpp in Headers */,
-				E4ADE3AD19874AEF0039FF7A /* hdLibs.h in Headers */,
 				E44B5B2C198602AC001F9862 /* local_free_on_destruction.hpp in Headers */,
 				E4ADE525198752990039FF7A /* hdInterfaceController.h in Headers */,
 				E44B5A601986026B001F9862 /* hash_map.hpp in Headers */,
@@ -2399,7 +2384,6 @@
 				E4ADE50F198752990039FF7A /* hdFontPolygon.cpp in Sources */,
 				E4ADE49C198752990039FF7A /* hdAnimationTimingFunction.cpp in Sources */,
 				E4ADE51A198752990039FF7A /* hdIBImage.cpp in Sources */,
-				E4ADE4EC198752990039FF7A /* hdOpenGL.cpp in Sources */,
 				E44B5AF719860288001F9862 /* binary_oarchive.cpp in Sources */,
 				E4ADE50B198752990039FF7A /* hdFont.cpp in Sources */,
 				E44B5AFD19860288001F9862 /* codecvt_null.cpp in Sources */,

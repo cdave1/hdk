@@ -20,8 +20,8 @@
 #ifndef _HD_FONT_POLYGON_H_
 #define _HD_FONT_POLYGON_H_
 
-#include "hdInterface/hdReceiver.h"
-#include "hdInterface/hdFontManager.h"
+#include <hdk/hdInterface/hdReceiver.h>
+#include <hdk/hdInterface/hdFontManager.h>
 
 typedef struct
 {

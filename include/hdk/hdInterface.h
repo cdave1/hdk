@@ -20,22 +20,22 @@
 #ifndef _HD_INTERFACE_H_
 #define _HD_INTERFACE_H_
 
-#include "hdInterface/hdInterfaceEnums.h"
-#include "hdInterface/hdReceiver.h"
+#include <hdk/hdInterface/hdInterfaceEnums.h>
+#include <hdk/hdInterface/hdReceiver.h>
 
-#include "hdInterface/hdButton.h"
-#include "hdInterface/hdUIContainer.h"
-#include "hdInterface/hdInterfaceLayer.h"
-#include "hdInterface/hdInterfaceController.h"
+#include <hdk/hdInterface/hdButton.h>
+#include <hdk/hdInterface/hdUIContainer.h>
+#include <hdk/hdInterface/hdInterfaceLayer.h>
+#include <hdk/hdInterface/hdInterfaceController.h>
 
-#include "hdInterface/hdFont.h"
-#include "hdInterface/hdFontPolygon.h"
-#include "hdInterface/hdFontManager.h"
+#include <hdk/hdInterface/hdFont.h>
+#include <hdk/hdInterface/hdFontPolygon.h>
+#include <hdk/hdInterface/hdFontManager.h>
 
-#include "hdInterface/hdUIImage.h"
-#include "hdInterface/hdCheckbox.h"
+#include <hdk/hdInterface/hdUIImage.h>
+#include <hdk/hdInterface/hdCheckbox.h>
 
-#include "hdInterface/hdInterfaceContext.h"
-#include "hdInterface/hdViewController.h"
+#include <hdk/hdInterface/hdInterfaceContext.h>
+#include <hdk/hdInterface/hdViewController.h>
 
 #endif

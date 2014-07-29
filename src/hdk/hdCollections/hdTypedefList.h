@@ -20,7 +20,7 @@
 #ifndef HD_COLLECTIONS_TYPEDEF_LIST_H
 #define HD_COLLECTIONS_TYPEDEF_LIST_H
 
-#include "hdCollections/hdCollectionSettings.h"
+#include <hdk/hdCollections/hdCollectionSettings.h>
 
 template<typename T, int Max>
 class hdTypedefList

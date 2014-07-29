@@ -20,7 +20,7 @@
 #ifndef _HD_SCALE_ACTION_HD_
 #define _HD_SCALE_ACTION_HD_
 
-#include <hdAnimation/hdAction.h>
+#include <hdk/hdAnimation/hdAction.h>
 
 class hdScaleAction : public hdAction
 {

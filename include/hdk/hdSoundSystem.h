@@ -20,8 +20,8 @@
 #ifndef HD_SOUND_SYSTEM_H
 #define HD_SOUND_SYSTEM_H
 
-#include "hdSound/hdSoundSystemEnums.h"
-#include "hdSound/hdSound.h"
-#include "hdSound/hdSoundManager.h"
+#include <hdk/hdSound/hdSoundSystemEnums.h>
+#include <hdk/hdSound/hdSound.h>
+#include <hdk/hdSound/hdSoundManager.h>
 
 #endif

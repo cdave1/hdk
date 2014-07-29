@@ -20,8 +20,8 @@
 #ifndef _HD_UI_IMAGE_H_
 #define _HD_UI_IMAGE_H_
 
-#include "hdInterface/hdReceiver.h"
-#include "hdCollections.h"
+#include <hdk/hdInterface/hdReceiver.h>
+#include <hdk/hdCollections.h>
 
 
 class hdUIImage : public hdReceiver

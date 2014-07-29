@@ -540,7 +540,7 @@ inline b2Vec2 b2Cross(float32 s, const b2Vec2& a)
 
 #if TARGET_OS_IPHONE
 #warning "loading b2 optimizations"
-#include "hdGame/b2Opt.h"
+#include <hdk/hdGame/b2Opt.h>
 //#undef B2_OPTIMIZED_FUNCTIONS_H
 #endif
 

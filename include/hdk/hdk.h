@@ -20,16 +20,16 @@
 #ifndef HDK_H
 #define HDK_H
 
-#include "hdCore.h"
-#include "hdMath.h"
-#include "hdCollections.h"
-#include "hdGame.h"
-#include "hdGraphicsLibrary.h"
-#include "hdAnimationEngine.h"
-#include "hdSoundSystem.h"
-#include "hdInterface.h"
-#include "hdEffects.h"
-#include "hdLibs.h"
-#include "hdScripting.h"
+#include <hdk/hdCore.h>
+#include <hdk/hdMath.h>
+#include <hdk/hdCollections.h>
+#include <hdk/hdGame.h>
+#include <hdk/hdGraphicsLibrary.h>
+#include <hdk/hdAnimationEngine.h>
+#include <hdk/hdSoundSystem.h>
+#include <hdk/hdInterface.h>
+#include <hdk/hdEffects.h>
+#include <hdk/hdLibs.h>
+#include <hdk/hdScripting.h>
 
 #endif

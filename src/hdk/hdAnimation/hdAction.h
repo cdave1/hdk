@@ -20,8 +20,8 @@
 #ifndef _HD_ACTION_H_
 #define _HD_ACTION_H_
 
-#include "hdGame/hdGameObject.h"
-#include "hdAnimation/hdAnimationTimingFunction.h"
+#include <hdk/hdGame/hdGameObject.h>
+#include <hdk/hdAnimation/hdAnimationTimingFunction.h>
 
 class hdAction
 {

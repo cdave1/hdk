@@ -20,8 +20,8 @@
 #ifndef _HD_INTERFACE_CONTAINER_H_
 #define _HD_INTERFACE_CONTAINER_H_
 
-#include "hdInterface/hdReceiver.h"
-#include "hdCollections.h"
+#include <hdk/hdInterface/hdReceiver.h>
+#include <hdk/hdCollections.h>
 
 class hdUIContainer : public hdReceiver
 {

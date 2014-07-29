@@ -53,8 +53,8 @@ typedef double GLdouble;
 #define hdglMaxTexSize 2048
 #endif
 
-#include "hdCore/hdSystemSettings.h"
-#include "hdGraphicsLibrary/hdTexture.h"
+#include <hdk/hdCore/hdSystemSettings.h>
+#include <hdk/hdGraphicsLibrary/hdTexture.h>
 
 #define hdglError(_hdglUserinfo__) if (hdglErrorCode(_hdglUserinfo__)) hdPrintf("\t (%s) line %d in function %s\n", __FILE__,__LINE__,__FUNCTION__)
 

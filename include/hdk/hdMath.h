@@ -20,9 +20,9 @@
 #ifndef HD_MATH_H
 #define HD_MATH_H
 
-#include "hdMath/hdMathCommon.h"
-#include "hdMath/hdMatrix.h"
-#include "hdMath/hdGeometry.h"
-#include "hdMath/hdMathSerializable.h"
+#include <hdk/hdMath/hdMathCommon.h>
+#include <hdk/hdMath/hdMatrix.h>
+#include <hdk/hdMath/hdGeometry.h>
+#include <hdk/hdMath/hdMathSerializable.h>
 
 #endif

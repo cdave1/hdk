@@ -22,8 +22,8 @@
 #ifndef _HD_ORTHOGRAPHIC_PROJECTION_H_
 #define _HD_ORTHOGRAPHIC_PROJECTION_H_
 
-#include "hdGame/hdGameWorld.h"
-#include "hdGame/hdGameObject.h"
+#include <hdk/hdGame/hdGameWorld.h>
+#include <hdk/hdGame/hdGameObject.h>
 
 class hdOrthographicProjection : public hdGameObject
 {
