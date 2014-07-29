@@ -6,12 +6,27 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		E4ADE2A01987207D0039FF7A /* Framework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E4ADE2A11987207D0039FF7A /* Build configuration list for PBXAggregateTarget "Framework" */;
+			buildPhases = (
+				E4ADE2A61987209B0039FF7A /* Multiplatform Build */,
+			);
+			dependencies = (
+				E4ADE2A51987208B0039FF7A /* PBXTargetDependency */,
+			);
+			name = Framework;
+			productName = Framework;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		6353FD2B1340079400AD7F1D /* hdMultiTouchViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6353FD291340079400AD7F1D /* hdMultiTouchViewController.h */; };
 		6353FD2D1340079400AD7F1D /* hdMultiTouchViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6353FD2A1340079400AD7F1D /* hdMultiTouchViewController.mm */; };
 		6384558911C8337300C421AB /* hdViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6384558711C8337300C421AB /* hdViewController.h */; };
 		6384558A11C8337300C421AB /* hdViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6384558811C8337300C421AB /* hdViewController.cpp */; };
-		63B351D611F821B100D20861 /* hdScripting.h in Headers */ = {isa = PBXBuildFile; fileRef = 63B351D511F821B100D20861 /* hdScripting.h */; };
+		63B351D611F821B100D20861 /* hdScripting.h in Headers */ = {isa = PBXBuildFile; fileRef = 63B351D511F821B100D20861 /* hdScripting.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63CA7786119678090010C802 /* config.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 63CA7771119678090010C802 /* config.hpp */; };
 		63CA7787119678090010C802 /* cygwin_error.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 63CA7772119678090010C802 /* cygwin_error.hpp */; };
 		63CA7788119678090010C802 /* error_code.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 63CA7773119678090010C802 /* error_code.hpp */; };
@@ -33,31 +48,31 @@
 		63FBC6B311C81C1C00C2377F /* hdIBLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FBC6A411C81C1C00C2377F /* hdIBLoader.h */; };
 		63FBC6B411C81C1C00C2377F /* hdIBLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63FBC6A511C81C1C00C2377F /* hdIBLoader.cpp */; };
 		63FBC6B511C81C1C00C2377F /* hdIBEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FBC6A611C81C1C00C2377F /* hdIBEnums.h */; };
-		63FBC6C611C81C2700C2377F /* hdIB.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FBC6C511C81C2700C2377F /* hdIB.h */; };
+		63FBC6C611C81C2700C2377F /* hdIB.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FBC6C511C81C2700C2377F /* hdIB.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		63FC26591184CEDC004BB47B /* hdThumbPad.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FC26571184CEDC004BB47B /* hdThumbPad.h */; };
 		63FC265A1184CEDC004BB47B /* hdThumbPad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63FC26581184CEDC004BB47B /* hdThumbPad.cpp */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
-		E41EA6171170810B00A30C8E /* hdCollections.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6111170810B00A30C8E /* hdCollections.h */; };
-		E41EA6181170810B00A30C8E /* hdk.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6121170810B00A30C8E /* hdk.h */; };
-		E41EA6191170810B00A30C8E /* hdInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6131170810B00A30C8E /* hdInterface.h */; };
-		E41EA61A1170810B00A30C8E /* hdMath.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6141170810B00A30C8E /* hdMath.h */; };
-		E41EA61B1170810B00A30C8E /* hdSoundSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6151170810B00A30C8E /* hdSoundSystem.h */; };
+		E41EA6171170810B00A30C8E /* hdCollections.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6111170810B00A30C8E /* hdCollections.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E41EA6181170810B00A30C8E /* hdk.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6121170810B00A30C8E /* hdk.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E41EA6191170810B00A30C8E /* hdInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6131170810B00A30C8E /* hdInterface.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E41EA61A1170810B00A30C8E /* hdMath.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6141170810B00A30C8E /* hdMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E41EA61B1170810B00A30C8E /* hdSoundSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6151170810B00A30C8E /* hdSoundSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E41EA6231170814A00A30C8E /* hdAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6221170814A00A30C8E /* hdAnimation.h */; };
-		E41EA6251170815200A30C8E /* hdAnimationEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6241170815200A30C8E /* hdAnimationEngine.h */; };
+		E41EA6251170815200A30C8E /* hdAnimationEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6241170815200A30C8E /* hdAnimationEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E41EA630117082D400A30C8E /* hdSound.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA62F117082D400A30C8E /* hdSound.h */; };
-		E41EA6321170831600A30C8E /* hdGame.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6311170831600A30C8E /* hdGame.h */; };
-		E41EA6341170834B00A30C8E /* hdCore.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6331170834B00A30C8E /* hdCore.h */; };
-		E41EA63C1170846E00A30C8E /* hdGraphicsLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA63B1170846E00A30C8E /* hdGraphicsLibrary.h */; };
+		E41EA6321170831600A30C8E /* hdGame.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6311170831600A30C8E /* hdGame.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E41EA6341170834B00A30C8E /* hdCore.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6331170834B00A30C8E /* hdCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E41EA63C1170846E00A30C8E /* hdGraphicsLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA63B1170846E00A30C8E /* hdGraphicsLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E41EA6401170859400A30C8E /* hdSoundSystemEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA63F1170859400A30C8E /* hdSoundSystemEnums.h */; };
 		E41EA642117085EF00A30C8E /* hdMusicPlayerInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA641117085EF00A30C8E /* hdMusicPlayerInterface.h */; };
 		E41EA66E1170899C00A30C8E /* hdMathCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA66D1170899C00A30C8E /* hdMathCommon.h */; };
 		E41EA75A11709B3600A30C8E /* hdFileSystemUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA75811709B3600A30C8E /* hdFileSystemUtils.h */; };
 		E41EA75B11709B3600A30C8E /* hdFileSystemUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E41EA75911709B3600A30C8E /* hdFileSystemUtils.cpp */; };
-		E41EA8601170A50E00A30C8E /* hdEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA85F1170A50E00A30C8E /* hdEffects.h */; };
+		E41EA8601170A50E00A30C8E /* hdEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA85F1170A50E00A30C8E /* hdEffects.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E41EA8A61170A8C700A30C8E /* hdScreenSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E41EA8A51170A8C700A30C8E /* hdScreenSettings.cpp */; };
 		E41EA9AD1170B37000A30C8E /* hdMultiTouchView.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA9AB1170B37000A30C8E /* hdMultiTouchView.h */; };
 		E41EA9AE1170B37000A30C8E /* hdMultiTouchView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E41EA9AC1170B37000A30C8E /* hdMultiTouchView.mm */; };
-		E41EA9BA1170B4EF00A30C8E /* hdInput.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA9B91170B4EF00A30C8E /* hdInput.h */; };
+		E41EA9BA1170B4EF00A30C8E /* hdInput.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA9B91170B4EF00A30C8E /* hdInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E41EAA5F1170BCC000A30C8E /* hdAccelerometer.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EAA5D1170BCC000A30C8E /* hdAccelerometer.h */; };
 		E41EAA601170BCC000A30C8E /* hdiPhoneAccelerometer.mm in Sources */ = {isa = PBXBuildFile; fileRef = E41EAA5E1170BCC000A30C8E /* hdiPhoneAccelerometer.mm */; };
 		E42834B2116FF684008E3594 /* AppleOpenALSupport.c in Sources */ = {isa = PBXBuildFile; fileRef = E428341E116FF684008E3594 /* AppleOpenALSupport.c */; };
@@ -83,7 +98,7 @@
 		E42834C8116FF684008E3594 /* hdAnimationController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283435116FF684008E3594 /* hdAnimationController.cpp */; };
 		E42834C9116FF684008E3594 /* hdAnimationController.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283436116FF684008E3594 /* hdAnimationController.h */; };
 		E42834CC116FF684008E3594 /* hdAnimationTimingFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283439116FF684008E3594 /* hdAnimationTimingFunction.h */; };
-		E42834CE116FF684008E3594 /* hdFunctionAction.h in Headers */ = {isa = PBXBuildFile; fileRef = E428343B116FF684008E3594 /* hdFunctionAction.h */; };
+		E42834CE116FF684008E3594 /* hdFunctionAction.h in Headers */ = {isa = PBXBuildFile; fileRef = E428343B116FF684008E3594 /* hdFunctionAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E42834CF116FF684008E3594 /* hdRotationAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428343C116FF684008E3594 /* hdRotationAction.cpp */; };
 		E42834D0116FF684008E3594 /* hdRotationAction.h in Headers */ = {isa = PBXBuildFile; fileRef = E428343D116FF684008E3594 /* hdRotationAction.h */; };
 		E42834D1116FF684008E3594 /* hdScaleAction.h in Headers */ = {isa = PBXBuildFile; fileRef = E428343E116FF684008E3594 /* hdScaleAction.h */; };
@@ -273,657 +288,201 @@
 		E428398911701BBE008E3594 /* hdk_prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = E428398811701BBE008E3594 /* hdk_prefix.pch */; };
 		E42839EC11704C6B008E3594 /* hdScreenSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = E42839EA11704C6B008E3594 /* hdScreenSettings.h */; };
 		E44B59CE198600E2001F9862 /* codecvt_error_category.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B59C5198600E2001F9862 /* codecvt_error_category.cpp */; };
-		E44B59CF198600E2001F9862 /* codecvt_error_category.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B59C5198600E2001F9862 /* codecvt_error_category.cpp */; };
 		E44B59D0198600E2001F9862 /* operations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B59C6198600E2001F9862 /* operations.cpp */; };
-		E44B59D1198600E2001F9862 /* operations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B59C6198600E2001F9862 /* operations.cpp */; };
 		E44B59D2198600E2001F9862 /* path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B59C7198600E2001F9862 /* path.cpp */; };
-		E44B59D3198600E2001F9862 /* path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B59C7198600E2001F9862 /* path.cpp */; };
 		E44B59D4198600E2001F9862 /* path_traits.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B59C8198600E2001F9862 /* path_traits.cpp */; };
-		E44B59D5198600E2001F9862 /* path_traits.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B59C8198600E2001F9862 /* path_traits.cpp */; };
 		E44B59D6198600E2001F9862 /* portability.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B59C9198600E2001F9862 /* portability.cpp */; };
-		E44B59D7198600E2001F9862 /* portability.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B59C9198600E2001F9862 /* portability.cpp */; };
 		E44B59D8198600E2001F9862 /* unique_path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B59CA198600E2001F9862 /* unique_path.cpp */; };
-		E44B59D9198600E2001F9862 /* unique_path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B59CA198600E2001F9862 /* unique_path.cpp */; };
 		E44B59DA198600E2001F9862 /* utf8_codecvt_facet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B59CB198600E2001F9862 /* utf8_codecvt_facet.cpp */; };
-		E44B59DB198600E2001F9862 /* utf8_codecvt_facet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B59CB198600E2001F9862 /* utf8_codecvt_facet.cpp */; };
 		E44B5A2A1986026B001F9862 /* access.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59E61986026B001F9862 /* access.hpp */; };
-		E44B5A2B1986026B001F9862 /* access.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59E61986026B001F9862 /* access.hpp */; };
 		E44B5A2C1986026B001F9862 /* array.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59E71986026B001F9862 /* array.hpp */; };
-		E44B5A2D1986026B001F9862 /* array.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59E71986026B001F9862 /* array.hpp */; };
 		E44B5A2E1986026B001F9862 /* assume_abstract.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59E81986026B001F9862 /* assume_abstract.hpp */; };
-		E44B5A2F1986026B001F9862 /* assume_abstract.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59E81986026B001F9862 /* assume_abstract.hpp */; };
 		E44B5A301986026B001F9862 /* base_object.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59E91986026B001F9862 /* base_object.hpp */; };
-		E44B5A311986026B001F9862 /* base_object.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59E91986026B001F9862 /* base_object.hpp */; };
 		E44B5A321986026B001F9862 /* binary_object.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59EA1986026B001F9862 /* binary_object.hpp */; };
-		E44B5A331986026B001F9862 /* binary_object.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59EA1986026B001F9862 /* binary_object.hpp */; };
 		E44B5A341986026B001F9862 /* bitset.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59EB1986026B001F9862 /* bitset.hpp */; };
-		E44B5A351986026B001F9862 /* bitset.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59EB1986026B001F9862 /* bitset.hpp */; };
 		E44B5A361986026B001F9862 /* collection_size_type.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59EC1986026B001F9862 /* collection_size_type.hpp */; };
-		E44B5A371986026B001F9862 /* collection_size_type.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59EC1986026B001F9862 /* collection_size_type.hpp */; };
 		E44B5A381986026B001F9862 /* collection_traits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59ED1986026B001F9862 /* collection_traits.hpp */; };
-		E44B5A391986026B001F9862 /* collection_traits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59ED1986026B001F9862 /* collection_traits.hpp */; };
 		E44B5A3A1986026B001F9862 /* collections_load_imp.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59EE1986026B001F9862 /* collections_load_imp.hpp */; };
-		E44B5A3B1986026B001F9862 /* collections_load_imp.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59EE1986026B001F9862 /* collections_load_imp.hpp */; };
 		E44B5A3C1986026B001F9862 /* collections_save_imp.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59EF1986026B001F9862 /* collections_save_imp.hpp */; };
-		E44B5A3D1986026B001F9862 /* collections_save_imp.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59EF1986026B001F9862 /* collections_save_imp.hpp */; };
 		E44B5A3E1986026B001F9862 /* complex.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59F01986026B001F9862 /* complex.hpp */; };
-		E44B5A3F1986026B001F9862 /* complex.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59F01986026B001F9862 /* complex.hpp */; };
 		E44B5A401986026B001F9862 /* config.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59F11986026B001F9862 /* config.hpp */; };
-		E44B5A411986026B001F9862 /* config.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59F11986026B001F9862 /* config.hpp */; };
 		E44B5A421986026B001F9862 /* deque.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59F21986026B001F9862 /* deque.hpp */; };
-		E44B5A431986026B001F9862 /* deque.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59F21986026B001F9862 /* deque.hpp */; };
 		E44B5A441986026B001F9862 /* get_data.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59F41986026B001F9862 /* get_data.hpp */; };
-		E44B5A451986026B001F9862 /* get_data.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59F41986026B001F9862 /* get_data.hpp */; };
 		E44B5A461986026B001F9862 /* shared_count_132.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59F51986026B001F9862 /* shared_count_132.hpp */; };
-		E44B5A471986026B001F9862 /* shared_count_132.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59F51986026B001F9862 /* shared_count_132.hpp */; };
 		E44B5A481986026B001F9862 /* shared_ptr_132.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59F61986026B001F9862 /* shared_ptr_132.hpp */; };
-		E44B5A491986026B001F9862 /* shared_ptr_132.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59F61986026B001F9862 /* shared_ptr_132.hpp */; };
 		E44B5A4A1986026B001F9862 /* shared_ptr_nmt_132.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59F71986026B001F9862 /* shared_ptr_nmt_132.hpp */; };
-		E44B5A4B1986026B001F9862 /* shared_ptr_nmt_132.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59F71986026B001F9862 /* shared_ptr_nmt_132.hpp */; };
 		E44B5A4C1986026B001F9862 /* stack_constructor.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59F81986026B001F9862 /* stack_constructor.hpp */; };
-		E44B5A4D1986026B001F9862 /* stack_constructor.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59F81986026B001F9862 /* stack_constructor.hpp */; };
 		E44B5A4E1986026B001F9862 /* ephemeral.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59F91986026B001F9862 /* ephemeral.hpp */; };
-		E44B5A4F1986026B001F9862 /* ephemeral.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59F91986026B001F9862 /* ephemeral.hpp */; };
 		E44B5A501986026B001F9862 /* export.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59FA1986026B001F9862 /* export.hpp */; };
-		E44B5A511986026B001F9862 /* export.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59FA1986026B001F9862 /* export.hpp */; };
 		E44B5A521986026B001F9862 /* extended_type_info.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59FB1986026B001F9862 /* extended_type_info.hpp */; };
-		E44B5A531986026B001F9862 /* extended_type_info.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59FB1986026B001F9862 /* extended_type_info.hpp */; };
 		E44B5A541986026B001F9862 /* extended_type_info_no_rtti.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59FC1986026B001F9862 /* extended_type_info_no_rtti.hpp */; };
-		E44B5A551986026B001F9862 /* extended_type_info_no_rtti.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59FC1986026B001F9862 /* extended_type_info_no_rtti.hpp */; };
 		E44B5A561986026B001F9862 /* extended_type_info_typeid.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59FD1986026B001F9862 /* extended_type_info_typeid.hpp */; };
-		E44B5A571986026B001F9862 /* extended_type_info_typeid.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59FD1986026B001F9862 /* extended_type_info_typeid.hpp */; };
 		E44B5A581986026B001F9862 /* factory.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59FE1986026B001F9862 /* factory.hpp */; };
-		E44B5A591986026B001F9862 /* factory.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59FE1986026B001F9862 /* factory.hpp */; };
 		E44B5A5A1986026B001F9862 /* force_include.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59FF1986026B001F9862 /* force_include.hpp */; };
-		E44B5A5B1986026B001F9862 /* force_include.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B59FF1986026B001F9862 /* force_include.hpp */; };
 		E44B5A5C1986026B001F9862 /* hash_collections_load_imp.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A001986026B001F9862 /* hash_collections_load_imp.hpp */; };
-		E44B5A5D1986026B001F9862 /* hash_collections_load_imp.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A001986026B001F9862 /* hash_collections_load_imp.hpp */; };
 		E44B5A5E1986026B001F9862 /* hash_collections_save_imp.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A011986026B001F9862 /* hash_collections_save_imp.hpp */; };
-		E44B5A5F1986026B001F9862 /* hash_collections_save_imp.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A011986026B001F9862 /* hash_collections_save_imp.hpp */; };
 		E44B5A601986026B001F9862 /* hash_map.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A021986026B001F9862 /* hash_map.hpp */; };
-		E44B5A611986026B001F9862 /* hash_map.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A021986026B001F9862 /* hash_map.hpp */; };
 		E44B5A621986026B001F9862 /* hash_set.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A031986026B001F9862 /* hash_set.hpp */; };
-		E44B5A631986026B001F9862 /* hash_set.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A031986026B001F9862 /* hash_set.hpp */; };
 		E44B5A641986026B001F9862 /* is_bitwise_serializable.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A041986026B001F9862 /* is_bitwise_serializable.hpp */; };
-		E44B5A651986026B001F9862 /* is_bitwise_serializable.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A041986026B001F9862 /* is_bitwise_serializable.hpp */; };
 		E44B5A661986026B001F9862 /* item_version_type.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A051986026B001F9862 /* item_version_type.hpp */; };
-		E44B5A671986026B001F9862 /* item_version_type.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A051986026B001F9862 /* item_version_type.hpp */; };
 		E44B5A681986026B001F9862 /* level.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A061986026B001F9862 /* level.hpp */; };
-		E44B5A691986026B001F9862 /* level.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A061986026B001F9862 /* level.hpp */; };
 		E44B5A6A1986026B001F9862 /* level_enum.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A071986026B001F9862 /* level_enum.hpp */; };
-		E44B5A6B1986026B001F9862 /* level_enum.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A071986026B001F9862 /* level_enum.hpp */; };
 		E44B5A6C1986026B001F9862 /* list.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A081986026B001F9862 /* list.hpp */; };
-		E44B5A6D1986026B001F9862 /* list.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A081986026B001F9862 /* list.hpp */; };
 		E44B5A6E1986026B001F9862 /* map.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A091986026B001F9862 /* map.hpp */; };
-		E44B5A6F1986026B001F9862 /* map.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A091986026B001F9862 /* map.hpp */; };
 		E44B5A701986026B001F9862 /* nvp.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A0A1986026B001F9862 /* nvp.hpp */; };
-		E44B5A711986026B001F9862 /* nvp.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A0A1986026B001F9862 /* nvp.hpp */; };
 		E44B5A721986026B001F9862 /* optional.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A0B1986026B001F9862 /* optional.hpp */; };
-		E44B5A731986026B001F9862 /* optional.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A0B1986026B001F9862 /* optional.hpp */; };
 		E44B5A741986026B001F9862 /* pfto.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A0C1986026B001F9862 /* pfto.hpp */; };
-		E44B5A751986026B001F9862 /* pfto.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A0C1986026B001F9862 /* pfto.hpp */; };
 		E44B5A761986026B001F9862 /* scoped_ptr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A0D1986026B001F9862 /* scoped_ptr.hpp */; };
-		E44B5A771986026B001F9862 /* scoped_ptr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A0D1986026B001F9862 /* scoped_ptr.hpp */; };
 		E44B5A781986026B001F9862 /* serialization.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A0E1986026B001F9862 /* serialization.hpp */; };
-		E44B5A791986026B001F9862 /* serialization.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A0E1986026B001F9862 /* serialization.hpp */; };
 		E44B5A7A1986026B001F9862 /* set.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A0F1986026B001F9862 /* set.hpp */; };
-		E44B5A7B1986026B001F9862 /* set.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A0F1986026B001F9862 /* set.hpp */; };
 		E44B5A7C1986026B001F9862 /* shared_ptr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A101986026B001F9862 /* shared_ptr.hpp */; };
-		E44B5A7D1986026B001F9862 /* shared_ptr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A101986026B001F9862 /* shared_ptr.hpp */; };
 		E44B5A7E1986026B001F9862 /* shared_ptr_132.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A111986026B001F9862 /* shared_ptr_132.hpp */; };
-		E44B5A7F1986026B001F9862 /* shared_ptr_132.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A111986026B001F9862 /* shared_ptr_132.hpp */; };
 		E44B5A801986026B001F9862 /* singleton.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A121986026B001F9862 /* singleton.hpp */; };
-		E44B5A811986026B001F9862 /* singleton.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A121986026B001F9862 /* singleton.hpp */; };
 		E44B5A821986026B001F9862 /* slist.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A131986026B001F9862 /* slist.hpp */; };
-		E44B5A831986026B001F9862 /* slist.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A131986026B001F9862 /* slist.hpp */; };
 		E44B5A841986026B001F9862 /* smart_cast.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A141986026B001F9862 /* smart_cast.hpp */; };
-		E44B5A851986026B001F9862 /* smart_cast.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A141986026B001F9862 /* smart_cast.hpp */; };
 		E44B5A861986026B001F9862 /* split_free.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A151986026B001F9862 /* split_free.hpp */; };
-		E44B5A871986026B001F9862 /* split_free.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A151986026B001F9862 /* split_free.hpp */; };
 		E44B5A881986026B001F9862 /* split_member.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A161986026B001F9862 /* split_member.hpp */; };
-		E44B5A891986026B001F9862 /* split_member.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A161986026B001F9862 /* split_member.hpp */; };
 		E44B5A8A1986026B001F9862 /* state_saver.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A171986026B001F9862 /* state_saver.hpp */; };
-		E44B5A8B1986026B001F9862 /* state_saver.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A171986026B001F9862 /* state_saver.hpp */; };
 		E44B5A8C1986026B001F9862 /* static_warning.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A181986026B001F9862 /* static_warning.hpp */; };
-		E44B5A8D1986026B001F9862 /* static_warning.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A181986026B001F9862 /* static_warning.hpp */; };
 		E44B5A8E1986026B001F9862 /* string.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A191986026B001F9862 /* string.hpp */; };
-		E44B5A8F1986026B001F9862 /* string.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A191986026B001F9862 /* string.hpp */; };
 		E44B5A901986026B001F9862 /* strong_typedef.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A1A1986026B001F9862 /* strong_typedef.hpp */; };
-		E44B5A911986026B001F9862 /* strong_typedef.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A1A1986026B001F9862 /* strong_typedef.hpp */; };
 		E44B5A921986026B001F9862 /* throw_exception.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A1B1986026B001F9862 /* throw_exception.hpp */; };
-		E44B5A931986026B001F9862 /* throw_exception.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A1B1986026B001F9862 /* throw_exception.hpp */; };
 		E44B5A941986026B001F9862 /* tracking.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A1C1986026B001F9862 /* tracking.hpp */; };
-		E44B5A951986026B001F9862 /* tracking.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A1C1986026B001F9862 /* tracking.hpp */; };
 		E44B5A961986026B001F9862 /* tracking_enum.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A1D1986026B001F9862 /* tracking_enum.hpp */; };
-		E44B5A971986026B001F9862 /* tracking_enum.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A1D1986026B001F9862 /* tracking_enum.hpp */; };
 		E44B5A981986026B001F9862 /* traits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A1E1986026B001F9862 /* traits.hpp */; };
-		E44B5A991986026B001F9862 /* traits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A1E1986026B001F9862 /* traits.hpp */; };
 		E44B5A9A1986026B001F9862 /* type_info_implementation.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A1F1986026B001F9862 /* type_info_implementation.hpp */; };
-		E44B5A9B1986026B001F9862 /* type_info_implementation.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A1F1986026B001F9862 /* type_info_implementation.hpp */; };
 		E44B5A9C1986026B001F9862 /* utility.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A201986026B001F9862 /* utility.hpp */; };
-		E44B5A9D1986026B001F9862 /* utility.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A201986026B001F9862 /* utility.hpp */; };
 		E44B5A9E1986026B001F9862 /* valarray.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A211986026B001F9862 /* valarray.hpp */; };
-		E44B5A9F1986026B001F9862 /* valarray.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A211986026B001F9862 /* valarray.hpp */; };
 		E44B5AA01986026B001F9862 /* variant.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A221986026B001F9862 /* variant.hpp */; };
-		E44B5AA11986026B001F9862 /* variant.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A221986026B001F9862 /* variant.hpp */; };
 		E44B5AA21986026B001F9862 /* vector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A231986026B001F9862 /* vector.hpp */; };
-		E44B5AA31986026B001F9862 /* vector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A231986026B001F9862 /* vector.hpp */; };
 		E44B5AA41986026B001F9862 /* vector_135.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A241986026B001F9862 /* vector_135.hpp */; };
-		E44B5AA51986026B001F9862 /* vector_135.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A241986026B001F9862 /* vector_135.hpp */; };
 		E44B5AA61986026B001F9862 /* version.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A251986026B001F9862 /* version.hpp */; };
-		E44B5AA71986026B001F9862 /* version.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A251986026B001F9862 /* version.hpp */; };
 		E44B5AA81986026B001F9862 /* void_cast.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A261986026B001F9862 /* void_cast.hpp */; };
-		E44B5AA91986026B001F9862 /* void_cast.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A261986026B001F9862 /* void_cast.hpp */; };
 		E44B5AAA1986026B001F9862 /* void_cast_fwd.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A271986026B001F9862 /* void_cast_fwd.hpp */; };
-		E44B5AAB1986026B001F9862 /* void_cast_fwd.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A271986026B001F9862 /* void_cast_fwd.hpp */; };
 		E44B5AAC1986026B001F9862 /* weak_ptr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A281986026B001F9862 /* weak_ptr.hpp */; };
-		E44B5AAD1986026B001F9862 /* weak_ptr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A281986026B001F9862 /* weak_ptr.hpp */; };
 		E44B5AAE1986026B001F9862 /* wrapper.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A291986026B001F9862 /* wrapper.hpp */; };
-		E44B5AAF1986026B001F9862 /* wrapper.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5A291986026B001F9862 /* wrapper.hpp */; };
 		E44B5AD919860288001F9862 /* archive_exception.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AB119860288001F9862 /* archive_exception.cpp */; };
-		E44B5ADA19860288001F9862 /* archive_exception.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AB119860288001F9862 /* archive_exception.cpp */; };
 		E44B5ADB19860288001F9862 /* basic_archive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AB219860288001F9862 /* basic_archive.cpp */; };
-		E44B5ADC19860288001F9862 /* basic_archive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AB219860288001F9862 /* basic_archive.cpp */; };
 		E44B5ADD19860288001F9862 /* basic_iarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AB319860288001F9862 /* basic_iarchive.cpp */; };
-		E44B5ADE19860288001F9862 /* basic_iarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AB319860288001F9862 /* basic_iarchive.cpp */; };
 		E44B5ADF19860288001F9862 /* basic_iserializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AB419860288001F9862 /* basic_iserializer.cpp */; };
-		E44B5AE019860288001F9862 /* basic_iserializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AB419860288001F9862 /* basic_iserializer.cpp */; };
 		E44B5AE119860288001F9862 /* basic_oarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AB519860288001F9862 /* basic_oarchive.cpp */; };
-		E44B5AE219860288001F9862 /* basic_oarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AB519860288001F9862 /* basic_oarchive.cpp */; };
 		E44B5AE319860288001F9862 /* basic_oserializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AB619860288001F9862 /* basic_oserializer.cpp */; };
-		E44B5AE419860288001F9862 /* basic_oserializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AB619860288001F9862 /* basic_oserializer.cpp */; };
 		E44B5AE519860288001F9862 /* basic_pointer_iserializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AB719860288001F9862 /* basic_pointer_iserializer.cpp */; };
-		E44B5AE619860288001F9862 /* basic_pointer_iserializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AB719860288001F9862 /* basic_pointer_iserializer.cpp */; };
 		E44B5AE719860288001F9862 /* basic_pointer_oserializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AB819860288001F9862 /* basic_pointer_oserializer.cpp */; };
-		E44B5AE819860288001F9862 /* basic_pointer_oserializer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AB819860288001F9862 /* basic_pointer_oserializer.cpp */; };
 		E44B5AE919860288001F9862 /* basic_serializer_map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AB919860288001F9862 /* basic_serializer_map.cpp */; };
-		E44B5AEA19860288001F9862 /* basic_serializer_map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AB919860288001F9862 /* basic_serializer_map.cpp */; };
 		E44B5AEB19860288001F9862 /* basic_text_iprimitive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5ABA19860288001F9862 /* basic_text_iprimitive.cpp */; };
-		E44B5AEC19860288001F9862 /* basic_text_iprimitive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5ABA19860288001F9862 /* basic_text_iprimitive.cpp */; };
 		E44B5AED19860288001F9862 /* basic_text_oprimitive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5ABB19860288001F9862 /* basic_text_oprimitive.cpp */; };
-		E44B5AEE19860288001F9862 /* basic_text_oprimitive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5ABB19860288001F9862 /* basic_text_oprimitive.cpp */; };
 		E44B5AEF19860288001F9862 /* basic_text_wiprimitive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5ABC19860288001F9862 /* basic_text_wiprimitive.cpp */; };
-		E44B5AF019860288001F9862 /* basic_text_wiprimitive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5ABC19860288001F9862 /* basic_text_wiprimitive.cpp */; };
 		E44B5AF119860288001F9862 /* basic_text_woprimitive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5ABD19860288001F9862 /* basic_text_woprimitive.cpp */; };
-		E44B5AF219860288001F9862 /* basic_text_woprimitive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5ABD19860288001F9862 /* basic_text_woprimitive.cpp */; };
 		E44B5AF319860288001F9862 /* basic_xml_archive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5ABE19860288001F9862 /* basic_xml_archive.cpp */; };
-		E44B5AF419860288001F9862 /* basic_xml_archive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5ABE19860288001F9862 /* basic_xml_archive.cpp */; };
 		E44B5AF519860288001F9862 /* binary_iarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AC019860288001F9862 /* binary_iarchive.cpp */; };
-		E44B5AF619860288001F9862 /* binary_iarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AC019860288001F9862 /* binary_iarchive.cpp */; };
 		E44B5AF719860288001F9862 /* binary_oarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AC119860288001F9862 /* binary_oarchive.cpp */; };
-		E44B5AF819860288001F9862 /* binary_oarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AC119860288001F9862 /* binary_oarchive.cpp */; };
 		E44B5AF919860288001F9862 /* binary_wiarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AC219860288001F9862 /* binary_wiarchive.cpp */; };
-		E44B5AFA19860288001F9862 /* binary_wiarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AC219860288001F9862 /* binary_wiarchive.cpp */; };
 		E44B5AFB19860288001F9862 /* binary_woarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AC319860288001F9862 /* binary_woarchive.cpp */; };
-		E44B5AFC19860288001F9862 /* binary_woarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AC319860288001F9862 /* binary_woarchive.cpp */; };
 		E44B5AFD19860288001F9862 /* codecvt_null.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AC419860288001F9862 /* codecvt_null.cpp */; };
-		E44B5AFE19860288001F9862 /* codecvt_null.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AC419860288001F9862 /* codecvt_null.cpp */; };
 		E44B5AFF19860288001F9862 /* extended_type_info.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AC519860288001F9862 /* extended_type_info.cpp */; };
-		E44B5B0019860288001F9862 /* extended_type_info.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AC519860288001F9862 /* extended_type_info.cpp */; };
 		E44B5B0119860288001F9862 /* extended_type_info_no_rtti.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AC619860288001F9862 /* extended_type_info_no_rtti.cpp */; };
-		E44B5B0219860288001F9862 /* extended_type_info_no_rtti.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AC619860288001F9862 /* extended_type_info_no_rtti.cpp */; };
 		E44B5B0319860288001F9862 /* extended_type_info_typeid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AC719860288001F9862 /* extended_type_info_typeid.cpp */; };
-		E44B5B0419860288001F9862 /* extended_type_info_typeid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AC719860288001F9862 /* extended_type_info_typeid.cpp */; };
 		E44B5B0519860288001F9862 /* polymorphic_iarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AC819860288001F9862 /* polymorphic_iarchive.cpp */; };
-		E44B5B0619860288001F9862 /* polymorphic_iarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AC819860288001F9862 /* polymorphic_iarchive.cpp */; };
 		E44B5B0719860288001F9862 /* polymorphic_oarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AC919860288001F9862 /* polymorphic_oarchive.cpp */; };
-		E44B5B0819860288001F9862 /* polymorphic_oarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AC919860288001F9862 /* polymorphic_oarchive.cpp */; };
 		E44B5B0919860288001F9862 /* shared_ptr_helper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5ACA19860288001F9862 /* shared_ptr_helper.cpp */; };
-		E44B5B0A19860288001F9862 /* shared_ptr_helper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5ACA19860288001F9862 /* shared_ptr_helper.cpp */; };
 		E44B5B0B19860288001F9862 /* stl_port.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5ACB19860288001F9862 /* stl_port.cpp */; };
-		E44B5B0C19860288001F9862 /* stl_port.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5ACB19860288001F9862 /* stl_port.cpp */; };
 		E44B5B0D19860288001F9862 /* text_iarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5ACC19860288001F9862 /* text_iarchive.cpp */; };
-		E44B5B0E19860288001F9862 /* text_iarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5ACC19860288001F9862 /* text_iarchive.cpp */; };
 		E44B5B0F19860288001F9862 /* text_oarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5ACD19860288001F9862 /* text_oarchive.cpp */; };
-		E44B5B1019860288001F9862 /* text_oarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5ACD19860288001F9862 /* text_oarchive.cpp */; };
 		E44B5B1119860288001F9862 /* text_wiarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5ACE19860288001F9862 /* text_wiarchive.cpp */; };
-		E44B5B1219860288001F9862 /* text_wiarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5ACE19860288001F9862 /* text_wiarchive.cpp */; };
 		E44B5B1319860288001F9862 /* text_woarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5ACF19860288001F9862 /* text_woarchive.cpp */; };
-		E44B5B1419860288001F9862 /* text_woarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5ACF19860288001F9862 /* text_woarchive.cpp */; };
 		E44B5B1519860288001F9862 /* utf8_codecvt_facet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AD019860288001F9862 /* utf8_codecvt_facet.cpp */; };
-		E44B5B1619860288001F9862 /* utf8_codecvt_facet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AD019860288001F9862 /* utf8_codecvt_facet.cpp */; };
 		E44B5B1719860288001F9862 /* void_cast.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AD119860288001F9862 /* void_cast.cpp */; };
-		E44B5B1819860288001F9862 /* void_cast.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AD119860288001F9862 /* void_cast.cpp */; };
 		E44B5B1919860288001F9862 /* xml_archive_exception.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AD219860288001F9862 /* xml_archive_exception.cpp */; };
-		E44B5B1A19860288001F9862 /* xml_archive_exception.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AD219860288001F9862 /* xml_archive_exception.cpp */; };
 		E44B5B1B19860288001F9862 /* xml_grammar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AD319860288001F9862 /* xml_grammar.cpp */; };
-		E44B5B1C19860288001F9862 /* xml_grammar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AD319860288001F9862 /* xml_grammar.cpp */; };
 		E44B5B1D19860288001F9862 /* xml_iarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AD419860288001F9862 /* xml_iarchive.cpp */; };
-		E44B5B1E19860288001F9862 /* xml_iarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AD419860288001F9862 /* xml_iarchive.cpp */; };
 		E44B5B1F19860288001F9862 /* xml_oarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AD519860288001F9862 /* xml_oarchive.cpp */; };
-		E44B5B2019860288001F9862 /* xml_oarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AD519860288001F9862 /* xml_oarchive.cpp */; };
 		E44B5B2119860288001F9862 /* xml_wgrammar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AD619860288001F9862 /* xml_wgrammar.cpp */; };
-		E44B5B2219860288001F9862 /* xml_wgrammar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AD619860288001F9862 /* xml_wgrammar.cpp */; };
 		E44B5B2319860288001F9862 /* xml_wiarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AD719860288001F9862 /* xml_wiarchive.cpp */; };
-		E44B5B2419860288001F9862 /* xml_wiarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AD719860288001F9862 /* xml_wiarchive.cpp */; };
 		E44B5B2519860288001F9862 /* xml_woarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AD819860288001F9862 /* xml_woarchive.cpp */; };
-		E44B5B2619860288001F9862 /* xml_woarchive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5AD819860288001F9862 /* xml_woarchive.cpp */; };
 		E44B5B2A198602AC001F9862 /* error_code.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5B28198602AC001F9862 /* error_code.cpp */; };
-		E44B5B2B198602AC001F9862 /* error_code.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5B28198602AC001F9862 /* error_code.cpp */; };
 		E44B5B2C198602AC001F9862 /* local_free_on_destruction.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5B29198602AC001F9862 /* local_free_on_destruction.hpp */; };
-		E44B5B2D198602AC001F9862 /* local_free_on_destruction.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5B29198602AC001F9862 /* local_free_on_destruction.hpp */; };
 		E4A7566519862B8A0004ACB6 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A7566419862B8A0004ACB6 /* GLKit.framework */; };
-		E4EEA1F91985F964003E3175 /* AppleOpenALSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = E428341F116FF684008E3594 /* AppleOpenALSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA1FA1985F964003E3175 /* CMOpenALSound.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283420116FF684008E3594 /* CMOpenALSound.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA1FB1985F964003E3175 /* CMOpenALSoundManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283422116FF684008E3594 /* CMOpenALSoundManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA1FC1985F964003E3175 /* SynthesizeSingleton.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283424116FF684008E3594 /* SynthesizeSingleton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA1FD1985F964003E3175 /* hdSoundManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283427116FF684008E3594 /* hdSoundManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA1FE1985F964003E3175 /* hdSoundEngineInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283428116FF684008E3594 /* hdSoundEngineInterface.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA1FF1985F964003E3175 /* hdOpenALSoundEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283429116FF684008E3594 /* hdOpenALSoundEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2001985F964003E3175 /* hdOpenALPool.h in Headers */ = {isa = PBXBuildFile; fileRef = E428342B116FF684008E3594 /* hdOpenALPool.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2011985F964003E3175 /* hdAVAudioWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = E428342D116FF684008E3594 /* hdAVAudioWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2021985F964003E3175 /* hdPauseAction.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283430116FF684008E3594 /* hdPauseAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2031985F964003E3175 /* hdAction.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283432116FF684008E3594 /* hdAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2041985F964003E3175 /* hdAnimationController.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283436116FF684008E3594 /* hdAnimationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2051985F964003E3175 /* hdAnimationTimingFunction.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283439116FF684008E3594 /* hdAnimationTimingFunction.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2061985F964003E3175 /* hdFunctionAction.h in Headers */ = {isa = PBXBuildFile; fileRef = E428343B116FF684008E3594 /* hdFunctionAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2071985F964003E3175 /* hdRotationAction.h in Headers */ = {isa = PBXBuildFile; fileRef = E428343D116FF684008E3594 /* hdRotationAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2081985F964003E3175 /* hdScaleAction.h in Headers */ = {isa = PBXBuildFile; fileRef = E428343E116FF684008E3594 /* hdScaleAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2091985F964003E3175 /* hdTranslationAction.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283441116FF684008E3594 /* hdTranslationAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA20A1985F964003E3175 /* hdVectorAction.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283443116FF684008E3594 /* hdVectorAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA20B1985F964003E3175 /* hdAlphaAction.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283444116FF684008E3594 /* hdAlphaAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA20C1985F964003E3175 /* hdPointerList.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283448116FF684008E3594 /* hdPointerList.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA20D1985F964003E3175 /* hdSerializablePointerList.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283449116FF684008E3594 /* hdSerializablePointerList.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA20E1985F964003E3175 /* hdTypedefList.h in Headers */ = {isa = PBXBuildFile; fileRef = E428344A116FF684008E3594 /* hdTypedefList.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA20F1985F964003E3175 /* hdCollectionSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = E428344B116FF684008E3594 /* hdCollectionSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2101985F964003E3175 /* hdApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = E428344D116FF684008E3594 /* hdApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2111985F964003E3175 /* hdCompression.h in Headers */ = {isa = PBXBuildFile; fileRef = E428344F116FF684008E3594 /* hdCompression.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2121985F964003E3175 /* hdPakFileSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283451116FF684008E3594 /* hdPakFileSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2131985F964003E3175 /* hdCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283453116FF684008E3594 /* hdCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2141985F964003E3175 /* hdTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283456116FF684008E3594 /* hdTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2151985F964003E3175 /* hdFileSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283457116FF684008E3594 /* hdFileSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2161985F964003E3175 /* hdIPhoneFileSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283458116FF684008E3594 /* hdIPhoneFileSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2171985F964003E3175 /* hdSystemSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = E428345A116FF684008E3594 /* hdSystemSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2181985F964003E3175 /* hdIPhoneSystemSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = E428345B116FF684008E3594 /* hdIPhoneSystemSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2191985F964003E3175 /* hdOSFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = E428345D116FF684008E3594 /* hdOSFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA21A1985F964003E3175 /* hdIPhoneOSFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = E428345E116FF684008E3594 /* hdIPhoneOSFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA21B1985F964003E3175 /* hdConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283460116FF684008E3594 /* hdConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA21C1985F964003E3175 /* hdFileSystemSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283462116FF684008E3594 /* hdFileSystemSupport.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA21D1985F964003E3175 /* hdPlayerConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283463116FF684008E3594 /* hdPlayerConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA21E1985F964003E3175 /* hdPhysicsJoint.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283466116FF684008E3594 /* hdPhysicsJoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA21F1985F964003E3175 /* hd2DGameController.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283468116FF684008E3594 /* hd2DGameController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2201985F964003E3175 /* hdGameObject.h in Headers */ = {isa = PBXBuildFile; fileRef = E428346E116FF684008E3594 /* hdGameObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2211985F964003E3175 /* hdGameWorld.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283470116FF684008E3594 /* hdGameWorld.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2221985F964003E3175 /* hdOrthographicProjection.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283476116FF684008E3594 /* hdOrthographicProjection.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2231985F964003E3175 /* hdPhysicsGlue.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283478116FF684008E3594 /* hdPhysicsGlue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2241985F964003E3175 /* hdPhysicsObject.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283479116FF684008E3594 /* hdPhysicsObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2251985F964003E3175 /* b2Opt.h in Headers */ = {isa = PBXBuildFile; fileRef = E428347A116FF684008E3594 /* b2Opt.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2261985F964003E3175 /* hdGraphicsInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = E428347C116FF684008E3594 /* hdGraphicsInterface.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2271985F964003E3175 /* hdDrawable.h in Headers */ = {isa = PBXBuildFile; fileRef = E428347D116FF684008E3594 /* hdDrawable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2281985F964003E3175 /* hdDrawingUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = E428347F116FF684008E3594 /* hdDrawingUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2291985F964003E3175 /* hdPolygon.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283482116FF684008E3594 /* hdPolygon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA22A1985F964003E3175 /* hdTexture.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283483116FF684008E3594 /* hdTexture.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA22B1985F964003E3175 /* hdTextureManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283485116FF684008E3594 /* hdTextureManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA22C1985F964003E3175 /* hdTGALoader.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283487116FF684008E3594 /* hdTGALoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA22D1985F964003E3175 /* hdPNGLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283489116FF684008E3594 /* hdPNGLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA22E1985F964003E3175 /* hdFontPolygon.h in Headers */ = {isa = PBXBuildFile; fileRef = E428348C116FF684008E3594 /* hdFontPolygon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA22F1985F964003E3175 /* hdFont.h in Headers */ = {isa = PBXBuildFile; fileRef = E428348E116FF684008E3594 /* hdFont.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2301985F964003E3175 /* hdFontManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283490116FF684008E3594 /* hdFontManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2311985F964003E3175 /* hdButton.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283492116FF684008E3594 /* hdButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2321985F964003E3175 /* hdInterfaceLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283495116FF684008E3594 /* hdInterfaceLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2331985F964003E3175 /* hdReceiver.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283497116FF684008E3594 /* hdReceiver.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2341985F964003E3175 /* hdInterfaceController.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283498116FF684008E3594 /* hdInterfaceController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2351985F964003E3175 /* hdUIContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = E428349A116FF684008E3594 /* hdUIContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2361985F964003E3175 /* hdUIImage.h in Headers */ = {isa = PBXBuildFile; fileRef = E428349C116FF684008E3594 /* hdUIImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2371985F964003E3175 /* hdInterfaceEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = E428349E116FF684008E3594 /* hdInterfaceEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2381985F964003E3175 /* hdUISegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = E428349F116FF684008E3594 /* hdUISegmentedControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2391985F964003E3175 /* hdCheckbox.h in Headers */ = {isa = PBXBuildFile; fileRef = E42834A1116FF684008E3594 /* hdCheckbox.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA23A1985F964003E3175 /* hdInterfaceContext.h in Headers */ = {isa = PBXBuildFile; fileRef = E42834A3116FF684008E3594 /* hdInterfaceContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA23B1985F964003E3175 /* hdFixed.h in Headers */ = {isa = PBXBuildFile; fileRef = E42834A6116FF684008E3594 /* hdFixed.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA23C1985F964003E3175 /* hdGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = E42834A7116FF684008E3594 /* hdGeometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA23D1985F964003E3175 /* hdMathSerializable.h in Headers */ = {isa = PBXBuildFile; fileRef = E42834A9116FF684008E3594 /* hdMathSerializable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA23E1985F964003E3175 /* hdMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = E42834AB116FF684008E3594 /* hdMatrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA23F1985F964003E3175 /* hdParticleEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = E42834AE116FF684008E3594 /* hdParticleEmitter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2401985F964003E3175 /* hdPhysicsParticleEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = E42834B0116FF684008E3594 /* hdPhysicsParticleEmitter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2411985F964003E3175 /* Box2D.h in Headers */ = {isa = PBXBuildFile; fileRef = E428377C117005AB008E3594 /* Box2D.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2421985F964003E3175 /* b2BroadPhase.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283780117005AB008E3594 /* b2BroadPhase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2431985F964003E3175 /* b2Collision.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283784117005AB008E3594 /* b2Collision.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2441985F964003E3175 /* b2PairManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283787117005AB008E3594 /* b2PairManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2451985F964003E3175 /* b2CircleShape.h in Headers */ = {isa = PBXBuildFile; fileRef = E428378B117005AB008E3594 /* b2CircleShape.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2461985F964003E3175 /* b2EdgeShape.h in Headers */ = {isa = PBXBuildFile; fileRef = E428378D117005AB008E3594 /* b2EdgeShape.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2471985F964003E3175 /* b2PolygonShape.h in Headers */ = {isa = PBXBuildFile; fileRef = E428378F117005AB008E3594 /* b2PolygonShape.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2481985F964003E3175 /* b2Shape.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283791117005AB008E3594 /* b2Shape.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2491985F964003E3175 /* b2BlockAllocator.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283794117005AB008E3594 /* b2BlockAllocator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA24A1985F964003E3175 /* b2Math.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283796117005AB008E3594 /* b2Math.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA24B1985F964003E3175 /* b2Settings.h in Headers */ = {isa = PBXBuildFile; fileRef = E4283798117005AB008E3594 /* b2Settings.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA24C1985F964003E3175 /* b2StackAllocator.h in Headers */ = {isa = PBXBuildFile; fileRef = E428379A117005AB008E3594 /* b2StackAllocator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA24D1985F964003E3175 /* Fixed.h in Headers */ = {isa = PBXBuildFile; fileRef = E428379B117005AB008E3594 /* Fixed.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA24E1985F964003E3175 /* jtypes.h in Headers */ = {isa = PBXBuildFile; fileRef = E428379C117005AB008E3594 /* jtypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA24F1985F964003E3175 /* b2Body.h in Headers */ = {isa = PBXBuildFile; fileRef = E428379F117005AB008E3594 /* b2Body.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2501985F964003E3175 /* b2ContactManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837A1117005AB008E3594 /* b2ContactManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2511985F964003E3175 /* b2Island.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837A3117005AB008E3594 /* b2Island.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2521985F964003E3175 /* b2World.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837A5117005AB008E3594 /* b2World.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2531985F964003E3175 /* b2WorldCallbacks.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837A7117005AB008E3594 /* b2WorldCallbacks.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2541985F964003E3175 /* b2CircleContact.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837AA117005AB008E3594 /* b2CircleContact.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2551985F964003E3175 /* b2Contact.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837AC117005AB008E3594 /* b2Contact.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2561985F964003E3175 /* b2ContactSolver.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837AE117005AB008E3594 /* b2ContactSolver.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2571985F964003E3175 /* b2EdgeAndCircleContact.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837B0117005AB008E3594 /* b2EdgeAndCircleContact.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2581985F964003E3175 /* b2NullContact.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837B1117005AB008E3594 /* b2NullContact.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2591985F964003E3175 /* b2PolyAndCircleContact.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837B3117005AB008E3594 /* b2PolyAndCircleContact.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA25A1985F964003E3175 /* b2PolyAndEdgeContact.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837B5117005AB008E3594 /* b2PolyAndEdgeContact.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA25B1985F964003E3175 /* b2PolyContact.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837B7117005AB008E3594 /* b2PolyContact.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA25C1985F964003E3175 /* b2BuoyancyController.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837BA117005AB008E3594 /* b2BuoyancyController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA25D1985F964003E3175 /* b2ConstantAccelController.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837BC117005AB008E3594 /* b2ConstantAccelController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA25E1985F964003E3175 /* b2ConstantForceController.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837BE117005AB008E3594 /* b2ConstantForceController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA25F1985F964003E3175 /* b2Controller.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837C0117005AB008E3594 /* b2Controller.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2601985F964003E3175 /* b2GravityController.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837C2117005AB008E3594 /* b2GravityController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2611985F964003E3175 /* b2TensorDampingController.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837C4117005AB008E3594 /* b2TensorDampingController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2621985F964003E3175 /* b2DistanceJoint.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837C7117005AB008E3594 /* b2DistanceJoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2631985F964003E3175 /* b2GearJoint.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837C9117005AB008E3594 /* b2GearJoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2641985F964003E3175 /* b2Joint.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837CB117005AB008E3594 /* b2Joint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2651985F964003E3175 /* b2LineJoint.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837CD117005AB008E3594 /* b2LineJoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2661985F964003E3175 /* b2MouseJoint.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837CF117005AB008E3594 /* b2MouseJoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2671985F964003E3175 /* b2PrismaticJoint.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837D1117005AB008E3594 /* b2PrismaticJoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2681985F964003E3175 /* b2PulleyJoint.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837D3117005AB008E3594 /* b2PulleyJoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2691985F964003E3175 /* b2RevoluteJoint.h in Headers */ = {isa = PBXBuildFile; fileRef = E42837D5117005AB008E3594 /* b2RevoluteJoint.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA26A1985F964003E3175 /* hdk_prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = E428398811701BBE008E3594 /* hdk_prefix.pch */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA26B1985F964003E3175 /* hdScreenSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = E42839EA11704C6B008E3594 /* hdScreenSettings.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA26C1985F964003E3175 /* hdCollections.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6111170810B00A30C8E /* hdCollections.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA26D1985F964003E3175 /* hdk.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6121170810B00A30C8E /* hdk.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA26E1985F964003E3175 /* hdInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6131170810B00A30C8E /* hdInterface.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA26F1985F964003E3175 /* hdMath.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6141170810B00A30C8E /* hdMath.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2701985F964003E3175 /* hdSoundSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6151170810B00A30C8E /* hdSoundSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2711985F964003E3175 /* hdAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6221170814A00A30C8E /* hdAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2721985F964003E3175 /* hdAnimationEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6241170815200A30C8E /* hdAnimationEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2731985F964003E3175 /* hdSound.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA62F117082D400A30C8E /* hdSound.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2741985F964003E3175 /* hdGame.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6311170831600A30C8E /* hdGame.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2751985F964003E3175 /* hdCore.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6331170834B00A30C8E /* hdCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2761985F964003E3175 /* hdGraphicsLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA63B1170846E00A30C8E /* hdGraphicsLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2771985F964003E3175 /* hdSoundSystemEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA63F1170859400A30C8E /* hdSoundSystemEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2781985F964003E3175 /* hdMusicPlayerInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA641117085EF00A30C8E /* hdMusicPlayerInterface.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2791985F964003E3175 /* hdMathCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA66D1170899C00A30C8E /* hdMathCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA27A1985F964003E3175 /* hdFileSystemUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA75811709B3600A30C8E /* hdFileSystemUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA27B1985F964003E3175 /* hdEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA85F1170A50E00A30C8E /* hdEffects.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2801985F964003E3175 /* hdMultiTouchView.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA9AB1170B37000A30C8E /* hdMultiTouchView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2811985F964003E3175 /* hdInput.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA9B91170B4EF00A30C8E /* hdInput.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2821985F964003E3175 /* hdAccelerometer.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EAA5D1170BCC000A30C8E /* hdAccelerometer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2831985F964003E3175 /* hdLibs.h in Headers */ = {isa = PBXBuildFile; fileRef = E4F36B8211714B8F00792A2D /* hdLibs.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA2841985F964003E3175 /* neon_matrix_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = E4F36BCE11714DAD00792A2D /* neon_matrix_impl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA3181985F964003E3175 /* hdThumbPad.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FC26571184CEDC004BB47B /* hdThumbPad.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA3261985F964003E3175 /* hdIBButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FBC69811C81C1C00C2377F /* hdIBButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA3271985F964003E3175 /* hdIBImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FBC69A11C81C1C00C2377F /* hdIBImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA3281985F964003E3175 /* hdIBFontPolygon.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FBC69C11C81C1C00C2377F /* hdIBFontPolygon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA3291985F964003E3175 /* hdIBContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FBC69E11C81C1C00C2377F /* hdIBContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA32A1985F964003E3175 /* hdIBProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FBC6A011C81C1C00C2377F /* hdIBProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA32B1985F964003E3175 /* hdIBViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FBC6A211C81C1C00C2377F /* hdIBViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA32C1985F964003E3175 /* hdIBLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FBC6A411C81C1C00C2377F /* hdIBLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA32D1985F964003E3175 /* hdIBEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FBC6A611C81C1C00C2377F /* hdIBEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA32E1985F964003E3175 /* hdIB.h in Headers */ = {isa = PBXBuildFile; fileRef = 63FBC6C511C81C2700C2377F /* hdIB.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA32F1985F964003E3175 /* hdViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6384558711C8337300C421AB /* hdViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA3301985F964003E3175 /* hdScripting.h in Headers */ = {isa = PBXBuildFile; fileRef = 63B351D511F821B100D20861 /* hdScripting.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA3311985F964003E3175 /* hdMultiTouchViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6353FD291340079400AD7F1D /* hdMultiTouchViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E4EEA3331985F964003E3175 /* AppleOpenALSupport.c in Sources */ = {isa = PBXBuildFile; fileRef = E428341E116FF684008E3594 /* AppleOpenALSupport.c */; };
-		E4EEA3341985F964003E3175 /* CMOpenALSound.m in Sources */ = {isa = PBXBuildFile; fileRef = E4283421116FF684008E3594 /* CMOpenALSound.m */; };
-		E4EEA3351985F964003E3175 /* CMOpenALSoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E4283423116FF684008E3594 /* CMOpenALSoundManager.m */; };
-		E4EEA3361985F964003E3175 /* hdSoundManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283426116FF684008E3594 /* hdSoundManager.cpp */; };
-		E4EEA3371985F964003E3175 /* hdOpenALSoundEngine.mm in Sources */ = {isa = PBXBuildFile; fileRef = E428342A116FF684008E3594 /* hdOpenALSoundEngine.mm */; };
-		E4EEA3381985F964003E3175 /* hdOpenALPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428342C116FF684008E3594 /* hdOpenALPool.cpp */; };
-		E4EEA3391985F964003E3175 /* hdAVAudioWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = E428342E116FF684008E3594 /* hdAVAudioWrapper.mm */; };
-		E4EEA33A1985F964003E3175 /* hdAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283431116FF684008E3594 /* hdAction.cpp */; };
-		E4EEA33B1985F964003E3175 /* hdAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283433116FF684008E3594 /* hdAnimation.cpp */; };
-		E4EEA33C1985F964003E3175 /* hdAnimationController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283435116FF684008E3594 /* hdAnimationController.cpp */; };
-		E4EEA33D1985F964003E3175 /* hdRotationAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428343C116FF684008E3594 /* hdRotationAction.cpp */; };
-		E4EEA33E1985F964003E3175 /* hdScaleAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428343F116FF684008E3594 /* hdScaleAction.cpp */; };
-		E4EEA33F1985F964003E3175 /* hdTranslationAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283440116FF684008E3594 /* hdTranslationAction.cpp */; };
-		E4EEA3401985F964003E3175 /* hdVectorAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283442116FF684008E3594 /* hdVectorAction.cpp */; };
-		E4EEA3411985F964003E3175 /* hdAlphaAction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283445116FF684008E3594 /* hdAlphaAction.cpp */; };
-		E4EEA3421985F964003E3175 /* hdCompression.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428344E116FF684008E3594 /* hdCompression.cpp */; };
-		E4EEA3431985F964003E3175 /* hdPakFileSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283450116FF684008E3594 /* hdPakFileSystem.cpp */; };
-		E4EEA3441985F964003E3175 /* hdCommon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283452116FF684008E3594 /* hdCommon.cpp */; };
-		E4EEA3451985F964003E3175 /* hdIPhoneFileSystem.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4283459116FF684008E3594 /* hdIPhoneFileSystem.mm */; };
-		E4EEA3461985F964003E3175 /* hdIPhoneSystemSettings.mm in Sources */ = {isa = PBXBuildFile; fileRef = E428345C116FF684008E3594 /* hdIPhoneSystemSettings.mm */; };
-		E4EEA3471985F964003E3175 /* hdIPhoneOSFunctions.mm in Sources */ = {isa = PBXBuildFile; fileRef = E428345F116FF684008E3594 /* hdIPhoneOSFunctions.mm */; };
-		E4EEA3481985F964003E3175 /* hdConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283461116FF684008E3594 /* hdConfig.cpp */; };
-		E4EEA3491985F964003E3175 /* hdPlayerConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283464116FF684008E3594 /* hdPlayerConfig.cpp */; };
-		E4EEA34A1985F964003E3175 /* hd2DGameController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283467116FF684008E3594 /* hd2DGameController.cpp */; };
-		E4EEA34B1985F964003E3175 /* hdGameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428346D116FF684008E3594 /* hdGameObject.cpp */; };
-		E4EEA34C1985F964003E3175 /* hdGameWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428346F116FF684008E3594 /* hdGameWorld.cpp */; };
-		E4EEA34D1985F964003E3175 /* hdOrthographicProjection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283475116FF684008E3594 /* hdOrthographicProjection.cpp */; };
-		E4EEA34E1985F964003E3175 /* hdPhysicsGlue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283477116FF684008E3594 /* hdPhysicsGlue.cpp */; };
-		E4EEA34F1985F964003E3175 /* hdDrawingUtilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428347E116FF684008E3594 /* hdDrawingUtilities.cpp */; };
-		E4EEA3501985F964003E3175 /* hdOpenGLES.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283480116FF684008E3594 /* hdOpenGLES.cpp */; };
-		E4EEA3511985F964003E3175 /* hdPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283481116FF684008E3594 /* hdPolygon.cpp */; };
-		E4EEA3521985F964003E3175 /* hdTextureManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283484116FF684008E3594 /* hdTextureManager.cpp */; };
-		E4EEA3531985F964003E3175 /* hdTGALoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283486116FF684008E3594 /* hdTGALoader.cpp */; };
-		E4EEA3541985F964003E3175 /* hdPNGLoader.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4283488116FF684008E3594 /* hdPNGLoader.mm */; };
-		E4EEA3551985F964003E3175 /* hdFontPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428348B116FF684008E3594 /* hdFontPolygon.cpp */; };
-		E4EEA3561985F964003E3175 /* hdFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428348D116FF684008E3594 /* hdFont.cpp */; };
-		E4EEA3571985F964003E3175 /* hdFontManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428348F116FF684008E3594 /* hdFontManager.cpp */; };
-		E4EEA3581985F964003E3175 /* hdButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283491116FF684008E3594 /* hdButton.cpp */; };
-		E4EEA3591985F964003E3175 /* hdInterfaceLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283494116FF684008E3594 /* hdInterfaceLayer.cpp */; };
-		E4EEA35A1985F964003E3175 /* hdReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283496116FF684008E3594 /* hdReceiver.cpp */; };
-		E4EEA35B1985F964003E3175 /* hdInterfaceController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283499116FF684008E3594 /* hdInterfaceController.cpp */; };
-		E4EEA35C1985F964003E3175 /* hdUIContainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428349B116FF684008E3594 /* hdUIContainer.cpp */; };
-		E4EEA35D1985F964003E3175 /* hdUIImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428349D116FF684008E3594 /* hdUIImage.cpp */; };
-		E4EEA35E1985F964003E3175 /* hdUISegmentedControl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42834A0116FF684008E3594 /* hdUISegmentedControl.cpp */; };
-		E4EEA35F1985F964003E3175 /* hdCheckbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42834A2116FF684008E3594 /* hdCheckbox.cpp */; };
-		E4EEA3601985F964003E3175 /* hdInterfaceContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42834A4116FF684008E3594 /* hdInterfaceContext.cpp */; };
-		E4EEA3611985F964003E3175 /* hdMatrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42834AA116FF684008E3594 /* hdMatrix.cpp */; };
-		E4EEA3621985F964003E3175 /* hdParticleEmitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42834AD116FF684008E3594 /* hdParticleEmitter.cpp */; };
-		E4EEA3631985F964003E3175 /* hdPhysicsParticleEmitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42834AF116FF684008E3594 /* hdPhysicsParticleEmitter.cpp */; };
-		E4EEA3641985F964003E3175 /* b2BroadPhase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428377F117005AB008E3594 /* b2BroadPhase.cpp */; };
-		E4EEA3651985F964003E3175 /* b2CollideCircle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283781117005AB008E3594 /* b2CollideCircle.cpp */; };
-		E4EEA3661985F964003E3175 /* b2CollidePoly.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283782117005AB008E3594 /* b2CollidePoly.cpp */; };
-		E4EEA3671985F964003E3175 /* b2Collision.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283783117005AB008E3594 /* b2Collision.cpp */; };
-		E4EEA3681985F964003E3175 /* b2Distance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283785117005AB008E3594 /* b2Distance.cpp */; };
-		E4EEA3691985F964003E3175 /* b2PairManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283786117005AB008E3594 /* b2PairManager.cpp */; };
-		E4EEA36A1985F964003E3175 /* b2TimeOfImpact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283788117005AB008E3594 /* b2TimeOfImpact.cpp */; };
-		E4EEA36B1985F964003E3175 /* b2CircleShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428378A117005AB008E3594 /* b2CircleShape.cpp */; };
-		E4EEA36C1985F964003E3175 /* b2EdgeShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428378C117005AB008E3594 /* b2EdgeShape.cpp */; };
-		E4EEA36D1985F964003E3175 /* b2PolygonShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428378E117005AB008E3594 /* b2PolygonShape.cpp */; };
-		E4EEA36E1985F964003E3175 /* b2Shape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283790117005AB008E3594 /* b2Shape.cpp */; };
-		E4EEA36F1985F964003E3175 /* b2BlockAllocator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283793117005AB008E3594 /* b2BlockAllocator.cpp */; };
-		E4EEA3701985F964003E3175 /* b2Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283795117005AB008E3594 /* b2Math.cpp */; };
-		E4EEA3711985F964003E3175 /* b2Settings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283797117005AB008E3594 /* b2Settings.cpp */; };
-		E4EEA3721985F964003E3175 /* b2StackAllocator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4283799117005AB008E3594 /* b2StackAllocator.cpp */; };
-		E4EEA3731985F964003E3175 /* b2Body.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E428379E117005AB008E3594 /* b2Body.cpp */; };
-		E4EEA3741985F964003E3175 /* b2ContactManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837A0117005AB008E3594 /* b2ContactManager.cpp */; };
-		E4EEA3751985F964003E3175 /* b2Island.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837A2117005AB008E3594 /* b2Island.cpp */; };
-		E4EEA3761985F964003E3175 /* b2World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837A4117005AB008E3594 /* b2World.cpp */; };
-		E4EEA3771985F964003E3175 /* b2WorldCallbacks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837A6117005AB008E3594 /* b2WorldCallbacks.cpp */; };
-		E4EEA3781985F964003E3175 /* b2CircleContact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837A9117005AB008E3594 /* b2CircleContact.cpp */; };
-		E4EEA3791985F964003E3175 /* b2Contact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837AB117005AB008E3594 /* b2Contact.cpp */; };
-		E4EEA37A1985F964003E3175 /* b2ContactSolver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837AD117005AB008E3594 /* b2ContactSolver.cpp */; };
-		E4EEA37B1985F964003E3175 /* b2EdgeAndCircleContact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837AF117005AB008E3594 /* b2EdgeAndCircleContact.cpp */; };
-		E4EEA37C1985F964003E3175 /* b2PolyAndCircleContact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837B2117005AB008E3594 /* b2PolyAndCircleContact.cpp */; };
-		E4EEA37D1985F964003E3175 /* b2PolyAndEdgeContact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837B4117005AB008E3594 /* b2PolyAndEdgeContact.cpp */; };
-		E4EEA37E1985F964003E3175 /* b2PolyContact.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837B6117005AB008E3594 /* b2PolyContact.cpp */; };
-		E4EEA37F1985F964003E3175 /* b2BuoyancyController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837B9117005AB008E3594 /* b2BuoyancyController.cpp */; };
-		E4EEA3801985F964003E3175 /* b2ConstantAccelController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837BB117005AB008E3594 /* b2ConstantAccelController.cpp */; };
-		E4EEA3811985F964003E3175 /* b2ConstantForceController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837BD117005AB008E3594 /* b2ConstantForceController.cpp */; };
-		E4EEA3821985F964003E3175 /* b2Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837BF117005AB008E3594 /* b2Controller.cpp */; };
-		E4EEA3831985F964003E3175 /* b2GravityController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837C1117005AB008E3594 /* b2GravityController.cpp */; };
-		E4EEA3841985F964003E3175 /* b2TensorDampingController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837C3117005AB008E3594 /* b2TensorDampingController.cpp */; };
-		E4EEA3851985F964003E3175 /* b2DistanceJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837C6117005AB008E3594 /* b2DistanceJoint.cpp */; };
-		E4EEA3861985F964003E3175 /* b2GearJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837C8117005AB008E3594 /* b2GearJoint.cpp */; };
-		E4EEA3871985F964003E3175 /* b2Joint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837CA117005AB008E3594 /* b2Joint.cpp */; };
-		E4EEA3881985F964003E3175 /* b2LineJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837CC117005AB008E3594 /* b2LineJoint.cpp */; };
-		E4EEA3891985F964003E3175 /* b2MouseJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837CE117005AB008E3594 /* b2MouseJoint.cpp */; };
-		E4EEA38A1985F964003E3175 /* b2PrismaticJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837D0117005AB008E3594 /* b2PrismaticJoint.cpp */; };
-		E4EEA38B1985F964003E3175 /* b2PulleyJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837D2117005AB008E3594 /* b2PulleyJoint.cpp */; };
-		E4EEA38C1985F964003E3175 /* b2RevoluteJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E42837D4117005AB008E3594 /* b2RevoluteJoint.cpp */; };
-		E4EEA38D1985F964003E3175 /* hdFileSystemUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E41EA75911709B3600A30C8E /* hdFileSystemUtils.cpp */; };
-		E4EEA38E1985F964003E3175 /* hdScreenSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E41EA8A51170A8C700A30C8E /* hdScreenSettings.cpp */; };
-		E4EEA3931985F964003E3175 /* hdMultiTouchView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E41EA9AC1170B37000A30C8E /* hdMultiTouchView.mm */; };
-		E4EEA3941985F964003E3175 /* hdiPhoneAccelerometer.mm in Sources */ = {isa = PBXBuildFile; fileRef = E41EAA5E1170BCC000A30C8E /* hdiPhoneAccelerometer.mm */; };
-		E4EEA3951985F964003E3175 /* neon_matrix_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36BCD11714DAD00792A2D /* neon_matrix_impl.cpp */; };
-		E4EEA3CA1985F964003E3175 /* hdThumbPad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63FC26581184CEDC004BB47B /* hdThumbPad.cpp */; };
-		E4EEA3D01985F964003E3175 /* hdIBButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63FBC69911C81C1C00C2377F /* hdIBButton.cpp */; };
-		E4EEA3D11985F964003E3175 /* hdIBImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63FBC69B11C81C1C00C2377F /* hdIBImage.cpp */; };
-		E4EEA3D21985F964003E3175 /* hdIBFontPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63FBC69D11C81C1C00C2377F /* hdIBFontPolygon.cpp */; };
-		E4EEA3D31985F964003E3175 /* hdIBContainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63FBC69F11C81C1C00C2377F /* hdIBContainer.cpp */; };
-		E4EEA3D41985F964003E3175 /* hdIBProxy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63FBC6A111C81C1C00C2377F /* hdIBProxy.cpp */; };
-		E4EEA3D51985F964003E3175 /* hdIBViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63FBC6A311C81C1C00C2377F /* hdIBViewController.cpp */; };
-		E4EEA3D61985F964003E3175 /* hdIBLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63FBC6A511C81C1C00C2377F /* hdIBLoader.cpp */; };
-		E4EEA3D71985F964003E3175 /* hdViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6384558811C8337300C421AB /* hdViewController.cpp */; };
-		E4EEA3D81985F964003E3175 /* hdMultiTouchViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6353FD2A1340079400AD7F1D /* hdMultiTouchViewController.mm */; };
-		E4EEA3DA1985F964003E3175 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
-		E4EEA3DB1985F964003E3175 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E428353E116FF69E008E3594 /* AVFoundation.framework */; };
-		E4EEA3DC1985F964003E3175 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4283544116FF6A9008E3594 /* AudioToolbox.framework */; };
-		E4EEA3DD1985F964003E3175 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4283548116FF6AE008E3594 /* CoreAudio.framework */; };
-		E4EEA3DE1985F964003E3175 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E428354C116FF6B4008E3594 /* OpenAL.framework */; };
-		E4EEA3DF1985F964003E3175 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4283550116FF6B8008E3594 /* QuartzCore.framework */; };
-		E4EEA3E01985F964003E3175 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4283554116FF6BE008E3594 /* OpenGLES.framework */; };
-		E4EEA3E11985F964003E3175 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4283558116FF6C3008E3594 /* UIKit.framework */; };
 		E4EEA3F01985FE3E003E3175 /* config.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA3E71985FE3E003E3175 /* config.hpp */; };
-		E4EEA3F11985FE3E003E3175 /* config.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA3E71985FE3E003E3175 /* config.hpp */; };
 		E4EEA3F21985FE3E003E3175 /* convenience.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA3E81985FE3E003E3175 /* convenience.hpp */; };
-		E4EEA3F31985FE3E003E3175 /* convenience.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA3E81985FE3E003E3175 /* convenience.hpp */; };
 		E4EEA3F41985FE3E003E3175 /* utf8_codecvt_facet.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA3EA1985FE3E003E3175 /* utf8_codecvt_facet.hpp */; };
-		E4EEA3F51985FE3E003E3175 /* utf8_codecvt_facet.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA3EA1985FE3E003E3175 /* utf8_codecvt_facet.hpp */; };
 		E4EEA3F61985FE3E003E3175 /* exception.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA3EB1985FE3E003E3175 /* exception.hpp */; };
-		E4EEA3F71985FE3E003E3175 /* exception.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA3EB1985FE3E003E3175 /* exception.hpp */; };
 		E4EEA3F81985FE3E003E3175 /* fstream.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA3EC1985FE3E003E3175 /* fstream.hpp */; };
-		E4EEA3F91985FE3E003E3175 /* fstream.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA3EC1985FE3E003E3175 /* fstream.hpp */; };
 		E4EEA3FA1985FE3E003E3175 /* operations.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA3ED1985FE3E003E3175 /* operations.hpp */; };
-		E4EEA3FB1985FE3E003E3175 /* operations.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA3ED1985FE3E003E3175 /* operations.hpp */; };
 		E4EEA3FC1985FE3E003E3175 /* path.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA3EE1985FE3E003E3175 /* path.hpp */; };
-		E4EEA3FD1985FE3E003E3175 /* path.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA3EE1985FE3E003E3175 /* path.hpp */; };
 		E4EEA3FE1985FE3E003E3175 /* path_traits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA3EF1985FE3E003E3175 /* path_traits.hpp */; };
-		E4EEA3FF1985FE3E003E3175 /* path_traits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA3EF1985FE3E003E3175 /* path_traits.hpp */; };
 		E4EEA4E41985FEC2003E3175 /* concepts.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4AA1985FEC2003E3175 /* concepts.hpp */; };
-		E4EEA4E51985FEC2003E3175 /* concepts.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4AA1985FEC2003E3175 /* concepts.hpp */; };
 		E4EEA4E61985FEC2003E3175 /* borland.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4AC1985FEC2003E3175 /* borland.hpp */; };
-		E4EEA4E71985FEC2003E3175 /* borland.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4AC1985FEC2003E3175 /* borland.hpp */; };
 		E4EEA4E81985FEC2003E3175 /* cwchar.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4AD1985FEC2003E3175 /* cwchar.hpp */; };
-		E4EEA4E91985FEC2003E3175 /* cwchar.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4AD1985FEC2003E3175 /* cwchar.hpp */; };
 		E4EEA4EA1985FEC3003E3175 /* config.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4AE1985FEC2003E3175 /* config.hpp */; };
-		E4EEA4EB1985FEC3003E3175 /* config.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4AE1985FEC2003E3175 /* config.hpp */; };
 		E4EEA4EC1985FEC3003E3175 /* icu.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4AF1985FEC2003E3175 /* icu.hpp */; };
-		E4EEA4ED1985FEC3003E3175 /* icu.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4AF1985FEC2003E3175 /* icu.hpp */; };
 		E4EEA4EE1985FEC3003E3175 /* mfc.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4B01985FEC2003E3175 /* mfc.hpp */; };
-		E4EEA4EF1985FEC3003E3175 /* mfc.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4B01985FEC2003E3175 /* mfc.hpp */; };
 		E4EEA4F01985FEC3003E3175 /* pattern_except.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4B11985FEC2003E3175 /* pattern_except.hpp */; };
-		E4EEA4F11985FEC3003E3175 /* pattern_except.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4B11985FEC2003E3175 /* pattern_except.hpp */; };
 		E4EEA4F21985FEC3003E3175 /* object_cache.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4B31985FEC2003E3175 /* object_cache.hpp */; };
-		E4EEA4F31985FEC3003E3175 /* object_cache.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4B31985FEC2003E3175 /* object_cache.hpp */; };
 		E4EEA4F41985FEC3003E3175 /* static_mutex.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4B41985FEC2003E3175 /* static_mutex.hpp */; };
-		E4EEA4F51985FEC3003E3175 /* static_mutex.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4B41985FEC2003E3175 /* static_mutex.hpp */; };
 		E4EEA4F61985FEC3003E3175 /* unicode_iterator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4B51985FEC2003E3175 /* unicode_iterator.hpp */; };
-		E4EEA4F71985FEC3003E3175 /* unicode_iterator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4B51985FEC2003E3175 /* unicode_iterator.hpp */; };
 		E4EEA4F81985FEC3003E3175 /* regex_traits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4B61985FEC2003E3175 /* regex_traits.hpp */; };
-		E4EEA4F91985FEC3003E3175 /* regex_traits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4B61985FEC2003E3175 /* regex_traits.hpp */; };
 		E4EEA4FA1985FEC3003E3175 /* user.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4B71985FEC2003E3175 /* user.hpp */; };
-		E4EEA4FB1985FEC3003E3175 /* user.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4B71985FEC2003E3175 /* user.hpp */; };
 		E4EEA4FC1985FEC3003E3175 /* basic_regex.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4B91985FEC2003E3175 /* basic_regex.hpp */; };
-		E4EEA4FD1985FEC3003E3175 /* basic_regex.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4B91985FEC2003E3175 /* basic_regex.hpp */; };
 		E4EEA4FE1985FEC3003E3175 /* basic_regex_creator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4BA1985FEC2003E3175 /* basic_regex_creator.hpp */; };
-		E4EEA4FF1985FEC3003E3175 /* basic_regex_creator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4BA1985FEC2003E3175 /* basic_regex_creator.hpp */; };
 		E4EEA5001985FEC3003E3175 /* basic_regex_parser.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4BB1985FEC2003E3175 /* basic_regex_parser.hpp */; };
-		E4EEA5011985FEC3003E3175 /* basic_regex_parser.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4BB1985FEC2003E3175 /* basic_regex_parser.hpp */; };
 		E4EEA5021985FEC3003E3175 /* c_regex_traits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4BC1985FEC2003E3175 /* c_regex_traits.hpp */; };
-		E4EEA5031985FEC3003E3175 /* c_regex_traits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4BC1985FEC2003E3175 /* c_regex_traits.hpp */; };
 		E4EEA5041985FEC3003E3175 /* char_regex_traits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4BD1985FEC2003E3175 /* char_regex_traits.hpp */; };
-		E4EEA5051985FEC3003E3175 /* char_regex_traits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4BD1985FEC2003E3175 /* char_regex_traits.hpp */; };
 		E4EEA5061985FEC3003E3175 /* cpp_regex_traits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4BE1985FEC2003E3175 /* cpp_regex_traits.hpp */; };
-		E4EEA5071985FEC3003E3175 /* cpp_regex_traits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4BE1985FEC2003E3175 /* cpp_regex_traits.hpp */; };
 		E4EEA5081985FEC3003E3175 /* cregex.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4BF1985FEC2003E3175 /* cregex.hpp */; };
-		E4EEA5091985FEC3003E3175 /* cregex.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4BF1985FEC2003E3175 /* cregex.hpp */; };
 		E4EEA50A1985FEC3003E3175 /* error_type.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4C01985FEC2003E3175 /* error_type.hpp */; };
-		E4EEA50B1985FEC3003E3175 /* error_type.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4C01985FEC2003E3175 /* error_type.hpp */; };
 		E4EEA50C1985FEC3003E3175 /* fileiter.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4C11985FEC2003E3175 /* fileiter.hpp */; };
-		E4EEA50D1985FEC3003E3175 /* fileiter.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4C11985FEC2003E3175 /* fileiter.hpp */; };
 		E4EEA50E1985FEC3003E3175 /* instances.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4C21985FEC2003E3175 /* instances.hpp */; };
-		E4EEA50F1985FEC3003E3175 /* instances.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4C21985FEC2003E3175 /* instances.hpp */; };
 		E4EEA5101985FEC3003E3175 /* iterator_category.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4C31985FEC2003E3175 /* iterator_category.hpp */; };
-		E4EEA5111985FEC3003E3175 /* iterator_category.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4C31985FEC2003E3175 /* iterator_category.hpp */; };
 		E4EEA5121985FEC3003E3175 /* iterator_traits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4C41985FEC2003E3175 /* iterator_traits.hpp */; };
-		E4EEA5131985FEC3003E3175 /* iterator_traits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4C41985FEC2003E3175 /* iterator_traits.hpp */; };
 		E4EEA5141985FEC3003E3175 /* match_flags.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4C51985FEC2003E3175 /* match_flags.hpp */; };
-		E4EEA5151985FEC3003E3175 /* match_flags.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4C51985FEC2003E3175 /* match_flags.hpp */; };
 		E4EEA5161985FEC3003E3175 /* match_results.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4C61985FEC2003E3175 /* match_results.hpp */; };
-		E4EEA5171985FEC3003E3175 /* match_results.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4C61985FEC2003E3175 /* match_results.hpp */; };
 		E4EEA5181985FEC3003E3175 /* mem_block_cache.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4C71985FEC2003E3175 /* mem_block_cache.hpp */; };
-		E4EEA5191985FEC3003E3175 /* mem_block_cache.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4C71985FEC2003E3175 /* mem_block_cache.hpp */; };
 		E4EEA51A1985FEC3003E3175 /* perl_matcher.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4C81985FEC2003E3175 /* perl_matcher.hpp */; };
-		E4EEA51B1985FEC3003E3175 /* perl_matcher.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4C81985FEC2003E3175 /* perl_matcher.hpp */; };
 		E4EEA51C1985FEC3003E3175 /* perl_matcher_common.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4C91985FEC2003E3175 /* perl_matcher_common.hpp */; };
-		E4EEA51D1985FEC3003E3175 /* perl_matcher_common.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4C91985FEC2003E3175 /* perl_matcher_common.hpp */; };
 		E4EEA51E1985FEC3003E3175 /* perl_matcher_non_recursive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4CA1985FEC2003E3175 /* perl_matcher_non_recursive.hpp */; };
-		E4EEA51F1985FEC3003E3175 /* perl_matcher_non_recursive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4CA1985FEC2003E3175 /* perl_matcher_non_recursive.hpp */; };
 		E4EEA5201985FEC3003E3175 /* perl_matcher_recursive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4CB1985FEC2003E3175 /* perl_matcher_recursive.hpp */; };
-		E4EEA5211985FEC3003E3175 /* perl_matcher_recursive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4CB1985FEC2003E3175 /* perl_matcher_recursive.hpp */; };
 		E4EEA5221985FEC3003E3175 /* primary_transform.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4CC1985FEC2003E3175 /* primary_transform.hpp */; };
-		E4EEA5231985FEC3003E3175 /* primary_transform.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4CC1985FEC2003E3175 /* primary_transform.hpp */; };
 		E4EEA5241985FEC3003E3175 /* protected_call.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4CD1985FEC2003E3175 /* protected_call.hpp */; };
-		E4EEA5251985FEC3003E3175 /* protected_call.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4CD1985FEC2003E3175 /* protected_call.hpp */; };
 		E4EEA5261985FEC3003E3175 /* regbase.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4CE1985FEC2003E3175 /* regbase.hpp */; };
-		E4EEA5271985FEC3003E3175 /* regbase.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4CE1985FEC2003E3175 /* regbase.hpp */; };
 		E4EEA5281985FEC3003E3175 /* regex.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4CF1985FEC2003E3175 /* regex.hpp */; };
-		E4EEA5291985FEC3003E3175 /* regex.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4CF1985FEC2003E3175 /* regex.hpp */; };
 		E4EEA52A1985FEC3003E3175 /* regex_format.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4D01985FEC2003E3175 /* regex_format.hpp */; };
-		E4EEA52B1985FEC3003E3175 /* regex_format.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4D01985FEC2003E3175 /* regex_format.hpp */; };
 		E4EEA52C1985FEC3003E3175 /* regex_fwd.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4D11985FEC2003E3175 /* regex_fwd.hpp */; };
-		E4EEA52D1985FEC3003E3175 /* regex_fwd.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4D11985FEC2003E3175 /* regex_fwd.hpp */; };
 		E4EEA52E1985FEC3003E3175 /* regex_grep.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4D21985FEC2003E3175 /* regex_grep.hpp */; };
-		E4EEA52F1985FEC3003E3175 /* regex_grep.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4D21985FEC2003E3175 /* regex_grep.hpp */; };
 		E4EEA5301985FEC3003E3175 /* regex_iterator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4D31985FEC2003E3175 /* regex_iterator.hpp */; };
-		E4EEA5311985FEC3003E3175 /* regex_iterator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4D31985FEC2003E3175 /* regex_iterator.hpp */; };
 		E4EEA5321985FEC3003E3175 /* regex_match.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4D41985FEC2003E3175 /* regex_match.hpp */; };
-		E4EEA5331985FEC3003E3175 /* regex_match.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4D41985FEC2003E3175 /* regex_match.hpp */; };
 		E4EEA5341985FEC3003E3175 /* regex_merge.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4D51985FEC2003E3175 /* regex_merge.hpp */; };
-		E4EEA5351985FEC3003E3175 /* regex_merge.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4D51985FEC2003E3175 /* regex_merge.hpp */; };
 		E4EEA5361985FEC3003E3175 /* regex_raw_buffer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4D61985FEC2003E3175 /* regex_raw_buffer.hpp */; };
-		E4EEA5371985FEC3003E3175 /* regex_raw_buffer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4D61985FEC2003E3175 /* regex_raw_buffer.hpp */; };
 		E4EEA5381985FEC3003E3175 /* regex_replace.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4D71985FEC2003E3175 /* regex_replace.hpp */; };
-		E4EEA5391985FEC3003E3175 /* regex_replace.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4D71985FEC2003E3175 /* regex_replace.hpp */; };
 		E4EEA53A1985FEC3003E3175 /* regex_search.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4D81985FEC2003E3175 /* regex_search.hpp */; };
-		E4EEA53B1985FEC3003E3175 /* regex_search.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4D81985FEC2003E3175 /* regex_search.hpp */; };
 		E4EEA53C1985FEC3003E3175 /* regex_split.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4D91985FEC2003E3175 /* regex_split.hpp */; };
-		E4EEA53D1985FEC3003E3175 /* regex_split.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4D91985FEC2003E3175 /* regex_split.hpp */; };
 		E4EEA53E1985FEC3003E3175 /* regex_token_iterator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4DA1985FEC2003E3175 /* regex_token_iterator.hpp */; };
-		E4EEA53F1985FEC3003E3175 /* regex_token_iterator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4DA1985FEC2003E3175 /* regex_token_iterator.hpp */; };
 		E4EEA5401985FEC3003E3175 /* regex_traits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4DB1985FEC2003E3175 /* regex_traits.hpp */; };
-		E4EEA5411985FEC3003E3175 /* regex_traits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4DB1985FEC2003E3175 /* regex_traits.hpp */; };
 		E4EEA5421985FEC3003E3175 /* regex_traits_defaults.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4DC1985FEC2003E3175 /* regex_traits_defaults.hpp */; };
-		E4EEA5431985FEC3003E3175 /* regex_traits_defaults.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4DC1985FEC2003E3175 /* regex_traits_defaults.hpp */; };
 		E4EEA5441985FEC3003E3175 /* regex_workaround.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4DD1985FEC2003E3175 /* regex_workaround.hpp */; };
-		E4EEA5451985FEC3003E3175 /* regex_workaround.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4DD1985FEC2003E3175 /* regex_workaround.hpp */; };
 		E4EEA5461985FEC3003E3175 /* states.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4DE1985FEC2003E3175 /* states.hpp */; };
-		E4EEA5471985FEC3003E3175 /* states.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4DE1985FEC2003E3175 /* states.hpp */; };
 		E4EEA5481985FEC3003E3175 /* sub_match.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4DF1985FEC2003E3175 /* sub_match.hpp */; };
-		E4EEA5491985FEC3003E3175 /* sub_match.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4DF1985FEC2003E3175 /* sub_match.hpp */; };
 		E4EEA54A1985FEC3003E3175 /* syntax_type.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4E01985FEC2003E3175 /* syntax_type.hpp */; };
-		E4EEA54B1985FEC3003E3175 /* syntax_type.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4E01985FEC2003E3175 /* syntax_type.hpp */; };
 		E4EEA54C1985FEC3003E3175 /* u32regex_iterator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4E11985FEC2003E3175 /* u32regex_iterator.hpp */; };
-		E4EEA54D1985FEC3003E3175 /* u32regex_iterator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4E11985FEC2003E3175 /* u32regex_iterator.hpp */; };
 		E4EEA54E1985FEC3003E3175 /* u32regex_token_iterator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4E21985FEC2003E3175 /* u32regex_token_iterator.hpp */; };
-		E4EEA54F1985FEC3003E3175 /* u32regex_token_iterator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4E21985FEC2003E3175 /* u32regex_token_iterator.hpp */; };
 		E4EEA5501985FEC3003E3175 /* w32_regex_traits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4E31985FEC2003E3175 /* w32_regex_traits.hpp */; };
-		E4EEA5511985FEC3003E3175 /* w32_regex_traits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA4E31985FEC2003E3175 /* w32_regex_traits.hpp */; };
 		E4EEA5651985FF01003E3175 /* c_regex_traits.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EEA5531985FF01003E3175 /* c_regex_traits.cpp */; };
-		E4EEA5661985FF01003E3175 /* c_regex_traits.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EEA5531985FF01003E3175 /* c_regex_traits.cpp */; };
 		E4EEA5671985FF01003E3175 /* cpp_regex_traits.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EEA5541985FF01003E3175 /* cpp_regex_traits.cpp */; };
-		E4EEA5681985FF01003E3175 /* cpp_regex_traits.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EEA5541985FF01003E3175 /* cpp_regex_traits.cpp */; };
 		E4EEA5691985FF01003E3175 /* cregex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EEA5551985FF01003E3175 /* cregex.cpp */; };
-		E4EEA56A1985FF01003E3175 /* cregex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EEA5551985FF01003E3175 /* cregex.cpp */; };
 		E4EEA56B1985FF01003E3175 /* fileiter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EEA5561985FF01003E3175 /* fileiter.cpp */; };
-		E4EEA56C1985FF01003E3175 /* fileiter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EEA5561985FF01003E3175 /* fileiter.cpp */; };
 		E4EEA56D1985FF01003E3175 /* icu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EEA5571985FF01003E3175 /* icu.cpp */; };
-		E4EEA56E1985FF01003E3175 /* icu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EEA5571985FF01003E3175 /* icu.cpp */; };
 		E4EEA56F1985FF01003E3175 /* instances.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EEA5581985FF01003E3175 /* instances.cpp */; };
-		E4EEA5701985FF01003E3175 /* instances.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EEA5581985FF01003E3175 /* instances.cpp */; };
 		E4EEA5711985FF01003E3175 /* internals.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA5591985FF01003E3175 /* internals.hpp */; };
-		E4EEA5721985FF01003E3175 /* internals.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4EEA5591985FF01003E3175 /* internals.hpp */; };
 		E4EEA5751985FF01003E3175 /* regex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EEA55B1985FF01003E3175 /* regex.cpp */; };
-		E4EEA5761985FF01003E3175 /* regex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EEA55B1985FF01003E3175 /* regex.cpp */; };
 		E4EEA5771985FF01003E3175 /* regex_debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EEA55C1985FF01003E3175 /* regex_debug.cpp */; };
-		E4EEA5781985FF01003E3175 /* regex_debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EEA55C1985FF01003E3175 /* regex_debug.cpp */; };
 		E4EEA5791985FF01003E3175 /* regex_raw_buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EEA55D1985FF01003E3175 /* regex_raw_buffer.cpp */; };
-		E4EEA57A1985FF01003E3175 /* regex_raw_buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EEA55D1985FF01003E3175 /* regex_raw_buffer.cpp */; };
 		E4EEA57B1985FF01003E3175 /* regex_traits_defaults.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EEA55E1985FF01003E3175 /* regex_traits_defaults.cpp */; };
-		E4EEA57C1985FF01003E3175 /* regex_traits_defaults.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EEA55E1985FF01003E3175 /* regex_traits_defaults.cpp */; };
 		E4EEA57D1985FF01003E3175 /* static_mutex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EEA55F1985FF01003E3175 /* static_mutex.cpp */; };
-		E4EEA57E1985FF01003E3175 /* static_mutex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EEA55F1985FF01003E3175 /* static_mutex.cpp */; };
 		E4EEA57F1985FF01003E3175 /* usinstances.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EEA5601985FF01003E3175 /* usinstances.cpp */; };
-		E4EEA5801985FF01003E3175 /* usinstances.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EEA5601985FF01003E3175 /* usinstances.cpp */; };
 		E4EEA5831985FF01003E3175 /* wc_regex_traits.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EEA5621985FF01003E3175 /* wc_regex_traits.cpp */; };
-		E4EEA5841985FF01003E3175 /* wc_regex_traits.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EEA5621985FF01003E3175 /* wc_regex_traits.cpp */; };
 		E4EEA5851985FF01003E3175 /* wide_posix_api.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EEA5631985FF01003E3175 /* wide_posix_api.cpp */; };
-		E4EEA5861985FF01003E3175 /* wide_posix_api.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EEA5631985FF01003E3175 /* wide_posix_api.cpp */; };
 		E4EEA5871985FF01003E3175 /* winstances.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EEA5641985FF01003E3175 /* winstances.cpp */; };
-		E4EEA5881985FF01003E3175 /* winstances.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4EEA5641985FF01003E3175 /* winstances.cpp */; };
-		E4F36B8311714B8F00792A2D /* hdLibs.h in Headers */ = {isa = PBXBuildFile; fileRef = E4F36B8211714B8F00792A2D /* hdLibs.h */; };
+		E4F36B8311714B8F00792A2D /* hdLibs.h in Headers */ = {isa = PBXBuildFile; fileRef = E4F36B8211714B8F00792A2D /* hdLibs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E4F36BD611714DAD00792A2D /* neon_matrix_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36BCD11714DAD00792A2D /* neon_matrix_impl.cpp */; };
 		E4F36BD711714DAD00792A2D /* neon_matrix_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = E4F36BCE11714DAD00792A2D /* neon_matrix_impl.h */; };
 		E4F36E4F1171699800792A2D /* add_facet.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D711171699800792A2D /* add_facet.hpp */; };
@@ -1017,6 +576,16 @@
 		E4F36EAA1171699800792A2D /* xml_wiarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DE31171699800792A2D /* xml_wiarchive.hpp */; };
 		E4F36EAB1171699800792A2D /* xml_woarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DE41171699800792A2D /* xml_woarchive.hpp */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E4ADE2A41987208B0039FF7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = hdk;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		551EDF1A1827A191007E6CC3 /* paths.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = paths.xcconfig; path = ../paths.xcconfig; sourceTree = "<group>"; };
@@ -1405,10 +974,6 @@
 		E44B5B29198602AC001F9862 /* local_free_on_destruction.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = local_free_on_destruction.hpp; sourceTree = "<group>"; };
 		E4A7566419862B8A0004ACB6 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		E4EEA1EB1985F8EF003E3175 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		E4EEA1EF1985F8EF003E3175 /* Framework-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Framework-Info.plist"; sourceTree = "<group>"; };
-		E4EEA1F11985F8EF003E3175 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		E4EEA1F31985F8EF003E3175 /* Framework-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Framework-Prefix.pch"; sourceTree = "<group>"; };
-		E4EEA3E51985F964003E3175 /* libhdk copy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libhdk copy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4EEA3E71985FE3E003E3175 /* config.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = config.hpp; sourceTree = "<group>"; };
 		E4EEA3E81985FE3E003E3175 /* convenience.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = convenience.hpp; sourceTree = "<group>"; };
 		E4EEA3EA1985FE3E003E3175 /* utf8_codecvt_facet.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = utf8_codecvt_facet.hpp; sourceTree = "<group>"; };
@@ -1600,21 +1165,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E4EEA3D91985F964003E3175 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E4EEA3DA1985F964003E3175 /* Foundation.framework in Frameworks */,
-				E4EEA3DB1985F964003E3175 /* AVFoundation.framework in Frameworks */,
-				E4EEA3DC1985F964003E3175 /* AudioToolbox.framework in Frameworks */,
-				E4EEA3DD1985F964003E3175 /* CoreAudio.framework in Frameworks */,
-				E4EEA3DE1985F964003E3175 /* OpenAL.framework in Frameworks */,
-				E4EEA3DF1985F964003E3175 /* QuartzCore.framework in Frameworks */,
-				E4EEA3E01985F964003E3175 /* OpenGLES.framework in Frameworks */,
-				E4EEA3E11985F964003E3175 /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -1622,7 +1172,6 @@
 			isa = PBXGroup;
 			children = (
 				D2AAC07E0554694100DB518D /* libhdk.a */,
-				E4EEA3E51985F964003E3175 /* libhdk copy.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1635,7 +1184,6 @@
 				E41EA60F1170810B00A30C8E /* inc */,
 				E428355E116FF8C1008E3594 /* libs */,
 				E428341A116FF684008E3594 /* src */,
-				E4EEA1ED1985F8EF003E3175 /* Framework */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
 			);
@@ -2301,24 +1849,6 @@
 			path = ../../../../../../Opensource/boost_1_55_0/libs/system/src;
 			sourceTree = "<group>";
 		};
-		E4EEA1ED1985F8EF003E3175 /* Framework */ = {
-			isa = PBXGroup;
-			children = (
-				E4EEA1EE1985F8EF003E3175 /* Supporting Files */,
-			);
-			path = Framework;
-			sourceTree = "<group>";
-		};
-		E4EEA1EE1985F8EF003E3175 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				E4EEA1EF1985F8EF003E3175 /* Framework-Info.plist */,
-				E4EEA1F01985F8EF003E3175 /* InfoPlist.strings */,
-				E4EEA1F31985F8EF003E3175 /* Framework-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		E4EEA3E61985FE3E003E3175 /* filesystem */ = {
 			isa = PBXGroup;
 			children = (
@@ -2605,6 +2135,21 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E41EA6171170810B00A30C8E /* hdCollections.h in Headers */,
+				E41EA6181170810B00A30C8E /* hdk.h in Headers */,
+				E41EA6191170810B00A30C8E /* hdInterface.h in Headers */,
+				E41EA61A1170810B00A30C8E /* hdMath.h in Headers */,
+				E41EA61B1170810B00A30C8E /* hdSoundSystem.h in Headers */,
+				E41EA6251170815200A30C8E /* hdAnimationEngine.h in Headers */,
+				E41EA6321170831600A30C8E /* hdGame.h in Headers */,
+				E41EA6341170834B00A30C8E /* hdCore.h in Headers */,
+				E41EA63C1170846E00A30C8E /* hdGraphicsLibrary.h in Headers */,
+				E41EA8601170A50E00A30C8E /* hdEffects.h in Headers */,
+				E41EA9BA1170B4EF00A30C8E /* hdInput.h in Headers */,
+				E4F36B8311714B8F00792A2D /* hdLibs.h in Headers */,
+				63FBC6C611C81C2700C2377F /* hdIB.h in Headers */,
+				63B351D611F821B100D20861 /* hdScripting.h in Headers */,
+				E42834CE116FF684008E3594 /* hdFunctionAction.h in Headers */,
 				E4EEA5461985FEC3003E3175 /* states.hpp in Headers */,
 				E42834B3116FF684008E3594 /* AppleOpenALSupport.h in Headers */,
 				E42834B4116FF684008E3594 /* CMOpenALSound.h in Headers */,
@@ -2622,7 +2167,6 @@
 				E42834C5116FF684008E3594 /* hdAction.h in Headers */,
 				E42834C9116FF684008E3594 /* hdAnimationController.h in Headers */,
 				E42834CC116FF684008E3594 /* hdAnimationTimingFunction.h in Headers */,
-				E42834CE116FF684008E3594 /* hdFunctionAction.h in Headers */,
 				E4EEA5281985FEC3003E3175 /* regex.hpp in Headers */,
 				E42834D0116FF684008E3594 /* hdRotationAction.h in Headers */,
 				E42834D1116FF684008E3594 /* hdScaleAction.h in Headers */,
@@ -2792,33 +2336,21 @@
 				E428398911701BBE008E3594 /* hdk_prefix.pch in Headers */,
 				E42839EC11704C6B008E3594 /* hdScreenSettings.h in Headers */,
 				E44B5A9A1986026B001F9862 /* type_info_implementation.hpp in Headers */,
-				E41EA6171170810B00A30C8E /* hdCollections.h in Headers */,
-				E41EA6181170810B00A30C8E /* hdk.h in Headers */,
-				E41EA6191170810B00A30C8E /* hdInterface.h in Headers */,
-				E41EA61A1170810B00A30C8E /* hdMath.h in Headers */,
-				E41EA61B1170810B00A30C8E /* hdSoundSystem.h in Headers */,
 				E4EEA51E1985FEC3003E3175 /* perl_matcher_non_recursive.hpp in Headers */,
 				E41EA6231170814A00A30C8E /* hdAnimation.h in Headers */,
-				E41EA6251170815200A30C8E /* hdAnimationEngine.h in Headers */,
 				E4EEA4EC1985FEC3003E3175 /* icu.hpp in Headers */,
 				E41EA630117082D400A30C8E /* hdSound.h in Headers */,
 				E44B5AAC1986026B001F9862 /* weak_ptr.hpp in Headers */,
-				E41EA6321170831600A30C8E /* hdGame.h in Headers */,
-				E41EA6341170834B00A30C8E /* hdCore.h in Headers */,
-				E41EA63C1170846E00A30C8E /* hdGraphicsLibrary.h in Headers */,
 				E41EA6401170859400A30C8E /* hdSoundSystemEnums.h in Headers */,
 				E41EA642117085EF00A30C8E /* hdMusicPlayerInterface.h in Headers */,
 				E41EA66E1170899C00A30C8E /* hdMathCommon.h in Headers */,
 				E41EA75A11709B3600A30C8E /* hdFileSystemUtils.h in Headers */,
-				E41EA8601170A50E00A30C8E /* hdEffects.h in Headers */,
 				E4EEA3FC1985FE3E003E3175 /* path.hpp in Headers */,
 				E41EA9AD1170B37000A30C8E /* hdMultiTouchView.h in Headers */,
-				E41EA9BA1170B4EF00A30C8E /* hdInput.h in Headers */,
 				E4EEA4F21985FEC3003E3175 /* object_cache.hpp in Headers */,
 				E4EEA54A1985FEC3003E3175 /* syntax_type.hpp in Headers */,
 				E41EAA5F1170BCC000A30C8E /* hdAccelerometer.h in Headers */,
 				E44B5A841986026B001F9862 /* smart_cast.hpp in Headers */,
-				E4F36B8311714B8F00792A2D /* hdLibs.h in Headers */,
 				E4F36BD711714DAD00792A2D /* neon_matrix_impl.h in Headers */,
 				E4F36E4F1171699800792A2D /* add_facet.hpp in Headers */,
 				E4F36E501171699800792A2D /* archive_exception.hpp in Headers */,
@@ -2977,299 +2509,9 @@
 				63FBC6B311C81C1C00C2377F /* hdIBLoader.h in Headers */,
 				E44B5A601986026B001F9862 /* hash_map.hpp in Headers */,
 				63FBC6B511C81C1C00C2377F /* hdIBEnums.h in Headers */,
-				63FBC6C611C81C2700C2377F /* hdIB.h in Headers */,
 				6384558911C8337300C421AB /* hdViewController.h in Headers */,
-				63B351D611F821B100D20861 /* hdScripting.h in Headers */,
 				E4EEA4E81985FEC2003E3175 /* cwchar.hpp in Headers */,
 				6353FD2B1340079400AD7F1D /* hdMultiTouchViewController.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E4EEA1F81985F964003E3175 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E4EEA1F91985F964003E3175 /* AppleOpenALSupport.h in Headers */,
-				E4EEA1FA1985F964003E3175 /* CMOpenALSound.h in Headers */,
-				E4EEA1FB1985F964003E3175 /* CMOpenALSoundManager.h in Headers */,
-				E4EEA1FC1985F964003E3175 /* SynthesizeSingleton.h in Headers */,
-				E4EEA4FB1985FEC3003E3175 /* user.hpp in Headers */,
-				E4EEA1FD1985F964003E3175 /* hdSoundManager.h in Headers */,
-				E4EEA1FE1985F964003E3175 /* hdSoundEngineInterface.h in Headers */,
-				E4EEA1FF1985F964003E3175 /* hdOpenALSoundEngine.h in Headers */,
-				E4EEA2001985F964003E3175 /* hdOpenALPool.h in Headers */,
-				E4EEA2011985F964003E3175 /* hdAVAudioWrapper.h in Headers */,
-				E4EEA5071985FEC3003E3175 /* cpp_regex_traits.hpp in Headers */,
-				E4EEA2021985F964003E3175 /* hdPauseAction.h in Headers */,
-				E4EEA5311985FEC3003E3175 /* regex_iterator.hpp in Headers */,
-				E4EEA2031985F964003E3175 /* hdAction.h in Headers */,
-				E4EEA51B1985FEC3003E3175 /* perl_matcher.hpp in Headers */,
-				E4EEA5291985FEC3003E3175 /* regex.hpp in Headers */,
-				E4EEA2041985F964003E3175 /* hdAnimationController.h in Headers */,
-				E4EEA5231985FEC3003E3175 /* primary_transform.hpp in Headers */,
-				E4EEA2051985F964003E3175 /* hdAnimationTimingFunction.h in Headers */,
-				E4EEA2061985F964003E3175 /* hdFunctionAction.h in Headers */,
-				E4EEA2071985F964003E3175 /* hdRotationAction.h in Headers */,
-				E4EEA2081985F964003E3175 /* hdScaleAction.h in Headers */,
-				E4EEA2091985F964003E3175 /* hdTranslationAction.h in Headers */,
-				E4EEA20A1985F964003E3175 /* hdVectorAction.h in Headers */,
-				E4EEA20B1985F964003E3175 /* hdAlphaAction.h in Headers */,
-				E4EEA20C1985F964003E3175 /* hdPointerList.h in Headers */,
-				E4EEA20D1985F964003E3175 /* hdSerializablePointerList.h in Headers */,
-				E44B5AA31986026B001F9862 /* vector.hpp in Headers */,
-				E44B5A991986026B001F9862 /* traits.hpp in Headers */,
-				E4EEA20E1985F964003E3175 /* hdTypedefList.h in Headers */,
-				E4EEA4EF1985FEC3003E3175 /* mfc.hpp in Headers */,
-				E4EEA20F1985F964003E3175 /* hdCollectionSettings.h in Headers */,
-				E44B5AAD1986026B001F9862 /* weak_ptr.hpp in Headers */,
-				E4EEA2101985F964003E3175 /* hdApplication.h in Headers */,
-				E44B5A4B1986026B001F9862 /* shared_ptr_nmt_132.hpp in Headers */,
-				E4EEA5251985FEC3003E3175 /* protected_call.hpp in Headers */,
-				E4EEA2111985F964003E3175 /* hdCompression.h in Headers */,
-				E4EEA2121985F964003E3175 /* hdPakFileSystem.h in Headers */,
-				E4EEA2131985F964003E3175 /* hdCommon.h in Headers */,
-				E4EEA2141985F964003E3175 /* hdTypes.h in Headers */,
-				E4EEA2151985F964003E3175 /* hdFileSystem.h in Headers */,
-				E4EEA2161985F964003E3175 /* hdIPhoneFileSystem.h in Headers */,
-				E4EEA2171985F964003E3175 /* hdSystemSettings.h in Headers */,
-				E4EEA53D1985FEC3003E3175 /* regex_split.hpp in Headers */,
-				E4EEA2181985F964003E3175 /* hdIPhoneSystemSettings.h in Headers */,
-				E4EEA50F1985FEC3003E3175 /* instances.hpp in Headers */,
-				E4EEA2191985F964003E3175 /* hdOSFunctions.h in Headers */,
-				E4EEA21A1985F964003E3175 /* hdIPhoneOSFunctions.h in Headers */,
-				E44B5A6D1986026B001F9862 /* list.hpp in Headers */,
-				E4EEA21B1985F964003E3175 /* hdConfig.h in Headers */,
-				E44B5AAF1986026B001F9862 /* wrapper.hpp in Headers */,
-				E4EEA52F1985FEC3003E3175 /* regex_grep.hpp in Headers */,
-				E4EEA21C1985F964003E3175 /* hdFileSystemSupport.h in Headers */,
-				E4EEA5171985FEC3003E3175 /* match_results.hpp in Headers */,
-				E4EEA5431985FEC3003E3175 /* regex_traits_defaults.hpp in Headers */,
-				E4EEA21D1985F964003E3175 /* hdPlayerConfig.h in Headers */,
-				E44B5A2F1986026B001F9862 /* assume_abstract.hpp in Headers */,
-				E4EEA21E1985F964003E3175 /* hdPhysicsJoint.h in Headers */,
-				E4EEA21F1985F964003E3175 /* hd2DGameController.h in Headers */,
-				E44B5A371986026B001F9862 /* collection_size_type.hpp in Headers */,
-				E4EEA2201985F964003E3175 /* hdGameObject.h in Headers */,
-				E44B5A671986026B001F9862 /* item_version_type.hpp in Headers */,
-				E4EEA2211985F964003E3175 /* hdGameWorld.h in Headers */,
-				E44B5A591986026B001F9862 /* factory.hpp in Headers */,
-				E4EEA2221985F964003E3175 /* hdOrthographicProjection.h in Headers */,
-				E44B5A631986026B001F9862 /* hash_set.hpp in Headers */,
-				E4EEA3FF1985FE3E003E3175 /* path_traits.hpp in Headers */,
-				E4EEA2231985F964003E3175 /* hdPhysicsGlue.h in Headers */,
-				E4EEA3FD1985FE3E003E3175 /* path.hpp in Headers */,
-				E44B5A711986026B001F9862 /* nvp.hpp in Headers */,
-				E4EEA2241985F964003E3175 /* hdPhysicsObject.h in Headers */,
-				E44B5A331986026B001F9862 /* binary_object.hpp in Headers */,
-				E4EEA2251985F964003E3175 /* b2Opt.h in Headers */,
-				E4EEA2261985F964003E3175 /* hdGraphicsInterface.h in Headers */,
-				E4EEA2271985F964003E3175 /* hdDrawable.h in Headers */,
-				E4EEA5051985FEC3003E3175 /* char_regex_traits.hpp in Headers */,
-				E4EEA3F91985FE3E003E3175 /* fstream.hpp in Headers */,
-				E4EEA2281985F964003E3175 /* hdDrawingUtilities.h in Headers */,
-				E44B5A5D1986026B001F9862 /* hash_collections_load_imp.hpp in Headers */,
-				E4EEA5191985FEC3003E3175 /* mem_block_cache.hpp in Headers */,
-				E4EEA2291985F964003E3175 /* hdPolygon.h in Headers */,
-				E4EEA22A1985F964003E3175 /* hdTexture.h in Headers */,
-				E4EEA4F51985FEC3003E3175 /* static_mutex.hpp in Headers */,
-				E4EEA22B1985F964003E3175 /* hdTextureManager.h in Headers */,
-				E4EEA22C1985F964003E3175 /* hdTGALoader.h in Headers */,
-				E4EEA3F51985FE3E003E3175 /* utf8_codecvt_facet.hpp in Headers */,
-				E4EEA22D1985F964003E3175 /* hdPNGLoader.h in Headers */,
-				E44B5A9F1986026B001F9862 /* valarray.hpp in Headers */,
-				E4EEA22E1985F964003E3175 /* hdFontPolygon.h in Headers */,
-				E44B5A891986026B001F9862 /* split_member.hpp in Headers */,
-				E4EEA22F1985F964003E3175 /* hdFont.h in Headers */,
-				E4EEA2301985F964003E3175 /* hdFontManager.h in Headers */,
-				E44B5B2D198602AC001F9862 /* local_free_on_destruction.hpp in Headers */,
-				E4EEA2311985F964003E3175 /* hdButton.h in Headers */,
-				E4EEA5491985FEC3003E3175 /* sub_match.hpp in Headers */,
-				E4EEA4F11985FEC3003E3175 /* pattern_except.hpp in Headers */,
-				E44B5A3D1986026B001F9862 /* collections_save_imp.hpp in Headers */,
-				E4EEA3F71985FE3E003E3175 /* exception.hpp in Headers */,
-				E4EEA2321985F964003E3175 /* hdInterfaceLayer.h in Headers */,
-				E4EEA2331985F964003E3175 /* hdReceiver.h in Headers */,
-				E4EEA2341985F964003E3175 /* hdInterfaceController.h in Headers */,
-				E4EEA2351985F964003E3175 /* hdUIContainer.h in Headers */,
-				E44B5A2B1986026B001F9862 /* access.hpp in Headers */,
-				E4EEA2361985F964003E3175 /* hdUIImage.h in Headers */,
-				E4EEA2371985F964003E3175 /* hdInterfaceEnums.h in Headers */,
-				E4EEA2381985F964003E3175 /* hdUISegmentedControl.h in Headers */,
-				E4EEA5271985FEC3003E3175 /* regbase.hpp in Headers */,
-				E4EEA4E51985FEC2003E3175 /* concepts.hpp in Headers */,
-				E4EEA5411985FEC3003E3175 /* regex_traits.hpp in Headers */,
-				E4EEA2391985F964003E3175 /* hdCheckbox.h in Headers */,
-				E44B5AA91986026B001F9862 /* void_cast.hpp in Headers */,
-				E4EEA5031985FEC3003E3175 /* c_regex_traits.hpp in Headers */,
-				E4EEA23A1985F964003E3175 /* hdInterfaceContext.h in Headers */,
-				E4EEA23B1985F964003E3175 /* hdFixed.h in Headers */,
-				E4EEA23C1985F964003E3175 /* hdGeometry.h in Headers */,
-				E4EEA4ED1985FEC3003E3175 /* icu.hpp in Headers */,
-				E4EEA5131985FEC3003E3175 /* iterator_traits.hpp in Headers */,
-				E44B5A971986026B001F9862 /* tracking_enum.hpp in Headers */,
-				E44B5A531986026B001F9862 /* extended_type_info.hpp in Headers */,
-				E4EEA23D1985F964003E3175 /* hdMathSerializable.h in Headers */,
-				E4EEA23E1985F964003E3175 /* hdMatrix.h in Headers */,
-				E4EEA5151985FEC3003E3175 /* match_flags.hpp in Headers */,
-				E4EEA5471985FEC3003E3175 /* states.hpp in Headers */,
-				E4EEA4E91985FEC2003E3175 /* cwchar.hpp in Headers */,
-				E4EEA4FF1985FEC3003E3175 /* basic_regex_creator.hpp in Headers */,
-				E4EEA54D1985FEC3003E3175 /* u32regex_iterator.hpp in Headers */,
-				E44B5A9B1986026B001F9862 /* type_info_implementation.hpp in Headers */,
-				E4EEA23F1985F964003E3175 /* hdParticleEmitter.h in Headers */,
-				E44B5A3B1986026B001F9862 /* collections_load_imp.hpp in Headers */,
-				E4EEA2401985F964003E3175 /* hdPhysicsParticleEmitter.h in Headers */,
-				E4EEA2411985F964003E3175 /* Box2D.h in Headers */,
-				E4EEA2421985F964003E3175 /* b2BroadPhase.h in Headers */,
-				E44B5A9D1986026B001F9862 /* utility.hpp in Headers */,
-				E4EEA2431985F964003E3175 /* b2Collision.h in Headers */,
-				E44B5A451986026B001F9862 /* get_data.hpp in Headers */,
-				E44B5A931986026B001F9862 /* throw_exception.hpp in Headers */,
-				E4EEA2441985F964003E3175 /* b2PairManager.h in Headers */,
-				E4EEA5511985FEC3003E3175 /* w32_regex_traits.hpp in Headers */,
-				E44B5A6B1986026B001F9862 /* level_enum.hpp in Headers */,
-				E44B5A8D1986026B001F9862 /* static_warning.hpp in Headers */,
-				E4EEA4F91985FEC3003E3175 /* regex_traits.hpp in Headers */,
-				E4EEA2451985F964003E3175 /* b2CircleShape.h in Headers */,
-				E44B5A7B1986026B001F9862 /* set.hpp in Headers */,
-				E4EEA2461985F964003E3175 /* b2EdgeShape.h in Headers */,
-				E44B5A811986026B001F9862 /* singleton.hpp in Headers */,
-				E4EEA2471985F964003E3175 /* b2PolygonShape.h in Headers */,
-				E4EEA2481985F964003E3175 /* b2Shape.h in Headers */,
-				E4EEA2491985F964003E3175 /* b2BlockAllocator.h in Headers */,
-				E44B5A571986026B001F9862 /* extended_type_info_typeid.hpp in Headers */,
-				E4EEA24A1985F964003E3175 /* b2Math.h in Headers */,
-				E44B5AA51986026B001F9862 /* vector_135.hpp in Headers */,
-				E4EEA53B1985FEC3003E3175 /* regex_search.hpp in Headers */,
-				E44B5A951986026B001F9862 /* tracking.hpp in Headers */,
-				E4EEA24B1985F964003E3175 /* b2Settings.h in Headers */,
-				E44B5A611986026B001F9862 /* hash_map.hpp in Headers */,
-				E44B5AA71986026B001F9862 /* version.hpp in Headers */,
-				E44B5A831986026B001F9862 /* slist.hpp in Headers */,
-				E4EEA53F1985FEC3003E3175 /* regex_token_iterator.hpp in Headers */,
-				E4EEA24C1985F964003E3175 /* b2StackAllocator.h in Headers */,
-				E4EEA24D1985F964003E3175 /* Fixed.h in Headers */,
-				E44B5A491986026B001F9862 /* shared_ptr_132.hpp in Headers */,
-				E44B5A871986026B001F9862 /* split_free.hpp in Headers */,
-				E4EEA24E1985F964003E3175 /* jtypes.h in Headers */,
-				E4EEA5011985FEC3003E3175 /* basic_regex_parser.hpp in Headers */,
-				E4EEA24F1985F964003E3175 /* b2Body.h in Headers */,
-				E4EEA51D1985FEC3003E3175 /* perl_matcher_common.hpp in Headers */,
-				E4EEA2501985F964003E3175 /* b2ContactManager.h in Headers */,
-				E4EEA2511985F964003E3175 /* b2Island.h in Headers */,
-				E4EEA2521985F964003E3175 /* b2World.h in Headers */,
-				E44B5A691986026B001F9862 /* level.hpp in Headers */,
-				E4EEA3F31985FE3E003E3175 /* convenience.hpp in Headers */,
-				E44B5A411986026B001F9862 /* config.hpp in Headers */,
-				E4EEA2531985F964003E3175 /* b2WorldCallbacks.h in Headers */,
-				E4EEA2541985F964003E3175 /* b2CircleContact.h in Headers */,
-				E4EEA2551985F964003E3175 /* b2Contact.h in Headers */,
-				E4EEA4F71985FEC3003E3175 /* unicode_iterator.hpp in Headers */,
-				E4EEA5111985FEC3003E3175 /* iterator_category.hpp in Headers */,
-				E4EEA2561985F964003E3175 /* b2ContactSolver.h in Headers */,
-				E4EEA2571985F964003E3175 /* b2EdgeAndCircleContact.h in Headers */,
-				E44B5A4D1986026B001F9862 /* stack_constructor.hpp in Headers */,
-				E44B5A7D1986026B001F9862 /* shared_ptr.hpp in Headers */,
-				E4EEA2581985F964003E3175 /* b2NullContact.h in Headers */,
-				E44B5AAB1986026B001F9862 /* void_cast_fwd.hpp in Headers */,
-				E44B5A4F1986026B001F9862 /* ephemeral.hpp in Headers */,
-				E44B5A731986026B001F9862 /* optional.hpp in Headers */,
-				E4EEA2591985F964003E3175 /* b2PolyAndCircleContact.h in Headers */,
-				E44B5A391986026B001F9862 /* collection_traits.hpp in Headers */,
-				E4EEA25A1985F964003E3175 /* b2PolyAndEdgeContact.h in Headers */,
-				E4EEA3FB1985FE3E003E3175 /* operations.hpp in Headers */,
-				E4EEA25B1985F964003E3175 /* b2PolyContact.h in Headers */,
-				E44B5A751986026B001F9862 /* pfto.hpp in Headers */,
-				E4EEA25C1985F964003E3175 /* b2BuoyancyController.h in Headers */,
-				E4EEA25D1985F964003E3175 /* b2ConstantAccelController.h in Headers */,
-				E4EEA25E1985F964003E3175 /* b2ConstantForceController.h in Headers */,
-				E4EEA5721985FF01003E3175 /* internals.hpp in Headers */,
-				E4EEA5391985FEC3003E3175 /* regex_replace.hpp in Headers */,
-				E4EEA25F1985F964003E3175 /* b2Controller.h in Headers */,
-				E44B5AA11986026B001F9862 /* variant.hpp in Headers */,
-				E4EEA2601985F964003E3175 /* b2GravityController.h in Headers */,
-				E4EEA5371985FEC3003E3175 /* regex_raw_buffer.hpp in Headers */,
-				E44B5A311986026B001F9862 /* base_object.hpp in Headers */,
-				E4EEA2611985F964003E3175 /* b2TensorDampingController.h in Headers */,
-				E4EEA52B1985FEC3003E3175 /* regex_format.hpp in Headers */,
-				E4EEA5091985FEC3003E3175 /* cregex.hpp in Headers */,
-				E44B5A5F1986026B001F9862 /* hash_collections_save_imp.hpp in Headers */,
-				E44B5A511986026B001F9862 /* export.hpp in Headers */,
-				E44B5A771986026B001F9862 /* scoped_ptr.hpp in Headers */,
-				E4EEA2621985F964003E3175 /* b2DistanceJoint.h in Headers */,
-				E4EEA2631985F964003E3175 /* b2GearJoint.h in Headers */,
-				E4EEA2641985F964003E3175 /* b2Joint.h in Headers */,
-				E4EEA2651985F964003E3175 /* b2LineJoint.h in Headers */,
-				E4EEA2661985F964003E3175 /* b2MouseJoint.h in Headers */,
-				E4EEA2671985F964003E3175 /* b2PrismaticJoint.h in Headers */,
-				E4EEA2681985F964003E3175 /* b2PulleyJoint.h in Headers */,
-				E4EEA2691985F964003E3175 /* b2RevoluteJoint.h in Headers */,
-				E4EEA26A1985F964003E3175 /* hdk_prefix.pch in Headers */,
-				E4EEA50B1985FEC3003E3175 /* error_type.hpp in Headers */,
-				E4EEA26B1985F964003E3175 /* hdScreenSettings.h in Headers */,
-				E4EEA26C1985F964003E3175 /* hdCollections.h in Headers */,
-				E4EEA26D1985F964003E3175 /* hdk.h in Headers */,
-				E4EEA26E1985F964003E3175 /* hdInterface.h in Headers */,
-				E4EEA3F11985FE3E003E3175 /* config.hpp in Headers */,
-				E44B5A3F1986026B001F9862 /* complex.hpp in Headers */,
-				E4EEA26F1985F964003E3175 /* hdMath.h in Headers */,
-				E4EEA4EB1985FEC3003E3175 /* config.hpp in Headers */,
-				E44B5A351986026B001F9862 /* bitset.hpp in Headers */,
-				E4EEA3311985F964003E3175 /* hdMultiTouchViewController.h in Headers */,
-				E44B5A431986026B001F9862 /* deque.hpp in Headers */,
-				E4EEA3301985F964003E3175 /* hdScripting.h in Headers */,
-				E4EEA32F1985F964003E3175 /* hdViewController.h in Headers */,
-				E44B5A551986026B001F9862 /* extended_type_info_no_rtti.hpp in Headers */,
-				E4EEA32E1985F964003E3175 /* hdIB.h in Headers */,
-				E4EEA32D1985F964003E3175 /* hdIBEnums.h in Headers */,
-				E4EEA32C1985F964003E3175 /* hdIBLoader.h in Headers */,
-				E44B5A471986026B001F9862 /* shared_count_132.hpp in Headers */,
-				E4EEA32B1985F964003E3175 /* hdIBViewController.h in Headers */,
-				E4EEA32A1985F964003E3175 /* hdIBProxy.h in Headers */,
-				E4EEA3291985F964003E3175 /* hdIBContainer.h in Headers */,
-				E4EEA3281985F964003E3175 /* hdIBFontPolygon.h in Headers */,
-				E44B5A8F1986026B001F9862 /* string.hpp in Headers */,
-				E44B5A651986026B001F9862 /* is_bitwise_serializable.hpp in Headers */,
-				E4EEA50D1985FEC3003E3175 /* fileiter.hpp in Headers */,
-				E4EEA3271985F964003E3175 /* hdIBImage.h in Headers */,
-				E44B5A7F1986026B001F9862 /* shared_ptr_132.hpp in Headers */,
-				E4EEA5351985FEC3003E3175 /* regex_merge.hpp in Headers */,
-				E4EEA5331985FEC3003E3175 /* regex_match.hpp in Headers */,
-				E4EEA5451985FEC3003E3175 /* regex_workaround.hpp in Headers */,
-				E4EEA3261985F964003E3175 /* hdIBButton.h in Headers */,
-				E4EEA4E71985FEC2003E3175 /* borland.hpp in Headers */,
-				E4EEA3181985F964003E3175 /* hdThumbPad.h in Headers */,
-				E4EEA2701985F964003E3175 /* hdSoundSystem.h in Headers */,
-				E4EEA54F1985FEC3003E3175 /* u32regex_token_iterator.hpp in Headers */,
-				E4EEA2711985F964003E3175 /* hdAnimation.h in Headers */,
-				E4EEA2721985F964003E3175 /* hdAnimationEngine.h in Headers */,
-				E44B5A8B1986026B001F9862 /* state_saver.hpp in Headers */,
-				E4EEA2731985F964003E3175 /* hdSound.h in Headers */,
-				E44B5A911986026B001F9862 /* strong_typedef.hpp in Headers */,
-				E4EEA52D1985FEC3003E3175 /* regex_fwd.hpp in Headers */,
-				E4EEA2741985F964003E3175 /* hdGame.h in Headers */,
-				E44B5A851986026B001F9862 /* smart_cast.hpp in Headers */,
-				E4EEA54B1985FEC3003E3175 /* syntax_type.hpp in Headers */,
-				E4EEA2751985F964003E3175 /* hdCore.h in Headers */,
-				E4EEA2761985F964003E3175 /* hdGraphicsLibrary.h in Headers */,
-				E44B5A6F1986026B001F9862 /* map.hpp in Headers */,
-				E4EEA2771985F964003E3175 /* hdSoundSystemEnums.h in Headers */,
-				E4EEA2781985F964003E3175 /* hdMusicPlayerInterface.h in Headers */,
-				E44B5A2D1986026B001F9862 /* array.hpp in Headers */,
-				E4EEA51F1985FEC3003E3175 /* perl_matcher_non_recursive.hpp in Headers */,
-				E4EEA2791985F964003E3175 /* hdMathCommon.h in Headers */,
-				E44B5A5B1986026B001F9862 /* force_include.hpp in Headers */,
-				E4EEA27A1985F964003E3175 /* hdFileSystemUtils.h in Headers */,
-				E4EEA27B1985F964003E3175 /* hdEffects.h in Headers */,
-				E4EEA4FD1985FEC3003E3175 /* basic_regex.hpp in Headers */,
-				E4EEA2801985F964003E3175 /* hdMultiTouchView.h in Headers */,
-				E44B5A791986026B001F9862 /* serialization.hpp in Headers */,
-				E4EEA2811985F964003E3175 /* hdInput.h in Headers */,
-				E4EEA2821985F964003E3175 /* hdAccelerometer.h in Headers */,
-				E4EEA4F31985FEC3003E3175 /* object_cache.hpp in Headers */,
-				E4EEA5211985FEC3003E3175 /* perl_matcher_recursive.hpp in Headers */,
-				E4EEA2831985F964003E3175 /* hdLibs.h in Headers */,
-				E4EEA2841985F964003E3175 /* neon_matrix_impl.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3283,6 +2525,7 @@
 				D2AAC07A0554694100DB518D /* Headers */,
 				D2AAC07B0554694100DB518D /* Sources */,
 				D2AAC07C0554694100DB518D /* Frameworks */,
+				E4ADE29F198720530039FF7A /* Build Framework */,
 			);
 			buildRules = (
 			);
@@ -3291,23 +2534,6 @@
 			name = hdk;
 			productName = hdk;
 			productReference = D2AAC07E0554694100DB518D /* libhdk.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		E4EEA1F71985F964003E3175 /* Framework */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E4EEA3E21985F964003E3175 /* Build configuration list for PBXNativeTarget "Framework" */;
-			buildPhases = (
-				E4EEA1F81985F964003E3175 /* Headers */,
-				E4EEA3321985F964003E3175 /* Sources */,
-				E4EEA3D91985F964003E3175 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Framework;
-			productName = hdk;
-			productReference = E4EEA3E51985F964003E3175 /* libhdk copy.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -3335,10 +2561,41 @@
 			projectRoot = "";
 			targets = (
 				D2AAC07D0554694100DB518D /* hdk */,
-				E4EEA1F71985F964003E3175 /* Framework */,
+				E4ADE2A01987207D0039FF7A /* Framework */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E4ADE29F198720530039FF7A /* Build Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nexport FRAMEWORK_LOCN=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework\"\n\n# Create the path to the real Headers die\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers\"\n\n# Create the required symlinks\n/bin/ln -sfh A \"${FRAMEWORK_LOCN}/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${FRAMEWORK_LOCN}/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \\\n\"${FRAMEWORK_LOCN}/${PRODUCT_NAME}\"\n\n# Copy the public headers into the framework\n/bin/cp -a \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \\\n\"${FRAMEWORK_LOCN}/Versions/A/Headers\"";
+		};
+		E4ADE2A61987209B0039FF7A /* Multiplatform Build */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Multiplatform Build";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\n# If we're already inside this script then die\nif [ -n \"$RW_MULTIPLATFORM_BUILD_IN_PROGRESS\" ]; then\nexit 0\nfi\nexport RW_MULTIPLATFORM_BUILD_IN_PROGRESS=1\n\nRW_FRAMEWORK_NAME=${PROJECT_NAME}\nRW_INPUT_STATIC_LIB=\"lib${PROJECT_NAME}.a\"\nRW_FRAMEWORK_LOCATION=\"${BUILT_PRODUCTS_DIR}/${RW_FRAMEWORK_NAME}.framework\"\n\nfunction build_static_library {\n    # Will rebuild the static library as specified\n    #     build_static_library sdk\n    xcrun xcodebuild -project \"${PROJECT_FILE_PATH}\" \\\n    -target \"${TARGET_NAME}\" \\\n    -configuration \"${CONFIGURATION}\" \\\n    -sdk \"${1}\" \\\n    ONLY_ACTIVE_ARCH=NO \\\n    BUILD_DIR=\"${BUILD_DIR}\" \\\n    OBJROOT=\"${OBJROOT}\" \\\n    BUILD_ROOT=\"${BUILD_ROOT}\" \\\n    SYMROOT=\"${SYMROOT}\" $ACTION\n}\n\nfunction make_fat_library {\n    # Will smash 2 static libs together\n    #     make_fat_library in1 in2 out\n    xcrun lipo -create \"${1}\" \"${2}\" -output \"${3}\"\n}\n\n# 1 - Extract the platform (iphoneos/iphonesimulator) from the SDK name\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]; then\nRW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\n# 2 - Extract the version from the SDK\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]; then\nRW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\n# 3 - Determine the other platform\nif [ \"$RW_SDK_PLATFORM\" == \"iphoneos\" ]; then\nRW_OTHER_PLATFORM=iphonesimulator\nelse\nRW_OTHER_PLATFORM=iphoneos\nfi\n\n# 4 - Find the build directory\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$RW_SDK_PLATFORM$ ]]; then\nRW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${RW_OTHER_PLATFORM}\"\nelse\necho \"Could not find other platform build directory.\"\nexit 1\nfi\n\n# Build the other platform.\nbuild_static_library \"${RW_OTHER_PLATFORM}${RW_SDK_VERSION}\"\n\n# If we're currently building for iphonesimulator, then need to rebuild\n#   to ensure that we get both i386 and x86_64\nif [ \"$RW_SDK_PLATFORM\" == \"iphonesimulator\" ]; then\nbuild_static_library \"${SDK_NAME}\"\nfi\n\n# Join the 2 static libs into 1 and push into the .framework\nmake_fat_library \"${BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\" \\\n\"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\" \\\n\"${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\"\n\n# Ensure that the framework is present in both platform's build directories\ncp -a \"${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\" \\\n\"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_FRAMEWORK_NAME}.framework/Versions/A/${RW_FRAMEWORK_NAME}\"\n\n# Copy the framework to the user's desktop\nditto \"${RW_FRAMEWORK_LOCATION}\" \"${HOME}/Desktop/${RW_FRAMEWORK_NAME}.framework\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D2AAC07B0554694100DB518D /* Sources */ = {
@@ -3515,192 +2772,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E4EEA3321985F964003E3175 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E4EEA3331985F964003E3175 /* AppleOpenALSupport.c in Sources */,
-				E4EEA3341985F964003E3175 /* CMOpenALSound.m in Sources */,
-				E44B5AF819860288001F9862 /* binary_oarchive.cpp in Sources */,
-				E4EEA3351985F964003E3175 /* CMOpenALSoundManager.m in Sources */,
-				E4EEA3361985F964003E3175 /* hdSoundManager.cpp in Sources */,
-				E4EEA3371985F964003E3175 /* hdOpenALSoundEngine.mm in Sources */,
-				E4EEA3381985F964003E3175 /* hdOpenALPool.cpp in Sources */,
-				E4EEA3391985F964003E3175 /* hdAVAudioWrapper.mm in Sources */,
-				E4EEA33A1985F964003E3175 /* hdAction.cpp in Sources */,
-				E44B5AFE19860288001F9862 /* codecvt_null.cpp in Sources */,
-				E4EEA33B1985F964003E3175 /* hdAnimation.cpp in Sources */,
-				E4EEA33C1985F964003E3175 /* hdAnimationController.cpp in Sources */,
-				E4EEA33D1985F964003E3175 /* hdRotationAction.cpp in Sources */,
-				E4EEA33E1985F964003E3175 /* hdScaleAction.cpp in Sources */,
-				E4EEA33F1985F964003E3175 /* hdTranslationAction.cpp in Sources */,
-				E44B5B1619860288001F9862 /* utf8_codecvt_facet.cpp in Sources */,
-				E4EEA3401985F964003E3175 /* hdVectorAction.cpp in Sources */,
-				E44B5B2B198602AC001F9862 /* error_code.cpp in Sources */,
-				E4EEA3411985F964003E3175 /* hdAlphaAction.cpp in Sources */,
-				E4EEA3421985F964003E3175 /* hdCompression.cpp in Sources */,
-				E44B5B1819860288001F9862 /* void_cast.cpp in Sources */,
-				E4EEA3431985F964003E3175 /* hdPakFileSystem.cpp in Sources */,
-				E4EEA56A1985FF01003E3175 /* cregex.cpp in Sources */,
-				E4EEA3441985F964003E3175 /* hdCommon.cpp in Sources */,
-				E4EEA3451985F964003E3175 /* hdIPhoneFileSystem.mm in Sources */,
-				E4EEA3461985F964003E3175 /* hdIPhoneSystemSettings.mm in Sources */,
-				E4EEA3471985F964003E3175 /* hdIPhoneOSFunctions.mm in Sources */,
-				E44B5B2019860288001F9862 /* xml_oarchive.cpp in Sources */,
-				E4EEA3481985F964003E3175 /* hdConfig.cpp in Sources */,
-				E44B5B0C19860288001F9862 /* stl_port.cpp in Sources */,
-				E44B59DB198600E2001F9862 /* utf8_codecvt_facet.cpp in Sources */,
-				E4EEA3491985F964003E3175 /* hdPlayerConfig.cpp in Sources */,
-				E44B5B2219860288001F9862 /* xml_wgrammar.cpp in Sources */,
-				E4EEA34A1985F964003E3175 /* hd2DGameController.cpp in Sources */,
-				E4EEA34B1985F964003E3175 /* hdGameObject.cpp in Sources */,
-				E4EEA34C1985F964003E3175 /* hdGameWorld.cpp in Sources */,
-				E44B5ADC19860288001F9862 /* basic_archive.cpp in Sources */,
-				E4EEA34D1985F964003E3175 /* hdOrthographicProjection.cpp in Sources */,
-				E4EEA34E1985F964003E3175 /* hdPhysicsGlue.cpp in Sources */,
-				E44B5AF219860288001F9862 /* basic_text_woprimitive.cpp in Sources */,
-				E4EEA34F1985F964003E3175 /* hdDrawingUtilities.cpp in Sources */,
-				E44B5B0819860288001F9862 /* polymorphic_oarchive.cpp in Sources */,
-				E4EEA3501985F964003E3175 /* hdOpenGLES.cpp in Sources */,
-				E4EEA3511985F964003E3175 /* hdPolygon.cpp in Sources */,
-				E4EEA5761985FF01003E3175 /* regex.cpp in Sources */,
-				E4EEA3521985F964003E3175 /* hdTextureManager.cpp in Sources */,
-				E4EEA57C1985FF01003E3175 /* regex_traits_defaults.cpp in Sources */,
-				E44B59D5198600E2001F9862 /* path_traits.cpp in Sources */,
-				E4EEA56C1985FF01003E3175 /* fileiter.cpp in Sources */,
-				E4EEA3531985F964003E3175 /* hdTGALoader.cpp in Sources */,
-				E4EEA3541985F964003E3175 /* hdPNGLoader.mm in Sources */,
-				E4EEA3551985F964003E3175 /* hdFontPolygon.cpp in Sources */,
-				E4EEA3561985F964003E3175 /* hdFont.cpp in Sources */,
-				E4EEA3571985F964003E3175 /* hdFontManager.cpp in Sources */,
-				E4EEA3581985F964003E3175 /* hdButton.cpp in Sources */,
-				E4EEA3591985F964003E3175 /* hdInterfaceLayer.cpp in Sources */,
-				E4EEA35A1985F964003E3175 /* hdReceiver.cpp in Sources */,
-				E4EEA35B1985F964003E3175 /* hdInterfaceController.cpp in Sources */,
-				E4EEA35C1985F964003E3175 /* hdUIContainer.cpp in Sources */,
-				E4EEA35D1985F964003E3175 /* hdUIImage.cpp in Sources */,
-				E4EEA35E1985F964003E3175 /* hdUISegmentedControl.cpp in Sources */,
-				E4EEA5801985FF01003E3175 /* usinstances.cpp in Sources */,
-				E4EEA35F1985F964003E3175 /* hdCheckbox.cpp in Sources */,
-				E4EEA3601985F964003E3175 /* hdInterfaceContext.cpp in Sources */,
-				E44B5AE019860288001F9862 /* basic_iserializer.cpp in Sources */,
-				E44B5B1C19860288001F9862 /* xml_grammar.cpp in Sources */,
-				E44B5B1A19860288001F9862 /* xml_archive_exception.cpp in Sources */,
-				E4EEA3611985F964003E3175 /* hdMatrix.cpp in Sources */,
-				E44B5AF619860288001F9862 /* binary_iarchive.cpp in Sources */,
-				E44B5B0A19860288001F9862 /* shared_ptr_helper.cpp in Sources */,
-				E44B5AFC19860288001F9862 /* binary_woarchive.cpp in Sources */,
-				E4EEA3621985F964003E3175 /* hdParticleEmitter.cpp in Sources */,
-				E4EEA3631985F964003E3175 /* hdPhysicsParticleEmitter.cpp in Sources */,
-				E4EEA3641985F964003E3175 /* b2BroadPhase.cpp in Sources */,
-				E4EEA3651985F964003E3175 /* b2CollideCircle.cpp in Sources */,
-				E4EEA3661985F964003E3175 /* b2CollidePoly.cpp in Sources */,
-				E44B5B0419860288001F9862 /* extended_type_info_typeid.cpp in Sources */,
-				E44B5B0219860288001F9862 /* extended_type_info_no_rtti.cpp in Sources */,
-				E44B5AF019860288001F9862 /* basic_text_wiprimitive.cpp in Sources */,
-				E4EEA3671985F964003E3175 /* b2Collision.cpp in Sources */,
-				E44B5B1219860288001F9862 /* text_wiarchive.cpp in Sources */,
-				E4EEA3681985F964003E3175 /* b2Distance.cpp in Sources */,
-				E44B5B2419860288001F9862 /* xml_wiarchive.cpp in Sources */,
-				E4EEA3691985F964003E3175 /* b2PairManager.cpp in Sources */,
-				E4EEA5781985FF01003E3175 /* regex_debug.cpp in Sources */,
-				E44B5AE819860288001F9862 /* basic_pointer_oserializer.cpp in Sources */,
-				E44B59D7198600E2001F9862 /* portability.cpp in Sources */,
-				E4EEA36A1985F964003E3175 /* b2TimeOfImpact.cpp in Sources */,
-				E44B5B1019860288001F9862 /* text_oarchive.cpp in Sources */,
-				E4EEA36B1985F964003E3175 /* b2CircleShape.cpp in Sources */,
-				E4EEA36C1985F964003E3175 /* b2EdgeShape.cpp in Sources */,
-				E4EEA36D1985F964003E3175 /* b2PolygonShape.cpp in Sources */,
-				E44B59D9198600E2001F9862 /* unique_path.cpp in Sources */,
-				E44B5B0E19860288001F9862 /* text_iarchive.cpp in Sources */,
-				E4EEA36E1985F964003E3175 /* b2Shape.cpp in Sources */,
-				E44B5B1419860288001F9862 /* text_woarchive.cpp in Sources */,
-				E4EEA36F1985F964003E3175 /* b2BlockAllocator.cpp in Sources */,
-				E4EEA3701985F964003E3175 /* b2Math.cpp in Sources */,
-				E44B5B0619860288001F9862 /* polymorphic_iarchive.cpp in Sources */,
-				E4EEA3711985F964003E3175 /* b2Settings.cpp in Sources */,
-				E4EEA3721985F964003E3175 /* b2StackAllocator.cpp in Sources */,
-				E44B5AEE19860288001F9862 /* basic_text_oprimitive.cpp in Sources */,
-				E44B5B0019860288001F9862 /* extended_type_info.cpp in Sources */,
-				E4EEA3731985F964003E3175 /* b2Body.cpp in Sources */,
-				E44B5AE219860288001F9862 /* basic_oarchive.cpp in Sources */,
-				E4EEA3741985F964003E3175 /* b2ContactManager.cpp in Sources */,
-				E4EEA3751985F964003E3175 /* b2Island.cpp in Sources */,
-				E4EEA5881985FF01003E3175 /* winstances.cpp in Sources */,
-				E4EEA3761985F964003E3175 /* b2World.cpp in Sources */,
-				E4EEA3771985F964003E3175 /* b2WorldCallbacks.cpp in Sources */,
-				E4EEA3781985F964003E3175 /* b2CircleContact.cpp in Sources */,
-				E44B5AE619860288001F9862 /* basic_pointer_iserializer.cpp in Sources */,
-				E44B5AFA19860288001F9862 /* binary_wiarchive.cpp in Sources */,
-				E4EEA3791985F964003E3175 /* b2Contact.cpp in Sources */,
-				E4EEA57E1985FF01003E3175 /* static_mutex.cpp in Sources */,
-				E4EEA37A1985F964003E3175 /* b2ContactSolver.cpp in Sources */,
-				E44B5B1E19860288001F9862 /* xml_iarchive.cpp in Sources */,
-				E4EEA5681985FF01003E3175 /* cpp_regex_traits.cpp in Sources */,
-				E4EEA37B1985F964003E3175 /* b2EdgeAndCircleContact.cpp in Sources */,
-				E4EEA37C1985F964003E3175 /* b2PolyAndCircleContact.cpp in Sources */,
-				E4EEA37D1985F964003E3175 /* b2PolyAndEdgeContact.cpp in Sources */,
-				E44B5AEA19860288001F9862 /* basic_serializer_map.cpp in Sources */,
-				E4EEA37E1985F964003E3175 /* b2PolyContact.cpp in Sources */,
-				E4EEA37F1985F964003E3175 /* b2BuoyancyController.cpp in Sources */,
-				E4EEA3801985F964003E3175 /* b2ConstantAccelController.cpp in Sources */,
-				E4EEA3811985F964003E3175 /* b2ConstantForceController.cpp in Sources */,
-				E4EEA3821985F964003E3175 /* b2Controller.cpp in Sources */,
-				E4EEA3831985F964003E3175 /* b2GravityController.cpp in Sources */,
-				E44B5ADE19860288001F9862 /* basic_iarchive.cpp in Sources */,
-				E4EEA3841985F964003E3175 /* b2TensorDampingController.cpp in Sources */,
-				E4EEA3851985F964003E3175 /* b2DistanceJoint.cpp in Sources */,
-				E4EEA3861985F964003E3175 /* b2GearJoint.cpp in Sources */,
-				E4EEA3871985F964003E3175 /* b2Joint.cpp in Sources */,
-				E4EEA3881985F964003E3175 /* b2LineJoint.cpp in Sources */,
-				E44B5AF419860288001F9862 /* basic_xml_archive.cpp in Sources */,
-				E4EEA3891985F964003E3175 /* b2MouseJoint.cpp in Sources */,
-				E4EEA38A1985F964003E3175 /* b2PrismaticJoint.cpp in Sources */,
-				E4EEA38B1985F964003E3175 /* b2PulleyJoint.cpp in Sources */,
-				E4EEA38C1985F964003E3175 /* b2RevoluteJoint.cpp in Sources */,
-				E4EEA38D1985F964003E3175 /* hdFileSystemUtils.cpp in Sources */,
-				E4EEA38E1985F964003E3175 /* hdScreenSettings.cpp in Sources */,
-				E4EEA3931985F964003E3175 /* hdMultiTouchView.mm in Sources */,
-				E4EEA5661985FF01003E3175 /* c_regex_traits.cpp in Sources */,
-				E4EEA3941985F964003E3175 /* hdiPhoneAccelerometer.mm in Sources */,
-				E4EEA3951985F964003E3175 /* neon_matrix_impl.cpp in Sources */,
-				E4EEA3CA1985F964003E3175 /* hdThumbPad.cpp in Sources */,
-				E4EEA57A1985FF01003E3175 /* regex_raw_buffer.cpp in Sources */,
-				E4EEA3D01985F964003E3175 /* hdIBButton.cpp in Sources */,
-				E4EEA5701985FF01003E3175 /* instances.cpp in Sources */,
-				E4EEA3D11985F964003E3175 /* hdIBImage.cpp in Sources */,
-				E44B59CF198600E2001F9862 /* codecvt_error_category.cpp in Sources */,
-				E4EEA3D21985F964003E3175 /* hdIBFontPolygon.cpp in Sources */,
-				E44B5AEC19860288001F9862 /* basic_text_iprimitive.cpp in Sources */,
-				E44B5AE419860288001F9862 /* basic_oserializer.cpp in Sources */,
-				E4EEA5861985FF01003E3175 /* wide_posix_api.cpp in Sources */,
-				E4EEA3D31985F964003E3175 /* hdIBContainer.cpp in Sources */,
-				E44B5ADA19860288001F9862 /* archive_exception.cpp in Sources */,
-				E4EEA3D41985F964003E3175 /* hdIBProxy.cpp in Sources */,
-				E44B59D1198600E2001F9862 /* operations.cpp in Sources */,
-				E4EEA3D51985F964003E3175 /* hdIBViewController.cpp in Sources */,
-				E4EEA3D61985F964003E3175 /* hdIBLoader.cpp in Sources */,
-				E44B59D3198600E2001F9862 /* path.cpp in Sources */,
-				E4EEA56E1985FF01003E3175 /* icu.cpp in Sources */,
-				E4EEA3D71985F964003E3175 /* hdViewController.cpp in Sources */,
-				E4EEA3D81985F964003E3175 /* hdMultiTouchViewController.mm in Sources */,
-				E44B5B2619860288001F9862 /* xml_woarchive.cpp in Sources */,
-				E4EEA5841985FF01003E3175 /* wc_regex_traits.cpp in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		E4EEA1F01985F8EF003E3175 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E4EEA1F11985F8EF003E3175 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		E4ADE2A51987208B0039FF7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC07D0554694100DB518D /* hdk */;
+			targetProxy = E4ADE2A41987208B0039FF7A /* PBXContainerItemProxy */;
 		};
-/* End PBXVariantGroup section */
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1DEB921F08733DC00010E9CD /* Debug */ = {
@@ -3708,6 +2788,7 @@
 			baseConfigurationReference = 551EDF1A1827A191007E6CC3 /* paths.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/hdk.dst;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -3727,6 +2808,8 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = hdk;
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
+				STRIP_STYLE = "non-global";
 			};
 			name = Debug;
 		};
@@ -3734,6 +2817,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 551EDF1A1827A191007E6CC3 /* paths.xcconfig */;
 			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/hdk.dst;
 				GCC_AUTO_VECTORIZATION = YES;
 				GCC_ENABLE_SSE3_EXTENSIONS = NO;
@@ -3755,6 +2840,8 @@
 					"-ObjC",
 				);
 				PRODUCT_NAME = hdk;
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PROJECT_NAME)";
+				STRIP_STYLE = "non-global";
 			};
 			name = Release;
 		};
@@ -3769,7 +2856,6 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = "";
 				OTHER_CPLUSPLUSFLAGS = (
 					"$(OTHER_CFLAGS)",
@@ -3779,7 +2865,6 @@
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv7s armv7";
 			};
 			name = Debug;
 		};
@@ -3803,62 +2888,21 @@
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv7s armv7";
 			};
 			name = Release;
 		};
-		E4EEA3E31985F964003E3175 /* Debug */ = {
+		E4ADE2A21987207D0039FF7A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 551EDF1A1827A191007E6CC3 /* paths.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				DSTROOT = /tmp/hdk.dst;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = hdk_prefix.pch;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"_NOMEMORYMANAGER=1",
-					VFP_NO_THUMB,
-					"DEBUG=1",
-				);
-				GCC_THUMB_SUPPORT = NO;
-				INSTALL_PATH = /usr/local/lib;
-				OTHER_LDFLAGS = (
-					"-all_load",
-					"-ObjC",
-				);
-				PRODUCT_NAME = "hdk copy";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		E4EEA3E41985F964003E3175 /* Release */ = {
+		E4ADE2A31987207D0039FF7A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 551EDF1A1827A191007E6CC3 /* paths.xcconfig */;
 			buildSettings = {
-				DSTROOT = /tmp/hdk.dst;
-				GCC_AUTO_VECTORIZATION = YES;
-				GCC_ENABLE_SSE3_EXTENSIONS = NO;
-				GCC_ENABLE_SYMBOL_SEPARATION = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = hdk_prefix.pch;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					VFP_NO_THUMB,
-					"_NOMEMORYMANAGER=1",
-				);
-				GCC_THUMB_SUPPORT = NO;
-				GCC_UNROLL_LOOPS = YES;
-				INSTALL_PATH = /usr/local/lib;
-				OTHER_LDFLAGS = (
-					"-all_load",
-					"-ObjC",
-				);
-				PRODUCT_NAME = "hdk copy";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -3883,14 +2927,13 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E4EEA3E21985F964003E3175 /* Build configuration list for PBXNativeTarget "Framework" */ = {
+		E4ADE2A11987207D0039FF7A /* Build configuration list for PBXAggregateTarget "Framework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E4EEA3E31985F964003E3175 /* Debug */,
-				E4EEA3E41985F964003E3175 /* Release */,
+				E4ADE2A21987207D0039FF7A /* Debug */,
+				E4ADE2A31987207D0039FF7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
