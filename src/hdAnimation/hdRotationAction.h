@@ -20,7 +20,7 @@
 #ifndef _HD_ROTATION_ACTION_H_
 #define _HD_ROTATION_ACTION_H_
 
-#include "hdAnimation/hdAction.h"
+#include <hdAnimation/hdAction.h>
 
 class hdRotationAction : public hdAction
 {

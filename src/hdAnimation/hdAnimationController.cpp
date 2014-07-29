@@ -18,8 +18,7 @@
  */
 
 #include "hdAnimationController.h"
-
-using namespace std;
+#include "hdAnimation.h"
 
 static hdAnimationController* m_animationControllerInstance = NULL;
 
@@ -80,7 +79,7 @@ hdAnimationController::~hdAnimationController()
         m_animationPool = NULL;
     }
 
-    list<hdAnimation *>::iterator it = m_nonPooledAnimations.begin();
+    std::list<hdAnimation *>::iterator it = m_nonPooledAnimations.begin();
     while(it != m_nonPooledAnimations.end())
     {
         delete (*it);
@@ -188,7 +187,7 @@ public:
 void hdAnimationController::PurgeAnimations(void *parent)
 {
     hdTypedefList<hdAnimation *, 1024>* toDelete;
-    list<hdAnimation *>::iterator it;
+    std::list<hdAnimation *>::iterator it;
     hdAnimation *a;
 
     toDelete = new hdTypedefList<hdAnimation *, 1024>();

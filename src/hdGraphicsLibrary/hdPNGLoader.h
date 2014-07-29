@@ -20,12 +20,9 @@
 #ifndef HD_PNG_LOADER_H
 #define HD_PNG_LOADER_H
 
-#include "hdCore/hdFileSystem.h"
-
 #ifdef __cplusplus
 extern "C" {
 #endif
-	
 	extern void LoadPNG( const char *filename, unsigned char **pic, unsigned short *width, unsigned short *height, unsigned short *bytes );
 
 #ifdef __cplusplus

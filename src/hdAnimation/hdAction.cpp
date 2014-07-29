@@ -18,6 +18,7 @@
  */
 
 #include "hdAction.h"
+#include <float.h>
 
 hdAction::hdAction()
 {
@@ -97,4 +98,48 @@ const float hdAction::GetTimingFunctionProportion(const hdTimeInterval elapsed)
 const float hdAction::GetTimingFunctionElapsedProportion()
 {
     return this->GetTimingFunctionProportion(0.0f);
+}
+
+
+
+const hdTimeInterval hdAction::GetProgress()
+{
+    return m_progress;
+}
+
+
+void hdAction::SetProgress(const hdTimeInterval progress)
+{
+    m_progress = progress;
+}
+
+
+const hdTimeInterval hdAction::GetDuration()
+{
+    return m_duration;
+}
+
+
+void hdAction::SetDuration(const hdTimeInterval duration)
+{
+    m_duration = duration;
+}
+
+
+const hdAnimationTimingFunction_t hdAction::GetTimingFunction() const
+{
+    return m_timingFunction;
+}
+
+
+void hdAction::SetTimingFunction(const hdAnimationTimingFunction_t func)
+{
+    if (m_progress >= 0.0f && m_progress < FLT_EPSILON)
+    {
+        m_timingFunction = func;
+    }
+    else
+    {
+        hdError(0, "Cannot change animation timing function while action is in progress.");
+    }
 }

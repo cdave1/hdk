@@ -27,8 +27,6 @@
 #ifndef _HD_TGA_LOADER_H_
 #define _HD_TGA_LOADER_H_
 
-#include "hdCore/hdFileSystem.h"
-
 #ifdef __cplusplus
 extern "C" {
 #endif

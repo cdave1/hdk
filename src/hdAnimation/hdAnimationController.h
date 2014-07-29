@@ -32,9 +32,7 @@
 #define _HD_ANIMATION_CONTROLLER_H_
 
 #include <list>
-
-#include "hdAnimation/hdAnimation.h"
-#include "hdAnimation/hdAction.h"
+#include "hdCollections.h"
 
 #define kPipelineSize 8196
 

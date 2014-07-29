@@ -26,6 +26,8 @@
 
 #include "hdTGALoader.h"
 
+#include "hdCore/hdFileSystem.h"
+
 #define TGA_HEADER_SIZE		18
 
 unsigned char *p_buf;

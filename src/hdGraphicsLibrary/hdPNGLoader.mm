@@ -18,13 +18,13 @@
  */
 
 #include "hdPNGLoader.h"
+#include "hdCore/hdFileSystem.h"
 
 #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
 
 #import <Foundation/Foundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import <UIKit/UIImage.h>
-
 
 void LoadPNG( const char *filename, unsigned char **pic, unsigned short *width, unsigned short *height, unsigned short *bytes )
 {

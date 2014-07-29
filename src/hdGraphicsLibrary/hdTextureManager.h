@@ -20,15 +20,9 @@
 #ifndef _HD_TEXTURE_MANAGER_H_
 #define _HD_TEXTURE_MANAGER_H_
 
-#include "hdMath.h"
-#include "hdGraphicsLibrary.h"
 #include "hdCollections.h"
-#include "hdCore/hdConfig.h"
-
-#ifdef WINDOWS
-#include "hdDDSLoader.h"
-#endif
-
+#include <hdGraphicsLibrary/hdGraphicsInterface.h>
+#include <hdGraphicsLibrary/hdTexture.h>
 
 class hdTextureManager
 {

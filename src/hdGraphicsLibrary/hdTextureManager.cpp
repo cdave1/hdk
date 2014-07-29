@@ -18,7 +18,13 @@
  */
 
 #include "hdTextureManager.h"
-
+#include "hdPNGLoader.h"
+#include "hdTGALoader.h"
+#include "hdMath.h"
+#include "hdCore/hdConfig.h"
+#ifdef WINDOWS
+#include "hdDDSLoader.h"
+#endif
 
 static hdTextureManager* m_TextureManagerInstance = NULL;
 static int maxTextureBPP;

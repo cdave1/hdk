@@ -20,7 +20,7 @@
 #ifndef _HD_PAUSE_ACTION_H_
 #define _HD_PAUSE_ACTION_H_
 
-#include "hdAnimation/hdAction.h"
+#include <hdAnimation/hdAction.h>
 
 class hdPauseAction : public hdAction
 {

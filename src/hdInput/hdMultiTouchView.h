@@ -28,9 +28,6 @@ typedef struct Touch
 { 
 	float LocationXTouchBegan;    // x and y coordinates where the touch began
 	float LocationYTouchBegan;
-	//int TapCountBegan;
-	//float CountTouchesBegan;		// how many fingers are pressed
-	//float TapCountTouchesBegan;		// tap with one, two or three fingers or more at once
 	
 	float LocationXTouchMovedPrevious;
 	float LocationYTouchMovedPrevious;
@@ -40,29 +37,21 @@ typedef struct Touch
 	
 	float LocationXTouchEnded;
 	float LocationYTouchEnded;
-	//int TapCountMoved;
 	
 	NSTimeInterval TimeStamp;
-	
-	//int TouchID; // iPhone touch id as int
+
 	int TouchID;
 	int TapCount;
 	
 	bool TouchDown;
 	bool TouchUp;
 	bool TouchMoved;
-	
-	
-	
-	//bool TouchesEnd;				// nothing touches the screen anymore
 } 
 TouchScreenValues; 
 
 
 @interface hdMultiTouchView : GLKView
 {
-	//TouchScreenValues TouchScreen;	
-	
 	TouchScreenValues CPY_TouchScreenValues[kMultiTouchScreenValues];
 	
 	int CountTouchesBegan;
@@ -82,7 +71,6 @@ TouchScreenValues;
 
 @property (readwrite, assign) NSObject *renderLock;
 
-//- (TouchScreenValues*) GetValuesTouchScreen;
 - (TouchScreenValues*)GetValuesMultiTouchScreen;
 - (int) GetCountTouchesBegan;
 - (int) GetCountTouchesMoved;

@@ -94,7 +94,6 @@ private:
 	template<class Archive>
 	void serialize(Archive & ar, const unsigned int version)
 	{
-		//ar.template register_type<hdIBImage>();
 		ar & boost::serialization::base_object<hdPolygon>(*this);
 		ar & m_zOffset;
 		ar & m_tag;

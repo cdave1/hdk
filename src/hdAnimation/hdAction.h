@@ -20,7 +20,6 @@
 #ifndef _HD_ACTION_H_
 #define _HD_ACTION_H_
 
-#include <float.h>
 #include "hdGame/hdGameObject.h"
 #include "hdAnimation/hdAnimationTimingFunction.h"
 
@@ -68,48 +67,5 @@ protected:
 
     hdTimeInterval m_progress;
 };
-
-
-inline const hdTimeInterval hdAction::GetProgress()
-{
-    return m_progress;
-}
-
-
-inline void hdAction::SetProgress(const hdTimeInterval progress)
-{
-    m_progress = progress;
-}
-
-
-inline const hdTimeInterval hdAction::GetDuration()
-{
-    return m_duration;
-}
-
-
-inline void hdAction::SetDuration(const hdTimeInterval duration)
-{
-    m_duration = duration;
-}
-
-
-inline const hdAnimationTimingFunction_t hdAction::GetTimingFunction() const
-{
-    return m_timingFunction;
-}
-
-
-inline void hdAction::SetTimingFunction(const hdAnimationTimingFunction_t func)
-{
-    if (m_progress >= 0.0f && m_progress < FLT_EPSILON)
-    {
-        m_timingFunction = func;
-    }
-    else 
-    {
-        hdError(0, "Cannot change animation timing function while action is in progress.");
-    }
-}
 
 #endif

@@ -18,12 +18,9 @@
  */
 
 #include "hdIBLoader.h"
-
-using namespace std;
-
+#include <hdk/hdCore/hdFileSystem.h>
 
 static hdIBLoader * m_ViewControllerManagerInstance = NULL;
-
 
 hdIBLoader * hdIBLoader::Instance()
 {
@@ -102,7 +99,7 @@ bool hdIBLoader::BackupViewControllerFile(const char *path)
 bool hdIBLoader::SaveViewController(const hdIBViewController *vc, const char *path)
 {
 	// make a plaintext copy too
-	std::ostringstream outstream(ios::in | ios::out	);
+	std::ostringstream outstream(std::ios::in | std::ios::out);
 	boost::archive::text_oarchive textArchive(outstream);
 	textArchive << (* vc);
 	
@@ -164,7 +161,7 @@ int hdIBLoader::SaveViewControllerBinary(const hdIBViewController *vc, const cha
 	snprintf(binaryPath, 512, "%s.bin", path);
 	hdPrintf("Attempting to save binary world file: %s\n", binaryPath);
 	
-	std::ostringstream oss(ios::binary | ios::in | ios::out	);
+	std::ostringstream oss(std::ios::binary | std::ios::in | std::ios::out);
 	boost::archive::binary_oarchive boa(oss);
 	boa << (* vc);
 	
@@ -282,8 +279,8 @@ hdIBViewController * hdIBLoader::LoadViewControllerFromTextInternal(const char* 
 	
 	hdPrintf("ViewControllerManager::LoadViewControllerFromText\n");
 	
-	std::istringstream iss(ios::in | ios::out);
-	streamsize ssize = iss.rdbuf()->sputn(txtBuf, txtLen);
+	std::istringstream iss(std::ios::in | std::ios::out);
+	std::streamsize ssize = iss.rdbuf()->sputn(txtBuf, txtLen);
 	hdPrintf("Read %d bytes (expected: %d)\n",ssize,txtLen);
 	free(txtBuf);
 	boost::archive::text_iarchive textArchive(iss);
@@ -408,7 +405,7 @@ hdIBViewController * hdIBLoader::LoadViewControllerFromUncompressedBinary(const 
 	hdIBViewController *vc = new hdIBViewController(); //perm;
 	hdPrintf("ViewControllerManager::LoadViewControllerFromUncompressedBinary\n");
 	
-	std::istringstream iss(ios::in | ios::out | ios::binary);
+	std::istringstream iss(std::ios::in | std::ios::out | std::ios::binary);
 	iss.rdbuf()->sputn(bin, binLength);
 	boost::archive::binary_iarchive ia(iss);
 	

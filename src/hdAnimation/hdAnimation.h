@@ -20,7 +20,7 @@
 #ifndef HD_ANIMATION_H
 #define HD_ANIMATION_H
 
-#include "hdAnimation/hdAction.h"
+#include <hdAnimation/hdAction.h>
 #include "hdCollections.h"
 
 class hdAnimationController;
