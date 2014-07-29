@@ -20,7 +20,7 @@
 #ifndef HD_UI_CHECKBOX_H
 #define HD_UI_CHECKBOX_H
 
-#include <hdk/hdButton.h>
+#include <hdk/hdInterface/hdButton.h>
 
 class hdCheckbox : public hdReceiver
 {

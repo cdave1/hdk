@@ -20,7 +20,9 @@
 #include "hdConfig.h"
 
 #include <sstream>
-#include <boost/regex.hpp>
+#include <regex>
+#include <string>
+#include <map>
 
 #include <hdk/hdCore/hdFileSystem.h>
 
@@ -37,10 +39,10 @@ void hdConfig::LoadConfigFile(const char *configFilePath)
     configLookupTable.clear();
 
     // Matchings
-    boost::smatch matchings;
+    std::smatch matchings;
 
     // std::string line pattern: $Key = "$Value"
-    boost::regex stringLinePattern("^\\s*([[:alnum:]]+)\\s*[=]\\s*[\"]([[:alnum:].,]+)[\"]\\s*$");
+    std::regex stringLinePattern("^\\s*([[:alnum:]]+)\\s*[=]\\s*[\"]([[:alnum:].,]+)[\"]\\s*$");
 
     hdPrintf("[hdConfig::LoadConfigFile] Loading config file at: %s\n", configFilePath);
 
@@ -68,7 +70,7 @@ void hdConfig::LoadConfigFile(const char *configFilePath)
     {
         getline(iss, line);
 
-        if (boost::regex_match(line, matchings, stringLinePattern))
+        if (std::regex_match(line, matchings, stringLinePattern))
         {
             hdAssert(line == matchings[0]);
             hdAssert(3 == matchings.size());

@@ -20,8 +20,9 @@
 #include "hdPlayerConfig.h"
 
 #include <sstream>
-
-#include <boost/regex.hpp>
+#include <regex>
+#include <string>
+#include <map>
 
 #include <hdk/hdCore/hdFileSystem.h>
 
@@ -95,10 +96,10 @@ bool hdPlayerConfig::LoadConfigFile()
 	configLookupTable.clear();
 	
 	// Matchings
-	boost::smatch matchings;
+	std::smatch matchings;
 	
 	// string line pattern: $Key = "$Value" 
-	boost::regex stringLinePattern("^\\s*([[:alnum:]]+)\\s*[=]\\s*[\"]([[:alnum:].,]+)[\"]\\s*$");
+	std::regex stringLinePattern("^\\s*([[:alnum:]]+)\\s*[=]\\s*[\"]([[:alnum:].,]+)[\"]\\s*$");
 	
 	if (false == FileSystem_FileExists("player.config"))
 	{
@@ -120,7 +121,7 @@ bool hdPlayerConfig::LoadConfigFile()
 	{
 		getline(iss, line);
 		
-		if (boost::regex_match(line, matchings, stringLinePattern))
+		if (std::regex_match(line, matchings, stringLinePattern))
 		{
 			hdAssert(line == matchings[0]);
 			hdAssert(3 == matchings.size());

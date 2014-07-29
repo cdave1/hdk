@@ -19,8 +19,9 @@
 
 #include "hdPakFileSystem.h"
 
+#include <sstream>
 #include <fstream>
-#include <boost/regex.hpp>
+#include <regex>
 
 void hdPakFileSystem::MakePak(const char* baseDir, const char* pakManifestFilePath, const char *destDir)
 {
@@ -29,7 +30,7 @@ void hdPakFileSystem::MakePak(const char* baseDir, const char* pakManifestFilePa
 	int pakManifestFileLen;
     std::string line;
 	
-	boost::smatch matchings;
+	std::smatch matchings;
 	
 	hdPakFileManifest *pakFileManifest;
 	hdPakFile *pakFile;
@@ -53,7 +54,7 @@ void hdPakFileSystem::MakePak(const char* baseDir, const char* pakManifestFilePa
 	pakFile = NULL;
 	pakFileEntry = NULL;
 
-	boost::regex dirLinePattern("^(.+):([Z])*$");
+	std::regex dirLinePattern("^(.+):([Z])*$");
 	
 	std::istringstream iss((char *)pakManifestFileBytes);
 	if (!iss.good())
@@ -67,7 +68,7 @@ void hdPakFileSystem::MakePak(const char* baseDir, const char* pakManifestFilePa
 	{
 		getline(iss, line);
 		
-		if (boost::regex_match(line, matchings, dirLinePattern))
+		if (std::regex_match(line, matchings, dirLinePattern))
 		{
 			hdAssert(line == matchings[0]);
 			hdAssert(3 == matchings.size());

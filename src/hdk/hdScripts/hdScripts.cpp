@@ -21,9 +21,9 @@
 
 #include <fstream>
 #include <sstream>
-
-#include <boost/regex.hpp>
-
+#include <regex>
+#include <string>
+#include <map>
 
 static hdTypedefList<hdMessage, 256> *currentCache = NULL;
 static char currentWorldFilePath[256];
@@ -60,10 +60,10 @@ void Scripts_LoadStringsFile(const char *stringsFilePath)
 	stringTable.clear();
 	
 	// Matchings
-	boost::smatch matchings;
+	std::smatch matchings;
 	
 	// string line pattern: $Key "$Value" 
-	boost::regex stringLinePattern("^\\s*([^[:space:]]+)\\s+[\"](.+)[\"]$");
+	std::regex stringLinePattern("^\\s*([^[:space:]]+)\\s+[\"](.+)[\"]$");
 	
 	if (NULL == (hnd = FileSystem_OpenFile(stringsFilePath, 0)))
 	{
@@ -83,7 +83,7 @@ void Scripts_LoadStringsFile(const char *stringsFilePath)
 	{
 		getline(iss, line);
 		
-		if (boost::regex_match(line, matchings, stringLinePattern))
+		if (std::regex_match(line, matchings, stringLinePattern))
 		{
 			hdAssert(line == matchings[0]);
 			hdAssert(3 == matchings.size());
@@ -225,29 +225,29 @@ void ParseWorldMessageScript(const char* scriptfilepath)
 	}
 	
 	// ("LEVEL")(Spaces)(Digits)(Optional Scaces)
-	boost::regex contextLinePattern("^(LEVEL)\\s+(\\d+)\\s*$");
+	std::regex contextLinePattern("^(LEVEL)\\s+(\\d+)\\s*$");
 	
 	// ("TEXT")(Spaces)(Digits)(Spaces)("Anything")
-	boost::regex textLinePattern("^(TEXT)\\s+(\\d+)\\s+(.+)$");
+	std::regex textLinePattern("^(TEXT)\\s+(\\d+)\\s+(.+)$");
 	
 	// ("IMAGE")(Spaces)(Digits)(Spaces)("Anything")
-	boost::regex imageLinePattern("^(IMAGE)\\s+(\\d+)\\s+(.+)$");
+	std::regex imageLinePattern("^(IMAGE)\\s+(\\d+)\\s+(.+)$");
 	
 	// ("CUSTOMTEXT")(Spaces)(Digits)(Spaces)(@ImageTextureName)(Scaces)(@Message)
-	boost::regex customTextLinePattern("^(CUSTOMTEXT)\\s+(\\d+)\\s+([^[:space:]]+)\\s+[\"](.+)[\"]$");
+	std::regex customTextLinePattern("^(CUSTOMTEXT)\\s+(\\d+)\\s+([^[:space:]]+)\\s+[\"](.+)[\"]$");
 	
 	// ("CUSTOMTEXT")(Spaces)(Digits)(Spaces)(@ImageTextureName)(Scaces)(@Message)
-	boost::regex avatarTextLinePattern("^(AVATARMESSAGE)\\s+(\\d+)\\s+([^[:space:]]+)\\s+[\"](.+)[\"]$");
+	std::regex avatarTextLinePattern("^(AVATARMESSAGE)\\s+(\\d+)\\s+([^[:space:]]+)\\s+[\"](.+)[\"]$");
 		
 	// Matchings
-	boost::smatch matchings;
+	std::smatch matchings;
 	
 	// Parse line by line
 	while(!iss.eof())
 	{
 		getline(iss, line);
 		
-		if (boost::regex_match(line, matchings, contextLinePattern))
+		if (std::regex_match(line, matchings, contextLinePattern))
 		{
 			contextOpened = true;
 			hdAssert(line == matchings[0]);
@@ -255,7 +255,7 @@ void ParseWorldMessageScript(const char* scriptfilepath)
 			std::string s(matchings[2]);
 			currContextID = (int)strtol(s.c_str(), NULL, 0);
 		}
-		else if (boost::regex_match(line, matchings, textLinePattern))
+		else if (std::regex_match(line, matchings, textLinePattern))
 		{
 			if (!contextOpened)
 			{
@@ -285,7 +285,7 @@ void ParseWorldMessageScript(const char* scriptfilepath)
 				break;
 			}
 		}
-		else if (boost::regex_match(line, matchings, imageLinePattern))
+		else if (std::regex_match(line, matchings, imageLinePattern))
 		{
 			if (!contextOpened)
 			{
@@ -307,7 +307,7 @@ void ParseWorldMessageScript(const char* scriptfilepath)
 				break;
 			}
 		}
-		else if (boost::regex_match(line, matchings, customTextLinePattern))
+		else if (std::regex_match(line, matchings, customTextLinePattern))
 		{
 			if (!contextOpened)
 			{
@@ -339,7 +339,7 @@ void ParseWorldMessageScript(const char* scriptfilepath)
 				break;
 			}
 		}
-		else if (boost::regex_match(line, matchings, avatarTextLinePattern))
+		else if (std::regex_match(line, matchings, avatarTextLinePattern))
 		{
 			if (!contextOpened)
 			{

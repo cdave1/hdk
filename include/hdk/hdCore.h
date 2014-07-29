@@ -20,6 +20,7 @@
 #ifndef _HD_CORE_H_
 #define _HD_CORE_H_
 
+#include <hdk/hdCore/hdCommon.h>
 #include <hdk/hdCore/hdApplication.h>
 #include <hdk/hdCore/hdCompression.h>
 #include <hdk/hdCore/hdPakFileSystem.h>

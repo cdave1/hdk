@@ -234,14 +234,15 @@
 		E44B5B2A198602AC001F9862 /* error_code.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E44B5B28198602AC001F9862 /* error_code.cpp */; };
 		E44B5B2C198602AC001F9862 /* local_free_on_destruction.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E44B5B29198602AC001F9862 /* local_free_on_destruction.hpp */; };
 		E45D0A1D198777A40020E461 /* hdk_prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = E45D0A1C198777A40020E461 /* hdk_prefix.pch */; };
+		E45D0B0A1987820B0020E461 /* config.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E45D0B011987820B0020E461 /* config.hpp */; };
+		E45D0B0B1987820B0020E461 /* convenience.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E45D0B021987820B0020E461 /* convenience.hpp */; };
+		E45D0B0C1987820B0020E461 /* utf8_codecvt_facet.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E45D0B041987820B0020E461 /* utf8_codecvt_facet.hpp */; };
+		E45D0B0D1987820B0020E461 /* exception.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E45D0B051987820B0020E461 /* exception.hpp */; };
+		E45D0B0E1987820B0020E461 /* fstream.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E45D0B061987820B0020E461 /* fstream.hpp */; };
+		E45D0B0F1987820B0020E461 /* operations.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E45D0B071987820B0020E461 /* operations.hpp */; };
+		E45D0B101987820B0020E461 /* path.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E45D0B081987820B0020E461 /* path.hpp */; };
+		E45D0B111987820B0020E461 /* path_traits.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E45D0B091987820B0020E461 /* path_traits.hpp */; };
 		E4A7566519862B8A0004ACB6 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A7566419862B8A0004ACB6 /* GLKit.framework */; };
-		E4ADE35519873FE30039FF7A /* codecvt_error_category.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4ADE2E519873FE30039FF7A /* codecvt_error_category.cpp */; };
-		E4ADE35619873FE30039FF7A /* operations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4ADE2E619873FE30039FF7A /* operations.cpp */; };
-		E4ADE35719873FE30039FF7A /* path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4ADE2E719873FE30039FF7A /* path.cpp */; };
-		E4ADE35819873FE30039FF7A /* path_traits.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4ADE2E819873FE30039FF7A /* path_traits.cpp */; };
-		E4ADE35919873FE30039FF7A /* portability.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4ADE2E919873FE30039FF7A /* portability.cpp */; };
-		E4ADE35A19873FE30039FF7A /* unique_path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4ADE2EA19873FE30039FF7A /* unique_path.cpp */; };
-		E4ADE35B19873FE30039FF7A /* utf8_codecvt_facet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4ADE2EB19873FE30039FF7A /* utf8_codecvt_facet.cpp */; };
 		E4ADE3A119874AEF0039FF7A /* hdAnimationEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39119874AEF0039FF7A /* hdAnimationEngine.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		E4ADE3A219874AEF0039FF7A /* hdCollections.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39219874AEF0039FF7A /* hdCollections.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		E4ADE3A319874AEF0039FF7A /* hdCore.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39319874AEF0039FF7A /* hdCore.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -287,7 +288,6 @@
 		E4ADE4B0198752990039FF7A /* hdCompression.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE3D3198752980039FF7A /* hdCompression.h */; };
 		E4ADE4B1198752990039FF7A /* hdConfig.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4ADE3D4198752980039FF7A /* hdConfig.cpp */; };
 		E4ADE4B2198752990039FF7A /* hdConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE3D5198752980039FF7A /* hdConfig.h */; };
-		E4ADE4B3198752990039FF7A /* hdFileSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4ADE3D6198752980039FF7A /* hdFileSystem.cpp */; };
 		E4ADE4B4198752990039FF7A /* hdFileSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE3D7198752980039FF7A /* hdFileSystem.h */; };
 		E4ADE4B5198752990039FF7A /* hdFileSystemSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE3D8198752980039FF7A /* hdFileSystemSupport.h */; };
 		E4ADE4B6198752990039FF7A /* hdFileSystemUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4ADE3D9198752980039FF7A /* hdFileSystemUtils.cpp */; };
@@ -399,8 +399,6 @@
 		E4ADE53E198752990039FF7A /* hdMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE468198752990039FF7A /* hdMatrix.h */; };
 		E4ADE53F198752990039FF7A /* neon_matrix_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4ADE46A198752990039FF7A /* neon_matrix_impl.cpp */; };
 		E4ADE540198752990039FF7A /* neon_matrix_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE46B198752990039FF7A /* neon_matrix_impl.h */; };
-		E4ADE547198752990039FF7A /* hdScripts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4ADE474198752990039FF7A /* hdScripts.cpp */; };
-		E4ADE548198752990039FF7A /* hdScripts.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE475198752990039FF7A /* hdScripts.h */; };
 		E4ADE549198752990039FF7A /* AppleOpenALSupport.c in Sources */ = {isa = PBXBuildFile; fileRef = E4ADE478198752990039FF7A /* AppleOpenALSupport.c */; };
 		E4ADE54A198752990039FF7A /* AppleOpenALSupport.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE479198752990039FF7A /* AppleOpenALSupport.h */; };
 		E4ADE54B198752990039FF7A /* CMOpenALSound.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE47A198752990039FF7A /* CMOpenALSound.h */; };
@@ -741,14 +739,15 @@
 		E44B5B28198602AC001F9862 /* error_code.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = error_code.cpp; sourceTree = "<group>"; };
 		E44B5B29198602AC001F9862 /* local_free_on_destruction.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = local_free_on_destruction.hpp; sourceTree = "<group>"; };
 		E45D0A1C198777A40020E461 /* hdk_prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdk_prefix.pch; sourceTree = "<group>"; };
+		E45D0B011987820B0020E461 /* config.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = config.hpp; sourceTree = "<group>"; };
+		E45D0B021987820B0020E461 /* convenience.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = convenience.hpp; sourceTree = "<group>"; };
+		E45D0B041987820B0020E461 /* utf8_codecvt_facet.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = utf8_codecvt_facet.hpp; sourceTree = "<group>"; };
+		E45D0B051987820B0020E461 /* exception.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = exception.hpp; sourceTree = "<group>"; };
+		E45D0B061987820B0020E461 /* fstream.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = fstream.hpp; sourceTree = "<group>"; };
+		E45D0B071987820B0020E461 /* operations.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = operations.hpp; sourceTree = "<group>"; };
+		E45D0B081987820B0020E461 /* path.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = path.hpp; sourceTree = "<group>"; };
+		E45D0B091987820B0020E461 /* path_traits.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = path_traits.hpp; sourceTree = "<group>"; };
 		E4A7566419862B8A0004ACB6 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
-		E4ADE2E519873FE30039FF7A /* codecvt_error_category.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = codecvt_error_category.cpp; sourceTree = "<group>"; };
-		E4ADE2E619873FE30039FF7A /* operations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = operations.cpp; sourceTree = "<group>"; };
-		E4ADE2E719873FE30039FF7A /* path.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = path.cpp; sourceTree = "<group>"; };
-		E4ADE2E819873FE30039FF7A /* path_traits.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = path_traits.cpp; sourceTree = "<group>"; };
-		E4ADE2E919873FE30039FF7A /* portability.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = portability.cpp; sourceTree = "<group>"; };
-		E4ADE2EA19873FE30039FF7A /* unique_path.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = unique_path.cpp; sourceTree = "<group>"; };
-		E4ADE2EB19873FE30039FF7A /* utf8_codecvt_facet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = utf8_codecvt_facet.cpp; sourceTree = "<group>"; };
 		E4ADE39119874AEF0039FF7A /* hdAnimationEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdAnimationEngine.h; sourceTree = "<group>"; };
 		E4ADE39219874AEF0039FF7A /* hdCollections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdCollections.h; sourceTree = "<group>"; };
 		E4ADE39319874AEF0039FF7A /* hdCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdCore.h; sourceTree = "<group>"; };
@@ -795,7 +794,6 @@
 		E4ADE3D3198752980039FF7A /* hdCompression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdCompression.h; sourceTree = "<group>"; };
 		E4ADE3D4198752980039FF7A /* hdConfig.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdConfig.cpp; sourceTree = "<group>"; };
 		E4ADE3D5198752980039FF7A /* hdConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdConfig.h; sourceTree = "<group>"; };
-		E4ADE3D6198752980039FF7A /* hdFileSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdFileSystem.cpp; sourceTree = "<group>"; };
 		E4ADE3D7198752980039FF7A /* hdFileSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdFileSystem.h; sourceTree = "<group>"; };
 		E4ADE3D8198752980039FF7A /* hdFileSystemSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdFileSystemSupport.h; sourceTree = "<group>"; };
 		E4ADE3D9198752980039FF7A /* hdFileSystemUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdFileSystemUtils.cpp; sourceTree = "<group>"; };
@@ -907,8 +905,6 @@
 		E4ADE468198752990039FF7A /* hdMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdMatrix.h; sourceTree = "<group>"; };
 		E4ADE46A198752990039FF7A /* neon_matrix_impl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = neon_matrix_impl.cpp; sourceTree = "<group>"; };
 		E4ADE46B198752990039FF7A /* neon_matrix_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = neon_matrix_impl.h; sourceTree = "<group>"; };
-		E4ADE474198752990039FF7A /* hdScripts.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdScripts.cpp; sourceTree = "<group>"; };
-		E4ADE475198752990039FF7A /* hdScripts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdScripts.h; sourceTree = "<group>"; };
 		E4ADE478198752990039FF7A /* AppleOpenALSupport.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AppleOpenALSupport.c; sourceTree = "<group>"; };
 		E4ADE479198752990039FF7A /* AppleOpenALSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleOpenALSupport.h; sourceTree = "<group>"; };
 		E4ADE47A198752990039FF7A /* CMOpenALSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CMOpenALSound.h; sourceTree = "<group>"; };
@@ -1099,7 +1095,7 @@
 		63CA7776119678090010C802 /* filesystem */ = {
 			isa = PBXGroup;
 			children = (
-				E4ADE2AD19873FE30039FF7A /* filesystem */,
+				E45D0B001987820B0020E461 /* filesystem */,
 				63CA777E119678090010C802 /* filesystem.hpp */,
 				E44B59C4198600E2001F9862 /* src */,
 			);
@@ -1443,27 +1439,27 @@
 			path = ../../../../../Opensource/boost_1_55_0/libs/system/src;
 			sourceTree = "<group>";
 		};
-		E4ADE2AD19873FE30039FF7A /* filesystem */ = {
+		E45D0B001987820B0020E461 /* filesystem */ = {
 			isa = PBXGroup;
 			children = (
-				E4ADE2E419873FE30039FF7A /* src */,
+				E45D0B011987820B0020E461 /* config.hpp */,
+				E45D0B021987820B0020E461 /* convenience.hpp */,
+				E45D0B031987820B0020E461 /* detail */,
+				E45D0B051987820B0020E461 /* exception.hpp */,
+				E45D0B061987820B0020E461 /* fstream.hpp */,
+				E45D0B071987820B0020E461 /* operations.hpp */,
+				E45D0B081987820B0020E461 /* path.hpp */,
+				E45D0B091987820B0020E461 /* path_traits.hpp */,
 			);
 			name = filesystem;
-			path = ../../libs/filesystem;
 			sourceTree = "<group>";
 		};
-		E4ADE2E419873FE30039FF7A /* src */ = {
+		E45D0B031987820B0020E461 /* detail */ = {
 			isa = PBXGroup;
 			children = (
-				E4ADE2E519873FE30039FF7A /* codecvt_error_category.cpp */,
-				E4ADE2E619873FE30039FF7A /* operations.cpp */,
-				E4ADE2E719873FE30039FF7A /* path.cpp */,
-				E4ADE2E819873FE30039FF7A /* path_traits.cpp */,
-				E4ADE2E919873FE30039FF7A /* portability.cpp */,
-				E4ADE2EA19873FE30039FF7A /* unique_path.cpp */,
-				E4ADE2EB19873FE30039FF7A /* utf8_codecvt_facet.cpp */,
+				E45D0B041987820B0020E461 /* utf8_codecvt_facet.hpp */,
 			);
-			path = src;
+			path = detail;
 			sourceTree = "<group>";
 		};
 		E4ADE36F198749D90039FF7A /* include */ = {
@@ -1572,7 +1568,6 @@
 				E4ADE3D3198752980039FF7A /* hdCompression.h */,
 				E4ADE3D4198752980039FF7A /* hdConfig.cpp */,
 				E4ADE3D5198752980039FF7A /* hdConfig.h */,
-				E4ADE3D6198752980039FF7A /* hdFileSystem.cpp */,
 				E4ADE3D7198752980039FF7A /* hdFileSystem.h */,
 				E4ADE3D8198752980039FF7A /* hdFileSystemSupport.h */,
 				E4ADE3D9198752980039FF7A /* hdFileSystemUtils.cpp */,
@@ -1743,8 +1738,6 @@
 		E4ADE473198752990039FF7A /* hdScripts */ = {
 			isa = PBXGroup;
 			children = (
-				E4ADE474198752990039FF7A /* hdScripts.cpp */,
-				E4ADE475198752990039FF7A /* hdScripts.h */,
 			);
 			path = hdScripts;
 			sourceTree = "<group>";
@@ -1915,6 +1908,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E45D0B101987820B0020E461 /* path.hpp in Headers */,
 				E4ADE3A119874AEF0039FF7A /* hdAnimationEngine.h in Headers */,
 				E4ADE3A219874AEF0039FF7A /* hdCollections.h in Headers */,
 				E4ADE3AA19874AEF0039FF7A /* hdk.h in Headers */,
@@ -1923,6 +1917,7 @@
 				E4ADE3B019874AEF0039FF7A /* hdSoundSystem.h in Headers */,
 				E4ADE3A719874AEF0039FF7A /* hdIB.h in Headers */,
 				E4ADE3A919874AEF0039FF7A /* hdInterface.h in Headers */,
+				E45D0B0F1987820B0020E461 /* operations.hpp in Headers */,
 				E4ADE3A819874AEF0039FF7A /* hdInput.h in Headers */,
 				E4ADE3A519874AEF0039FF7A /* hdGame.h in Headers */,
 				E4ADE3A619874AEF0039FF7A /* hdGraphicsLibrary.h in Headers */,
@@ -1955,6 +1950,7 @@
 				E42837D6117005AB008E3594 /* Box2D.h in Headers */,
 				E44B5A541986026B001F9862 /* extended_type_info_no_rtti.hpp in Headers */,
 				E45D0A1D198777A40020E461 /* hdk_prefix.pch in Headers */,
+				E45D0B111987820B0020E461 /* path_traits.hpp in Headers */,
 				E44B5A941986026B001F9862 /* tracking.hpp in Headers */,
 				E4ADE4F3198752990039FF7A /* hdPolygon.h in Headers */,
 				E42837D8117005AB008E3594 /* b2BroadPhase.h in Headers */,
@@ -2025,7 +2021,6 @@
 				E4ADE3AB19874AEF0039FF7A /* hdk_min.h in Headers */,
 				E4283813117005AB008E3594 /* b2Controller.h in Headers */,
 				E44B5A441986026B001F9862 /* get_data.hpp in Headers */,
-				E4ADE548198752990039FF7A /* hdScripts.h in Headers */,
 				E44B5AA61986026B001F9862 /* version.hpp in Headers */,
 				E4283815117005AB008E3594 /* b2GravityController.h in Headers */,
 				E4283817117005AB008E3594 /* b2TensorDampingController.h in Headers */,
@@ -2034,6 +2029,7 @@
 				E44B5A701986026B001F9862 /* nvp.hpp in Headers */,
 				E4ADE4A9198752990039FF7A /* hdPointerList.h in Headers */,
 				E428381D117005AB008E3594 /* b2Joint.h in Headers */,
+				E45D0B0B1987820B0020E461 /* convenience.hpp in Headers */,
 				E4ADE4AE198752990039FF7A /* hdCommon.h in Headers */,
 				E428381F117005AB008E3594 /* b2LineJoint.h in Headers */,
 				E44B5A7C1986026B001F9862 /* shared_ptr.hpp in Headers */,
@@ -2115,6 +2111,7 @@
 				E4ADE51D198752990039FF7A /* hdIBLoader.h in Headers */,
 				E4ADE4B8198752990039FF7A /* hdIPhoneFileSystem.h in Headers */,
 				E4ADE532198752990039FF7A /* hdUISegmentedControl.h in Headers */,
+				E45D0B0C1987820B0020E461 /* utf8_codecvt_facet.hpp in Headers */,
 				E4ADE4CB198752990039FF7A /* hdSystemSettings.h in Headers */,
 				E4ADE50C198752990039FF7A /* hdFont.h in Headers */,
 				E4F36E741171699800792A2D /* basic_serializer_map.hpp in Headers */,
@@ -2162,6 +2159,7 @@
 				E44B5A761986026B001F9862 /* scoped_ptr.hpp in Headers */,
 				E4ADE4A1198752990039FF7A /* hdRotationAction.h in Headers */,
 				E44B5A401986026B001F9862 /* config.hpp in Headers */,
+				E45D0B0D1987820B0020E461 /* exception.hpp in Headers */,
 				E4F36E8C1171699800792A2D /* ostream_iterator.hpp in Headers */,
 				E4F36E8D1171699800792A2D /* remove_whitespace.hpp in Headers */,
 				E44B5A6E1986026B001F9862 /* map.hpp in Headers */,
@@ -2195,6 +2193,7 @@
 				E4ADE4D0198752990039FF7A /* hdPhysicsParticleEmitter.h in Headers */,
 				E44B5A2E1986026B001F9862 /* assume_abstract.hpp in Headers */,
 				E4F36E9D1171699800792A2D /* polymorphic_xml_oarchive.hpp in Headers */,
+				E45D0B0A1987820B0020E461 /* config.hpp in Headers */,
 				E4F36E9E1171699800792A2D /* polymorphic_xml_wiarchive.hpp in Headers */,
 				E4F36E9F1171699800792A2D /* polymorphic_xml_woarchive.hpp in Headers */,
 				E4ADE55B198752990039FF7A /* hdSoundEngineInterface.h in Headers */,
@@ -2203,6 +2202,7 @@
 				E4F36EA21171699800792A2D /* text_oarchive.hpp in Headers */,
 				E4F36EA31171699800792A2D /* text_wiarchive.hpp in Headers */,
 				E4F36EA41171699800792A2D /* text_woarchive.hpp in Headers */,
+				E45D0B0E1987820B0020E461 /* fstream.hpp in Headers */,
 				E4ADE558198752990039FF7A /* hdOpenALSoundEngine.h in Headers */,
 				E44B5A9C1986026B001F9862 /* utility.hpp in Headers */,
 				E4F36EA51171699800792A2D /* tmpdir.hpp in Headers */,
@@ -2297,7 +2297,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nexport FRAMEWORK_LOCN=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework\"\n\n# Create the path to the real Headers die\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdAnimation\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdCollections\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdCore\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdEffects\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdGame\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdGraphicsLibrary\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdInput\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdInterface\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdMath\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdScripts\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdSound\"\n\n# Create the required symlinks\n/bin/ln -sfh A \"${FRAMEWORK_LOCN}/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${FRAMEWORK_LOCN}/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \\\n\"${FRAMEWORK_LOCN}/${PRODUCT_NAME}\"\n\n# Copy the public headers into the framework\n/bin/cp -a ${SOURCE_ROOT}/../../include/hdk/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdAnimation/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdAnimation/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdCollections/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdCollections/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdCore/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdCore/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdEffects/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdEffects/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdGame/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdGame/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdGraphicsLibrary/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdGraphicsLibrary/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdInterface/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdInterface/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdMath/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdMath/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdScripts/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdScripts/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdSound/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdSound/\"";
+			shellScript = "set -e\n\nexport FRAMEWORK_LOCN=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework\"\n\n# Create the path to the real Headers die\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdAnimation\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdCollections\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdCore\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdEffects\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdGame\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdGraphicsLibrary\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdInput\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdInterface\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdMath\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdScripts\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdSound\"\n\n# Create the required symlinks\n/bin/ln -sfh A \"${FRAMEWORK_LOCN}/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${FRAMEWORK_LOCN}/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \\\n\"${FRAMEWORK_LOCN}/${PRODUCT_NAME}\"\n\n# Copy the public headers into the framework\n/bin/cp -a ${SOURCE_ROOT}/../../include/hdk/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdAnimation/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdAnimation/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdCollections/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdCollections/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdCore/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdCore/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdEffects/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdEffects/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdGame/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdGame/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdGraphicsLibrary/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdGraphicsLibrary/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdInput/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdInput/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdInterface/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdInterface/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdMath/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdMath/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdScripts/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdScripts/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdSound/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdSound/\"";
 		};
 		E4ADE2A61987209B0039FF7A /* Multiplatform Build */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2329,7 +2329,6 @@
 				E4ADE556198752990039FF7A /* hdOpenALPool.cpp in Sources */,
 				E44B5B1519860288001F9862 /* utf8_codecvt_facet.cpp in Sources */,
 				E44B5B2A198602AC001F9862 /* error_code.cpp in Sources */,
-				E4ADE35819873FE30039FF7A /* path_traits.cpp in Sources */,
 				E44B5B1719860288001F9862 /* void_cast.cpp in Sources */,
 				E4ADE4BC198752990039FF7A /* hdIPhoneOSFunctions.mm in Sources */,
 				E44B5B1F19860288001F9862 /* xml_oarchive.cpp in Sources */,
@@ -2359,7 +2358,6 @@
 				E44B5AFB19860288001F9862 /* binary_woarchive.cpp in Sources */,
 				E42837D7117005AB008E3594 /* b2BroadPhase.cpp in Sources */,
 				E4ADE552198752990039FF7A /* hdAVAudioWrapper.mm in Sources */,
-				E4ADE35719873FE30039FF7A /* path.cpp in Sources */,
 				E4ADE4D4198752990039FF7A /* hdGameObject.cpp in Sources */,
 				E4ADE55C198752990039FF7A /* hdSoundManager.cpp in Sources */,
 				E42837D9117005AB008E3594 /* b2CollideCircle.cpp in Sources */,
@@ -2369,7 +2367,6 @@
 				E4ADE502198752990039FF7A /* hdMultiTouchViewController.mm in Sources */,
 				E4ADE4D6198752990039FF7A /* hdGameWorld.cpp in Sources */,
 				E44B5B0119860288001F9862 /* extended_type_info_no_rtti.cpp in Sources */,
-				E4ADE35619873FE30039FF7A /* operations.cpp in Sources */,
 				E44B5AEF19860288001F9862 /* basic_text_wiprimitive.cpp in Sources */,
 				E42837DB117005AB008E3594 /* b2Collision.cpp in Sources */,
 				E4ADE4ED198752990039FF7A /* hdOpenGLES.cpp in Sources */,
@@ -2382,7 +2379,6 @@
 				E4ADE4D2198752990039FF7A /* hd2DGameController.cpp in Sources */,
 				E44B5AE719860288001F9862 /* basic_pointer_oserializer.cpp in Sources */,
 				E4ADE498198752990039FF7A /* hdAnimation.cpp in Sources */,
-				E4ADE35A19873FE30039FF7A /* unique_path.cpp in Sources */,
 				E4ADE4C4198752990039FF7A /* hdPakFileSystem.cpp in Sources */,
 				E44B59D6198600E2001F9862 /* portability.cpp in Sources */,
 				E42837E0117005AB008E3594 /* b2TimeOfImpact.cpp in Sources */,
@@ -2391,7 +2387,6 @@
 				E42837E3117005AB008E3594 /* b2EdgeShape.cpp in Sources */,
 				E42837E5117005AB008E3594 /* b2PolygonShape.cpp in Sources */,
 				E4ADE4A0198752990039FF7A /* hdRotationAction.cpp in Sources */,
-				E4ADE35B19873FE30039FF7A /* utf8_codecvt_facet.cpp in Sources */,
 				E44B59D8198600E2001F9862 /* unique_path.cpp in Sources */,
 				E4ADE52B198752990039FF7A /* hdThumbPad.cpp in Sources */,
 				E44B5B0D19860288001F9862 /* text_iarchive.cpp in Sources */,
@@ -2410,7 +2405,6 @@
 				E4ADE520198752990039FF7A /* hdIBViewController.cpp in Sources */,
 				E4ADE4F7198752990039FF7A /* hdTextureManager.cpp in Sources */,
 				E42837EB117005AB008E3594 /* b2Math.cpp in Sources */,
-				E4ADE4B3198752990039FF7A /* hdFileSystem.cpp in Sources */,
 				E4ADE4F2198752990039FF7A /* hdPolygon.cpp in Sources */,
 				E44B5B0519860288001F9862 /* polymorphic_iarchive.cpp in Sources */,
 				E4ADE4E1198752990039FF7A /* hdDrawingUtilities.cpp in Sources */,
@@ -2431,7 +2425,6 @@
 				E42837F5117005AB008E3594 /* b2ContactManager.cpp in Sources */,
 				E42837F7117005AB008E3594 /* b2Island.cpp in Sources */,
 				E4ADE4A4198752990039FF7A /* hdTranslationAction.cpp in Sources */,
-				E4ADE547198752990039FF7A /* hdScripts.cpp in Sources */,
 				E42837F9117005AB008E3594 /* b2World.cpp in Sources */,
 				E42837FB117005AB008E3594 /* b2WorldCallbacks.cpp in Sources */,
 				E42837FD117005AB008E3594 /* b2CircleContact.cpp in Sources */,
@@ -2474,9 +2467,7 @@
 				E4283824117005AB008E3594 /* b2PulleyJoint.cpp in Sources */,
 				E4ADE500198752990039FF7A /* hdMultiTouchView.mm in Sources */,
 				E4283826117005AB008E3594 /* b2RevoluteJoint.cpp in Sources */,
-				E4ADE35919873FE30039FF7A /* portability.cpp in Sources */,
 				E4ADE4BE198752990039FF7A /* hdIPhoneSystemSettings.mm in Sources */,
-				E4ADE35519873FE30039FF7A /* codecvt_error_category.cpp in Sources */,
 				E44B59CE198600E2001F9862 /* codecvt_error_category.cpp in Sources */,
 				E4ADE4EA198752990039FF7A /* hdMeshPolygon.cpp in Sources */,
 				E4ADE496198752990039FF7A /* hdAlphaAction.cpp in Sources */,
