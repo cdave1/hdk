@@ -18,8 +18,8 @@
  */
 
 #include <TargetConditionals.h>
-#include <hdk/hdCore/hdCommon.h>
 #ifdef __OBJC__
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #endif
+#include <hdk/hdCore/hdCommon.h>

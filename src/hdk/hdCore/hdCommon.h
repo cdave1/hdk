@@ -34,7 +34,6 @@
 #include <hdk/hdCore/hdTypes.h>
 
 #define hdAssert(A) assert(A)
-#define kMaxStringSize 4096
 
 #define HDCALLBACK
 

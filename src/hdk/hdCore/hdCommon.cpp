@@ -19,6 +19,8 @@
 
 #include "hdCommon.h"
 
+#define kMaxStringSize 4096
+
 void hdPrintf(const char *fmt, ...)
 {
 #ifdef DEBUG
