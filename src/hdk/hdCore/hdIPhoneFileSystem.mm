@@ -23,6 +23,25 @@
 
 #import "hdIPhoneFileSystem.h"
 
+#define USE_MMAP
+
+#include <string.h>
+#include <stdarg.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <assert.h>
+#include <sys/stat.h>
+#include <sys/mman.h>
+#include <stdlib.h>
+#include <fcntl.h>
+
+
+#import <Foundation/Foundation.h>
+
+
+#include <hdk/hdCore/hdFileSystem.h>
+#include <hdk/hdCore/hdPakFileSystem.h>
+
 @implementation hdIPhoneFileSystem
 
 static hdIPhoneFileSystem *singleton = nil;

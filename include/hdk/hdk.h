@@ -29,7 +29,6 @@
 #include <hdk/hdSoundSystem.h>
 #include <hdk/hdInterface.h>
 #include <hdk/hdEffects.h>
-#include <hdk/hdLibs.h>
 #include <hdk/hdScripting.h>
 
 #endif

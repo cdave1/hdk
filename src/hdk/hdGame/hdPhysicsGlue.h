@@ -20,8 +20,13 @@
 #ifndef _HD_PHYSICS_GLUE_H_
 #define _HD_PHYSICS_GLUE_H_
 
-#include "Box2D.h"
 #include <hdk/hdMath.h>
+
+class b2World;
+class b2Body;
+class b2PolygonShape;
+struct b2PolygonDef;
+struct b2Vec2;
 
 extern void h2CirclePhysicsBody2(b2World* physicsWorld, b2Body** outBody,
                                  const hdVec3& position, float radius,

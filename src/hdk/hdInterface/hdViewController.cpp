@@ -18,6 +18,7 @@
  */
 
 #include "hdViewController.h"
+#include <hdk/hdInterface.h>
 
 hdViewController::hdViewController(const char *hdIBViewControllerFilePath) : hdUIContainer(NULL)
 {

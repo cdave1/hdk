@@ -25,6 +25,20 @@
 #include <string>
 #include <zlib.h>
 
+#include <boost/archive/text_oarchive.hpp>
+#include <boost/archive/text_iarchive.hpp>
+
+#include <boost/archive/binary_oarchive.hpp>
+#include <boost/archive/binary_iarchive.hpp>
+
+#include <boost/archive/xml_oarchive.hpp>
+#include <boost/archive/xml_iarchive.hpp>
+
+#include <boost/serialization/list.hpp>
+#include <boost/serialization/string.hpp>
+#include <boost/serialization/version.hpp>
+#include <boost/serialization/split_member.hpp>
+
 #include <hdk/hdCore/hdFileSystem.h>
 
 static hdIBLoader * m_ViewControllerManagerInstance = NULL;

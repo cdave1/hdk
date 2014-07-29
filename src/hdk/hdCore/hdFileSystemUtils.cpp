@@ -19,7 +19,10 @@
 
 #include "hdFileSystemUtils.h"
 
-#include <list>
+#define BOOST_FILESYSTEM_NO_DEPRECATED
+
+#include "boost/filesystem.hpp"
+
 std::list<std::string> hdGetFileNames(const char *pathBase, const char *subDir)
 {
     std::list<std::string> filenames;

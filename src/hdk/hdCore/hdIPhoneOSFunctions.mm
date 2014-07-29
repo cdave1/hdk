@@ -19,6 +19,7 @@
 
 #include "hdIPhoneOSFunctions.h"
 
+#import <Foundation/Foundation.h>
 
 void * OSFunctions_PrepareThreadResources()
 {

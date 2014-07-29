@@ -18,9 +18,7 @@
  */
 
 /*
- *
  * Box2D ARM VFP/NEON optimisations.
- *
  */
 
 #ifndef B2_OPTIMIZED_FUNCTIONS_H
@@ -33,9 +31,6 @@
 
 #ifdef _ARM_ARCH_7
 #include <hdk/hdMath/neon/neon_matrix_impl.h>
-#else
-#include <hdk/hdMath/vfp/common_macros.h>
-#include <hdk/hdMath/vfp/vfp_clobbers.h>
 #endif
 
 #endif

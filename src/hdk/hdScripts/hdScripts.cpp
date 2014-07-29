@@ -19,10 +19,16 @@
 
 #include "hdScripts.h"
 
+#include <fstream>
+#include <sstream>
+
+#include <boost/regex.hpp>
+
+
 static hdTypedefList<hdMessage, 256> *currentCache = NULL;
 static char currentWorldFilePath[256];
 
-static map<string, string> stringTable;
+static std::map<std::string, std::string> stringTable;
 static bool stringsFileWasLoaded = false;
 
 
@@ -47,7 +53,7 @@ void Scripts_TearDown()
 
 void Scripts_LoadStringsFile(const char *stringsFilePath)
 {
-	string line;
+    std::string line;
 	unsigned pos;
 	filehandle_t *hnd;
 	
@@ -83,8 +89,8 @@ void Scripts_LoadStringsFile(const char *stringsFilePath)
 			hdAssert(3 == matchings.size());
 			
 			// New line hack
-			string s(matchings[2]);
-			while((pos = s.find("\\n")) != string::npos)
+            std::string s(matchings[2]);
+			while((pos = s.find("\\n")) != std::string::npos)
 			{
 				s.replace(pos, 2, 1, '\n');
 			}
@@ -97,13 +103,13 @@ void Scripts_LoadStringsFile(const char *stringsFilePath)
 }
 
 
-string Scripts_GetStringForKey(const char *key)
+std::string Scripts_GetStringForKey(const char *key)
 {
 	hdAssert(stringsFileWasLoaded);
 	
-	string sKey(key);
+    std::string sKey(key);
 	
-	if (stringTable.count(sKey) == 0) return string(key);
+	if (stringTable.count(sKey) == 0) return std::string(key);
 	
 	return stringTable[sKey];
 }
@@ -196,7 +202,7 @@ int Scripts_CountContextMessagesForTag(const int& context,
 // Buggy poor implentation of half of a packrat parser
 void ParseWorldMessageScript(const char* scriptfilepath)
 {
-	string line;
+	std::string line;
 	bool contextOpened;
 	int currContextID;
 	uint32 pos;
@@ -246,7 +252,7 @@ void ParseWorldMessageScript(const char* scriptfilepath)
 			contextOpened = true;
 			hdAssert(line == matchings[0]);
 			hdAssert(matchings.size() == 3);
-			string s(matchings[2]);
+			std::string s(matchings[2]);
 			currContextID = (int)strtol(s.c_str(), NULL, 0);
 		}
 		else if (boost::regex_match(line, matchings, textLinePattern))
@@ -261,11 +267,11 @@ void ParseWorldMessageScript(const char* scriptfilepath)
 			hdAssert(4 == matchings.size());
 			
 			msg.contextId = currContextID;
-			msg.targetId = (int)strtol(string(matchings[2]).c_str(), NULL, 0);
+			msg.targetId = (int)strtol(std::string(matchings[2]).c_str(), NULL, 0);
 			
 			// New line hack
-			string s(matchings[3]);
-			while((pos = s.find("\\n")) != string::npos)
+			std::string s(matchings[3]);
+			while((pos = s.find("\\n")) != std::string::npos)
 			{
 				s.replace(pos, 2, 1, '\n');
 			}
@@ -291,8 +297,8 @@ void ParseWorldMessageScript(const char* scriptfilepath)
 			hdAssert(4 == matchings.size());
 			
 			msg.contextId = currContextID;
-			msg.targetId = (int)strtol(string(matchings[2]).c_str(), NULL, 0);
-			snprintf(msg.texture, 256, "%s", string(matchings[3]).c_str());
+			msg.targetId = (int)strtol(std::string(matchings[2]).c_str(), NULL, 0);
+			snprintf(msg.texture, 256, "%s", std::string(matchings[3]).c_str());
 			msg.messageType = e_hdMessageTypeImage;
 			
 			if (HD_COLLECTIONS_ERROR_FULL == currentCache->Add(msg))
@@ -345,12 +351,12 @@ void ParseWorldMessageScript(const char* scriptfilepath)
 			hdAssert(5 == matchings.size());
 			
 			msg.contextId = currContextID;
-			msg.targetId = (int)strtol(string(matchings[2]).c_str(), NULL, 0);
-			snprintf(msg.texture, 256, "%s", string(matchings[3]).c_str());
+			msg.targetId = (int)strtol(std::string(matchings[2]).c_str(), NULL, 0);
+			snprintf(msg.texture, 256, "%s", std::string(matchings[3]).c_str());
 			
 			// New line hack
-			string s(matchings[4]);
-			while((pos = s.find("\\n")) != string::npos)
+			std::string s(matchings[4]);
+			while((pos = s.find("\\n")) != std::string::npos)
 			{
 				s.replace(pos, 2, 1, '\n');
 			}

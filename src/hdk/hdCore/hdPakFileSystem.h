@@ -20,9 +20,6 @@
 #ifndef HD_PAK_MAKER_H
 #define HD_PAK_MAKER_H
 
-#include <fstream>
-
-#include <boost/regex.hpp>
 #include <hdk/hdCore/hdFileSystem.h>
 #include <hdk/hdCore/hdCompression.h>
 
@@ -59,6 +56,7 @@ private:
 	}
 };
 
+
 class hdPakFile
 {
 public:
@@ -83,6 +81,7 @@ private:
 		ar & m_files;
 	}
 };
+
 
 class hdPakFileManifest
 {

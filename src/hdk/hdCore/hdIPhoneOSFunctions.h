@@ -22,6 +22,4 @@
 
 #include <hdk/hdOSFunctions.h>
 
-#import <Foundation/Foundation.h>
-
 #endif

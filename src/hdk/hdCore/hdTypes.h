@@ -20,12 +20,7 @@
 #ifndef _HD_TYPES_H_
 #define _HD_TYPES_H_
 
-#ifdef _FIXED32_AS_HD_FIXED_
-#include <hdk/hdFixed.h"
-#else
 typedef float fixed32;
-#endif
-
 typedef float float32;
 
 typedef float hdFloat;

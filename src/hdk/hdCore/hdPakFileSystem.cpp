@@ -19,6 +19,9 @@
 
 #include "hdPakFileSystem.h"
 
+#include <fstream>
+#include <boost/regex.hpp>
+
 void hdPakFileSystem::MakePak(const char* baseDir, const char* pakManifestFilePath, const char *destDir)
 {
 	char tmp[256];

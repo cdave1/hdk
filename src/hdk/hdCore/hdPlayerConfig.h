@@ -20,11 +20,7 @@
 #ifndef HD_PLAYER_CONFIG_H
 #define HD_PLAYER_CONFIG_H
 
-#include <sstream>
-
-#include <boost/regex.hpp>
-
-#include <hdk/hdCore/hdFileSystem.h>
+#include <string>
 
 /*
  * Writeable config file class

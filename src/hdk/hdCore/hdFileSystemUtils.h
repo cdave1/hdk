@@ -20,9 +20,7 @@
 #ifndef _HD_FILESYSTEM_UTILS_H_
 #define _HD_FILESYSTEM_UTILS_H_
 
-#define BOOST_FILESYSTEM_NO_DEPRECATED
-
-#include "boost/filesystem.hpp"
+#include <string>
 #include <iostream>
 #include <list>
 

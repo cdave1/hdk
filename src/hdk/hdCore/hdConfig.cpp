@@ -19,6 +19,11 @@
 
 #include "hdConfig.h"
 
+#include <sstream>
+#include <boost/regex.hpp>
+
+#include <hdk/hdCore/hdFileSystem.h>
+
 static std::map<std::string, std::string> configLookupTable;
 static bool configFileWasLoaded = false;
 

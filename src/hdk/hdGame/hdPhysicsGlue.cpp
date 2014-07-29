@@ -18,6 +18,7 @@
  */
 
 #include "hdPhysicsGlue.h"
+#include "Box2D.h"
 
 void h2CirclePhysicsBody2(b2World* physicsWorld, b2Body** outBody,
                           const hdVec3& position, float radius,
@@ -307,7 +308,6 @@ void hdMake2DSingleShapePhysicsBody(b2World* physicsWorld, b2Body** outBody,
         (*outBody)->SetMassFromShapes();
     }
 }
-
 
 
 bool hdIsTriangleValid(b2PolygonDef &def)

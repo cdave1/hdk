@@ -20,7 +20,8 @@
 #ifndef _HD_VIEW_CONTROLLER_H_
 #define _HD_VIEW_CONTROLLER_H_
 
-#include <hdk/hdk.h>
+#include <hdk/hdInterface/hdInterfaceEnums.h>
+#include <hdk/hdInterface/hdUIContainer.h>
 #include <hdk/hdInterface/hdIBViewController.h>
 #include <hdk/hdInterface/hdIBLoader.h>
 

@@ -19,35 +19,20 @@
 
 #include <hdk/hdMath/hdMatrix.h>
 #include <hdk/hdCore.h>
+
 #ifdef __APPLE__
 #include <TargetConditionals.h>
-
-/*
- * iPhone Specific matrix optmizations
- */
 #if (TARGET_OS_IPHONE == 1) && (TARGET_IPHONE_SIMULATOR == 0)
 #warning "iPhone"
 #ifdef _ARM_ARCH_7
+/*
+ * iPhone arm7/neon chip matrix optmizations
+ */
 #warning "neon"
 #include <hdk/hdMath/neon/neon_matrix_impl.h>
-#else
-#include <hdk/hdMath/vfp/matrix_impl.h>
-#endif
-
 #endif
 #endif
-
-static bool vfpu = false;
-
-void InitMatrixSettings()
-{
-#if (TARGET_OS_IPHONE == 1) && (TARGET_IPHONE_SIMULATOR == 0)
-    vfpu = (strcmp(SystemSettings_SystemArchName(), "armv6") == 0);
-#else
-    vfpu = false;
 #endif
-}
-
 
 void MatrixIdentity(hdMatrix &mOut)
 {
@@ -68,14 +53,6 @@ void hdMatrixMultiply(hdMatrix &mOut,
                     mB.f,
                     mOut.f);
 #else
-    if (vfpu)
-    {
-        Matrix4Mul_Test(mA.f,
-                        mB.f,
-                        mOut.f);
-    }
-    else
-    {
         hdMatrix ret;
 
         ret.f[__11] = mA.f[__11]*mB.f[__11] + mA.f[__12]*mB.f[__21] + mA.f[__13]*mB.f[__31] + mA.f[__14]*mB.f[__41];
@@ -99,7 +76,6 @@ void hdMatrixMultiply(hdMatrix &mOut,
         ret.f[__44] = mA.f[__41]*mB.f[__14] + mA.f[__42]*mB.f[__24] + mA.f[__43]*mB.f[__34] + mA.f[__44]*mB.f[__44];
 
         mOut = ret;
-    }
 #endif
 #else
     hdMatrix ret;
@@ -251,22 +227,14 @@ void MatrixVec3Multiply(hdVec3  &vOut,
     NEON_Matrix4Vector3Mul(mIn.f, &vIn.x, res);
     vOut.Set(res[0], res[1], res[2]);
 #else
+    hdVec3 res;
 
-    if (vfpu)
-    {
-        Matrix4Vector3Mul(mIn.f, &vIn.x, &vOut.x);
-    }
-    else
-    {
-        hdVec3 res;
+    // row vector * matrix
+    res.x = vIn.x * mIn.f[__11] + vIn.y * mIn.f[__12] + vIn.z * mIn.f[__13];
+    res.y = vIn.x * mIn.f[__21] + vIn.y * mIn.f[__22] + vIn.z * mIn.f[__23];
+    res.z = vIn.x * mIn.f[__31] + vIn.y * mIn.f[__32] + vIn.z * mIn.f[__33];
 
-        // row vector * matrix
-        res.x = vIn.x * mIn.f[__11] + vIn.y * mIn.f[__12] + vIn.z * mIn.f[__13];
-        res.y = vIn.x * mIn.f[__21] + vIn.y * mIn.f[__22] + vIn.z * mIn.f[__23];
-        res.z = vIn.x * mIn.f[__31] + vIn.y * mIn.f[__32] + vIn.z * mIn.f[__33];
-
-        vOut = res;
-    }
+    vOut = res;
 #endif
 #else
     hdVec3 res;

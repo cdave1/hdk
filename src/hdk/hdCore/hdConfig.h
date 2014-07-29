@@ -20,10 +20,7 @@
 #ifndef HD_CONFIG_H
 #define HD_CONFIG_H
 
-#include <sstream>
-#include <boost/regex.hpp>
-
-#include <hdk/hdCore/hdFileSystem.h>
+#include <string>
 
 #define CONFIG_PHYSICSITERATIONSCOUNT_KEY "PhysicsIterationsCount"
 #define CONFIG_FIXEDPHYSICSINTERVAL_KEY "FixedPhysicsInterval"

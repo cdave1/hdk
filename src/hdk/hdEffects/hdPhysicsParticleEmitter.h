@@ -81,7 +81,7 @@ public:
 	
 	hdTimeInterval life;
 	
-	b2Body* m_physicsBody;
+	b2Body * m_physicsBody;
 	
 	float m_tint[4];
 	

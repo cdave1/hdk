@@ -20,12 +20,6 @@
 #ifndef HD_SCRIPTS_H
 #define HD_SCRIPTS_H
 
-using namespace std;
-#include <fstream>
-#include <sstream>
-
-#include <boost/regex.hpp>
-
 #include <hdk/hdk.h>
 
 #define HD_SCRIPTS_WILDCARD_TAG 9999
@@ -57,7 +51,7 @@ extern void Scripts_TearDown();
 
 extern void Scripts_LoadStringsFile(const char *worldName);
 
-extern string Scripts_GetStringForKey(const char *key);
+extern std::string Scripts_GetStringForKey(const char *key);
 
 extern void Scripts_LoadScript(const char *worldName, int worldId);
 

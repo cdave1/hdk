@@ -9,6 +9,15 @@
 
 #import "hdIPhoneSystemSettings.h"
 
+#import <Foundation/Foundation.h>
+
+#ifdef __arm__
+#include "mach-o/arch.h"
+#endif
+
+#import <sys/utsname.h>
+#import <sys/types.h>
+#import <sys/sysctl.h>
 
 @implementation hdIPhoneSystemSettings
 
@@ -114,7 +123,6 @@ void SystemSettings_Init()
 		openGLVersion = 11;		
 #endif
 	}
-	
 }
 
 
@@ -149,9 +157,4 @@ void SystemSettings_TearDown()
 {
 }
 
-
-
-
 @end
-
-
