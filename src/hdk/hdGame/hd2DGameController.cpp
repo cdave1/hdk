@@ -17,10 +17,5 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef _HD_EFFECTS_H_
-#define _HD_EFFECTS_H_
-
-#include <hdk/hdEffects/hdParticleEmitter.h>
-#include <hdk/hdEffects/hdPhysicsParticleEmitter.h>
-
-#endif
+#include "hd2DGameController.h"
+#include <hdk/hdGame/hdGameWorld.h>

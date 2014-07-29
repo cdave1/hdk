@@ -19,6 +19,16 @@
 
 #include "hdCompression.h"
 
+#undef Byte
+
+#include <fstream>
+#include <iostream>
+#include <sstream>
+#include <string>
+
+#include "hdCommon.h"
+#include <zlib.h>
+
 int hdCompression_Zip(const char* inBuffer, const long inLen,
                       char **outBuffer, long* outLen)
 {

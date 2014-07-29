@@ -18,6 +18,13 @@
  */
 
 #include "hdIBLoader.h"
+
+#include <fstream>
+#include <iostream>
+#include <sstream>
+#include <string>
+#include <zlib.h>
+
 #include <hdCore/hdFileSystem.h>
 
 static hdIBLoader * m_ViewControllerManagerInstance = NULL;

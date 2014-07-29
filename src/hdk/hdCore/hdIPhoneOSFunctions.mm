@@ -17,38 +17,30 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef _HD_COMPRESSION_H_
-#define _HD_COMPRESSION_H_
+#include "hdIPhoneOSFunctions.h"
 
-#undef Byte
 
-#include <zlib.h>
-
-#include <fstream>
-#include <iostream>
-#include <sstream>
-#include <string>
-
-#include "hdCommon.h"
-
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-    /*
-     * 0 if ok, < 0 if error
-     */
-    extern int hdCompression_Zip(const char* inBuffer, const long inLen,
-                                 char **outBuffer, long* outLen);
-
-    /*
-     * 0 if ok, < 0 if error
-     */
-    extern int hdCompression_Unzip(const char* inBuffer, const long inLen,
-                                   char **outBuffer, long* outLen);
-
-#ifdef __cplusplus
+void * OSFunctions_PrepareThreadResources()
+{
+	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+	return pool;
 }
-#endif
 
-#endif
+void OSFunctions_TearDownThreadResources(void *object)
+{
+	[((NSAutoreleasePool *)object) drain];
+}
+
+
+void OSFunctions_LoadExternalURL(const char *urlString)
+{
+	NSURL *url = nil;
+	if (strlen(urlString) == 0) return;
+	if ((url = [NSURL URLWithString:[NSString stringWithUTF8String:urlString]]))
+	{
+		if ([[UIApplication sharedApplication] canOpenURL:url])
+		{
+			[[UIApplication sharedApplication] openURL:url];
+		}
+	}
+}

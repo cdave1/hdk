@@ -17,25 +17,53 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef HD_FILE_SYSTEM_SUPPORT
-#define HD_FILE_SYSTEM_SUPPORT
+#ifndef HD_IPHONE_SYSTEM_SETTINGS
+#define HD_IPHONE_SYSTEM_SETTINGS
 
-typedef struct
+#ifdef __arm__
+#include "mach-o/arch.h"
+#endif
+
+#import "hdSystemSettings.h"
+
+#import <Foundation/Foundation.h>
+
+#import <sys/utsname.h>
+#import <sys/types.h>
+#import <sys/sysctl.h>
+
+
+
+#define FIRSTGEN_IPHONE_FRAME_DURATION 0.032f
+#define SECONDGEN_IPHONE_FRAME_DURATION 0.025f
+#define THIRDGEN_IPHONE_FRAME_DURATION 0.016f
+
+@interface hdIPhoneSystemSettings : NSObject 
 {
-    //	FILE *hFile;
+	
+}
 
-    /* Following is used when the file is loaded into memory */
-    bool bLoaded;			/* Was file loaded into memory? */
-    bool mmapped; // Did we use mmap?
 
-    unsigned int	filesize;				/* Size of file data in bytes */
+/*
+ * Determine the system name
+ */
+//+ (NSString *)GetSystemName;
 
-    unsigned char	*ptrStart;				/* pointer to start of file data block */
-    unsigned char	*ptrCurrent;			/* pointer to current position in file data block */
-    unsigned char	*ptrEnd;				/* pointer to end of file data block */
 
-    void *filedata;				/* file data loaded into memory */
+/*
+ * FPS
+ */
+//+ (double)GetFrameDuration;
 
-} filehandle_t;
+
+/*
+ * Texture BPP detail
+ */
+//+ (int)GetMaxTextureBPP;
+
+
+
+@end
+
 
 #endif

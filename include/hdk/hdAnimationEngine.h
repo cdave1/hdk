@@ -20,18 +20,18 @@
 #ifndef HD_ANIMATION_ENGINE_H
 #define HD_ANIMATION_ENGINE_H
 
-#include "hdAnimation/hdAnimation.h"
-#include "hdAnimation/hdAnimationController.h"
-#include "hdAnimation/hdAnimation.h"
+#include <hdk/hdAnimation/hdAnimation.h>
+#include <hdk/hdAnimation/hdAnimationController.h>
+#include <hdk/hdAnimation/hdAnimation.h>
 
 // Actions
-#include "hdAnimation/hdAction.h"
-#include "hdAnimation/hdTranslationAction.h"
-#include "hdAnimation/hdVectorAction.h"
-#include "hdAnimation/hdScaleAction.h"
-#include "hdAnimation/hdRotationAction.h"
-#include "hdAnimation/hdFunctionAction.h"
-#include "hdAnimation/hdPauseAction.h"
-#include "hdAnimation/hdAlphaAction.h"
+#include <hdk/hdAnimation/hdAction.h>
+#include <hdk/hdAnimation/hdTranslationAction.h>
+#include <hdk/hdAnimation/hdVectorAction.h>
+#include <hdk/hdAnimation/hdScaleAction.h>
+#include <hdk/hdAnimation/hdRotationAction.h>
+#include <hdk/hdAnimation/hdFunctionAction.h>
+#include <hdk/hdAnimation/hdPauseAction.h>
+#include <hdk/hdAnimation/hdAlphaAction.h>
 
 #endif

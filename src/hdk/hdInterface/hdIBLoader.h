@@ -20,11 +20,6 @@
 #ifndef _HD_IB_LOADER_H_
 #define _HD_IB_LOADER_H_
 
-#include <fstream>
-#include <iostream>
-#include <sstream>
-#include <string>
-
 #include "hdIBViewController.h"
 
 #include <boost/archive/text_oarchive.hpp>

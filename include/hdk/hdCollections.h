@@ -20,8 +20,8 @@
 #ifndef _HD_COLLECTIONS_H_
 #define _HD_COLLECTIONS_H_
 
-#include "hdCollections/hdPointerList.h"
-#include "hdCollections/hdSerializablePointerList.h"
-#include "hdCollections/hdTypedefList.h"
+#include <hdk/hdCollections/hdPointerList.h>
+#include <hdk/hdCollections/hdSerializablePointerList.h>
+#include <hdk/hdCollections/hdTypedefList.h>
 
 #endif

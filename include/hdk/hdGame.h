@@ -20,11 +20,11 @@
 #ifndef _HD_GAME_H_
 #define _HD_GAME_H_
 
-#include "hdGame/hdPhysicsGlue.h"
-#include "hdGame/hdPhysicsJoint.h"
-#include "hdGame/hdPhysicsObject.h"
-#include "hdGame/hdOrthographicProjection.h"
-#include "hdGame/hdGameObject.h"
-#include "hdGame/hdGameWorld.h"
+#include <hdk/hdGame/hdPhysicsGlue.h>
+#include <hdk/hdGame/hdPhysicsJoint.h>
+#include <hdk/hdGame/hdPhysicsObject.h>
+#include <hdk/hdGame/hdOrthographicProjection.h>
+#include <hdk/hdGame/hdGameObject.h>
+#include <hdk/hdGame/hdGameWorld.h>
 
 #endif

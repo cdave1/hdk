@@ -20,10 +20,10 @@
 #ifndef _HD_INTERFACE_BUILDER_H_
 #define _HD_INTERFACE_BUILDER_H_
 
-#include "hdInterface/hdIBProxy.h"
-#include "hdInterface/hdIBViewController.h"
-#include "hdInterface/hdIBLoader.h"
-#include "hdInterface/hdIBImage.h"
-#include "hdInterface/hdIBEnums.h"
+#include <hdk/hdInterface/hdIBProxy.h>
+#include <hdk/hdInterface/hdIBViewController.h>
+#include <hdk/hdInterface/hdIBLoader.h>
+#include <hdk/hdInterface/hdIBImage.h>
+#include <hdk/hdInterface/hdIBEnums.h>
 
 #endif

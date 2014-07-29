@@ -17,4 +17,27 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#include "hd2DGameController.h"
+#ifndef _HD_COMPRESSION_H_
+#define _HD_COMPRESSION_H_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+    /*
+     * 0 if ok, < 0 if error
+     */
+    extern int hdCompression_Zip(const char* inBuffer, const long inLen,
+                                 char **outBuffer, long* outLen);
+
+    /*
+     * 0 if ok, < 0 if error
+     */
+    extern int hdCompression_Unzip(const char* inBuffer, const long inLen,
+                                   char **outBuffer, long* outLen);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif

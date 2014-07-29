@@ -7,7 +7,7 @@
 //
 
 #include "hdGameObject.h"
-
+#include <hdk/hdGame/hdGameWorld.h>
 
 hdGameObject::hdGameObject()
 {

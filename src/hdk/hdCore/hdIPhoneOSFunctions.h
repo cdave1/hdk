@@ -17,10 +17,11 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef _HD_EFFECTS_H_
-#define _HD_EFFECTS_H_
+#ifndef HD_IPHONE_OS_FUNCTIONS_H
+#define HD_IPHONE_OS_FUNCTIONS_H
 
-#include <hdk/hdEffects/hdParticleEmitter.h>
-#include <hdk/hdEffects/hdPhysicsParticleEmitter.h>
+#include "hdOSFunctions.h"
+
+#import <Foundation/Foundation.h>
 
 #endif

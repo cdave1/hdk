@@ -20,7 +20,7 @@
 #ifndef _HD_TEXTURE_MANAGER_H_
 #define _HD_TEXTURE_MANAGER_H_
 
-#include "hdCollections.h"
+#include <hdk/hdCollections.h>
 #include <hdGraphicsLibrary/hdGraphicsInterface.h>
 #include <hdGraphicsLibrary/hdTexture.h>
 

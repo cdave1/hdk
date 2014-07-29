@@ -21,7 +21,8 @@
 #define _HD_2D_GAME_CONTROLLER_
 
 #include "hdMath.h"
-#include "hdGame/hdGameWorld.h"
+
+class hdGameWorld;
 
 class hd2DGameController
 {
