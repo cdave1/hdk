@@ -397,22 +397,22 @@
 		E4ADE35919873FE30039FF7A /* portability.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4ADE2E919873FE30039FF7A /* portability.cpp */; };
 		E4ADE35A19873FE30039FF7A /* unique_path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4ADE2EA19873FE30039FF7A /* unique_path.cpp */; };
 		E4ADE35B19873FE30039FF7A /* utf8_codecvt_facet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4ADE2EB19873FE30039FF7A /* utf8_codecvt_facet.cpp */; };
-		E4ADE380198749D90039FF7A /* hdAnimationEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE370198749D90039FF7A /* hdAnimationEngine.h */; };
-		E4ADE381198749D90039FF7A /* hdCollections.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE371198749D90039FF7A /* hdCollections.h */; };
-		E4ADE382198749D90039FF7A /* hdCore.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE372198749D90039FF7A /* hdCore.h */; };
-		E4ADE383198749D90039FF7A /* hdEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE373198749D90039FF7A /* hdEffects.h */; };
-		E4ADE384198749D90039FF7A /* hdGame.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE374198749D90039FF7A /* hdGame.h */; };
-		E4ADE385198749D90039FF7A /* hdGraphicsLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE375198749D90039FF7A /* hdGraphicsLibrary.h */; };
-		E4ADE386198749D90039FF7A /* hdIB.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE376198749D90039FF7A /* hdIB.h */; };
-		E4ADE387198749D90039FF7A /* hdInput.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE377198749D90039FF7A /* hdInput.h */; };
-		E4ADE388198749D90039FF7A /* hdInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE378198749D90039FF7A /* hdInterface.h */; };
-		E4ADE389198749D90039FF7A /* hdk.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE379198749D90039FF7A /* hdk.h */; };
-		E4ADE38A198749D90039FF7A /* hdk_min.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE37A198749D90039FF7A /* hdk_min.h */; };
-		E4ADE38B198749D90039FF7A /* hdLevelEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE37B198749D90039FF7A /* hdLevelEditor.h */; };
-		E4ADE38C198749D90039FF7A /* hdLibs.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE37C198749D90039FF7A /* hdLibs.h */; };
-		E4ADE38D198749D90039FF7A /* hdMath.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE37D198749D90039FF7A /* hdMath.h */; };
-		E4ADE38E198749D90039FF7A /* hdScripting.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE37E198749D90039FF7A /* hdScripting.h */; };
-		E4ADE38F198749D90039FF7A /* hdSoundSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE37F198749D90039FF7A /* hdSoundSystem.h */; };
+		E4ADE3A119874AEF0039FF7A /* hdAnimationEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39119874AEF0039FF7A /* hdAnimationEngine.h */; };
+		E4ADE3A219874AEF0039FF7A /* hdCollections.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39219874AEF0039FF7A /* hdCollections.h */; };
+		E4ADE3A319874AEF0039FF7A /* hdCore.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39319874AEF0039FF7A /* hdCore.h */; };
+		E4ADE3A419874AEF0039FF7A /* hdEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39419874AEF0039FF7A /* hdEffects.h */; };
+		E4ADE3A519874AEF0039FF7A /* hdGame.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39519874AEF0039FF7A /* hdGame.h */; };
+		E4ADE3A619874AEF0039FF7A /* hdGraphicsLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39619874AEF0039FF7A /* hdGraphicsLibrary.h */; };
+		E4ADE3A719874AEF0039FF7A /* hdIB.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39719874AEF0039FF7A /* hdIB.h */; };
+		E4ADE3A819874AEF0039FF7A /* hdInput.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39819874AEF0039FF7A /* hdInput.h */; };
+		E4ADE3A919874AEF0039FF7A /* hdInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39919874AEF0039FF7A /* hdInterface.h */; };
+		E4ADE3AA19874AEF0039FF7A /* hdk.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39A19874AEF0039FF7A /* hdk.h */; };
+		E4ADE3AB19874AEF0039FF7A /* hdk_min.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39B19874AEF0039FF7A /* hdk_min.h */; };
+		E4ADE3AC19874AEF0039FF7A /* hdLevelEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39C19874AEF0039FF7A /* hdLevelEditor.h */; };
+		E4ADE3AD19874AEF0039FF7A /* hdLibs.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39D19874AEF0039FF7A /* hdLibs.h */; };
+		E4ADE3AE19874AEF0039FF7A /* hdMath.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39E19874AEF0039FF7A /* hdMath.h */; };
+		E4ADE3AF19874AEF0039FF7A /* hdScripting.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39F19874AEF0039FF7A /* hdScripting.h */; };
+		E4ADE3B019874AEF0039FF7A /* hdSoundSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE3A019874AEF0039FF7A /* hdSoundSystem.h */; };
 		E4F36BD611714DAD00792A2D /* neon_matrix_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36BCD11714DAD00792A2D /* neon_matrix_impl.cpp */; };
 		E4F36BD711714DAD00792A2D /* neon_matrix_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = E4F36BCE11714DAD00792A2D /* neon_matrix_impl.h */; };
 		E4F36E4F1171699800792A2D /* add_facet.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36D711171699800792A2D /* add_facet.hpp */; };
@@ -897,22 +897,22 @@
 		E4ADE2E919873FE30039FF7A /* portability.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = portability.cpp; sourceTree = "<group>"; };
 		E4ADE2EA19873FE30039FF7A /* unique_path.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = unique_path.cpp; sourceTree = "<group>"; };
 		E4ADE2EB19873FE30039FF7A /* utf8_codecvt_facet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = utf8_codecvt_facet.cpp; sourceTree = "<group>"; };
-		E4ADE370198749D90039FF7A /* hdAnimationEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdAnimationEngine.h; sourceTree = "<group>"; };
-		E4ADE371198749D90039FF7A /* hdCollections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdCollections.h; sourceTree = "<group>"; };
-		E4ADE372198749D90039FF7A /* hdCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdCore.h; sourceTree = "<group>"; };
-		E4ADE373198749D90039FF7A /* hdEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdEffects.h; sourceTree = "<group>"; };
-		E4ADE374198749D90039FF7A /* hdGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdGame.h; sourceTree = "<group>"; };
-		E4ADE375198749D90039FF7A /* hdGraphicsLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdGraphicsLibrary.h; sourceTree = "<group>"; };
-		E4ADE376198749D90039FF7A /* hdIB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdIB.h; sourceTree = "<group>"; };
-		E4ADE377198749D90039FF7A /* hdInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdInput.h; sourceTree = "<group>"; };
-		E4ADE378198749D90039FF7A /* hdInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdInterface.h; sourceTree = "<group>"; };
-		E4ADE379198749D90039FF7A /* hdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdk.h; sourceTree = "<group>"; };
-		E4ADE37A198749D90039FF7A /* hdk_min.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdk_min.h; sourceTree = "<group>"; };
-		E4ADE37B198749D90039FF7A /* hdLevelEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdLevelEditor.h; sourceTree = "<group>"; };
-		E4ADE37C198749D90039FF7A /* hdLibs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdLibs.h; sourceTree = "<group>"; };
-		E4ADE37D198749D90039FF7A /* hdMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdMath.h; sourceTree = "<group>"; };
-		E4ADE37E198749D90039FF7A /* hdScripting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdScripting.h; sourceTree = "<group>"; };
-		E4ADE37F198749D90039FF7A /* hdSoundSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdSoundSystem.h; sourceTree = "<group>"; };
+		E4ADE39119874AEF0039FF7A /* hdAnimationEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdAnimationEngine.h; sourceTree = "<group>"; };
+		E4ADE39219874AEF0039FF7A /* hdCollections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdCollections.h; sourceTree = "<group>"; };
+		E4ADE39319874AEF0039FF7A /* hdCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdCore.h; sourceTree = "<group>"; };
+		E4ADE39419874AEF0039FF7A /* hdEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdEffects.h; sourceTree = "<group>"; };
+		E4ADE39519874AEF0039FF7A /* hdGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdGame.h; sourceTree = "<group>"; };
+		E4ADE39619874AEF0039FF7A /* hdGraphicsLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdGraphicsLibrary.h; sourceTree = "<group>"; };
+		E4ADE39719874AEF0039FF7A /* hdIB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdIB.h; sourceTree = "<group>"; };
+		E4ADE39819874AEF0039FF7A /* hdInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdInput.h; sourceTree = "<group>"; };
+		E4ADE39919874AEF0039FF7A /* hdInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdInterface.h; sourceTree = "<group>"; };
+		E4ADE39A19874AEF0039FF7A /* hdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdk.h; sourceTree = "<group>"; };
+		E4ADE39B19874AEF0039FF7A /* hdk_min.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdk_min.h; sourceTree = "<group>"; };
+		E4ADE39C19874AEF0039FF7A /* hdLevelEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdLevelEditor.h; sourceTree = "<group>"; };
+		E4ADE39D19874AEF0039FF7A /* hdLibs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdLibs.h; sourceTree = "<group>"; };
+		E4ADE39E19874AEF0039FF7A /* hdMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdMath.h; sourceTree = "<group>"; };
+		E4ADE39F19874AEF0039FF7A /* hdScripting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdScripting.h; sourceTree = "<group>"; };
+		E4ADE3A019874AEF0039FF7A /* hdSoundSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdSoundSystem.h; sourceTree = "<group>"; };
 		E4EEA1EB1985F8EF003E3175 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		E4F36BCD11714DAD00792A2D /* neon_matrix_impl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = neon_matrix_impl.cpp; sourceTree = "<group>"; };
 		E4F36BCE11714DAD00792A2D /* neon_matrix_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = neon_matrix_impl.h; sourceTree = "<group>"; };
@@ -1714,25 +1714,33 @@
 		E4ADE36F198749D90039FF7A /* include */ = {
 			isa = PBXGroup;
 			children = (
-				E4ADE370198749D90039FF7A /* hdAnimationEngine.h */,
-				E4ADE371198749D90039FF7A /* hdCollections.h */,
-				E4ADE372198749D90039FF7A /* hdCore.h */,
-				E4ADE373198749D90039FF7A /* hdEffects.h */,
-				E4ADE374198749D90039FF7A /* hdGame.h */,
-				E4ADE375198749D90039FF7A /* hdGraphicsLibrary.h */,
-				E4ADE376198749D90039FF7A /* hdIB.h */,
-				E4ADE377198749D90039FF7A /* hdInput.h */,
-				E4ADE378198749D90039FF7A /* hdInterface.h */,
-				E4ADE379198749D90039FF7A /* hdk.h */,
-				E4ADE37A198749D90039FF7A /* hdk_min.h */,
-				E4ADE37B198749D90039FF7A /* hdLevelEditor.h */,
-				E4ADE37C198749D90039FF7A /* hdLibs.h */,
-				E4ADE37D198749D90039FF7A /* hdMath.h */,
-				E4ADE37E198749D90039FF7A /* hdScripting.h */,
-				E4ADE37F198749D90039FF7A /* hdSoundSystem.h */,
+				E4ADE39019874AEF0039FF7A /* hdk */,
 			);
 			name = include;
 			path = ../../include;
+			sourceTree = "<group>";
+		};
+		E4ADE39019874AEF0039FF7A /* hdk */ = {
+			isa = PBXGroup;
+			children = (
+				E4ADE39119874AEF0039FF7A /* hdAnimationEngine.h */,
+				E4ADE39219874AEF0039FF7A /* hdCollections.h */,
+				E4ADE39319874AEF0039FF7A /* hdCore.h */,
+				E4ADE39419874AEF0039FF7A /* hdEffects.h */,
+				E4ADE39519874AEF0039FF7A /* hdGame.h */,
+				E4ADE39619874AEF0039FF7A /* hdGraphicsLibrary.h */,
+				E4ADE39719874AEF0039FF7A /* hdIB.h */,
+				E4ADE39819874AEF0039FF7A /* hdInput.h */,
+				E4ADE39919874AEF0039FF7A /* hdInterface.h */,
+				E4ADE39A19874AEF0039FF7A /* hdk.h */,
+				E4ADE39B19874AEF0039FF7A /* hdk_min.h */,
+				E4ADE39C19874AEF0039FF7A /* hdLevelEditor.h */,
+				E4ADE39D19874AEF0039FF7A /* hdLibs.h */,
+				E4ADE39E19874AEF0039FF7A /* hdMath.h */,
+				E4ADE39F19874AEF0039FF7A /* hdScripting.h */,
+				E4ADE3A019874AEF0039FF7A /* hdSoundSystem.h */,
+			);
+			path = hdk;
 			sourceTree = "<group>";
 		};
 		E4F36BCC11714DAD00792A2D /* neon */ = {
@@ -1891,6 +1899,7 @@
 				E44B5A5E1986026B001F9862 /* hash_collections_save_imp.hpp in Headers */,
 				E42834C5116FF684008E3594 /* hdAction.h in Headers */,
 				E42834C9116FF684008E3594 /* hdAnimationController.h in Headers */,
+				E4ADE3A119874AEF0039FF7A /* hdAnimationEngine.h in Headers */,
 				E42834CC116FF684008E3594 /* hdAnimationTimingFunction.h in Headers */,
 				E42834D0116FF684008E3594 /* hdRotationAction.h in Headers */,
 				E42834D1116FF684008E3594 /* hdScaleAction.h in Headers */,
@@ -1900,17 +1909,15 @@
 				E44B5A2C1986026B001F9862 /* array.hpp in Headers */,
 				E42834DA116FF684008E3594 /* hdPointerList.h in Headers */,
 				E42834DB116FF684008E3594 /* hdSerializablePointerList.h in Headers */,
-				E4ADE383198749D90039FF7A /* hdEffects.h in Headers */,
 				E42834DC116FF684008E3594 /* hdTypedefList.h in Headers */,
-				E4ADE385198749D90039FF7A /* hdGraphicsLibrary.h in Headers */,
 				E42834DD116FF684008E3594 /* hdCollectionSettings.h in Headers */,
-				E4ADE388198749D90039FF7A /* hdInterface.h in Headers */,
 				E42834DE116FF684008E3594 /* hdApplication.h in Headers */,
 				E44B5A4C1986026B001F9862 /* stack_constructor.hpp in Headers */,
 				E42834E0116FF684008E3594 /* hdCompression.h in Headers */,
 				E42834E2116FF684008E3594 /* hdPakFileSystem.h in Headers */,
 				E42834E4116FF684008E3594 /* hdCommon.h in Headers */,
 				E42834E7116FF684008E3594 /* hdTypes.h in Headers */,
+				E4ADE3AF19874AEF0039FF7A /* hdScripting.h in Headers */,
 				E42834E8116FF684008E3594 /* hdFileSystem.h in Headers */,
 				E42834E9116FF684008E3594 /* hdIPhoneFileSystem.h in Headers */,
 				E42834EB116FF684008E3594 /* hdSystemSettings.h in Headers */,
@@ -1929,6 +1936,7 @@
 				E4283506116FF684008E3594 /* hdOrthographicProjection.h in Headers */,
 				E44B5A521986026B001F9862 /* extended_type_info.hpp in Headers */,
 				E4283508116FF684008E3594 /* hdPhysicsGlue.h in Headers */,
+				E4ADE3AE19874AEF0039FF7A /* hdMath.h in Headers */,
 				E4283509116FF684008E3594 /* hdPhysicsObject.h in Headers */,
 				E44B5A8C1986026B001F9862 /* static_warning.hpp in Headers */,
 				E44B5A801986026B001F9862 /* singleton.hpp in Headers */,
@@ -1938,12 +1946,11 @@
 				E428350E116FF684008E3594 /* hdDrawingUtilities.h in Headers */,
 				E4283511116FF684008E3594 /* hdPolygon.h in Headers */,
 				E4283512116FF684008E3594 /* hdTexture.h in Headers */,
-				E4ADE386198749D90039FF7A /* hdIB.h in Headers */,
 				E4283514116FF684008E3594 /* hdTextureManager.h in Headers */,
 				E4283516116FF684008E3594 /* hdTGALoader.h in Headers */,
 				E44B5A301986026B001F9862 /* base_object.hpp in Headers */,
+				E4ADE3A419874AEF0039FF7A /* hdEffects.h in Headers */,
 				E4283518116FF684008E3594 /* hdPNGLoader.h in Headers */,
-				E4ADE382198749D90039FF7A /* hdCore.h in Headers */,
 				E428351A116FF684008E3594 /* hdFontPolygon.h in Headers */,
 				E428351C116FF684008E3594 /* hdFont.h in Headers */,
 				E428351E116FF684008E3594 /* hdFontManager.h in Headers */,
@@ -1979,7 +1986,6 @@
 				E42837DF117005AB008E3594 /* b2PairManager.h in Headers */,
 				E44B5A2A1986026B001F9862 /* access.hpp in Headers */,
 				E42837E2117005AB008E3594 /* b2CircleShape.h in Headers */,
-				E4ADE384198749D90039FF7A /* hdGame.h in Headers */,
 				E42837E4117005AB008E3594 /* b2EdgeShape.h in Headers */,
 				E44B5A921986026B001F9862 /* throw_exception.hpp in Headers */,
 				E42837E6117005AB008E3594 /* b2PolygonShape.h in Headers */,
@@ -2000,7 +2006,6 @@
 				E42837F8117005AB008E3594 /* b2Island.h in Headers */,
 				E42837FA117005AB008E3594 /* b2World.h in Headers */,
 				E42837FC117005AB008E3594 /* b2WorldCallbacks.h in Headers */,
-				E4ADE38C198749D90039FF7A /* hdLibs.h in Headers */,
 				E42837FE117005AB008E3594 /* b2CircleContact.h in Headers */,
 				E44B5A681986026B001F9862 /* level.hpp in Headers */,
 				E4283800117005AB008E3594 /* b2Contact.h in Headers */,
@@ -2017,14 +2022,13 @@
 				E44B5A3C1986026B001F9862 /* collections_save_imp.hpp in Headers */,
 				E428380F117005AB008E3594 /* b2ConstantAccelController.h in Headers */,
 				E4283811117005AB008E3594 /* b2ConstantForceController.h in Headers */,
+				E4ADE3AB19874AEF0039FF7A /* hdk_min.h in Headers */,
 				E4283813117005AB008E3594 /* b2Controller.h in Headers */,
 				E44B5A441986026B001F9862 /* get_data.hpp in Headers */,
 				E44B5AA61986026B001F9862 /* version.hpp in Headers */,
 				E4283815117005AB008E3594 /* b2GravityController.h in Headers */,
 				E4283817117005AB008E3594 /* b2TensorDampingController.h in Headers */,
-				E4ADE38B198749D90039FF7A /* hdLevelEditor.h in Headers */,
 				E4283819117005AB008E3594 /* b2DistanceJoint.h in Headers */,
-				E4ADE381198749D90039FF7A /* hdCollections.h in Headers */,
 				E428381B117005AB008E3594 /* b2GearJoint.h in Headers */,
 				E44B5A701986026B001F9862 /* nvp.hpp in Headers */,
 				E428381D117005AB008E3594 /* b2Joint.h in Headers */,
@@ -2053,11 +2057,9 @@
 				E44B5A661986026B001F9862 /* item_version_type.hpp in Headers */,
 				E4F36E511171699800792A2D /* basic_archive.hpp in Headers */,
 				E44B5AA81986026B001F9862 /* void_cast.hpp in Headers */,
+				E4ADE3A719874AEF0039FF7A /* hdIB.h in Headers */,
 				E44B5AA21986026B001F9862 /* vector.hpp in Headers */,
 				E44B5A321986026B001F9862 /* binary_object.hpp in Headers */,
-				E4ADE38A198749D90039FF7A /* hdk_min.h in Headers */,
-				E4ADE387198749D90039FF7A /* hdInput.h in Headers */,
-				E4ADE38D198749D90039FF7A /* hdMath.h in Headers */,
 				E4F36E521171699800792A2D /* basic_binary_iarchive.hpp in Headers */,
 				E4F36E531171699800792A2D /* basic_binary_iprimitive.hpp in Headers */,
 				E4F36E541171699800792A2D /* basic_binary_oarchive.hpp in Headers */,
@@ -2069,6 +2071,7 @@
 				E4F36E591171699800792A2D /* basic_text_oarchive.hpp in Headers */,
 				E44B5A3E1986026B001F9862 /* complex.hpp in Headers */,
 				E44B5A821986026B001F9862 /* slist.hpp in Headers */,
+				E4ADE3A219874AEF0039FF7A /* hdCollections.h in Headers */,
 				E4F36E5A1171699800792A2D /* basic_text_oprimitive.hpp in Headers */,
 				E44B5A6C1986026B001F9862 /* list.hpp in Headers */,
 				E4F36E5B1171699800792A2D /* basic_xml_archive.hpp in Headers */,
@@ -2086,7 +2089,6 @@
 				E4F36E661171699800792A2D /* abi_suffix.hpp in Headers */,
 				E4F36E691171699800792A2D /* auto_link_archive.hpp in Headers */,
 				E4F36E6A1171699800792A2D /* auto_link_warchive.hpp in Headers */,
-				E4ADE38E198749D90039FF7A /* hdScripting.h in Headers */,
 				E4F36E6B1171699800792A2D /* basic_archive_impl.hpp in Headers */,
 				E44B5A8E1986026B001F9862 /* string.hpp in Headers */,
 				E4F36E6C1171699800792A2D /* basic_config.hpp in Headers */,
@@ -2117,19 +2119,21 @@
 				E4F36E831171699800792A2D /* base64_from_binary.hpp in Headers */,
 				E4F36E841171699800792A2D /* binary_from_base64.hpp in Headers */,
 				E44B5AAE1986026B001F9862 /* wrapper.hpp in Headers */,
-				E4ADE38F198749D90039FF7A /* hdSoundSystem.h in Headers */,
 				E4F36E851171699800792A2D /* dataflow.hpp in Headers */,
 				E4F36E861171699800792A2D /* dataflow_exception.hpp in Headers */,
 				E4F36E871171699800792A2D /* escape.hpp in Headers */,
 				E4F36E881171699800792A2D /* head_iterator.hpp in Headers */,
 				E4F36E891171699800792A2D /* insert_linebreaks.hpp in Headers */,
 				E44B5A741986026B001F9862 /* pfto.hpp in Headers */,
+				E4ADE3AC19874AEF0039FF7A /* hdLevelEditor.h in Headers */,
 				E4F36E8A1171699800792A2D /* istream_iterator.hpp in Headers */,
 				E4F36E8B1171699800792A2D /* mb_from_wchar.hpp in Headers */,
 				E44B5A761986026B001F9862 /* scoped_ptr.hpp in Headers */,
+				E4ADE3A319874AEF0039FF7A /* hdCore.h in Headers */,
 				E44B5A401986026B001F9862 /* config.hpp in Headers */,
 				E4F36E8C1171699800792A2D /* ostream_iterator.hpp in Headers */,
 				E4F36E8D1171699800792A2D /* remove_whitespace.hpp in Headers */,
+				E4ADE3B019874AEF0039FF7A /* hdSoundSystem.h in Headers */,
 				E44B5A6E1986026B001F9862 /* map.hpp in Headers */,
 				E4F36E8E1171699800792A2D /* transform_width.hpp in Headers */,
 				E44B5A881986026B001F9862 /* split_member.hpp in Headers */,
@@ -2155,15 +2159,16 @@
 				E4F36E9D1171699800792A2D /* polymorphic_xml_oarchive.hpp in Headers */,
 				E4F36E9E1171699800792A2D /* polymorphic_xml_wiarchive.hpp in Headers */,
 				E4F36E9F1171699800792A2D /* polymorphic_xml_woarchive.hpp in Headers */,
+				E4ADE3AA19874AEF0039FF7A /* hdk.h in Headers */,
 				E4F36EA01171699800792A2D /* shared_ptr_helper.hpp in Headers */,
 				E4F36EA11171699800792A2D /* text_iarchive.hpp in Headers */,
-				E4ADE380198749D90039FF7A /* hdAnimationEngine.h in Headers */,
 				E4F36EA21171699800792A2D /* text_oarchive.hpp in Headers */,
 				E4F36EA31171699800792A2D /* text_wiarchive.hpp in Headers */,
 				E4F36EA41171699800792A2D /* text_woarchive.hpp in Headers */,
 				E44B5A9C1986026B001F9862 /* utility.hpp in Headers */,
 				E4F36EA51171699800792A2D /* tmpdir.hpp in Headers */,
 				E4F36EA61171699800792A2D /* wcslen.hpp in Headers */,
+				E4ADE3A519874AEF0039FF7A /* hdGame.h in Headers */,
 				E4F36EA71171699800792A2D /* xml_archive_exception.hpp in Headers */,
 				E4F36EA81171699800792A2D /* xml_iarchive.hpp in Headers */,
 				E4F36EA91171699800792A2D /* xml_oarchive.hpp in Headers */,
@@ -2171,15 +2176,18 @@
 				E4F36EAB1171699800792A2D /* xml_woarchive.hpp in Headers */,
 				63FC26591184CEDC004BB47B /* hdThumbPad.h in Headers */,
 				E44B5A581986026B001F9862 /* factory.hpp in Headers */,
+				E4ADE3A819874AEF0039FF7A /* hdInput.h in Headers */,
+				E4ADE3A619874AEF0039FF7A /* hdGraphicsLibrary.h in Headers */,
 				63CA7786119678090010C802 /* config.hpp in Headers */,
+				E4ADE3A919874AEF0039FF7A /* hdInterface.h in Headers */,
 				E44B5A5A1986026B001F9862 /* force_include.hpp in Headers */,
 				63CA7787119678090010C802 /* cygwin_error.hpp in Headers */,
 				63CA7788119678090010C802 /* error_code.hpp in Headers */,
 				63CA7789119678090010C802 /* linux_error.hpp in Headers */,
-				E4ADE389198749D90039FF7A /* hdk.h in Headers */,
 				63CA778A119678090010C802 /* system_error.hpp in Headers */,
 				63CA7791119678090010C802 /* filesystem.hpp in Headers */,
 				63FBC6A711C81C1C00C2377F /* hdIBButton.h in Headers */,
+				E4ADE3AD19874AEF0039FF7A /* hdLibs.h in Headers */,
 				63FBC6A911C81C1C00C2377F /* hdIBImage.h in Headers */,
 				63FBC6AB11C81C1C00C2377F /* hdIBFontPolygon.h in Headers */,
 				63FBC6AD11C81C1C00C2377F /* hdIBContainer.h in Headers */,
