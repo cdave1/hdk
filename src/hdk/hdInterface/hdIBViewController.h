@@ -27,10 +27,10 @@
 #ifndef _HD_IB_VIEW_CONTROLLER_H_
 #define _HD_IB_VIEW_CONTROLLER_H_
 
-#include "hdIBProxy.h"
-#include "hdIBImage.h"
-#include "hdIBButton.h"
-#include "hdIBFontPolygon.h"
+#include <hdk/hdInterface/hdIBProxy.h>
+#include <hdk/hdInterface/hdIBImage.h>
+#include <hdk/hdInterface/hdIBButton.h>
+#include <hdk/hdInterface/hdIBFontPolygon.h>
 
 #include <boost/archive/text_iarchive.hpp>
 #include <boost/archive/text_oarchive.hpp>

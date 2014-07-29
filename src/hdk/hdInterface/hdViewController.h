@@ -20,9 +20,9 @@
 #ifndef _HD_VIEW_CONTROLLER_H_
 #define _HD_VIEW_CONTROLLER_H_
 
-#include "hdk.h"
-#include "hdInterface/hdIBViewController.h"
-#include "hdInterface/hdIBLoader.h"
+#include <hdk/hdk.h>
+#include <hdk/hdInterface/hdIBViewController.h>
+#include <hdk/hdInterface/hdIBLoader.h>
 
 class hdViewController : public hdUIContainer
 {

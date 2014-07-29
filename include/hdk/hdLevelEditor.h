@@ -20,7 +20,7 @@
 #ifndef HD_LEVEL_EDITOR_H
 #define HD_LEVEL_EDITOR_H
 
-//#include "hdLevelEditor/hdLevelEditorController.h"
-//#include "hdLevelEditor/hdLevelEditorUtilities.h"
+//#include <hdk/hdLevelEditor/hdLevelEditorController.h"
+//#include <hdk/hdLevelEditor/hdLevelEditorUtilities.h"
 
 #endif

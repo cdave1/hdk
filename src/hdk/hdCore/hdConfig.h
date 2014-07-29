@@ -23,7 +23,7 @@
 #include <sstream>
 #include <boost/regex.hpp>
 
-#include "hdFileSystem.h"
+#include <hdk/hdCore/hdFileSystem.h>
 
 #define CONFIG_PHYSICSITERATIONSCOUNT_KEY "PhysicsIterationsCount"
 #define CONFIG_FIXEDPHYSICSINTERVAL_KEY "FixedPhysicsInterval"

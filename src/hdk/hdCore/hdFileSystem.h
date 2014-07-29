@@ -20,7 +20,7 @@
 #ifndef _HD_FILESYSTEM_
 #define _HD_FILESYSTEM_
 
-#include "hdFileSystemSupport.h"
+#include <hdk/hdCore/hdFileSystemSupport.h>
 
 #define HD_FS_ABSOLUTE_PATH 0x0008
 

@@ -36,8 +36,8 @@
 #import <Foundation/Foundation.h>
 
 
-#include "hdFileSystem.h"
-#include "hdPakFileSystem.h"
+#include <hdk/hdCore/hdFileSystem.h>
+#include <hdk/hdCore/hdPakFileSystem.h>
 
 @interface hdIPhoneFileSystem : NSObject 
 {

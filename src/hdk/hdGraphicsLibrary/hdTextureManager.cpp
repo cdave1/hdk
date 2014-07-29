@@ -18,10 +18,12 @@
  */
 
 #include "hdTextureManager.h"
+
+#include <hdk/hdMath.h>
+#include <hdk/hdCore/hdConfig.h>
+
 #include "hdPNGLoader.h"
 #include "hdTGALoader.h"
-#include "hdMath.h"
-#include "hdCore/hdConfig.h"
 #ifdef WINDOWS
 #include "hdDDSLoader.h"
 #endif

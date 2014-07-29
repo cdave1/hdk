@@ -20,9 +20,9 @@
 #ifndef _HD_RECEIVER_H_
 #define _HD_RECEIVER_H_
 
-#include "hdGame.h"
-#include "hdGraphicsLibrary.h"
-#include "hdMath.h"
+#include <hdk/hdGame.h>
+#include <hdk/hdGraphicsLibrary.h>
+#include <hdk/hdMath.h>
 
 class hdReceiver : public hdPolygon, public hdDrawable
 {

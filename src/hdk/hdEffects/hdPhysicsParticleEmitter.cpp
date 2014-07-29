@@ -18,7 +18,7 @@
  */
 
 #include "hdPhysicsParticleEmitter.h"
-#include <hdCore/hdConfig.h>
+#include <hdk/hdCore/hdConfig.h>
 
 hdPhysicsParticle::hdPhysicsParticle(hdGameWorld *m_gameWorld) : hdPolygon(m_gameWorld)
 {

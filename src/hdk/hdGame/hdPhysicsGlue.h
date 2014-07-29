@@ -21,7 +21,7 @@
 #define _HD_PHYSICS_GLUE_H_
 
 #include "Box2D.h"
-#include "hdMath.h"
+#include <hdk/hdMath.h>
 
 extern void h2CirclePhysicsBody2(b2World* physicsWorld, b2Body** outBody,
                                  const hdVec3& position, float radius,

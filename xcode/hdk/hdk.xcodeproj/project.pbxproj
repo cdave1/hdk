@@ -359,8 +359,6 @@
 		E4ADE50E198752990039FF7A /* hdFontManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE436198752990039FF7A /* hdFontManager.h */; };
 		E4ADE50F198752990039FF7A /* hdFontPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4ADE437198752990039FF7A /* hdFontPolygon.cpp */; };
 		E4ADE510198752990039FF7A /* hdFontPolygon.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE438198752990039FF7A /* hdFontPolygon.h */; };
-		E4ADE511198752990039FF7A /* hdFTGLFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4ADE439198752990039FF7A /* hdFTGLFont.cpp */; };
-		E4ADE512198752990039FF7A /* hdFTGLFont.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE43A198752990039FF7A /* hdFTGLFont.h */; };
 		E4ADE513198752990039FF7A /* hdIBButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4ADE43B198752990039FF7A /* hdIBButton.cpp */; };
 		E4ADE514198752990039FF7A /* hdIBButton.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE43C198752990039FF7A /* hdIBButton.h */; };
 		E4ADE515198752990039FF7A /* hdIBContainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4ADE43D198752990039FF7A /* hdIBContainer.cpp */; };
@@ -395,10 +393,6 @@
 		E4ADE532198752990039FF7A /* hdUISegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE45A198752990039FF7A /* hdUISegmentedControl.h */; };
 		E4ADE533198752990039FF7A /* hdViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4ADE45B198752990039FF7A /* hdViewController.cpp */; };
 		E4ADE534198752990039FF7A /* hdViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE45C198752990039FF7A /* hdViewController.h */; };
-		E4ADE535198752990039FF7A /* hdLevelEditorController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4ADE45E198752990039FF7A /* hdLevelEditorController.cpp */; };
-		E4ADE536198752990039FF7A /* hdLevelEditorController.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE45F198752990039FF7A /* hdLevelEditorController.h */; };
-		E4ADE537198752990039FF7A /* hdLevelEditorUtilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4ADE460198752990039FF7A /* hdLevelEditorUtilities.cpp */; };
-		E4ADE538198752990039FF7A /* hdLevelEditorUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE461198752990039FF7A /* hdLevelEditorUtilities.h */; };
 		E4ADE539198752990039FF7A /* hdFixed.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE463198752990039FF7A /* hdFixed.h */; };
 		E4ADE53A198752990039FF7A /* hdGeometry.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE464198752990039FF7A /* hdGeometry.h */; };
 		E4ADE53B198752990039FF7A /* hdMathCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE465198752990039FF7A /* hdMathCommon.h */; };
@@ -879,8 +873,6 @@
 		E4ADE436198752990039FF7A /* hdFontManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdFontManager.h; sourceTree = "<group>"; };
 		E4ADE437198752990039FF7A /* hdFontPolygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdFontPolygon.cpp; sourceTree = "<group>"; };
 		E4ADE438198752990039FF7A /* hdFontPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdFontPolygon.h; sourceTree = "<group>"; };
-		E4ADE439198752990039FF7A /* hdFTGLFont.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdFTGLFont.cpp; sourceTree = "<group>"; };
-		E4ADE43A198752990039FF7A /* hdFTGLFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdFTGLFont.h; sourceTree = "<group>"; };
 		E4ADE43B198752990039FF7A /* hdIBButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdIBButton.cpp; sourceTree = "<group>"; };
 		E4ADE43C198752990039FF7A /* hdIBButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdIBButton.h; sourceTree = "<group>"; };
 		E4ADE43D198752990039FF7A /* hdIBContainer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdIBContainer.cpp; sourceTree = "<group>"; };
@@ -915,10 +907,6 @@
 		E4ADE45A198752990039FF7A /* hdUISegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdUISegmentedControl.h; sourceTree = "<group>"; };
 		E4ADE45B198752990039FF7A /* hdViewController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdViewController.cpp; sourceTree = "<group>"; };
 		E4ADE45C198752990039FF7A /* hdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdViewController.h; sourceTree = "<group>"; };
-		E4ADE45E198752990039FF7A /* hdLevelEditorController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdLevelEditorController.cpp; sourceTree = "<group>"; };
-		E4ADE45F198752990039FF7A /* hdLevelEditorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdLevelEditorController.h; sourceTree = "<group>"; };
-		E4ADE460198752990039FF7A /* hdLevelEditorUtilities.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdLevelEditorUtilities.cpp; sourceTree = "<group>"; };
-		E4ADE461198752990039FF7A /* hdLevelEditorUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdLevelEditorUtilities.h; sourceTree = "<group>"; };
 		E4ADE463198752990039FF7A /* hdFixed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdFixed.h; sourceTree = "<group>"; };
 		E4ADE464198752990039FF7A /* hdGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdGeometry.h; sourceTree = "<group>"; };
 		E4ADE465198752990039FF7A /* hdMathCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdMathCommon.h; sourceTree = "<group>"; };
@@ -1540,7 +1528,6 @@
 				E4ADE403198752980039FF7A /* hdGraphicsLibrary */,
 				E4ADE421198752980039FF7A /* hdInput */,
 				E4ADE42E198752990039FF7A /* hdInterface */,
-				E4ADE45D198752990039FF7A /* hdLevelEditor */,
 				E4ADE462198752990039FF7A /* hdMath */,
 				E4ADE473198752990039FF7A /* hdScripts */,
 				E4ADE476198752990039FF7A /* hdSound */,
@@ -1704,8 +1691,6 @@
 				E4ADE436198752990039FF7A /* hdFontManager.h */,
 				E4ADE437198752990039FF7A /* hdFontPolygon.cpp */,
 				E4ADE438198752990039FF7A /* hdFontPolygon.h */,
-				E4ADE439198752990039FF7A /* hdFTGLFont.cpp */,
-				E4ADE43A198752990039FF7A /* hdFTGLFont.h */,
 				E4ADE43B198752990039FF7A /* hdIBButton.cpp */,
 				E4ADE43C198752990039FF7A /* hdIBButton.h */,
 				E4ADE43D198752990039FF7A /* hdIBContainer.cpp */,
@@ -1742,17 +1727,6 @@
 				E4ADE45C198752990039FF7A /* hdViewController.h */,
 			);
 			path = hdInterface;
-			sourceTree = "<group>";
-		};
-		E4ADE45D198752990039FF7A /* hdLevelEditor */ = {
-			isa = PBXGroup;
-			children = (
-				E4ADE45E198752990039FF7A /* hdLevelEditorController.cpp */,
-				E4ADE45F198752990039FF7A /* hdLevelEditorController.h */,
-				E4ADE460198752990039FF7A /* hdLevelEditorUtilities.cpp */,
-				E4ADE461198752990039FF7A /* hdLevelEditorUtilities.h */,
-			);
-			path = hdLevelEditor;
 			sourceTree = "<group>";
 		};
 		E4ADE462198752990039FF7A /* hdMath */ = {
@@ -2003,7 +1977,6 @@
 				E44B5A981986026B001F9862 /* traits.hpp in Headers */,
 				E4ADE4DD198752990039FF7A /* hdPhysicsObject.h in Headers */,
 				E42837DC117005AB008E3594 /* b2Collision.h in Headers */,
-				E4ADE512198752990039FF7A /* hdFTGLFont.h in Headers */,
 				E4ADE4FF198752990039FF7A /* hdMultiTouchView.h in Headers */,
 				E42837DF117005AB008E3594 /* b2PairManager.h in Headers */,
 				E44B5A2A1986026B001F9862 /* access.hpp in Headers */,
@@ -2055,7 +2028,6 @@
 				E4283807117005AB008E3594 /* b2PolyAndCircleContact.h in Headers */,
 				E4ADE4F8198752990039FF7A /* hdTextureManager.h in Headers */,
 				E4ADE4CC198752990039FF7A /* hdTypes.h in Headers */,
-				E4ADE536198752990039FF7A /* hdLevelEditorController.h in Headers */,
 				E4ADE54A198752990039FF7A /* AppleOpenALSupport.h in Headers */,
 				E4283809117005AB008E3594 /* b2PolyAndEdgeContact.h in Headers */,
 				E428380B117005AB008E3594 /* b2PolyContact.h in Headers */,
@@ -2290,7 +2262,6 @@
 				E44B5B2C198602AC001F9862 /* local_free_on_destruction.hpp in Headers */,
 				E4ADE525198752990039FF7A /* hdInterfaceController.h in Headers */,
 				E44B5A601986026B001F9862 /* hash_map.hpp in Headers */,
-				E4ADE538198752990039FF7A /* hdLevelEditorUtilities.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2472,7 +2443,6 @@
 				E42837EB117005AB008E3594 /* b2Math.cpp in Sources */,
 				E4ADE4B3198752990039FF7A /* hdFileSystem.cpp in Sources */,
 				E4ADE4F2198752990039FF7A /* hdPolygon.cpp in Sources */,
-				E4ADE537198752990039FF7A /* hdLevelEditorUtilities.cpp in Sources */,
 				E44B5B0519860288001F9862 /* polymorphic_iarchive.cpp in Sources */,
 				E4ADE4E1198752990039FF7A /* hdDrawingUtilities.cpp in Sources */,
 				E42837ED117005AB008E3594 /* b2Settings.cpp in Sources */,
@@ -2526,7 +2496,6 @@
 				E4ADE52F198752990039FF7A /* hdUIImage.cpp in Sources */,
 				E4ADE549198752990039FF7A /* AppleOpenALSupport.c in Sources */,
 				E428381E117005AB008E3594 /* b2LineJoint.cpp in Sources */,
-				E4ADE511198752990039FF7A /* hdFTGLFont.cpp in Sources */,
 				E4ADE4A6198752990039FF7A /* hdVectorAction.cpp in Sources */,
 				E44B5AF319860288001F9862 /* basic_xml_archive.cpp in Sources */,
 				E4ADE4DA198752990039FF7A /* hdPhysicsGlue.cpp in Sources */,
@@ -2549,7 +2518,6 @@
 				E44B59D0198600E2001F9862 /* operations.cpp in Sources */,
 				E44B59D2198600E2001F9862 /* path.cpp in Sources */,
 				E44B5B2519860288001F9862 /* xml_woarchive.cpp in Sources */,
-				E4ADE535198752990039FF7A /* hdLevelEditorController.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

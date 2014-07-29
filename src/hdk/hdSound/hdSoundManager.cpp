@@ -19,6 +19,9 @@
 
 #include "hdSoundManager.h"
 
+#include <hdk/hdCore.h>
+#include <hdk/hdCollections.h>
+
 static hdSoundManager* m_SoundManagerInstance = NULL;
 
 static signed int m_status;

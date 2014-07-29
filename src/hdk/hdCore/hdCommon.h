@@ -31,7 +31,7 @@
 #include <math.h>
 #include <assert.h>
 
-#include "hdTypes.h"
+#include <hdk/hdCore/hdTypes.h>
 
 #define hdAssert(A) assert(A)
 #define kMaxStringSize 4096

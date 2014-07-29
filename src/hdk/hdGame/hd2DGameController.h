@@ -20,7 +20,7 @@
 #ifndef _HD_2D_GAME_CONTROLLER_
 #define _HD_2D_GAME_CONTROLLER_
 
-#include "hdMath.h"
+#include <hdk/hdMath.h>
 
 class hdGameWorld;
 

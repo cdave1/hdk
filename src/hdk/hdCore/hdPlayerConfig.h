@@ -24,7 +24,7 @@
 
 #include <boost/regex.hpp>
 
-#include "hdFileSystem.h"
+#include <hdk/hdCore/hdFileSystem.h>
 
 /*
  * Writeable config file class

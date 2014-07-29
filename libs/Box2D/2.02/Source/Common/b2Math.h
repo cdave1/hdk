@@ -20,7 +20,7 @@
 #define B2_MATH_H
 
 #include "b2Settings.h"
-#include "hdMath.h"
+#include <hdk/hdMath.h>
 
 #if (TARGET_OS_IPHONE == 1) && (TARGET_IPHONE_SIMULATOR == 0)
 #include <cmath>

@@ -190,29 +190,29 @@ void hdMesh::AddPointInternal(const float x, const float y, const float z)
 void hdMesh::DebugDraw()
 {
     glColor4f(1.0f, 0.0f, 1.0f, 1.0f);
-    glBegin(GL_LINE_STRIP);
+    hdglBegin(GL_LINE_STRIP);
     for (unsigned i = 0; i < this->GetVertexCount(); ++i)
     {
-        glVertex3f(this->GetVertices()[i].x,
+        hdglVertex3f(this->GetVertices()[i].x,
                    this->GetVertices()[i].y,
                    this->GetVertices()[i].z);
     }
-    glEnd();
+    hdglEnd();
 
     for (unsigned i = 0; i < m_polygons->GetItemCount(); ++i)
     {
         hdMeshPolygon *poly = m_polygons->GetItems()[i];
         glColor4f(0.0f, 0.0f, hdClamp((float)i/(float)m_polygons->GetItemCount(), 0.0f, 1.0f), 1.0f);
-        glBegin(poly->GetPolygonType());
+        hdglBegin(poly->GetPolygonType());
 
         for (unsigned j = 0; j < poly->GetVertexCount(); ++j)
         {
-            glVertex3f(poly->GetVertices()[j].x,
+            hdglVertex3f(poly->GetVertices()[j].x,
                        poly->GetVertices()[j].y,
                        poly->GetVertices()[j].z);
         }
         
-        glEnd();
+        hdglEnd();
     }
 }
 

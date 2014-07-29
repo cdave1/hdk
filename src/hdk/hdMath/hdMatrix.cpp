@@ -17,8 +17,8 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#include "hdMath/hdMatrix.h"
-#include "hdCore.h"
+#include <hdk/hdMath/hdMatrix.h>
+#include <hdk/hdCore.h>
 #ifdef __APPLE__
 #include <TargetConditionals.h>
 
@@ -29,9 +29,9 @@
 #warning "iPhone"
 #ifdef _ARM_ARCH_7
 #warning "neon"
-#include "hdMath/neon/neon_matrix_impl.h"
+#include <hdk/hdMath/neon/neon_matrix_impl.h>
 #else
-#include "hdMath/vfp/matrix_impl.h"
+#include <hdk/hdMath/vfp/matrix_impl.h>
 #endif
 
 #endif

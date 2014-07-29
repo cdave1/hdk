@@ -33,11 +33,7 @@
 #ifndef _HD_PARTICLE_EMITTER_H_
 #define _HD_PARTICLE_EMITTER_H_
 
-#include "hdMath.h"
-#include "hdGame.h"
-#include "hdAnimationEngine.h"
-#include "hdCollections.h"
-#include "hdGraphicsLibrary.h"
+#include <hdk/hdk.h>
 
 #define kMaxParticles 256
 

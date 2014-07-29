@@ -20,7 +20,7 @@
 #ifndef HD_IPHONE_OS_FUNCTIONS_H
 #define HD_IPHONE_OS_FUNCTIONS_H
 
-#include "hdOSFunctions.h"
+#include <hdk/hdOSFunctions.h>
 
 #import <Foundation/Foundation.h>
 

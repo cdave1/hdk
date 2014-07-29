@@ -20,7 +20,7 @@
 #ifndef _HD_IB_LOADER_H_
 #define _HD_IB_LOADER_H_
 
-#include "hdIBViewController.h"
+#include <hdk/hdInterface/hdIBViewController.h>
 
 #include <boost/archive/text_oarchive.hpp>
 #include <boost/archive/text_iarchive.hpp>
@@ -36,7 +36,7 @@
 #include <boost/serialization/version.hpp>
 #include <boost/serialization/split_member.hpp>
 
-#include "hdCore/hdCompression.h"
+#include <hdk/hdCore/hdCompression.h>
 
 #define HD_VIEWCONTROLLER_FILE_EXTENSION "hib"
 

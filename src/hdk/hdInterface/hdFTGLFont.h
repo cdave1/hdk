@@ -23,18 +23,18 @@
 #include "ftgles.h"
 
 #ifdef LEVEL_EDITOR
-#include "hdOpenGL.h"
+#include <hdk/hdOpenGL.h"
 #else
-#include "hdOpenGLES.h"
+#include <hdk/hdOpenGLES.h"
 #endif
 
-#include "hdCommon.h"
-#include "hdGameEngine.h"
+#include <hdk/hdCommon.h"
+#include <hdk/hdGameEngine.h"
 #include "constants.h"
-#include "hdPolygon.h"
-#include "hdTextureManager.h"
+#include <hdk/hdPolygon.h"
+#include <hdk/hdTextureManager.h"
 
-#include "hdDrawingUtilities.h"
+#include <hdk/hdDrawingUtilities.h"
 
 #define kMaxFontTextSize 512
 #define kMaxFontPathSize 512

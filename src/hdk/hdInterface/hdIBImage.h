@@ -20,7 +20,7 @@
 #ifndef _HD_IB_IMAGE_H_
 #define _HD_IB_IMAGE_H_
 
-#include "hdIBProxy.h"
+#include <hdk/hdInterface/hdIBProxy.h>
 
 class hdIBImage : public hdIBProxy
 {

@@ -20,12 +20,12 @@
 #ifndef _HD_INTERFACE_CONTROLLER_H_
 #define _HD_INTERFACE_CONTROLLER_H_
 
-#include "hdCore.h"
-#include "hdGraphicsLibrary.h"
-#include "hdAnimationEngine.h"
+#include <hdk/hdCore.h>
+#include <hdk/hdGraphicsLibrary.h>
+#include <hdk/hdAnimationEngine.h>
 
-#include "hdInterface/hdInterfaceEnums.h"
-#include "hdInterface/hdInterfaceContext.h"
+#include <hdk/hdInterface/hdInterfaceEnums.h>
+#include <hdk/hdInterface/hdInterfaceContext.h>
 
 class hdInterfaceController 
 {

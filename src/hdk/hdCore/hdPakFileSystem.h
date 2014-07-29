@@ -23,8 +23,8 @@
 #include <fstream>
 
 #include <boost/regex.hpp>
-#include "hdFileSystem.h"
-#include "hdCompression.h"
+#include <hdk/hdCore/hdFileSystem.h>
+#include <hdk/hdCore/hdCompression.h>
 
 #include <boost/archive/binary_oarchive.hpp>
 #include <boost/archive/binary_iarchive.hpp>

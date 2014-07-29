@@ -21,7 +21,7 @@
  3. This notice may not be removed or altered from any source distribution.
 */
 
-#include "hdMath/neon/neon_matrix_impl.h"
+#include "neon_matrix_impl.h"
 
 //#ifdef _ARM_ARCH_7
 #if defined(_ARM_ARCH_7) && defined(__ARM_NEON__)

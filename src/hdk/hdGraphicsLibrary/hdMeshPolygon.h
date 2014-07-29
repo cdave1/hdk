@@ -20,8 +20,8 @@
 #ifndef HD_MESH_POLYGON_H
 #define HD_MESH_POLYGON_H
 
-#include "hdMath.h"
-#include "hdPolygon.h"
+#include <hdk/hdMath.h>
+#include <hdk/hdGraphicsLibrary.h>
 
 class hdMeshPolygon : public hdPolygon
 {

@@ -20,7 +20,7 @@
 #ifndef _HD_IB_BUTTON_H_
 #define _HD_IB_BUTTON_H_
 
-#include "hdIBProxy.h"
+#include <hdk/hdInterface/hdIBProxy.h>
 
 class hdIBButton : public hdIBProxy
 {

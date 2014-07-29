@@ -20,7 +20,7 @@
 #ifndef _HD_IB_FONT_POLYGON_H_
 #define _HD_IB_FONT_POLYGON_H_
 
-#include "hdIBProxy.h"
+#include <hdk/hdInterface/hdIBProxy.h>
 
 class hdIBFontPolygon : public hdIBProxy
 {

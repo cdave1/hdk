@@ -25,7 +25,7 @@
 #include <string>
 #include <zlib.h>
 
-#include <hdCore/hdFileSystem.h>
+#include <hdk/hdCore/hdFileSystem.h>
 
 static hdIBLoader * m_ViewControllerManagerInstance = NULL;
 

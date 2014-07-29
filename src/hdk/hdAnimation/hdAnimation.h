@@ -20,8 +20,8 @@
 #ifndef HD_ANIMATION_H
 #define HD_ANIMATION_H
 
-#include <hdAnimation/hdAction.h>
-#include "hdCollections.h"
+#include <hdk/hdAnimation/hdAction.h>
+#include <hdk/hdCollections.h>
 
 class hdAnimationController;
 class hdGameObject;

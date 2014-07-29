@@ -20,7 +20,7 @@
 #ifndef _HD_ALPHA_ACTION_H_
 #define _HD_ALPHA_ACTION_H_
 
-#include <hdAnimation/hdAction.h>
+#include <hdk/hdAnimation/hdAction.h>
 
 class hdAlphaAction : public hdAction
 {

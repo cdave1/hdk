@@ -21,11 +21,7 @@
 #define _HD_PHYSICS_PARTICLE_EMITTER_
 
 #include "Box2D.h"
-#include "hdMath.h"
-#include "hdGame.h"
-#include "hdAnimationEngine.h"
-#include "hdCollections.h"
-#include "hdGraphicsLibrary.h"
+#include <hdk/hdk.h>
 
 #define kPhysicsParticleUserType 0xFF00
 

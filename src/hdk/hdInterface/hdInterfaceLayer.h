@@ -20,11 +20,7 @@
 #ifndef _HD_INTERFACE_LAYER_H_
 #define _HD_INTERFACE_LAYER_H_
 
-#include "hdGame.h"
-#include "hdGraphicsLibrary.h"
-#include "hdMath.h"
-#include "hdCollections.h"
-#include "hdInterface.h"
+#include <hdk/hdk.h>
 
 // Defines a flat space that contains interface items.
 //
