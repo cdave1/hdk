@@ -290,7 +290,7 @@ filehandle_t *FileSystem_OpenFile( const char *filename, unsigned int FlagsAndAt
 	hFile->filesize = s.st_size;
 #ifdef USE_MMAP	
 	hFile->filedata = mmap( NULL, hFile->filesize, PROT_READ, MAP_FILE|MAP_PRIVATE, fd, 0 );
-	if ( (int)hFile->filedata == -1 ) {
+	if ((uint64_t)hFile->filedata == -1) {
 		printf( "mmap failed: %s\n", strerror( errno ) );
 		assert( 0 );
 	}

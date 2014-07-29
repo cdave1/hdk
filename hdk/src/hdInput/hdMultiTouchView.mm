@@ -242,7 +242,7 @@ int GetTouchCount()
 {
 	int pos = -1;
 	int newPos = -1;
-	int touchPtr = (int)touch;
+	uint64_t touchPtr = (uint64_t)touch;
 	
 	CGPoint	 location = [touch locationInView:self];
 	CGPoint	 prevLocation = [touch previousLocationInView:self];
