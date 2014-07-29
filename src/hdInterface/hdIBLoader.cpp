@@ -18,7 +18,7 @@
  */
 
 #include "hdIBLoader.h"
-#include <hdk/hdCore/hdFileSystem.h>
+#include <hdCore/hdFileSystem.h>
 
 static hdIBLoader * m_ViewControllerManagerInstance = NULL;
 
