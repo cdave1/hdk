@@ -24,7 +24,7 @@
 #include "hdMath/neon/neon_matrix_impl.h"
 
 //#ifdef _ARM_ARCH_7
-#ifdef __ARM_NEON__
+#if defined(_ARM_ARCH_7) && defined(__ARM_NEON__)
 #warning "NEON Matrix functions are included." 
 
 // Note asm is taken from reader "Jeff" post Wolfgang's blog:
