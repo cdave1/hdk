@@ -17,28 +17,15 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef HD_PHYSICS_JOINT_H
-#define HD_PHYSICS_JOINT_H
+#include "hdPhysicsJoint.h"
 
-class b2World;
-class b2Joint;
+#include "Box2D.h"
 
-class hdPhysicsJoint
-{
-public:
-    hdPhysicsJoint();
+hdPhysicsJoint::hdPhysicsJoint() {
+    m_physicsEnabled = true;
+    m_joint = NULL;
+}
 
-    virtual void CreateJoint() = 0;
-
-    const b2Joint* GetPhysicsJoint() const;
-
-protected:
-    b2World* m_physicsWorld;
-
-    b2Joint* m_joint;
-
-    bool m_physicsEnabled;
-
-};
-
-#endif
+const b2Joint* hdPhysicsJoint::GetPhysicsJoint() const {
+    return m_joint;
+}

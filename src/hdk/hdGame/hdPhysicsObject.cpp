@@ -17,10 +17,35 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef HD_LEVEL_EDITOR_H
-#define HD_LEVEL_EDITOR_H
+#include "hdPhysicsObject.h"
 
-//#include <hdk/hdLevelEditor/hdLevelEditorController.h"
-//#include <hdk/hdLevelEditor/hdLevelEditorUtilities.h"
+#include "Box2D.h"
 
-#endif
+hdPhysicsObject::hdPhysicsObject() {
+    m_physicsEnabled = true;
+    m_physicsBody = NULL;
+}
+
+
+void hdPhysicsObject::DestroyPhysicsBody()
+{
+    if (m_physicsBody != NULL)
+    {
+        hdPrintf("Destroying physics body\n");
+        m_physicsWorld->DestroyBody(m_physicsBody);
+        m_physicsBody = NULL;
+    }
+}
+
+
+void hdPhysicsObject::ResetPhysicsBody()
+{
+    this->DestroyPhysicsBody();
+    this->CreatePhysicsBody();
+}
+
+
+const b2Body* hdPhysicsObject::GetPhysicsBody()
+{
+    return m_physicsBody;
+}

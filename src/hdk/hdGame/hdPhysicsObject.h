@@ -20,39 +20,23 @@
 #ifndef HD_PHYSICSOBJECT_H
 #define HD_PHYSICSOBJECT_H
 
-#include "Box2D.h"
-
 class b2World;
 class b2Body;
 
 class hdPhysicsObject
 {
 public:
-    hdPhysicsObject() { m_physicsEnabled = true; m_physicsBody = NULL; }
+    hdPhysicsObject();
 
-    void DestroyPhysicsBody()
-    {
-        if (m_physicsBody != NULL)
-        {
-            hdPrintf("Destroying physics body\n");
-            m_physicsWorld->DestroyBody(m_physicsBody);
-            m_physicsBody = NULL;
-        }
-    }
+    void DestroyPhysicsBody();
 
-    void ResetPhysicsBody()
-    {
-        this->DestroyPhysicsBody();
-        this->CreatePhysicsBody();
-    }
+    void ResetPhysicsBody();
 
-    const b2Body* GetPhysicsBody()
-    {
-        return m_physicsBody;
-    }
+    const b2Body* GetPhysicsBody();
     
     
 protected:
+
     b2World* m_physicsWorld;
     
     b2Body* m_physicsBody;
