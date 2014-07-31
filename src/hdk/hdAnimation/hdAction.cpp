@@ -101,7 +101,6 @@ const float hdAction::GetTimingFunctionElapsedProportion()
 }
 
 
-
 const hdTimeInterval hdAction::GetProgress()
 {
     return m_progress;

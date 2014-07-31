@@ -20,53 +20,51 @@
 #import <UIKit/UIKit.h>
 #import <GLKit/GLKit.h>
 
-@class hdGLView;
-
 const int kMultiTouchScreenValues = 10;
 
 typedef struct Touch
-{ 
-	float LocationXTouchBegan;    // x and y coordinates where the touch began
-	float LocationYTouchBegan;
-	
-	float LocationXTouchMovedPrevious;
-	float LocationYTouchMovedPrevious;
-	
-	float LocationXTouchMoved;	// x and y coordinates where the touch moved
-	float LocationYTouchMoved;
-	
-	float LocationXTouchEnded;
-	float LocationYTouchEnded;
-	
-	NSTimeInterval TimeStamp;
+{
+    float LocationXTouchBegan;    // x and y coordinates where the touch began
+    float LocationYTouchBegan;
 
-	int TouchID;
-	int TapCount;
-	
-	bool TouchDown;
-	bool TouchUp;
-	bool TouchMoved;
-} 
-TouchScreenValues; 
+    float LocationXTouchMovedPrevious;
+    float LocationYTouchMovedPrevious;
+
+    float LocationXTouchMoved; // x and y coordinates where the touch moved
+    float LocationYTouchMoved;
+
+    float LocationXTouchEnded;
+    float LocationYTouchEnded;
+
+    NSTimeInterval TimeStamp;
+
+    int TouchID;
+    int TapCount;
+
+    bool TouchDown;
+    bool TouchUp;
+    bool TouchMoved;
+}
+TouchScreenValues;
 
 
 @interface hdMultiTouchView : GLKView
 {
-	TouchScreenValues CPY_TouchScreenValues[kMultiTouchScreenValues];
-	
-	int CountTouchesBegan;
-	int CountTouchesMoved;
-	int TouchCount;
-	NSObject *renderLock;
-	NSObject *touchScreenLock;
+    TouchScreenValues CPY_TouchScreenValues[kMultiTouchScreenValues];
+
+    int CountTouchesBegan;
+    int CountTouchesMoved;
+    int TouchCount;
+    NSObject *renderLock;
+    NSObject *touchScreenLock;
 @private
-	UIEvent* lastTouchBeganEvent;
-	UIEvent* lastTouchMovedEvent;
-	UIEvent* lastTouchEndedEvent;
-	
-	TouchScreenValues MultiTouchScreen[kMultiTouchScreenValues];
-	
-	BOOL _logOutput;
+    UIEvent* lastTouchBeganEvent;
+    UIEvent* lastTouchMovedEvent;
+    UIEvent* lastTouchEndedEvent;
+
+    TouchScreenValues MultiTouchScreen[kMultiTouchScreenValues];
+
+    BOOL _logOutput;
 }
 
 @property (readwrite, assign) NSObject *renderLock;
