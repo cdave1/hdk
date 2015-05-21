@@ -24,24 +24,24 @@
 #import "hdOpenALPool.h"
 
 #if TARGET_OS_IPHONE == 1 || TARGET_IPHONE_SIMULATOR == 1
-	#define USE_CM_OPEN_AL_SOUND 1
-	#define USE_AVPLAYER_FOR_MUSIC 1
+#define USE_CM_OPEN_AL_SOUND 1
+#define USE_AVPLAYER_FOR_MUSIC 1
 #elif TARGET_OS_MAC == 1
-	#warning "Mac OSX sounds"
-	#define USE_CM_OPEN_AL_SOUND 1
-	#define USE_AVPLAYER_FOR_MUSIC 0
+#warning "Mac OSX sounds"
+#define USE_CM_OPEN_AL_SOUND 1
+#define USE_AVPLAYER_FOR_MUSIC 0
 #else
-	#warning "Sounds disabled in this build..."
-	#define NO_SOUNDS 0
+#warning "Sounds disabled in this build..."
+#define NO_SOUNDS 0
 #endif
 
 
 #if USE_CM_OPEN_AL_SOUND == 1
-	#import "CMOpenALSoundManager.h"
+#import "CMOpenALSoundManager.h"
 #endif
 
 #if USE_AVPLAYER_FOR_MUSIC == 1
-	#import "hdAVAudioWrapper.h"
+#import "hdAVAudioWrapper.h"
 #endif
 
 #if USE_OOLONG_SOUND_ENGINE == 1

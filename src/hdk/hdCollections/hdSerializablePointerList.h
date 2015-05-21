@@ -211,7 +211,7 @@ inline bool hdSerializablePointerList<T, Max>::Contains(const T* item) const
     bool b = false;
     while (i <= m_itemCount)
     {
-        if (item == m_list[i]) 
+        if (item == m_list[i])
         {
             b = true;
             break;

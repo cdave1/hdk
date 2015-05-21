@@ -93,15 +93,15 @@
     if (self.delegate) {
         [self.delegate performSelector:@selector(Update)];
     }
-/*
-    ++frames;
-	CurrentTime = CACurrentMediaTime();
+    /*
+     ++frames;
+     CurrentTime = CACurrentMediaTime();
 
-	if ((CurrentTime - LastFPSUpdate) > 1.0f) {
-        printf("fps: %d\n", frames);
-		frames = 0;
-		LastFPSUpdate = CurrentTime;
-	}*/
+     if ((CurrentTime - LastFPSUpdate) > 1.0f) {
+     printf("fps: %d\n", frames);
+     frames = 0;
+     LastFPSUpdate = CurrentTime;
+     }*/
 }
 
 

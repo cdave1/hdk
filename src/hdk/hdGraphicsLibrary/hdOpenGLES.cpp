@@ -389,25 +389,25 @@ inline GLenum MinFilterToGL( bool MipMap, TMinFilter MinFilter )
     {
         switch( MinFilter )
         {
-            case NearestMipMapOff: 
+            case NearestMipMapOff:
                 return GL_NEAREST;
-                
-            case NearestMipMapNearest: 
+
+            case NearestMipMapNearest:
                 return GL_NEAREST_MIPMAP_NEAREST;
-                
-            case NearestMipMapLinear: 
+
+            case NearestMipMapLinear:
                 return GL_NEAREST_MIPMAP_LINEAR;
-                
-            case LinearMipMapOff: 
+
+            case LinearMipMapOff:
                 return GL_LINEAR;
-                
-            case LinearMipMapNearest: 
+
+            case LinearMipMapNearest:
                 return GL_LINEAR_MIPMAP_NEAREST;
-                
-            case LinearMipMapLinear: 
+
+            case LinearMipMapLinear:
                 return GL_LINEAR_MIPMAP_LINEAR;
-                
-            default: 
+
+            default:
                 break;
         }
     }
@@ -419,17 +419,17 @@ inline GLenum MinFilterToGL( bool MipMap, TMinFilter MinFilter )
             case NearestMipMapNearest:
             case NearestMipMapLinear:
                 return GL_NEAREST;
-                
+
             case LinearMipMapOff:
             case LinearMipMapNearest:
             case LinearMipMapLinear:
                 return GL_LINEAR;
-                
-            default: 
+
+            default:
                 break;
         }
     }
-    
+
     return GL_LINEAR;
 }
 
@@ -439,7 +439,7 @@ bool hdglErrorCode(const char *userInfo)
     GLenum error = glGetError();
     bool ret = (error != GL_NO_ERROR);
 #ifdef DEBUG
-    switch (error) 
+    switch (error)
     {
         case GL_NO_ERROR:
             break;

@@ -97,6 +97,6 @@ void hdInterfaceLayer::HandleDoubleTouch(float x, float y)
 void hdInterfaceLayer::Draw() const
 {
     if (this->IsHidden()) return;
-    
+
     m_buttons->Map(&hdButton::Draw);
 }

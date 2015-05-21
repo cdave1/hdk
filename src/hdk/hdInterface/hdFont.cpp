@@ -21,6 +21,6 @@
 
 hdFont::hdFont()
 {
-	m_texture = NULL;
-	memset(fileChars, 0, sizeof(fileChars));
+    m_texture = NULL;
+    memset(fileChars, 0, sizeof(fileChars));
 }

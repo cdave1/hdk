@@ -44,25 +44,33 @@ void hdAction::AddToProgress(const hdTimeInterval elapsed)
 {
 #if 0
     m_progress += (this->GetTimingFunctionDelta(elapsed) * elapsed);
-    if (m_progress > m_duration) m_progress = m_duration;
+    if (m_progress > m_duration) {
+        m_progress = m_duration;
+    }
 #else
     m_progress += elapsed;
-    if (m_progress > m_duration) m_progress = m_duration;
+    if (m_progress > m_duration) {
+        m_progress = m_duration;
+    }
 #endif
 }
 
 
 void hdAction::FinishWithoutInterpolation()
 {
-    if (m_progress < m_duration) m_progress = m_duration;
+    if (m_progress < m_duration) {
+        m_progress = m_duration;
+    }
 }
 
 
 const hdTimeInterval hdAction::ClampElapsed(const hdTimeInterval elapsed)
 {
-    if (m_progress + elapsed > m_duration)
+    if (m_progress + elapsed > m_duration) {
         return (m_duration - m_progress);
-    else return elapsed;
+    } else {
+        return elapsed;
+    }
 }
 
 

@@ -94,24 +94,24 @@ class hdTexture
 {
 public:
     hdTexture() :
-        MipMap(false),
-        isTextureCube(false),
-        isPremultipliedAlpha(false),
-        UploadFormat(Auto),
-        WrapS(Repeat),
-        WrapT(Repeat),
-        WrapR(Repeat),
-        MinFilter(NearestMipMapOff),
-        MagFilter(Nearest),
-        registration_sequence(0),
-        width(0),
-        height(0),
-        upload_width(0),
-        upload_height(0),
-        texnum(0),
-        bytes(0),
-        bpp(32),
-        type(TT_Sprite)
+    MipMap(false),
+    isTextureCube(false),
+    isPremultipliedAlpha(false),
+    UploadFormat(Auto),
+    WrapS(Repeat),
+    WrapT(Repeat),
+    WrapR(Repeat),
+    MinFilter(NearestMipMapOff),
+    MagFilter(Nearest),
+    registration_sequence(0),
+    width(0),
+    height(0),
+    upload_width(0),
+    upload_height(0),
+    texnum(0),
+    bytes(0),
+    bpp(32),
+    type(TT_Sprite)
     {}
 
     bool		MipMap;

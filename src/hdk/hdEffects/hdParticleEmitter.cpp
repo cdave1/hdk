@@ -240,7 +240,7 @@ void hdParticleEmitter::Draw() const
             hdglVertex3f(particle.vertices[2].x, particle.vertices[2].y, particle.vertices[2].z);
             hdglTexCoord2f(1.0f, 1.0f);
             hdglVertex3f(particle.vertices[3].x, particle.vertices[3].y, particle.vertices[3].z);
-            
+
         }
         hdglEnd();
     }
@@ -249,7 +249,7 @@ void hdParticleEmitter::Draw() const
         hdglBindTexture(m_texture);
         hdglBegin(GL_POINTS);
         glPointSize(m_particlePointSize);
-        
+
         hdParticle particle;
         for (int i = 0; i < m_maxParticles; i++)
         {

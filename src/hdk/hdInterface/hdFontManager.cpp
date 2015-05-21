@@ -235,14 +235,14 @@ hdFont* hdFontManager::LoadFluidFontFile(const char *filename)
                     charIndex = (y * font->fileChars[i].byteWidth) + x;
                     hdAssert(texIndex >= 0 && texIndex < (texSquare * texSquare));
                     textureData[texIndex] = font->fileChars[i].buffer[charIndex];
-                }  
+                }
             }
-            
+
             texX += (padding + font->fileChars[i].screenWidth);
         }
-        
+
         // We created buffers for _all_ fluid font characters earlier.
-        // TODO: this is a potential source of bugs, so possibly move the 
+        // TODO: this is a potential source of bugs, so possibly move the
         // management of the buffers somewhere else (to the class, for instance).
         if (font->fileChars[i].pixelArea > 0)
         {
@@ -250,24 +250,24 @@ hdFont* hdFontManager::LoadFluidFontFile(const char *filename)
             font->fileChars[i].buffer = NULL;
         }
     }
-    
+
     // Use font manager to load the font info as ALPHA data.
     font->m_texture = hdTextureManager::Instance()->LoadTexture(font->name, textureData, texSquare, texSquare, TT_Font, 1);
-    
+
     delete [] textureData;
-    
+
     // HACK HACK HACK:
     // Space character does not appear to have either a width or height - just need a width.
     font->fileChars[(int)' '].screenWidth = maxHeight / 5;
     FileSystem_CloseFile(hFile);
     return font;
-    
+
 FONTFILELOADFAILED:
     if (font != NULL)
     {
         m_fonts->Remove(font);
     }
-    
+
     if (hFile)
     {
         FileSystem_CloseFile(hFile);

@@ -98,13 +98,13 @@ private:
     hdMeshPolygon *m_currentMeshPolygon;
 
     hdTypedefList<hdMeshPolygon *, HD_MESH_POLYGON_COUNT> * m_polygons;
-    
+
     hdTypedefList<hdVec3, MESH_TEMP_VERTEX_COUNT> * m_tempVertices;
-    
+
     float m_tempVertex[3];
     
     gluVector_t * m_gluVectors;
-
+    
 };
 
 #endif

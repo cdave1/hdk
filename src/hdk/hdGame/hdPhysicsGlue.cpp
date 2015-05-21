@@ -324,37 +324,37 @@ bool hdIsTriangleValid(b2PolygonDef &def)
     {
         _vertices[i] = def.vertices[i];
     }
-    
+
     for (int32 i = 0; i < _vertexCount; ++i)
     {
         int32 i1 = i;
         int32 i2 = i + 1 < _vertexCount ? i + 1 : 0;
         b2Vec2 edge = _vertices[i2] - _vertices[i1];
-        
+
         if (edge.LengthSquared() <= B2_FLT_EPSILON * B2_FLT_EPSILON) return false;
-        
+
         _normals[i] = b2Cross(edge, 1.0f);
         _normals[i].Normalize();
     }
-    
+
     // Compute the polygon centroid.
     if (!hdIsCentroidValid(_centroid, def)) return false;
-    
+
     // Create core polygon shape by shifting edges inward.
     // Also compute the min/max radius for CCD.
     for (int32 i = 0; i < _vertexCount; ++i)
     {
         int32 i1 = i - 1 >= 0 ? i - 1 : _vertexCount - 1;
         int32 i2 = i;
-        
+
         b2Vec2 n1 = _normals[i1];
         b2Vec2 n2 = _normals[i2];
         b2Vec2 v = _vertices[i] - _centroid;;
-        
+
         b2Vec2 d;
         d.x = b2Dot(n1, v) - b2_toiSlop;
         d.y = b2Dot(n2, v) - b2_toiSlop;
-        
+
         // Shifting the edge inward by b2_toiSlop should
         // not cause the plane to pass the centroid.
         if((d.x >= 0.0f) == false) return false;
@@ -381,25 +381,25 @@ bool hdIsCentroidValid(b2Vec2& c, b2PolygonDef &def)
 {
     if (def.vertexCount < 3) return false;
     float32 area = 0.0f;
-    
+
     // pRef is the reference point for forming triangles.
     // It's location doesn't change the result (except for rounding error).
     b2Vec2 pRef(0.0f, 0.0f);
-    
+
     const float32 inv3 = 1.0f / 3.0f;
-    
+
     for (int32 i = 0; i < def.vertexCount; ++i)
     {
         // Triangle vertices.
         b2Vec2 p1 = pRef;
         b2Vec2 p2 = def.vertices[i];
         b2Vec2 p3 = i + 1 < def.vertexCount ? def.vertices[i+1] : def.vertices[0];
-        
+
         b2Vec2 e1 = p2 - p1;
         b2Vec2 e2 = p3 - p1;
-        
+
         float32 D = b2Cross(e1, e2);
-        
+
         float32 triangleArea = 0.5f * D;
         area += triangleArea;
         

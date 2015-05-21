@@ -140,16 +140,16 @@ int hdCompression_Unzip(const char* inBuffer, const long inLen,
     zRes = uncompress(zDestBuffer, &zDestLen, zSourceBuffer, zSourceLen);
     if ( zRes != Z_OK)
     {
-        hdPrintf("Could not decompress data in the file - aborting...");		
+        hdPrintf("Could not decompress data in the file - aborting...");
         delete [] zDestBuffer;
         delete [] zSourceBuffer;
         return -1;
     }
-    
+
     (*outLen) = (long)zDestLen;
     (*outBuffer) = new char[(*outLen)];
     memcpy(*outBuffer, zDestBuffer, (long)((*outLen) * sizeof(char)));
-    
+
     delete [] zDestBuffer;
     delete [] zSourceBuffer;
     

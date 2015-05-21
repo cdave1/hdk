@@ -392,14 +392,14 @@ inline hdFloat hdAbs(hdFloat a)
 /*
  * from rgba demo group -- can't find exact source.
  */
-static unsigned int mirand = 1; 
-inline float sf_rand( void ) 
-{ 
-    unsigned int a; 
-    mirand *= 16807; 
-    a = (mirand&0x007fffff) | 0x40000000; 
-    return( *((float*)&a) - 3.0f ); 
-} 
+static unsigned int mirand = 1;
+inline float sf_rand( void )
+{
+    unsigned int a;
+    mirand *= 16807;
+    a = (mirand&0x007fffff) | 0x40000000;
+    return( *((float*)&a) - 3.0f );
+}
 
 
 inline float hRand()

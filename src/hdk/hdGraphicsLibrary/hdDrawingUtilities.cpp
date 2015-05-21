@@ -699,102 +699,102 @@ void DrawMultiTextureQuad(hdVec3* vertices, hdTexture *firstTexture, hdTexture *
     hdglTexCoord2f(0.0f, 2.0f);
     hdglColor4ub(255, 255, 255, 255);
     hdglVertex3f(vertices[1].x, vertices[1].y, vertices[1].z);
-    
+
     hdglTexCoord2f(2.0f, 2.0f);
     hdglColor4ub(255, 255, 255, 255);
     hdglVertex3f(vertices[2].x, vertices[2].y, vertices[2].z);
-    
+
     hdglTexCoord2f(2.0f, 0.0f);
     hdglColor4ub(255, 255, 255, 13);
     hdglVertex3f(vertices[3].x, vertices[3].y, vertices[3].z);
     hdglEnd();
-    
+
     glMatrixMode(GL_TEXTURE);
     glPopMatrix();
-    
+
 #else
-    
+
     const GLfloat squareTexCoords[] = {
         0.0f, 0.0,
         0.0f, 2.0,
         2.0f, 2.0,
         2.0f, 0.0
     };
-    
+
     hdglError("before DrawMultiTextureQuad");
-    
-    hdglBegin(GL_QUADS);	
+
+    hdglBegin(GL_QUADS);
     glDisableClientState(GL_COLOR_ARRAY);
-    
+
     glClientActiveTexture(GL_TEXTURE0); // first texture
     glEnableClientState(GL_TEXTURE_COORD_ARRAY);
     glTexCoordPointer(2, GL_FLOAT, 0, squareTexCoords);
-    
+
     glClientActiveTexture(GL_TEXTURE1); // second texture
     glEnableClientState(GL_TEXTURE_COORD_ARRAY);
     glTexCoordPointer(2, GL_FLOAT, 0, squareTexCoords);
-    
+
     // Enable 2D texturing for the first texture.
     glActiveTexture(GL_TEXTURE0);
     glEnable(GL_TEXTURE_2D);
-    
+
     // Enable 2D texturing for the second texture.
     glActiveTexture(GL_TEXTURE1);
     glEnable(GL_TEXTURE_2D);
-    
+
     // We are trying for the multi-textured lighting effect from the OpenGL
     // ES 2.0 book, page 223, Figure 10-3. The relevant shader equation is
     // basecolor * (lightcolor + 0.25), so we set the constant as a base colour
     glColor4f(0.25f, 0.25f, 0.25f, 0.75f);
-    
+
     // Set the light map has the current texture
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, firstTexture->texnum);
-    
+
     // add the light map to the constant 0.25
     glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_COMBINE);
     glTexEnvi(GL_TEXTURE_ENV, GL_COMBINE_RGB, GL_ADD);
     glTexEnvi(GL_TEXTURE_ENV, GL_SRC0_RGB, GL_TEXTURE);
     glTexEnvi(GL_TEXTURE_ENV, GL_SRC1_RGB, GL_PREVIOUS);
-    
+
     // Now set the background map (bricks) and modulate (multiply)
     glActiveTexture(GL_TEXTURE1);
     // we'll keep this code here as _texSelection will never be our lightmap
     glBindTexture(GL_TEXTURE_2D, secondTexture->texnum);
-    
+
     /* Set the texture environment mode for this texture to combine */
     glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_COMBINE);
-    
+
     /* Set the method we're going to combine the two textures by. */
     glTexEnvi(GL_TEXTURE_ENV, GL_COMBINE_RGB, GL_MODULATE);
-    
+
     /* Use the previous combine texture as source 0*/
     glTexEnvi(GL_TEXTURE_ENV, GL_SRC0_RGB, GL_PREVIOUS);
-    
+
     /* Use the current texture as source 1 */
     glTexEnvi(GL_TEXTURE_ENV, GL_SRC1_RGB, GL_TEXTURE);
-    
+
     /*
      Set what we will operate on, in this case we are going to use
      just the texture colours.
      */
     glTexEnvi(GL_TEXTURE_ENV, GL_OPERAND0_RGB, GL_SRC_COLOR);
     glTexEnvi(GL_TEXTURE_ENV, GL_OPERAND1_RGB, GL_SRC_COLOR);
-    
+
     glActiveTexture(GL_TEXTURE1);
     glMatrixMode(GL_TEXTURE);
     glPushMatrix();
     glTranslatef(t_trans, t_trans, 0.0f);
-    
+
     glActiveTexture(GL_TEXTURE0);
     glMatrixMode(GL_TEXTURE);
     glPushMatrix();
     glTranslatef(-t_trans, t_trans*3, 0.0f);
-    
+
     t_trans = t_trans+0.0005f;
-    
+
     if (t_trans >= 2.0f) t_trans = 0.0f;
-    
+
     glActiveTexture(GL_TEXTURE1);
     glEnableClientState(GL_COLOR_ARRAY);
     hdglColor4ub(255, 255, 255, 13);
@@ -806,11 +806,11 @@ void DrawMultiTextureQuad(hdVec3* vertices, hdTexture *firstTexture, hdTexture *
     hdglColor4ub(255, 255, 255, 13);
     hdglVertex3f(vertices[3].x, vertices[3].y, vertices[3].z);
     hdglEnd();
-    
+
     glActiveTexture(GL_TEXTURE0);
     glMatrixMode(GL_TEXTURE);
     glPopMatrix();
-    
+
     glActiveTexture(GL_TEXTURE1);
     glMatrixMode(GL_TEXTURE);
     glPopMatrix();

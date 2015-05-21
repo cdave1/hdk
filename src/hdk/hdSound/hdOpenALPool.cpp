@@ -252,21 +252,21 @@ int OpenALPool_Teardown()
     ASSERT_LOCKED;
 
     hdPrintf("Deleting OpenAL Source Pool\n");
-    
+
     // Delete owner sources
     for (int i = 0; i < kOwnerSourcePoolSize; ++i)
     {
         hdPrintf("Stopping owner sounds...\n");
         alSourceStop(m_ownerSources[i]);
     }
-    
+
     alDeleteSources(kOwnerSourcePoolSize, m_ownerSources);
-    
-    if((error = alGetError()) != AL_NO_ERROR) 
+
+    if((error = alGetError()) != AL_NO_ERROR)
     {
         hdPrintf("error tearing down source pool: %x\n", error);
     }
-    
+
     // Delete free sources
     for (int i = 0; i < kFreeSourcePoolSize; ++i)
     {
@@ -274,14 +274,14 @@ int OpenALPool_Teardown()
         alSourceStop(m_freeSources[i]);
     }
     alDeleteSources(kFreeSourcePoolSize, m_freeSources);
-    
-    if((error = alGetError()) != AL_NO_ERROR) 
+
+    if((error = alGetError()) != AL_NO_ERROR)
     {
         hdPrintf("error tearing down source pool: %x\n", error);
     }
-    
+
     hdPrintf("Deallocing OpenAL Buffer Pool\n");
-    
+
     alDeleteBuffers(kBufferPoolSize, m_bufferPool);
     
     m_isActive = false;

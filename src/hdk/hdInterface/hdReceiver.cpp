@@ -95,8 +95,8 @@ void hdReceiver::RotateAndTranslate(const hdVec3& rotVector, const hdVec3& trans
     {
         hdTranslateVertices(this->GetVertices(), this->GetVertexCount(), -m_obb.transform.translation);
         hdTranslateVertices(this->GetVertices(), this->GetVertexCount(), m_obb.transform.translation + (transVector - m_obb.transform.translation));
-        
-        m_obb.transform.translation.Set(transVector.x, transVector.y, transVector.z);		
+
+        m_obb.transform.translation.Set(transVector.x, transVector.y, transVector.z);
     }
     this->ResetAABB();
 }

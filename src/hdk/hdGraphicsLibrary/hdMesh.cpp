@@ -194,8 +194,8 @@ void hdMesh::DebugDraw()
     for (unsigned i = 0; i < this->GetVertexCount(); ++i)
     {
         hdglVertex3f(this->GetVertices()[i].x,
-                   this->GetVertices()[i].y,
-                   this->GetVertices()[i].z);
+                     this->GetVertices()[i].y,
+                     this->GetVertices()[i].z);
     }
     hdglEnd();
 
@@ -208,10 +208,10 @@ void hdMesh::DebugDraw()
         for (unsigned j = 0; j < poly->GetVertexCount(); ++j)
         {
             hdglVertex3f(poly->GetVertices()[j].x,
-                       poly->GetVertices()[j].y,
-                       poly->GetVertices()[j].z);
+                         poly->GetVertices()[j].y,
+                         poly->GetVertices()[j].z);
         }
-        
+
         hdglEnd();
     }
 }

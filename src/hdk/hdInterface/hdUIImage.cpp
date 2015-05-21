@@ -103,7 +103,7 @@ bool hdUIImage::MouseUp(float x, float y)
 void hdUIImage::Draw() const
 {
     if (this->IsHidden()) return;
-    DrawVerticesWithTint(((hdReceiver*)this)->GetVertices(), 
-                         ((hdReceiver*)this)->GetTextureCoordinates(), 
+    DrawVerticesWithTint(((hdReceiver*)this)->GetVertices(),
+                         ((hdReceiver*)this)->GetTextureCoordinates(),
                          4, m_aabb, m_texture, m_tint, m_alpha);
 }

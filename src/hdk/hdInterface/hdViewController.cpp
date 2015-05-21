@@ -22,20 +22,20 @@
 
 hdViewController::hdViewController(const char *hdIBViewControllerFilePath) : hdUIContainer(NULL)
 {
-	m_hdIBViewController = NULL;
-	if ((m_hdIBViewController = hdIBLoader::Instance()->LoadViewControllerFromTextPakFile(hdIBViewControllerFilePath)))
-	{
-		InitInterface();
-		InitSounds();
-		m_width = m_hdIBViewController->GetWidth();
-		m_height = m_hdIBViewController->GetHeight();
-		
-		this->SetAs2DBox(hdVec3(0,0,0), hdVec3(m_width, m_height, 0));
-	}
-	else 
-	{
-		hdError(0, "Could not load hdViewController at %s\n",hdIBViewControllerFilePath);
-	}
+    m_hdIBViewController = NULL;
+    if ((m_hdIBViewController = hdIBLoader::Instance()->LoadViewControllerFromTextPakFile(hdIBViewControllerFilePath)))
+    {
+        InitInterface();
+        InitSounds();
+        m_width = m_hdIBViewController->GetWidth();
+        m_height = m_hdIBViewController->GetHeight();
+
+        this->SetAs2DBox(hdVec3(0,0,0), hdVec3(m_width, m_height, 0));
+    }
+    else
+    {
+        hdError(0, "Could not load hdViewController at %s\n",hdIBViewControllerFilePath);
+    }
 }
 
 
@@ -46,71 +46,71 @@ hdViewController::~hdViewController()
 
 void hdViewController::SetCloseListener(void *obj, void (*func)(void *, void *))
 {
-	m_closePrefsCallbackObject = obj;
-	m_closePrefsCallback = func;
+    m_closePrefsCallbackObject = obj;
+    m_closePrefsCallback = func;
 }
 
 
 void hdViewController::DoClosePrefsCallback()
 {
-	if (m_closePrefsCallbackObject != NULL && m_closePrefsCallback != NULL)
-	{
-		(*m_closePrefsCallback)(m_closePrefsCallbackObject, this);
-	}
+    if (m_closePrefsCallbackObject != NULL && m_closePrefsCallback != NULL)
+    {
+        (*m_closePrefsCallback)(m_closePrefsCallbackObject, this);
+    }
 }
 
 
 void hdViewController::InitInterface()
 {
-	if (!m_hdIBViewController) return;
-	
-	((hdIBViewController *)m_hdIBViewController)->CreateInterfaceObjects();
-	for (unsigned i = 0; i < ((hdIBViewController *)m_hdIBViewController)->GetProxyList()->GetItemCount(); ++i)
-	{
-		hdIBProxy *proxy = ((hdIBViewController *)m_hdIBViewController)->GetProxyList()->GetItems()[i];
-		this->Add((hdReceiver *)(proxy->GetInterfaceElement()));
-	}
+    if (!m_hdIBViewController) return;
+
+    ((hdIBViewController *)m_hdIBViewController)->CreateInterfaceObjects();
+    for (unsigned i = 0; i < ((hdIBViewController *)m_hdIBViewController)->GetProxyList()->GetItemCount(); ++i)
+    {
+        hdIBProxy *proxy = ((hdIBViewController *)m_hdIBViewController)->GetProxyList()->GetItems()[i];
+        this->Add((hdReceiver *)(proxy->GetInterfaceElement()));
+    }
 }
 
 
 void hdViewController::SetMouseDownCallbackForTaggedItems(const char *tag, void *obj, void (*func)(void *, void *))
 {
-	for (unsigned i = 0; i < ((hdIBViewController *)m_hdIBViewController)->GetProxyList()->GetItemCount(); ++i)
-	{
-		hdIBProxy *proxy = ((hdIBViewController *)m_hdIBViewController)->GetProxyList()->GetItems()[i];
-		if (tag == NULL || strcmp(tag, proxy->GetTag()) == 0)
-		{
-			if (proxy->GetInterfaceBuilderProxyType() == hdInterfaceBuilderProxyTypeButton)
-				((hdButton *)(proxy->GetInterfaceElement()))->SetMouseDownListener(obj, func);
-		}
-	}
+    for (unsigned i = 0; i < ((hdIBViewController *)m_hdIBViewController)->GetProxyList()->GetItemCount(); ++i)
+    {
+        hdIBProxy *proxy = ((hdIBViewController *)m_hdIBViewController)->GetProxyList()->GetItems()[i];
+        if (tag == NULL || strcmp(tag, proxy->GetTag()) == 0)
+        {
+            if (proxy->GetInterfaceBuilderProxyType() == hdInterfaceBuilderProxyTypeButton)
+                ((hdButton *)(proxy->GetInterfaceElement()))->SetMouseDownListener(obj, func);
+        }
+    }
 }
 
 
 void hdViewController::SetMouseUpCallbackForTaggedItems(const char *tag, void *obj, void (*func)(void *, void *))
 {
-	for (unsigned i = 0; i < ((hdIBViewController *)m_hdIBViewController)->GetProxyList()->GetItemCount(); ++i)
-	{
-		hdIBProxy *proxy = ((hdIBViewController *)m_hdIBViewController)->GetProxyList()->GetItems()[i];
-		if (tag == NULL || strcmp(tag, proxy->GetTag()) == 0)
-		{
-			if (proxy->GetInterfaceBuilderProxyType() == hdInterfaceBuilderProxyTypeButton)
-				((hdButton *)(proxy->GetInterfaceElement()))->SetMouseUpListener(obj, func);
-		}
-	}
+    for (unsigned i = 0; i < ((hdIBViewController *)m_hdIBViewController)->GetProxyList()->GetItemCount(); ++i)
+    {
+        hdIBProxy *proxy = ((hdIBViewController *)m_hdIBViewController)->GetProxyList()->GetItems()[i];
+        if (tag == NULL || strcmp(tag, proxy->GetTag()) == 0)
+        {
+            if (proxy->GetInterfaceBuilderProxyType() == hdInterfaceBuilderProxyTypeButton)
+                ((hdButton *)(proxy->GetInterfaceElement()))->SetMouseUpListener(obj, func);
+        }
+    }
 }
 
 
 const hdReceiver * hdViewController::GetInterfaceItemWithTag(const char *tag)
 {
-	for (unsigned i = 0; i < ((hdIBViewController *)m_hdIBViewController)->GetProxyList()->GetItemCount(); ++i)
-	{
-		hdIBProxy *proxy = ((hdIBViewController *)m_hdIBViewController)->GetProxyList()->GetItems()[i];
-		if (tag && strcmp(tag, proxy->GetTag()) == 0)
-		{
-			return proxy->GetInterfaceElement();
-		}
-	}
+    for (unsigned i = 0; i < ((hdIBViewController *)m_hdIBViewController)->GetProxyList()->GetItemCount(); ++i)
+    {
+        hdIBProxy *proxy = ((hdIBViewController *)m_hdIBViewController)->GetProxyList()->GetItems()[i];
+        if (tag && strcmp(tag, proxy->GetTag()) == 0)
+        {
+            return proxy->GetInterfaceElement();
+        }
+    }
     return NULL;
 }
 
@@ -123,27 +123,27 @@ void hdViewController::RefreshLayout(const e_hdInterfaceOrientation &orientation
 
 void hdViewController::WillDraw() const
 {
-	glMatrixMode(GL_PROJECTION);
-	glPushMatrix();
-	
-	hdglOrthof(0.0f, m_width, 
-			   0.0f, m_height, 
-			   10.0f, -10.0f);
+    glMatrixMode(GL_PROJECTION);
+    glPushMatrix();
+
+    hdglOrthof(0.0f, m_width,
+               0.0f, m_height,
+               10.0f, -10.0f);
 }
 
 
 void hdViewController::Draw()
 {
-	this->WillDraw();
-	glEnable(GL_TEXTURE_2D);
-	((hdUIContainer *)this)->Draw();
-	glDisable(GL_TEXTURE_2D);
-	this->DidDraw();
+    this->WillDraw();
+    glEnable(GL_TEXTURE_2D);
+    ((hdUIContainer *)this)->Draw();
+    glDisable(GL_TEXTURE_2D);
+    this->DidDraw();
 }
 
 
 void hdViewController::DidDraw() const
 {
-	glMatrixMode(GL_PROJECTION);
-	glPopMatrix();
+    glMatrixMode(GL_PROJECTION);
+    glPopMatrix();
 }

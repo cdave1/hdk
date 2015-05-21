@@ -43,12 +43,12 @@ class hdAnimation;
 struct hdParticle
 {
     hdParticle() :
-        position(),
-        direction(),
-        rotationDirection(),
-        scaleDirection(1,1,1),
-        life(0.0),
-        color(1.0f,1.0f,1.0f,1.0f) {}
+    position(),
+    direction(),
+    rotationDirection(),
+    scaleDirection(1,1,1),
+    life(0.0),
+    color(1.0f,1.0f,1.0f,1.0f) {}
 
     hdVec3 position;
     hdVec3 direction;

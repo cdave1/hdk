@@ -543,11 +543,11 @@ hdTexture* hdTextureManager::LoadTexture(const char* name, unsigned char* data, 
             }
             else
             {
-                glTexParameterf(GL_TEXTURE_2D, GL_GENERATE_MIPMAP, GL_FALSE); 
+                glTexParameterf(GL_TEXTURE_2D, GL_GENERATE_MIPMAP, GL_FALSE);
             }
             glTexImage2D( GL_TEXTURE_2D, 0, internalFormat, scaled_width, scaled_height, 0, externalFormat, pixelDataType, scaled );
-        }	
-#endif	
+        }
+#endif
     }
     else
     {
@@ -559,58 +559,58 @@ hdTexture* hdTextureManager::LoadTexture(const char* name, unsigned char* data, 
         glTexImage2D( GL_TEXTURE_2D, 0, internalFormat, scaled_width, scaled_height, 0, externalFormat, pixelDataType, scaled );
         free( scaled );
     }
-    
+
     hdglError("glTexImage2D");
-    
+
 #if TARGET_GL_OPENGL == 1
     if (tex->MipMap)
     {
         glGenerateMipmapEXT(GL_TEXTURE_2D);
     }
-    
+
 #else
     if (tex->MipMap)
     {
         glGenerateMipmapOES(GL_TEXTURE_2D);
     }
-#endif	
-    
+#endif
+
     hdglError("glGenerateMipmapOES");
     hdPrintf("[hdTextureManager] Finished Loading texture: %s\n\n", tex->name);
     return tex;
 }
 
 
-int hdTextureManager::DownSizePixels(unsigned char*& dest, unsigned char *src, unsigned short srcBPP, 
-                                     unsigned short srcWidth, unsigned short srcHeight, 
-                                     unsigned short& destWidth, unsigned short& destHeight, 
+int hdTextureManager::DownSizePixels(unsigned char*& dest, unsigned char *src, unsigned short srcBPP,
+                                     unsigned short srcWidth, unsigned short srcHeight,
+                                     unsigned short& destWidth, unsigned short& destHeight,
                                      GLenum format)
 {
     unsigned col, row, byte;
     unsigned char *ppOdd, *ppEven;
     unsigned short pixelSum;
     size_t sz;
-    
+
     if (srcWidth <= 1 || srcHeight <= 1)
     {
         hdPrintf("hdTextureManager::DownSizePixels: Can't downsize any further.");
-        return -1;		
+        return -1;
     }
-    
+
     sz = sizeof(unsigned char);
-    
+
     destWidth = srcWidth >> 1;
     destHeight = srcHeight >> 1;
-    
+
     if (NULL == (dest = (unsigned char*)calloc(1, sz * srcBPP * destWidth * destHeight)))
     {
         hdPrintf("hdTextureManager::DownSizePixels OUT OF MEMORY.");
         return -1;
     }
-    
+
     ppOdd = src;
     ppEven = src + (sz * srcWidth * srcBPP);
-    
+
     row = 0;
     while(row++ < destHeight)
     {
@@ -618,7 +618,7 @@ int hdTextureManager::DownSizePixels(unsigned char*& dest, unsigned char *src, u
         while (col++ < destWidth)
         {
             byte = 0;
-            
+
             // Condense a 2x2 pixel square in source into a single pixel on dest. We need to do this
             // for each byte of the pixels, according to the number of bytes per pixel.
             //
@@ -627,13 +627,13 @@ int hdTextureManager::DownSizePixels(unsigned char*& dest, unsigned char *src, u
             while(byte++ < srcBPP)
             {
                 pixelSum = (
-                            *ppOdd + 
+                            *ppOdd +
                             *(ppOdd + (sz * srcBPP)) +
                             *ppEven +
                             *(ppEven + (sz * srcBPP))
                             );
                 *dest = (unsigned char)(pixelSum >> 2);
-                
+
                 dest++;
                 ppOdd++;
                 ppEven++;
@@ -644,9 +644,9 @@ int hdTextureManager::DownSizePixels(unsigned char*& dest, unsigned char *src, u
         ppOdd = ppOdd + (sz * srcWidth * srcBPP);
         ppEven = ppEven + (sz * srcWidth * srcBPP);
     }
-    
+
     dest -= (sz * srcBPP * destWidth * destHeight);
-    
+
     return 0;
 }
 
@@ -659,15 +659,15 @@ int hdTextureManager::DownSizePixels(unsigned char*& dest, unsigned char *src, u
  * Need to combine these bytes into a single short,
  * preserving the position of each color.
  */
-int hdTextureManager::DownSamplePixels(unsigned short *dest, unsigned char *src, 
-                                       unsigned short width, unsigned short height, 
+int hdTextureManager::DownSamplePixels(unsigned short *dest, unsigned char *src,
+                                       unsigned short width, unsigned short height,
                                        unsigned short srcBytes, GLenum destFormat)
 {
     int pixels, i, j;
-    
+
     pixels = (width * height);
     j = 0;
-    
+
     if (srcBytes == 4 && destFormat == GL_UNSIGNED_SHORT_4_4_4_4)
     {
         // Format: RRRRGGGGBBBBAAAA

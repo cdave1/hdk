@@ -100,14 +100,14 @@ extern "C" {
     extern void AddVerticesForTQ(GLenum prim, hdVec3* vertices, hdVec2* textureCoordinates,
                                  const int vertexCount, hdTexture* texture, const float* colorTint,
                                  const float alpha);
-    
+
     extern void DrawMultiTextureQuad(hdVec3* vertices, hdTexture *firstTexture,
                                      hdTexture *secondTexture, float alpha);
-    
-    extern void StartTextureEffect(uint8 effect);
-    
-    extern void StopTextureEffect(uint8 effect);
 
+    extern void StartTextureEffect(uint8 effect);
+
+    extern void StopTextureEffect(uint8 effect);
+    
 #ifdef __cplusplus
 }
 #endif

@@ -24,7 +24,7 @@
 void hdPrintf(const char *fmt, ...)
 {
 #ifdef DEBUG
-    va_list		argptr;
+    va_list	argptr;
     static char	msg[kMaxStringSize];
 
     va_start(argptr, fmt);

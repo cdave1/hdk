@@ -34,7 +34,7 @@
 class hdConfig
 {
 public:
-    
+
     static void LoadConfigFile(const char *worldName);
 
     static void LoadNullConfig();
@@ -42,7 +42,7 @@ public:
     static std::string GetValueForKey(const char *key);
 
     static bool ConfigWasInitialized();
-
+    
 };
 
 #endif

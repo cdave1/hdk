@@ -56,9 +56,9 @@ extern "C" {
      * Returns 0 on success, -1 on fail.
      */
     extern int FileSystem_ReadFromFile(void** dest, int* len, const char* fileName);
-    
-    extern void FileSystem_Teardown();
 
+    extern void FileSystem_Teardown();
+    
 #ifdef __cplusplus
 }
 #endif

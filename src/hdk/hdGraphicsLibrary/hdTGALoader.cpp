@@ -445,60 +445,60 @@ void LoadTGA( const char *filename, unsigned char **pic, unsigned short *width, 
                 goto TGALOADFAILED;
             }
             break;
-            
+
         case TGA_TYPE_GRAY:
             if( targa_header.bpp != 8 && (targa_header.alphaBits != 8 || (targa_header.bpp != 16 && targa_header.bpp != 15 )))
             {
                 hdPrintf( "Unhandled sub-format in (%s)\n", filename );
                 goto TGALOADFAILED;
             }
-            
-            
+
+
             goto TGALOADFAILED;
-            
-            
+
+
             break;
-            
+
         default:
             hdPrintf( "Unknown image type for (%s)\n", filename );
             goto TGALOADFAILED;
-            
+
     } /* end of switch targa_header.imageType */
-    
+
     /* Plausible but unhandled formats */
     if( targa_header.bytes * 8 != targa_header.bpp && ! (targa_header.bytes == 2 && targa_header.bpp == 15) )
     {
         hdPrintf( "No support yet for TGA with these parameters\n" );
-        
+
         goto TGALOADFAILED;
     }
-    
+
     /* Check that we have a color map only when we need it. */
     if( targa_header.imageType == TGA_TYPE_MAPPED && targa_header.colorMapType != 1 )
     {
         hdPrintf( "Indexed image has invalid color map type %d\n",
                  targa_header.colorMapType );
-        
+
         goto TGALOADFAILED;
     }
     else if( targa_header.imageType != TGA_TYPE_MAPPED && targa_header.colorMapType != 0 )
     {
         hdPrintf( "Non-indexed image has invalid color map type %d\n",
                  targa_header.colorMapType );
-        
+
         goto TGALOADFAILED;
     }
-    
+
     /* Skip the image ID field. */
     if( targa_header.idLength && FileSystem_FileSeek( hFile, targa_header.idLength, SEEK_CUR ) )
     {
         hdPrintf( "File (%s) is truncated or corrupted\n", filename );
-        
+
         goto TGALOADFAILED;
     }
-    
-    
-    
+
+
+
     /* Handle colormap */
     if( targa_header.colorMapType == 1 )
     {
@@ -518,31 +518,31 @@ void LoadTGA( const char *filename, unsigned char **pic, unsigned short *width, 
             {
                 upsample( gimp_cmap, tga_cmap, targa_header.colorMapLength, cmap_bytes, targa_header.alphaBits);
             }
-            
+
         }
         else
         {
             hdPrintf( "File (%s) is truncated or corrupted\n", filename );
-            
+
             goto TGALOADFAILED;
         }
     }
-    
-    
+
+
     /* Allocate the data. */
     data = (unsigned char *) calloc(1, targa_header.width * targa_header.height * targa_header.bytes );
     if( data == NULL )
     {
         //MM_OUTOFMEM( "data" );
     }
-    
+
     buffer = (unsigned char *) calloc(1, targa_header.width * targa_header.bytes );
     if( buffer == NULL )
     {
         free( data );
         //MM_OUTOFMEM( "buffer" );
     }
-    
+
     if( targa_header.flipVert )
     {
         for( i = targa_header.height-1 ; i >= 0 ; --i )

@@ -110,13 +110,13 @@ extern "C" {
                                            float w, float h);
 
     extern void hdglDeleteTextureFrameBuffer(const GLuint fbo);
-    
-    extern GLenum WrapToGL( TWrapMode mode );
-    
-    extern GLenum MagFilterToGL( TMagFilter MagFilter );
-    
-    extern GLenum MinFilterToGL( bool MipMap, TMinFilter MinFilter );	
 
+    extern GLenum WrapToGL( TWrapMode mode );
+
+    extern GLenum MagFilterToGL( TMagFilter MagFilter );
+
+    extern GLenum MinFilterToGL( bool MipMap, TMinFilter MinFilter );
+    
 #ifdef __cplusplus
 }
 #endif

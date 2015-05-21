@@ -475,57 +475,57 @@ void hdFontPolygon::Draw() const
     unsigned i;
     glyph_t g;
     hdVec3 worldCenter;
-    
+
     if (m_glyphs == NULL) return;
     if (this->IsHidden()) return;
     if (m_font == NULL) return;
     if (m_font->m_texture == NULL) return;
-    
+
     glEnable(GL_TEXTURE_2D);
     hdglBindTexture(m_font->m_texture);
-    
+
     glMatrixMode(GL_MODELVIEW);
     glPushMatrix();
-    
+
     worldCenter = ((hdFontPolygon *)this)->GetWorldCenter();
-    
+
     if (m_canRotate)
     {
-        glTranslatef(worldCenter.x, 
-                     worldCenter.y, 
+        glTranslatef(worldCenter.x,
+                     worldCenter.y,
                      0.0f);
-        
-        glRotatef(m_obb.transform.rotation.z * (180.0f/hd_pi), 
+
+        glRotatef(m_obb.transform.rotation.z * (180.0f/hd_pi),
                   0.0f, 0.0f, 1.0f);
-        
-        glTranslatef(-worldCenter.x, 
-                     -worldCenter.y, 
+
+        glTranslatef(-worldCenter.x,
+                     -worldCenter.y,
                      0.0f);
     }
-    
-    glTranslatef(worldCenter.x, 
-                 worldCenter.y, 
+
+    glTranslatef(worldCenter.x,
+                 worldCenter.y,
                  0.0f);
-    
+
     hdglBegin(GL_QUADS);
-    hdglColor4ub(m_ubTint.r, m_ubTint.g, m_ubTint.b, 
+    hdglColor4ub(m_ubTint.r, m_ubTint.g, m_ubTint.b,
                  hdClamp(m_ubTint.a, (uint8)0, (uint8)(255 * m_alpha)));
-    
+
     for (i = 0; i < m_glyphs->GetItemCount(); ++i)
     {
         g = m_glyphs->GetItems()[i];
-        
+
         RenderGlyph(*(g.glyph), g.pos.x, g.pos.y, g.w, g.h);
     }
-    
+
     hdglEnd();
-    
+
 #ifdef DEBUG_FONTS
     /*
      * Draw a bounding box around the font aabb.
      */
     hdglBindTexture(NULL);
-    
+
     hdglBegin(GL_QUADS);
     hdglColor4f(0.0f, 0.0f, 0.0f, 0.5f);
     hdglVertex2f(m_aabb.lower.x, m_aabb.lower.y);
@@ -534,47 +534,47 @@ void hdFontPolygon::Draw() const
     hdglVertex2f(m_aabb.upper.x, m_aabb.lower.y);
     hdglEnd();
 #endif
-    
+
     glPopMatrix();
 }
 
 
-void hdFontPolygon::RenderGlyph(const FluidFontCharHeader& charHeader, 
+void hdFontPolygon::RenderGlyph(const FluidFontCharHeader& charHeader,
                                 const float xPos, const float yPos,
                                 const float w, const float h) const
 {
-    hdglColor4ub(m_ubTint.r, m_ubTint.g, m_ubTint.b, 
+    hdglColor4ub(m_ubTint.r, m_ubTint.g, m_ubTint.b,
                  hdClamp(m_ubTint.a, (uint8)0, (uint8)(255 * m_alpha)));
-    
+
     hdglTexCoord2f(charHeader.texCoords[0].x, charHeader.texCoords[0].y);
     hdglVertex2f(xPos, yPos - h);
-    
+
     hdglTexCoord2f(charHeader.texCoords[1].x, charHeader.texCoords[1].y);
     hdglVertex2f(xPos, yPos);
-    
+
     hdglTexCoord2f(charHeader.texCoords[3].x, charHeader.texCoords[3].y);
     hdglVertex2f(xPos + w, yPos);
-    
+
     hdglTexCoord2f(charHeader.texCoords[2].x, charHeader.texCoords[2].y);
     hdglVertex2f(xPos + w, yPos - h);
-    
+
 #ifdef DEBUG_FONTS
     hdglEnd();
-    
-    hdPrintf("\t%c: x offset: %d, y offset: %d w: %d h: %d\n", m_text[i], 
-             charHeader.xOffset, charHeader.yOffset, 
+
+    hdPrintf("\t%c: x offset: %d, y offset: %d w: %d h: %d\n", m_text[i],
+             charHeader.xOffset, charHeader.yOffset,
              charHeader.byteWidth, charHeader.byteHeight);
-    hdPrintf("\t%c: y bottom: %f, y top: %f\n", m_text[i], 
-             (m_aabb.upper.y - (charHeader.byteHeight + charHeader.yOffset)), 
-             (m_aabb.upper.y - (charHeader.byteHeight + charHeader.yOffset)) + 
+    hdPrintf("\t%c: y bottom: %f, y top: %f\n", m_text[i],
+             (m_aabb.upper.y - (charHeader.byteHeight + charHeader.yOffset)),
+             (m_aabb.upper.y - (charHeader.byteHeight + charHeader.yOffset)) +
              charHeader.byteHeight);
-    
+
     int currentTexNum;
     glGetIntegerv(GL_TEXTURE_BINDING_2D, &currentTexNum);
     glBindTexture(GL_TEXTURE_2D, 0);
-    
+
     hdglBegin(GL_QUADS);
-    
+
     hdglColor4f(0.0f, 0.0f, 0.0f, 0.5f);
     hdglVertex2f(xPos, yPos - (charHeader.screenHeight * m_scale));
     
@@ -589,6 +589,6 @@ void hdFontPolygon::RenderGlyph(const FluidFontCharHeader& charHeader,
     glBindTexture(GL_TEXTURE_2D, currentTexNum);
     
     hdglBegin(GL_QUADS);
-
+    
 #endif
 }

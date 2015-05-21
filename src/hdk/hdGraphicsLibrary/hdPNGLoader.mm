@@ -294,31 +294,31 @@ void LoadPNG( const char *filename, unsigned char **pic, unsigned short *width, 
     if (NULL == (raw = (png_byte *)calloc(1, sizeof(png_byte) * len)))
     {
         png_destroy_read_struct(&png_ptr, &png_info_ptr, NULL);
-        goto PNGLOADFAILED;	
+        goto PNGLOADFAILED;
     }
-    
+
     FileSystem_ReadFile(raw, len, 1, pngFile);
-    
+
     png_set_progressive_read_fn(png_ptr, NULL,
                                 info_callback, row_callback, end_callback);
-    
+
     png_process_data(png_ptr, png_info_ptr, (png_bytep)raw, len);
-    
+
     /*
      * READ IMAGE DATA
      */
     h = png_info_ptr->height;
     w = png_info_ptr->width;
     channels = png_info_ptr->channels;
-    
+
     if (NULL == (buffer = (unsigned char *)calloc(1, h * png_info_ptr->rowbytes)))
     {
         hdPrintf("[PNGLoader]: MALLOC FAIL loading file %s\n", filename);
         goto PNGLOADFAILED;
-    } 
-    
+    }
+
     hdAssert(row_pointers != NULL);
-    
+
     // Copy and clean the row pointers to local buffer.
     for (i = 0; i < h; ++i)
     {
@@ -328,22 +328,22 @@ void LoadPNG( const char *filename, unsigned char **pic, unsigned short *width, 
     free(row_pointers);
     free(raw);
     row_pointers = NULL;
-    
+
     /*
      * CLEAN UP
      */
     png_destroy_read_struct(&png_ptr, &png_info_ptr, NULL);
-    
+
     FileSystem_CloseFile(pngFile);
-    
+
     *pic = buffer;
     *width = w;
     *height = h;
     *bytes = channels;
-    
-    return;	
-    
-    
+
+    return;
+
+
 PNGLOADFAILED:
     if (raw != NULL)
         free(raw);

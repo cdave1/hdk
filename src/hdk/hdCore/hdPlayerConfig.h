@@ -36,9 +36,9 @@ public:
     static bool SetValue(const char *key, const char *value);
 
     static bool SaveConfigFile();
-    
-    static bool LoadConfigFile();
 
+    static bool LoadConfigFile();
+    
 };
 
 #endif

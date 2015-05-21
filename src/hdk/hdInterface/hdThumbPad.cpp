@@ -179,8 +179,8 @@ void hdThumbPad::MoveThumbPadTo(float x, float y)
     {
         tmp.Set(x, y, 0);
     }
-    
-    m_pad->SetAs2DBox(tmp.x - m_radius/3.0f, tmp.y - m_radius/3.0f, 
+
+    m_pad->SetAs2DBox(tmp.x - m_radius/3.0f, tmp.y - m_radius/3.0f,
                       (m_radius/1.5f), (m_radius/1.5f));
 }
 
@@ -199,7 +199,7 @@ void hdThumbPad::Draw() const
 void hdThumbPad::DrawImpl()
 {
     if (IsHidden()) return;
-    
+
     if (isEnabled())
     {
         if (m_bgTexture)
@@ -211,11 +211,11 @@ void hdThumbPad::DrawImpl()
     else
     {
         float tint[4] = { 1.0f, 1.0f, 1.0f, 1.0f };
-        DrawVerticesWithTint(GetVertices(), 
-                             GetTextureCoordinates(), 
-                             GetVertexCount(), 
-                             m_aabb, 
-                             m_bgTexture, 
+        DrawVerticesWithTint(GetVertices(),
+                             GetTextureCoordinates(),
+                             GetVertexCount(),
+                             m_aabb,
+                             m_bgTexture,
                              tint, 0.4f);
     }
 }

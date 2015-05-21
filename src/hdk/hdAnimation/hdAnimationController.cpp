@@ -271,13 +271,13 @@ void hdAnimationController::AddAnimationStep(const hdAnimation* animation, int* 
 {
     if (animation == NULL) return;
     if (animation->GetStatus() == e_animationFinished || animation->GetStatus() == e_animationStopped) return;
-    
+
     *stepId = m_pipelineCount;
-    
+
 #ifdef ANIMATION_DEBUG
     hdPrintf("\t\t[+] Added anim step at %d with id of %d\n", animation, *stepId);
 #endif
-    
+
     m_pipeline[m_pipelineCount] = (hdAnimation *)animation;
     ++m_pipelineCount;
 }
@@ -289,11 +289,11 @@ bool hdAnimationController::DeleteAnimationStep(const hdAnimation* animation, co
     if (m_pipeline[stepId] == NULL) return false;
     if (animation->GetStatus() == e_animationFinished || animation->GetStatus() == e_animationStopped) return false;
     if (m_pipeline[stepId] != animation) return false;
-    
+
 #ifdef ANIMATION_DEBUG
     hdPrintf("\t\t[-] Delete anim step at %d with id of %d\n", animation, stepId);
 #endif
-    
+
     m_pipeline[stepId] = NULL;
     return true;
 }

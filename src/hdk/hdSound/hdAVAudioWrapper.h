@@ -17,9 +17,9 @@
 
 @interface hdAVAudioWrapper : NSObject <AVAudioPlayerDelegate>
 {
-	//@property (nonatomic, assign)	AVAudioPlayer	*player;
-@private	
-	NSMutableDictionary *players;
+    //@property (nonatomic, assign)	AVAudioPlayer	*player;
+@private
+    NSMutableDictionary *players;
 
 }
 - (id)init;

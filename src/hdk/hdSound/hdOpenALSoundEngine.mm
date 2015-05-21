@@ -28,93 +28,93 @@ static hdAVAudioWrapper* avAudioWrapper = nil;
 #endif
 
 void SoundEngine_Init()
-{	
-	static	alcMacOSXMixerOutputRateProcPtr	proc = NULL;
-    
+{
+    static	alcMacOSXMixerOutputRateProcPtr	proc = NULL;
+
     if (proc == NULL) {
         proc = (alcMacOSXMixerOutputRateProcPtr) alcGetProcAddress(NULL, (const ALCchar*) "alcMacOSXMixerOutputRate");
     }
-    
+
     if (proc) {
         proc(22050);
     }
-	
-	if (sharedCMOpenALSoundManager == nil)
-	{
-		sharedCMOpenALSoundManager = [[CMOpenALSoundManager alloc] init];
-	}
 
-	if (kOpenALPoolError == OpenALPool_Init())
-	{
-		NSLog(@"SoundEngine_Init Failed: Could not initialize OpenAL Sources pool. Bailing out...\n");
-		assert(false);
-	}
-	
+    if (sharedCMOpenALSoundManager == nil)
+    {
+        sharedCMOpenALSoundManager = [[CMOpenALSoundManager alloc] init];
+    }
+
+    if (kOpenALPoolError == OpenALPool_Init())
+    {
+        NSLog(@"SoundEngine_Init Failed: Could not initialize OpenAL Sources pool. Bailing out...\n");
+        assert(false);
+    }
+
 #if USE_AVPLAYER_FOR_MUSIC == 1
-	UInt32	propertySize, audioIsAlreadyPlaying = 0;
-	
+    UInt32	propertySize, audioIsAlreadyPlaying = 0;
+
 #if TARGET_OS_IPHONE == 1 || TARGET_IPHONE_SIMULATOR == 1
-	// do not open the track if the audio hardware is already in use (could be the iPod app playing music)
-	propertySize = sizeof(UInt32);
-	AudioSessionGetProperty(kAudioSessionProperty_OtherAudioIsPlaying, &propertySize, &audioIsAlreadyPlaying);
+    // do not open the track if the audio hardware is already in use (could be the iPod app playing music)
+    propertySize = sizeof(UInt32);
+    AudioSessionGetProperty(kAudioSessionProperty_OtherAudioIsPlaying, &propertySize, &audioIsAlreadyPlaying);
 #endif
-	if (audioIsAlreadyPlaying != 0)
-	{
-		AudioSessionSetActive(YES);
-	}
-	else if (avAudioWrapper == nil)
-	{
-		avAudioWrapper = [[hdAVAudioWrapper alloc] init];
-	}
+    if (audioIsAlreadyPlaying != 0)
+    {
+        AudioSessionSetActive(YES);
+    }
+    else if (avAudioWrapper == nil)
+    {
+        avAudioWrapper = [[hdAVAudioWrapper alloc] init];
+    }
 #endif
 }
 
 
 int SoundEngine_LoadEffect(hdSound* sound, const bool loops)
 {
-	assert(sharedCMOpenALSoundManager != nil);
-	[sharedCMOpenALSoundManager 
-		 loadSound:[NSString stringWithCString:sound->fullFilePath encoding:NSASCIIStringEncoding] 
-		 doesLoop:loops 
-		 withVolume:sound->volume 
-		 withPitch:sound->pitchOffset];
-	return 0;
+    assert(sharedCMOpenALSoundManager != nil);
+    [sharedCMOpenALSoundManager
+     loadSound:[NSString stringWithCString:sound->fullFilePath encoding:NSASCIIStringEncoding]
+     doesLoop:loops
+     withVolume:sound->volume
+     withPitch:sound->pitchOffset];
+    return 0;
 }
 
 
 int SoundEngine_PlayEffect(const hdSound* sound)
 {
-	assert(sharedCMOpenALSoundManager != nil);
-	[sharedCMOpenALSoundManager playSoundWithVolumePitch:
-	 [NSString stringWithCString:sound->fullFilePath encoding:NSASCIIStringEncoding] 
-											withVolume:sound->volume 
-											withPitch:sound->pitchOffset];
-	return 0;
+    assert(sharedCMOpenALSoundManager != nil);
+    [sharedCMOpenALSoundManager playSoundWithVolumePitch:
+     [NSString stringWithCString:sound->fullFilePath encoding:NSASCIIStringEncoding]
+                                              withVolume:sound->volume
+                                               withPitch:sound->pitchOffset];
+    return 0;
 }
 
 
 int SoundEngine_StopEffect(const hdSound* sound)
 {
-	assert(sharedCMOpenALSoundManager != nil);
-	[sharedCMOpenALSoundManager stopSound:[NSString stringWithUTF8String:sound->fullFilePath]];
-	 return 0;
+    assert(sharedCMOpenALSoundManager != nil);
+    [sharedCMOpenALSoundManager stopSound:[NSString stringWithUTF8String:sound->fullFilePath]];
+    return 0;
 }
 
 
 int SoundEngine_UnloadEffect(const hdSound* sound)
 {
-	assert(sharedCMOpenALSoundManager != nil);
-	 return 0;
+    assert(sharedCMOpenALSoundManager != nil);
+    return 0;
 }
 
 
 int SoundEngine_LoadBackgroundMusic(hdSound* sound)
 {
 #if USE_AVPLAYER_FOR_MUSIC == 1
-	if (!avAudioWrapper) return 0;
-	return [avAudioWrapper LoadSoundWithFileName:[NSString stringWithUTF8String:sound->fullFilePath] withVolume:sound->volume];
+    if (!avAudioWrapper) return 0;
+    return [avAudioWrapper LoadSoundWithFileName:[NSString stringWithUTF8String:sound->fullFilePath] withVolume:sound->volume];
 #else
-	return 0;
+    return 0;
 #endif
 }
 
@@ -123,10 +123,10 @@ int SoundEngine_LoadBackgroundMusic(hdSound* sound)
 int SoundEngine_PlayBackgroundMusic(const hdSound* sound, const bool loops)
 {
 #if USE_AVPLAYER_FOR_MUSIC == 1
-	if (!avAudioWrapper) return 0;
-	return [avAudioWrapper PlaySoundWithFileName:[NSString stringWithCString:sound->fullFilePath encoding:NSASCIIStringEncoding] loops:loops];
+    if (!avAudioWrapper) return 0;
+    return [avAudioWrapper PlaySoundWithFileName:[NSString stringWithCString:sound->fullFilePath encoding:NSASCIIStringEncoding] loops:loops];
 #else
-	return 0;
+    return 0;
 #endif
 }
 
@@ -134,10 +134,10 @@ int SoundEngine_PlayBackgroundMusic(const hdSound* sound, const bool loops)
 int SoundEngine_StopBackgroundMusic(const hdSound* sound)
 {
 #if USE_AVPLAYER_FOR_MUSIC == 1
-	if (!avAudioWrapper) return 0;
-	return [avAudioWrapper StopSoundWithFileName:[NSString stringWithCString:sound->fullFilePath encoding:NSASCIIStringEncoding]];
+    if (!avAudioWrapper) return 0;
+    return [avAudioWrapper StopSoundWithFileName:[NSString stringWithCString:sound->fullFilePath encoding:NSASCIIStringEncoding]];
 #else
-	return 0;
+    return 0;
 #endif
 }
 
@@ -145,10 +145,10 @@ int SoundEngine_StopBackgroundMusic(const hdSound* sound)
 int SoundEngine_PauseBackgroundMusic(const hdSound* sound)
 {
 #if USE_AVPLAYER_FOR_MUSIC == 1
-	if (!avAudioWrapper) return 0;
-	return [avAudioWrapper PauseSoundWithFileName:[NSString stringWithCString:sound->fullFilePath encoding:NSASCIIStringEncoding]];
+    if (!avAudioWrapper) return 0;
+    return [avAudioWrapper PauseSoundWithFileName:[NSString stringWithCString:sound->fullFilePath encoding:NSASCIIStringEncoding]];
 #else
-	return 0;
+    return 0;
 #endif
 }
 
@@ -156,10 +156,10 @@ int SoundEngine_PauseBackgroundMusic(const hdSound* sound)
 int SoundEngine_RewindBackgroundMusic(const hdSound* sound)
 {
 #if USE_AVPLAYER_FOR_MUSIC == 1
-	if (!avAudioWrapper) return 0;
-	return [avAudioWrapper RewindSoundWithFileName:[NSString stringWithCString:sound->fullFilePath encoding:NSASCIIStringEncoding] playAfterRewind:false];
+    if (!avAudioWrapper) return 0;
+    return [avAudioWrapper RewindSoundWithFileName:[NSString stringWithCString:sound->fullFilePath encoding:NSASCIIStringEncoding] playAfterRewind:false];
 #else
-	return 0;
+    return 0;
 #endif
 }
 
@@ -167,10 +167,10 @@ int SoundEngine_RewindBackgroundMusic(const hdSound* sound)
 int SoundEngine_UnloadBackgroundMusic(const hdSound* sound)
 {
 #if USE_AVPLAYER_FOR_MUSIC == 1
-	if (!avAudioWrapper) return 0;
-	return [avAudioWrapper UnloadSoundWithFileName:[NSString stringWithCString:sound->fullFilePath encoding:NSASCIIStringEncoding]];
+    if (!avAudioWrapper) return 0;
+    return [avAudioWrapper UnloadSoundWithFileName:[NSString stringWithCString:sound->fullFilePath encoding:NSASCIIStringEncoding]];
 #else
-	return 0;
+    return 0;
 #endif
 }
 
@@ -178,33 +178,33 @@ int SoundEngine_UnloadBackgroundMusic(const hdSound* sound)
 int SoundEngine_PlayVibrationEffect(const hdSound *sound)
 {
 #if TARGET_OS_IPHONE == 1 || TARGET_IPHONE_SIMULATOR == 1
-	AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 #endif
-	return 0;
+    return 0;
 }
 
 
 void SoundEngine_Purge()
 {
-	assert(sharedCMOpenALSoundManager != nil);
-	[sharedCMOpenALSoundManager purgeSounds];
+    assert(sharedCMOpenALSoundManager != nil);
+    [sharedCMOpenALSoundManager purgeSounds];
 }
 
 
 void SoundEngine_Teardown()
 {
-	OpenALPool_Teardown();
-	
-	assert(sharedCMOpenALSoundManager != nil);
-	[sharedCMOpenALSoundManager purgeSounds];
-	[sharedCMOpenALSoundManager release];
-	sharedCMOpenALSoundManager = nil;
-#if USE_AVPLAYER_FOR_MUSIC == 1	
-	if (avAudioWrapper)
-	{
-		[avAudioWrapper release];
-		avAudioWrapper = nil;
-	}
+    OpenALPool_Teardown();
+
+    assert(sharedCMOpenALSoundManager != nil);
+    [sharedCMOpenALSoundManager purgeSounds];
+    [sharedCMOpenALSoundManager release];
+    sharedCMOpenALSoundManager = nil;
+#if USE_AVPLAYER_FOR_MUSIC == 1
+    if (avAudioWrapper)
+    {
+        [avAudioWrapper release];
+        avAudioWrapper = nil;
+    }
 #endif
 }
 
@@ -213,42 +213,42 @@ void SoundEngine_Teardown()
 
 void SoundEngine_Init()
 {
-	SoundEngine_Initialize(44100);
-	SoundEngine_SetMasterVolume(1.0f);
-	SoundEngine_SetListenerPosition(0.0, 0.0, 1.0);
+    SoundEngine_Initialize(44100);
+    SoundEngine_SetMasterVolume(1.0f);
+    SoundEngine_SetListenerPosition(0.0, 0.0, 1.0);
 }
 
 
 int SoundEngine_LoadEffect(hdSound* sound)
 {
-	return SoundEngine_LoadEffect(sound->fullFilePath, (UInt32*)&sound->soundId);
+    return SoundEngine_LoadEffect(sound->fullFilePath, (UInt32*)&sound->soundId);
 }
 
 
 int SoundEngine_PlayEffect(const hdSound* sound)
 {
-	SoundEngine_SetEffectLevel(sound->soundId, sound->volume);
-	SoundEngine_SetEffectPitch(sound->soundId, sound->pitchOffset);
-	return  SoundEngine_StartEffect(sound->soundId);
+    SoundEngine_SetEffectLevel(sound->soundId, sound->volume);
+    SoundEngine_SetEffectPitch(sound->soundId, sound->pitchOffset);
+    return  SoundEngine_StartEffect(sound->soundId);
 }
 
 
 int SoundEngine_StopEffect(const hdSound* sound)
 {
-	SoundEngine_StopEffect(sound->soundId, false);
-	return SoundEngine_UnloadEffect(sound->soundId);
+    SoundEngine_StopEffect(sound->soundId, false);
+    return SoundEngine_UnloadEffect(sound->soundId);
 }
 
 
 int SoundEngine_UnloadEffect(const hdSound* sound)
 {
-	return SoundEngine_UnloadEffect(sound->soundId);
+    return SoundEngine_UnloadEffect(sound->soundId);
 }
 
 
 void SoundEngine_Teardown()
 {
-	SoundEngine_Teardown();
+    SoundEngine_Teardown();
 }
 
 #endif
@@ -263,55 +263,55 @@ void SoundEngine_Init()
 
 int SoundEngine_LoadEffect(hdSound* sound)
 {
-	return 0;
+    return 0;
 }
 
 
 int SoundEngine_PlayEffect(const hdSound* sound)
 {
-	return 0;
+    return 0;
 }
 
 
 int SoundEngine_StopEffect(const hdSound* sound)
 {
-	return 0;
+    return 0;
 }
 
 
 int SoundEngine_UnloadEffect(const hdSound* sound)
 {
-	return 0;
+    return 0;
 }
 
 
 int SoundEngine_LoadBackgroundMusic(hdSound* sound)
 {
-	return 0;
+    return 0;
 }
 
 
 int SoundEngine_PlayBackgroundMusic(const hdSound* sound, const bool forcePlay)
 {
-	return 0;
+    return 0;
 }
 
 
 int SoundEngine_StopBackgroundMusic(const hdSound* sound)
 {
-	return 0;
+    return 0;
 }
 
 
 int SoundEngine_RewindBackgroundMusic(const hdSound* sound)
 {
-	return 0;
+    return 0;
 }
 
 
 int SoundEngine_UnloadBackgroundMusic(const hdSound* sound)
 {
-	return 0;
+    return 0;
 }
 
 

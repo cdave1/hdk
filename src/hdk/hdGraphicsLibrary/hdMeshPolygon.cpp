@@ -21,7 +21,7 @@
 
 hdMeshPolygon::hdMeshPolygon() : hdPolygon(NULL)
 {
-	m_polygonType = 0;
+    m_polygonType = 0;
 }
 
 

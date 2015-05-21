@@ -75,7 +75,6 @@ bool hdGameWorld::ContainsGameObject(const hdGameObject* gameObject)
 
 bool hdGameWorld::RemoveGameObject(hdGameObject* gameObject)
 {
-
     hdAssert(m_lock == false);
     if (m_lock == true)
     {
@@ -246,7 +245,7 @@ const int hdGameWorld::RayQuery___2(const unsigned int objectFilter, const hdVec
             {
                 objects[count] = object;
                 ++count;
-                
+
                 // Remember: we only want to make sure
                 // that the top most item is the nearest.
                 if (vOut.z > maxZIntersection.z)
@@ -273,9 +272,9 @@ const int hdGameWorld::RayQuery___2(const unsigned int objectFilter, const hdVec
 
 
 void hdGameWorld::RemoveAllGameObjects()
-{	
+{
     hdGameObject* obj = m_gameObjectList;
-    while (obj != NULL) 
+    while (obj != NULL)
     {
         obj->SetWorld(NULL);
         obj = obj->m_next;

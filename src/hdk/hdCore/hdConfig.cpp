@@ -95,16 +95,16 @@ void hdConfig::LoadNullConfig()
 {
     configLookupTable.clear();
     configFileWasLoaded = true;
-    
+
 }
 
 
 std::string hdConfig::GetValueForKey(const char *key)
 {
     std::string sKey(key);
-    
+
     if (configLookupTable.count(sKey) == 0) return std::string(key);
-    
+
     return configLookupTable[sKey];
 }
 

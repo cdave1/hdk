@@ -29,8 +29,8 @@ extern "C" {
 #endif
 
     std::list<std::string> hdGetFileNames(const char *pathBase, const char* subDir);
-	
-	void RecurseDirectory(std::string pathBase, std::string subDir,
+
+    void RecurseDirectory(std::string pathBase, std::string subDir,
                           std::list<std::string> *fileList, int depth);
 
 #ifdef __cplusplus

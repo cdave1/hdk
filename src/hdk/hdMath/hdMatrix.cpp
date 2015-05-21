@@ -53,29 +53,29 @@ void hdMatrixMultiply(hdMatrix &mOut,
                     mB.f,
                     mOut.f);
 #else
-        hdMatrix ret;
+    hdMatrix ret;
 
-        ret.f[__11] = mA.f[__11]*mB.f[__11] + mA.f[__12]*mB.f[__21] + mA.f[__13]*mB.f[__31] + mA.f[__14]*mB.f[__41];
-        ret.f[__12] = mA.f[__11]*mB.f[__12] + mA.f[__12]*mB.f[__22] + mA.f[__13]*mB.f[__32] + mA.f[__14]*mB.f[__42];
-        ret.f[__13] = mA.f[__11]*mB.f[__13] + mA.f[__12]*mB.f[__23] + mA.f[__13]*mB.f[__33] + mA.f[__14]*mB.f[__43];
-        ret.f[__14] = mA.f[__11]*mB.f[__14] + mA.f[__12]*mB.f[__24] + mA.f[__13]*mB.f[__34] + mA.f[__14]*mB.f[__44];
+    ret.f[__11] = mA.f[__11]*mB.f[__11] + mA.f[__12]*mB.f[__21] + mA.f[__13]*mB.f[__31] + mA.f[__14]*mB.f[__41];
+    ret.f[__12] = mA.f[__11]*mB.f[__12] + mA.f[__12]*mB.f[__22] + mA.f[__13]*mB.f[__32] + mA.f[__14]*mB.f[__42];
+    ret.f[__13] = mA.f[__11]*mB.f[__13] + mA.f[__12]*mB.f[__23] + mA.f[__13]*mB.f[__33] + mA.f[__14]*mB.f[__43];
+    ret.f[__14] = mA.f[__11]*mB.f[__14] + mA.f[__12]*mB.f[__24] + mA.f[__13]*mB.f[__34] + mA.f[__14]*mB.f[__44];
 
-        ret.f[__21] = mA.f[__21]*mB.f[__11] + mA.f[__22]*mB.f[__21] + mA.f[__23]*mB.f[__31] + mA.f[__24]*mB.f[__41];
-        ret.f[__22] = mA.f[__21]*mB.f[__12] + mA.f[__22]*mB.f[__22] + mA.f[__23]*mB.f[__32] + mA.f[__24]*mB.f[__42];
-        ret.f[__23] = mA.f[__21]*mB.f[__13] + mA.f[__22]*mB.f[__23] + mA.f[__23]*mB.f[__33] + mA.f[__24]*mB.f[__43];
-        ret.f[__24] = mA.f[__21]*mB.f[__14] + mA.f[__22]*mB.f[__24] + mA.f[__23]*mB.f[__34] + mA.f[__24]*mB.f[__44];
+    ret.f[__21] = mA.f[__21]*mB.f[__11] + mA.f[__22]*mB.f[__21] + mA.f[__23]*mB.f[__31] + mA.f[__24]*mB.f[__41];
+    ret.f[__22] = mA.f[__21]*mB.f[__12] + mA.f[__22]*mB.f[__22] + mA.f[__23]*mB.f[__32] + mA.f[__24]*mB.f[__42];
+    ret.f[__23] = mA.f[__21]*mB.f[__13] + mA.f[__22]*mB.f[__23] + mA.f[__23]*mB.f[__33] + mA.f[__24]*mB.f[__43];
+    ret.f[__24] = mA.f[__21]*mB.f[__14] + mA.f[__22]*mB.f[__24] + mA.f[__23]*mB.f[__34] + mA.f[__24]*mB.f[__44];
 
-        ret.f[__31] = mA.f[__31]*mB.f[__11] + mA.f[__32]*mB.f[__21] + mA.f[__33]*mB.f[__31] + mA.f[__34]*mB.f[__41];
-        ret.f[__32] = mA.f[__31]*mB.f[__12] + mA.f[__32]*mB.f[__22] + mA.f[__33]*mB.f[__32] + mA.f[__34]*mB.f[__42];
-        ret.f[__33] = mA.f[__31]*mB.f[__13] + mA.f[__32]*mB.f[__23] + mA.f[__33]*mB.f[__33] + mA.f[__34]*mB.f[__43];
-        ret.f[__34] = mA.f[__31]*mB.f[__14] + mA.f[__32]*mB.f[__24] + mA.f[__33]*mB.f[__34] + mA.f[__34]*mB.f[__44];
+    ret.f[__31] = mA.f[__31]*mB.f[__11] + mA.f[__32]*mB.f[__21] + mA.f[__33]*mB.f[__31] + mA.f[__34]*mB.f[__41];
+    ret.f[__32] = mA.f[__31]*mB.f[__12] + mA.f[__32]*mB.f[__22] + mA.f[__33]*mB.f[__32] + mA.f[__34]*mB.f[__42];
+    ret.f[__33] = mA.f[__31]*mB.f[__13] + mA.f[__32]*mB.f[__23] + mA.f[__33]*mB.f[__33] + mA.f[__34]*mB.f[__43];
+    ret.f[__34] = mA.f[__31]*mB.f[__14] + mA.f[__32]*mB.f[__24] + mA.f[__33]*mB.f[__34] + mA.f[__34]*mB.f[__44];
 
-        ret.f[__41] = mA.f[__41]*mB.f[__11] + mA.f[__42]*mB.f[__21] + mA.f[__43]*mB.f[__31] + mA.f[__44]*mB.f[__41];
-        ret.f[__42] = mA.f[__41]*mB.f[__12] + mA.f[__42]*mB.f[__22] + mA.f[__43]*mB.f[__32] + mA.f[__44]*mB.f[__42];
-        ret.f[__43] = mA.f[__41]*mB.f[__13] + mA.f[__42]*mB.f[__23] + mA.f[__43]*mB.f[__33] + mA.f[__44]*mB.f[__43];
-        ret.f[__44] = mA.f[__41]*mB.f[__14] + mA.f[__42]*mB.f[__24] + mA.f[__43]*mB.f[__34] + mA.f[__44]*mB.f[__44];
+    ret.f[__41] = mA.f[__41]*mB.f[__11] + mA.f[__42]*mB.f[__21] + mA.f[__43]*mB.f[__31] + mA.f[__44]*mB.f[__41];
+    ret.f[__42] = mA.f[__41]*mB.f[__12] + mA.f[__42]*mB.f[__22] + mA.f[__43]*mB.f[__32] + mA.f[__44]*mB.f[__42];
+    ret.f[__43] = mA.f[__41]*mB.f[__13] + mA.f[__42]*mB.f[__23] + mA.f[__43]*mB.f[__33] + mA.f[__44]*mB.f[__43];
+    ret.f[__44] = mA.f[__41]*mB.f[__14] + mA.f[__42]*mB.f[__24] + mA.f[__43]*mB.f[__34] + mA.f[__44]*mB.f[__44];
 
-        mOut = ret;
+    mOut = ret;
 #endif
 #else
     hdMatrix ret;
@@ -249,7 +249,7 @@ void MatrixVec3Multiply(hdVec3  &vOut,
 }
 
 
-/* 
+/*
  * HACK HACK HACK
  * Treat vIn as a 4d vector with (x, y, z, 1)
  */
@@ -279,27 +279,27 @@ void MatrixLookAtRH(hdMatrix &mOut, const hdVec3 &vEye, const hdVec3 &vAt, const
     vUpActual = hdNormalize3(vUp);
     s = hdCross(f, vUpActual);
     u = hdCross(s, f);
-    
+
     mOut.f[ 0] = s.x;
     mOut.f[ 1] = u.x;
     mOut.f[ 2] = -f.x;
     mOut.f[ 3] = 0;
-    
+
     mOut.f[ 4] = s.y;
     mOut.f[ 5] = u.y;
     mOut.f[ 6] = -f.y;
     mOut.f[ 7] = 0;
-    
+
     mOut.f[ 8] = s.z;
     mOut.f[ 9] = u.z;
     mOut.f[10] = -f.z;
     mOut.f[11] = 0;
-    
+
     mOut.f[12] = 0;
     mOut.f[13] = 0;
     mOut.f[14] = 0;
     mOut.f[15] = 1;
-    
+
     MatrixTranslation(t, -vEye.x, -vEye.y, -vEye.z);
     hdMatrixMultiply(mOut, t, mOut);
 }
@@ -313,36 +313,36 @@ void MatrixPerspectiveFovRH(hdMatrix  &mOut,
                             const bool  bRotate)
 {
     float f, n, fRealAspect;
-    
+
     if (bRotate)
         fRealAspect = 1.0f / fAspect;
     else
         fRealAspect = fAspect;
-    
+
     // cotangent(a) == 1.0f / tan(a);
     f = 1.0f / (float)tan(fFOVy * 0.5f);
     n = 1.0f / (fNear - fFar);
-    
+
     mOut.f[ 0] = f / fRealAspect;
     mOut.f[ 1] = 0;
     mOut.f[ 2] = 0;
     mOut.f[ 3] = 0;
-    
+
     mOut.f[ 4] = 0;
     mOut.f[ 5] = f;
     mOut.f[ 6] = 0;
     mOut.f[ 7] = 0;
-    
+
     mOut.f[ 8] = 0;
     mOut.f[ 9] = 0;
     mOut.f[10] = (fFar + fNear) * n;
     mOut.f[11] = -1;
-    
+
     mOut.f[12] = 0;
     mOut.f[13] = 0;
     mOut.f[14] = (2 * fFar * fNear) * n;
     mOut.f[15] = 0;
-    
+
     if (bRotate)
     {
         hdMatrix mRotation, mTemp = mOut;

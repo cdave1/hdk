@@ -171,7 +171,7 @@ bool hdUIContainer::MouseUp(float x, float y)
 {
     if (this->IsHidden()) return false;
     if (m_isEnabled == false) return false;
-    
+
     // TODO: fixme
     //for (int i = 0; i < m_receivers->GetItemCount(); ++i)
     //{
@@ -187,7 +187,7 @@ bool hdUIContainer::MouseUp(float x, float y)
 void hdUIContainer::Draw() const
 {
     if (this->IsHidden()) return;
-    
+
     for (int i = 0; i < m_receivers->GetItemCount(); ++i)
     {
         m_receivers->GetItems()[i]->Draw();

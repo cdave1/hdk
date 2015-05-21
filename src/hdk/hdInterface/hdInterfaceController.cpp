@@ -479,9 +479,9 @@ void hdInterfaceController::SetOrientation(const e_hdInterfaceOrientation orient
 {
     hdAABB projectionAABB;
     ScreenSettings_SetLandscape();
-    
+
     m_orientation = orientation;
-    
+
     ScreenSettings_GetAspectRatio(&m_ScreenAspectRatio);
     ScreenSettings_GetScreenRect(&m_PixelScreenWidth, &m_PixelScreenHeight);
     ScreenSettings_GetMinCameraRect(&m_GameMinScreenWidth, &m_GameMinScreenHeight);
@@ -489,13 +489,13 @@ void hdInterfaceController::SetOrientation(const e_hdInterfaceOrientation orient
     ScreenSettings_GetZoomRatio(&m_lowerZoomRatioX, &m_lowerZoomRatioY,
                                 &m_upperZoomRatioX, &m_upperZoomRatioY);
     ScreenSettings_GetPixelsPerGameUnit(&m_pixelsPerGameUnit);
-    
-    
+
+
     if (m_projection == NULL)
     {
         ScreenSettings_GetDefaultCameraRect(&m_screenWidth, &m_screenHeight);
         m_screenDepth = kDefaultScreenDepth;
-        
+
         projectionAABB.lower = hdVec3(0,0,0) - hdVec3(m_screenWidth, m_screenHeight, m_screenDepth);
         projectionAABB.upper = hdVec3(m_screenWidth, m_screenHeight, m_screenDepth);
         m_projection = new hdOrthographicProjection(m_gameWorld, projectionAABB);
@@ -519,7 +519,7 @@ void hdInterfaceController::HandleSingleTap(const float x, const float y) {}
 void hdInterfaceController::HandleDoubleTap(float x, float y) {}
 
 
-void hdInterfaceController::HandleTapMovedSingle(const float previousX, const float previousY, 
+void hdInterfaceController::HandleTapMovedSingle(const float previousX, const float previousY,
                                                  const float currentX, const float currentY) {}
 
 

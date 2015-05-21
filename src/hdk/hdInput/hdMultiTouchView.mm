@@ -293,15 +293,15 @@ int GetTouchCount()
 
         MultiTouchScreen[pos].LocationXTouchMovedPrevious = location.x;
         MultiTouchScreen[pos].LocationYTouchMovedPrevious = location.y;
-        
+
         MultiTouchScreen[pos].LocationXTouchBegan = location.x;
         MultiTouchScreen[pos].LocationYTouchBegan = location.y;
         MultiTouchScreen[pos].LocationXTouchMoved = location.x;
         MultiTouchScreen[pos].LocationYTouchMoved = location.y;
-        
+
         MultiTouchScreen[pos].TapCount = [touch tapCount];
         MultiTouchScreen[pos].TimeStamp = [touch timestamp];
-        
+
         MultiTouchScreen[pos].TouchDown = true;
         MultiTouchScreen[pos].TouchMoved = false;
         MultiTouchScreen[pos].TouchUp = false;
@@ -310,18 +310,18 @@ int GetTouchCount()
     {
         if (_logOutput)
             printf("\t[TOUCH - MOVED] (%3.3f, %3.3f) touch with id %d:\n", location.x, location.y, touchPtr);
-        
+
         if (MultiTouchScreen[pos].TouchDown == false)
         {
             //MultiTouchScreen[pos].LocationXTouchMovedPrevious = location.x;
             //MultiTouchScreen[pos].LocationYTouchMovedPrevious = location.y;
-        } 
-        else 
+        }
+        else
         {
             //MultiTouchScreen[pos].LocationXTouchMovedPrevious = MultiTouchScreen[pos].LocationXTouchMoved;
             //MultiTouchScreen[pos].LocationYTouchMovedPrevious = MultiTouchScreen[pos].LocationYTouchMoved;
         }
-        
+
         MultiTouchScreen[pos].LocationXTouchMoved = location.x;
         MultiTouchScreen[pos].LocationYTouchMoved = location.y;
         MultiTouchScreen[pos].TapCount = [touch tapCount];

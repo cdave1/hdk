@@ -20,15 +20,15 @@
 #ifndef HD_DRAWABLE_H
 #define HD_DRAWABLE_H
 
-class hdDrawable 
+class hdDrawable
 {
 public:
-	hdDrawable() {}
-	
-	virtual void Draw () const = 0;
-	
-	virtual void DrawSpecial() const {}
+    hdDrawable() {}
 
+    virtual void Draw () const = 0;
+
+    virtual void DrawSpecial() const {}
+    
 };
 
 #endif

@@ -19,11 +19,11 @@
 
 /*
  * Free sources - a cycling pool of sources.
- * Retained sources - a set of sources that are "owned" by a 
+ * Retained sources - a set of sources that are "owned" by a
  * particular sound. Intended to be used by frequently played sounds,
  * or looping sounds.
  *
- * This class needs to be carefully uncoupled from the rest of the 
+ * This class needs to be carefully uncoupled from the rest of the
  * sound application - other stuff should be fail safe.
  */
 
@@ -49,21 +49,21 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-	
-	extern int OpenALPool_Init();
-	
-	extern int OpenALPool_IsActive();
-	
-	extern ALuint OpenALPool_GetNextBuffer();
-	
-	extern ALuint OpenALPool_GetFreeSource();
-	
-	extern ALuint OpenALPool_RetainSource(const void *owner);
-	
-	extern bool OpenALPool_ReleaseSource(ALuint source);
-	
-	extern int OpenALPool_Teardown();
 
+    extern int OpenALPool_Init();
+
+    extern int OpenALPool_IsActive();
+
+    extern ALuint OpenALPool_GetNextBuffer();
+
+    extern ALuint OpenALPool_GetFreeSource();
+
+    extern ALuint OpenALPool_RetainSource(const void *owner);
+
+    extern bool OpenALPool_ReleaseSource(ALuint source);
+
+    extern int OpenALPool_Teardown();
+    
 #ifdef __cplusplus
 }
 #endif
