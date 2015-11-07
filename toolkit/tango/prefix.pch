@@ -1,9 +1,0 @@
-//
-// Prefix header for all source files of the 'OpenGL' target in the 'OpenGL' project
-//
-#include <TargetConditionals.h>
-#ifdef __OBJC__
-    #import <Cocoa/Cocoa.h>
-#endif
-#include "hdCore/hdCommon.h"
-#import "config.h"
