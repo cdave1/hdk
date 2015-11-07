@@ -1355,7 +1355,7 @@
 				63FBBEF011C451FD00C2377F /* hdIB.h */,
 			);
 			name = inc;
-			path = ../../inc;
+			path = ../../include/hdk;
 			sourceTree = SOURCE_ROOT;
 		};
 		E41EA9AA1170B35000A30C8E /* hdInput */ = {
