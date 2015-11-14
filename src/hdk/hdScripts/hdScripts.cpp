@@ -54,7 +54,7 @@ void Scripts_TearDown()
 void Scripts_LoadStringsFile(const char *stringsFilePath)
 {
     std::string line;
-	unsigned pos;
+	size_t pos;
 	filehandle_t *hnd;
 	
 	stringTable.clear();
@@ -205,7 +205,7 @@ void ParseWorldMessageScript(const char* scriptfilepath)
 	std::string line;
 	bool contextOpened;
 	int currContextID;
-	uint32 pos;
+	size_t pos;
 	hdMessage msg;
 	filehandle_t *hnd;
 	contextOpened = false;
