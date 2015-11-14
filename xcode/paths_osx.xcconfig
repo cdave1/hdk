@@ -1,17 +1,10 @@
 //
 //  paths.xcconfig
-//  Smashed_iPad
-//
-//  Created by David Petrie on 18/04/10.
-//  Copyright 2010 Hackdirt Ltd. All rights reserved.
 //
 
 OTHER_LDFLAGS = -all_load -ObjC
 
 HDKPATH = /Users/davidpetrie/Projects/hdk/hdTech1/
-HDKPATHS = $(HDKPATH)libs/Box2D/2.02/Include $(HDKPATH)libs/Box2D/2.02/Source/Dynamics/Controllers $(HDKPATH)inc/ $(HDKPATH)src/** /usr/local/include
-
-//CCCPATH = /Users/davidpetrie/Documents/Projects/ccc/ccc/
-//CCCPATHS = $(CCCPATH)libs/asi-http-request/Classes/ $(CCCPATH)libs/JSON/ $(CCCPATH)libs/three20/src/ $(CCCPATH)src/
+HDKPATHS = $(HDKPATH)libs/Box2D/2.02/Include $(HDKPATH)libs/Box2D/2.02/Source/Dynamics/Controllers $(HDKPATH)include/ $(HDKPATH)src/** /usr/local/include
 
 HEADER_SEARCH_PATHS = $(HDKPATHS)

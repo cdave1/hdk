@@ -1826,7 +1826,7 @@
 				E4925CA51986214100FD5BE5 /* xml_woarchive.hpp */,
 			);
 			name = archive;
-			path = ../../../../../../Opensource/boost_1_55_0/boost/archive;
+			path = boost/archive;
 			sourceTree = "<group>";
 		};
 		E4925C491986214100FD5BE5 /* detail */ = {
@@ -1929,7 +1929,7 @@
 				E4925CAF1986214100FD5BE5 /* path_traits.hpp */,
 			);
 			name = filesystem;
-			path = ../../../../../../Opensource/boost_1_55_0/boost/filesystem;
+			path = boost/filesystem;
 			sourceTree = "<group>";
 		};
 		E4925CA91986214100FD5BE5 /* detail */ = {
@@ -1956,7 +1956,7 @@
 				E4925CBF1986214100FD5BE5 /* v4 */,
 			);
 			name = regex;
-			path = ../../../../../../Opensource/boost_1_55_0/boost/regex;
+			path = boost/regex;
 			sourceTree = "<group>";
 		};
 		E4925CB21986214100FD5BE5 /* config */ = {
@@ -2097,7 +2097,7 @@
 				E4925D2F1986214100FD5BE5 /* wrapper.hpp */,
 			);
 			name = serialization;
-			path = ../../../../../../Opensource/boost_1_55_0/boost/serialization;
+			path = boost/serialization;
 			sourceTree = "<group>";
 		};
 		E4925CF91986214100FD5BE5 /* detail */ = {
@@ -2125,7 +2125,7 @@
 				E4925D371986214100FD5BE5 /* windows_error.hpp */,
 			);
 			name = system;
-			path = ../../../../../../Opensource/boost_1_55_0/boost/system;
+			path = boost/system;
 			sourceTree = "<group>";
 		};
 		E4925E1E1986214500FD5BE5 /* boost */ = {
@@ -2138,6 +2138,7 @@
 				E4925D301986214100FD5BE5 /* system */,
 			);
 			name = boost;
+			path = ../../../../../Opensource/boost_1_55_0;
 			sourceTree = "<group>";
 		};
 		E4925E1F1986216900FD5BE5 /* src */ = {
