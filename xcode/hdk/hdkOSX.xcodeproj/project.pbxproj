@@ -607,14 +607,6 @@
 		E4A95BD51968C44300DCD2A0 /* pngwtran.c in Sources */ = {isa = PBXBuildFile; fileRef = E4A95B971968C44300DCD2A0 /* pngwtran.c */; };
 		E4A95BD81968C44300DCD2A0 /* pngwutil.c in Sources */ = {isa = PBXBuildFile; fileRef = E4A95B981968C44300DCD2A0 /* pngwutil.c */; };
 		E4F36B8311714B8F00792A2D /* hdLibs.h in Headers */ = {isa = PBXBuildFile; fileRef = E4F36B8211714B8F00792A2D /* hdLibs.h */; };
-		E4F36BD611714DAD00792A2D /* neon_matrix_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36BCD11714DAD00792A2D /* neon_matrix_impl.cpp */; };
-		E4F36BD711714DAD00792A2D /* neon_matrix_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = E4F36BCE11714DAD00792A2D /* neon_matrix_impl.h */; };
-		E4F36BD811714DAD00792A2D /* common_macros.h in Headers */ = {isa = PBXBuildFile; fileRef = E4F36BD011714DAD00792A2D /* common_macros.h */; };
-		E4F36BD911714DAD00792A2D /* matrix_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36BD111714DAD00792A2D /* matrix_impl.cpp */; };
-		E4F36BDA11714DAD00792A2D /* matrix_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = E4F36BD211714DAD00792A2D /* matrix_impl.h */; };
-		E4F36BDB11714DAD00792A2D /* utility_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4F36BD311714DAD00792A2D /* utility_impl.cpp */; };
-		E4F36BDC11714DAD00792A2D /* utility_impl.h in Headers */ = {isa = PBXBuildFile; fileRef = E4F36BD411714DAD00792A2D /* utility_impl.h */; };
-		E4F36BDD11714DAD00792A2D /* vfp_clobbers.h in Headers */ = {isa = PBXBuildFile; fileRef = E4F36BD511714DAD00792A2D /* vfp_clobbers.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1242,14 +1234,6 @@
 		E4A95B971968C44300DCD2A0 /* pngwtran.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pngwtran.c; sourceTree = "<group>"; };
 		E4A95B981968C44300DCD2A0 /* pngwutil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = pngwutil.c; sourceTree = "<group>"; };
 		E4F36B8211714B8F00792A2D /* hdLibs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdLibs.h; sourceTree = "<group>"; };
-		E4F36BCD11714DAD00792A2D /* neon_matrix_impl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = neon_matrix_impl.cpp; sourceTree = "<group>"; };
-		E4F36BCE11714DAD00792A2D /* neon_matrix_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = neon_matrix_impl.h; sourceTree = "<group>"; };
-		E4F36BD011714DAD00792A2D /* common_macros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common_macros.h; sourceTree = "<group>"; };
-		E4F36BD111714DAD00792A2D /* matrix_impl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = matrix_impl.cpp; sourceTree = "<group>"; };
-		E4F36BD211714DAD00792A2D /* matrix_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matrix_impl.h; sourceTree = "<group>"; };
-		E4F36BD311714DAD00792A2D /* utility_impl.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = utility_impl.cpp; sourceTree = "<group>"; };
-		E4F36BD411714DAD00792A2D /* utility_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utility_impl.h; sourceTree = "<group>"; };
-		E4F36BD511714DAD00792A2D /* vfp_clobbers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vfp_clobbers.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1332,7 +1316,8 @@
 				63FC26921184D169004BB47B /* hdScripts.cpp */,
 				63FC26931184D169004BB47B /* hdScripts.h */,
 			);
-			path = hdScripts;
+			name = hdScripts;
+			path = hdk/hdScripts;
 			sourceTree = "<group>";
 		};
 		E41EA60F1170810B00A30C8E /* inc */ = {
@@ -1364,25 +1349,26 @@
 				63C76CC811863CEF00C909BE /* hdMouseInput.h */,
 				63C76CC911863CEF00C909BE /* hdMouseInput.cpp */,
 			);
-			path = hdInput;
+			name = hdInput;
+			path = hdk/hdInput;
 			sourceTree = "<group>";
 		};
 		E428341A116FF684008E3594 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				63C76CB311863A9F00C909BE /* hdkOSX_prefix.pch */,
-				E428341C116FF684008E3594 /* hdSound */,
 				E428342F116FF684008E3594 /* hdAnimation */,
-				E41EA9AA1170B35000A30C8E /* hdInput */,
 				E4283446116FF684008E3594 /* hdCollections */,
-				63FC26911184D169004BB47B /* hdScripts */,
-				E4F34DA7117148F200792A2D /* hdLibs */,
 				E428344C116FF684008E3594 /* hdCore */,
+				E42834AC116FF684008E3594 /* hdEffects */,
 				E4283465116FF684008E3594 /* hdGame */,
 				E428347B116FF684008E3594 /* hdGraphicsLibrary */,
+				E41EA9AA1170B35000A30C8E /* hdInput */,
 				E428348A116FF684008E3594 /* hdInterface */,
+				63C76CB311863A9F00C909BE /* hdkOSX_prefix.pch */,
+				E4F34DA7117148F200792A2D /* hdLibs */,
 				E42834A5116FF684008E3594 /* hdMath */,
-				E42834AC116FF684008E3594 /* hdEffects */,
+				63FC26911184D169004BB47B /* hdScripts */,
+				E428341C116FF684008E3594 /* hdSound */,
 			);
 			name = src;
 			path = ../../src;
@@ -1403,7 +1389,8 @@
 				E41EA62F117082D400A30C8E /* hdSound.h */,
 				E41EA63F1170859400A30C8E /* hdSoundSystemEnums.h */,
 			);
-			path = hdSound;
+			name = hdSound;
+			path = hdk/hdSound;
 			sourceTree = "<group>";
 		};
 		E428341D116FF684008E3594 /* CMOpenALSound */ = {
@@ -1444,7 +1431,8 @@
 				E4283444116FF684008E3594 /* hdAlphaAction.h */,
 				E4283445116FF684008E3594 /* hdAlphaAction.cpp */,
 			);
-			path = hdAnimation;
+			name = hdAnimation;
+			path = hdk/hdAnimation;
 			sourceTree = "<group>";
 		};
 		E4283446116FF684008E3594 /* hdCollections */ = {
@@ -1455,7 +1443,8 @@
 				E428344A116FF684008E3594 /* hdTypedefList.h */,
 				E428344B116FF684008E3594 /* hdCollectionSettings.h */,
 			);
-			path = hdCollections;
+			name = hdCollections;
+			path = hdk/hdCollections;
 			sourceTree = "<group>";
 		};
 		E428344C116FF684008E3594 /* hdCore */ = {
@@ -1486,7 +1475,8 @@
 				E41EA75811709B3600A30C8E /* hdFileSystemUtils.h */,
 				E41EA75911709B3600A30C8E /* hdFileSystemUtils.cpp */,
 			);
-			path = hdCore;
+			name = hdCore;
+			path = hdk/hdCore;
 			sourceTree = "<group>";
 		};
 		E4283465116FF684008E3594 /* hdGame */ = {
@@ -1506,7 +1496,8 @@
 				E4283479116FF684008E3594 /* hdPhysicsObject.h */,
 				E428347A116FF684008E3594 /* b2Opt.h */,
 			);
-			path = hdGame;
+			name = hdGame;
+			path = hdk/hdGame;
 			sourceTree = "<group>";
 		};
 		E428347B116FF684008E3594 /* hdGraphicsLibrary */ = {
@@ -1531,7 +1522,8 @@
 				E4283488116FF684008E3594 /* hdPNGLoader.mm */,
 				E4283489116FF684008E3594 /* hdPNGLoader.h */,
 			);
-			path = hdGraphicsLibrary;
+			name = hdGraphicsLibrary;
+			path = hdk/hdGraphicsLibrary;
 			sourceTree = "<group>";
 		};
 		E428348A116FF684008E3594 /* hdInterface */ = {
@@ -1568,14 +1560,13 @@
 				E42834A3116FF684008E3594 /* hdInterfaceContext.h */,
 				E42834A4116FF684008E3594 /* hdInterfaceContext.cpp */,
 			);
-			path = hdInterface;
+			name = hdInterface;
+			path = hdk/hdInterface;
 			sourceTree = "<group>";
 		};
 		E42834A5116FF684008E3594 /* hdMath */ = {
 			isa = PBXGroup;
 			children = (
-				E4F36BCC11714DAD00792A2D /* neon */,
-				E4F36BCF11714DAD00792A2D /* vfp */,
 				E42834A6116FF684008E3594 /* hdFixed.h */,
 				E42834A7116FF684008E3594 /* hdGeometry.h */,
 				E42834A9116FF684008E3594 /* hdMathSerializable.h */,
@@ -1583,7 +1574,8 @@
 				E42834AB116FF684008E3594 /* hdMatrix.h */,
 				E41EA66D1170899C00A30C8E /* hdMathCommon.h */,
 			);
-			path = hdMath;
+			name = hdMath;
+			path = hdk/hdMath;
 			sourceTree = "<group>";
 		};
 		E42834AC116FF684008E3594 /* hdEffects */ = {
@@ -1594,7 +1586,8 @@
 				E42834AF116FF684008E3594 /* hdPhysicsParticleEmitter.cpp */,
 				E42834B0116FF684008E3594 /* hdPhysicsParticleEmitter.h */,
 			);
-			path = hdEffects;
+			name = hdEffects;
+			path = hdk/hdEffects;
 			sourceTree = "<group>";
 		};
 		E428355E116FF8C1008E3594 /* libs */ = {
@@ -2316,28 +2309,6 @@
 			name = hdLibs;
 			sourceTree = "<group>";
 		};
-		E4F36BCC11714DAD00792A2D /* neon */ = {
-			isa = PBXGroup;
-			children = (
-				E4F36BCD11714DAD00792A2D /* neon_matrix_impl.cpp */,
-				E4F36BCE11714DAD00792A2D /* neon_matrix_impl.h */,
-			);
-			path = neon;
-			sourceTree = "<group>";
-		};
-		E4F36BCF11714DAD00792A2D /* vfp */ = {
-			isa = PBXGroup;
-			children = (
-				E4F36BD011714DAD00792A2D /* common_macros.h */,
-				E4F36BD111714DAD00792A2D /* matrix_impl.cpp */,
-				E4F36BD211714DAD00792A2D /* matrix_impl.h */,
-				E4F36BD311714DAD00792A2D /* utility_impl.cpp */,
-				E4F36BD411714DAD00792A2D /* utility_impl.h */,
-				E4F36BD511714DAD00792A2D /* vfp_clobbers.h */,
-			);
-			path = vfp;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -2686,15 +2657,10 @@
 				E4925D821986214100FD5BE5 /* polymorphic_text_oarchive.hpp in Headers */,
 				E4925D581986214100FD5BE5 /* basic_oserializer.hpp in Headers */,
 				E4F36B8311714B8F00792A2D /* hdLibs.h in Headers */,
-				E4F36BD711714DAD00792A2D /* neon_matrix_impl.h in Headers */,
 				E4925DBF1986214100FD5BE5 /* regex.hpp in Headers */,
-				E4F36BD811714DAD00792A2D /* common_macros.h in Headers */,
 				E4925D6F1986214100FD5BE5 /* dataflow_exception.hpp in Headers */,
 				E4925D551986214100FD5BE5 /* basic_iarchive.hpp in Headers */,
-				E4F36BDA11714DAD00792A2D /* matrix_impl.h in Headers */,
-				E4F36BDC11714DAD00792A2D /* utility_impl.h in Headers */,
 				E4925D741986214100FD5BE5 /* mb_from_wchar.hpp in Headers */,
-				E4F36BDD11714DAD00792A2D /* vfp_clobbers.h in Headers */,
 				63FC26591184CEDC004BB47B /* hdThumbPad.h in Headers */,
 				E4925D6B1986214100FD5BE5 /* base64_exception.hpp in Headers */,
 				63FC26951184D169004BB47B /* hdScripts.h in Headers */,
@@ -2969,10 +2935,7 @@
 				E4925E451986217900FD5BE5 /* c_regex_traits.cpp in Sources */,
 				E4925E8E1986218500FD5BE5 /* binary_iarchive.cpp in Sources */,
 				E492601B1986220E00FD5BE5 /* uncompr.c in Sources */,
-				E4F36BD611714DAD00792A2D /* neon_matrix_impl.cpp in Sources */,
-				E4F36BD911714DAD00792A2D /* matrix_impl.cpp in Sources */,
 				E4925E8D1986218500FD5BE5 /* basic_xml_archive.cpp in Sources */,
-				E4F36BDB11714DAD00792A2D /* utility_impl.cpp in Sources */,
 				E49260201986220E00FD5BE5 /* zutil.c in Sources */,
 				63FC265A1184CEDC004BB47B /* hdThumbPad.cpp in Sources */,
 				63FC26941184D169004BB47B /* hdScripts.cpp in Sources */,

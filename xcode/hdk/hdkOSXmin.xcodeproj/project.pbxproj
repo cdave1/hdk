@@ -1593,7 +1593,8 @@
 				63CA76A8119667CD0010C802 /* hdAlphaAction.h */,
 				63CA76A9119667CD0010C802 /* hdAlphaAction.cpp */,
 			);
-			path = hdAnimation;
+			name = hdAnimation;
+			path = hdk/hdAnimation;
 			sourceTree = "<group>";
 		};
 		E41EA60F1170810B00A30C8E /* inc */ = {
@@ -2664,6 +2665,8 @@
 /* Begin PBXProject section */
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "hdkOSXmin" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
