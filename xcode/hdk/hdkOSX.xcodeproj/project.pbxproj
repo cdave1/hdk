@@ -48,6 +48,8 @@
 		E41C076B1BF7DE4A0032DEC6 /* libboost_serialization.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E41C076A1BF7DE4A0032DEC6 /* libboost_serialization.a */; };
 		E41C076D1BF7DE6D0032DEC6 /* libboost_filesystem.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E41C076C1BF7DE6D0032DEC6 /* libboost_filesystem.a */; };
 		E41C076F1BF7DE830032DEC6 /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E41C076E1BF7DE830032DEC6 /* libboost_system.a */; };
+		E41C077C1BF7FC100032DEC6 /* hdPhysicsObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E41C077B1BF7FC100032DEC6 /* hdPhysicsObject.cpp */; };
+		E41C077E1BF7FC2A0032DEC6 /* hdPhysicsJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E41C077D1BF7FC2A0032DEC6 /* hdPhysicsJoint.cpp */; };
 		E41EA6171170810B00A30C8E /* hdCollections.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6111170810B00A30C8E /* hdCollections.h */; };
 		E41EA6181170810B00A30C8E /* hdk.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6121170810B00A30C8E /* hdk.h */; };
 		E41EA6191170810B00A30C8E /* hdInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = E41EA6131170810B00A30C8E /* hdInterface.h */; };
@@ -358,6 +360,8 @@
 		E41C076A1BF7DE4A0032DEC6 /* libboost_serialization.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_serialization.a; path = ../../../../../../../usr/local/Cellar/boost/1.56.0/lib/libboost_serialization.a; sourceTree = "<group>"; };
 		E41C076C1BF7DE6D0032DEC6 /* libboost_filesystem.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_filesystem.a; path = ../../../../../../../usr/local/Cellar/boost/1.56.0/lib/libboost_filesystem.a; sourceTree = "<group>"; };
 		E41C076E1BF7DE830032DEC6 /* libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_system.a; path = ../../../../../../../usr/local/Cellar/boost/1.56.0/lib/libboost_system.a; sourceTree = "<group>"; };
+		E41C077B1BF7FC100032DEC6 /* hdPhysicsObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdPhysicsObject.cpp; sourceTree = "<group>"; };
+		E41C077D1BF7FC2A0032DEC6 /* hdPhysicsJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdPhysicsJoint.cpp; sourceTree = "<group>"; };
 		E41EA6111170810B00A30C8E /* hdCollections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdCollections.h; sourceTree = "<group>"; };
 		E41EA6121170810B00A30C8E /* hdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdk.h; sourceTree = "<group>"; };
 		E41EA6131170810B00A30C8E /* hdInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdInterface.h; sourceTree = "<group>"; };
@@ -878,6 +882,7 @@
 		E4283465116FF684008E3594 /* hdGame */ = {
 			isa = PBXGroup;
 			children = (
+				E41C077D1BF7FC2A0032DEC6 /* hdPhysicsJoint.cpp */,
 				E4283466116FF684008E3594 /* hdPhysicsJoint.h */,
 				E4283467116FF684008E3594 /* hd2DGameController.cpp */,
 				E4283468116FF684008E3594 /* hd2DGameController.h */,
@@ -889,6 +894,7 @@
 				E4283476116FF684008E3594 /* hdOrthographicProjection.h */,
 				E4283477116FF684008E3594 /* hdPhysicsGlue.cpp */,
 				E4283478116FF684008E3594 /* hdPhysicsGlue.h */,
+				E41C077B1BF7FC100032DEC6 /* hdPhysicsObject.cpp */,
 				E4283479116FF684008E3594 /* hdPhysicsObject.h */,
 				E428347A116FF684008E3594 /* b2Opt.h */,
 			);
@@ -1508,6 +1514,7 @@
 				E4283527116FF684008E3594 /* hdInterfaceController.cpp in Sources */,
 				E4A95BAE1968C44300DCD2A0 /* pngget.c in Sources */,
 				E492600C1986220E00FD5BE5 /* infback.c in Sources */,
+				E41C077C1BF7FC100032DEC6 /* hdPhysicsObject.cpp in Sources */,
 				E4283529116FF684008E3594 /* hdUIContainer.cpp in Sources */,
 				E428352B116FF684008E3594 /* hdUIImage.cpp in Sources */,
 				E428352E116FF684008E3594 /* hdUISegmentedControl.cpp in Sources */,
@@ -1539,6 +1546,7 @@
 				E42837EB117005AB008E3594 /* b2Math.cpp in Sources */,
 				E42837ED117005AB008E3594 /* b2Settings.cpp in Sources */,
 				E4A95BC01968C44300DCD2A0 /* pngrutil.c in Sources */,
+				E41C077E1BF7FC2A0032DEC6 /* hdPhysicsJoint.cpp in Sources */,
 				E49260071986220E00FD5BE5 /* gzclose.c in Sources */,
 				E49260091986220E00FD5BE5 /* gzlib.c in Sources */,
 				E42837EF117005AB008E3594 /* b2StackAllocator.cpp in Sources */,
