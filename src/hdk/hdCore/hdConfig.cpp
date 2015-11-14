@@ -33,7 +33,7 @@ static bool configFileWasLoaded = false;
 void hdConfig::LoadConfigFile(const char *configFilePath)
 {
     std::string line;
-    unsigned pos;
+    size_t pos;
     filehandle_t *hnd;
 
     configLookupTable.clear();

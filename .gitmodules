@@ -4,3 +4,6 @@
 [submodule "toolkit/tango"]
 	path = toolkit/tango
 	url = git@github.com:cdave1/hdk-tango-v1.git
+[submodule "toolkit/sierra"]
+	path = toolkit/sierra
+	url = git@github.com:cdave1/hdk-sierra-v1.git

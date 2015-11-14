@@ -90,7 +90,7 @@ bool hdPlayerConfig::LoadConfigFile()
 {
     std::string line;
     void *buffer;
-    uint32 pos;
+    size_t pos;
     int len;
 
     configLookupTable.clear();
