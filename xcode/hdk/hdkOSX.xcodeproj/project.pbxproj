@@ -2739,7 +2739,7 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0710;
 			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "hdkOSX" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -2976,6 +2976,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E4A958B31968BE6200DCD2A0 /* paths_osx.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/hdk.dst;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -3002,6 +3003,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E4A958B31968BE6200DCD2A0 /* paths_osx.xcconfig */;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DSTROOT = /tmp/hdk.dst;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
@@ -3030,12 +3032,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E4A958B31968BE6200DCD2A0 /* paths_osx.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
 				SDKROOT = macosx;
@@ -3047,7 +3050,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E4A958B31968BE6200DCD2A0 /* paths_osx.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
