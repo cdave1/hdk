@@ -6,21 +6,6 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		E4ADE2A01987207D0039FF7A /* Framework */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = E4ADE2A11987207D0039FF7A /* Build configuration list for PBXAggregateTarget "Framework" */;
-			buildPhases = (
-				E4ADE2A61987209B0039FF7A /* Multiplatform Build */,
-			);
-			dependencies = (
-				E4ADE2A51987208B0039FF7A /* PBXTargetDependency */,
-			);
-			name = Framework;
-			productName = Framework;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		63CA7786119678090010C802 /* config.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 63CA7771119678090010C802 /* config.hpp */; };
 		63CA7787119678090010C802 /* cygwin_error.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 63CA7772119678090010C802 /* cygwin_error.hpp */; };
@@ -511,16 +496,6 @@
 		E4F36EAA1171699800792A2D /* xml_wiarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DE31171699800792A2D /* xml_wiarchive.hpp */; };
 		E4F36EAB1171699800792A2D /* xml_woarchive.hpp in Headers */ = {isa = PBXBuildFile; fileRef = E4F36DE41171699800792A2D /* xml_woarchive.hpp */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		E4ADE2A41987208B0039FF7A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = hdk;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		551EDF1A1827A191007E6CC3 /* paths.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = paths.xcconfig; path = ../paths.xcconfig; sourceTree = "<group>"; };
@@ -2279,7 +2254,6 @@
 			projectRoot = "";
 			targets = (
 				D2AAC07D0554694100DB518D /* hdk */,
-				E4ADE2A01987207D0039FF7A /* Framework */,
 			);
 		};
 /* End PBXProject section */
@@ -2298,20 +2272,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport FRAMEWORK_LOCN=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.framework\"\n\n# Create the path to the real Headers die\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdAnimation\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdCollections\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdCore\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdEffects\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdGame\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdGraphicsLibrary\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdInput\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdInterface\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdMath\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdScripts\"\nmkdir -p \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdSound\"\n\n# Create the required symlinks\n/bin/ln -sfh A \"${FRAMEWORK_LOCN}/Versions/Current\"\n/bin/ln -sfh Versions/Current/Headers \"${FRAMEWORK_LOCN}/Headers\"\n/bin/ln -sfh \"Versions/Current/${PRODUCT_NAME}\" \\\n\"${FRAMEWORK_LOCN}/${PRODUCT_NAME}\"\n\n# Copy the public headers into the framework\n/bin/cp -a ${SOURCE_ROOT}/../../include/hdk/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdAnimation/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdAnimation/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdCollections/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdCollections/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdCore/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdCore/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdEffects/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdEffects/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdGame/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdGame/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdGraphicsLibrary/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdGraphicsLibrary/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdInput/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdInput/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdInterface/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdInterface/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdMath/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdMath/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdScripts/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdScripts/\"\n/bin/cp -a ${SOURCE_ROOT}/../../src/hdk/hdSound/*.h \"${FRAMEWORK_LOCN}/Versions/A/Headers/hdSound/\"";
-		};
-		E4ADE2A61987209B0039FF7A /* Multiplatform Build */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Multiplatform Build";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\n\n# If we're already inside this script then die\nif [ -n \"$RW_MULTIPLATFORM_BUILD_IN_PROGRESS\" ]; then\nexit 0\nfi\nexport RW_MULTIPLATFORM_BUILD_IN_PROGRESS=1\n\nRW_FRAMEWORK_NAME=${PROJECT_NAME}\nRW_INPUT_STATIC_LIB=\"lib${PROJECT_NAME}.a\"\nRW_FRAMEWORK_LOCATION=\"${BUILT_PRODUCTS_DIR}/${RW_FRAMEWORK_NAME}.framework\"\n\nfunction build_static_library {\n    # Will rebuild the static library as specified\n    #     build_static_library sdk\n    xcrun xcodebuild -project \"${PROJECT_FILE_PATH}\" \\\n    -target \"${TARGET_NAME}\" \\\n    -configuration \"${CONFIGURATION}\" \\\n    -sdk \"${1}\" \\\n    ONLY_ACTIVE_ARCH=NO \\\n    BUILD_DIR=\"${BUILD_DIR}\" \\\n    OBJROOT=\"${OBJROOT}\" \\\n    BUILD_ROOT=\"${BUILD_ROOT}\" \\\n    SYMROOT=\"${SYMROOT}\" $ACTION\n}\n\nfunction make_fat_library {\n    # Will smash 2 static libs together\n    #     make_fat_library in1 in2 out\n    xcrun lipo -create \"${1}\" \"${2}\" -output \"${3}\"\n}\n\n# 1 - Extract the platform (iphoneos/iphonesimulator) from the SDK name\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]; then\nRW_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\n# 2 - Extract the version from the SDK\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]; then\nRW_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\n# 3 - Determine the other platform\nif [ \"$RW_SDK_PLATFORM\" == \"iphoneos\" ]; then\nRW_OTHER_PLATFORM=iphonesimulator\nelse\nRW_OTHER_PLATFORM=iphoneos\nfi\n\n# 4 - Find the build directory\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$RW_SDK_PLATFORM$ ]]; then\nRW_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${RW_OTHER_PLATFORM}\"\nelse\necho \"Could not find other platform build directory.\"\nexit 1\nfi\n\n# Build the other platform.\nbuild_static_library \"${RW_OTHER_PLATFORM}${RW_SDK_VERSION}\"\n\n# If we're currently building for iphonesimulator, then need to rebuild\n#   to ensure that we get both i386 and x86_64\nif [ \"$RW_SDK_PLATFORM\" == \"iphonesimulator\" ]; then\nbuild_static_library \"${SDK_NAME}\"\nfi\n\n# Join the 2 static libs into 1 and push into the .framework\nmake_fat_library \"${BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\" \\\n\"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_INPUT_STATIC_LIB}\" \\\n\"${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\"\n\n# Ensure that the framework is present in both platform's build directories\ncp -a \"${RW_FRAMEWORK_LOCATION}/Versions/A/${RW_FRAMEWORK_NAME}\" \\\n\"${RW_OTHER_BUILT_PRODUCTS_DIR}/${RW_FRAMEWORK_NAME}.framework/Versions/A/${RW_FRAMEWORK_NAME}\"\n\n# Copy the framework to the user's desktop\nditto \"${RW_FRAMEWORK_LOCATION}\" \"${HOME}/Desktop/${RW_FRAMEWORK_NAME}.framework\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -2482,14 +2442,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		E4ADE2A51987208B0039FF7A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D2AAC07D0554694100DB518D /* hdk */;
-			targetProxy = E4ADE2A41987208B0039FF7A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
 		1DEB921F08733DC00010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2599,21 +2551,6 @@
 			};
 			name = Release;
 		};
-		E4ADE2A21987207D0039FF7A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		E4ADE2A31987207D0039FF7A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2631,15 +2568,6 @@
 			buildConfigurations = (
 				1DEB922308733DC00010E9CD /* Debug */,
 				1DEB922408733DC00010E9CD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E4ADE2A11987207D0039FF7A /* Build configuration list for PBXAggregateTarget "Framework" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E4ADE2A21987207D0039FF7A /* Debug */,
-				E4ADE2A31987207D0039FF7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
