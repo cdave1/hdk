@@ -4,3 +4,6 @@
 [submodule "toolkit/sierra"]
 	path = toolkit/sierra
 	url = git@github.com:cdave1/hdk-sierra-v1.git
+[submodule "toolkit/pakmaker"]
+	path = toolkit/pakmaker
+	url = git@github.com:cdave1/hdk-pakmaker-v1.git
