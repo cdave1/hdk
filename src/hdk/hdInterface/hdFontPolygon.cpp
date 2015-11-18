@@ -189,6 +189,7 @@ void hdFontPolygon::TextIntoGlyphs()
     if (m_font == NULL)
     {
         hdPrintf("No font found.\n");
+        return;
     }
 
     if (m_font->m_texture == NULL)
