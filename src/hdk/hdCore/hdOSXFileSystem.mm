@@ -19,6 +19,8 @@
 
 #include "hdOSXFileSystem.h"
 
+#include <hdk/hdCore/hdCommon.h>
+
 @implementation hdOSXFileSystem
 
 static hdOSXFileSystem *singleton = nil;

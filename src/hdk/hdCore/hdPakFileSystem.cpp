@@ -23,6 +23,8 @@
 #include <fstream>
 #include <regex>
 
+#include <hdk/hdCore/hdCommon.h>
+
 void hdPakFileSystem::MakePak(const char* baseDir, const char* pakManifestFilePath, const char *destDir)
 {
     char tmp[256];
