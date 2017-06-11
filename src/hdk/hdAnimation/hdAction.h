@@ -28,7 +28,7 @@ class hdAction
 public:
     hdAction();
 
-    virtual ~hdAction();
+    ~hdAction();
 
     const bool isFinished();
 

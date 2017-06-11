@@ -1,5 +1,5 @@
 #include <TargetConditionals.h>
-#include "hdCore/hdCommon.h"
+#include <hdk/hdCore/hdCommon.h>
 #ifdef __OBJC__
 #import <Foundation/Foundation.h>
 #endif

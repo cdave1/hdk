@@ -52,7 +52,7 @@ int hdCompression_Zip(const char* inBuffer, const long inLen,
      - destLen is the actual size of the compressed buffer...
      */
     zSourceLen = (uLongf)inLen;
-    if (NULL == (zSourceBuffer = (Bytef *)calloc(1, sizeof(Bytef) * zSourceLen + 1)))
+    if (NULL == (zSourceBuffer = (Bytef *)calloc(1, sizeof(Bytef) * (zSourceLen + 1))))
     {
         hdPrintf("MALLOC ERROR\n");
         return -1;
@@ -81,7 +81,7 @@ int hdCompression_Zip(const char* inBuffer, const long inLen,
     }
 
     snprintf(*outBuffer, 16, "%-16ld", (long)zSourceLen);
-    memcpy((*outBuffer)+16, zDestBuffer, (long)((*outLen) * sizeof(char)));
+    memcpy((*outBuffer)+16, zDestBuffer, (long)(zDestLen * sizeof(char)));
 
     free(zSourceBuffer);
     free(zDestBuffer);

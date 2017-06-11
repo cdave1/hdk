@@ -2,4 +2,4 @@
 #ifdef __OBJC__
 #import <Foundation/Foundation.h>
 #endif
-#include "hdCore/hdCommon.h"
+#include <hdk/hdCore/hdCommon.h>

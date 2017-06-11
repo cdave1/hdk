@@ -5,6 +5,6 @@
 OTHER_LDFLAGS = -all_load -ObjC
 
 HDKPATH = /Users/davidpetrie/Projects/hdk/hdTech1/
-HDKPATHS = $(HDKPATH)libs/Box2D/2.02/Include $(HDKPATH)libs/Box2D/2.02/Source/Dynamics/Controllers $(HDKPATH)include/ $(HDKPATH)src/** /usr/local/include
+HDKPATHS = $(HDKPATH)libs/Box2D/2.02/Include $(HDKPATH)libs/Box2D/2.02/Source/Dynamics/Controllers $(HDKPATH)include/ $(HDKPATH)src/** $(HDKPATH)libs/boost/
 
 HEADER_SEARCH_PATHS = $(HDKPATHS)

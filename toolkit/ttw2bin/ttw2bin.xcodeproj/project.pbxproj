@@ -10,56 +10,70 @@
 		63B4BCB1107537F300A0A288 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63B4BCB0107537F300A0A288 /* Foundation.framework */; };
 		63CA75D8119666690010C802 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63CA75D7119666690010C802 /* OpenGL.framework */; };
 		8DD76F650486A84900D96B5E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.cpp */; settings = {ATTRIBUTES = (); }; };
-		E4236CE119861A4C00A70605 /* totemBlock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4236CC319861A4C00A70605 /* totemBlock.cpp */; };
-		E4236CE219861A4C00A70605 /* totemContactManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4236CC619861A4C00A70605 /* totemContactManager.cpp */; };
-		E4236CE319861A4C00A70605 /* totemEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4236CC919861A4C00A70605 /* totemEvent.cpp */; };
-		E4236CE419861A4C00A70605 /* totemFloorInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4236CCB19861A4C00A70605 /* totemFloorInfo.cpp */; };
-		E4236CE519861A4C00A70605 /* totemItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4236CCF19861A4C00A70605 /* totemItem.cpp */; };
-		E4236CE619861A4C00A70605 /* totemJack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4236CD119861A4C00A70605 /* totemJack.cpp */; };
-		E4236CE719861A4C00A70605 /* totemJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4236CD319861A4C00A70605 /* totemJoint.cpp */; };
-		E4236CE819861A4C00A70605 /* totemLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4236CD519861A4C00A70605 /* totemLayer.cpp */; };
-		E4236CE919861A4C00A70605 /* totemLevel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4236CD719861A4C00A70605 /* totemLevel.cpp */; };
-		E4236CEA19861A4C00A70605 /* totemPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4236CD919861A4C00A70605 /* totemPolygon.cpp */; };
-		E4236CEB19861A4C00A70605 /* totemUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4236CDB19861A4C00A70605 /* totemUtils.cpp */; };
-		E4236CEC19861A4C00A70605 /* totemWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4236CDD19861A4C00A70605 /* totemWorld.cpp */; };
-		E4236CED19861A4C00A70605 /* totemWorldManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4236CDF19861A4C00A70605 /* totemWorldManager.cpp */; };
-		E4925C2319861C7900FD5BE5 /* libhdkOSX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4925C2019861C6D00FD5BE5 /* libhdkOSX.a */; };
-		E4925C2519861CB000FD5BE5 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4925C2419861CB000FD5BE5 /* libz.dylib */; };
-		E4925C2B19861CBE00FD5BE5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4925C2619861CBE00FD5BE5 /* AudioToolbox.framework */; };
-		E4925C2C19861CBE00FD5BE5 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4925C2719861CBE00FD5BE5 /* CoreAudio.framework */; };
-		E4925C2D19861CBE00FD5BE5 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4925C2819861CBE00FD5BE5 /* OpenAL.framework */; };
-		E4925C2E19861CBE00FD5BE5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4925C2919861CBE00FD5BE5 /* QuartzCore.framework */; };
-		E4925C2F19861CBE00FD5BE5 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4925C2A19861CBE00FD5BE5 /* GLUT.framework */; };
+		E498F27B1EEBCDF300FF0564 /* totemBlock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E498F25B1EEBCDF300FF0564 /* totemBlock.cpp */; };
+		E498F27C1EEBCDF300FF0564 /* totemContactManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E498F25E1EEBCDF300FF0564 /* totemContactManager.cpp */; };
+		E498F27D1EEBCDF300FF0564 /* totemEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E498F2611EEBCDF300FF0564 /* totemEvent.cpp */; };
+		E498F27E1EEBCDF300FF0564 /* totemFloorInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E498F2631EEBCDF300FF0564 /* totemFloorInfo.cpp */; };
+		E498F27F1EEBCDF300FF0564 /* totemJack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E498F2671EEBCDF300FF0564 /* totemJack.cpp */; };
+		E498F2801EEBCDF300FF0564 /* totemJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E498F2691EEBCDF300FF0564 /* totemJoint.cpp */; };
+		E498F2811EEBCDF300FF0564 /* totemLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E498F26B1EEBCDF300FF0564 /* totemLayer.cpp */; };
+		E498F2821EEBCDF300FF0564 /* totemLevel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E498F26D1EEBCDF300FF0564 /* totemLevel.cpp */; };
+		E498F2841EEBCDF300FF0564 /* totemPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E498F2711EEBCDF300FF0564 /* totemPolygon.cpp */; };
+		E498F2851EEBCDF300FF0564 /* totemScripting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E498F2731EEBCDF300FF0564 /* totemScripting.cpp */; };
+		E498F2861EEBCDF300FF0564 /* totemUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E498F2751EEBCDF300FF0564 /* totemUtils.cpp */; };
+		E498F2871EEBCDF300FF0564 /* totemWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E498F2771EEBCDF300FF0564 /* totemWorld.cpp */; };
+		E498F2881EEBCDF300FF0564 /* totemWorldManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E498F2791EEBCDF300FF0564 /* totemWorldManager.cpp */; };
+		E498F28E1EECE8D400FF0564 /* totemUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E498F2751EEBCDF300FF0564 /* totemUtils.cpp */; };
+		E498F28F1EECE8D400FF0564 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 08FB7796FE84155DC02AAC07 /* main.cpp */; settings = {ATTRIBUTES = (); }; };
+		E498F2901EECE8D400FF0564 /* totemBlock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E498F25B1EEBCDF300FF0564 /* totemBlock.cpp */; };
+		E498F2911EECE8D400FF0564 /* totemFloorInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E498F2631EEBCDF300FF0564 /* totemFloorInfo.cpp */; };
+		E498F2921EECE8D400FF0564 /* totemScripting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E498F2731EEBCDF300FF0564 /* totemScripting.cpp */; };
+		E498F2931EECE8D400FF0564 /* totemEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E498F2611EEBCDF300FF0564 /* totemEvent.cpp */; };
+		E498F2941EECE8D400FF0564 /* totemWorldManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E498F2791EEBCDF300FF0564 /* totemWorldManager.cpp */; };
+		E498F2961EECE8D400FF0564 /* totemJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E498F2691EEBCDF300FF0564 /* totemJoint.cpp */; };
+		E498F2971EECE8D400FF0564 /* totemWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E498F2771EEBCDF300FF0564 /* totemWorld.cpp */; };
+		E498F2981EECE8D400FF0564 /* totemLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E498F26B1EEBCDF300FF0564 /* totemLayer.cpp */; };
+		E498F2991EECE8D400FF0564 /* totemLevel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E498F26D1EEBCDF300FF0564 /* totemLevel.cpp */; };
+		E498F29A1EECE8D400FF0564 /* totemJack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E498F2671EEBCDF300FF0564 /* totemJack.cpp */; };
+		E498F29B1EECE8D400FF0564 /* totemContactManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E498F25E1EEBCDF300FF0564 /* totemContactManager.cpp */; };
+		E498F29C1EECE8D400FF0564 /* totemPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E498F2711EEBCDF300FF0564 /* totemPolygon.cpp */; };
+		E498F29F1EECE8D400FF0564 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63B4BCB0107537F300A0A288 /* Foundation.framework */; };
+		E498F2A01EECE8D400FF0564 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63CA75D7119666690010C802 /* OpenGL.framework */; };
+		E498F5D71EECFF3400FF0564 /* libhdkOSXmin_64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E498F2DE1EECF83300FF0564 /* libhdkOSXmin_64.a */; };
+		E498F5D81EECFF3800FF0564 /* libhdkOSXmin_32.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E498F2E01EECF83300FF0564 /* libhdkOSXmin_32.a */; };
+		E498F8A31EED059800FF0564 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = E498F8A21EED059800FF0564 /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		E4925C1F19861C6D00FD5BE5 /* PBXContainerItemProxy */ = {
+		E498F2DD1EECF83300FF0564 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E4925C1B19861C6D00FD5BE5 /* hdkOSX.xcodeproj */;
+			containerPortal = E498F2D81EECF83300FF0564 /* hdkOSXmin.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D;
-			remoteInfo = hdkOSX;
+			remoteGlobalIDString = 6362DA72118995A600184AE0;
+			remoteInfo = hdkOSXmin_64;
 		};
-		E4925C2119861C7500FD5BE5 /* PBXContainerItemProxy */ = {
+		E498F2DF1EECF83300FF0564 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = E4925C1B19861C6D00FD5BE5 /* hdkOSX.xcodeproj */;
+			containerPortal = E498F2D81EECF83300FF0564 /* hdkOSXmin.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 63D6FBFD118BB0CA00D76242;
+			remoteInfo = hdkOSXmin_32;
+		};
+		E498F5D31EECFF2200FF0564 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E498F2D81EECF83300FF0564 /* hdkOSXmin.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = hdkOSX;
+			remoteGlobalIDString = 6362D892118995A600184AE0;
+			remoteInfo = hdkOSXmin_64;
+		};
+		E498F5D51EECFF2B00FF0564 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E498F2D81EECF83300FF0564 /* hdkOSXmin.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 63D6FA1D118BB0CA00D76242;
+			remoteInfo = hdkOSXmin_32;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		8DD76F690486A84900D96B5E /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 8;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		08FB7796FE84155DC02AAC07 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -68,43 +82,39 @@
 		63CA75B81196641D0010C802 /* ttw2bin_prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ttw2bin_prefix.pch; sourceTree = "<group>"; };
 		63CA75D7119666690010C802 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		8DD76F6C0486A84900D96B5E /* ttw2bin32 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ttw2bin32; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4236CC319861A4C00A70605 /* totemBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemBlock.cpp; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemBlock.cpp; sourceTree = "<group>"; };
-		E4236CC419861A4C00A70605 /* totemBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemBlock.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemBlock.h; sourceTree = "<group>"; };
-		E4236CC519861A4C00A70605 /* totemConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemConstants.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemConstants.h; sourceTree = "<group>"; };
-		E4236CC619861A4C00A70605 /* totemContactManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemContactManager.cpp; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemContactManager.cpp; sourceTree = "<group>"; };
-		E4236CC719861A4C00A70605 /* totemContactManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemContactManager.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemContactManager.h; sourceTree = "<group>"; };
-		E4236CC819861A4C00A70605 /* totemEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemEnums.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemEnums.h; sourceTree = "<group>"; };
-		E4236CC919861A4C00A70605 /* totemEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemEvent.cpp; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemEvent.cpp; sourceTree = "<group>"; };
-		E4236CCA19861A4C00A70605 /* totemEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemEvent.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemEvent.h; sourceTree = "<group>"; };
-		E4236CCB19861A4C00A70605 /* totemFloorInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemFloorInfo.cpp; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemFloorInfo.cpp; sourceTree = "<group>"; };
-		E4236CCC19861A4C00A70605 /* totemFloorInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemFloorInfo.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemFloorInfo.h; sourceTree = "<group>"; };
-		E4236CCD19861A4C00A70605 /* totemGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemGame.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemGame.h; sourceTree = "<group>"; };
-		E4236CCE19861A4C00A70605 /* totemGameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemGameObject.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemGameObject.h; sourceTree = "<group>"; };
-		E4236CCF19861A4C00A70605 /* totemItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemItem.cpp; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemItem.cpp; sourceTree = "<group>"; };
-		E4236CD019861A4C00A70605 /* totemItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemItem.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemItem.h; sourceTree = "<group>"; };
-		E4236CD119861A4C00A70605 /* totemJack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemJack.cpp; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemJack.cpp; sourceTree = "<group>"; };
-		E4236CD219861A4C00A70605 /* totemJack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemJack.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemJack.h; sourceTree = "<group>"; };
-		E4236CD319861A4C00A70605 /* totemJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemJoint.cpp; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemJoint.cpp; sourceTree = "<group>"; };
-		E4236CD419861A4C00A70605 /* totemJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemJoint.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemJoint.h; sourceTree = "<group>"; };
-		E4236CD519861A4C00A70605 /* totemLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemLayer.cpp; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemLayer.cpp; sourceTree = "<group>"; };
-		E4236CD619861A4C00A70605 /* totemLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemLayer.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemLayer.h; sourceTree = "<group>"; };
-		E4236CD719861A4C00A70605 /* totemLevel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemLevel.cpp; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemLevel.cpp; sourceTree = "<group>"; };
-		E4236CD819861A4C00A70605 /* totemLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemLevel.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemLevel.h; sourceTree = "<group>"; };
-		E4236CD919861A4C00A70605 /* totemPolygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemPolygon.cpp; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemPolygon.cpp; sourceTree = "<group>"; };
-		E4236CDA19861A4C00A70605 /* totemPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemPolygon.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemPolygon.h; sourceTree = "<group>"; };
-		E4236CDB19861A4C00A70605 /* totemUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemUtils.cpp; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemUtils.cpp; sourceTree = "<group>"; };
-		E4236CDC19861A4C00A70605 /* totemUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemUtils.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemUtils.h; sourceTree = "<group>"; };
-		E4236CDD19861A4C00A70605 /* totemWorld.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemWorld.cpp; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemWorld.cpp; sourceTree = "<group>"; };
-		E4236CDE19861A4C00A70605 /* totemWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemWorld.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemWorld.h; sourceTree = "<group>"; };
-		E4236CDF19861A4C00A70605 /* totemWorldManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemWorldManager.cpp; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemWorldManager.cpp; sourceTree = "<group>"; };
-		E4236CE019861A4C00A70605 /* totemWorldManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemWorldManager.h; path = ../../../../../hackdirt.products/Smashed/src/gameClasses/totemWorldManager.h; sourceTree = "<group>"; };
-		E4925C1B19861C6D00FD5BE5 /* hdkOSX.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = hdkOSX.xcodeproj; path = ../../xcode/hdk/hdkOSX.xcodeproj; sourceTree = "<group>"; };
-		E4925C2419861CB000FD5BE5 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libz.dylib; sourceTree = "<absolute>"; };
-		E4925C2619861CBE00FD5BE5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = "<absolute>"; };
-		E4925C2719861CBE00FD5BE5 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreAudio.framework; sourceTree = "<absolute>"; };
-		E4925C2819861CBE00FD5BE5 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenAL.framework; sourceTree = "<absolute>"; };
-		E4925C2919861CBE00FD5BE5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = "<absolute>"; };
-		E4925C2A19861CBE00FD5BE5 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/GLUT.framework; sourceTree = "<absolute>"; };
+		E498F25B1EEBCDF300FF0564 /* totemBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemBlock.cpp; path = ../../../../hackdirt.smashed/src/gameClasses/totemBlock.cpp; sourceTree = "<group>"; };
+		E498F25C1EEBCDF300FF0564 /* totemBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemBlock.h; path = ../../../../hackdirt.smashed/src/gameClasses/totemBlock.h; sourceTree = "<group>"; };
+		E498F25D1EEBCDF300FF0564 /* totemConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemConstants.h; path = ../../../../hackdirt.smashed/src/gameClasses/totemConstants.h; sourceTree = "<group>"; };
+		E498F25E1EEBCDF300FF0564 /* totemContactManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemContactManager.cpp; path = ../../../../hackdirt.smashed/src/gameClasses/totemContactManager.cpp; sourceTree = "<group>"; };
+		E498F25F1EEBCDF300FF0564 /* totemContactManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemContactManager.h; path = ../../../../hackdirt.smashed/src/gameClasses/totemContactManager.h; sourceTree = "<group>"; };
+		E498F2601EEBCDF300FF0564 /* totemEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemEnums.h; path = ../../../../hackdirt.smashed/src/gameClasses/totemEnums.h; sourceTree = "<group>"; };
+		E498F2611EEBCDF300FF0564 /* totemEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemEvent.cpp; path = ../../../../hackdirt.smashed/src/gameClasses/totemEvent.cpp; sourceTree = "<group>"; };
+		E498F2621EEBCDF300FF0564 /* totemEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemEvent.h; path = ../../../../hackdirt.smashed/src/gameClasses/totemEvent.h; sourceTree = "<group>"; };
+		E498F2631EEBCDF300FF0564 /* totemFloorInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemFloorInfo.cpp; path = ../../../../hackdirt.smashed/src/gameClasses/totemFloorInfo.cpp; sourceTree = "<group>"; };
+		E498F2641EEBCDF300FF0564 /* totemFloorInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemFloorInfo.h; path = ../../../../hackdirt.smashed/src/gameClasses/totemFloorInfo.h; sourceTree = "<group>"; };
+		E498F2651EEBCDF300FF0564 /* totemGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemGame.h; path = ../../../../hackdirt.smashed/src/gameClasses/totemGame.h; sourceTree = "<group>"; };
+		E498F2661EEBCDF300FF0564 /* totemGameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemGameObject.h; path = ../../../../hackdirt.smashed/src/gameClasses/totemGameObject.h; sourceTree = "<group>"; };
+		E498F2671EEBCDF300FF0564 /* totemJack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemJack.cpp; path = ../../../../hackdirt.smashed/src/gameClasses/totemJack.cpp; sourceTree = "<group>"; };
+		E498F2681EEBCDF300FF0564 /* totemJack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemJack.h; path = ../../../../hackdirt.smashed/src/gameClasses/totemJack.h; sourceTree = "<group>"; };
+		E498F2691EEBCDF300FF0564 /* totemJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemJoint.cpp; path = ../../../../hackdirt.smashed/src/gameClasses/totemJoint.cpp; sourceTree = "<group>"; };
+		E498F26A1EEBCDF300FF0564 /* totemJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemJoint.h; path = ../../../../hackdirt.smashed/src/gameClasses/totemJoint.h; sourceTree = "<group>"; };
+		E498F26B1EEBCDF300FF0564 /* totemLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemLayer.cpp; path = ../../../../hackdirt.smashed/src/gameClasses/totemLayer.cpp; sourceTree = "<group>"; };
+		E498F26C1EEBCDF300FF0564 /* totemLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemLayer.h; path = ../../../../hackdirt.smashed/src/gameClasses/totemLayer.h; sourceTree = "<group>"; };
+		E498F26D1EEBCDF300FF0564 /* totemLevel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemLevel.cpp; path = ../../../../hackdirt.smashed/src/gameClasses/totemLevel.cpp; sourceTree = "<group>"; };
+		E498F26E1EEBCDF300FF0564 /* totemLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemLevel.h; path = ../../../../hackdirt.smashed/src/gameClasses/totemLevel.h; sourceTree = "<group>"; };
+		E498F2711EEBCDF300FF0564 /* totemPolygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemPolygon.cpp; path = ../../../../hackdirt.smashed/src/gameClasses/totemPolygon.cpp; sourceTree = "<group>"; };
+		E498F2721EEBCDF300FF0564 /* totemPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemPolygon.h; path = ../../../../hackdirt.smashed/src/gameClasses/totemPolygon.h; sourceTree = "<group>"; };
+		E498F2731EEBCDF300FF0564 /* totemScripting.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemScripting.cpp; path = ../../../../hackdirt.smashed/src/gameClasses/totemScripting.cpp; sourceTree = "<group>"; };
+		E498F2741EEBCDF300FF0564 /* totemScripting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemScripting.h; path = ../../../../hackdirt.smashed/src/gameClasses/totemScripting.h; sourceTree = "<group>"; };
+		E498F2751EEBCDF300FF0564 /* totemUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemUtils.cpp; path = ../../../../hackdirt.smashed/src/gameClasses/totemUtils.cpp; sourceTree = "<group>"; };
+		E498F2761EEBCDF300FF0564 /* totemUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemUtils.h; path = ../../../../hackdirt.smashed/src/gameClasses/totemUtils.h; sourceTree = "<group>"; };
+		E498F2771EEBCDF300FF0564 /* totemWorld.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemWorld.cpp; path = ../../../../hackdirt.smashed/src/gameClasses/totemWorld.cpp; sourceTree = "<group>"; };
+		E498F2781EEBCDF300FF0564 /* totemWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemWorld.h; path = ../../../../hackdirt.smashed/src/gameClasses/totemWorld.h; sourceTree = "<group>"; };
+		E498F2791EEBCDF300FF0564 /* totemWorldManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = totemWorldManager.cpp; path = ../../../../hackdirt.smashed/src/gameClasses/totemWorldManager.cpp; sourceTree = "<group>"; };
+		E498F27A1EEBCDF300FF0564 /* totemWorldManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = totemWorldManager.h; path = ../../../../hackdirt.smashed/src/gameClasses/totemWorldManager.h; sourceTree = "<group>"; };
+		E498F2A51EECE8D400FF0564 /* ttw2bin64 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ttw2bin64; sourceTree = BUILT_PRODUCTS_DIR; };
+		E498F2D81EECF83300FF0564 /* hdkOSXmin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = hdkOSXmin.xcodeproj; path = ../../xcode/hdk/hdkOSXmin.xcodeproj; sourceTree = "<group>"; };
+		E498F8A21EED059800FF0564 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,15 +122,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4925C2E19861CBE00FD5BE5 /* QuartzCore.framework in Frameworks */,
-				E4925C2D19861CBE00FD5BE5 /* OpenAL.framework in Frameworks */,
-				E4925C2F19861CBE00FD5BE5 /* GLUT.framework in Frameworks */,
-				E4925C2C19861CBE00FD5BE5 /* CoreAudio.framework in Frameworks */,
-				E4925C2319861C7900FD5BE5 /* libhdkOSX.a in Frameworks */,
-				E4925C2519861CB000FD5BE5 /* libz.dylib in Frameworks */,
-				E4925C2B19861CBE00FD5BE5 /* AudioToolbox.framework in Frameworks */,
+				E498F5D81EECFF3800FF0564 /* libhdkOSXmin_32.a in Frameworks */,
 				63B4BCB1107537F300A0A288 /* Foundation.framework in Frameworks */,
 				63CA75D8119666690010C802 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E498F29D1EECE8D400FF0564 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E498F8A31EED059800FF0564 /* libz.tbd in Frameworks */,
+				E498F5D71EECFF3400FF0564 /* libhdkOSXmin_64.a in Frameworks */,
+				E498F29F1EECE8D400FF0564 /* Foundation.framework in Frameworks */,
+				E498F2A01EECE8D400FF0564 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				8DD76F6C0486A84900D96B5E /* ttw2bin32 */,
+				E498F2A51EECE8D400FF0564 /* ttw2bin64 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,15 +183,10 @@
 		63B4BCAF107537E100A0A288 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E4925C2619861CBE00FD5BE5 /* AudioToolbox.framework */,
-				E4925C2719861CBE00FD5BE5 /* CoreAudio.framework */,
+				E498F8A21EED059800FF0564 /* libz.tbd */,
+				E498F2D81EECF83300FF0564 /* hdkOSXmin.xcodeproj */,
 				63B4BCB0107537F300A0A288 /* Foundation.framework */,
-				E4925C2A19861CBE00FD5BE5 /* GLUT.framework */,
-				E4925C1B19861C6D00FD5BE5 /* hdkOSX.xcodeproj */,
-				E4925C2419861CB000FD5BE5 /* libz.dylib */,
-				E4925C2819861CBE00FD5BE5 /* OpenAL.framework */,
 				63CA75D7119666690010C802 /* OpenGL.framework */,
-				E4925C2919861CBE00FD5BE5 /* QuartzCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -183,36 +194,36 @@
 		63CA751E1196618A0010C802 /* Totem */ = {
 			isa = PBXGroup;
 			children = (
-				E4236CC319861A4C00A70605 /* totemBlock.cpp */,
-				E4236CC419861A4C00A70605 /* totemBlock.h */,
-				E4236CC519861A4C00A70605 /* totemConstants.h */,
-				E4236CC619861A4C00A70605 /* totemContactManager.cpp */,
-				E4236CC719861A4C00A70605 /* totemContactManager.h */,
-				E4236CC819861A4C00A70605 /* totemEnums.h */,
-				E4236CC919861A4C00A70605 /* totemEvent.cpp */,
-				E4236CCA19861A4C00A70605 /* totemEvent.h */,
-				E4236CCB19861A4C00A70605 /* totemFloorInfo.cpp */,
-				E4236CCC19861A4C00A70605 /* totemFloorInfo.h */,
-				E4236CCD19861A4C00A70605 /* totemGame.h */,
-				E4236CCE19861A4C00A70605 /* totemGameObject.h */,
-				E4236CCF19861A4C00A70605 /* totemItem.cpp */,
-				E4236CD019861A4C00A70605 /* totemItem.h */,
-				E4236CD119861A4C00A70605 /* totemJack.cpp */,
-				E4236CD219861A4C00A70605 /* totemJack.h */,
-				E4236CD319861A4C00A70605 /* totemJoint.cpp */,
-				E4236CD419861A4C00A70605 /* totemJoint.h */,
-				E4236CD519861A4C00A70605 /* totemLayer.cpp */,
-				E4236CD619861A4C00A70605 /* totemLayer.h */,
-				E4236CD719861A4C00A70605 /* totemLevel.cpp */,
-				E4236CD819861A4C00A70605 /* totemLevel.h */,
-				E4236CD919861A4C00A70605 /* totemPolygon.cpp */,
-				E4236CDA19861A4C00A70605 /* totemPolygon.h */,
-				E4236CDB19861A4C00A70605 /* totemUtils.cpp */,
-				E4236CDC19861A4C00A70605 /* totemUtils.h */,
-				E4236CDD19861A4C00A70605 /* totemWorld.cpp */,
-				E4236CDE19861A4C00A70605 /* totemWorld.h */,
-				E4236CDF19861A4C00A70605 /* totemWorldManager.cpp */,
-				E4236CE019861A4C00A70605 /* totemWorldManager.h */,
+				E498F25B1EEBCDF300FF0564 /* totemBlock.cpp */,
+				E498F25C1EEBCDF300FF0564 /* totemBlock.h */,
+				E498F25D1EEBCDF300FF0564 /* totemConstants.h */,
+				E498F25E1EEBCDF300FF0564 /* totemContactManager.cpp */,
+				E498F25F1EEBCDF300FF0564 /* totemContactManager.h */,
+				E498F2601EEBCDF300FF0564 /* totemEnums.h */,
+				E498F2611EEBCDF300FF0564 /* totemEvent.cpp */,
+				E498F2621EEBCDF300FF0564 /* totemEvent.h */,
+				E498F2631EEBCDF300FF0564 /* totemFloorInfo.cpp */,
+				E498F2641EEBCDF300FF0564 /* totemFloorInfo.h */,
+				E498F2651EEBCDF300FF0564 /* totemGame.h */,
+				E498F2661EEBCDF300FF0564 /* totemGameObject.h */,
+				E498F2671EEBCDF300FF0564 /* totemJack.cpp */,
+				E498F2681EEBCDF300FF0564 /* totemJack.h */,
+				E498F2691EEBCDF300FF0564 /* totemJoint.cpp */,
+				E498F26A1EEBCDF300FF0564 /* totemJoint.h */,
+				E498F26B1EEBCDF300FF0564 /* totemLayer.cpp */,
+				E498F26C1EEBCDF300FF0564 /* totemLayer.h */,
+				E498F26D1EEBCDF300FF0564 /* totemLevel.cpp */,
+				E498F26E1EEBCDF300FF0564 /* totemLevel.h */,
+				E498F2711EEBCDF300FF0564 /* totemPolygon.cpp */,
+				E498F2721EEBCDF300FF0564 /* totemPolygon.h */,
+				E498F2731EEBCDF300FF0564 /* totemScripting.cpp */,
+				E498F2741EEBCDF300FF0564 /* totemScripting.h */,
+				E498F2751EEBCDF300FF0564 /* totemUtils.cpp */,
+				E498F2761EEBCDF300FF0564 /* totemUtils.h */,
+				E498F2771EEBCDF300FF0564 /* totemWorld.cpp */,
+				E498F2781EEBCDF300FF0564 /* totemWorld.h */,
+				E498F2791EEBCDF300FF0564 /* totemWorldManager.cpp */,
+				E498F27A1EEBCDF300FF0564 /* totemWorldManager.h */,
 			);
 			name = Totem;
 			sourceTree = "<group>";
@@ -225,10 +236,11 @@
 			name = Config;
 			sourceTree = "<group>";
 		};
-		E4925C1C19861C6D00FD5BE5 /* Products */ = {
+		E498F2D91EECF83300FF0564 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E4925C2019861C6D00FD5BE5 /* libhdkOSX.a */,
+				E498F2DE1EECF83300FF0564 /* libhdkOSXmin_64.a */,
+				E498F2E01EECF83300FF0564 /* libhdkOSXmin_32.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -242,17 +254,36 @@
 			buildPhases = (
 				8DD76F640486A84900D96B5E /* Sources */,
 				8DD76F660486A84900D96B5E /* Frameworks */,
-				8DD76F690486A84900D96B5E /* CopyFiles */,
+				E498F2891EEBD1AE00FF0564 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E4925C2219861C7500FD5BE5 /* PBXTargetDependency */,
+				E498F5D61EECFF2B00FF0564 /* PBXTargetDependency */,
 			);
 			name = ttw2bin32;
 			productInstallPath = "$(HOME)/bin";
 			productName = PakMaker;
 			productReference = 8DD76F6C0486A84900D96B5E /* ttw2bin32 */;
+			productType = "com.apple.product-type.tool";
+		};
+		E498F28A1EECE8D400FF0564 /* ttw2bin64 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E498F2A21EECE8D400FF0564 /* Build configuration list for PBXNativeTarget "ttw2bin64" */;
+			buildPhases = (
+				E498F28D1EECE8D400FF0564 /* Sources */,
+				E498F29D1EECE8D400FF0564 /* Frameworks */,
+				E498F2A11EECE8D400FF0564 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E498F5D41EECFF2200FF0564 /* PBXTargetDependency */,
+			);
+			name = ttw2bin64;
+			productInstallPath = "$(HOME)/bin";
+			productName = PakMaker;
+			productReference = E498F2A51EECE8D400FF0564 /* ttw2bin64 */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -261,7 +292,7 @@
 		08FB7793FE84155DC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0830;
 			};
 			buildConfigurationList = 1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "ttw2bin" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -277,56 +308,119 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = E4925C1C19861C6D00FD5BE5 /* Products */;
-					ProjectRef = E4925C1B19861C6D00FD5BE5 /* hdkOSX.xcodeproj */;
+					ProductGroup = E498F2D91EECF83300FF0564 /* Products */;
+					ProjectRef = E498F2D81EECF83300FF0564 /* hdkOSXmin.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
 				8DD76F620486A84900D96B5E /* ttw2bin32 */,
+				E498F28A1EECE8D400FF0564 /* ttw2bin64 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		E4925C2019861C6D00FD5BE5 /* libhdkOSX.a */ = {
+		E498F2DE1EECF83300FF0564 /* libhdkOSXmin_64.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libhdkOSX.a;
-			remoteRef = E4925C1F19861C6D00FD5BE5 /* PBXContainerItemProxy */;
+			path = libhdkOSXmin_64.a;
+			remoteRef = E498F2DD1EECF83300FF0564 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		E498F2E01EECF83300FF0564 /* libhdkOSXmin_32.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libhdkOSXmin_32.a;
+			remoteRef = E498F2DF1EECF83300FF0564 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E498F2891EEBD1AE00FF0564 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp ${BUILT_PRODUCTS_DIR}/ttw2bin32 ${PROJECT_DIR}/ttw2bin32";
+		};
+		E498F2A11EECE8D400FF0564 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cp ${BUILT_PRODUCTS_DIR}/ttw2bin64 ${PROJECT_DIR}/ttw2bin64";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8DD76F640486A84900D96B5E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4236CE119861A4C00A70605 /* totemBlock.cpp in Sources */,
+				E498F2861EEBCDF300FF0564 /* totemUtils.cpp in Sources */,
 				8DD76F650486A84900D96B5E /* main.cpp in Sources */,
-				E4236CEA19861A4C00A70605 /* totemPolygon.cpp in Sources */,
-				E4236CE719861A4C00A70605 /* totemJoint.cpp in Sources */,
-				E4236CE819861A4C00A70605 /* totemLayer.cpp in Sources */,
-				E4236CE319861A4C00A70605 /* totemEvent.cpp in Sources */,
-				E4236CE519861A4C00A70605 /* totemItem.cpp in Sources */,
-				E4236CE219861A4C00A70605 /* totemContactManager.cpp in Sources */,
-				E4236CE619861A4C00A70605 /* totemJack.cpp in Sources */,
-				E4236CEB19861A4C00A70605 /* totemUtils.cpp in Sources */,
-				E4236CE419861A4C00A70605 /* totemFloorInfo.cpp in Sources */,
-				E4236CED19861A4C00A70605 /* totemWorldManager.cpp in Sources */,
-				E4236CEC19861A4C00A70605 /* totemWorld.cpp in Sources */,
-				E4236CE919861A4C00A70605 /* totemLevel.cpp in Sources */,
+				E498F27B1EEBCDF300FF0564 /* totemBlock.cpp in Sources */,
+				E498F27E1EEBCDF300FF0564 /* totemFloorInfo.cpp in Sources */,
+				E498F2851EEBCDF300FF0564 /* totemScripting.cpp in Sources */,
+				E498F27D1EEBCDF300FF0564 /* totemEvent.cpp in Sources */,
+				E498F2881EEBCDF300FF0564 /* totemWorldManager.cpp in Sources */,
+				E498F2801EEBCDF300FF0564 /* totemJoint.cpp in Sources */,
+				E498F2871EEBCDF300FF0564 /* totemWorld.cpp in Sources */,
+				E498F2811EEBCDF300FF0564 /* totemLayer.cpp in Sources */,
+				E498F2821EEBCDF300FF0564 /* totemLevel.cpp in Sources */,
+				E498F27F1EEBCDF300FF0564 /* totemJack.cpp in Sources */,
+				E498F27C1EEBCDF300FF0564 /* totemContactManager.cpp in Sources */,
+				E498F2841EEBCDF300FF0564 /* totemPolygon.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E498F28D1EECE8D400FF0564 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E498F28E1EECE8D400FF0564 /* totemUtils.cpp in Sources */,
+				E498F28F1EECE8D400FF0564 /* main.cpp in Sources */,
+				E498F2901EECE8D400FF0564 /* totemBlock.cpp in Sources */,
+				E498F2911EECE8D400FF0564 /* totemFloorInfo.cpp in Sources */,
+				E498F2921EECE8D400FF0564 /* totemScripting.cpp in Sources */,
+				E498F2931EECE8D400FF0564 /* totemEvent.cpp in Sources */,
+				E498F2941EECE8D400FF0564 /* totemWorldManager.cpp in Sources */,
+				E498F2961EECE8D400FF0564 /* totemJoint.cpp in Sources */,
+				E498F2971EECE8D400FF0564 /* totemWorld.cpp in Sources */,
+				E498F2981EECE8D400FF0564 /* totemLayer.cpp in Sources */,
+				E498F2991EECE8D400FF0564 /* totemLevel.cpp in Sources */,
+				E498F29A1EECE8D400FF0564 /* totemJack.cpp in Sources */,
+				E498F29B1EECE8D400FF0564 /* totemContactManager.cpp in Sources */,
+				E498F29C1EECE8D400FF0564 /* totemPolygon.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E4925C2219861C7500FD5BE5 /* PBXTargetDependency */ = {
+		E498F5D41EECFF2200FF0564 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = hdkOSX;
-			targetProxy = E4925C2119861C7500FD5BE5 /* PBXContainerItemProxy */;
+			name = hdkOSXmin_64;
+			targetProxy = E498F5D31EECFF2200FF0564 /* PBXContainerItemProxy */;
+		};
+		E498F5D61EECFF2B00FF0564 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = hdkOSXmin_32;
+			targetProxy = E498F5D51EECFF2B00FF0564 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -336,7 +430,6 @@
 			baseConfigurationReference = 63CA754B119661D20010C802 /* paths_osx.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -367,7 +460,6 @@
 			baseConfigurationReference = 63CA754B119661D20010C802 /* paths_osx.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = s;
@@ -390,11 +482,28 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63CA754B119661D20010C802 /* paths_osx.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				SDKROOT = macosx;
 			};
@@ -404,12 +513,70 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 63CA754B119661D20010C802 /* paths_osx.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
 				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E498F2A31EECE8D400FF0564 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63CA754B119661D20010C802 /* paths_osx.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ttw2bin_prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"LEVEL_EDITOR=1",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
+				GENERATE_PKGINFO_FILE = YES;
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
+			};
+			name = Debug;
+		};
+		E498F2A41EECE8D400FF0564 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63CA754B119661D20010C802 /* paths_osx.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ttw2bin_prefix.pch;
+				GENERATE_PKGINFO_FILE = YES;
+				INSTALL_PATH = /usr/local/bin;
+				OTHER_LDFLAGS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 			};
 			name = Release;
 		};
@@ -430,6 +597,15 @@
 			buildConfigurations = (
 				1DEB923608733DC60010E9CD /* Debug */,
 				1DEB923708733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E498F2A21EECE8D400FF0564 /* Build configuration list for PBXNativeTarget "ttw2bin64" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E498F2A31EECE8D400FF0564 /* Debug */,
+				E498F2A41EECE8D400FF0564 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

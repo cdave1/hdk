@@ -29,7 +29,7 @@
 
 #include <stdio.h>
 #include <iostream>
-#include "hdk_min.h"
+#include <hdk/hdk.h>
 #include "totemGame.h"
 
 

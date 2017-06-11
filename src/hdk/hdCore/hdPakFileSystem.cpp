@@ -304,7 +304,7 @@ void hdPakFileSystem::InitPakFileSystem(const char* baseDir)
     zippedLen = FileSystem_GetFileSize(hnd);
     if (NULL == (zippedManifest = (char *)malloc(sizeof(char) * zippedLen)))
     {
-        hdPrintf("MALLOC FAIL!!!");
+        hdPrintf("Malloc failed.");
         hdAssert(false);
     }
 

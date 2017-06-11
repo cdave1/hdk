@@ -43,3 +43,4 @@ profile
 freetype2/
 libs/boost
 libs/zlib*
+toolkit/ttw2bin/ttw2bin64
