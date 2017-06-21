@@ -18,7 +18,7 @@
  */
 
 #include "hdAlphaAction.h"
-#include <hdk/hdGraphicsLibrary/hdPolygon.h>
+#include <hdk/graphics/hdPolygon.h>
 
 hdAlphaAction::hdAlphaAction()
 {

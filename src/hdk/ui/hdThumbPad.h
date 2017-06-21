@@ -30,9 +30,9 @@
 #ifndef HD_THUMB_PAD
 #define HD_THUMB_PAD
 
-#include <hdk/hdInterface/hdReceiver.h>
-#include <hdk/hdInterface/hdFontManager.h>
-#include <hdk/hdInterface/hdUIImage.h>
+#include <hdk/ui/hdReceiver.h>
+#include <hdk/ui/hdFontManager.h>
+#include <hdk/ui/hdUIImage.h>
 
 typedef enum
 {

@@ -17,14 +17,14 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef _HD_GAME_H_
-#define _HD_GAME_H_
+#ifndef _HD_PHYSICS_H_
+#define _HD_PHYSICS_H_
 
-#include <hdk/hdGame/hdPhysicsGlue.h>
-#include <hdk/hdGame/hdPhysicsJoint.h>
-#include <hdk/hdGame/hdPhysicsObject.h>
-#include <hdk/hdGame/hdOrthographicProjection.h>
-#include <hdk/hdGame/hdGameObject.h>
-#include <hdk/hdGame/hdGameWorld.h>
+#include <hdk/physics/hdPhysicsGlue.h>
+#include <hdk/physics/hdPhysicsJoint.h>
+#include <hdk/physics/hdPhysicsObject.h>
+#include <hdk/physics/hdOrthographicProjection.h>
+#include <hdk/physics/hdGameObject.h>
+#include <hdk/physics/hdGameWorld.h>
 
 #endif

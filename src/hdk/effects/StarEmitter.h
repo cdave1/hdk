@@ -17,23 +17,43 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef TOTEM_GAME_H
-#define TOTEM_GAME_H
+#ifndef _HDK_STAR_EMITTER_H_
+#define _HDK_STAR_EMITTER_H_
 
-#include "totemConstants.h"
-#include "totemEnums.h"
-#include "totemBlock.h"
-#include "totemJack.h"
-#include "totemJoint.h"
-#include "totemEvent.h"
-#include "totemPolygon.h"
-#include "totemLayer.h"
-#include "totemLevel.h"
-#include "totemFloorInfo.h"
-#include "totemWorldManager.h"
-#include "totemWorld.h"
-#include "totemScripting.h"
-#include "totemUtils.h"
-#include "totemContactManager.h"
+#include <hdk/game.h>
+
+struct hdParticle;
+
+class StarEmitter : public hdParticleEmitter
+{
+public:
+
+    StarEmitter(int maxParticles,
+                     const char * texture,
+                     float gravity,
+                     float initialParticleSpread,
+                     float particlePointSize,
+                     float duration);
+
+    ~StarEmitter();
+
+    void Step(hdTimeInterval elapsed);
+    bool m_onStopResume;
+
+    float m_ySpreadLower;
+
+    float m_ySpreadUpper;
+
+protected:
+    void ParticleAnimationFinished();
+    
+    
+private:
+    void MakeParticle(int pos);
+    
+    float m_gravity;
+    
+    float m_initialParticleSpread;
+};
 
 #endif

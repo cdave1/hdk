@@ -19,8 +19,8 @@
 
 #include "hdTextureManager.h"
 
-#include <hdk/hdMath.h>
-#include <hdk/hdCore/hdConfig.h>
+#include <hdk/math.h>
+#include <hdk/core/hdConfig.h>
 
 #include "hdPNGLoader.h"
 #include "hdTGALoader.h"

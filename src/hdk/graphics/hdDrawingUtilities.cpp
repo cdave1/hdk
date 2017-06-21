@@ -355,17 +355,18 @@ void StopTextureEffect(uint8 effect)
 /*
  * This is a very crappy per vertex shader.
  *
- * Code below takes a normal for each vertex pair
- * (perp. to line made by pair) and then calculates the light
- * for the quad as a modification to the tint. Light is
+ * Code below takes a normal for each vertex pair (perpendicular. to line made by pair),
+ * and then calculates the light for the quad as a modification to the tint. Light is
  * an ambient value pointing along the negative y axis.
  *
- * TODO: Variable light angle.
+ * Perform normal smoothing by taking the average normal of adjacent vertex pairs and using a
+ * texture combine at 2x the rgb scale so brights look brighter and darks look darker.  It looks
+ * surprisingly good.
  *
- * Funky normal smoothing by taking the
- * average normal of adjacent vertex pairs and using a
- * texture combine at 2x the rgb scale so brights look
- * brighter and darks look darker.
+ * UPDATE: This function was written before OpenGLES support was any good on iOS.
+ * Colors were calculated by using matrices, to take advantage of the
+ * internal matrix functions that use the SIMD floating point operations on NEON and VFPU
+ * chips.
  */
 void DrawExtrusionLighting(hdVec3* vertices, hdVec2* textureCoordinates,
                            const int vertexCount, const hdAABB& aabb,

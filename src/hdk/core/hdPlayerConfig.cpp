@@ -24,7 +24,7 @@
 #include <string>
 #include <map>
 
-#include <hdk/hdCore/hdFileSystem.h>
+#include <hdk/core/hdFileSystem.h>
 
 static std::map<std::string, std::string> configLookupTable;
 

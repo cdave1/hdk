@@ -16,25 +16,25 @@
  *
  */
 
-#ifndef _TOTEM_FONT_QUAD_
-#define _TOTEM_FONT_QUAD_
+#ifndef _HDK_FONT_QUAD_
+#define _HDK_FONT_QUAD_
 
 //#include "ft2build.h"
 #include "ftgles.h"
 
 #ifdef LEVEL_EDITOR
-#include <hdk/hdOpenGL.h"
+#include <hdk/OpenGL.h"
 #else
-#include <hdk/hdOpenGLES.h"
+#include <hdk/OpenGLES.h"
 #endif
 
-#include <hdk/hdCommon.h"
-#include <hdk/hdGameEngine.h"
+#include <hdk/Common.h"
+#include <hdk/physicsEngine.h"
 #include "constants.h"
-#include <hdk/hdPolygon.h"
-#include <hdk/hdTextureManager.h"
+#include <hdk/Polygon.h"
+#include <hdk/TextureManager.h"
 
-#include <hdk/hdDrawingUtilities.h"
+#include <hdk/DrawingUtilities.h"
 
 #define kMaxFontTextSize 512
 #define kMaxFontPathSize 512

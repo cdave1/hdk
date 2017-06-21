@@ -20,7 +20,7 @@
 #ifndef _HD_FUNCTION_ACTION_H_
 #define _HD_FUNCTION_ACTION_H_
 
-#include <hdk/hdAnimation/hdAction.h>
+#include <hdk/animation/hdAction.h>
 
 // An animation action that repeatedly calls a function on an object.
 template<class T>

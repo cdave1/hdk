@@ -30,6 +30,6 @@
 #include <hdk/sound.h>
 #include <hdk/ui.h>
 #include <hdk/effects.h>
-#include <hdk/hdScripting.h>
+#include <hdk/Scripting.h>
 
 #endif

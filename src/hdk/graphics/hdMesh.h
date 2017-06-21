@@ -39,9 +39,9 @@
 #ifndef _HD_MESH_H_
 #define _HD_MESH_H_
 
-#include <hdk/hdGraphicsLibrary/hdGraphicsInterface.h>
-#include <hdk/hdGraphicsLibrary/hdPolygon.h>
-#include <hdk/hdGraphicsLibrary/hdMeshPolygon.h>
+#include <hdk/graphics/hdGraphicsInterface.h>
+#include <hdk/graphics/hdPolygon.h>
+#include <hdk/graphics/hdMeshPolygon.h>
 
 #ifdef LEVEL_EDITOR
 #include "glut/glut.h"

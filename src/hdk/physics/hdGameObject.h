@@ -48,7 +48,7 @@
 #ifndef hd_GAMEOBJECT_H
 #define hd_GAMEOBJECT_H
 
-#include <hdk/hdMath.h>
+#include <hdk/math.h>
 #include <boost/archive/text_iarchive.hpp>
 #include <boost/archive/text_oarchive.hpp>
 

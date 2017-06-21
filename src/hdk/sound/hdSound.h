@@ -20,7 +20,7 @@
 #ifndef _HD_SOUND_H_
 #define _HD_SOUND_H_
 
-#include <hdk/hdSound/hdSoundSystemEnums.h>
+#include <hdk/Sound/hdSoundSystemEnums.h>
 
 class hdSound
 {

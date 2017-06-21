@@ -39,7 +39,7 @@
 #include <boost/serialization/version.hpp>
 #include <boost/serialization/split_member.hpp>
 
-#include <hdk/hdCore/hdFileSystem.h>
+#include <hdk/core/hdFileSystem.h>
 
 static hdIBLoader * m_ViewControllerManagerInstance = NULL;
 

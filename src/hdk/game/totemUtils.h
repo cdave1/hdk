@@ -17,8 +17,8 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef _HD_TOTEM_UTILS_H_
-#define _HD_TOTEM_UTILS_H_
+#ifndef _HD_HDK_UTILS_H_
+#define _HD_HDK_UTILS_H_
 
 #include "Box2D.h"
 #include <hdk/hdk.h>

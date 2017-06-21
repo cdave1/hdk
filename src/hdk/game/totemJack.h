@@ -17,8 +17,8 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef TOTEM_JACK_H
-#define TOTEM_JACK_H
+#ifndef _HDK_JACK_H
+#define _HDK_JACK_H
 
 #include <hdk/hdk.h>
 #include "totemEnums.h"

@@ -18,4 +18,4 @@
  */
 
 #include "hd2DGameController.h"
-#include <hdk/hdGame/hdGameWorld.h>
+#include <hdk/physics/hdGameWorld.h>

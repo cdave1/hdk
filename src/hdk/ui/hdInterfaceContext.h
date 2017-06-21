@@ -20,12 +20,12 @@
 #ifndef HD_INTERFACE_CONTEXT_H
 #define HD_INTERFACE_CONTEXT_H
 
-#include <hdk/hdGame.h>
-#include <hdk/hdGraphicsLibrary.h>
-#include <hdk/hdMath.h>
-#include <hdk/hdCollections.h>
-#include <hdk/hdInterface/hdReceiver.h>
-#include <hdk/hdInterface/hdInterfaceController.h>
+#include <hdk/physics.h>
+#include <hdk/graphics.h>
+#include <hdk/math.h>
+#include <hdk/collections.h>
+#include <hdk/ui/hdReceiver.h>
+#include <hdk/ui/hdInterfaceController.h>
 
 /*
  * Retains a list of receivers. Receivers add themselves

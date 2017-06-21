@@ -39,8 +39,8 @@
 #import <Foundation/Foundation.h>
 
 
-#include <hdk/hdCore/hdFileSystem.h>
-#include <hdk/hdCore/hdPakFileSystem.h>
+#include <hdk/core/hdFileSystem.h>
+#include <hdk/core/hdPakFileSystem.h>
 
 @implementation hdIPhoneFileSystem
 

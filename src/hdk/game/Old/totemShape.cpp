@@ -69,8 +69,8 @@ const int totemShape::AddPoint(const float x, const float y, const float z)
 
 const int totemShape::AddPoint(const hdVec3& vertex)
 {
-	hdAssert(m_vertexCount >= 0 && m_vertexCount <= kMaxShapeVertices);
-	if (m_vertexCount == kMaxShapeVertices) return -1;
+	hdAssert(m_vertexCount >= 0 && m_vertexCount <= HDK_GAME_MaxShapeVertices);
+	if (m_vertexCount == HDK_GAME_MaxShapeVertices) return -1;
 	
 	// Make room for the new level
 	m_vertices[m_vertexCount] = vertex;
@@ -87,7 +87,7 @@ const int totemShape::AddPoint(const hdVec3& vertex)
 
 const bool totemShape::RemovePoint(const int index)
 {
-	hdAssert(m_vertexCount >= 0 && m_vertexCount <= kMaxShapeVertices);
+	hdAssert(m_vertexCount >= 0 && m_vertexCount <= HDK_GAME_MaxShapeVertices);
 	if (m_vertexCount == 0) return false;
 	if (index > m_vertexCount) return false;
 	if (index < 0) return false;

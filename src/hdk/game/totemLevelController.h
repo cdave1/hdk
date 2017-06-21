@@ -25,12 +25,12 @@
  * - Level picker menu.
  */
 
-#ifndef _TOTEM_LEVEL_CONTROLLER_H_
-#define _TOTEM_LEVEL_CONTROLLER_H_
+#ifndef _HDK_LEVEL_CONTROLLER_H_
+#define _HDK_LEVEL_CONTROLLER_H_
 
 #include "Box2D.h"
 
-#include "totemGame.h"
+#include <hdk/game.h>
 
 #include "totemEffects.h"
 #include "SmashedUtils.h"
@@ -369,25 +369,25 @@ private:
 
 
     /* Particle Emitters */
-    totemSmokeEmitter* m_smokeEmitter;
+    SmokeEmitter* m_smokeEmitter;
 
-    totemSplashEmitter* m_splashEmitter;
+    SplashEmitter* m_splashEmitter;
 
-    totemSplashEmitter* m_gunSmokeEmitter;
+    SplashEmitter* m_gunSmokeEmitter;
 
-    totemSparkEmitter* m_gunSparkEmitter;
+    SparkEmitter* m_gunSparkEmitter;
 
-    totemQuadEmitter* m_waveParticleEmitter;
+    quadEmitter* m_waveParticleEmitter;
 
-    totemStarEmitter *m_starParticleEmitter;
+    StarEmitter *m_starParticleEmitter;
 
-    totemStarEmitter *m_questionEmitter;
+    StarEmitter *m_questionEmitter;
 
-    totemSplinterEmitter *m_splinterEmitter;
+    SplinterEmitter *m_splinterEmitter;
 
-    totemSmokeEmitter *m_explosionEmitter;
+    SmokeEmitter *m_explosionEmitter;
 
-    totemSmokeEmitter *m_explosionSmokeEmitter;
+    SmokeEmitter *m_explosionSmokeEmitter;
 
     hdUIImage *m_glow;
 

@@ -19,7 +19,7 @@
 
 #include "hdOSXFileSystem.h"
 
-#include <hdk/hdCore/hdCommon.h>
+#include <hdk/core/hdCommon.h>
 
 @implementation hdOSXFileSystem
 

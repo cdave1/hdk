@@ -17,11 +17,11 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef _TOTEM_LEVEL_H_
-#define _TOTEM_LEVEL_H_
+#ifndef _HDK_LEVEL_H_
+#define _HDK_LEVEL_H_
 
 #include "Box2D.h"
-#include "totemGame.h"
+#include <hdk/game.h>
 #include "totemFloorInfo.h"
 
 #include <boost/archive/text_iarchive.hpp>
@@ -129,7 +129,7 @@ public:
 	
 	
 	// Events
-	hdSerializablePointerList<totemEvent, kTotemEventMax>* GetEvents(); 
+	hdSerializablePointerList<totemEvent, HDK_GAME_EventMax>* GetEvents(); 
 	
 	
 	
@@ -233,7 +233,7 @@ private:
 	 */
 	hdTypedefList<hdTexture*, 128>* m_blockTextureCache;
 	
-	hdTypedefList<totemBlock*, kTotemBlockMax>* m_sortedBlockCache;
+	hdTypedefList<totemBlock*, HDK_GAME_BlockMax>* m_sortedBlockCache;
 
 	friend class boost::serialization::access;
 
@@ -333,13 +333,13 @@ private:
 	BOOST_SERIALIZATION_SPLIT_MEMBER()
 
 	
-	hdSerializablePointerList<totemJack, kTotemJackMax>* m_jacks;
+	hdSerializablePointerList<totemJack, HDK_GAME_JackMax>* m_jacks;
 	
-	hdSerializablePointerList<totemBlock, kTotemBlockMax>* m_blocks;
+	hdSerializablePointerList<totemBlock, HDK_GAME_BlockMax>* m_blocks;
 	
-	hdSerializablePointerList<totemJoint, kTotemJointMax>* m_joints;
+	hdSerializablePointerList<totemJoint, HDK_GAME_JointMax>* m_joints;
 	
-	hdSerializablePointerList<totemEvent, kTotemEventMax>* m_events;
+	hdSerializablePointerList<totemEvent, HDK_GAME_EventMax>* m_events;
 	
 	
 	totemLayer* m_backgroundLayer;
@@ -506,7 +506,7 @@ inline const int totemLevel::GetJointCount() const
 }
 
 
-inline hdSerializablePointerList<totemEvent, kTotemEventMax>* totemLevel::GetEvents()
+inline hdSerializablePointerList<totemEvent, HDK_GAME_EventMax>* totemLevel::GetEvents()
 {
 	return m_events;
 }

@@ -17,8 +17,8 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef _TOTEM_FLOOR_INFO_
-#define _TOTEM_FLOOR_INFO_
+#ifndef _HDK_FLOOR_INFO_
+#define _HDK_FLOOR_INFO_
 
 #include <hdk/hdk.h>
 

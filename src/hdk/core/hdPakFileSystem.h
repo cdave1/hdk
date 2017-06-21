@@ -20,8 +20,8 @@
 #ifndef HD_PAK_MAKER_H
 #define HD_PAK_MAKER_H
 
-#include <hdk/hdCore/hdFileSystem.h>
-#include <hdk/hdCore/hdCompression.h>
+#include <hdk/core/hdFileSystem.h>
+#include <hdk/core/hdCompression.h>
 
 #include <boost/archive/binary_oarchive.hpp>
 #include <boost/archive/binary_iarchive.hpp>

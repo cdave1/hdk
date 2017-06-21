@@ -27,14 +27,14 @@
  because game objects are to be rendered as textured quads or even pt sprites).
  */
 
-#ifndef TOTEM_BLOCK_H
-#define TOTEM_BLOCK_H
+#ifndef _HDK_BLOCK_H
+#define _HDK_BLOCK_H
 
 #include "Box2D.h"
 
 #include <hdk/hdk.h>
-#include "totemEnums.h"
-#include "totemUtils.h"
+#include <hdk/game/Enums.h>
+#include <hdk/game/Utils.h>
 
 #include <boost/archive/text_iarchive.hpp>
 #include <boost/archive/text_oarchive.hpp>

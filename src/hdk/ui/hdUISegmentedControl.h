@@ -20,9 +20,9 @@
 #ifndef HD_UI_SEGMENT_CONTROL
 #define HD_UI_SEGMENT_CONTROL
 
-#include <hdk/hdInterface/hdReceiver.h>
-#include <hdk/hdInterface/hdButton.h>
-#include <hdk/hdInterface/hdUIImage.h>
+#include <hdk/ui/hdReceiver.h>
+#include <hdk/ui/hdButton.h>
+#include <hdk/ui/hdUIImage.h>
 
 typedef struct
 {

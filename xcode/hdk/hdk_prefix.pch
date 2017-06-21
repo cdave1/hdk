@@ -22,4 +22,4 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #endif
-#include <hdk/hdCore/hdCommon.h>
+#include <hdk/core/hdCommon.h>

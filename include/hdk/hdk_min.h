@@ -20,11 +20,11 @@
 #ifndef HDK_H
 #define HDK_H
 
-#include <hdk/hdCore.h>
-#include <hdk/hdMath.h>
-#include <hdk/hdCollections.h>
-#include <hdk/hdGame.h>
-#include <hdk/hdGraphicsLibrary.h>
-#include <hdk/hdAnimationEngine.h>
+#include <hdk/core.h>
+#include <hdk/math.h>
+#include <hdk/collections.h>
+#include <hdk/physics.h>
+#include <hdk/graphics.h>
+#include <hdk/animation.h>
 
 #endif

@@ -17,10 +17,17 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef _HD_EFFECTS_H_
-#define _HD_EFFECTS_H_
+#ifndef _HDK_EFFECTS_H_
+#define _HDK_EFFECTS_H_
 
-#include <hdk/hdEffects/hdParticleEmitter.h>
-#include <hdk/hdEffects/hdPhysicsParticleEmitter.h>
+#include <hdk/effects/SplashEmitter.h>
+#include <hdk/effects/SmokeEmitter.h>
+#include <hdk/effects/StarEmitter.h>
+#include <hdk/effects/SparkEmitter.h>
+#include <hdk/effects/QuadEmitter.h>
+#include <hdk/effects/SplinterEmitter.h>
+#include <hdk/effects/GoalBlock.h>
+#include <hdk/effects/ChapterBlock.h>
+#include <hdk/effects/TextBlock.h>
 
 #endif

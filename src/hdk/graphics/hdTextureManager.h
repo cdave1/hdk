@@ -20,9 +20,9 @@
 #ifndef _HD_TEXTURE_MANAGER_H_
 #define _HD_TEXTURE_MANAGER_H_
 
-#include <hdk/hdCollections.h>
-#include <hdk/hdGraphicsLibrary/hdGraphicsInterface.h>
-#include <hdk/hdGraphicsLibrary/hdTexture.h>
+#include <hdk/collections.h>
+#include <hdk/graphics/hdGraphicsInterface.h>
+#include <hdk/graphics/hdTexture.h>
 
 class hdTextureManager
 {

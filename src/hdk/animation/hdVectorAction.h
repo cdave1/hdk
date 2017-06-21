@@ -20,7 +20,7 @@
 #ifndef _HD_VECTOR_ACTION_H_
 #define _HD_VECTOR_ACTION_H_
 
-#include <hdk/hdAnimation/hdAction.h>
+#include <hdk/animation/hdAction.h>
 
 class hdVectorAction : public hdAction
 {

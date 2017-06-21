@@ -26,7 +26,7 @@
 
 #include "hdTGALoader.h"
 
-#include <hdk/hdCore/hdFileSystem.h>
+#include <hdk/core/hdFileSystem.h>
 
 #define TGA_HEADER_SIZE		18
 

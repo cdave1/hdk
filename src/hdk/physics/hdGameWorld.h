@@ -20,8 +20,8 @@
 #ifndef HD_GAMEWORLD_H
 #define HD_GAMEWORLD_H
 
-#include <hdk/hdMath.h>
-#include <hdk/hdGame/hdGameObject.h>
+#include <hdk/math.h>
+#include <hdk/physics/hdGameObject.h>
 
 class hdGameObject;
 

@@ -17,8 +17,8 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef _TOTEM_LAYER_H_
-#define _TOTEM_LAYER_H_
+#ifndef _HDK_LAYER_H_
+#define _HDK_LAYER_H_
 
 #include "Box2D.h"
 #include "totemLevel.h"

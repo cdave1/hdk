@@ -17,8 +17,8 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef TOTEM_POLYGON_H
-#define TOTEM_POLYGON_H
+#ifndef _HDK_POLYGON_H
+#define _HDK_POLYGON_H
 
 #include <hdk/hdk.h>
 #include "totemEnums.h"

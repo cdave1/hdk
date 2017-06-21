@@ -162,7 +162,7 @@ int Scripts_GetLevelMessagesForTag(totemMessage** messages,
     targetMatch = false;
     for (i = 0; i < currentCache->GetItemCount(); ++i)
     {
-        if (target == TOTEM_SCRIPTS_WILDCARD_TAG)
+        if (target == _HDK_SCRIPTS_WILDCARD_TAG)
         {
             targetMatch = true;
         }
@@ -241,19 +241,19 @@ void Scripts_SetDescriptionForGoal(totemGoal& goal)
     switch(goal.goalType)
     {
         case e_totemGoalTypeNormal:
-            snprintf(goal.description, kTotemGoalDescriptionStringSize, "Goal_Normal");
+            snprintf(goal.description, HDK_GAME_GoalDescriptionStringSize, "Goal_Normal");
             break;
         case e_totemGoalTypeMinBlocksPercentage:
-            snprintf(goal.description, kTotemGoalDescriptionStringSize, "Goal_MinBlocks");
+            snprintf(goal.description, HDK_GAME_GoalDescriptionStringSize, "Goal_MinBlocks");
             break;
         case e_totemGoalTypeMinPoints:
-            snprintf(goal.description, kTotemGoalDescriptionStringSize, "Goal_MinPoints");
+            snprintf(goal.description, HDK_GAME_GoalDescriptionStringSize, "Goal_MinPoints");
             break;
         case e_totemGoalTypeFragments:
-            snprintf(goal.description, kTotemGoalDescriptionStringSize, "Goal_Fragments");
+            snprintf(goal.description, HDK_GAME_GoalDescriptionStringSize, "Goal_Fragments");
             break;
         case e_totemGoalTypeJackCollection:
-            snprintf(goal.description, kTotemGoalDescriptionStringSize, "Goal_Jacks");
+            snprintf(goal.description, HDK_GAME_GoalDescriptionStringSize, "Goal_Jacks");
             break;
         case e_totemGoalTypeAllBlocksWithTag:
             break;
@@ -460,25 +460,25 @@ void ParseWorldMessageScript(const char* scriptfilepath)
             if (strncmp(goalType, "NORMAL", 256) == 0)
             {
                 goal.goalType = e_totemGoalTypeNormal;
-                snprintf(goal.description, kTotemGoalDescriptionStringSize, 
+                snprintf(goal.description, HDK_GAME_GoalDescriptionStringSize, 
                          Scripts_GetStringForKey("Goal_Normal").c_str(), goal.value);
             }
             if (strncmp(goalType, "MINPERCENT", 256) == 0)
             {
                 goal.goalType = e_totemGoalTypeMinBlocksPercentage;
-                snprintf(goal.description, kTotemGoalDescriptionStringSize, 
+                snprintf(goal.description, HDK_GAME_GoalDescriptionStringSize, 
                          Scripts_GetStringForKey("Goal_MinBlocks").c_str(), goal.value);
             }
             if (strncmp(goalType, "POINTS", 256) == 0)
             {
                 goal.goalType = e_totemGoalTypeMinPoints;
-                snprintf(goal.description, kTotemGoalDescriptionStringSize, 
+                snprintf(goal.description, HDK_GAME_GoalDescriptionStringSize, 
                          Scripts_GetStringForKey("Goal_MinPoints").c_str(), goal.value);
             }
             if (strncmp(goalType, "FRAGMENTS", 256) == 0)
             {
                 goal.goalType = e_totemGoalTypeFragments;
-                snprintf(goal.description, kTotemGoalDescriptionStringSize, 
+                snprintf(goal.description, HDK_GAME_GoalDescriptionStringSize, 
                          Scripts_GetStringForKey("Goal_Fragments").c_str(), goal.value);
             }
             if (strncmp(goalType, "JACKS", 256) == 0)
@@ -494,7 +494,7 @@ void ParseWorldMessageScript(const char* scriptfilepath)
                 }
                 
                 goal.goalType = e_totemGoalTypeJackCollection;
-                snprintf(goal.description, kTotemGoalDescriptionStringSize, 
+                snprintf(goal.description, HDK_GAME_GoalDescriptionStringSize, 
                          Scripts_GetStringForKey("Goal_Jacks").c_str(), 
                          goal.value,
                          Scripts_GetStringForKey(key).c_str());

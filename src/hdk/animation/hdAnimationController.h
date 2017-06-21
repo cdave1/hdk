@@ -32,7 +32,7 @@
 #define _HD_ANIMATION_CONTROLLER_H_
 
 #include <list>
-#include <hdk/hdCollections.h>
+#include <hdk/collections.h>
 
 #define kPipelineSize 8196
 

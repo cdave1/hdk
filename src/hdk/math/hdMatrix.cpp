@@ -17,8 +17,8 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#include <hdk/hdMath/hdMatrix.h>
-#include <hdk/hdCore.h>
+#include <hdk/math/hdMatrix.h>
+#include <hdk/core.h>
 
 #ifdef __APPLE__
 #include <TargetConditionals.h>
@@ -29,7 +29,7 @@
  * iPhone arm7/neon chip matrix optmizations
  */
 #warning "neon"
-#include <hdk/hdMath/neon/neon_matrix_impl.h>
+#include <hdk/math/neon/neon_matrix_impl.h>
 #endif
 #endif
 #endif

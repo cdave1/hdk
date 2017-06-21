@@ -17,8 +17,8 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef _TOTEM_GAME_OBJECT_H_
-#define _TOTEM_GAME_OBJECT_H_
+#ifndef _HDK_GAME_OBJECT_H_
+#define _HDK_GAME_OBJECT_H_
 
 #include "Box2D.h"
 

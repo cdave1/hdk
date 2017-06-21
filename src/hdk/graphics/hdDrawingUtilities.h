@@ -20,10 +20,10 @@
 #ifndef _HD_DRAWING_UTILITIES_H_
 #define _HD_DRAWING_UTILITIES_H_
 
-#include <hdk/hdGraphicsLibrary/hdGraphicsInterface.h>
-#include <hdk/hdGraphicsLibrary/hdPolygon.h>
-#include <hdk/hdGraphicsLibrary/hdTexture.h>
-#include <hdk/hdGraphicsLibrary/hdTextureManager.h>
+#include <hdk/graphics/hdGraphicsInterface.h>
+#include <hdk/graphics/hdPolygon.h>
+#include <hdk/graphics/hdTexture.h>
+#include <hdk/graphics/hdTextureManager.h>
 
 #define HDGL_EFFECT_DOUBLE_INTENSITY 1
 

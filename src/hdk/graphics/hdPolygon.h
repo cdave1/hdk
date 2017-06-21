@@ -28,8 +28,8 @@
 #ifndef _HD_POLYGON_H_
 #define _HD_POLYGON_H_
 
-#include <hdk/hdGame.h>
-#include <hdk/hdCollections.h>
+#include <hdk/physics.h>
+#include <hdk/collections.h>
 
 #define kMaxPolygonVertices 96
 

@@ -20,14 +20,14 @@
 #ifndef _HD_GRAPHICS_LIBRARY_H_
 #define _HD_GRAPHICS_LIBRARY_H_
 
-#include <hdk/hdGraphicsLibrary/hdGraphicsInterface.h>
-#include <hdk/hdGraphicsLibrary/hdDrawingUtilities.h>
-#include <hdk/hdGraphicsLibrary/hdPolygon.h>
-#include <hdk/hdGraphicsLibrary/hdTexture.h>
-#include <hdk/hdGraphicsLibrary/hdTextureManager.h>
-#include <hdk/hdGraphicsLibrary/hdDrawable.h>
-#include <hdk/hdGraphicsLibrary/hdTGALoader.h>
-#include <hdk/hdGraphicsLibrary/hdPNGLoader.h>
+#include <hdk/graphics/hdGraphicsInterface.h>
+#include <hdk/graphics/hdDrawingUtilities.h>
+#include <hdk/graphics/hdPolygon.h>
+#include <hdk/graphics/hdTexture.h>
+#include <hdk/graphics/hdTextureManager.h>
+#include <hdk/graphics/hdDrawable.h>
+#include <hdk/graphics/hdTGALoader.h>
+#include <hdk/graphics/hdPNGLoader.h>
 
 
 #endif

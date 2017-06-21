@@ -7,8 +7,8 @@
  *
  */
 
-#ifndef _HD_TOTEM_SHAPE_
-#define _HD_TOTEM_SHAPE_
+#ifndef _HD_HDK_SHAPE_
+#define _HD_HDK_SHAPE_
 
 #include "Box2D.h"
 
@@ -64,7 +64,7 @@ protected:
 private:
 	int m_vertexCount;
 	
-	hdVec3 m_vertices[kMaxShapeVertices];
+	hdVec3 m_vertices[HDK_GAME_MaxShapeVertices];
 	
 	friend class boost::serialization::access;
 	

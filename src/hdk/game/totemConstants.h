@@ -17,13 +17,13 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef TOTEM_CONSTANTS_H
-#define TOTEM_CONSTANTS_H
+#ifndef _HDK_CONSTANTS_H
+#define _HDK_CONSTANTS_H
 
-#define kTotemBlockMax 512
-#define kTotemJackMax 256
-#define kTotemJointMax 150
-#define kTotemEventMax 64
-#define kMaxShapeVertices 128
+#define HDK_GAME_BlockMax 512
+#define HDK_GAME_JackMax 256
+#define HDK_GAME_JointMax 150
+#define HDK_GAME_EventMax 64
+#define HDK_GAME_MaxShapeVertices 128
 
 #endif

@@ -7,8 +7,8 @@
  *
  */
 
-#ifndef _H_TOTEM_GAME_OBJECT_
-#define _H_TOTEM_GAME_OBJECT_
+#ifndef _H_HDK_GAME_OBJECT_
+#define _H_HDK_GAME_OBJECT_
 
 #include "hdGameEngine.h"
 #include "hdGameWorld.h"

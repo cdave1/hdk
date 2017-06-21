@@ -282,10 +282,6 @@
 		E4830CDA1EFB2FEB00141A78 /* hdScreenSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830BEC1EFB2FEB00141A78 /* hdScreenSettings.h */; };
 		E4830CDB1EFB2FEB00141A78 /* hdSystemSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830BED1EFB2FEB00141A78 /* hdSystemSettings.h */; };
 		E4830CDC1EFB2FEB00141A78 /* hdTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830BEE1EFB2FEB00141A78 /* hdTypes.h */; };
-		E4830CDD1EFB2FEB00141A78 /* hdParticleEmitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830BF01EFB2FEB00141A78 /* hdParticleEmitter.cpp */; };
-		E4830CDE1EFB2FEB00141A78 /* hdParticleEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830BF11EFB2FEB00141A78 /* hdParticleEmitter.h */; };
-		E4830CDF1EFB2FEB00141A78 /* hdPhysicsParticleEmitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830BF21EFB2FEB00141A78 /* hdPhysicsParticleEmitter.cpp */; };
-		E4830CE01EFB2FEB00141A78 /* hdPhysicsParticleEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830BF31EFB2FEB00141A78 /* hdPhysicsParticleEmitter.h */; };
 		E4830CE11EFB2FEB00141A78 /* totemGameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830BF61EFB2FEB00141A78 /* totemGameObject.cpp */; };
 		E4830CE21EFB2FEB00141A78 /* totemGameObject.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830BF71EFB2FEB00141A78 /* totemGameObject.h */; };
 		E4830CE31EFB2FEB00141A78 /* totemShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830BF81EFB2FEB00141A78 /* totemShape.cpp */; };
@@ -300,7 +296,6 @@
 		E4830CEC1EFB2FEB00141A78 /* totemEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C011EFB2FEB00141A78 /* totemEvent.h */; };
 		E4830CED1EFB2FEB00141A78 /* totemFloorInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830C021EFB2FEB00141A78 /* totemFloorInfo.cpp */; };
 		E4830CEE1EFB2FEB00141A78 /* totemFloorInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C031EFB2FEB00141A78 /* totemFloorInfo.h */; };
-		E4830CEF1EFB2FEB00141A78 /* totemGame.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C041EFB2FEB00141A78 /* totemGame.h */; };
 		E4830CF01EFB2FEB00141A78 /* totemGameObject.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C051EFB2FEB00141A78 /* totemGameObject.h */; };
 		E4830CF11EFB2FEB00141A78 /* totemJack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830C061EFB2FEB00141A78 /* totemJack.cpp */; };
 		E4830CF21EFB2FEB00141A78 /* totemJack.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C071EFB2FEB00141A78 /* totemJack.h */; };
@@ -332,7 +327,6 @@
 		E4830D0C1EFB2FEB00141A78 /* hdMesh.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C221EFB2FEB00141A78 /* hdMesh.h */; };
 		E4830D0D1EFB2FEB00141A78 /* hdMeshPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830C231EFB2FEB00141A78 /* hdMeshPolygon.cpp */; };
 		E4830D0E1EFB2FEB00141A78 /* hdMeshPolygon.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C241EFB2FEB00141A78 /* hdMeshPolygon.h */; };
-		E4830D0F1EFB2FEB00141A78 /* hdOpenGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830C251EFB2FEB00141A78 /* hdOpenGL.cpp */; };
 		E4830D101EFB2FEB00141A78 /* hdOpenGLES.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830C261EFB2FEB00141A78 /* hdOpenGLES.cpp */; };
 		E4830D111EFB2FEB00141A78 /* hdPNGLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C271EFB2FEB00141A78 /* hdPNGLoader.h */; };
 		E4830D121EFB2FEB00141A78 /* hdPNGLoader.mm in Sources */ = {isa = PBXBuildFile; fileRef = E4830C281EFB2FEB00141A78 /* hdPNGLoader.mm */; };
@@ -451,11 +445,39 @@
 		E4830D831EFB2FEB00141A78 /* hdUISegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830CA31EFB2FEB00141A78 /* hdUISegmentedControl.h */; };
 		E4830D841EFB2FEB00141A78 /* hdViewController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830CA41EFB2FEB00141A78 /* hdViewController.cpp */; };
 		E4830D851EFB2FEB00141A78 /* hdViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830CA51EFB2FEB00141A78 /* hdViewController.h */; };
+		E4830DAB1EFB393800141A78 /* ChapterBlock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830D8E1EFB393800141A78 /* ChapterBlock.cpp */; };
+		E4830DAC1EFB393800141A78 /* ChapterBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830D8F1EFB393800141A78 /* ChapterBlock.h */; };
+		E4830DAF1EFB393800141A78 /* GoalBlock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830D921EFB393800141A78 /* GoalBlock.cpp */; };
+		E4830DB01EFB393800141A78 /* GoalBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830D931EFB393800141A78 /* GoalBlock.h */; };
+		E4830DB11EFB393800141A78 /* LevelPickerBlock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830D941EFB393800141A78 /* LevelPickerBlock.cpp */; };
+		E4830DB21EFB393800141A78 /* LevelPickerBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830D951EFB393800141A78 /* LevelPickerBlock.h */; };
+		E4830DB31EFB393800141A78 /* quadEmitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830D961EFB393800141A78 /* quadEmitter.cpp */; };
+		E4830DB41EFB393800141A78 /* quadEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830D971EFB393800141A78 /* quadEmitter.h */; };
+		E4830DB51EFB393800141A78 /* SmokeEmitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830D981EFB393800141A78 /* SmokeEmitter.cpp */; };
+		E4830DB61EFB393800141A78 /* SmokeEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830D991EFB393800141A78 /* SmokeEmitter.h */; };
+		E4830DB71EFB393800141A78 /* SparkEmitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830D9A1EFB393800141A78 /* SparkEmitter.cpp */; };
+		E4830DB81EFB393800141A78 /* SparkEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830D9B1EFB393800141A78 /* SparkEmitter.h */; };
+		E4830DB91EFB393800141A78 /* SplashEmitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830D9C1EFB393800141A78 /* SplashEmitter.cpp */; };
+		E4830DBA1EFB393800141A78 /* SplashEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830D9D1EFB393800141A78 /* SplashEmitter.h */; };
+		E4830DBB1EFB393800141A78 /* SplinterEmitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830D9E1EFB393800141A78 /* SplinterEmitter.cpp */; };
+		E4830DBC1EFB393800141A78 /* SplinterEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830D9F1EFB393800141A78 /* SplinterEmitter.h */; };
+		E4830DBD1EFB393800141A78 /* StarEmitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830DA01EFB393800141A78 /* StarEmitter.cpp */; };
+		E4830DBE1EFB393800141A78 /* StarEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830DA11EFB393800141A78 /* StarEmitter.h */; };
+		E4830DBF1EFB393800141A78 /* TextBlock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830DA21EFB393800141A78 /* TextBlock.cpp */; };
+		E4830DC01EFB393800141A78 /* TextBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830DA31EFB393800141A78 /* TextBlock.h */; };
+		E4830DC11EFB393800141A78 /* WeatherParticleEmitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830DA41EFB393800141A78 /* WeatherParticleEmitter.cpp */; };
+		E4830DC21EFB393800141A78 /* WeatherParticleEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830DA51EFB393800141A78 /* WeatherParticleEmitter.h */; };
+		E4830DC31EFB393800141A78 /* hdParticleEmitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830DA71EFB393800141A78 /* hdParticleEmitter.cpp */; };
+		E4830DC41EFB393800141A78 /* hdParticleEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830DA81EFB393800141A78 /* hdParticleEmitter.h */; };
+		E4830DC51EFB393800141A78 /* hdPhysicsParticleEmitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830DA91EFB393800141A78 /* hdPhysicsParticleEmitter.cpp */; };
+		E4830DC61EFB393800141A78 /* hdPhysicsParticleEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830DAA1EFB393800141A78 /* hdPhysicsParticleEmitter.h */; };
+		E4830E391EFB3B2900141A78 /* effects.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830E371EFB3B2900141A78 /* effects.h */; };
+		E4830E3A1EFB3B2900141A78 /* game.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830E381EFB3B2900141A78 /* game.h */; };
 		E4A7566519862B8A0004ACB6 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A7566419862B8A0004ACB6 /* GLKit.framework */; };
 		E4ADE3A119874AEF0039FF7A /* animation.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39119874AEF0039FF7A /* animation.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		E4ADE3A219874AEF0039FF7A /* collections.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39219874AEF0039FF7A /* collections.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		E4ADE3A319874AEF0039FF7A /* core.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39319874AEF0039FF7A /* core.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		E4ADE3A419874AEF0039FF7A /* effects.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39419874AEF0039FF7A /* effects.h */; };
+		E4ADE3A419874AEF0039FF7A /* particles.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39419874AEF0039FF7A /* particles.h */; };
 		E4ADE3A519874AEF0039FF7A /* physics.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39519874AEF0039FF7A /* physics.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		E4ADE3A619874AEF0039FF7A /* graphics.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39619874AEF0039FF7A /* graphics.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		E4ADE3A719874AEF0039FF7A /* interfaceBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = E4ADE39719874AEF0039FF7A /* interfaceBuilder.h */; settings = {ATTRIBUTES = (Private, ); }; };
@@ -560,7 +582,6 @@
 
 /* Begin PBXFileReference section */
 		551EDF1A1827A191007E6CC3 /* paths.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = paths.xcconfig; path = ../paths.xcconfig; sourceTree = "<group>"; };
-		638ABA7A172CAFF200BACCFD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		63CA7771119678090010C802 /* config.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = config.hpp; path = ../../../../../Opensource/boost_1_55_0/boost/system/config.hpp; sourceTree = SOURCE_ROOT; };
 		63CA7772119678090010C802 /* cygwin_error.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = cygwin_error.hpp; path = ../../../../../Opensource/boost_1_55_0/boost/system/cygwin_error.hpp; sourceTree = SOURCE_ROOT; };
 		63CA7773119678090010C802 /* error_code.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = error_code.hpp; path = ../../../../../Opensource/boost_1_55_0/boost/system/error_code.hpp; sourceTree = SOURCE_ROOT; };
@@ -839,10 +860,6 @@
 		E4830BEC1EFB2FEB00141A78 /* hdScreenSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdScreenSettings.h; sourceTree = "<group>"; };
 		E4830BED1EFB2FEB00141A78 /* hdSystemSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdSystemSettings.h; sourceTree = "<group>"; };
 		E4830BEE1EFB2FEB00141A78 /* hdTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdTypes.h; sourceTree = "<group>"; };
-		E4830BF01EFB2FEB00141A78 /* hdParticleEmitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdParticleEmitter.cpp; sourceTree = "<group>"; };
-		E4830BF11EFB2FEB00141A78 /* hdParticleEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdParticleEmitter.h; sourceTree = "<group>"; };
-		E4830BF21EFB2FEB00141A78 /* hdPhysicsParticleEmitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdPhysicsParticleEmitter.cpp; sourceTree = "<group>"; };
-		E4830BF31EFB2FEB00141A78 /* hdPhysicsParticleEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdPhysicsParticleEmitter.h; sourceTree = "<group>"; };
 		E4830BF61EFB2FEB00141A78 /* totemGameObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = totemGameObject.cpp; sourceTree = "<group>"; };
 		E4830BF71EFB2FEB00141A78 /* totemGameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = totemGameObject.h; sourceTree = "<group>"; };
 		E4830BF81EFB2FEB00141A78 /* totemShape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = totemShape.cpp; sourceTree = "<group>"; };
@@ -857,7 +874,6 @@
 		E4830C011EFB2FEB00141A78 /* totemEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = totemEvent.h; sourceTree = "<group>"; };
 		E4830C021EFB2FEB00141A78 /* totemFloorInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = totemFloorInfo.cpp; sourceTree = "<group>"; };
 		E4830C031EFB2FEB00141A78 /* totemFloorInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = totemFloorInfo.h; sourceTree = "<group>"; };
-		E4830C041EFB2FEB00141A78 /* totemGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = totemGame.h; sourceTree = "<group>"; };
 		E4830C051EFB2FEB00141A78 /* totemGameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = totemGameObject.h; sourceTree = "<group>"; };
 		E4830C061EFB2FEB00141A78 /* totemJack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = totemJack.cpp; sourceTree = "<group>"; };
 		E4830C071EFB2FEB00141A78 /* totemJack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = totemJack.h; sourceTree = "<group>"; };
@@ -889,7 +905,6 @@
 		E4830C221EFB2FEB00141A78 /* hdMesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdMesh.h; sourceTree = "<group>"; };
 		E4830C231EFB2FEB00141A78 /* hdMeshPolygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdMeshPolygon.cpp; sourceTree = "<group>"; };
 		E4830C241EFB2FEB00141A78 /* hdMeshPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdMeshPolygon.h; sourceTree = "<group>"; };
-		E4830C251EFB2FEB00141A78 /* hdOpenGL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdOpenGL.cpp; sourceTree = "<group>"; };
 		E4830C261EFB2FEB00141A78 /* hdOpenGLES.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdOpenGLES.cpp; sourceTree = "<group>"; };
 		E4830C271EFB2FEB00141A78 /* hdPNGLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdPNGLoader.h; sourceTree = "<group>"; };
 		E4830C281EFB2FEB00141A78 /* hdPNGLoader.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = hdPNGLoader.mm; sourceTree = "<group>"; };
@@ -1008,11 +1023,39 @@
 		E4830CA31EFB2FEB00141A78 /* hdUISegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdUISegmentedControl.h; sourceTree = "<group>"; };
 		E4830CA41EFB2FEB00141A78 /* hdViewController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdViewController.cpp; sourceTree = "<group>"; };
 		E4830CA51EFB2FEB00141A78 /* hdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdViewController.h; sourceTree = "<group>"; };
+		E4830D8E1EFB393800141A78 /* ChapterBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChapterBlock.cpp; sourceTree = "<group>"; };
+		E4830D8F1EFB393800141A78 /* ChapterBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterBlock.h; sourceTree = "<group>"; };
+		E4830D921EFB393800141A78 /* GoalBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GoalBlock.cpp; sourceTree = "<group>"; };
+		E4830D931EFB393800141A78 /* GoalBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalBlock.h; sourceTree = "<group>"; };
+		E4830D941EFB393800141A78 /* LevelPickerBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LevelPickerBlock.cpp; sourceTree = "<group>"; };
+		E4830D951EFB393800141A78 /* LevelPickerBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelPickerBlock.h; sourceTree = "<group>"; };
+		E4830D961EFB393800141A78 /* quadEmitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = quadEmitter.cpp; sourceTree = "<group>"; };
+		E4830D971EFB393800141A78 /* quadEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = quadEmitter.h; sourceTree = "<group>"; };
+		E4830D981EFB393800141A78 /* SmokeEmitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SmokeEmitter.cpp; sourceTree = "<group>"; };
+		E4830D991EFB393800141A78 /* SmokeEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmokeEmitter.h; sourceTree = "<group>"; };
+		E4830D9A1EFB393800141A78 /* SparkEmitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SparkEmitter.cpp; sourceTree = "<group>"; };
+		E4830D9B1EFB393800141A78 /* SparkEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SparkEmitter.h; sourceTree = "<group>"; };
+		E4830D9C1EFB393800141A78 /* SplashEmitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SplashEmitter.cpp; sourceTree = "<group>"; };
+		E4830D9D1EFB393800141A78 /* SplashEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashEmitter.h; sourceTree = "<group>"; };
+		E4830D9E1EFB393800141A78 /* SplinterEmitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SplinterEmitter.cpp; sourceTree = "<group>"; };
+		E4830D9F1EFB393800141A78 /* SplinterEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplinterEmitter.h; sourceTree = "<group>"; };
+		E4830DA01EFB393800141A78 /* StarEmitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StarEmitter.cpp; sourceTree = "<group>"; };
+		E4830DA11EFB393800141A78 /* StarEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarEmitter.h; sourceTree = "<group>"; };
+		E4830DA21EFB393800141A78 /* TextBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextBlock.cpp; sourceTree = "<group>"; };
+		E4830DA31EFB393800141A78 /* TextBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextBlock.h; sourceTree = "<group>"; };
+		E4830DA41EFB393800141A78 /* WeatherParticleEmitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WeatherParticleEmitter.cpp; sourceTree = "<group>"; };
+		E4830DA51EFB393800141A78 /* WeatherParticleEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherParticleEmitter.h; sourceTree = "<group>"; };
+		E4830DA71EFB393800141A78 /* hdParticleEmitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdParticleEmitter.cpp; sourceTree = "<group>"; };
+		E4830DA81EFB393800141A78 /* hdParticleEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdParticleEmitter.h; sourceTree = "<group>"; };
+		E4830DA91EFB393800141A78 /* hdPhysicsParticleEmitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdPhysicsParticleEmitter.cpp; sourceTree = "<group>"; };
+		E4830DAA1EFB393800141A78 /* hdPhysicsParticleEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdPhysicsParticleEmitter.h; sourceTree = "<group>"; };
+		E4830E371EFB3B2900141A78 /* effects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = effects.h; sourceTree = "<group>"; };
+		E4830E381EFB3B2900141A78 /* game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = game.h; sourceTree = "<group>"; };
 		E4A7566419862B8A0004ACB6 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		E4ADE39119874AEF0039FF7A /* animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = animation.h; sourceTree = "<group>"; };
 		E4ADE39219874AEF0039FF7A /* collections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = collections.h; sourceTree = "<group>"; };
 		E4ADE39319874AEF0039FF7A /* core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = core.h; sourceTree = "<group>"; };
-		E4ADE39419874AEF0039FF7A /* effects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = effects.h; sourceTree = "<group>"; };
+		E4ADE39419874AEF0039FF7A /* particles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = particles.h; sourceTree = "<group>"; };
 		E4ADE39519874AEF0039FF7A /* physics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = physics.h; sourceTree = "<group>"; };
 		E4ADE39619874AEF0039FF7A /* graphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = graphics.h; sourceTree = "<group>"; };
 		E4ADE39719874AEF0039FF7A /* interfaceBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interfaceBuilder.h; sourceTree = "<group>"; };
@@ -1161,7 +1204,6 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				638ABA7A172CAFF200BACCFD /* libz.dylib */,
 				E4A7566419862B8A0004ACB6 /* GLKit.framework */,
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
 				E428353E116FF69E008E3594 /* AVFoundation.framework */,
@@ -1636,17 +1678,6 @@
 			path = core;
 			sourceTree = "<group>";
 		};
-		E4830BEF1EFB2FEB00141A78 /* effects */ = {
-			isa = PBXGroup;
-			children = (
-				E4830BF01EFB2FEB00141A78 /* hdParticleEmitter.cpp */,
-				E4830BF11EFB2FEB00141A78 /* hdParticleEmitter.h */,
-				E4830BF21EFB2FEB00141A78 /* hdPhysicsParticleEmitter.cpp */,
-				E4830BF31EFB2FEB00141A78 /* hdPhysicsParticleEmitter.h */,
-			);
-			path = effects;
-			sourceTree = "<group>";
-		};
 		E4830BF41EFB2FEB00141A78 /* game */ = {
 			isa = PBXGroup;
 			children = (
@@ -1661,7 +1692,6 @@
 				E4830C011EFB2FEB00141A78 /* totemEvent.h */,
 				E4830C021EFB2FEB00141A78 /* totemFloorInfo.cpp */,
 				E4830C031EFB2FEB00141A78 /* totemFloorInfo.h */,
-				E4830C041EFB2FEB00141A78 /* totemGame.h */,
 				E4830C051EFB2FEB00141A78 /* totemGameObject.h */,
 				E4830C061EFB2FEB00141A78 /* totemJack.cpp */,
 				E4830C071EFB2FEB00141A78 /* totemJack.h */,
@@ -1711,7 +1741,6 @@
 				E4830C221EFB2FEB00141A78 /* hdMesh.h */,
 				E4830C231EFB2FEB00141A78 /* hdMeshPolygon.cpp */,
 				E4830C241EFB2FEB00141A78 /* hdMeshPolygon.h */,
-				E4830C251EFB2FEB00141A78 /* hdOpenGL.cpp */,
 				E4830C261EFB2FEB00141A78 /* hdOpenGLES.cpp */,
 				E4830C271EFB2FEB00141A78 /* hdPNGLoader.h */,
 				E4830C281EFB2FEB00141A78 /* hdPNGLoader.mm */,
@@ -1908,6 +1937,46 @@
 			path = ui;
 			sourceTree = "<group>";
 		};
+		E4830D8D1EFB393800141A78 /* effects */ = {
+			isa = PBXGroup;
+			children = (
+				E4830D8E1EFB393800141A78 /* ChapterBlock.cpp */,
+				E4830D8F1EFB393800141A78 /* ChapterBlock.h */,
+				E4830D921EFB393800141A78 /* GoalBlock.cpp */,
+				E4830D931EFB393800141A78 /* GoalBlock.h */,
+				E4830D941EFB393800141A78 /* LevelPickerBlock.cpp */,
+				E4830D951EFB393800141A78 /* LevelPickerBlock.h */,
+				E4830D961EFB393800141A78 /* quadEmitter.cpp */,
+				E4830D971EFB393800141A78 /* quadEmitter.h */,
+				E4830D981EFB393800141A78 /* SmokeEmitter.cpp */,
+				E4830D991EFB393800141A78 /* SmokeEmitter.h */,
+				E4830D9A1EFB393800141A78 /* SparkEmitter.cpp */,
+				E4830D9B1EFB393800141A78 /* SparkEmitter.h */,
+				E4830D9C1EFB393800141A78 /* SplashEmitter.cpp */,
+				E4830D9D1EFB393800141A78 /* SplashEmitter.h */,
+				E4830D9E1EFB393800141A78 /* SplinterEmitter.cpp */,
+				E4830D9F1EFB393800141A78 /* SplinterEmitter.h */,
+				E4830DA01EFB393800141A78 /* StarEmitter.cpp */,
+				E4830DA11EFB393800141A78 /* StarEmitter.h */,
+				E4830DA21EFB393800141A78 /* TextBlock.cpp */,
+				E4830DA31EFB393800141A78 /* TextBlock.h */,
+				E4830DA41EFB393800141A78 /* WeatherParticleEmitter.cpp */,
+				E4830DA51EFB393800141A78 /* WeatherParticleEmitter.h */,
+			);
+			path = effects;
+			sourceTree = "<group>";
+		};
+		E4830DA61EFB393800141A78 /* particles */ = {
+			isa = PBXGroup;
+			children = (
+				E4830DA71EFB393800141A78 /* hdParticleEmitter.cpp */,
+				E4830DA81EFB393800141A78 /* hdParticleEmitter.h */,
+				E4830DA91EFB393800141A78 /* hdPhysicsParticleEmitter.cpp */,
+				E4830DAA1EFB393800141A78 /* hdPhysicsParticleEmitter.h */,
+			);
+			path = particles;
+			sourceTree = "<group>";
+		};
 		E4ADE36F198749D90039FF7A /* include */ = {
 			isa = PBXGroup;
 			children = (
@@ -1923,17 +1992,19 @@
 				E4ADE39119874AEF0039FF7A /* animation.h */,
 				E4ADE39219874AEF0039FF7A /* collections.h */,
 				E4ADE39319874AEF0039FF7A /* core.h */,
-				E4ADE39419874AEF0039FF7A /* effects.h */,
-				E4ADE39519874AEF0039FF7A /* physics.h */,
+				E4830E371EFB3B2900141A78 /* effects.h */,
+				E4830E381EFB3B2900141A78 /* game.h */,
 				E4ADE39619874AEF0039FF7A /* graphics.h */,
-				E4ADE39719874AEF0039FF7A /* interfaceBuilder.h */,
-				E4ADE39819874AEF0039FF7A /* input.h */,
-				E4ADE39919874AEF0039FF7A /* ui.h */,
-				E4ADE39A19874AEF0039FF7A /* hdk.h */,
 				E4ADE39B19874AEF0039FF7A /* hdk_min.h */,
+				E4ADE39A19874AEF0039FF7A /* hdk.h */,
+				E4ADE39819874AEF0039FF7A /* input.h */,
+				E4ADE39719874AEF0039FF7A /* interfaceBuilder.h */,
 				E4ADE39E19874AEF0039FF7A /* math.h */,
+				E4ADE39419874AEF0039FF7A /* particles.h */,
+				E4ADE39519874AEF0039FF7A /* physics.h */,
 				E4ADE39F19874AEF0039FF7A /* scripting.h */,
 				E4ADE3A019874AEF0039FF7A /* sound.h */,
+				E4ADE39919874AEF0039FF7A /* ui.h */,
 			);
 			path = hdk;
 			sourceTree = "<group>";
@@ -1953,11 +2024,12 @@
 				E4830BB41EFB2FEB00141A78 /* animation */,
 				E4830BCA1EFB2FEB00141A78 /* collections */,
 				E4830BCF1EFB2FEB00141A78 /* core */,
-				E4830BEF1EFB2FEB00141A78 /* effects */,
+				E4830D8D1EFB393800141A78 /* effects */,
 				E4830BF41EFB2FEB00141A78 /* game */,
 				E4830C1A1EFB2FEB00141A78 /* graphics */,
 				E4830C321EFB2FEB00141A78 /* input */,
 				E4830C3F1EFB2FEB00141A78 /* math */,
+				E4830DA61EFB393800141A78 /* particles */,
 				E4830C491EFB2FEB00141A78 /* physics */,
 				E4830C591EFB2FEB00141A78 /* scripts */,
 				E4830C5C1EFB2FEB00141A78 /* sound */,
@@ -2113,13 +2185,13 @@
 				E4ADE3A519874AEF0039FF7A /* physics.h in Headers */,
 				E4ADE3A619874AEF0039FF7A /* graphics.h in Headers */,
 				E4830CE61EFB2FEB00141A78 /* totemBlock.h in Headers */,
+				E4830DC01EFB393800141A78 /* TextBlock.h in Headers */,
 				E4830CBD1EFB2FEB00141A78 /* hdTypedefList.h in Headers */,
 				E4ADE3A319874AEF0039FF7A /* core.h in Headers */,
 				E44B5AA01986026B001F9862 /* variant.hpp in Headers */,
 				E44B5A5E1986026B001F9862 /* hash_collections_save_imp.hpp in Headers */,
 				E44B5A2C1986026B001F9862 /* array.hpp in Headers */,
 				E4830D6E1EFB2FEB00141A78 /* hdIBLoader.h in Headers */,
-				E4830CEF1EFB2FEB00141A78 /* totemGame.h in Headers */,
 				E44B5A4C1986026B001F9862 /* stack_constructor.hpp in Headers */,
 				E44B5A381986026B001F9862 /* collection_traits.hpp in Headers */,
 				E4830D0C1EFB2FEB00141A78 /* hdMesh.h in Headers */,
@@ -2127,11 +2199,12 @@
 				E44B5A521986026B001F9862 /* extended_type_info.hpp in Headers */,
 				E44B5A8C1986026B001F9862 /* static_warning.hpp in Headers */,
 				E4830CA71EFB2FEB00141A78 /* hdAction.h in Headers */,
+				E4830E391EFB3B2900141A78 /* effects.h in Headers */,
 				E4830D681EFB2FEB00141A78 /* hdIBEnums.h in Headers */,
 				E4830D451EFB2FEB00141A78 /* CMOpenALSoundManager.h in Headers */,
 				E44B5A801986026B001F9862 /* singleton.hpp in Headers */,
 				E44B5A301986026B001F9862 /* base_object.hpp in Headers */,
-				E4ADE3A419874AEF0039FF7A /* effects.h in Headers */,
+				E4ADE3A419874AEF0039FF7A /* particles.h in Headers */,
 				E44B5A481986026B001F9862 /* shared_ptr_132.hpp in Headers */,
 				E44B5A781986026B001F9862 /* serialization.hpp in Headers */,
 				E4830D611EFB2FEB00141A78 /* hdFontPolygon.h in Headers */,
@@ -2180,6 +2253,7 @@
 				E4830D291EFB2FEB00141A78 /* hdGeometry.h in Headers */,
 				E42837F4117005AB008E3594 /* b2Body.h in Headers */,
 				E42837F6117005AB008E3594 /* b2ContactManager.h in Headers */,
+				E4830DB21EFB393800141A78 /* LevelPickerBlock.h in Headers */,
 				E4830D4F1EFB2FEB00141A78 /* hdSound.h in Headers */,
 				E44B5A361986026B001F9862 /* collection_size_type.hpp in Headers */,
 				E44B5A721986026B001F9862 /* optional.hpp in Headers */,
@@ -2226,7 +2300,10 @@
 				E4830D141EFB2FEB00141A78 /* hdPolygon.h in Headers */,
 				E4830D3E1EFB2FEB00141A78 /* hdPhysicsObject.h in Headers */,
 				E4830CEC1EFB2FEB00141A78 /* totemEvent.h in Headers */,
+				E4830DBC1EFB393800141A78 /* SplinterEmitter.h in Headers */,
+				E4830DAC1EFB393800141A78 /* ChapterBlock.h in Headers */,
 				E44B5AA61986026B001F9862 /* version.hpp in Headers */,
+				E4830DBE1EFB393800141A78 /* StarEmitter.h in Headers */,
 				E4283815117005AB008E3594 /* b2GravityController.h in Headers */,
 				E4830D261EFB2FEB00141A78 /* TouchScreen.h in Headers */,
 				E4830CC41EFB2FEB00141A78 /* hdConfig.h in Headers */,
@@ -2263,10 +2340,10 @@
 				E4F36E511171699800792A2D /* basic_archive.hpp in Headers */,
 				E44B5AA81986026B001F9862 /* void_cast.hpp in Headers */,
 				E44B5AA21986026B001F9862 /* vector.hpp in Headers */,
+				E4830DB81EFB393800141A78 /* SparkEmitter.h in Headers */,
 				E44B5A321986026B001F9862 /* binary_object.hpp in Headers */,
 				E4F36E521171699800792A2D /* basic_binary_iarchive.hpp in Headers */,
 				E4830D161EFB2FEB00141A78 /* hdPVRTCLoader.h in Headers */,
-				E4830CDE1EFB2FEB00141A78 /* hdParticleEmitter.h in Headers */,
 				E4830D111EFB2FEB00141A78 /* hdPNGLoader.h in Headers */,
 				E4830D521EFB2FEB00141A78 /* hdSoundManager.h in Headers */,
 				E4F36E531171699800792A2D /* basic_binary_iprimitive.hpp in Headers */,
@@ -2278,7 +2355,6 @@
 				E4830CEA1EFB2FEB00141A78 /* totemEnums.h in Headers */,
 				E4F36E551171699800792A2D /* basic_binary_oprimitive.hpp in Headers */,
 				E4F36E561171699800792A2D /* basic_streambuf_locale_saver.hpp in Headers */,
-				E4830CE01EFB2FEB00141A78 /* hdPhysicsParticleEmitter.h in Headers */,
 				E4F36E571171699800792A2D /* basic_text_iarchive.hpp in Headers */,
 				E4830D2B1EFB2FEB00141A78 /* hdMathSerializable.h in Headers */,
 				E4830CCA1EFB2FEB00141A78 /* hdIPhoneFileSystem.h in Headers */,
@@ -2303,7 +2379,9 @@
 				E4F36E5F1171699800792A2D /* binary_iarchive_impl.hpp in Headers */,
 				E4F36E601171699800792A2D /* binary_oarchive.hpp in Headers */,
 				E4830CAF1EFB2FEB00141A78 /* hdAnimationTimingFunction.h in Headers */,
+				E4830DC21EFB393800141A78 /* WeatherParticleEmitter.h in Headers */,
 				E4F36E611171699800792A2D /* binary_oarchive_impl.hpp in Headers */,
+				E4830DB61EFB393800141A78 /* SmokeEmitter.h in Headers */,
 				E4F36E621171699800792A2D /* binary_wiarchive.hpp in Headers */,
 				E4830D021EFB2FEB00141A78 /* totemWorld.h in Headers */,
 				E4830CDB1EFB2FEB00141A78 /* hdSystemSettings.h in Headers */,
@@ -2328,6 +2406,7 @@
 				E4F36E711171699800792A2D /* basic_pointer_iserializer.hpp in Headers */,
 				E44B5A421986026B001F9862 /* deque.hpp in Headers */,
 				E4F36E721171699800792A2D /* basic_pointer_oserializer.hpp in Headers */,
+				E4830DB01EFB393800141A78 /* GoalBlock.h in Headers */,
 				E4F36E731171699800792A2D /* basic_serializer.hpp in Headers */,
 				E4830CE21EFB2FEB00141A78 /* totemGameObject.h in Headers */,
 				E4830CCC1EFB2FEB00141A78 /* hdIPhoneOSFunctions.h in Headers */,
@@ -2336,6 +2415,7 @@
 				E4F36E741171699800792A2D /* basic_serializer_map.hpp in Headers */,
 				E4830CB71EFB2FEB00141A78 /* hdTranslationAction.h in Headers */,
 				E4830D061EFB2FEB00141A78 /* hdDDSLoader.h in Headers */,
+				E4830E3A1EFB3B2900141A78 /* game.h in Headers */,
 				E4F36E751171699800792A2D /* common_iarchive.hpp in Headers */,
 				E44B5A4A1986026B001F9862 /* shared_ptr_nmt_132.hpp in Headers */,
 				E4830D4C1EFB2FEB00141A78 /* hdOpenALPool.h in Headers */,
@@ -2412,6 +2492,7 @@
 				E4830CD11EFB2FEB00141A78 /* hdOSXFileSystem.h in Headers */,
 				E4F36E9D1171699800792A2D /* polymorphic_xml_oarchive.hpp in Headers */,
 				E4830CF01EFB2FEB00141A78 /* totemGameObject.h in Headers */,
+				E4830DB41EFB393800141A78 /* quadEmitter.h in Headers */,
 				E45D0B0A1987820B0020E461 /* config.hpp in Headers */,
 				E4F36E9E1171699800792A2D /* polymorphic_xml_wiarchive.hpp in Headers */,
 				E4830D5B1EFB2FEB00141A78 /* hdCheckbox.h in Headers */,
@@ -2420,7 +2501,9 @@
 				E4F36EA01171699800792A2D /* shared_ptr_helper.hpp in Headers */,
 				E4830D2A1EFB2FEB00141A78 /* hdMathCommon.h in Headers */,
 				E4830D771EFB2FEB00141A78 /* hdInterfaceEnums.h in Headers */,
+				E4830DC61EFB393800141A78 /* hdPhysicsParticleEmitter.h in Headers */,
 				E4830D721EFB2FEB00141A78 /* hdIBViewController.h in Headers */,
+				E4830DBA1EFB393800141A78 /* SplashEmitter.h in Headers */,
 				E4F36EA11171699800792A2D /* text_iarchive.hpp in Headers */,
 				E4F36EA21171699800792A2D /* text_oarchive.hpp in Headers */,
 				E4830D401EFB2FEB00141A78 /* hdScripts.h in Headers */,
@@ -2431,6 +2514,7 @@
 				E4830CFE1EFB2FEB00141A78 /* totemScripting.h in Headers */,
 				E44B5A9C1986026B001F9862 /* utility.hpp in Headers */,
 				E4830CE41EFB2FEB00141A78 /* totemShape.h in Headers */,
+				E4830DC41EFB393800141A78 /* hdParticleEmitter.h in Headers */,
 				E4F36EA51171699800792A2D /* tmpdir.hpp in Headers */,
 				E4F36EA61171699800792A2D /* wcslen.hpp in Headers */,
 				E4F36EA71171699800792A2D /* xml_archive_exception.hpp in Headers */,
@@ -2536,6 +2620,7 @@
 				E44B5B1519860288001F9862 /* utf8_codecvt_facet.cpp in Sources */,
 				E4830CF51EFB2FEB00141A78 /* totemLayer.cpp in Sources */,
 				E44B5B2A198602AC001F9862 /* error_code.cpp in Sources */,
+				E4830DAB1EFB393800141A78 /* ChapterBlock.cpp in Sources */,
 				E44B5B1719860288001F9862 /* void_cast.cpp in Sources */,
 				E44B5B1F19860288001F9862 /* xml_oarchive.cpp in Sources */,
 				E44B5B0B19860288001F9862 /* stl_port.cpp in Sources */,
@@ -2555,6 +2640,7 @@
 				E4830D821EFB2FEB00141A78 /* hdUISegmentedControl.cpp in Sources */,
 				E44B5ADF19860288001F9862 /* basic_iserializer.cpp in Sources */,
 				E44B5B1B19860288001F9862 /* xml_grammar.cpp in Sources */,
+				E4830DBB1EFB393800141A78 /* SplinterEmitter.cpp in Sources */,
 				E4830D351EFB2FEB00141A78 /* hdGameWorld.cpp in Sources */,
 				E44B5B1919860288001F9862 /* xml_archive_exception.cpp in Sources */,
 				E4830CE11EFB2FEB00141A78 /* totemGameObject.cpp in Sources */,
@@ -2564,9 +2650,12 @@
 				E44B5AFB19860288001F9862 /* binary_woarchive.cpp in Sources */,
 				E42837D7117005AB008E3594 /* b2BroadPhase.cpp in Sources */,
 				E42837D9117005AB008E3594 /* b2CollideCircle.cpp in Sources */,
+				E4830DAF1EFB393800141A78 /* GoalBlock.cpp in Sources */,
 				E4830D5C1EFB2FEB00141A78 /* hdFont.cpp in Sources */,
+				E4830DB11EFB393800141A78 /* LevelPickerBlock.cpp in Sources */,
 				E4830D371EFB2FEB00141A78 /* hdOrthographicProjection.cpp in Sources */,
 				E4830CE51EFB2FEB00141A78 /* totemBlock.cpp in Sources */,
+				E4830DC31EFB393800141A78 /* hdParticleEmitter.cpp in Sources */,
 				E4830CBF1EFB2FEB00141A78 /* hdCommon.cpp in Sources */,
 				E42837DA117005AB008E3594 /* b2CollidePoly.cpp in Sources */,
 				E44B5B0319860288001F9862 /* extended_type_info_typeid.cpp in Sources */,
@@ -2579,7 +2668,6 @@
 				E44B5B1119860288001F9862 /* text_wiarchive.cpp in Sources */,
 				E42837DD117005AB008E3594 /* b2Distance.cpp in Sources */,
 				E44B5B2319860288001F9862 /* xml_wiarchive.cpp in Sources */,
-				E4830CDD1EFB2FEB00141A78 /* hdParticleEmitter.cpp in Sources */,
 				E4830D2E1EFB2FEB00141A78 /* neon_matrix_impl.cpp in Sources */,
 				E42837DE117005AB008E3594 /* b2PairManager.cpp in Sources */,
 				E44B5AE719860288001F9862 /* basic_pointer_oserializer.cpp in Sources */,
@@ -2598,6 +2686,7 @@
 				E44B59D8198600E2001F9862 /* unique_path.cpp in Sources */,
 				E4830D051EFB2FEB00141A78 /* hdDDSLoader.cpp in Sources */,
 				E44B5B0D19860288001F9862 /* text_iarchive.cpp in Sources */,
+				E4830DBF1EFB393800141A78 /* TextBlock.cpp in Sources */,
 				E42837E7117005AB008E3594 /* b2Shape.cpp in Sources */,
 				E4830D331EFB2FEB00141A78 /* hdGameObject.cpp in Sources */,
 				E4830D231EFB2FEB00141A78 /* hdMultiTouchViewController.mm in Sources */,
@@ -2644,7 +2733,7 @@
 				E44B5B1D19860288001F9862 /* xml_iarchive.cpp in Sources */,
 				E4830D1A1EFB2FEB00141A78 /* hdTGALoader.cpp in Sources */,
 				E4283803117005AB008E3594 /* b2EdgeAndCircleContact.cpp in Sources */,
-				E4830CDF1EFB2FEB00141A78 /* hdPhysicsParticleEmitter.cpp in Sources */,
+				E4830DB91EFB393800141A78 /* SplashEmitter.cpp in Sources */,
 				E4830D4E1EFB2FEB00141A78 /* hdOpenALSoundEngine.mm in Sources */,
 				E4283806117005AB008E3594 /* b2PolyAndCircleContact.cpp in Sources */,
 				E4830CC51EFB2FEB00141A78 /* hdFileSystem.cpp in Sources */,
@@ -2652,17 +2741,22 @@
 				E4830D581EFB2FEB00141A78 /* hdButton.cpp in Sources */,
 				E4830CAE1EFB2FEB00141A78 /* hdAnimationTimingFunction.cpp in Sources */,
 				E44B5AE919860288001F9862 /* basic_serializer_map.cpp in Sources */,
+				E4830DB51EFB393800141A78 /* SmokeEmitter.cpp in Sources */,
+				E4830DC51EFB393800141A78 /* hdPhysicsParticleEmitter.cpp in Sources */,
 				E4830D541EFB2FEB00141A78 /* SoundEngine.cpp in Sources */,
 				E4830D561EFB2FEB00141A78 /* SoundEngine.cpp in Sources */,
 				E428380A117005AB008E3594 /* b2PolyContact.cpp in Sources */,
 				E4830CE81EFB2FEB00141A78 /* totemContactManager.cpp in Sources */,
+				E4830DB71EFB393800141A78 /* SparkEmitter.cpp in Sources */,
 				E428380C117005AB008E3594 /* b2BuoyancyController.cpp in Sources */,
 				E428380E117005AB008E3594 /* b2ConstantAccelController.cpp in Sources */,
 				E4283810117005AB008E3594 /* b2ConstantForceController.cpp in Sources */,
 				E4830D411EFB2FEB00141A78 /* AppleOpenALSupport.c in Sources */,
+				E4830DB31EFB393800141A78 /* quadEmitter.cpp in Sources */,
 				E4830D391EFB2FEB00141A78 /* hdPhysicsGlue.cpp in Sources */,
 				E4283812117005AB008E3594 /* b2Controller.cpp in Sources */,
 				E4830D7A1EFB2FEB00141A78 /* hdReceiver.cpp in Sources */,
+				E4830DC11EFB393800141A78 /* WeatherParticleEmitter.cpp in Sources */,
 				E4283814117005AB008E3594 /* b2GravityController.cpp in Sources */,
 				E4830D441EFB2FEB00141A78 /* CMOpenALSound.m in Sources */,
 				E44B5ADD19860288001F9862 /* basic_iarchive.cpp in Sources */,
@@ -2673,7 +2767,6 @@
 				E4283818117005AB008E3594 /* b2DistanceJoint.cpp in Sources */,
 				E428381A117005AB008E3594 /* b2GearJoint.cpp in Sources */,
 				E4830D151EFB2FEB00141A78 /* hdPVRTCLoader.cpp in Sources */,
-				E4830D0F1EFB2FEB00141A78 /* hdOpenGL.cpp in Sources */,
 				E428381C117005AB008E3594 /* b2Joint.cpp in Sources */,
 				E428381E117005AB008E3594 /* b2LineJoint.cpp in Sources */,
 				E4830D621EFB2FEB00141A78 /* hdFTGLFont.cpp in Sources */,
@@ -2702,6 +2795,7 @@
 				E44B59D2198600E2001F9862 /* path.cpp in Sources */,
 				E4830D801EFB2FEB00141A78 /* hdUIImage.cpp in Sources */,
 				E4830CC31EFB2FEB00141A78 /* hdConfig.cpp in Sources */,
+				E4830DBD1EFB393800141A78 /* StarEmitter.cpp in Sources */,
 				E4830D181EFB2FEB00141A78 /* hdTextureManager.cpp in Sources */,
 				E4830CC11EFB2FEB00141A78 /* hdCompression.cpp in Sources */,
 				E4830D211EFB2FEB00141A78 /* hdMultiTouchView.mm in Sources */,

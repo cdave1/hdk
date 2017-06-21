@@ -20,7 +20,7 @@
 #ifndef _HD_BUTTON_H_
 #define _HD_BUTTON_H_
 
-#include <hdk/hdInterface/hdReceiver.h>
+#include <hdk/ui/hdReceiver.h>
 
 typedef enum
 {

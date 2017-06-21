@@ -20,10 +20,10 @@
 #ifndef _HD_VIEW_CONTROLLER_H_
 #define _HD_VIEW_CONTROLLER_H_
 
-#include <hdk/hdInterface/hdInterfaceEnums.h>
-#include <hdk/hdInterface/hdUIContainer.h>
-#include <hdk/hdInterface/hdIBViewController.h>
-#include <hdk/hdInterface/hdIBLoader.h>
+#include <hdk/ui/hdInterfaceEnums.h>
+#include <hdk/ui/hdUIContainer.h>
+#include <hdk/ui/hdIBViewController.h>
+#include <hdk/ui/hdIBLoader.h>
 
 class hdViewController : public hdUIContainer
 {

@@ -31,7 +31,7 @@
 #include <math.h>
 #include <assert.h>
 
-#include <hdk/hdCore/hdTypes.h>
+#include <hdk/core/hdTypes.h>
 
 #define hdAssert(A) assert(A)
 

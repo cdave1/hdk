@@ -18,7 +18,7 @@
  */
 
 #include "hdPNGLoader.h"
-#include <hdk/hdCore/hdFileSystem.h>
+#include <hdk/core/hdFileSystem.h>
 
 #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
 

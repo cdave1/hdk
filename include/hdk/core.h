@@ -20,19 +20,19 @@
 #ifndef _HD_CORE_H_
 #define _HD_CORE_H_
 
-#include <hdk/hdCore/hdCommon.h>
-#include <hdk/hdCore/hdApplication.h>
-#include <hdk/hdCore/hdCompression.h>
-#include <hdk/hdCore/hdPakFileSystem.h>
-#include <hdk/hdCore/hdFileSystem.h>
-#include <hdk/hdCore/hdSystemSettings.h>
-#include <hdk/hdCore/hdOSFunctions.h>
-#include <hdk/hdCore/hdConfig.h>
-#include <hdk/hdCore/hdPlayerConfig.h>
-#include <hdk/hdCore/hdScreenSettings.h>
+#include <hdk/core/hdCommon.h>
+#include <hdk/core/hdApplication.h>
+#include <hdk/core/hdCompression.h>
+#include <hdk/core/hdPakFileSystem.h>
+#include <hdk/core/hdFileSystem.h>
+#include <hdk/core/hdSystemSettings.h>
+#include <hdk/core/hdOSFunctions.h>
+#include <hdk/core/hdConfig.h>
+#include <hdk/core/hdPlayerConfig.h>
+#include <hdk/core/hdScreenSettings.h>
 
 #ifdef LEVEL_EDITOR
-#include <hdk/hdCore/hdFileSystemUtils.h>
+#include <hdk/core/hdFileSystemUtils.h>
 #endif
 
 #endif

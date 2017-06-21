@@ -17,8 +17,8 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef _H_TOTEM_WORLD_MANAGER_
-#define _H_TOTEM_WORLD_MANAGER_
+#ifndef _H_HDK_WORLD_MANAGER_
+#define _H_HDK_WORLD_MANAGER_
 
 #undef Byte
 #include <zlib.h>
@@ -30,7 +30,7 @@
 
 #define RETURN_AS_POINTER 1
 
-#include "totemGame.h"
+#include <hdk/game.h>
 
 #include <boost/archive/text_oarchive.hpp>
 #include <boost/archive/text_iarchive.hpp>

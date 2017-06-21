@@ -272,8 +272,8 @@ void TotemLevelController::InitEffects()
 {
     m_physicsParticleEmitter = new hdPhysicsParticleEmitter(m_gameWorld, m_physicsWorld, m_projection, m_buoyancyController, 3.0f, 8.0f);
 
-    m_smokeEmitter = new totemSmokeEmitter(48, "Materials/p_smoke3_15_32.tga", 1.44f, 1.5f, -6.0f, 0.005f);
-    m_splinterEmitter = new totemSplinterEmitter(32, 1, 1.25f, -8.0f, 5.0f);
+    m_smokeEmitter = new SmokeEmitter(48, "Materials/p_smoke3_15_32.tga", 1.44f, 1.5f, -6.0f, 0.005f);
+    m_splinterEmitter = new SplinterEmitter(32, 1, 1.25f, -8.0f, 5.0f);
 
 
     // Perf tweaks for iPhone 1G
@@ -288,27 +288,27 @@ void TotemLevelController::InitEffects()
         m_splinterEmitter->SetNextParticleCount(6);
     }
 
-    m_explosionEmitter = new totemSmokeEmitter(48, "Materials/p_explode2_15_32.tga", 2.5f, 0.5f, -2.0f, 0.5f);
+    m_explosionEmitter = new SmokeEmitter(48, "Materials/p_explode2_15_32.tga", 2.5f, 0.5f, -2.0f, 0.5f);
     m_explosionEmitter->SetParticleBlendStyle(e_particleBlendStyleMultiply);
     m_explosionEmitter->SetNextParticleCount(4);
 
-    m_explosionSmokeEmitter = new totemSmokeEmitter(48, "Materials/p_smoke2_15_32.tga", 3.2f, 1.25f, -1.0f, 1.0f);
+    m_explosionSmokeEmitter = new SmokeEmitter(48, "Materials/p_smoke2_15_32.tga", 3.2f, 1.25f, -1.0f, 1.0f);
     m_explosionSmokeEmitter->SetParticleBlendStyle(e_particleBlendStyleDarken);
     m_explosionSmokeEmitter->SetNextParticleCount(4);
 
-    //m_gunSmokeEmitter = new totemSplashEmitter(16, "/Materials/p_smokea0002.tga", 32.0f, 0.32f, 15.0f, 6.0f);
+    //m_gunSmokeEmitter = new SplashEmitter(16, "/Materials/p_smokea0002.tga", 32.0f, 0.32f, 15.0f, 6.0f);
 
-    m_questionEmitter = new totemStarEmitter(8, "Materials/p_qmark_15_32.tga", 0.0f, 3.0f, 24.0f, 0.75f);
+    m_questionEmitter = new StarEmitter(8, "Materials/p_qmark_15_32.tga", 0.0f, 3.0f, 24.0f, 0.75f);
     m_questionEmitter->m_ySpreadLower = -2.0f;
     m_questionEmitter->m_ySpreadUpper = 2.0f;
     m_questionEmitter->m_onStopResume = true;
 
-    //m_splashEmitter =  new totemSplashEmitter(48, "Materials/p_splasha0001.tga", 64.0f, 2.0f, -10.0f, 0.5f);
-    m_splashEmitter =  new totemSplashEmitter(48, "Materials/p_splasha0001.tga", 1.8f, 2.0f, -10.0f, 0.005f);
+    //m_splashEmitter =  new SplashEmitter(48, "Materials/p_splasha0001.tga", 64.0f, 2.0f, -10.0f, 0.5f);
+    m_splashEmitter =  new SplashEmitter(48, "Materials/p_splasha0001.tga", 1.8f, 2.0f, -10.0f, 0.005f);
 
-    //m_gunSparkEmitter = new totemSparkEmitter(1, "Materials/p_spark_14_128.tga", 3.0f, 0.075f, 0.00001f, 0.0001f);
+    //m_gunSparkEmitter = new SparkEmitter(1, "Materials/p_spark_14_128.tga", 3.0f, 0.075f, 0.00001f, 0.0001f);
 
-    m_waveParticleEmitter = new totemQuadEmitter(32, "Materials/p_splashb_15_64.tga", 2.0f, 1.5f, 0.0f, 0.0f);
+    m_waveParticleEmitter = new quadEmitter(32, "Materials/p_splashb_15_64.tga", 2.0f, 1.5f, 0.0f, 0.0f);
 }
 
 
@@ -620,7 +620,7 @@ void TotemLevelController::RefreshLayout()
 const bool TotemLevelController::InitLevel(const totemLevel* level, const int levelId)
 {
     unsigned i;
-    totemTextBlock *textBlock;
+    TextBlock *textBlock;
     totemBlock *block;
     totemEvent *event;
     totemJoint *joint;
@@ -691,7 +691,7 @@ const bool TotemLevelController::InitLevel(const totemLevel* level, const int le
 
         if (block->GetMaterial() == e_totemMaterialText)
         {
-            textBlock = new totemTextBlock(block, levelId);
+            textBlock = new TextBlock(block, levelId);
             ((totemLevel *)level)->AddBlock(textBlock);
         }
     }
@@ -823,7 +823,7 @@ const bool TotemLevelController::InitLevel(const totemLevel* level, const int le
 
     // Preload script textures:
     msgCount = Scripts_GetLevelMessagesForTag(scriptMessages,
-                                              20, levelId, TOTEM_SCRIPTS_WILDCARD_TAG);
+                                              20, levelId, _HDK_SCRIPTS_WILDCARD_TAG);
 
     for (int i = 0; i < hdMin(msgCount, 20); i++)
     {

@@ -17,8 +17,8 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef TOTEM_SCRIPTING_H
-#define TOTEM_SCRIPTING_H
+#ifndef _HDK_SCRIPTING_H
+#define _HDK_SCRIPTING_H
 
 #include <fstream>
 #include <sstream>
@@ -61,16 +61,16 @@ typedef struct
 } totemMessage;
 
 
-#define kTotemGoalDescriptionStringSize 64
-#define kTotemGoalProgressStringSize 256
+#define HDK_GAME_GoalDescriptionStringSize 64
+#define HDK_GAME_GoalProgressStringSize 256
 typedef struct
 {
     int levelId;
     int value;
     int state;
     e_totemGoalType goalType;
-    char description[kTotemGoalDescriptionStringSize];
-    char progressMessage[kTotemGoalProgressStringSize];
+    char description[HDK_GAME_GoalDescriptionStringSize];
+    char progressMessage[HDK_GAME_GoalProgressStringSize];
 } totemGoal;
 
 

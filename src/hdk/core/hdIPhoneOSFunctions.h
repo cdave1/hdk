@@ -20,6 +20,6 @@
 #ifndef HD_IPHONE_OS_FUNCTIONS_H
 #define HD_IPHONE_OS_FUNCTIONS_H
 
-#include <hdk/hdOSFunctions.h>
+#include <hdk/OSFunctions.h>
 
 #endif

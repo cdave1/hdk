@@ -24,13 +24,13 @@
 #ifndef B2_OPTIMIZED_FUNCTIONS_H
 #define B2_OPTIMIZED_FUNCTIONS_H
 
-#include <hdk/hdMath/hdMatrix.h>
+#include <hdk/math/hdMatrix.h>
 
 // iPhone Specific
 #if TARGET_OS_IPHONE
 
 #ifdef _ARM_ARCH_7
-#include <hdk/hdMath/neon/neon_matrix_impl.h>
+#include <hdk/math/neon/neon_matrix_impl.h>
 #endif
 
 #endif

@@ -18,7 +18,7 @@
  */
 
 #include "hdIBViewController.h"
-#include <hdk/hdInterface/hdInterfaceContext.h>
+#include <hdk/ui/hdInterfaceContext.h>
 
 hdIBViewController::hdIBViewController(const char *name)
 {

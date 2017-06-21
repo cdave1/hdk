@@ -20,7 +20,7 @@
 #ifndef _HD_TRANSLATION_ACTION_H_
 #define _HD_TRANSLATION_ACTION_H_
 
-#include <hdk/hdAnimation/hdAction.h>
+#include <hdk/animation/hdAction.h>
 
 class hdTranslationAction : public hdAction
 {

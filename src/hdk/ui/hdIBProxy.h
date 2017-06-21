@@ -34,11 +34,11 @@
 #define _HD_IB_PROXY_H_
 
 
-#include <hdk/hdGame.h>
-#include <hdk/hdGraphicsLibrary.h>
-#include <hdk/hdMath.h>
-#include <hdk/hdInterface/hdIBEnums.h>
-#include <hdk/hdInterface/hdReceiver.h>
+#include <hdk/physics.h>
+#include <hdk/graphics.h>
+#include <hdk/math.h>
+#include <hdk/ui/hdIBEnums.h>
+#include <hdk/ui/hdReceiver.h>
 
 
 #define HDIBPROXY_GROUP_STRING_LEN 256

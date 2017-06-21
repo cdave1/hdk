@@ -33,10 +33,10 @@ totemLevel::totemLevel()
 	m_foregroundLayer = NULL;
 	
 #ifdef LEVEL_EDITOR
-	m_blocks = new hdSerializablePointerList<totemBlock, kTotemBlockMax>();
-	m_jacks = new hdSerializablePointerList<totemJack, kTotemJackMax>();
-	m_joints = new hdSerializablePointerList<totemJoint, kTotemJointMax>();
-	m_events = new hdSerializablePointerList<totemEvent, kTotemEventMax>();
+	m_blocks = new hdSerializablePointerList<totemBlock, HDK_GAME_BlockMax>();
+	m_jacks = new hdSerializablePointerList<totemJack, HDK_GAME_JackMax>();
+	m_joints = new hdSerializablePointerList<totemJoint, HDK_GAME_JointMax>();
+	m_events = new hdSerializablePointerList<totemEvent, HDK_GAME_EventMax>();
 	
 	m_backgroundLayer = new totemLayer(this, 200);
 	m_midgroundLayer = new totemLayer(this, 100);
@@ -75,7 +75,7 @@ totemLevel::totemLevel()
 	
 	m_blockTextureCache = new hdTypedefList<hdTexture*, 128>();
 	
-	m_sortedBlockCache = new hdTypedefList<totemBlock*, kTotemBlockMax>();
+	m_sortedBlockCache = new hdTypedefList<totemBlock*, HDK_GAME_BlockMax>();
 	
 	m_jointTexture = NULL; 
 #endif

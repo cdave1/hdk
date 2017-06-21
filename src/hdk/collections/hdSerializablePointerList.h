@@ -20,7 +20,7 @@
 #ifndef _HD_SERIALIZABLE_POINTER_LIST_H_
 #define _HD_SERIALIZABLE_POINTER_LIST_H_
 
-#include <hdk/hdCollections/hdCollectionSettings.h>
+#include <hdk/collections/hdCollectionSettings.h>
 
 // A serializable list of pointers to other objects using
 // templates rather than (void *). Will give the code a bit

@@ -20,9 +20,9 @@
 #ifndef _HD_IB_LOADER_H_
 #define _HD_IB_LOADER_H_
 
-#include <hdk/hdInterface/hdIBViewController.h>
+#include <hdk/ui/hdIBViewController.h>
 
-#include <hdk/hdCore/hdCompression.h>
+#include <hdk/core/hdCompression.h>
 
 #define HD_VIEWCONTROLLER_FILE_EXTENSION "hib"
 
