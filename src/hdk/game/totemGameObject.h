@@ -17,19 +17,25 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef HDK_H
-#define HDK_H
+#ifndef _TOTEM_GAME_OBJECT_H_
+#define _TOTEM_GAME_OBJECT_H_
 
-#include <hdk/core.h>
-#include <hdk/math.h>
-#include <hdk/collections.h>
-#include <hdk/physics.h>
-#include <hdk/game.h>
-#include <hdk/graphics.h>
-#include <hdk/animation.h>
-#include <hdk/sound.h>
-#include <hdk/ui.h>
-#include <hdk/effects.h>
-#include <hdk/hdScripting.h>
+#include "Box2D.h"
+
+#include "totemEnums.h"
+
+class totemGameObject
+{
+public:
+    totemGameObject() {}
+    totemGameObject(e_totemType totemType, void * totemPointer)
+    {
+        m_totemType = totemType;
+        m_totemPointer = totemPointer;
+    }
+
+    e_totemType m_totemType;
+    void * m_totemPointer;
+};
 
 #endif

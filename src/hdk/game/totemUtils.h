@@ -17,11 +17,16 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef HD_SOUND_SYSTEM_H
-#define HD_SOUND_SYSTEM_H
+#ifndef _HD_TOTEM_UTILS_H_
+#define _HD_TOTEM_UTILS_H_
 
-#include <hdk/hdSound/hdSoundSystemEnums.h>
-#include <hdk/hdSound/hdSound.h>
-#include <hdk/hdSound/hdSoundManager.h>
+#include "Box2D.h"
+#include <hdk/hdk.h>
+
+extern void b2Mat22ToMatrix(hdMatrix &mOut, const b2Mat22& mIn);
+
+extern void UtilDrawAABB(const hdAABB &aabb);
+
+extern void UtilGenerateColor(float* out, float pos, float end);
 
 #endif

@@ -17,19 +17,11 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef HDK_H
-#define HDK_H
+#ifndef _HD_SOUND_H_
+#define _HD_SOUND_H_
 
-#include <hdk/core.h>
-#include <hdk/math.h>
-#include <hdk/collections.h>
-#include <hdk/physics.h>
-#include <hdk/game.h>
-#include <hdk/graphics.h>
-#include <hdk/animation.h>
-#include <hdk/sound.h>
-#include <hdk/ui.h>
-#include <hdk/effects.h>
-#include <hdk/hdScripting.h>
+#include <hdk/hdSound/hdSoundSystemEnums.h>
+#include <hdk/hdSound/hdSound.h>
+#include <hdk/hdSound/hdSoundManager.h>
 
 #endif

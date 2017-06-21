@@ -17,19 +17,23 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef HDK_H
-#define HDK_H
+#ifndef TOTEM_GAME_H
+#define TOTEM_GAME_H
 
-#include <hdk/core.h>
-#include <hdk/math.h>
-#include <hdk/collections.h>
-#include <hdk/physics.h>
-#include <hdk/game.h>
-#include <hdk/graphics.h>
-#include <hdk/animation.h>
-#include <hdk/sound.h>
-#include <hdk/ui.h>
-#include <hdk/effects.h>
-#include <hdk/hdScripting.h>
+#include "totemConstants.h"
+#include "totemEnums.h"
+#include "totemBlock.h"
+#include "totemJack.h"
+#include "totemJoint.h"
+#include "totemEvent.h"
+#include "totemPolygon.h"
+#include "totemLayer.h"
+#include "totemLevel.h"
+#include "totemFloorInfo.h"
+#include "totemWorldManager.h"
+#include "totemWorld.h"
+#include "totemScripting.h"
+#include "totemUtils.h"
+#include "totemContactManager.h"
 
 #endif

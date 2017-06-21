@@ -17,19 +17,13 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef HDK_H
-#define HDK_H
+#ifndef TOTEM_CONSTANTS_H
+#define TOTEM_CONSTANTS_H
 
-#include <hdk/core.h>
-#include <hdk/math.h>
-#include <hdk/collections.h>
-#include <hdk/physics.h>
-#include <hdk/game.h>
-#include <hdk/graphics.h>
-#include <hdk/animation.h>
-#include <hdk/sound.h>
-#include <hdk/ui.h>
-#include <hdk/effects.h>
-#include <hdk/hdScripting.h>
+#define kTotemBlockMax 512
+#define kTotemJackMax 256
+#define kTotemJointMax 150
+#define kTotemEventMax 64
+#define kMaxShapeVertices 128
 
 #endif
