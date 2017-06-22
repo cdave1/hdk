@@ -19,7 +19,7 @@
 
 OTHER_LDFLAGS = -all_load -ObjC
 
-HDKPATH = /Users/davidpetrie/Projects/hdk/Tech1/
+HDKPATH = $(SRCROOT)/../../
 
 HDKPATHS = $(HDKPATH)libs/boost $(HDKPATH)libs/Box2D/2.02/Include $(HDKPATH)libs/Box2D/2.02/Source/Dynamics/Controllers $(HDKPATH)include/ $(HDKPATH)src/
 

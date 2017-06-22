@@ -19,6 +19,9 @@
 
 #include "hdScripts.h"
 
+#include <hdk/core.h>
+#include <hdk/collections.h>
+
 #include <fstream>
 #include <sstream>
 #include <regex>

@@ -22,7 +22,6 @@
 
 #include <hdk/physics.h>
 #include <hdk/graphics.h>
-#include <hdk/math.h>
 
 class hdReceiver : public hdPolygon, public hdDrawable
 {

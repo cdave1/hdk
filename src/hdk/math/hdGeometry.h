@@ -20,10 +20,17 @@
 #ifndef _HD_GEOMETRY_H_
 #define _HD_GEOMETRY_H_
 
-#include <hdk/math/hdMathCommon.h>
+#include <hdk/math/hdMath.h>
 #include <hdk/math/hdMatrix.h>
 
-typedef struct hdTransform;
+struct hdTransform
+{
+    hdTransform() : rotation(0,0,0), translation(0,0,0), scale(1.0f, 1.0f, 1.0f) {}
+
+    hdVec3 rotation;
+    hdVec3 translation;
+    hdVec3 scale;
+};
 
 void hdScaleVertices(hdVec3* vertices, int vertexCount, const hdVec3& scale);
 void hdRotateVertices(hdVec3* vertices, int vertexCount, const hdVec3& rotation);
@@ -50,14 +57,7 @@ struct hdAABB
 };
 
 
-struct hdTransform
-{
-    hdTransform() : rotation(0,0,0), translation(0,0,0), scale(1.0f, 1.0f, 1.0f) {}
 
-    hdVec3 rotation;
-    hdVec3 translation;
-    hdVec3 scale;
-};
 
 
 typedef enum

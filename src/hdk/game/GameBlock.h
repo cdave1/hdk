@@ -18,21 +18,21 @@
  */
 
 /*
- Totem block defines a block that appears in the game world.
-
- Block will be drawn if on screen and has physics.
+ A block is a polygon with physics information.
 
  The block def determines what kind of block will be created. Composite blocks
  have more than one physics shape, although may only have one game object (mainly
  because game objects are to be rendered as textured quads or even pt sprites).
  */
 
-#ifndef _HDK_BLOCK_H
-#define _HDK_BLOCK_H
+#ifndef _HDK_GAME_BLOCK_H_
+#define _HDK_GAME_BLOCK_H_
 
 #include "Box2D.h"
 
-#include <hdk/hdk.h>
+#include <hdk/physics.h>
+#include <hdk/graphics/hdDrawable.h>
+#include <hdk/graphics/hdPolygon.h>
 #include <hdk/game/Enums.h>
 #include <hdk/game/Utils.h>
 
@@ -40,10 +40,8 @@
 #include <boost/archive/text_oarchive.hpp>
 
 struct hdGameObjectDef;
-class hdPolygon;
 
-class Block : public hdDrawable, public hdPhysicsObject, public hdPolygon
-{
+class Block : public hdDrawable, public hdPhysicsObject, public hdPolygon {
     friend class hdGameWorld;
     friend class hdGameObject;
     friend class hdPolygon;

@@ -17,9 +17,9 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#include "Block.h"
+#include "GameBlock.h"
 
-#include <hdk/hdk.h>
+#include <hdk/core/hdConfig.h>
 
 /*
  * Thanks to boost serialization, there are multiple entry points to the Block init functions.

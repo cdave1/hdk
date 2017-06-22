@@ -19,6 +19,8 @@
 
 #include "hdInterfaceLayer.h"
 
+#include <hdk/ui.h>
+
 hdInterfaceLayer::hdInterfaceLayer(hdGameWorld* gameWorld, const hdAABB& aabb) : hdGameObject(gameWorld, aabb)
 {
     m_buttons = new hdPointerList<hdButton, 64>();

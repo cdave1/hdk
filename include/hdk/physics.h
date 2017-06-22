@@ -17,13 +17,12 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef _HD_PHYSICS_H_
-#define _HD_PHYSICS_H_
+#ifndef _HDK_PHYSICS_H_
+#define _HDK_PHYSICS_H_
 
 #include <hdk/physics/hdPhysicsGlue.h>
 #include <hdk/physics/hdPhysicsJoint.h>
 #include <hdk/physics/hdPhysicsObject.h>
-#include <hdk/physics/hdOrthographicProjection.h>
 #include <hdk/physics/hdGameObject.h>
 #include <hdk/physics/hdGameWorld.h>
 

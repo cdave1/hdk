@@ -21,7 +21,9 @@
 #define _HDK_GAME_UTILS_H_
 
 #include "Box2D.h"
-#include <hdk/hdk.h>
+#include <hdk/graphics.h>
+#include <hdk/math/hdMath.h>
+#include <hdk/math/hdGeometry.h>
 
 extern void b2Mat22ToMatrix(hdMatrix &mOut, const b2Mat22& mIn);
 

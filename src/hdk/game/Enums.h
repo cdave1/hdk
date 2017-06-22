@@ -17,17 +17,17 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef _HDK_ENUMS_H_
-#define _HDK_ENUMS_H_
+#ifndef _HDK_GAME_ENUMS_H_
+#define _HDK_GAME_ENUMS_H_
 
-#define _HDK_GAME_STARTING_LEVEL 1
+#define HDK_GAME_STARTING_LEVEL 1
 
-#define _HDK_GAME_GOAL_MIN_PROPORTION 0.75f
+#define HDK_GAME_GOAL_MIN_PROPORTION 0.75f
 #define	HDK_GAME_GOAL_MIDDLE_PROPORTION 0.9f
-#define _HDK_GAME_GOAL_MAX_PROPORTION 1.0f
+#define HDK_GAME_GOAL_MAX_PROPORTION 1.0f
 
 #define HACK_MAX_WORLD_TAG 10
-#define _HDK_SCRIPTS_WILDCARD_TAG -999
+#define HDK_SCRIPTS_WILDCARD_TAG -999
 
 typedef enum {
     e_hdkTypeBlock = 0x0002,

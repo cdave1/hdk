@@ -20,7 +20,8 @@
 #define B2_MATH_H
 
 #include "b2Settings.h"
-#include <hdk/math.h>
+#include <hdk/core/hdCommon.h>
+#include <hdk/math/hdMath.h>
 
 #if (TARGET_OS_IPHONE == 1) && (TARGET_IPHONE_SIMULATOR == 0)
 #include <cmath>
@@ -288,7 +289,7 @@ struct b2Mat22
 	explicit b2Mat22(float32 angle)
 	{
 		// TODO_ERIN compute sin+cos together.
-		float32 c = hdCosf(angle), s = hdSinf(angle);
+		float32 c = cosf(angle), s = sinf(angle);
 		col1.x = c; col2.x = -s;
 		col1.y = s; col2.y = c;
 	}
@@ -304,7 +305,7 @@ struct b2Mat22
 	/// an orthonormal rotation matrix.
 	void Set(float32 angle)
 	{
-		float32 c = hdCosf(angle), s = hdSinf(angle);
+		float32 c = cosf(angle), s = sinf(angle);
 		col1.x = c; col2.x = -s;
 		col1.y = s; col2.y = c;
 	}

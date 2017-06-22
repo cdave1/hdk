@@ -20,6 +20,8 @@
 #include "hdPhysicsParticleEmitter.h"
 #include "Box2D.h"
 #include <hdk/core/hdConfig.h>
+#include <hdk/math/hdMath.h>
+#include <hdk/physics.h>
 
 hdPhysicsParticle::hdPhysicsParticle(hdGameWorld *m_gameWorld) : hdPolygon(m_gameWorld)
 {

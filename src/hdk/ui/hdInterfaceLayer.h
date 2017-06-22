@@ -20,7 +20,11 @@
 #ifndef _HD_INTERFACE_LAYER_H_
 #define _HD_INTERFACE_LAYER_H_
 
-#include <hdk/hdk.h>
+#include <hdk/graphics.h>
+#include <hdk/physics.h>
+#include <hdk/math/hdMath.h>
+
+class hdButton;
 
 // Defines a flat space that contains interface items.
 //

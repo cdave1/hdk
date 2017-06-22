@@ -20,7 +20,6 @@
 #ifndef _HD_FONT_H_
 #define _HD_FONT_H_
 
-#include <hdk/math.h>
 #include <hdk/graphics.h>
 
 #define kMaxFontTextSize 512

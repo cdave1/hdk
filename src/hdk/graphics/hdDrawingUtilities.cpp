@@ -19,6 +19,11 @@
 
 #include "hdDrawingUtilities.h"
 
+#include <hdk/graphics/hdGraphicsInterface.h>
+#include <hdk/graphics/hdPolygon.h>
+#include <hdk/graphics/hdTexture.h>
+#include <hdk/graphics/hdTextureManager.h>
+
 void SetupPointSprites()
 {
 #if TARGET_GL_OPENGL == 1

@@ -19,6 +19,8 @@
 
 #include "hdGameWorld.h"
 
+#include "hdGameObject.h"
+
 hdGameWorld::hdGameWorld(const hdAABB& aabb)
 {
     m_aabb = aabb;

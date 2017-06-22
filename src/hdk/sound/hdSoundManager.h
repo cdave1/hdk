@@ -20,9 +20,9 @@
 #ifndef _HD_SOUND_MANAGER_
 #define _HD_SOUND_MANAGER_
 
-#include <hdk/Sound/hdSoundEngineInterface.h>
-#include <hdk/Sound/hdSound.h>
-#include <hdk/Sound/hdSoundSystemEnums.h>
+#include <hdk/sound/hdSoundEngineInterface.h>
+#include <hdk/sound/hdSound.h>
+#include <hdk/sound/hdSoundSystemEnums.h>
 
 /*
  * A set of static methods, wrapped around an engine that deals with sound.

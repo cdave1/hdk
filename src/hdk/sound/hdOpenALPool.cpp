@@ -19,7 +19,7 @@
 
 #include "hdOpenALPool.h"
 #include "hdCommon.h"
-#include "hdCollections.h"
+#include "collections.h"
 
 //typedef struct hdOpenALSource;
 

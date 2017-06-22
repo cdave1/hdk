@@ -17,8 +17,8 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef HD_MATH_COMMON_H
-#define HD_MATH_COMMON_H
+#ifndef _HD_MATH_COMMON_H_
+#define _HD_MATH_COMMON_H_
 
 #include <math.h>
 #include <cstdlib>

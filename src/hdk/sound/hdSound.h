@@ -17,10 +17,10 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef _HD_SOUND_H_
-#define _HD_SOUND_H_
+#ifndef _HDK_SOUND_H_
+#define _HDK_SOUND_H_
 
-#include <hdk/Sound/hdSoundSystemEnums.h>
+#include <hdk/sound/hdSoundSystemEnums.h>
 
 class hdSound
 {

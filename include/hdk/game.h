@@ -22,7 +22,7 @@
 
 #include <hdk/game/Constants.h>
 #include <hdk/game/Enums.h>
-#include <hdk/game/Block.h>
+#include <hdk/game/GameBlock.h>
 #include <hdk/game/Jack.h>
 #include <hdk/game/Joint.h>
 #include <hdk/game/Event.h>
@@ -32,7 +32,6 @@
 #include <hdk/game/FloorInfo.h>
 #include <hdk/game/WorldManager.h>
 #include <hdk/game/World.h>
-#include <hdk/game/Scripting.h>
 #include <hdk/game/Utils.h>
 #include <hdk/game/ContactManager.h>
 

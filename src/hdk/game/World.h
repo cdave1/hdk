@@ -17,8 +17,8 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef _H_HDK_WORLD_
-#define _H_HDK_WORLD_
+#ifndef _HDK_GAME_WORLD_H_
+#define _HDK_GAME_WORLD_H_
 
 #include "Box2D.h"
 #include <hdk/game.h>

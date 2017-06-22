@@ -17,12 +17,8 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef _HDK_LEVEL_H_
-#define _HDK_LEVEL_H_
-
-#include "Box2D.h"
-#include <hdk/game.h>
-#include "FloorInfo.h"
+#ifndef _HDK_GAME_LEVEL_H_
+#define _HDK_GAME_LEVEL_H_
 
 #include <boost/archive/text_iarchive.hpp>
 #include <boost/archive/text_oarchive.hpp>
@@ -32,9 +28,19 @@
 #include <boost/serialization/version.hpp>
 #include <boost/serialization/split_member.hpp>
 
-#define kMaxLevelNameSize 256
+#include "Box2D.h"
 
-class Layer;
+#include <hdk/graphics.h>
+#include "Enums.h"
+#include "Constants.h"
+#include "FloorInfo.h"
+#include "Layer.h"
+#include "GameBlock.h"
+#include "Event.h"
+#include "Jack.h"
+#include "Joint.h"
+
+#define kMaxLevelNameSize 256
 
 class Level : public hdGameObject, public hdDrawable
 {

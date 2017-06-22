@@ -17,11 +17,11 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef _HD_SOUND_H_
-#define _HD_SOUND_H_
+#ifndef _HDK_SOUND_ENGINE_H_
+#define _HDK_SOUND_ENGINE_H_
 
-#include <hdk/Sound/hdSoundSystemEnums.h>
-#include <hdk/Sound/hdSound.h>
-#include <hdk/Sound/hdSoundManager.h>
+#include <hdk/sound/hdSoundSystemEnums.h>
+#include <hdk/sound/hdSound.h>
+#include <hdk/sound/hdSoundManager.h>
 
 #endif

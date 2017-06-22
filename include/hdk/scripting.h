@@ -20,6 +20,6 @@
 #ifndef _HD_SCRIPTING_H_
 #define _HD_SCRIPTING_H_
 
-#import <hdk/Scripts/hdScripts.h>
+#import <hdk/scripts/Scripting.h>
 
 #endif

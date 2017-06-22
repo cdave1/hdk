@@ -17,16 +17,17 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef _HDK_FLOOR_INFO_
-#define _HDK_FLOOR_INFO_
+#ifndef _HDK_GAME_FLOOR_INFO_
+#define _HDK_GAME_FLOOR_INFO_
 
-#include <hdk/hdk.h>
-
-#include "Enums.h"
-#include "Constants.h"
+#include <hdk/math/hdMath.h>
+#include <hdk/graphics.h>
 
 #include <boost/archive/text_iarchive.hpp>
 #include <boost/archive/text_oarchive.hpp>
+
+#include "Enums.h"
+#include "Constants.h"
 
 class FloorInfo
 {

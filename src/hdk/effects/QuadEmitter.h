@@ -21,6 +21,8 @@
 #define _HDK_QUAD_EMITTER_H_
 
 #include <hdk/game.h>
+#include <hdk/particles.h>
+#include <hdk/game/Level.h>
 
 struct hdParticle;
 

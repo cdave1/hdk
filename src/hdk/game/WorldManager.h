@@ -17,8 +17,8 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef _H_HDK_WORLD_MANAGER_
-#define _H_HDK_WORLD_MANAGER_
+#ifndef _HDK_GAME_WORLD_MANAGER_H_
+#define _HDK_GAME_WORLD_MANAGER_H_
 
 #undef Byte
 #include <zlib.h>

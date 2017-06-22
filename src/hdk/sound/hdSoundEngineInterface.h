@@ -20,7 +20,7 @@
 #ifndef _HD_SOUNDENGINEINTERFACE_H_
 #define _HD_SOUNDENGINEINTERFACE_H_
 
-#include <hdk/Sound/hdSound.h>
+#include <hdk/sound/hdSound.h>
 
 #ifdef __cplusplus
 extern "C" {

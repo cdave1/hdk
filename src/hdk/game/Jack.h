@@ -17,13 +17,13 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef _HDK_JACK_H
-#define _HDK_JACK_H
+#ifndef _HDK_GAME_JACK_H
+#define _HDK_GAME_JACK_H
 
-#include <hdk/hdk.h>
 #include "Enums.h"
 
-class hdPolygon;
+#include <hdk/physics.h>
+#include <hdk/graphics.h>
 
 class Jack : public hdPolygon, public hdPhysicsObject, public hdDrawable
 {

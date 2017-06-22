@@ -22,7 +22,6 @@
 
 #include <hdk/physics.h>
 #include <hdk/graphics.h>
-#include <hdk/math.h>
 #include <hdk/collections.h>
 #include <hdk/ui/hdReceiver.h>
 #include <hdk/ui/hdInterfaceController.h>

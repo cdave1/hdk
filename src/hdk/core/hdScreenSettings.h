@@ -20,8 +20,6 @@
 #ifndef HD_SCREEN_SETTINGS_H
 #define HD_SCREEN_SETTINGS_H
 
-#include <hdk/math.h>
-
 #define HD_ASPECT_RATIO_3_2 1.5f
 #define HD_ASPECT_RATIO_16_9 (16.0f/9.0f)
 #define HD_ASPECT_RATIO_4_3 (4.0f/3.0f)

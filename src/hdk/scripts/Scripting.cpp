@@ -19,6 +19,9 @@
 
 #include "Scripting.h"
 
+#include <hdk/collections.h>
+#include <hdk/core.h>
+#include <map>
 #include <regex>
 
 static hdTypedefList<totemMessage, 256> *currentCache = NULL;
@@ -162,7 +165,7 @@ int Scripts_GetLevelMessagesForTag(totemMessage** messages,
     targetMatch = false;
     for (i = 0; i < currentCache->GetItemCount(); ++i)
     {
-        if (target == _HDK_SCRIPTS_WILDCARD_TAG)
+        if (target == HDK_SCRIPTS_WILDCARD_TAG)
         {
             targetMatch = true;
         }

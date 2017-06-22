@@ -17,8 +17,8 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef _HD_GRAPHICS_LIBRARY_H_
-#define _HD_GRAPHICS_LIBRARY_H_
+#ifndef _HDK_GRAPHICS_H_
+#define _HDK_GRAPHICS_H_
 
 #include <hdk/graphics/hdGraphicsInterface.h>
 #include <hdk/graphics/hdDrawingUtilities.h>
@@ -28,6 +28,6 @@
 #include <hdk/graphics/hdDrawable.h>
 #include <hdk/graphics/hdTGALoader.h>
 #include <hdk/graphics/hdPNGLoader.h>
-
+#include <hdk/graphics/hdOrthographicProjection.h>
 
 #endif

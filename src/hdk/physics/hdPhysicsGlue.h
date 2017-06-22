@@ -20,7 +20,7 @@
 #ifndef _HD_PHYSICS_GLUE_H_
 #define _HD_PHYSICS_GLUE_H_
 
-#include <hdk/math.h>
+#include <hdk/core.h>
 
 class b2World;
 class b2Body;

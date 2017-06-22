@@ -45,10 +45,11 @@
  * game objects.
  */
 
-#ifndef hd_GAMEOBJECT_H
-#define hd_GAMEOBJECT_H
+#ifndef _HDK_GAMEOBJECT_H_
+#define _HDK_GAMEOBJECT_H_
 
-#include <hdk/math.h>
+#include <hdk/math/hdMath.h>
+#include <hdk/math/hdGeometry.h>
 #include <boost/archive/text_iarchive.hpp>
 #include <boost/archive/text_oarchive.hpp>
 

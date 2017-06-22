@@ -17,11 +17,13 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef _HDK_POLYGON_H
-#define _HDK_POLYGON_H
+#ifndef _HDK_GAME_POLYGON_H
+#define _HDK_GAME_POLYGON_H
 
-#include <hdk/hdk.h>
 #include "Enums.h"
+
+#include <hdk/physics.h>
+#include <hdk/graphics.h>
 
 #include <boost/archive/text_iarchive.hpp>
 #include <boost/archive/text_oarchive.hpp>

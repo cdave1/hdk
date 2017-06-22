@@ -36,7 +36,6 @@
 
 #include <hdk/physics.h>
 #include <hdk/graphics.h>
-#include <hdk/math.h>
 #include <hdk/ui/hdIBEnums.h>
 #include <hdk/ui/hdReceiver.h>
 

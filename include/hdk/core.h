@@ -20,6 +20,8 @@
 #ifndef _HD_CORE_H_
 #define _HD_CORE_H_
 
+#undef BOOST_HAS_INT128
+
 #include <hdk/core/hdCommon.h>
 #include <hdk/core/hdApplication.h>
 #include <hdk/core/hdCompression.h>
@@ -34,5 +36,14 @@
 #ifdef LEVEL_EDITOR
 #include <hdk/core/hdFileSystemUtils.h>
 #endif
+
+#include <stdlib.h>
+#include <math.h>
+#include <algorithm>
+
+#include <hdk/math/hdMath.h>
+#include <hdk/math/hdMatrix.h>
+#include <hdk/math/hdGeometry.h>
+#include <hdk/math/hdMathSerializable.h>
 
 #endif

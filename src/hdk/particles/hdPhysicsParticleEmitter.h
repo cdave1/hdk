@@ -20,10 +20,11 @@
 #ifndef _HD_PHYSICS_PARTICLE_EMITTER_
 #define _HD_PHYSICS_PARTICLE_EMITTER_
 
-#include <hdk/hdk.h>
+#include "Box2d.h"
 
-class b2Body;
-class b2Controller;
+#include <hdk/math/hdMath.h>
+#include <hdk/animation.h>
+#include <hdk/graphics.h>
 
 #define kPhysicsParticleUserType 0xFF00
 

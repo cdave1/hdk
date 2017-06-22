@@ -19,6 +19,8 @@
 
 #include "hdScreenSettings.h"
 
+#include <hdk/math/hdMath.h>
+
 typedef struct screenRect
 {
     float width;

@@ -17,8 +17,8 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef HD_APPLICATION_H_
-#define HD_APPLICATION_H_
+#ifndef _HDK_APPLICATION_H_
+#define _HDK_APPLICATION_H_
 
 class hdApplication
 {

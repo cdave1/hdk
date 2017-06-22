@@ -17,11 +17,10 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef HDK_H
-#define HDK_H
+#ifndef _HDK_MIN_H_
+#define _HDK_MIN_H_
 
 #include <hdk/core.h>
-#include <hdk/math.h>
 #include <hdk/collections.h>
 #include <hdk/physics.h>
 #include <hdk/graphics.h>

@@ -17,8 +17,8 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef _HDK_CONSTANTS_H
-#define _HDK_CONSTANTS_H
+#ifndef _HDK_GAME_CONSTANTS_H_
+#define _HDK_GAME_CONSTANTS_H_
 
 #define HDK_GAME_BlockMax 512
 #define HDK_GAME_JackMax 256

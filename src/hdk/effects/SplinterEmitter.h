@@ -21,6 +21,7 @@
 #define _HDK_SPLINTER_EMITTER_H
 
 #include <hdk/game.h>
+#include <hdk/particles.h>
 
 struct hdParticle;
 

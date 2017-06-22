@@ -17,15 +17,13 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef _HDK_SCRIPTING_H
-#define _HDK_SCRIPTING_H
+#ifndef _HDK_GAME_SCRIPTING_H
+#define _HDK_GAME_SCRIPTING_H
 
 #include <fstream>
 #include <sstream>
 
-#include <hdk/hdk.h>
-
-#include "Enums.h"
+#include <hdk/game/Enums.h>
 
 typedef enum
 {

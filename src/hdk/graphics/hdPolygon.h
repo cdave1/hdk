@@ -28,10 +28,14 @@
 #ifndef _HD_POLYGON_H_
 #define _HD_POLYGON_H_
 
-#include <hdk/physics.h>
+#include <hdk/graphics.h>
+#include <hdk/physics/hdGameObject.h>
+#include <hdk/physics/hdGameWorld.h>
 #include <hdk/collections.h>
 
 #define kMaxPolygonVertices 96
+
+//class hdGameWorld;
 
 class hdPolygon : public hdGameObject
 {

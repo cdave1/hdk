@@ -17,19 +17,19 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef HDK_H
-#define HDK_H
+#ifndef _HDK_H_
+#define _HDK_H_
 
 #include <hdk/core.h>
-#include <hdk/math.h>
 #include <hdk/collections.h>
-#include <hdk/physics.h>
-#include <hdk/game.h>
 #include <hdk/graphics.h>
 #include <hdk/animation.h>
 #include <hdk/sound.h>
 #include <hdk/ui.h>
-#include <hdk/effects.h>
 #include <hdk/Scripting.h>
+
+#include <hdk/physics.h>
+#include <hdk/game.h>
+#include <hdk/effects.h>
 
 #endif

@@ -29,6 +29,7 @@
 #include <stdlib.h>
 #include <fcntl.h>
 #include <math.h>
+#include <float.h>
 #include <assert.h>
 
 #include <hdk/core/hdTypes.h>

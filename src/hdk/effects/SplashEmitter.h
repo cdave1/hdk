@@ -21,6 +21,7 @@
 #define _HDK_SPLASH_EMITTER_H_
 
 #include <hdk/game.h>
+#include <hdk/particles.h>
 
 struct hdParticle;
 

@@ -24,7 +24,7 @@
 #ifndef _HD_MATRIX_
 #define _HD_MATRIX_
 
-#include <hdk/math/hdMathCommon.h>
+#include <hdk/math/hdMath.h>
 
 /* Column major order */
 #define __11 0

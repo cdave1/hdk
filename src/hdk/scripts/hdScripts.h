@@ -20,7 +20,7 @@
 #ifndef HD_SCRIPTS_H
 #define HD_SCRIPTS_H
 
-#include <hdk/hdk.h>
+#include <string>
 
 #define HD_SCRIPTS_WILDCARD_TAG 9999
 

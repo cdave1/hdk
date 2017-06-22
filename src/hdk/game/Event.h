@@ -17,11 +17,12 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef _HDK_EVENT_H_
-#define _HDK_EVENT_H_
+#ifndef _HDK_GAME_EVENT_H_
+#define _HDK_GAME_EVENT_H_
 
 #include "Enums.h"
-#include "Block.h"
+#include <hdk/physics.h>
+#include <hdk/graphics.h>
 
 #include <boost/archive/text_iarchive.hpp>
 #include <boost/archive/text_oarchive.hpp>

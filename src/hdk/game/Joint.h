@@ -17,13 +17,15 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef _HDK_JOINT_H_
-#define _HDK_JOINT_H_
+#ifndef _HDK_GAME_JOINT_H_
+#define _HDK_GAME_JOINT_H_
 
 #include "Box2D.h"
 
+#include <hdk/physics.h>
+
 #include "Enums.h"
-#include "Block.h"
+#include "GameBlock.h"
 
 #include <boost/archive/text_iarchive.hpp>
 #include <boost/archive/text_oarchive.hpp>

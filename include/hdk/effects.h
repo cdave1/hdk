@@ -26,8 +26,6 @@
 #include <hdk/effects/SparkEmitter.h>
 #include <hdk/effects/QuadEmitter.h>
 #include <hdk/effects/SplinterEmitter.h>
-#include <hdk/effects/GoalBlock.h>
-#include <hdk/effects/ChapterBlock.h>
-#include <hdk/effects/TextBlock.h>
+#include <hdk/effects/WeatherParticleEmitter.h>
 
 #endif
