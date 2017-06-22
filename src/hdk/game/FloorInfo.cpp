@@ -40,8 +40,8 @@ FloorInfo::FloorInfo()
 
 
 FloorInfo::FloorInfo(const char *firstTextureName, const char *secondTextureName,
-                               const hdVec3& flowVector, float floorLevel,
-                               bool isReflective)
+                     const hdVec3& flowVector, float floorLevel,
+                     bool isReflective)
 {
     snprintf(m_firstTextureName, kMaxTexturePathSize, "%s", firstTextureName);
     snprintf(m_secondTextureName, kMaxTexturePathSize, "%s", secondTextureName);
@@ -55,7 +55,7 @@ FloorInfo::FloorInfo(const char *firstTextureName, const char *secondTextureName
     m_tint[1] = 0.25f;
     m_tint[2] = 0.25f;
     m_tint[3] = 0.25f;
-    
+
     m_firstTexture = NULL;
     m_secondTexture = NULL;
 }

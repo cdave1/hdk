@@ -36,8 +36,8 @@ Jack::Jack() : hdPolygon()
 
 
 Jack::Jack(hdGameWorld *gameWorld,
-                     b2World *physicsWorld,
-                     const hdVec2& position) : hdPolygon(gameWorld)
+           b2World *physicsWorld,
+           const hdVec2& position) : hdPolygon(gameWorld)
 {
     m_userType = (int)e_hdkTypeJack;
     m_physicsBody = NULL;
@@ -58,7 +58,7 @@ Jack::Jack(hdGameWorld *gameWorld,
 
 
 void Jack::Init(hdGameWorld *gameWorld,
-                     b2World *physicsWorld)
+                b2World *physicsWorld)
 {
     ((hdPolygon *)this)->Init(gameWorld);
     m_userType = (int)e_hdkTypeJack;
@@ -122,7 +122,7 @@ void Jack::Draw() const
         hdglVertex2f(m_vertices->GetItems()[i].x, m_vertices->GetItems()[i].y);
     }
     hdglEnd();
-    
+
     hdglBegin(GL_LINE_LOOP);
     hdglVertex2f(m_aabb.lower.x, m_aabb.lower.y);
     hdglVertex2f(m_aabb.lower.x, m_aabb.upper.y);

@@ -38,8 +38,8 @@ typedef struct Touch
 
     NSTimeInterval TimeStamp;
 
-    int TouchID;
-    int TapCount;
+    uint64_t TouchID;
+    NSUInteger TapCount;
 
     bool TouchDown;
     bool TouchUp;

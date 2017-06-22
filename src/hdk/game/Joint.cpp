@@ -43,11 +43,11 @@ Joint::Joint() : hdPhysicsJoint(), hdPolygon()
 
 
 Joint::Joint(hdGameWorld *gameWorld,
-                       b2World *physicsWorld,
-                       e_hdkJointType jointType,
-                       const hdVec3& rotationPoint,
-                       Block* firstBody,
-                       Block* secondBody) : hdPhysicsJoint(), hdPolygon(gameWorld)
+             b2World *physicsWorld,
+             e_hdkJointType jointType,
+             const hdVec3& rotationPoint,
+             Block* firstBody,
+             Block* secondBody) : hdPhysicsJoint(), hdPolygon(gameWorld)
 {
     m_userType = (int)e_hdkTypeJoint;
     m_joint = NULL;
@@ -108,7 +108,7 @@ Joint::~Joint()
 
 
 void Joint::Init(hdGameWorld *gameWorld,
-                      b2World *physicsWorld)
+                 b2World *physicsWorld)
 {
 
     ((hdPolygon *)this)->Init(gameWorld);
@@ -381,20 +381,20 @@ void Joint::Draw() const
 
     hdglBegin(GL_LINE_LOOP);
     hdglVertex2f(m_aabb.lower.x, m_aabb.lower.y);
-    hdglVertex2f(m_aabb.lower.x, m_aabb.upper.y); 
+    hdglVertex2f(m_aabb.lower.x, m_aabb.upper.y);
     hdglVertex2f(m_aabb.upper.x, m_aabb.upper.y);
     hdglVertex2f(m_aabb.upper.x, m_aabb.lower.y);
     hdglEnd();
-    
+
     glPopMatrix();
-    
+
 #else
     if (m_joint == NULL) return;
     if (m_firstTotemBlock == NULL || m_secondTotemBlock == NULL) return;
     if (m_joint->GetBody1() == NULL || m_joint->GetBody2() == NULL) return;
-    if (m_firstTotemBlock->GetPhysicsBody() == NULL || 
+    if (m_firstTotemBlock->GetPhysicsBody() == NULL ||
         m_secondTotemBlock->GetPhysicsBody() == NULL) return;
-    
+
     if (m_jointType == e_hdkJointTypeDistance)
     {
         if (m_joint != NULL && m_firstTotemBlock->GetPhysicsBody() != NULL && m_secondTotemBlock->GetPhysicsBody() != NULL)
@@ -410,7 +410,7 @@ void Joint::Draw() const
             hdglColor4ub(0, 0, 0, 255);
             hdglVertex3f(m_joint->GetAnchor1().x, m_joint->GetAnchor1().y, (fabs(m_firstTotemBlock->GetDepth())+0.01f));
             hdglVertex3f(m_joint->GetAnchor2().x, m_joint->GetAnchor2().y, (fabs(m_secondTotemBlock->GetDepth())+0.01f));
-            
+
             hdglVertex3f(m_joint->GetAnchor1().x, m_joint->GetAnchor1().y, -(fabs(m_firstTotemBlock->GetDepth())+0.01f));
             hdglVertex3f(m_joint->GetAnchor2().x, m_joint->GetAnchor2().y, -(fabs(m_secondTotemBlock->GetDepth())+0.01f));
             hdglEnd();
@@ -418,21 +418,21 @@ void Joint::Draw() const
         }
         glLineWidth(1.0f);
     }
-    
+
     if (m_joint != NULL && m_firstTotemBlock->GetPhysicsBody() != NULL)
     {
         hdglBegin(GL_QUADS);
         hdglColor4ub(255, 255, 255, 255);
-        
-        this->InternalDrawJoint(m_joint->GetAnchor1().x, m_joint->GetAnchor1().y, 
+
+        this->InternalDrawJoint(m_joint->GetAnchor1().x, m_joint->GetAnchor1().y,
                                 (fabs(m_firstTotemBlock->GetDepth())+m_firstTotemBlock->GetZOffset()+0.02f));
-        
+
         if (m_jointType == e_hdkJointTypeDistance)
         {
-            this->InternalDrawJoint(m_joint->GetAnchor2().x, m_joint->GetAnchor2().y, 
+            this->InternalDrawJoint(m_joint->GetAnchor2().x, m_joint->GetAnchor2().y,
                                     (fabs(m_secondTotemBlock->GetDepth())+m_firstTotemBlock->GetZOffset()+0.02f));
         }
-        
+
         hdglEnd();
     }
 #endif

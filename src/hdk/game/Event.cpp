@@ -28,9 +28,9 @@ Event::Event() : hdPolygon()
 
 
 Event::Event(hdGameWorld *gameWorld,
-                       e_hdkEventType eventType,
-                       hdGameObject* firstObject,
-                       hdGameObject* secondObject) : hdPolygon(gameWorld)
+             e_hdkEventType eventType,
+             hdGameObject* firstObject,
+             hdGameObject* secondObject) : hdPolygon(gameWorld)
 {
     m_userType = (int)e_hdkTypeEvent;
     m_eventType = eventType;

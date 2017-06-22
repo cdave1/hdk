@@ -22,12 +22,13 @@
 #include <hdk/core/hdConfig.h>
 
 /*
+ * This class has multiple constructors!
+ *
  * Thanks to boost serialization, there are multiple entry points to the Block init functions.
  *
- * This is the reason for the extra "isDrawable" test in the destructor when deleting
- * m_triStripHullVertices.
+ * This is the reason for the extra "isDrawable" test in the destructor when deleting m_triStripHullVertices.
  *
- * TODO: Fix this.
+ * TODO: Fix this!!!
  */
 Block::Block() : hdPolygon()
 {
@@ -69,36 +70,36 @@ Block::Block() : hdPolygon()
 
 
 Block::Block(hdGameWorld *gameWorld,
-                       b2World *physicsWorld,
-                       const hdVec2& aa,
-                       const hdVec2& bb,
-                       const e_hdkMaterial material,
-                       const e_hdkShapeType shapeType) : hdPolygon(gameWorld)
+             b2World *physicsWorld,
+             const hdVec2& aa,
+             const hdVec2& bb,
+             const e_hdkMaterial material,
+             const e_hdkShapeType shapeType) : hdPolygon(gameWorld)
 {
     this->PrivateInit(gameWorld, physicsWorld, aa, bb, material, shapeType, e_hdkBlockTypeNormal);
 }
 
 
 Block::Block(hdGameWorld *gameWorld,
-                       b2World *physicsWorld,
-                       const hdVec2& aa,
-                       const hdVec2& bb,
-                       const e_hdkMaterial material,
-                       const e_hdkShapeType shapeType,
-                       const e_hdkBlockType blockType) : hdPolygon(gameWorld)
+             b2World *physicsWorld,
+             const hdVec2& aa,
+             const hdVec2& bb,
+             const e_hdkMaterial material,
+             const e_hdkShapeType shapeType,
+             const e_hdkBlockType blockType) : hdPolygon(gameWorld)
 {
     this->PrivateInit(gameWorld, physicsWorld, aa, bb, material, shapeType, blockType);
 }
 
 
 Block::Block(hdGameWorld *gameWorld,
-                       b2World *physicsWorld,
-                       const hdVec3& center,
-                       const float halfWidth,
-                       const float halfHeight,
-                       const e_hdkMaterial material,
-                       const e_hdkShapeType shapeType,
-                       const e_hdkBlockType blockType) : hdPolygon(gameWorld)
+             b2World *physicsWorld,
+             const hdVec3& center,
+             const float halfWidth,
+             const float halfHeight,
+             const e_hdkMaterial material,
+             const e_hdkShapeType shapeType,
+             const e_hdkBlockType blockType) : hdPolygon(gameWorld)
 {
     hdVec2 aa(center.x - halfWidth, center.y - halfHeight);
     hdVec2 bb(center.x + halfWidth, center.y + halfHeight);
@@ -108,13 +109,13 @@ Block::Block(hdGameWorld *gameWorld,
 
 
 Block::Block(hdGameWorld *gameWorld,
-                       b2World *physicsWorld,
-                       const hdVec2& aa,
-                       const hdVec2& bb,
-                       const e_hdkMaterial material,
-                       const e_hdkShapeType shapeType,
-                       const e_hdkBlockType blockType,
-                       const char* textureName) : hdPolygon(gameWorld)
+             b2World *physicsWorld,
+             const hdVec2& aa,
+             const hdVec2& bb,
+             const e_hdkMaterial material,
+             const e_hdkShapeType shapeType,
+             const e_hdkBlockType blockType,
+             const char* textureName) : hdPolygon(gameWorld)
 {
     this->PrivateInit(gameWorld, physicsWorld, aa, bb, material, shapeType, blockType);
 
@@ -124,12 +125,12 @@ Block::Block(hdGameWorld *gameWorld,
 
 
 void Block::PrivateInit(hdGameWorld *gameWorld,
-                             b2World *physicsWorld,
-                             const hdVec2& aa,
-                             const hdVec2& bb,
-                             const e_hdkMaterial material,
-                             const e_hdkShapeType shapeType,
-                             const e_hdkBlockType blockType)
+                        b2World *physicsWorld,
+                        const hdVec2& aa,
+                        const hdVec2& bb,
+                        const e_hdkMaterial material,
+                        const e_hdkShapeType shapeType,
+                        const e_hdkBlockType blockType)
 {
     m_textureName[0] = 0;
     m_texture = NULL;
@@ -221,7 +222,7 @@ void Block::Init(hdGameWorld *gameWorld)
 
 
 void Block::Init(hdGameWorld *gameWorld,
-                      b2World *physicsWorld)
+                 b2World *physicsWorld)
 {
 
     ((hdPolygon *)this)->Init(gameWorld);
@@ -276,11 +277,15 @@ void Block::Step()
     b2XForm xform = m_physicsBody->GetXForm();
 
     // Translate to origin, rotate, translate back again.
-    hdTranslateVertices(this->GetVertices(), this->GetVertexCount(), -m_obb.transform.translation);
-
-    hdRotateVertices(this->GetVertices(), this->GetVertexCount(), hdVec3(0.0f, 0.0f, m_physicsBody->GetAngle()) - m_obb.transform.rotation);
-
-    hdTranslateVertices(this->GetVertices(), this->GetVertexCount(), m_obb.transform.translation + (hdVec3(xform.position.x, xform.position.y, m_zOffset) - m_obb.transform.translation));
+    hdTranslateVertices(this->GetVertices(),
+                        this->GetVertexCount(),
+                        -m_obb.transform.translation);
+    hdRotateVertices(this->GetVertices(),
+                     this->GetVertexCount(),
+                     hdVec3(0.0f, 0.0f, m_physicsBody->GetAngle()) - m_obb.transform.rotation);
+    hdTranslateVertices(this->GetVertices(),
+                        this->GetVertexCount(),
+                        m_obb.transform.translation + (hdVec3(xform.position.x, xform.position.y, m_zOffset) - m_obb.transform.translation));
 
     // Tri strip? Rotate hull vertices
     if (m_shapeType == e_hdkShapeTypeTriStrip)
@@ -291,11 +296,9 @@ void Block::Step()
             hdTranslateVertices(m_triStripHullVertices->GetItems(),
                                 m_triStripHullVertices->GetItemCount(),
                                 -m_obb.transform.translation);
-
             hdRotateVertices(m_triStripHullVertices->GetItems(),
                              m_triStripHullVertices->GetItemCount(),
                              hdVec3(0.0f, 0.0f, m_physicsBody->GetAngle()) - m_obb.transform.rotation);
-
             hdTranslateVertices(m_triStripHullVertices->GetItems(),
                                 m_triStripHullVertices->GetItemCount(),
                                 m_obb.transform.translation + (hdVec3(xform.position.x, xform.position.y, m_zOffset) - m_obb.transform.translation));
@@ -611,11 +614,7 @@ void Block::ResetAppearance()
                     {
                         if (m_blockType == e_hdkBlockTypeBillboard)
                         {
-#ifdef LEVEL_EDITOR
                             m_texture = hdTextureManager::Instance()->FindTexture(m_textureName, TT_Wall);
-#else
-                            m_texture = hdTextureManager::Instance()->FindTexture(m_textureName, TT_Wall);
-#endif
                         }
                         else
                         {
@@ -657,7 +656,7 @@ void Block::ResetAppearance()
     // Modifier: - zoffset + m_depth effects this.
     // if zoffset + abs(m_depth) > 0.5, tint[i] *= (1.0 + (0.1 * (zoffset + abs(m_depth))))
     //
-    // Between 0 and 0.5 tint is 0.8f;
+    // Between 0 and 0.5 tint can't go lower than 0.8f, so as not to darken too much.
 
 #ifndef LEVEL_EDITOR
     float tintModifier;
@@ -925,26 +924,26 @@ void Block::DrawExtruded(hdTexture *texture, bool front, const hdVec3& screenCen
     else
     {
         m_triStripHullVertices = NULL;
-        
+
         if (false == m_generatedExtrusionTex)
         {
             memset(m_extrusionTexCoords, 0, sizeof(m_extrusionTexCoords));
-            
-            GenerateExtrusionTextureVertices(m_extrusionTexCoords, 
-                                             block->GetVertices(), 
-                                             block->GetTextureCoordinates(), 
-                                             block->GetVertexCount(), 
-                                             block->GetStartingAABB(), 
-                                             texture, 
+
+            GenerateExtrusionTextureVertices(m_extrusionTexCoords,
+                                             block->GetVertices(),
+                                             block->GetTextureCoordinates(),
+                                             block->GetVertexCount(),
+                                             block->GetStartingAABB(),
+                                             texture,
                                              block->GetDepth(),
                                              block->GetTextureRepeatX());
         }
-        
-        DrawExtrusion(block->GetVertices(), 
-                      m_extrusionTexCoords, 
-                      block->GetVertexCount(), 
-                      block->GetStartingAABB(), 
-                      texture, 
+
+        DrawExtrusion(block->GetVertices(),
+                      m_extrusionTexCoords,
+                      block->GetVertexCount(),
+                      block->GetStartingAABB(),
+                      texture,
                       block->GetTint(),
                       block->GetAlpha(),
                       block->GetDepth(), m_drawWithCustomLighting, !front,
@@ -962,15 +961,15 @@ void Block::DrawTrianglesFront()
     if (!this->IsDrawable()) return;
     hdglColor4ub(m_tintBytes.r, m_tintBytes.g, m_tintBytes.b, hdClamp((int)(m_alpha * 255), 0, (int)m_tintBytes.a) );
 #endif
-    
+
     for (int i = 0; i < this->GetVertexCount(); ++i)
     {
-        if (m_texture != NULL) 
+        if (m_texture != NULL)
         {
             hdglTexCoord2f( ((Block *)this)->GetTextureCoordinates()[i].x,  ((Block *)this)->GetTextureCoordinates()[i].y);
         }
-        hdglVertex3f(((Block *)this)->GetVertices()[i].x, 
-                     ((Block *)this)->GetVertices()[i].y, 
+        hdglVertex3f(((Block *)this)->GetVertices()[i].x,
+                     ((Block *)this)->GetVertices()[i].y,
                      ((Block *)this)->GetVertices()[i].z - m_depth);
     }
 }
@@ -979,10 +978,10 @@ void Block::DrawTrianglesFront()
 void Block::DrawTrianglesBack()
 {
     if (!this->IsDrawable()) return;
-    
+
     hdVec3 *verticesWithOppDepth = new hdVec3[this->GetVertexCount()];
     hdVec2 *oppTexCoords = new hdVec2[this->GetVertexCount()];
-    
+
     if(m_shapeType == e_hdkShapeTypeTriStrip)
     {
         for (int i = 0; i < this->GetVertexCount();++i)
@@ -990,7 +989,7 @@ void Block::DrawTrianglesBack()
             verticesWithOppDepth[this->GetVertexCount() - 1 - i].x = ((Block *)this)->GetVertices()[i].x;
             verticesWithOppDepth[this->GetVertexCount() - 1 - i].y = ((Block *)this)->GetVertices()[i].y;
             verticesWithOppDepth[this->GetVertexCount() - 1 - i].z = ((Block *)this)->GetVertices()[i].z + m_depth;
-            
+
             oppTexCoords[this->GetVertexCount() - 1 - i].x = ((Block *)this)->GetTextureCoordinates()[i].x;
             oppTexCoords[this->GetVertexCount() - 1 - i].y = ((Block *)this)->GetTextureCoordinates()[i].y;
         }
@@ -1003,27 +1002,27 @@ void Block::DrawTrianglesBack()
             verticesWithOppDepth[this->GetVertexCount() - 1 - i].y = ((Block *)this)->GetVertices()[i].y;
             verticesWithOppDepth[this->GetVertexCount() - 1 - i].z = ((Block *)this)->GetVertices()[i].z + m_depth;
         }
-        
+
         for (int i = this->GetVertexCount()-1; i >= 0 ; i--)
         {
             oppTexCoords[this->GetVertexCount() - 1 - i].x = ((Block *)this)->GetTextureCoordinates()[i].x;
             oppTexCoords[this->GetVertexCount() - 1 - i].y = ((Block *)this)->GetTextureCoordinates()[i].y;
         }
     }
-    
+
     hdglColor4ub(m_tintBytes.r, m_tintBytes.g, m_tintBytes.b, hdClamp((int)(m_alpha * 255), 0, (int)m_tintBytes.a) );
-    
+
     for (int i = 0; i < this->GetVertexCount(); ++i)
     {
-        if (m_texture != NULL) 
+        if (m_texture != NULL)
         {
             hdglTexCoord2f( oppTexCoords[i].x,  oppTexCoords[i].y);
         }
         hdglVertex3f(verticesWithOppDepth[i].x, verticesWithOppDepth[i].y, verticesWithOppDepth[i].z);
     }
-    
-    delete verticesWithOppDepth;
-    delete oppTexCoords;
+
+    delete[] verticesWithOppDepth;
+    delete[] oppTexCoords;
 }
 
 
@@ -1033,7 +1032,7 @@ void Block::Draw() const
     GLenum prim;
     GLboolean blendEnabled;
     GLint blendFuncSrc, blendFuncDst;
-    
+
     hdVec3 verticesWithDepth[1024];
     for (int i = 0; i < this->GetVertexCount(); ++i)
     {
@@ -1041,7 +1040,7 @@ void Block::Draw() const
         verticesWithDepth[i].y = ((Block *)this)->GetVertices()[i].y;
         verticesWithDepth[i].z = ((Block *)this)->GetVertices()[i].z + m_depth;
     }
-    
+
     hdVec3 verticesWithOppDepth[1024];
     for (int i = this->GetVertexCount()-1; i >= 0 ; i--)
     {
@@ -1049,27 +1048,27 @@ void Block::Draw() const
         verticesWithOppDepth[this->GetVertexCount() - 1 - i].y = ((Block *)this)->GetVertices()[i].y;
         verticesWithOppDepth[this->GetVertexCount() - 1 - i].z = ((Block *)this)->GetVertices()[i].z - m_depth;
     }
-    
+
     hdVec2 oppTexCoords[1024];
     for (int i = this->GetVertexCount()-1; i >= 0 ; i--)
     {
         oppTexCoords[this->GetVertexCount() - 1 - i].x = ((Block *)this)->GetTextureCoordinates()[i].x;
         oppTexCoords[this->GetVertexCount() - 1 - i].y = ((Block *)this)->GetTextureCoordinates()[i].y;
     }
-    
-    if(m_shapeType== e_hdkShapeTypeSpikes) 
+
+    if(m_shapeType== e_hdkShapeTypeSpikes)
     {
         prim = GL_TRIANGLES;
-    } 
-    else if (m_shapeType == e_hdkShapeTypeRectangle) 
+    }
+    else if (m_shapeType == e_hdkShapeTypeRectangle)
     {
         prim = GL_QUADS;
-    } 
-    else if(m_shapeType == e_hdkShapeTypeTriStrip) 
+    }
+    else if(m_shapeType == e_hdkShapeTypeTriStrip)
     {
         prim = GL_TRIANGLE_STRIP;
-    } 
-    else 
+    }
+    else
     {
 #if TARGET_GL_OPENGL == 1
         prim = GL_POLYGON;
@@ -1077,29 +1076,29 @@ void Block::Draw() const
         prim = GL_TRIANGLE_FAN;
 #endif
     }
-    
+
     glEnable(GL_TEXTURE_2D);
     hdglBindTexture(m_texture);
-    
+
     if (IsTransparent())
     {
         glGetBooleanv(GL_BLEND, &blendEnabled);
         glEnable(GL_BLEND);
         glGetIntegerv(GL_BLEND_SRC, &blendFuncSrc);
-        glGetIntegerv(GL_BLEND_DST, &blendFuncDst); 
-        
+        glGetIntegerv(GL_BLEND_DST, &blendFuncDst);
+
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     }
-    
-    hdglBegin(prim); 
+
+    hdglBegin(prim);
     ((Block *)this)->DrawTrianglesFront();
     hdglEnd();
-    
+
     if (IsExtrusion())
-    {	
+    {
         ((Block *)this)->DrawExtruded(m_texture, false, hdVec3(0,0,0));
     }
-    
+
     if (IsTransparent())
     {
         if (blendEnabled == GL_FALSE)
@@ -1108,8 +1107,8 @@ void Block::Draw() const
         }
         glBlendFunc(blendFuncSrc, blendFuncDst);
     }
-    
-#if 0	
+
+#if 0
     hdglColor4f(0.0f, 0.0f, 0.0f, 1.0f);
     hdglBegin(GL_LINE_LOOP);
     for (int i = 0; i < this->GetVertexCount(); ++i)
@@ -1117,42 +1116,42 @@ void Block::Draw() const
         hdglVertex2f(m_vertices->GetItems()[i].x, m_vertices->GetItems()[i].y);
     }
     hdglEnd();
-    
+
     // Draw a line to indicate the axis of rotation
     hdVec3 center = ((Block *)this)->GetWorldCenter();
-    
+
     hdVec3 line(0.0f, ((m_aabb.upper.x - m_aabb.lower.x)/2.0f), 0.0f);
     hdVec3 out;
     hdMatrix rotMatrix;
-    
+
     MatrixRotationZ(rotMatrix, m_obb.transform.rotation.z);
     MatrixVec3Multiply(out, line, rotMatrix);
-    
+
     hdglBegin(GL_LINES);
     hdglVertex3f(center.x, center.y, -m_depth+0.09f);
     hdglVertex3f(center.x + out.x, center.y + out.y, -m_depth+0.09f);
     hdglEnd();
-    
-    
+
+
     hdglBegin(GL_LINE_LOOP);
     hdglVertex3f(m_aabb.lower.x, m_aabb.lower.y, -m_depth+0.09f);
     hdglVertex3f(m_aabb.lower.x, m_aabb.upper.y, -m_depth+0.09f);
     hdglVertex3f(m_aabb.upper.x, m_aabb.upper.y, -m_depth+0.09f);
     hdglVertex3f(m_aabb.upper.x, m_aabb.lower.y, -m_depth+0.09f);
     hdglEnd();
-    
+
     glDisable(GL_TEXTURE_2D);
-    
+
     GLboolean depthTest;
-    
+
     glGetBooleanv(GL_DEPTH_TEST, &depthTest);
-    
+
     glDisable(GL_DEPTH_TEST);
     if (m_tag == 1001)
     {
         glLineWidth(4.0f);
         hdglBegin(GL_LINE_LOOP);
-        
+
         hdglColor4f(1.0f, 0.0f, 1.0f, 1.0f);
         hdglVertex3f(m_aabb.lower.x, m_aabb.lower.y, -(fabs(m_depth)+0.09f));
         hdglVertex3f(m_aabb.lower.x, m_aabb.upper.y, -(fabs(m_depth)+0.09f));
@@ -1161,12 +1160,12 @@ void Block::Draw() const
         hdglEnd();
         glLineWidth(1.0f);
     }
-    
+
     if (depthTest == GL_TRUE)
     {
         glEnable(GL_DEPTH_TEST);
     }
-    
+
     glEnable(GL_TEXTURE_2D);
 #endif
 #endif
@@ -1178,36 +1177,36 @@ void Block::DrawBlock(bool front, const hdVec3& screenCenter)
     GLenum currPrim;
     GLboolean blendEnabled, cullEnabled;
     GLint blendFuncSrc, blendFuncDst;
-    
+
     currPrim = -1;
     hdglBindTexture(m_texture);
-    
-    if(GetShapeType() == e_hdkShapeTypeSpikes) 
+
+    if(GetShapeType() == e_hdkShapeTypeSpikes)
     {
         currPrim = GL_TRIANGLES;
-    } 
-    else if (GetShapeType() == e_hdkShapeTypeRectangle) 
+    }
+    else if (GetShapeType() == e_hdkShapeTypeRectangle)
     {
         currPrim = GL_QUADS;
-    } 
-    else if(GetShapeType() == e_hdkShapeTypeTriStrip) 
+    }
+    else if(GetShapeType() == e_hdkShapeTypeTriStrip)
     {
         currPrim = GL_TRIANGLE_STRIP;
-    } 
-    else 
+    }
+    else
     {
         currPrim = GL_TRIANGLE_FAN;
     }
-    
+
     if (IsTransparent())
     {
         glGetBooleanv(GL_BLEND, &blendEnabled);
         glGetBooleanv(GL_CULL_FACE, &cullEnabled);
         glEnable(GL_BLEND);
         glGetIntegerv(GL_BLEND_SRC, &blendFuncSrc);
-        glGetIntegerv(GL_BLEND_DST, &blendFuncDst); 
-        
-        if (m_texture->isPremultipliedAlpha && 
+        glGetIntegerv(GL_BLEND_DST, &blendFuncDst);
+
+        if (m_texture->isPremultipliedAlpha &&
             hdClamp(m_alpha, 0.0f, m_colorTint[3]) == 1.0f)
         {
             glBlendFunc(GL_ONE, GL_ONE_MINUS_SRC_ALPHA);
@@ -1216,28 +1215,28 @@ void Block::DrawBlock(bool front, const hdVec3& screenCenter)
         {
             glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
         }
-        
+
         glDisable(GL_CULL_FACE);
-        
+
         if (IsExtrusion())
-        {	
+        {
             DrawExtruded(m_texture, front, screenCenter);
         }
-        
-        hdglBegin(currPrim); 
+
+        hdglBegin(currPrim);
         DrawTrianglesFront();
         hdglEnd();
-        
+
         if (blendEnabled == GL_FALSE)
         {
             glDisable(GL_BLEND);
         }
-        
+
         if (cullEnabled)
         {
             glEnable(GL_CULL_FACE);
         }
-        
+
         glBlendFunc(blendFuncSrc, blendFuncDst);
     }
     else
