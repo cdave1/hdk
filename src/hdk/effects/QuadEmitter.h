@@ -17,34 +17,52 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef _HDK_GOAL_BLOCK_H
-#define _HDK_GOAL_BLOCK_H
+#ifndef _HDK_QUAD_EMITTER_H_
+#define _HDK_QUAD_EMITTER_H_
 
 #include <hdk/game.h>
-#include "WeatherParticleEmitter.h"
 
-class GoalBlock : public Block
+struct hdParticle;
+
+class QuadEmitter : public hdParticleEmitter
 {
 public:
-    GoalBlock(Block* parent);
+    QuadEmitter(int maxParticles,
+                     const char * texture,
+                     float particlePointSize,
+                     float duration,
+                     float gravity,
+                     float initialParticleSpread);
 
-    ~GoalBlock();
+    ~QuadEmitter();
 
-    void Step();
+    void Step(hdTimeInterval elapsed);
 
-    void Draw() const;
+    void SetLevel(const Level* level);
 
-    void DrawSpecial() const;
+protected:
+    void ParticleAnimationFinished();
+
+    void DoStartingTasks();
+
+    const bool IsFixedDuration() const;
 
 private:
-    void InitInterface();
+    void MakeParticle(int pos);
 
-    void InitAnimations();
+    float m_gravity;
 
-    Block *m_parent;
+    float m_initialParticleSpread;
+
+    int m_nextParticlePos;
     
-    WeatherParticleEmitter *m_emberEmitter;
-
+    Level *m_level;
 };
+
+
+inline void QuadEmitter::SetLevel(const Level* level)
+{
+    m_level = (Level *)level;
+}
 
 #endif

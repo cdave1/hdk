@@ -1,5 +1,5 @@
 /*
- *  totemGameObject.cpp
+ *  GameObject.cpp
  *  LevelEditor
  *
  *  Created by david on 27/03/09.
@@ -7,16 +7,16 @@
  *
  */
 
-#include "totemGameObject.h"
+#include "GameObject.h"
 
-totemGameObject::totemGameObject() 
+GameObject::GameObject() 
 {
 	m_gameObject = NULL;
 	m_def = hdGameObjectDef();
 }
 
 
-void totemGameObject::Init(hdGameWorld *gameWorld, 
+void GameObject::Init(hdGameWorld *gameWorld, 
 					  const hdGameObjectDef def)
 {
 	if (m_gameObject == NULL)
@@ -30,13 +30,13 @@ void totemGameObject::Init(hdGameWorld *gameWorld,
 
 
 
-totemGameObject::~totemGameObject()
+GameObject::~GameObject()
 {
 	m_gameWorld->DestroyGameObject(m_gameObject);
 }
 
 
-void totemGameObject::DestroyGameObject()
+void GameObject::DestroyGameObject()
 {
 	if (m_gameObject != NULL)
 	{
@@ -46,7 +46,7 @@ void totemGameObject::DestroyGameObject()
 }
 
 
-hdGameObjectDef totemGameObject::GetCurrentDefinition() const
+hdGameObjectDef GameObject::GetCurrentDefinition() const
 {
 	hdGameObjectDef def;
 	def.position.Set(m_gameObject->GetPosition().x,

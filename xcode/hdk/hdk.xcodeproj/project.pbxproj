@@ -282,41 +282,37 @@
 		E4830CDA1EFB2FEB00141A78 /* hdScreenSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830BEC1EFB2FEB00141A78 /* hdScreenSettings.h */; };
 		E4830CDB1EFB2FEB00141A78 /* hdSystemSettings.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830BED1EFB2FEB00141A78 /* hdSystemSettings.h */; };
 		E4830CDC1EFB2FEB00141A78 /* hdTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830BEE1EFB2FEB00141A78 /* hdTypes.h */; };
-		E4830CE11EFB2FEB00141A78 /* totemGameObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830BF61EFB2FEB00141A78 /* totemGameObject.cpp */; };
-		E4830CE21EFB2FEB00141A78 /* totemGameObject.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830BF71EFB2FEB00141A78 /* totemGameObject.h */; };
-		E4830CE31EFB2FEB00141A78 /* totemShape.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830BF81EFB2FEB00141A78 /* totemShape.cpp */; };
-		E4830CE41EFB2FEB00141A78 /* totemShape.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830BF91EFB2FEB00141A78 /* totemShape.h */; };
-		E4830CE51EFB2FEB00141A78 /* totemBlock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830BFA1EFB2FEB00141A78 /* totemBlock.cpp */; };
-		E4830CE61EFB2FEB00141A78 /* totemBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830BFB1EFB2FEB00141A78 /* totemBlock.h */; };
-		E4830CE71EFB2FEB00141A78 /* totemConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830BFC1EFB2FEB00141A78 /* totemConstants.h */; };
-		E4830CE81EFB2FEB00141A78 /* totemContactManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830BFD1EFB2FEB00141A78 /* totemContactManager.cpp */; };
-		E4830CE91EFB2FEB00141A78 /* totemContactManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830BFE1EFB2FEB00141A78 /* totemContactManager.h */; };
-		E4830CEA1EFB2FEB00141A78 /* totemEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830BFF1EFB2FEB00141A78 /* totemEnums.h */; };
-		E4830CEB1EFB2FEB00141A78 /* totemEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830C001EFB2FEB00141A78 /* totemEvent.cpp */; };
-		E4830CEC1EFB2FEB00141A78 /* totemEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C011EFB2FEB00141A78 /* totemEvent.h */; };
-		E4830CED1EFB2FEB00141A78 /* totemFloorInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830C021EFB2FEB00141A78 /* totemFloorInfo.cpp */; };
-		E4830CEE1EFB2FEB00141A78 /* totemFloorInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C031EFB2FEB00141A78 /* totemFloorInfo.h */; };
-		E4830CF01EFB2FEB00141A78 /* totemGameObject.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C051EFB2FEB00141A78 /* totemGameObject.h */; };
-		E4830CF11EFB2FEB00141A78 /* totemJack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830C061EFB2FEB00141A78 /* totemJack.cpp */; };
-		E4830CF21EFB2FEB00141A78 /* totemJack.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C071EFB2FEB00141A78 /* totemJack.h */; };
-		E4830CF31EFB2FEB00141A78 /* totemJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830C081EFB2FEB00141A78 /* totemJoint.cpp */; };
-		E4830CF41EFB2FEB00141A78 /* totemJoint.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C091EFB2FEB00141A78 /* totemJoint.h */; };
-		E4830CF51EFB2FEB00141A78 /* totemLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830C0A1EFB2FEB00141A78 /* totemLayer.cpp */; };
-		E4830CF61EFB2FEB00141A78 /* totemLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C0B1EFB2FEB00141A78 /* totemLayer.h */; };
-		E4830CF71EFB2FEB00141A78 /* totemLevel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830C0C1EFB2FEB00141A78 /* totemLevel.cpp */; };
-		E4830CF81EFB2FEB00141A78 /* totemLevel.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C0D1EFB2FEB00141A78 /* totemLevel.h */; };
-		E4830CF91EFB2FEB00141A78 /* totemLevelController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830C0E1EFB2FEB00141A78 /* totemLevelController.cpp */; };
-		E4830CFA1EFB2FEB00141A78 /* totemLevelController.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C0F1EFB2FEB00141A78 /* totemLevelController.h */; };
-		E4830CFB1EFB2FEB00141A78 /* totemPolygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830C101EFB2FEB00141A78 /* totemPolygon.cpp */; };
-		E4830CFC1EFB2FEB00141A78 /* totemPolygon.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C111EFB2FEB00141A78 /* totemPolygon.h */; };
-		E4830CFD1EFB2FEB00141A78 /* totemScripting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830C121EFB2FEB00141A78 /* totemScripting.cpp */; };
-		E4830CFE1EFB2FEB00141A78 /* totemScripting.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C131EFB2FEB00141A78 /* totemScripting.h */; };
-		E4830CFF1EFB2FEB00141A78 /* totemUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830C141EFB2FEB00141A78 /* totemUtils.cpp */; };
-		E4830D001EFB2FEB00141A78 /* totemUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C151EFB2FEB00141A78 /* totemUtils.h */; };
-		E4830D011EFB2FEB00141A78 /* totemWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830C161EFB2FEB00141A78 /* totemWorld.cpp */; };
-		E4830D021EFB2FEB00141A78 /* totemWorld.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C171EFB2FEB00141A78 /* totemWorld.h */; };
-		E4830D031EFB2FEB00141A78 /* totemWorldManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830C181EFB2FEB00141A78 /* totemWorldManager.cpp */; };
-		E4830D041EFB2FEB00141A78 /* totemWorldManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C191EFB2FEB00141A78 /* totemWorldManager.h */; };
+		E4830CE51EFB2FEB00141A78 /* Block.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830BFA1EFB2FEB00141A78 /* Block.cpp */; };
+		E4830CE61EFB2FEB00141A78 /* Block.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830BFB1EFB2FEB00141A78 /* Block.h */; };
+		E4830CE71EFB2FEB00141A78 /* Constants.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830BFC1EFB2FEB00141A78 /* Constants.h */; };
+		E4830CE81EFB2FEB00141A78 /* ContactManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830BFD1EFB2FEB00141A78 /* ContactManager.cpp */; };
+		E4830CE91EFB2FEB00141A78 /* ContactManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830BFE1EFB2FEB00141A78 /* ContactManager.h */; };
+		E4830CEA1EFB2FEB00141A78 /* Enums.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830BFF1EFB2FEB00141A78 /* Enums.h */; };
+		E4830CEB1EFB2FEB00141A78 /* Event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830C001EFB2FEB00141A78 /* Event.cpp */; };
+		E4830CEC1EFB2FEB00141A78 /* Event.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C011EFB2FEB00141A78 /* Event.h */; };
+		E4830CED1EFB2FEB00141A78 /* FloorInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830C021EFB2FEB00141A78 /* FloorInfo.cpp */; };
+		E4830CEE1EFB2FEB00141A78 /* FloorInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C031EFB2FEB00141A78 /* FloorInfo.h */; };
+		E4830CF01EFB2FEB00141A78 /* GameObject.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C051EFB2FEB00141A78 /* GameObject.h */; };
+		E4830CF11EFB2FEB00141A78 /* Jack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830C061EFB2FEB00141A78 /* Jack.cpp */; };
+		E4830CF21EFB2FEB00141A78 /* Jack.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C071EFB2FEB00141A78 /* Jack.h */; };
+		E4830CF31EFB2FEB00141A78 /* Joint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830C081EFB2FEB00141A78 /* Joint.cpp */; };
+		E4830CF41EFB2FEB00141A78 /* Joint.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C091EFB2FEB00141A78 /* Joint.h */; };
+		E4830CF51EFB2FEB00141A78 /* Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830C0A1EFB2FEB00141A78 /* Layer.cpp */; };
+		E4830CF61EFB2FEB00141A78 /* Layer.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C0B1EFB2FEB00141A78 /* Layer.h */; };
+		E4830CF71EFB2FEB00141A78 /* Level.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830C0C1EFB2FEB00141A78 /* Level.cpp */; };
+		E4830CF81EFB2FEB00141A78 /* Level.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C0D1EFB2FEB00141A78 /* Level.h */; };
+		E4830CF91EFB2FEB00141A78 /* LevelController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830C0E1EFB2FEB00141A78 /* LevelController.cpp */; };
+		E4830CFA1EFB2FEB00141A78 /* LevelController.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C0F1EFB2FEB00141A78 /* LevelController.h */; };
+		E4830CFB1EFB2FEB00141A78 /* Polygon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830C101EFB2FEB00141A78 /* Polygon.cpp */; };
+		E4830CFC1EFB2FEB00141A78 /* Polygon.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C111EFB2FEB00141A78 /* Polygon.h */; };
+		E4830CFD1EFB2FEB00141A78 /* Scripting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830C121EFB2FEB00141A78 /* Scripting.cpp */; };
+		E4830CFE1EFB2FEB00141A78 /* Scripting.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C131EFB2FEB00141A78 /* Scripting.h */; };
+		E4830CFF1EFB2FEB00141A78 /* Utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830C141EFB2FEB00141A78 /* Utils.cpp */; };
+		E4830D001EFB2FEB00141A78 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C151EFB2FEB00141A78 /* Utils.h */; };
+		E4830D011EFB2FEB00141A78 /* World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830C161EFB2FEB00141A78 /* World.cpp */; };
+		E4830D021EFB2FEB00141A78 /* World.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C171EFB2FEB00141A78 /* World.h */; };
+		E4830D031EFB2FEB00141A78 /* WorldManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830C181EFB2FEB00141A78 /* WorldManager.cpp */; };
+		E4830D041EFB2FEB00141A78 /* WorldManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C191EFB2FEB00141A78 /* WorldManager.h */; };
 		E4830D051EFB2FEB00141A78 /* hdDDSLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830C1B1EFB2FEB00141A78 /* hdDDSLoader.cpp */; };
 		E4830D061EFB2FEB00141A78 /* hdDDSLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C1C1EFB2FEB00141A78 /* hdDDSLoader.h */; };
 		E4830D071EFB2FEB00141A78 /* hdDrawable.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830C1D1EFB2FEB00141A78 /* hdDrawable.h */; };
@@ -451,8 +447,8 @@
 		E4830DB01EFB393800141A78 /* GoalBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830D931EFB393800141A78 /* GoalBlock.h */; };
 		E4830DB11EFB393800141A78 /* LevelPickerBlock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830D941EFB393800141A78 /* LevelPickerBlock.cpp */; };
 		E4830DB21EFB393800141A78 /* LevelPickerBlock.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830D951EFB393800141A78 /* LevelPickerBlock.h */; };
-		E4830DB31EFB393800141A78 /* quadEmitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830D961EFB393800141A78 /* quadEmitter.cpp */; };
-		E4830DB41EFB393800141A78 /* quadEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830D971EFB393800141A78 /* quadEmitter.h */; };
+		E4830DB31EFB393800141A78 /* QuadEmitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830D961EFB393800141A78 /* QuadEmitter.cpp */; };
+		E4830DB41EFB393800141A78 /* QuadEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830D971EFB393800141A78 /* QuadEmitter.h */; };
 		E4830DB51EFB393800141A78 /* SmokeEmitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830D981EFB393800141A78 /* SmokeEmitter.cpp */; };
 		E4830DB61EFB393800141A78 /* SmokeEmitter.h in Headers */ = {isa = PBXBuildFile; fileRef = E4830D991EFB393800141A78 /* SmokeEmitter.h */; };
 		E4830DB71EFB393800141A78 /* SparkEmitter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4830D9A1EFB393800141A78 /* SparkEmitter.cpp */; };
@@ -860,41 +856,37 @@
 		E4830BEC1EFB2FEB00141A78 /* hdScreenSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdScreenSettings.h; sourceTree = "<group>"; };
 		E4830BED1EFB2FEB00141A78 /* hdSystemSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdSystemSettings.h; sourceTree = "<group>"; };
 		E4830BEE1EFB2FEB00141A78 /* hdTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdTypes.h; sourceTree = "<group>"; };
-		E4830BF61EFB2FEB00141A78 /* totemGameObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = totemGameObject.cpp; sourceTree = "<group>"; };
-		E4830BF71EFB2FEB00141A78 /* totemGameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = totemGameObject.h; sourceTree = "<group>"; };
-		E4830BF81EFB2FEB00141A78 /* totemShape.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = totemShape.cpp; sourceTree = "<group>"; };
-		E4830BF91EFB2FEB00141A78 /* totemShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = totemShape.h; sourceTree = "<group>"; };
-		E4830BFA1EFB2FEB00141A78 /* totemBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = totemBlock.cpp; sourceTree = "<group>"; };
-		E4830BFB1EFB2FEB00141A78 /* totemBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = totemBlock.h; sourceTree = "<group>"; };
-		E4830BFC1EFB2FEB00141A78 /* totemConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = totemConstants.h; sourceTree = "<group>"; };
-		E4830BFD1EFB2FEB00141A78 /* totemContactManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = totemContactManager.cpp; sourceTree = "<group>"; };
-		E4830BFE1EFB2FEB00141A78 /* totemContactManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = totemContactManager.h; sourceTree = "<group>"; };
-		E4830BFF1EFB2FEB00141A78 /* totemEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = totemEnums.h; sourceTree = "<group>"; };
-		E4830C001EFB2FEB00141A78 /* totemEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = totemEvent.cpp; sourceTree = "<group>"; };
-		E4830C011EFB2FEB00141A78 /* totemEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = totemEvent.h; sourceTree = "<group>"; };
-		E4830C021EFB2FEB00141A78 /* totemFloorInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = totemFloorInfo.cpp; sourceTree = "<group>"; };
-		E4830C031EFB2FEB00141A78 /* totemFloorInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = totemFloorInfo.h; sourceTree = "<group>"; };
-		E4830C051EFB2FEB00141A78 /* totemGameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = totemGameObject.h; sourceTree = "<group>"; };
-		E4830C061EFB2FEB00141A78 /* totemJack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = totemJack.cpp; sourceTree = "<group>"; };
-		E4830C071EFB2FEB00141A78 /* totemJack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = totemJack.h; sourceTree = "<group>"; };
-		E4830C081EFB2FEB00141A78 /* totemJoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = totemJoint.cpp; sourceTree = "<group>"; };
-		E4830C091EFB2FEB00141A78 /* totemJoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = totemJoint.h; sourceTree = "<group>"; };
-		E4830C0A1EFB2FEB00141A78 /* totemLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = totemLayer.cpp; sourceTree = "<group>"; };
-		E4830C0B1EFB2FEB00141A78 /* totemLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = totemLayer.h; sourceTree = "<group>"; };
-		E4830C0C1EFB2FEB00141A78 /* totemLevel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = totemLevel.cpp; sourceTree = "<group>"; };
-		E4830C0D1EFB2FEB00141A78 /* totemLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = totemLevel.h; sourceTree = "<group>"; };
-		E4830C0E1EFB2FEB00141A78 /* totemLevelController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = totemLevelController.cpp; sourceTree = "<group>"; };
-		E4830C0F1EFB2FEB00141A78 /* totemLevelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = totemLevelController.h; sourceTree = "<group>"; };
-		E4830C101EFB2FEB00141A78 /* totemPolygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = totemPolygon.cpp; sourceTree = "<group>"; };
-		E4830C111EFB2FEB00141A78 /* totemPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = totemPolygon.h; sourceTree = "<group>"; };
-		E4830C121EFB2FEB00141A78 /* totemScripting.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = totemScripting.cpp; sourceTree = "<group>"; };
-		E4830C131EFB2FEB00141A78 /* totemScripting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = totemScripting.h; sourceTree = "<group>"; };
-		E4830C141EFB2FEB00141A78 /* totemUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = totemUtils.cpp; sourceTree = "<group>"; };
-		E4830C151EFB2FEB00141A78 /* totemUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = totemUtils.h; sourceTree = "<group>"; };
-		E4830C161EFB2FEB00141A78 /* totemWorld.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = totemWorld.cpp; sourceTree = "<group>"; };
-		E4830C171EFB2FEB00141A78 /* totemWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = totemWorld.h; sourceTree = "<group>"; };
-		E4830C181EFB2FEB00141A78 /* totemWorldManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = totemWorldManager.cpp; sourceTree = "<group>"; };
-		E4830C191EFB2FEB00141A78 /* totemWorldManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = totemWorldManager.h; sourceTree = "<group>"; };
+		E4830BFA1EFB2FEB00141A78 /* Block.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Block.cpp; sourceTree = "<group>"; };
+		E4830BFB1EFB2FEB00141A78 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
+		E4830BFC1EFB2FEB00141A78 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		E4830BFD1EFB2FEB00141A78 /* ContactManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ContactManager.cpp; sourceTree = "<group>"; };
+		E4830BFE1EFB2FEB00141A78 /* ContactManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContactManager.h; sourceTree = "<group>"; };
+		E4830BFF1EFB2FEB00141A78 /* Enums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enums.h; sourceTree = "<group>"; };
+		E4830C001EFB2FEB00141A78 /* Event.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Event.cpp; sourceTree = "<group>"; };
+		E4830C011EFB2FEB00141A78 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		E4830C021EFB2FEB00141A78 /* FloorInfo.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FloorInfo.cpp; sourceTree = "<group>"; };
+		E4830C031EFB2FEB00141A78 /* FloorInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloorInfo.h; sourceTree = "<group>"; };
+		E4830C051EFB2FEB00141A78 /* GameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameObject.h; sourceTree = "<group>"; };
+		E4830C061EFB2FEB00141A78 /* Jack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Jack.cpp; sourceTree = "<group>"; };
+		E4830C071EFB2FEB00141A78 /* Jack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Jack.h; sourceTree = "<group>"; };
+		E4830C081EFB2FEB00141A78 /* Joint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Joint.cpp; sourceTree = "<group>"; };
+		E4830C091EFB2FEB00141A78 /* Joint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Joint.h; sourceTree = "<group>"; };
+		E4830C0A1EFB2FEB00141A78 /* Layer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Layer.cpp; sourceTree = "<group>"; };
+		E4830C0B1EFB2FEB00141A78 /* Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Layer.h; sourceTree = "<group>"; };
+		E4830C0C1EFB2FEB00141A78 /* Level.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Level.cpp; sourceTree = "<group>"; };
+		E4830C0D1EFB2FEB00141A78 /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
+		E4830C0E1EFB2FEB00141A78 /* LevelController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LevelController.cpp; sourceTree = "<group>"; };
+		E4830C0F1EFB2FEB00141A78 /* LevelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelController.h; sourceTree = "<group>"; };
+		E4830C101EFB2FEB00141A78 /* Polygon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Polygon.cpp; sourceTree = "<group>"; };
+		E4830C111EFB2FEB00141A78 /* Polygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Polygon.h; sourceTree = "<group>"; };
+		E4830C121EFB2FEB00141A78 /* Scripting.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scripting.cpp; sourceTree = "<group>"; };
+		E4830C131EFB2FEB00141A78 /* Scripting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scripting.h; sourceTree = "<group>"; };
+		E4830C141EFB2FEB00141A78 /* Utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Utils.cpp; sourceTree = "<group>"; };
+		E4830C151EFB2FEB00141A78 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		E4830C161EFB2FEB00141A78 /* World.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = World.cpp; sourceTree = "<group>"; };
+		E4830C171EFB2FEB00141A78 /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = World.h; sourceTree = "<group>"; };
+		E4830C181EFB2FEB00141A78 /* WorldManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WorldManager.cpp; sourceTree = "<group>"; };
+		E4830C191EFB2FEB00141A78 /* WorldManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldManager.h; sourceTree = "<group>"; };
 		E4830C1B1EFB2FEB00141A78 /* hdDDSLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = hdDDSLoader.cpp; sourceTree = "<group>"; };
 		E4830C1C1EFB2FEB00141A78 /* hdDDSLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdDDSLoader.h; sourceTree = "<group>"; };
 		E4830C1D1EFB2FEB00141A78 /* hdDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hdDrawable.h; sourceTree = "<group>"; };
@@ -1029,8 +1021,8 @@
 		E4830D931EFB393800141A78 /* GoalBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoalBlock.h; sourceTree = "<group>"; };
 		E4830D941EFB393800141A78 /* LevelPickerBlock.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LevelPickerBlock.cpp; sourceTree = "<group>"; };
 		E4830D951EFB393800141A78 /* LevelPickerBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelPickerBlock.h; sourceTree = "<group>"; };
-		E4830D961EFB393800141A78 /* quadEmitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = quadEmitter.cpp; sourceTree = "<group>"; };
-		E4830D971EFB393800141A78 /* quadEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = quadEmitter.h; sourceTree = "<group>"; };
+		E4830D961EFB393800141A78 /* QuadEmitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = QuadEmitter.cpp; sourceTree = "<group>"; };
+		E4830D971EFB393800141A78 /* QuadEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuadEmitter.h; sourceTree = "<group>"; };
 		E4830D981EFB393800141A78 /* SmokeEmitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SmokeEmitter.cpp; sourceTree = "<group>"; };
 		E4830D991EFB393800141A78 /* SmokeEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SmokeEmitter.h; sourceTree = "<group>"; };
 		E4830D9A1EFB393800141A78 /* SparkEmitter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SparkEmitter.cpp; sourceTree = "<group>"; };
@@ -1681,51 +1673,39 @@
 		E4830BF41EFB2FEB00141A78 /* game */ = {
 			isa = PBXGroup;
 			children = (
-				E4830BF51EFB2FEB00141A78 /* Old */,
-				E4830BFA1EFB2FEB00141A78 /* totemBlock.cpp */,
-				E4830BFB1EFB2FEB00141A78 /* totemBlock.h */,
-				E4830BFC1EFB2FEB00141A78 /* totemConstants.h */,
-				E4830BFD1EFB2FEB00141A78 /* totemContactManager.cpp */,
-				E4830BFE1EFB2FEB00141A78 /* totemContactManager.h */,
-				E4830BFF1EFB2FEB00141A78 /* totemEnums.h */,
-				E4830C001EFB2FEB00141A78 /* totemEvent.cpp */,
-				E4830C011EFB2FEB00141A78 /* totemEvent.h */,
-				E4830C021EFB2FEB00141A78 /* totemFloorInfo.cpp */,
-				E4830C031EFB2FEB00141A78 /* totemFloorInfo.h */,
-				E4830C051EFB2FEB00141A78 /* totemGameObject.h */,
-				E4830C061EFB2FEB00141A78 /* totemJack.cpp */,
-				E4830C071EFB2FEB00141A78 /* totemJack.h */,
-				E4830C081EFB2FEB00141A78 /* totemJoint.cpp */,
-				E4830C091EFB2FEB00141A78 /* totemJoint.h */,
-				E4830C0A1EFB2FEB00141A78 /* totemLayer.cpp */,
-				E4830C0B1EFB2FEB00141A78 /* totemLayer.h */,
-				E4830C0C1EFB2FEB00141A78 /* totemLevel.cpp */,
-				E4830C0D1EFB2FEB00141A78 /* totemLevel.h */,
-				E4830C0E1EFB2FEB00141A78 /* totemLevelController.cpp */,
-				E4830C0F1EFB2FEB00141A78 /* totemLevelController.h */,
-				E4830C101EFB2FEB00141A78 /* totemPolygon.cpp */,
-				E4830C111EFB2FEB00141A78 /* totemPolygon.h */,
-				E4830C121EFB2FEB00141A78 /* totemScripting.cpp */,
-				E4830C131EFB2FEB00141A78 /* totemScripting.h */,
-				E4830C141EFB2FEB00141A78 /* totemUtils.cpp */,
-				E4830C151EFB2FEB00141A78 /* totemUtils.h */,
-				E4830C161EFB2FEB00141A78 /* totemWorld.cpp */,
-				E4830C171EFB2FEB00141A78 /* totemWorld.h */,
-				E4830C181EFB2FEB00141A78 /* totemWorldManager.cpp */,
-				E4830C191EFB2FEB00141A78 /* totemWorldManager.h */,
+				E4830BFA1EFB2FEB00141A78 /* Block.cpp */,
+				E4830BFB1EFB2FEB00141A78 /* Block.h */,
+				E4830BFC1EFB2FEB00141A78 /* Constants.h */,
+				E4830BFD1EFB2FEB00141A78 /* ContactManager.cpp */,
+				E4830BFE1EFB2FEB00141A78 /* ContactManager.h */,
+				E4830BFF1EFB2FEB00141A78 /* Enums.h */,
+				E4830C001EFB2FEB00141A78 /* Event.cpp */,
+				E4830C011EFB2FEB00141A78 /* Event.h */,
+				E4830C021EFB2FEB00141A78 /* FloorInfo.cpp */,
+				E4830C031EFB2FEB00141A78 /* FloorInfo.h */,
+				E4830C051EFB2FEB00141A78 /* GameObject.h */,
+				E4830C061EFB2FEB00141A78 /* Jack.cpp */,
+				E4830C071EFB2FEB00141A78 /* Jack.h */,
+				E4830C081EFB2FEB00141A78 /* Joint.cpp */,
+				E4830C091EFB2FEB00141A78 /* Joint.h */,
+				E4830C0A1EFB2FEB00141A78 /* Layer.cpp */,
+				E4830C0B1EFB2FEB00141A78 /* Layer.h */,
+				E4830C0C1EFB2FEB00141A78 /* Level.cpp */,
+				E4830C0D1EFB2FEB00141A78 /* Level.h */,
+				E4830C0E1EFB2FEB00141A78 /* LevelController.cpp */,
+				E4830C0F1EFB2FEB00141A78 /* LevelController.h */,
+				E4830C101EFB2FEB00141A78 /* Polygon.cpp */,
+				E4830C111EFB2FEB00141A78 /* Polygon.h */,
+				E4830C121EFB2FEB00141A78 /* Scripting.cpp */,
+				E4830C131EFB2FEB00141A78 /* Scripting.h */,
+				E4830C141EFB2FEB00141A78 /* Utils.cpp */,
+				E4830C151EFB2FEB00141A78 /* Utils.h */,
+				E4830C161EFB2FEB00141A78 /* World.cpp */,
+				E4830C171EFB2FEB00141A78 /* World.h */,
+				E4830C181EFB2FEB00141A78 /* WorldManager.cpp */,
+				E4830C191EFB2FEB00141A78 /* WorldManager.h */,
 			);
 			path = game;
-			sourceTree = "<group>";
-		};
-		E4830BF51EFB2FEB00141A78 /* Old */ = {
-			isa = PBXGroup;
-			children = (
-				E4830BF61EFB2FEB00141A78 /* totemGameObject.cpp */,
-				E4830BF71EFB2FEB00141A78 /* totemGameObject.h */,
-				E4830BF81EFB2FEB00141A78 /* totemShape.cpp */,
-				E4830BF91EFB2FEB00141A78 /* totemShape.h */,
-			);
-			path = Old;
 			sourceTree = "<group>";
 		};
 		E4830C1A1EFB2FEB00141A78 /* graphics */ = {
@@ -1946,8 +1926,8 @@
 				E4830D931EFB393800141A78 /* GoalBlock.h */,
 				E4830D941EFB393800141A78 /* LevelPickerBlock.cpp */,
 				E4830D951EFB393800141A78 /* LevelPickerBlock.h */,
-				E4830D961EFB393800141A78 /* quadEmitter.cpp */,
-				E4830D971EFB393800141A78 /* quadEmitter.h */,
+				E4830D961EFB393800141A78 /* QuadEmitter.cpp */,
+				E4830D971EFB393800141A78 /* QuadEmitter.h */,
 				E4830D981EFB393800141A78 /* SmokeEmitter.cpp */,
 				E4830D991EFB393800141A78 /* SmokeEmitter.h */,
 				E4830D9A1EFB393800141A78 /* SparkEmitter.cpp */,
@@ -2184,7 +2164,7 @@
 				E4830CA91EFB2FEB00141A78 /* hdAlphaAction.h in Headers */,
 				E4ADE3A519874AEF0039FF7A /* physics.h in Headers */,
 				E4ADE3A619874AEF0039FF7A /* graphics.h in Headers */,
-				E4830CE61EFB2FEB00141A78 /* totemBlock.h in Headers */,
+				E4830CE61EFB2FEB00141A78 /* Block.h in Headers */,
 				E4830DC01EFB393800141A78 /* TextBlock.h in Headers */,
 				E4830CBD1EFB2FEB00141A78 /* hdTypedefList.h in Headers */,
 				E4ADE3A319874AEF0039FF7A /* core.h in Headers */,
@@ -2231,7 +2211,7 @@
 				E42837DF117005AB008E3594 /* b2PairManager.h in Headers */,
 				E44B5A2A1986026B001F9862 /* access.hpp in Headers */,
 				E42837E2117005AB008E3594 /* b2CircleShape.h in Headers */,
-				E4830D041EFB2FEB00141A78 /* totemWorldManager.h in Headers */,
+				E4830D041EFB2FEB00141A78 /* WorldManager.h in Headers */,
 				E4830D851EFB2FEB00141A78 /* hdViewController.h in Headers */,
 				E42837E4117005AB008E3594 /* b2EdgeShape.h in Headers */,
 				E44B5A921986026B001F9862 /* throw_exception.hpp in Headers */,
@@ -2299,7 +2279,7 @@
 				E4830D7B1EFB2FEB00141A78 /* hdReceiver.h in Headers */,
 				E4830D141EFB2FEB00141A78 /* hdPolygon.h in Headers */,
 				E4830D3E1EFB2FEB00141A78 /* hdPhysicsObject.h in Headers */,
-				E4830CEC1EFB2FEB00141A78 /* totemEvent.h in Headers */,
+				E4830CEC1EFB2FEB00141A78 /* Event.h in Headers */,
 				E4830DBC1EFB393800141A78 /* SplinterEmitter.h in Headers */,
 				E4830DAC1EFB393800141A78 /* ChapterBlock.h in Headers */,
 				E44B5AA61986026B001F9862 /* version.hpp in Headers */,
@@ -2307,10 +2287,10 @@
 				E4283815117005AB008E3594 /* b2GravityController.h in Headers */,
 				E4830D261EFB2FEB00141A78 /* TouchScreen.h in Headers */,
 				E4830CC41EFB2FEB00141A78 /* hdConfig.h in Headers */,
-				E4830CF61EFB2FEB00141A78 /* totemLayer.h in Headers */,
+				E4830CF61EFB2FEB00141A78 /* Layer.h in Headers */,
 				E4283817117005AB008E3594 /* b2TensorDampingController.h in Headers */,
 				E4283819117005AB008E3594 /* b2DistanceJoint.h in Headers */,
-				E4830CF81EFB2FEB00141A78 /* totemLevel.h in Headers */,
+				E4830CF81EFB2FEB00141A78 /* Level.h in Headers */,
 				E428381B117005AB008E3594 /* b2GearJoint.h in Headers */,
 				E44B5A701986026B001F9862 /* nvp.hpp in Headers */,
 				E4830D221EFB2FEB00141A78 /* hdMultiTouchViewController.h in Headers */,
@@ -2347,12 +2327,12 @@
 				E4830D111EFB2FEB00141A78 /* hdPNGLoader.h in Headers */,
 				E4830D521EFB2FEB00141A78 /* hdSoundManager.h in Headers */,
 				E4F36E531171699800792A2D /* basic_binary_iprimitive.hpp in Headers */,
-				E4830CEE1EFB2FEB00141A78 /* totemFloorInfo.h in Headers */,
+				E4830CEE1EFB2FEB00141A78 /* FloorInfo.h in Headers */,
 				E4830D531EFB2FEB00141A78 /* hdSoundSystemEnums.h in Headers */,
 				E4830D191EFB2FEB00141A78 /* hdTextureManager.h in Headers */,
 				E4830D791EFB2FEB00141A78 /* hdInterfaceLayer.h in Headers */,
 				E4F36E541171699800792A2D /* basic_binary_oarchive.hpp in Headers */,
-				E4830CEA1EFB2FEB00141A78 /* totemEnums.h in Headers */,
+				E4830CEA1EFB2FEB00141A78 /* Enums.h in Headers */,
 				E4F36E551171699800792A2D /* basic_binary_oprimitive.hpp in Headers */,
 				E4F36E561171699800792A2D /* basic_streambuf_locale_saver.hpp in Headers */,
 				E4F36E571171699800792A2D /* basic_text_iarchive.hpp in Headers */,
@@ -2372,7 +2352,7 @@
 				E44B5A6C1986026B001F9862 /* list.hpp in Headers */,
 				E4F36E5B1171699800792A2D /* basic_xml_archive.hpp in Headers */,
 				E4F36E5C1171699800792A2D /* basic_xml_iarchive.hpp in Headers */,
-				E4830CE71EFB2FEB00141A78 /* totemConstants.h in Headers */,
+				E4830CE71EFB2FEB00141A78 /* Constants.h in Headers */,
 				E4F36E5D1171699800792A2D /* basic_xml_oarchive.hpp in Headers */,
 				E4F36E5E1171699800792A2D /* binary_iarchive.hpp in Headers */,
 				E44B5A7A1986026B001F9862 /* set.hpp in Headers */,
@@ -2383,7 +2363,7 @@
 				E4F36E611171699800792A2D /* binary_oarchive_impl.hpp in Headers */,
 				E4830DB61EFB393800141A78 /* SmokeEmitter.h in Headers */,
 				E4F36E621171699800792A2D /* binary_wiarchive.hpp in Headers */,
-				E4830D021EFB2FEB00141A78 /* totemWorld.h in Headers */,
+				E4830D021EFB2FEB00141A78 /* World.h in Headers */,
 				E4830CDB1EFB2FEB00141A78 /* hdSystemSettings.h in Headers */,
 				E4830CBE1EFB2FEB00141A78 /* hdApplication.h in Headers */,
 				E4F36E631171699800792A2D /* binary_woarchive.hpp in Headers */,
@@ -2408,9 +2388,8 @@
 				E4F36E721171699800792A2D /* basic_pointer_oserializer.hpp in Headers */,
 				E4830DB01EFB393800141A78 /* GoalBlock.h in Headers */,
 				E4F36E731171699800792A2D /* basic_serializer.hpp in Headers */,
-				E4830CE21EFB2FEB00141A78 /* totemGameObject.h in Headers */,
 				E4830CCC1EFB2FEB00141A78 /* hdIPhoneOSFunctions.h in Headers */,
-				E4830CFA1EFB2FEB00141A78 /* totemLevelController.h in Headers */,
+				E4830CFA1EFB2FEB00141A78 /* LevelController.h in Headers */,
 				E45D0B0C1987820B0020E461 /* utf8_codecvt_facet.hpp in Headers */,
 				E4F36E741171699800792A2D /* basic_serializer_map.hpp in Headers */,
 				E4830CB71EFB2FEB00141A78 /* hdTranslationAction.h in Headers */,
@@ -2447,7 +2426,7 @@
 				E4F36E871171699800792A2D /* escape.hpp in Headers */,
 				E4F36E881171699800792A2D /* head_iterator.hpp in Headers */,
 				E4F36E891171699800792A2D /* insert_linebreaks.hpp in Headers */,
-				E4830CF21EFB2FEB00141A78 /* totemJack.h in Headers */,
+				E4830CF21EFB2FEB00141A78 /* Jack.h in Headers */,
 				E44B5A741986026B001F9862 /* pfto.hpp in Headers */,
 				E4F36E8A1171699800792A2D /* istream_iterator.hpp in Headers */,
 				E4F36E8B1171699800792A2D /* mb_from_wchar.hpp in Headers */,
@@ -2458,9 +2437,9 @@
 				E4830D381EFB2FEB00141A78 /* hdOrthographicProjection.h in Headers */,
 				E4830D0E1EFB2FEB00141A78 /* hdMeshPolygon.h in Headers */,
 				E4F36E8D1171699800792A2D /* remove_whitespace.hpp in Headers */,
-				E4830D001EFB2FEB00141A78 /* totemUtils.h in Headers */,
+				E4830D001EFB2FEB00141A78 /* Utils.h in Headers */,
 				E4830D281EFB2FEB00141A78 /* hdFixed.h in Headers */,
-				E4830CE91EFB2FEB00141A78 /* totemContactManager.h in Headers */,
+				E4830CE91EFB2FEB00141A78 /* ContactManager.h in Headers */,
 				E4830CC21EFB2FEB00141A78 /* hdCompression.h in Headers */,
 				E4830D3C1EFB2FEB00141A78 /* hdPhysicsJoint.h in Headers */,
 				E44B5A6E1986026B001F9862 /* map.hpp in Headers */,
@@ -2491,8 +2470,8 @@
 				E44B5A2E1986026B001F9862 /* assume_abstract.hpp in Headers */,
 				E4830CD11EFB2FEB00141A78 /* hdOSXFileSystem.h in Headers */,
 				E4F36E9D1171699800792A2D /* polymorphic_xml_oarchive.hpp in Headers */,
-				E4830CF01EFB2FEB00141A78 /* totemGameObject.h in Headers */,
-				E4830DB41EFB393800141A78 /* quadEmitter.h in Headers */,
+				E4830CF01EFB2FEB00141A78 /* GameObject.h in Headers */,
+				E4830DB41EFB393800141A78 /* QuadEmitter.h in Headers */,
 				E45D0B0A1987820B0020E461 /* config.hpp in Headers */,
 				E4F36E9E1171699800792A2D /* polymorphic_xml_wiarchive.hpp in Headers */,
 				E4830D5B1EFB2FEB00141A78 /* hdCheckbox.h in Headers */,
@@ -2511,9 +2490,8 @@
 				E4F36EA41171699800792A2D /* text_woarchive.hpp in Headers */,
 				E4830D091EFB2FEB00141A78 /* hdDrawingUtilities.h in Headers */,
 				E45D0B0E1987820B0020E461 /* fstream.hpp in Headers */,
-				E4830CFE1EFB2FEB00141A78 /* totemScripting.h in Headers */,
+				E4830CFE1EFB2FEB00141A78 /* Scripting.h in Headers */,
 				E44B5A9C1986026B001F9862 /* utility.hpp in Headers */,
-				E4830CE41EFB2FEB00141A78 /* totemShape.h in Headers */,
 				E4830DC41EFB393800141A78 /* hdParticleEmitter.h in Headers */,
 				E4F36EA51171699800792A2D /* tmpdir.hpp in Headers */,
 				E4F36EA61171699800792A2D /* wcslen.hpp in Headers */,
@@ -2521,11 +2499,11 @@
 				E4F36EA81171699800792A2D /* xml_iarchive.hpp in Headers */,
 				E4F36EA91171699800792A2D /* xml_oarchive.hpp in Headers */,
 				E4F36EAA1171699800792A2D /* xml_wiarchive.hpp in Headers */,
-				E4830CFC1EFB2FEB00141A78 /* totemPolygon.h in Headers */,
+				E4830CFC1EFB2FEB00141A78 /* Polygon.h in Headers */,
 				E4830D631EFB2FEB00141A78 /* hdFTGLFont.h in Headers */,
 				E4F36EAB1171699800792A2D /* xml_woarchive.hpp in Headers */,
 				E44B5A581986026B001F9862 /* factory.hpp in Headers */,
-				E4830CF41EFB2FEB00141A78 /* totemJoint.h in Headers */,
+				E4830CF41EFB2FEB00141A78 /* Joint.h in Headers */,
 				63CA7786119678090010C802 /* config.hpp in Headers */,
 				E44B5A5A1986026B001F9862 /* force_include.hpp in Headers */,
 				63CA7787119678090010C802 /* cygwin_error.hpp in Headers */,
@@ -2612,13 +2590,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4830D711EFB2FEB00141A78 /* hdIBViewController.cpp in Sources */,
-				E4830CED1EFB2FEB00141A78 /* totemFloorInfo.cpp in Sources */,
+				E4830CED1EFB2FEB00141A78 /* FloorInfo.cpp in Sources */,
 				E4830D6D1EFB2FEB00141A78 /* hdIBLoader.cpp in Sources */,
 				E44B5AF719860288001F9862 /* binary_oarchive.cpp in Sources */,
 				E44B5AFD19860288001F9862 /* codecvt_null.cpp in Sources */,
 				E4830CC81EFB2FEB00141A78 /* hdFileSystemUtils.cpp in Sources */,
 				E44B5B1519860288001F9862 /* utf8_codecvt_facet.cpp in Sources */,
-				E4830CF51EFB2FEB00141A78 /* totemLayer.cpp in Sources */,
+				E4830CF51EFB2FEB00141A78 /* Layer.cpp in Sources */,
 				E44B5B2A198602AC001F9862 /* error_code.cpp in Sources */,
 				E4830DAB1EFB393800141A78 /* ChapterBlock.cpp in Sources */,
 				E44B5B1719860288001F9862 /* void_cast.cpp in Sources */,
@@ -2643,7 +2621,6 @@
 				E4830DBB1EFB393800141A78 /* SplinterEmitter.cpp in Sources */,
 				E4830D351EFB2FEB00141A78 /* hdGameWorld.cpp in Sources */,
 				E44B5B1919860288001F9862 /* xml_archive_exception.cpp in Sources */,
-				E4830CE11EFB2FEB00141A78 /* totemGameObject.cpp in Sources */,
 				E44B5AF519860288001F9862 /* binary_iarchive.cpp in Sources */,
 				E44B5B0919860288001F9862 /* shared_ptr_helper.cpp in Sources */,
 				E4830D3F1EFB2FEB00141A78 /* hdScripts.cpp in Sources */,
@@ -2654,7 +2631,7 @@
 				E4830D5C1EFB2FEB00141A78 /* hdFont.cpp in Sources */,
 				E4830DB11EFB393800141A78 /* LevelPickerBlock.cpp in Sources */,
 				E4830D371EFB2FEB00141A78 /* hdOrthographicProjection.cpp in Sources */,
-				E4830CE51EFB2FEB00141A78 /* totemBlock.cpp in Sources */,
+				E4830CE51EFB2FEB00141A78 /* Block.cpp in Sources */,
 				E4830DC31EFB393800141A78 /* hdParticleEmitter.cpp in Sources */,
 				E4830CBF1EFB2FEB00141A78 /* hdCommon.cpp in Sources */,
 				E42837DA117005AB008E3594 /* b2CollidePoly.cpp in Sources */,
@@ -2662,7 +2639,7 @@
 				E44B5B0119860288001F9862 /* extended_type_info_no_rtti.cpp in Sources */,
 				E44B5AEF19860288001F9862 /* basic_text_wiprimitive.cpp in Sources */,
 				E4830D311EFB2FEB00141A78 /* hd2DGameController.cpp in Sources */,
-				E4830CF11EFB2FEB00141A78 /* totemJack.cpp in Sources */,
+				E4830CF11EFB2FEB00141A78 /* Jack.cpp in Sources */,
 				E42837DB117005AB008E3594 /* b2Collision.cpp in Sources */,
 				E4830D081EFB2FEB00141A78 /* hdDrawingUtilities.cpp in Sources */,
 				E44B5B1119860288001F9862 /* text_wiarchive.cpp in Sources */,
@@ -2673,7 +2650,7 @@
 				E44B5AE719860288001F9862 /* basic_pointer_oserializer.cpp in Sources */,
 				E4830D731EFB2FEB00141A78 /* hdInterfaceContext.cpp in Sources */,
 				E44B59D6198600E2001F9862 /* portability.cpp in Sources */,
-				E4830CFB1EFB2FEB00141A78 /* totemPolygon.cpp in Sources */,
+				E4830CFB1EFB2FEB00141A78 /* Polygon.cpp in Sources */,
 				E4830CB61EFB2FEB00141A78 /* hdTranslationAction.cpp in Sources */,
 				E42837E0117005AB008E3594 /* b2TimeOfImpact.cpp in Sources */,
 				E44B5B0F19860288001F9862 /* text_oarchive.cpp in Sources */,
@@ -2697,23 +2674,22 @@
 				E4830D4B1EFB2FEB00141A78 /* hdOpenALPool.cpp in Sources */,
 				E44B5B0519860288001F9862 /* polymorphic_iarchive.cpp in Sources */,
 				E4830D1E1EFB2FEB00141A78 /* hdMouseInput.cpp in Sources */,
-				E4830CE31EFB2FEB00141A78 /* totemShape.cpp in Sources */,
 				E42837ED117005AB008E3594 /* b2Settings.cpp in Sources */,
 				E4830D751EFB2FEB00141A78 /* hdInterfaceController.cpp in Sources */,
 				E42837EF117005AB008E3594 /* b2StackAllocator.cpp in Sources */,
 				E4830D121EFB2FEB00141A78 /* hdPNGLoader.mm in Sources */,
 				E44B5AED19860288001F9862 /* basic_text_oprimitive.cpp in Sources */,
 				E44B5AFF19860288001F9862 /* extended_type_info.cpp in Sources */,
-				E4830CF71EFB2FEB00141A78 /* totemLevel.cpp in Sources */,
+				E4830CF71EFB2FEB00141A78 /* Level.cpp in Sources */,
 				E4830CD71EFB2FEB00141A78 /* hdPlayerConfig.cpp in Sources */,
 				E4830D841EFB2FEB00141A78 /* hdViewController.cpp in Sources */,
 				E42837F3117005AB008E3594 /* b2Body.cpp in Sources */,
 				E44B5AE119860288001F9862 /* basic_oarchive.cpp in Sources */,
 				E42837F5117005AB008E3594 /* b2ContactManager.cpp in Sources */,
 				E42837F7117005AB008E3594 /* b2Island.cpp in Sources */,
-				E4830CFF1EFB2FEB00141A78 /* totemUtils.cpp in Sources */,
+				E4830CFF1EFB2FEB00141A78 /* Utils.cpp in Sources */,
 				E4830D5E1EFB2FEB00141A78 /* hdFontManager.cpp in Sources */,
-				E4830D011EFB2FEB00141A78 /* totemWorld.cpp in Sources */,
+				E4830D011EFB2FEB00141A78 /* World.cpp in Sources */,
 				E4830D641EFB2FEB00141A78 /* hdIBButton.cpp in Sources */,
 				E4830CD91EFB2FEB00141A78 /* hdScreenSettings.cpp in Sources */,
 				E4830CCF1EFB2FEB00141A78 /* hdIPhoneSystemSettings.mm in Sources */,
@@ -2728,7 +2704,7 @@
 				E4830CCD1EFB2FEB00141A78 /* hdIPhoneOSFunctions.mm in Sources */,
 				E4283801117005AB008E3594 /* b2ContactSolver.cpp in Sources */,
 				E4830D491EFB2FEB00141A78 /* hdAVAudioWrapper.mm in Sources */,
-				E4830CFD1EFB2FEB00141A78 /* totemScripting.cpp in Sources */,
+				E4830CFD1EFB2FEB00141A78 /* Scripting.cpp in Sources */,
 				E4830D661EFB2FEB00141A78 /* hdIBContainer.cpp in Sources */,
 				E44B5B1D19860288001F9862 /* xml_iarchive.cpp in Sources */,
 				E4830D1A1EFB2FEB00141A78 /* hdTGALoader.cpp in Sources */,
@@ -2746,13 +2722,13 @@
 				E4830D541EFB2FEB00141A78 /* SoundEngine.cpp in Sources */,
 				E4830D561EFB2FEB00141A78 /* SoundEngine.cpp in Sources */,
 				E428380A117005AB008E3594 /* b2PolyContact.cpp in Sources */,
-				E4830CE81EFB2FEB00141A78 /* totemContactManager.cpp in Sources */,
+				E4830CE81EFB2FEB00141A78 /* ContactManager.cpp in Sources */,
 				E4830DB71EFB393800141A78 /* SparkEmitter.cpp in Sources */,
 				E428380C117005AB008E3594 /* b2BuoyancyController.cpp in Sources */,
 				E428380E117005AB008E3594 /* b2ConstantAccelController.cpp in Sources */,
 				E4283810117005AB008E3594 /* b2ConstantForceController.cpp in Sources */,
 				E4830D411EFB2FEB00141A78 /* AppleOpenALSupport.c in Sources */,
-				E4830DB31EFB393800141A78 /* quadEmitter.cpp in Sources */,
+				E4830DB31EFB393800141A78 /* QuadEmitter.cpp in Sources */,
 				E4830D391EFB2FEB00141A78 /* hdPhysicsGlue.cpp in Sources */,
 				E4283812117005AB008E3594 /* b2Controller.cpp in Sources */,
 				E4830D7A1EFB2FEB00141A78 /* hdReceiver.cpp in Sources */,
@@ -2770,7 +2746,7 @@
 				E428381C117005AB008E3594 /* b2Joint.cpp in Sources */,
 				E428381E117005AB008E3594 /* b2LineJoint.cpp in Sources */,
 				E4830D621EFB2FEB00141A78 /* hdFTGLFont.cpp in Sources */,
-				E4830CF31EFB2FEB00141A78 /* totemJoint.cpp in Sources */,
+				E4830CF31EFB2FEB00141A78 /* Joint.cpp in Sources */,
 				E4830D251EFB2FEB00141A78 /* hdOSXInputResponder.mm in Sources */,
 				E44B5AF319860288001F9862 /* basic_xml_archive.cpp in Sources */,
 				E4830D0D1EFB2FEB00141A78 /* hdMeshPolygon.cpp in Sources */,
@@ -2779,11 +2755,11 @@
 				E4283824117005AB008E3594 /* b2PulleyJoint.cpp in Sources */,
 				E4283826117005AB008E3594 /* b2RevoluteJoint.cpp in Sources */,
 				E44B59CE198600E2001F9862 /* codecvt_error_category.cpp in Sources */,
-				E4830CEB1EFB2FEB00141A78 /* totemEvent.cpp in Sources */,
-				E4830D031EFB2FEB00141A78 /* totemWorldManager.cpp in Sources */,
+				E4830CEB1EFB2FEB00141A78 /* Event.cpp in Sources */,
+				E4830D031EFB2FEB00141A78 /* WorldManager.cpp in Sources */,
 				E44B5AEB19860288001F9862 /* basic_text_iprimitive.cpp in Sources */,
 				E44B5AE319860288001F9862 /* basic_oserializer.cpp in Sources */,
-				E4830CF91EFB2FEB00141A78 /* totemLevelController.cpp in Sources */,
+				E4830CF91EFB2FEB00141A78 /* LevelController.cpp in Sources */,
 				E4830D601EFB2FEB00141A78 /* hdFontPolygon.cpp in Sources */,
 				E4830D6B1EFB2FEB00141A78 /* hdIBImage.cpp in Sources */,
 				E44B5AD919860288001F9862 /* archive_exception.cpp in Sources */,

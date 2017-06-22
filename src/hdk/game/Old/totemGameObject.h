@@ -1,5 +1,5 @@
 /*
- *  totemGameObject.h
+ *  GameObject.h
  *  LevelEditor
  *
  *  Created by david on 27/03/09.
@@ -12,7 +12,7 @@
 
 #include "hdGameEngine.h"
 #include "hdGameWorld.h"
-#include "totemEnums.h"
+#include "Enums.h"
 #include "hdFixed.h"
 
 //#include "hdFixed.h"
@@ -32,20 +32,20 @@ struct hdGameObjectDef;
 
 // On load: loads block definitions and then creates them
 // On save: generates a list of block definitions, saves.
-class totemGameObject
+class GameObject
 {
 public:
 	friend class hdGameWorld;
 	
 	friend class hdGameObject;
 	
-	totemGameObject();
+	GameObject();
 	
-	totemGameObject(hdGameWorld *gameWorld,
+	GameObject(hdGameWorld *gameWorld,
 					const hdVec2& aa, const hdVec2& bb, 
 					const int name);
 	
-	~totemGameObject();
+	~GameObject();
 	
 	void Init(hdGameWorld *gameWorld, const hdGameObjectDef def);
 	
@@ -138,12 +138,12 @@ protected:
 };
 
 
-inline const hdGameObjectDef totemGameObject::GetDefinition()
+inline const hdGameObjectDef GameObject::GetDefinition()
 {
 	return m_def;
 }
 
-inline const hdGameObject* totemGameObject::GetGameObject() const
+inline const hdGameObject* GameObject::GetGameObject() const
 {
 	return m_gameObject;
 }

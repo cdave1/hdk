@@ -17,34 +17,24 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef _HDK_GOAL_BLOCK_H
-#define _HDK_GOAL_BLOCK_H
+#ifndef _HDK_GAME_OBJECT_H_
+#define _HDK_GAME_OBJECT_H_
 
-#include <hdk/game.h>
-#include "WeatherParticleEmitter.h"
+#include "Box2D.h"
+#include "Enums.h"
 
-class GoalBlock : public Block
+class GameObject
 {
 public:
-    GoalBlock(Block* parent);
+    GameObject() {}
+    GameObject(e_hdkType type, void * pointer)
+    {
+        m_type = type;
+        m_pointer = pointer;
+    }
 
-    ~GoalBlock();
-
-    void Step();
-
-    void Draw() const;
-
-    void DrawSpecial() const;
-
-private:
-    void InitInterface();
-
-    void InitAnimations();
-
-    Block *m_parent;
-    
-    WeatherParticleEmitter *m_emberEmitter;
-
+    e_hdkType m_type;
+    void * m_pointer;
 };
 
 #endif

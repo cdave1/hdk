@@ -20,14 +20,14 @@
 #include "LevelPickerBlock.h"
 
 LevelPickerBlock::LevelPickerBlock(hdGameWorld *gameWorld, const b2World *physicsWorld,
-                                             TotemLevelStats* levelStats, totemLevel *level,
+                                             TotemLevelStats* levelStats, Level *level,
                                              const hdVec3& startingPos, float halfWidth,
-                                             hdOrthographicProjection *projection) : totemBlock()
+                                             hdOrthographicProjection *projection) : Block()
 {
     this->SetWorld(gameWorld);
     this->SetDepth(-hdMin(1.0f, float(fabs(halfWidth/2.0f))));
-    this->SetTag((int)e_totemTypeLevelPickerBlock);
-    this->AddGameFlag((uint32)e_totemGameFlagsBlockDrawRaw);
+    this->SetTag((int)e_hdkTypeLevelPickerBlock);
+    this->AddGameFlag((uint32)e_hdkGameFlagsBlockDrawRaw);
 
     m_halfWidth = fabs(halfWidth);
     m_level = level;
@@ -45,8 +45,8 @@ LevelPickerBlock::LevelPickerBlock(hdGameWorld *gameWorld, const b2World *physic
 
     this->SetAs2DBox(aa, bb);
 
-    this->SetMaterial(e_totemMaterialRawPolygon);
-    this->SetBlockType(e_totemBlockTypeDraggable);
+    this->SetMaterial(e_hdkMaterialRawPolygon);
+    this->SetBlockType(e_hdkBlockTypeDraggable);
 
     m_projection = projection;
 }
@@ -256,10 +256,10 @@ void LevelPickerBlock::Draw() const
     glEnable(GL_TEXTURE_2D);
     hdglBindTexture(NULL);
     hdglBegin(GL_QUADS); 
-    ((totemBlock *)this)->DrawTrianglesFront();
+    ((Block *)this)->DrawTrianglesFront();
     hdglEnd();
     
-    ((totemBlock *)this)->DrawExtruded(texture, true, m_projection->GetWorldCenter());
+    ((Block *)this)->DrawExtruded(texture, true, m_projection->GetWorldCenter());
     
     glEnable(GL_BLEND);
     

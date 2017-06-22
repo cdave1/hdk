@@ -17,34 +17,16 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef _HDK_GOAL_BLOCK_H
-#define _HDK_GOAL_BLOCK_H
+#ifndef _HDK_GAME_UTILS_H_
+#define _HDK_GAME_UTILS_H_
 
-#include <hdk/game.h>
-#include "WeatherParticleEmitter.h"
+#include "Box2D.h"
+#include <hdk/hdk.h>
 
-class GoalBlock : public Block
-{
-public:
-    GoalBlock(Block* parent);
+extern void b2Mat22ToMatrix(hdMatrix &mOut, const b2Mat22& mIn);
 
-    ~GoalBlock();
+extern void UtilDrawAABB(const hdAABB &aabb);
 
-    void Step();
-
-    void Draw() const;
-
-    void DrawSpecial() const;
-
-private:
-    void InitInterface();
-
-    void InitAnimations();
-
-    Block *m_parent;
-    
-    WeatherParticleEmitter *m_emberEmitter;
-
-};
+extern void UtilGenerateColor(float* out, float pos, float end);
 
 #endif

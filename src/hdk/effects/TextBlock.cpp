@@ -19,12 +19,12 @@
 
 #include "TextBlock.h"
 
-TextBlock::TextBlock(totemBlock *parent, const int levelId) : totemBlock()
+TextBlock::TextBlock(Block *parent, const int levelId) : Block()
 {
     this->SetWorld(NULL);
     this->SetDepth(parent->GetDepth());
     this->SetTag(0);
-    this->AddGameFlag((uint32)e_totemGameFlagsBlockDrawRaw);
+    this->AddGameFlag((uint32)e_hdkGameFlagsBlockDrawRaw);
 
     m_parent = parent;
     m_levelId = levelId;
@@ -32,8 +32,8 @@ TextBlock::TextBlock(totemBlock *parent, const int levelId) : totemBlock()
     this->SetAs2DBox(hdVec3(parent->GetAABB().lower.x, parent->GetAABB().upper.y, parent->GetAABB().lower.z),
                      hdVec3(parent->GetAABB().upper.x, parent->GetAABB().upper.y + 1.0f, parent->GetAABB().upper.z));
 
-    this->SetMaterial(e_totemMaterialRawPolygon);
-    this->SetBlockType(e_totemBlockTypeCosmetic);
+    this->SetMaterial(e_hdkMaterialRawPolygon);
+    this->SetBlockType(e_hdkBlockTypeCosmetic);
 
     this->InitInterface();
 }

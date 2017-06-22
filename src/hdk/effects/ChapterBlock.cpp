@@ -19,21 +19,21 @@
 
 #include "ChapterBlock.h"
 
-ChapterBlock::ChapterBlock(totemBlock *parent, const char *chapterTitle, const bool isLocked, const float completionRatio) : totemBlock()
+ChapterBlock::ChapterBlock(Block *parent, const char *chapterTitle, const bool isLocked, const float completionRatio) : Block()
 {
     this->SetWorld(NULL);
     this->SetDepth(parent->GetDepth());
     this->SetZOffset(parent->GetZOffset());
     this->SetTag(0);
-    this->AddGameFlag((uint32)e_totemGameFlagsBlockDrawRaw);
+    this->AddGameFlag((uint32)e_hdkGameFlagsBlockDrawRaw);
 
     m_parent = parent;
 
     this->SetAs2DBox(hdVec3(parent->GetAABB().lower.x, parent->GetAABB().lower.y, parent->GetAABB().lower.z),
                      hdVec3(parent->GetAABB().upper.x, parent->GetAABB().upper.y, parent->GetAABB().upper.z));
 
-    this->SetMaterial(e_totemMaterialRawPolygon);
-    this->SetBlockType(e_totemBlockTypeCosmetic);
+    this->SetMaterial(e_hdkMaterialRawPolygon);
+    this->SetBlockType(e_hdkBlockTypeCosmetic);
 
     snprintf(m_chapterTitle, 128, "%s", chapterTitle);
 

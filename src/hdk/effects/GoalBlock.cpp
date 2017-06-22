@@ -19,12 +19,12 @@
 
 #include "GoalBlock.h"
 
-GoalBlock::GoalBlock(totemBlock* parent) : totemBlock()
+GoalBlock::GoalBlock(Block* parent) : Block()
 {
     this->SetWorld(NULL);
     this->SetDepth(parent->GetDepth());
     this->SetTag(0);
-    this->AddGameFlag((uint32)e_totemGameFlagsBlockDrawRaw);
+    this->AddGameFlag((uint32)e_hdkGameFlagsBlockDrawRaw);
 
     m_parent = parent;
 
@@ -34,8 +34,8 @@ GoalBlock::GoalBlock(totemBlock* parent) : totemBlock()
     this->InitInterface();
     this->InitAnimations();
 
-    this->SetMaterial(e_totemMaterialRawPolygon);
-    this->SetBlockType(e_totemBlockTypeCosmetic);
+    this->SetMaterial(e_hdkMaterialRawPolygon);
+    this->SetBlockType(e_hdkBlockTypeCosmetic);
 
     m_emberEmitter = new WeatherParticleEmitter(16, "Materials/p_glow_15_16.tga", 0.25f, 2.0f, 3.25f, 0.0f, parent,
                                                      hdVec3(0, 0.75f * 3.25f, 0),

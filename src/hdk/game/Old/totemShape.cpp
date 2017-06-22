@@ -157,7 +157,7 @@ void totemShape::CreatePhysicsBody()
 	
 	
 	//m_physicsBody->SetMassFromShapes();	
-	totemGameObject* physicsUserObject = new totemGameObject(e_totemTypeShape, this);
+	GameObject* physicsUserObject = new GameObject(e_hdkTypeShape, this);
 	m_physicsBody->SetUserData(physicsUserObject);
 }
 

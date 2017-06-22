@@ -22,10 +22,10 @@
 
 #include <hdk/game.h>
 
-class TextBlock : public totemBlock
+class TextBlock : public Block
 {
 public:
-    TextBlock(totemBlock *parent, const int levelId);
+    TextBlock(Block *parent, const int levelId);
 
     ~TextBlock();
 
@@ -36,7 +36,7 @@ public:
 private:
     void InitInterface();
 
-    totemBlock *m_parent;
+    Block *m_parent;
 
     hdFontPolygon *m_TextFont;
     

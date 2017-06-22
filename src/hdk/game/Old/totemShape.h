@@ -21,9 +21,9 @@
 #include "hdGameEngine.h"
 #include "hdGameWorld.h"
 #include "hdMathSerializable.h"
-#include "totemEnums.h"
-#include "totemConstants.h"
-#include "totemGameObject.h"
+#include "Enums.h"
+#include "Constants.h"
+#include "GameObject.h"
 #include "hdPhysicsObject.h"
 
 class totemShape : public hdPhysicsObject, public hdDrawable, public hdGameObject

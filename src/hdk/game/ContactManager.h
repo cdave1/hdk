@@ -17,34 +17,61 @@
  * 3. This notice may not be removed or altered from any source distribution.
  */
 
-#ifndef _HDK_GOAL_BLOCK_H
-#define _HDK_GOAL_BLOCK_H
+#ifndef _HDK_CONTACT_MANAGER_H_
+#define _HDK_CONTACT_MANAGER_H_
 
-#include <hdk/game.h>
-#include "WeatherParticleEmitter.h"
+#include "Box2D.h"
 
-class GoalBlock : public Block
+const int32 k_maxContactPoints = 1024;
+
+enum ContactState
+{
+    e_contactAdded,
+    e_contactPersisted,
+    e_contactRemoved,
+};
+
+struct ContactPoint
+{
+    b2Body* body1;
+    b2Body* body2;
+    b2Vec2 normal;
+    b2Vec2 position;
+    b2Vec2 velocity;
+    b2ContactID id;
+    ContactState state;
+};
+
+
+class ContactManager : public b2ContactListener
 {
 public:
-    GoalBlock(Block* parent);
+    ContactManager() {}
 
-    ~GoalBlock();
+    ~ContactManager() {}
 
-    void Step();
+    void ResetContactPoints();
 
-    void Draw() const;
+    // b2Contact Listener functions
+    void Add(const b2ContactPoint* point);
 
-    void DrawSpecial() const;
+    void Persist(const b2ContactPoint* point);
 
-private:
-    void InitInterface();
+    void Remove(const b2ContactPoint* point);
 
-    void InitAnimations();
+    void Result(const b2ContactResult* point);
 
-    Block *m_parent;
+protected:
+
+    ContactPoint m_contacts[k_maxContactPoints];
     
-    WeatherParticleEmitter *m_emberEmitter;
-
+    int32 m_contactCount;
 };
+
+
+inline void ContactManager::ResetContactPoints()
+{
+    m_contactCount = 0;
+}
 
 #endif

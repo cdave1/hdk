@@ -22,10 +22,10 @@
 
 #include <hdk/game.h>
 
-class ChapterBlock : public totemBlock
+class ChapterBlock : public Block
 {
 public:
-    ChapterBlock(totemBlock *parent, const char *chapterTitle, const bool isLocked, const float completionRatio);
+    ChapterBlock(Block *parent, const char *chapterTitle, const bool isLocked, const float completionRatio);
 
     ~ChapterBlock();
 
@@ -36,7 +36,7 @@ public:
 private:
     void InitInterface();
 
-    totemBlock *m_parent;
+    Block *m_parent;
 
     hdUIContainer *m_container;
 

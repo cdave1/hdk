@@ -24,11 +24,11 @@
 #include <hdk/game.h>
 #include "TowerPlayerStateClasses.h"
 
-class LevelPickerBlock : public totemBlock
+class LevelPickerBlock : public Block
 {
 public:
     LevelPickerBlock(hdGameWorld *gameWorld, const b2World *physicsWorld,
-                          TotemLevelStats* levelStats, totemLevel *level,
+                          TotemLevelStats* levelStats, Level *level,
                           const hdVec3& startingPos, float halfWidth,
                           hdOrthographicProjection *projection);
 
@@ -48,7 +48,7 @@ public:
 
     void UpdateInterface();
 
-    totemLevel *m_level;
+    Level *m_level;
 
     TotemLevelStats *m_levelStats;
 
